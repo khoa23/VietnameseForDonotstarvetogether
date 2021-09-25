@@ -1,5 +1,3 @@
 
-LoadPOFile("vi_VN.po", "vi")
-
-STRINGS=GLOBAL.STRINGS
-
+-- LoadPOFile("vietnamese.po", "vi")
+LoadPOFile("vietnamese.po", "vi")

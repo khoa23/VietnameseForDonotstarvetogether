@@ -1,7 +1,7 @@
 -- This information tells other players more about the mod
 name = "DST Tiếng Việt"
-version = "1.1.0"
-description = "Chuyển đổi ngôn ngữ của game từ tiếng Anh sang tiếng Việt."
+version = "1.4.8"
+description = "Chuyển đổi ngôn ngữ của game từ tiếng Anh sang tiếng Việt.\n\nCập nhật ngày 15/9/2021"
 author = "Khoa.ga"
 
 forumthread = ""
@@ -9,14 +9,11 @@ forumthread = ""
 api_version = 10
 
 -- Can specify a custom icon for this mod!
-icon_atlas = "modicon.xml"
-icon = "modicon.tex"
+icon_atlas = "DST_Vietnamese.xml"
+icon = "DST_Vietnamese.tex"
 
-server_filter_tags = {"VN", "DSTVN", "vietnam", "tieng viet", "vietnamese", "vi", "vie"}
+server_filter_tags = {"vn", "vietnam", "vietnamese", "viet nam", "khoa.ga"}
 
-dont_starve_compatible = true
-reign_of_giants_compatible = true
-shipwrecked_compatible = true
 dst_compatible = true
 all_clients_require_mod = false
 client_only_mod = true

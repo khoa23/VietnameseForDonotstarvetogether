@@ -1,7 +1,6 @@
 
 --LoadPOFile("vietnamese.po", "vi")
 --modimport("scripts/main.lua")
-
 mainPOfilename   = "vietnamese.po"
 selectedLanguage = "vi"
 
@@ -284,5 +283,4 @@ function runTranslatingEngine()
 	end
 end	
 runTranslatingEngine()
-
 

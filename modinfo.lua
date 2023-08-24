@@ -1,7 +1,7 @@
 -- This information tells other players more about the mod
 name = "DST Tiếng Việt"
-version = "1.4.27"
-description = "Chuyển đổi ngôn ngữ của game từ tiếng Anh sang tiếng Việt.\n\nCập nhật lần cuối ngày 24/06/2023"
+version = "1.4.28"
+description = "Chuyển đổi ngôn ngữ của game từ tiếng Anh sang tiếng Việt.\n\nCập nhật lần cuối ngày 23/07/2023"
 author = "Khoa.ga"
 
 forumthread = ""

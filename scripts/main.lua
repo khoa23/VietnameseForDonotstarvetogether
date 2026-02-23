@@ -1,6 +1,6 @@
 local env = env
 
-local main = mods.UkrainianLang
+local main = mods.VietnameseLang
 local AddPrefabPostInit = AddPrefabPostInit
 local AddClassPostConstruct = env.AddClassPostConstruct
 local modimport = env.modimport
@@ -13,21 +13,21 @@ require("constants")
 
 modimport('scripts/fix.lua')
 
--- Заванатаження файлу локалізації
-print("Завантаження файлу локалізації")
+-- Tải tệp ngôn ngữ
+print("Đang tải tệp Việt hóa...")
 env.LoadPOFile(main.StorePath..main.MainPoFile, main.SelectedLanguage)
 main.PO = LanguageTranslator.languages[main.SelectedLanguage]
 
 for k, v in pairs(main.PO) do
-	if v == "<порожньо>" or v == "" or v:find("*PLACEHOLDER") then
+	if v == "<trống>" or v == "" or v:find("*PLACEHOLDER") then
 		main.PO[k] = nil
 	end
 end
-print("Файл заванатажено")
+print("Đã tải tệp Việt hóa xong.")
 
-local ua = main.PO 
+local vi = main.PO 
 
---Підміна назв режимів гри
+-- Thay đổi tên các chế độ chơi
 if rawget(_G, "GAME_MODES") and STRINGS.UI.GAMEMODES then
 	for i,v in pairs(GAME_MODES) do
 		for ii,vv in pairs(STRINGS.UI.GAMEMODES) do
@@ -40,4 +40,5 @@ if rawget(_G, "GAME_MODES") and STRINGS.UI.GAMEMODES then
 		end
 	end
 end
+
 

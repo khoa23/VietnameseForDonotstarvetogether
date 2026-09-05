@@ -1,0 +1,2112 @@
+======================================== [2026-09-05 10:48:21] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778900
+MsgCtxt: STRINGS.SKIN_NAMES.feet_walter_detective
+MsgId: Gumshoes
+MsgStr: Giày cao su
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Giày thám tử\",\"rating\":4.0}",
+            "thoughtSignature": "EnEKbwERTTIPbnuhJIOASPdQMBN+JQDN+MMmgDKqjNSQtaUQw3HxWOfGv46vMtQlM2jvmY+BgHitHc/Y+8Z6ev0RWOta4XfYH2YF8/H1yW4AdDLPZfsDvJnXqGqYCz/LzhIjEvmlBv+ehcDa+GC5xmVyYQ=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 586,
+    "candidatesTokenCount": 17,
+    "totalTokenCount": 603,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 586
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "CpGbatyxFaLFg8UPxMmsmAc"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:48:23] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778901
+MsgCtxt: STRINGS.SKIN_NAMES.feet_walter_formal
+MsgId: Sensible Shoes
+MsgStr: Giày hợp lý
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"suggestedTranslation\": \"Giày Lịch Sự\",\n  \"rating\": 6.5\n}",
+            "thoughtSignature": "EnEKbwERTTIPlFINr0gHHMUD/76127trxDg7gzTR6COXkRwpbd75RQXScnr8qvfW+soZvRT2rg0m33iVTahdWfsxW7sPpwKJ9OYTxWPUx9DdG/J6SjQCqhNZetiHd8J1+R/CErgGpYxaAAv1EoClQ9cbkQ=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 586,
+    "candidatesTokenCount": 26,
+    "totalTokenCount": 612,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 586
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "DJGbaqbRDIvFg8UP0L7diQ4"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:48:26] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778902
+MsgCtxt: STRINGS.SKIN_NAMES.feet_walter_survivor
+MsgId: Worn Hiking Boots
+MsgStr: Giày đi bộ đường dài bị mòn
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Ủng Đi Bộ Mòn\",\"rating\":8.5}",
+            "thoughtSignature": "EnEKbwERTTIPyruuQnuChX+winUsY+dXR3PAhlJ3I5lVsp+LOYKZ7KW7AA/lYNNRCE4++/H+3xP//e8KT5mWOWtxCM1UgMCtyfFQOU5mLq9alcl8wnODpnwNafDhwPBwoOLGC8iU7WyXYTXeCB0G2JhfwQ=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 594,
+    "candidatesTokenCount": 18,
+    "totalTokenCount": 612,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 594
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "DpGbaofbIdq0juMP9tKTwQo"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:48:28] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778903
+MsgCtxt: STRINGS.SKIN_NAMES.feet_walter_ventriloquist
+MsgId: Walk 'n' Talk Shoes
+MsgStr: Giày Walk 'n' Talk
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Giày Nói & Đi\",\"rating\":7.0}",
+            "thoughtSignature": "EnEKbwERTTIPhR5LW4LuyrWXX3+1yXdpdbSQHPJz5OglMhF52SUb4t5hyIaEKFSsLyTv8oVpTY+zO3y7QSX/a037Cy4ih4EC96Em8a2T5TbkFRw5SnEE7iUNQJcW1djw/1WnnXXa88RJy11/cuTBXYAuWg=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 595,
+    "candidatesTokenCount": 17,
+    "totalTokenCount": 612,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 595
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "EZGbarnsHsPcg8UPpPKbgQk"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:48:29] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778904
+MsgCtxt: STRINGS.SKIN_NAMES.feet_walter_yule
+MsgId: Dressy Chestnut Loafers
+MsgStr: Dải may mắn mặc quần áo hạt dẻ
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Giày Lười Hạt Dẻ Bảnh Bao\",\"rating\":2.5}",
+            "thoughtSignature": "EnEKbwERTTIPjAxFFHSIJqYm9X+5kVgx7buYCAz6q45bADB/PA7toFrxJ8RNWcnoUDf2Fisz9y/p7pl71bx6rX2h7PqcDpbEPldlOpmzi0F9hxfuNpzfV6IexC/K9m0e4XzcnZljyKCXF9lSl55IzmwCpw=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 596,
+    "candidatesTokenCount": 23,
+    "totalTokenCount": 619,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 596
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "E5GbatzSKqPdg8UPktPsgQk"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:48:31] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778905
+MsgCtxt: STRINGS.SKIN_NAMES.feet_wanda_formal
+MsgId: Polished Walking Shoes
+MsgStr: Giày đi bộ bóng bẩy
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"suggestedTranslation\": \"Giày Đi Bộ Sáng Bóng\",\n  \"rating\": 8.5\n}",
+            "thoughtSignature": "EnEKbwERTTIPH8zoidPhL0ZLiypwd6gzq6beC+r9uIfpIBuw8lUm1G6L5genBzPQhYLgZy/WVMLwCDhb74THqRzrqgDFgrNsn5fbKXZU5Ap84H67ZeaqIjD6T1BPtI4bnafqQCZ6isOwC07jmSY/3QTQmg=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 590,
+    "candidatesTokenCount": 28,
+    "totalTokenCount": 618,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 590
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "FJGbapb3JNPnqfkPmYaksQc"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:48:35] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778906
+MsgCtxt: STRINGS.SKIN_NAMES.feet_wanda_ice
+MsgId: Arctic Explorer's Shoes
+MsgStr: Giày của Arctic Explorer
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Giày Thám hiểm Bắc cực\",\"rating\":6.5}",
+            "thoughtSignature": "EnEKbwERTTIPBfPBl1RumkKzDH6dREQxwDGuEE0SAa+Ug5VTrNIW6kmJXBXwud1fsZ1V/yInDlisJzH8A0NOpMZJEHXDt0vIVlB83peXiDsn2BkHq7AUpFe3zEP6n3i99JlVubTp9ePA3rOi781n7MrAQw=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 589,
+    "candidatesTokenCount": 19,
+    "totalTokenCount": 608,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 589
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "FpGbaqOsKoqng8UP96jcgAY"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:48:36] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778907
+MsgCtxt: STRINGS.SKIN_NAMES.feet_wanda_lunar
+MsgId: Diviner Heels
+MsgStr: Giày cao gót diviner
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Gót chân Tiên tri\",\"rating\":7.5}",
+            "thoughtSignature": "EnEKbwERTTIPJYqzGmV5ahWhwmvty7LQPWFi2RHPFTsoKS5cHDx+dXC+xJHAOHKY/D5vjFhoMjV+0v2z7DjO1rRQtHhHcZMIoGP8uEby0dvy6pHilG0uitfv6QQ9MJpd0y+dMlWxiCeM6987e7DpQmpHDQ=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 590,
+    "candidatesTokenCount": 18,
+    "totalTokenCount": 608,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 590
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "GpGbavCCIIjVqfkPqP-J-Qc"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:48:37] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778908
+MsgCtxt: STRINGS.SKIN_NAMES.feet_wanda_rose
+MsgId: Perennial Pumps
+MsgStr: Giày cao gót lâu năm
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Giày Cao Gót Vĩnh Cửu\",\"rating\":6.5}",
+            "thoughtSignature": "EnEKbwERTTIPCQnXf8VE60iYpOIGRYbPfQHyFPuZIrqCRpDCcsDqusOQXQ8Gt2EsBf8itMN2IeZNQUKbnRH39AR5bJtZI3MbCQd+Xp1JJ+3UE/1Ic0Q8xZAVrRufNDnZdDW/rIV37ylj0xkhh59rINLT1A=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 589,
+    "candidatesTokenCount": 22,
+    "totalTokenCount": 611,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 589
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "G5GbapbhFJ3-4-EPyZSssQg"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:48:38] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778909
+MsgCtxt: STRINGS.SKIN_NAMES.feet_warly_candyman
+MsgId: Sweet Spats
+MsgStr: Spats ngọt ngào
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Quần tất kẹo ngọt\",\"rating\":7.5}",
+            "thoughtSignature": "EnEKbwERTTIPwMrq0pxKM4JPCj3zoDm9PYKFruLstaxKSR8DZRwDc9Hfgd0PbwQm9SvdLQ07rl7+u4bi6gCmpwyTlWpKBmQt0IPsCZH+spCoN3GcLtl2uu8drgGUUFEIOz8Wiu24dQsxe25zvvH9MD88AA=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 588,
+    "candidatesTokenCount": 18,
+    "totalTokenCount": 606,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 588
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "HJGbarqNIZvcg8UPjKSWuQo"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:48:41] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778910
+MsgCtxt: STRINGS.SKIN_NAMES.feet_warly_chef
+MsgId: Pieds de Résistance
+MsgStr: Pieds de Résistance
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ CHẤM ĐIỂM & DỊCH:
+- MsgStr hiện tại chưa được dịch hoặc đang trống → Hãy chấm rating thấp (0.0 - 1.0).
+- Bạn BẮT BUỘC phải dịch MsgId sang tiếng Việt tự nhiên cho suggestedTranslation. TUYỆT ĐỐI không được trả về văn bản tiếng Anh.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Đôi Chân Đầu Bếp\",\"rating\":0.0}",
+            "thoughtSignature": "EnEKbwERTTIPmHySZ5WQwMN6uY/Af+27kjfFaiXVST9XHAMcqGJxrzT+55Mt7g2xqwCP14BV+7+reIzaU6KLYTJtk9J/YgGsAipKzSJl16TOsWtHUq4wj/sXITyrB9CqAdH2KBroCJ8tN9nz1XxoZuBtmw=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 677,
+    "candidatesTokenCount": 19,
+    "totalTokenCount": 696,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 677
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "HZGbas_EIfudjuMPod2JwAg"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:48:42] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778911
+MsgCtxt: STRINGS.SKIN_NAMES.feet_warly_fisherman
+MsgId: Trawler's Boots
+MsgStr: Giày của người đánh cá
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Ủng Ngư Phủ\",\"rating\":8.5}",
+            "thoughtSignature": "EnEKbwERTTIPgMheMqmxUKXGsoobNOJkNtj5zE9Zb+XAjRvIZSyuH7aki+FZKmXS7szt9QKFNqOO9nTaVLP0KQD2ZHq9f/9ivKL5eQVo8rgMpJD/maZd5V24BoK8Z2LOYishRqtp9IcvqHAxRbDDEX9swQ=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 590,
+    "candidatesTokenCount": 18,
+    "totalTokenCount": 608,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 590
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "IJGbaofkBZazg8UPpbrMgQs"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:48:43] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778912
+MsgCtxt: STRINGS.SKIN_NAMES.feet_warly_formal
+MsgId: Tasteful Shoes
+MsgStr: Giày trang nhã
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Giày Thanh Lịch\",\"rating\":9.0}",
+            "thoughtSignature": "EnEKbwERTTIPEytXhwClNtXHLApVDmwdgs3u3G1hHcO627oGrt3pMIi0ftC5hm9qt/DN9JLINec55E21mPKGWHOV+AmI6NcEKFgT1Y0uDRKLGKNqIQ2QUOAAM+CcsV2eQnA+g8zvy+mUw/iFYe8KFqHEzQ=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 587,
+    "candidatesTokenCount": 17,
+    "totalTokenCount": 604,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 587
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "IZGbati-HfK3qfkP8dTkgQs"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:48:45] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778913
+MsgCtxt: STRINGS.SKIN_NAMES.feet_warly_ice
+MsgId: Winter Soiree Shoes
+MsgStr: Giày dạ hội mùa đông
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"suggestedTranslation\": \"Giày Dạ Hội Mùa Đông\",\n  \"rating\": 9.5\n}",
+            "thoughtSignature": "EnEKbwERTTIPfwYeN8AnfM3hCuO+tfADAk/qkx/r4MFiJVNdZmX4pLHHyar/lw9CnG/kYSm0YTBn4yzaPvgD8pyi9tGWvr4vXkMvO5nudZT5xRjOODByZicrwUMHf6XVlSTNfe3UCavUILRdui95LSwSgw=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 590,
+    "candidatesTokenCount": 28,
+    "totalTokenCount": 618,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 590
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "IpGbaoeKKYjVqfkP1tP0sAg"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:48:46] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778914
+MsgCtxt: STRINGS.SKIN_NAMES.feet_warly_lunar
+MsgId: Funnel Brim Boots
+MsgStr: Bốt vành phễu
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Ủng Vành Phễu\",\"rating\":8.5}",
+            "thoughtSignature": "EnEKbwERTTIPY+Pbh8xXrCc00rJuGSsVA8Mw6cafoOJRo0V+keutMdq0W1UJWRGuXk5HQIs3ruetqmv/hmLl++afk9cVZRtQm1IGIyzds369EV850JniLJNtLR6vg6qowhh+DS+qyLBU2g31HgEsvJYFKw=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 591,
+    "candidatesTokenCount": 19,
+    "totalTokenCount": 610,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 591
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "JJGbar_UEILCg8UPstyB0Qg"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:48:48] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778923
+MsgCtxt: STRINGS.SKIN_NAMES.feet_wathgrithr_ice
+MsgId: Frost Giant Feet
+MsgStr: Bàn chân khổng lồ
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Chân Người Khổng Lồ Băng Giá\",\"rating\":6.0}",
+            "thoughtSignature": "EnEKbwERTTIP8TKHRF7TKmiDmbq1pTca4NVjAKTAcZPDZN/wVfICf6kViDwhPd4+wIcVOwERmTS+kvuPKIECnLe8UusCUjEieZp0xjDw+0RopCoEv08tdTUrs3EjjHoiXJcKf+D0/uYmbiM9PdGK3f6EAw=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 591,
+    "candidatesTokenCount": 22,
+    "totalTokenCount": 613,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 591
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "JpGbaqiGB-mog8UPk5WUoQc"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:48:49] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778924
+MsgCtxt: STRINGS.SKIN_NAMES.feet_wathgrithr_masquerade
+MsgId: Ragnarok Reveler Boots
+MsgStr: Bốt Khải nguyền sáng thế
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Ủng Hội tiệc Ragnarok\",\"rating\":5.0}",
+            "thoughtSignature": "EnEKbwERTTIP8XrfOg26/qV1gZUi012WJVAsXYz1yOiDgkb1EvtcOmEYJMec+5FINZM40rEdgrAGOlD9305i/T9fpxW+NU9ys+RlzKIYDjOZabD8y56PIL0NUsYEdRES7radFONEHPHbVVsPXkF66a4BRg=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 597,
+    "candidatesTokenCount": 19,
+    "totalTokenCount": 616,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 597
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "J5GbarY3xLWDxQ_bs6WpCA"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:48:51] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778925
+MsgCtxt: STRINGS.SKIN_NAMES.feet_wathgrithr_nature
+MsgId: Grove Sentinel Sandals
+MsgStr: Dép Grove Sentinel
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"suggestedTranslation\": \"Sandal Vệ Binh Rừng\",\n  \"rating\": 7.5\n}",
+            "thoughtSignature": "EnEKbwERTTIPrj28IFe9X6OD5fOXTPT6BQ4x2e6WUzeNtBv9RdqdsvW1oE7lN6IYsW6D3Xo2sdj4uEP9FVwUNIJtepFy1lI/d5QaIZV8nsDXt2mdgR5nrS/O93RAdm/YunmLZCdTAIr2dpi+wo46TtXjyg=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 589,
+    "candidatesTokenCount": 29,
+    "totalTokenCount": 618,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 589
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "KJGbauzzCZXlg8UPtcvBsQI"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:48:53] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778927
+MsgCtxt: STRINGS.SKIN_NAMES.feet_wathgrithr_wrestler
+MsgId: Ultimate Performer's Boots
+MsgStr: Đôi giày biểu diễn đỉnh cao
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Ủng Đấu Sĩ Thượng Hạng\",\"rating\":7.5}",
+            "thoughtSignature": "EnEKbwERTTIPtANa2vJU9o4lIM9T3XEoBk+sm2xyPRgWt+of90C13J4mCyvbftXFJcUZeqW/EDaIi84gvILnsAK82uPlEZV6VPz+kZaJ9VNqYS1aXc77KtqhSWhyeOo4SB1rLNrwc69bVq5Twv6Wh3snMA=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 597,
+    "candidatesTokenCount": 22,
+    "totalTokenCount": 619,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 597
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "KpGbapy9F_Oqg8UPufbbwAg"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:48:54] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778928
+MsgCtxt: STRINGS.SKIN_NAMES.feet_wathgrithr_yule
+MsgId: Ice Warrior's Treads
+MsgStr: Bước đi của chiến binh băng giá
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Ủng Chiến Binh Băng Giá\",\"rating\":7.5}",
+            "thoughtSignature": "EnEKbwERTTIPQ2Ie/HxNPIAWd7Ww7bCLnwl6+A5RCzTOQEVwwomDPBtK0+5BdzxAAtyzcWiP8OMy/gJx9r5m5rwm5pz66m5GwR+WyEmliM4UZ/X4O+jvPG0M0mmqGd0bjc85BPaIT64UrXiS/yar989Jgw=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 596,
+    "candidatesTokenCount": 20,
+    "totalTokenCount": 616,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 596
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "K5GbaumYNa2yg8UPwuTxuQg"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:48:55] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778929
+MsgCtxt: STRINGS.SKIN_NAMES.feet_waxwell_gladiator
+MsgId: Alchemist's Boots
+MsgStr: Giày của nhà giả kim
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Ủng Giả kim thuật sĩ\",\"rating\":7.5}",
+            "thoughtSignature": "EnEKbwERTTIP6uoZxfo+HkOeGDRnNNq8TRmWjJGJ0H6ykqJBh+jNl/5S0i56GLFf/cFBvPyKWq/Gi5Bd3gmUaKwGEsueaSpVQZ8VyO2NQ/P7g0kTJ1WgiBEPn4b7dXPG9/E7YvkNM4lzHz8GyGik075CTQ=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 591,
+    "candidatesTokenCount": 19,
+    "totalTokenCount": 610,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 591
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "LJGbar2EN57-4-EPpJvH6Aw"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:48:56] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778931
+MsgCtxt: STRINGS.SKIN_NAMES.feet_waxwell_masquerade
+MsgId: Stage Strider Shoes
+MsgStr: Giày Stage Strider
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Giày Khiêu vũ Cung đình\",\"rating\":7.0}",
+            "thoughtSignature": "EnEKbwERTTIPGSyxfkbxywjQA+0qDs7YLlqAUYQ3J+vJQYFft34HesuZ1efbe3yT2GnFdmmNuQ/qcEcuGdTQjnP0uLET7F5E4mdIu6hET+oHJqKFFIzOEJvewqADoyU4q4Sq8sNsvlJnstJzXok9X4zWxg=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 590,
+    "candidatesTokenCount": 20,
+    "totalTokenCount": 610,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 590
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "LpGbao-JAd2tg8UP07Pa8Qc"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:48:58] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778932
+MsgCtxt: STRINGS.SKIN_NAMES.feet_waxwell_nature
+MsgId: Dryad's Sandals
+MsgStr: Dép của Dryad
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Sandal Tiên Rừng\",\"rating\":7.0}",
+            "thoughtSignature": "EnEKbwERTTIPUCtxH7jeoc78UbIV1mKFIEBKbYBXLjDyfg7PngVA8ERZdrlWODEO08UwbroH9N8OpjzYATmqd4Ur5DCYRBDZrzwPS8DaG0+CSfezQqUlYN/yNo7sMwwa3o++V2gLhn2R5D3wXW3fJD65bw=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 589,
+    "candidatesTokenCount": 18,
+    "totalTokenCount": 607,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 589
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "L5Gbaof1G9ykqfkP3Zyi-Ac"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:49:01] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778933
+MsgCtxt: STRINGS.SKIN_NAMES.feet_waxwell_wizard
+MsgId: Wizardly Winklepickers
+MsgStr: Phù thủy Winklepickers
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Giày Mũi Nhọn Phù Thủy\",\"rating\":6.5}",
+            "thoughtSignature": "EnEKbwERTTIPao12anvutjxsJ9HyxA/bBwPf2OtBsUOvqbLY2RRDBsCxS2HxK3uWMZF1xJQv588NK2+X2a2smxY5V9IZ9LOAa8zdyRx8kX04+rSayMWja3/eA01L+pqa9HhkTog3EoWSl1meVypckkxZBQ=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 592,
+    "candidatesTokenCount": 23,
+    "totalTokenCount": 615,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 592
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "MZGbasPmA_q2g8UPjrinyQc"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:49:03] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778934
+MsgCtxt: STRINGS.SKIN_NAMES.feet_webber_gladiator
+MsgId: Fiend's Talons
+MsgStr: Móng vuốt của quỷ dữ
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Móng Vuốt Quỷ Dữ\",\"rating\":9.5}",
+            "thoughtSignature": "EnEKbwERTTIPzT+ppqqRAKihL4IhzQKtny8D7qmouoYN/o1BpyXJIpNgh5QvvQITwWvYf4gtC0GfYaZ/4wCnXCDtj/tjjho/o/uJCIdN97i5p/CcS2TjWKA8Led7doWpcQQbzNic3VEqKQFWiUhmCfhFxQ=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 594,
+    "candidatesTokenCount": 20,
+    "totalTokenCount": 614,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 594
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "M5Gbasa5L_udjuMPp92JwAg"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:49:05] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778936
+MsgCtxt: STRINGS.SKIN_NAMES.feet_webber_lunar
+MsgId: Moonglass Talons
+MsgStr: Móng vuốt mặt trăng
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Vuốt Kính Trăng\",\"rating\":7.5}",
+            "thoughtSignature": "EnEKbwERTTIP2YD7JM27WZxKPs7/arYq43gkQmfocq4LoxJI4dgbQ8ET6T1KsFPC3fsUhPF6BlMt8tva2OgoinsmQbO2SyS/msvPq22l9NwMxChdpIV6wP8XhVMaX8nJwB+j648srmmc7fKy3IA0+CyFFQ=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 592,
+    "candidatesTokenCount": 18,
+    "totalTokenCount": 610,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 592
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "NpGbapXjBq6lg8UPyYLtiAs"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:49:10] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778937
+MsgCtxt: STRINGS.SKIN_NAMES.feet_webber_magma
+MsgId: Incombustible's Feet
+MsgStr: Bàn chân không cháy
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Bàn chân Kháng lửa\",\"rating\":7.5}",
+            "thoughtSignature": "EnEKbwERTTIPVPSPaDvN97SJBMlsFBtVVT0LMcLezgZUObcOXKBQZc4ZTDd/BIZa3YDYycWu9Jj6I2esSnnEopU4v1u/+YMLgnPnY7LlrO4HGjlFarDvqRekERepNUqHfkKI3kWQ1/M5caJNW/1o4gqgfg=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 591,
+    "candidatesTokenCount": 18,
+    "totalTokenCount": 609,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 591
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "OJGbapjeLfXnqfkPwczNgQs"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:49:11] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778938
+MsgCtxt: STRINGS.SKIN_NAMES.feet_webber_masquerade
+MsgId: Brooched Feet
+MsgStr: Chân trâm
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"suggestedTranslation\": \"Chân cài trâm\",\n  \"rating\": 7.5\n}",
+            "thoughtSignature": "EnEKbwERTTIPA37ft4l1NJoXJICQwZDjmiT0KVUk9Ib6wAB2rOrg3cpyiVwT7QOKiXdjjuisZQKeXlzfgnjvMnET7x8zGOFDSS9Td4vScu9new+iV7xMRBDBZW70FuPtKQFSU7VA0zsSIgSPVZ6WkVGbvQ=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 589,
+    "candidatesTokenCount": 26,
+    "totalTokenCount": 615,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 589
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "PZGbap_1Fb_84-EPx6zi2Qs"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:49:17] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778939
+MsgCtxt: STRINGS.SKIN_NAMES.feet_webber_nature
+MsgId: Warrior Spider Feet
+MsgStr: Bàn chân nhện chiến binh
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Chân Nhện Chiến Binh\",\"rating\":9.5}",
+            "thoughtSignature": "EnEKbwERTTIPE4EoMVCZ7sxX10e34vXEZ7yL559Oq8r4FuDSagI4UrX3h1p43Pe3X5cwq33IXamAdFFr9k5GqWYKX4MMbvezHgZKyYxWSi4cnUJOMcIXpbeFuxRPuJBkJ6cPaZ9lhLNj+G0O3c35Ctvm3w=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 589,
+    "candidatesTokenCount": 19,
+    "totalTokenCount": 608,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 589
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "PpGbauKsKPy2g8UPlZ2giQs"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:49:21] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778940
+MsgCtxt: STRINGS.SKIN_NAMES.feet_webber_pirate
+MsgId: Sea Spider Feet
+MsgStr: Chân Sea Spider
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Chân Nhện Biển\",\"rating\":7.0}",
+            "thoughtSignature": "EnEKbwERTTIPuRnheifQF2vTFyydefG7VMnOlEljWz1YpBysSj9rKyb/Ew2JYN0aAhjtaaUX/vFqNVN50/XH2O/M/126dINNgON7vs5n5lsMc0p4etR3WVkKK7wZ1yINfc6sAJZAPe1kZNnmf23MSskuDQ=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 587,
+    "candidatesTokenCount": 18,
+    "totalTokenCount": 605,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 587
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "RJGbaq7fDq6lg8UPyILtiAs"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-05 10:49:22] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 778941
+MsgCtxt: STRINGS.SKIN_NAMES.feet_webber_punk
+MsgId: Punk Boots
+MsgStr: Giày bốt Punk
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Bốt Punk\",\"rating\":9.0}",
+            "thoughtSignature": "EnEKbwERTTIPOFxw0rd6e3H6hpToU2NE4TAeIhmufy/fD9EYKNWm2P/3ehDTLmZ/OxI4etWeb4B8OAobNGk1BW+v6l2FojSQKcTYS1y0KqYyaO8mlKfy7ciMSVGflC7S+d64NjgtxJggJnhvCI2RcI+XVg=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 586,
+    "candidatesTokenCount": 15,
+    "totalTokenCount": 601,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 586
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "SJGbavGmBJ-FjuMPvLLe-AY"
+}
+
+================================================================================--------------------
+

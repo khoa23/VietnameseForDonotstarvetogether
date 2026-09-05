@@ -1,0 +1,53 @@
+======================================== [2026-08-15 16:20:59] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 737655
+MsgCtxt: STRINGS.CHARACTERS.WILLOW.DESCRIBE.MAST
+MsgId: Are we allowed to climb it?
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Mình có được phép leo lên đó không nhỉ?\",\"rating\":9.5}",
+            "thoughtSignature": "EnEKbwERTTIPHaJVi6DgK/G8d0PW3fXyxaI77KcQU+wKosNLiwrHHYgbhUx7kbF1BLij2uhW/CKHbpf0mm7wiwtN4YCIqykuiMfAWOJW8gERg1ne0ZSS8gWQrKYL4Nej5XXOo41JZvdBRTLaXr8Nmb/Igg=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 226,
+    "candidatesTokenCount": 22,
+    "totalTokenCount": 248,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 226
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "ei-AapPJLuaijuMP4uSSiQE"
+}
+
+================================================================================--------------------
+

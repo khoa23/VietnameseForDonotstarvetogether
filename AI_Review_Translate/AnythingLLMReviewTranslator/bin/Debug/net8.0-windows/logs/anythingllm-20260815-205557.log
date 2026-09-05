@@ -1,0 +1,1696 @@
+======================================== [2026-08-15 20:56:36] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 749300
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.PENGUINCORPSE.GENERIC
+MsgId: I still don't trust it.
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Anh vẫn thấy không đáng tin.\", \"rating\": 9.0}",
+            "thoughtSignature": "El4KXAERTTIPJZCpKj1Zqk73Da6gZYZHjBubklCbpDobfI6eqv06HsOX9H3qIu+mW8xWLT3wFv9jTfuOx7j0qAPwHSEuUfXW6Cz60TDtVMtiOWhj+cUEkZmbx2khMa/P"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 234,
+    "candidatesTokenCount": 21,
+    "totalTokenCount": 255,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 234
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "FXCAaqjZNajRg8UP7OLq0Qc"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:06] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750233
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.VAULT_STATUE.LORE1
+MsgId: Oh geez, he's rotten to the core.
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Trời ạ, hắn thối nát tận xương tủy rồi.\", \"rating\": 9.5}",
+            "thoughtSignature": "El4KXAERTTIPflMFtX1caQS4WtVDfemHlUQ0SL+ABAT634pxQrdPX1zDgdOKofKJjDP067DTNR2xbjHQuN9loJv+1L7geBLyrTTTdC5XDtjFQ4lXFygT01GMk1Z+ejr1"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 238,
+    "candidatesTokenCount": 29,
+    "totalTokenCount": 267,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 238
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "b3CAavCnHeL9juMP-pHE-Qc"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:06] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750337
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WARGCORPSE.REVIVING
+MsgId: Not somethin' you see everyday, eh Luce?
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Không phải ngày nào cũng thấy cảnh này ha, Luce?\", \"rating\": 9.5}",
+            "thoughtSignature": "El4KXAERTTIPr5l5DoV6icjDtG7Q4kDbxTgDWi32QtSoEemt0C90CgFEcBUJ7783R+OswNV693QJTU+E16zuJn1n5Qtn32EDNWQVFjcQuvR0Tc0Ujtpv6Tequ/OHFBDD"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 235,
+    "candidatesTokenCount": 26,
+    "totalTokenCount": 261,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 235
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "cHCAav2KEoOpg8UP-fbe-A0"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:07] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750338
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WARGLET
+MsgId: Think you can mess with me, eh?
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Tưởng dám dây vào ta à, hả?\", \"rating\": 9.0}",
+            "thoughtSignature": "El4KXAERTTIPB1kaNyZiS5JQuc32TCS0cAhbYcR5COlyW1nUwpxLSiBlWfrCoaPpWnR6I37C0kFqQcE0SdJRmRJ1YI+mV3x+JZgFBxFCgQmzLQirqnFuKIkXOnBO5uKh"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 229,
+    "candidatesTokenCount": 24,
+    "totalTokenCount": 253,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 229
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "cXCAavHLBeKC4-EPvfHigAM"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:08] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750339
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WARGSHRINE.BURNT
+MsgId: Burned up.
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Đã cháy rụi.\",\"rating\":9.5}",
+            "thoughtSignature": "El4KXAERTTIPsB0gtXfeAPAvvonla8CZtVDaRVWHrb2HfkP+JpXk+vCAsNzN4FJ8aESwtX6hvHjMcOZLk3ZQ42ceadW1NsCoxRnxS/bdC8rjS+aRwNHGV/aTxn7loJf/"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 229,
+    "candidatesTokenCount": 19,
+    "totalTokenCount": 248,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 229
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "cXCAaqaGN_WzjuMPscLTuAE"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:09] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750340
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WARGSHRINE.EMPTY
+MsgId: Gotta warm this doghouse up, eh?
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Phải làm ấm cái chuồng chó này lên thôi, nhở?\", \"rating\": 9.5}",
+            "thoughtSignature": "El4KXAERTTIPE1NEZPkwphTMrCo/ZG4mpaot4v5ZB68qIr/DeBOzofiA7Mw72iPMR8y0sy/8DAgVsmeNdxlHw2pmkv2MP9xg2tmUGIG5xerrAoU3UX+efg9THIjL4qG0"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 233,
+    "candidatesTokenCount": 29,
+    "totalTokenCount": 262,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 233
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "cnCAauWmKuuFjuMPjavS6Q0"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:09] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750341
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WARGSHRINE.GENERIC
+MsgId: Nice and toasty.
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Ấm áp và dễ chịu thật.\",\"rating\":9.0}",
+            "thoughtSignature": "El4KXAERTTIP8dvEtlqhsSLf+SwXs1B9vjQnt+rBEmhoyrxlvLj6xhLQ+twXXzIiFzaRJLxhMR5G2wtar11+VV6lpfj5S+4SBKEj8BinOlJ1YEqJw/AqPKMvPgmWCVxY"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 230,
+    "candidatesTokenCount": 20,
+    "totalTokenCount": 250,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 230
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "c3CAauGvHffy4-EP55bMkQ8"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:10] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750342
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WARLY.ATTACKER
+MsgId: Careful where you're swingin', %s.
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Cẩn thận chỗ anh vung tay đấy, %s.\",\"rating\":9.0}",
+            "thoughtSignature": "El4KXAERTTIPWFk2ckK3mBUI5ohlnVbn8m3uzkNhqo3instKhP7KtQt8tIaORVePPZjmKOgRpEm3/q1bSTcn1+QSjm3W/paFddlmPyo3VcVP9gn9n5KRHG3AKvq/9E2F"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 234,
+    "candidatesTokenCount": 25,
+    "totalTokenCount": 259,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 234
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "dHCAarajC7TWjuMP0e_7iAI"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:11] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750343
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WARLY.FIRESTARTER
+MsgId: Watch that fire now, %s.
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Trông chừng đống lửa đấy nhé, %s.\", \"rating\": 9.0}",
+            "thoughtSignature": "El4KXAERTTIPQOovqiUtHn4C79dmOIls4DLzHcylN6+akgbg4u5mwsAds9cDx63fm/BTLlvNej0rw8uRHgNi70nCcbL9tdTk157DVj/iqOStT89sMeixBYuEkjvMxn66"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 231,
+    "candidatesTokenCount": 27,
+    "totalTokenCount": 258,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 231
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "dHCAaoPCPJL4juMPmcO3KQ"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:12] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750344
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WARLY.GENERIC
+MsgId: %s, buddy! How you doing?
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"%s, bạn hiền! Dạo này thế nào?\", \"rating\": 9.5}",
+            "thoughtSignature": "El4KXAERTTIPGx1hdN7poX0eu+T2nF6l50xX9NYUr4a4sBtrnkIPwBVUrS86HoO48uGCYD74PmpGfgcHmDbMRS+m+iWM+2vyVnG/mxOrbc6jD53t9b192AVu0G3xG4NF"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 231,
+    "candidatesTokenCount": 26,
+    "totalTokenCount": 257,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 231
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "dXCAapnJMo2jjuMPrq6WuAk"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:13] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750345
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WARLY.GHOST
+MsgId: Welp, that's the way the cookie crumbles.
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Đành chịu thôi, đời mà.\", \"rating\": 9.0}",
+            "thoughtSignature": "El4KXAERTTIPEvoFuC3hssuTbtySi13KBVC7Nj8jSfsJTjRZiMH81Dp8p+0/nwYbXA/MIvTFfPpxeM52v22R618PWZCaaTxcU/QeGT9L5JRLCvGNPeqnEwqCl+GQTLws"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 235,
+    "candidatesTokenCount": 22,
+    "totalTokenCount": 257,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 235
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "dnCAapLPJsvNg8UP9em4qQk"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:14] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750346
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WARLY.MURDERER
+MsgId: I'm gonna soufflé you alive!
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Tao sẽ làm bánh su-phê sống mày!\", \"rating\": 8.5}",
+            "thoughtSignature": "El4KXAERTTIPU6OVX7Rur4JVThgxHQqMeXCM8FJUio0hLLqwQ4SkADQBczUxKaPwC80TVBHF/oZf/YeDSZCvC5DXBTwjuYylrViCpsVXiXM05MKPtrjIxCry19r+zLvq"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 232,
+    "candidatesTokenCount": 25,
+    "totalTokenCount": 257,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 232
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "d3CAar_HIJbnjuMP9-vmsQk"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:15] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750347
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WARLY.REVIVER
+MsgId: %s is a stand up kinda guy.
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"%s là một người đáng tin cậy.\",\"rating\":9.0}",
+            "thoughtSignature": "El4KXAERTTIPmQMDiBokhkaWKJYyUwT+gKBO5pe4c2LXxLm62/Pp/dyqAzgho3wR31dpC4AIEL4iCESZgeA+AyzxRnwl2+7lEsfYicfglXnU9hlPn9ttHC8TkVfk5NPn"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 231,
+    "candidatesTokenCount": 22,
+    "totalTokenCount": 253,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 231
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "eHCAar_qFcLojuMPo9_68AE"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:15] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750348
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WAR_BLUEPRINT
+MsgId: Pretty intimidating, eh Lucy?
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Đáng sợ phết nhỉ, Lucy?\", \"rating\": 9.5}",
+            "thoughtSignature": "El4KXAERTTIPBE6t3730gnhTWHHq91ML8Z/7H58qXWeq/X66WvjfvHXcQspH8IBRp2jLEyf2FMu6vbtWav96mB0a+ZkPUR2ZxhXKAdNcCAqMTcrLlRbrEdBXjPsJ8Aqj"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 227,
+    "candidatesTokenCount": 23,
+    "totalTokenCount": 250,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 227
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "eXCAaqa8D77Qg8UP8ICLyQE"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:16] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750349
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WASPHIVE
+MsgId: Why are those bees so angry?
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Sao lũ ong đó lại tức giận thế nhỉ?\",\"rating\":9.5}",
+            "thoughtSignature": "El4KXAERTTIP+jQSCcC51vHC1zO+FLca9g5N73G6EMN0+O2hLSMKk7nLFCu0IE7n/G55ssK+ypT4C8q0OtwxJNzhQFHTTjsFVVk2Xb6JSBv6L0FYv81CRyukkm8j8DpS"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 227,
+    "candidatesTokenCount": 23,
+    "totalTokenCount": 250,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 227
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "enCAaqynA-S1juMPwN-OuQk"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:17] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750350
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WATERBALLOON
+MsgId: Could be fun times lobbin' these around.
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Ném mấy cái này chắc vui phết.\", \"rating\": 9.0}",
+            "thoughtSignature": "El4KXAERTTIPfV3OeHXz074pNANHf6BRRijFZf3W1e2k7eaj5hX7DQp1a9ZQPpjzK88tBcHWEaewdh6+qtpMZaeub9v0t0yLDidfRC6YpeItMxizw+6gKYRyCWKKYQWr"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 231,
+    "candidatesTokenCount": 24,
+    "totalTokenCount": 255,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 231
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "enCAaofNNLGpjuMPtuW4oQk"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:29] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750450
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WINONA_BATTERY_LOW.LOWPOWER
+MsgId: Just aboot dead.
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Gần ngỏm rồi.\", \"rating\": 9.0}",
+            "thoughtSignature": "El4KXAERTTIPnl76uovDCyIkPrPXph3/BfnTogjsSG7z8nPEKojwP9yCqW31w2PFCeE36cZ4C1jLf29s5JQsijRRoYV9Y0htUB7+t00vnjVliWU8V7Lyu0pzJQKt1Cxy"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 232,
+    "candidatesTokenCount": 21,
+    "totalTokenCount": 253,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 232
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "h3CAava1HOS1juMPwN-OuQk"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:30] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750452
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WINONA_CATAPULT.BURNING
+MsgId: Woah! Careful, Lucy!
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Ái! Cẩn thận, Lucy!\", \"rating\": 9.5}",
+            "thoughtSignature": "El4KXAERTTIPdrWsyilZ3vEfnYeVsMtJk2I+IHHlGEcidgMIZGTuA83VYKY3E5Qj9snTwLSaqn2jUcm250Nzx0kyQ4BMZIJGJgF1f+CsgNxDbpQhCxo1lfAzedjlQK3a"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 233,
+    "candidatesTokenCount": 23,
+    "totalTokenCount": 256,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 233
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "iHCAauLFE5e6qfkP8our2AU"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:31] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750453
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WINONA_CATAPULT.BURNT
+MsgId: That's a right shame.
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Tiếc thật đấy.\",\"rating\":9.0}",
+            "thoughtSignature": "El4KXAERTTIP6sH0FNo4VrHy5cyrcZQkPUv/DcfuU7KPumrGGQ7OXbK124Sv7IuzOA/D69UtNe0NHphCQ+634N2thzHuHi+GyscPV5mkPvSs0vrijQPjoSmQiz62Wyk7"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 233,
+    "candidatesTokenCount": 17,
+    "totalTokenCount": 250,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 233
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "iXCAapj5BuOljuMPgoD0gAI"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:32] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750455
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WINONA_CATAPULT.OFF
+MsgId: Does it look like it's working, Lucy?
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Trông nó có vẻ đang hoạt động không, Lucy?\", \"rating\": 9.5}",
+            "thoughtSignature": "El4KXAERTTIPhx4ePJAWKP/dmY6X0X7CG2m6VUvD3AurZy3sGCPpQoh3AgaMxUuDMad3lPT40Wuf+zw+f/lSwVfJtSPr+TfRd83S8ZOAtV4+8/Gcf8tRvTKIJn9/4vmx"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 236,
+    "candidatesTokenCount": 26,
+    "totalTokenCount": 262,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 236
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "iXCAaqbhOO-ajuMPyNPZgQ8"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:33] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750456
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WINONA_CATAPULT.SLEEP
+MsgId: Looks kinda fun if I'm honest.
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Thấy cũng vui phết nếu nói thật lòng.\", \"rating\": 9.0}",
+            "thoughtSignature": "El4KXAERTTIPFtlIjGH+ik1fEW4XxPvkrjJTKo8Ld+2p0XBS1EGyuzMfI1jIZKuCEa21NanUbkw6xrQYrri4hDRKl9sGCL/6VaD9hPQP+dCj/ThgE5kNjEuVk7MZwPIC"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 235,
+    "candidatesTokenCount": 25,
+    "totalTokenCount": 260,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 235
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "inCAaorXK47bjuMP_t6J4Ac"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:34] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750462
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WINONA_REMOTE.CHARGED
+MsgId: Nifty gadget, eh?
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Đồ chơi hay đấy, nhỉ?\",\"rating\":9.0}",
+            "thoughtSignature": "El4KXAERTTIP4+Lb+B1IRZ7kpMUZS93wXcXVdOq8Rl6amgTAPhlzfI8/Gccmduqe4l4awnmc+4tK31LLx2BdlM7VO8GCFvCFuFo+i4nQPhFtA3WPnEHkutYWcgW8s9X2"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 231,
+    "candidatesTokenCount": 20,
+    "totalTokenCount": 251,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 231
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "i3CAavygG8mDg8UP3orWoQI"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:34] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750463
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WINONA_REMOTE.CHARGING
+MsgId: Nifty gadget, eh?
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Đồ chơi hay phết nhỉ?\", \"rating\": 9.0}",
+            "thoughtSignature": "El4KXAERTTIPtlF3U79VpikTTQou9dPB5qbM1jG/G+mIVEbCeS0BkwMWPtjmPtCNQBEFVxjBbaKrjcDfJYstvj1ajTcamSOFfuRanTA/hw4wIy/mLr0HPQiEgZ45VVdd"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 231,
+    "candidatesTokenCount": 22,
+    "totalTokenCount": 253,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 231
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "jHCAauDeDYTljuMPmfXfqQE"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:35] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750464
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WINONA_REMOTE.GENERIC
+MsgId: Nifty gadget, eh?
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Đồ chơi phết nhỉ?\", \"rating\": 9.0}",
+            "thoughtSignature": "El4KXAERTTIPDtmUBOO5p32A2NqXQGx/vOsbwIBBuaG88848F4LVWewmE8msunpFf6q8MtT0QaiYOjEjiLGf9NErD3XP551DJCDCZssCzkkkAOwlczcfzEygKC3rnGvz"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 231,
+    "candidatesTokenCount": 21,
+    "totalTokenCount": 252,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 231
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "jHCAaqyrOdvnjuMPhLuzoAE"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:36] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750465
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WINONA_REMOTE.OFF
+MsgId: Does it look like it's working, Lucy?
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Trông nó có vẻ đang hoạt động không, Lucy?\", \"rating\": 9.5}",
+            "thoughtSignature": "El4KXAERTTIParXf61OkvtU6j3G7UqMr3x0AGfdAXH7QqCUupVFzoTozwaLMsjMcwCNNWqp0R6SL20616YRJNqQzOVUC9xEa3MwHpR5IFDwSW816e+8sKUelRV/SDeBN"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 235,
+    "candidatesTokenCount": 26,
+    "totalTokenCount": 261,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 235
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "jnCAapXyApOAg8UPy8anuAE"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:37] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750466
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WINONA_SPOTLIGHT.BURNING
+MsgId: Woah! Careful, Lucy!
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Woah! Cẩn thận đấy, Lucy!\", \"rating\": 9.5}",
+            "thoughtSignature": "El4KXAERTTIPNTH+2W7MdcpQJngB18Z7RFqDRscmYI239a9DRtHIESE21B03cslwEZEsPHCRxJzhYg+v+zEUMDTd1JnAF0EuVju+pWV6Y3Knih6JG1WSZ/OKkwPBTTx7"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 232,
+    "candidatesTokenCount": 24,
+    "totalTokenCount": 256,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 232
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "jnCAaq3fLKGujuMP-LKV8Qk"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:38] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750467
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WINONA_SPOTLIGHT.BURNT
+MsgId: That's a right shame.
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Phí của phạm vi.\", \"rating\": 8.5}",
+            "thoughtSignature": "El4KXAERTTIPjc/uArr+gjg0XQ6rAQ1OZs9E4xnYRctujprc3+TdbUrLTWD9vPOHpf+Rh+asNob2m9DMAblNRuepR/SbHji29QcqLqmOCoUN9tFaFwhFy6QlmuD+W/dq"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 232,
+    "candidatesTokenCount": 20,
+    "totalTokenCount": 252,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 232
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "j3CAaqf-GruAg8UPj5aCoQk"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:38] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750468
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WINONA_SPOTLIGHT.GENERIC
+MsgId: Fine, as long as it don't start no forest fires.
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Được thôi, miễn là nó không làm cháy rừng là được.\", \"rating\": 9.0}",
+            "thoughtSignature": "El4KXAERTTIP7F1A1efOjvpSZ9tJP1WrweSHe+HjUhzlOFqdH+D+yMCwxtCjSkTQTjd9hDUz+artPHEpFeehu+p+6t2R6dz1ZZIpx9Gg+9M5ILWYLFlp6JBHpAyjm8v0"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 239,
+    "candidatesTokenCount": 28,
+    "totalTokenCount": 267,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 239
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "kHCAasHeGrrcg8UPr-S40Qc"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:39] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750469
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WINONA_SPOTLIGHT.OFF
+MsgId: Does it look like it's working, Lucy?
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Trông nó có vẻ đang hoạt động không, Lucy?\", \"rating\": 9.0}",
+            "thoughtSignature": "El4KXAERTTIP6Hvdy3c7wlnFXiplglAve4JooX4IMyFEXEGq5tZoayyHEvBjD5FriT76BGZYVAeI/cQVj/VMxuoJoil4BqDn5TRs2uj0XutW0SkzRKWdoj7P3vS2gSLD"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 235,
+    "candidatesTokenCount": 26,
+    "totalTokenCount": 261,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 235
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "kXCAasWpCeaijuMP4uSSiQE"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:40] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750470
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WINONA_SPOTLIGHT.SLEEP
+MsgId: Fine, as long as it don't start no forest fires.
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Được thôi, miễn là nó không làm cháy rừng.\", \"rating\": 9.0}",
+            "thoughtSignature": "El4KXAERTTIPmOxaRFvVSvVmplNq3e03usynjbet7wGeclf+eorA2J28MqdBbJzRrANW2w+FSMYbjfR0nccBOp8Cj62XA3Ev97NIpMuTYfORSfE249cRdb4/8ZPlg70N"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 239,
+    "candidatesTokenCount": 26,
+    "totalTokenCount": 265,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 239
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "kXCAasL2OaPVqfkPoJe3kQs"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:41] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750471
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WINONA_STORAGE_ROBOT.CHARGED
+MsgId: Catchin' some zeds, eh?
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Đang chợp mắt à?\", \"rating\": 9.5}",
+            "thoughtSignature": "El4KXAERTTIPjHNRpUWXjNKviyxcP/8PabA3AVL/RCyjfqmilYbsrDCInGUI1+5NOxD/K/nSxK47El6kvpA2qlPxOs/pkMqSZwceWYAu3O8iw3l6y5/cJOyIQr0aoFba"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 236,
+    "candidatesTokenCount": 21,
+    "totalTokenCount": 257,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 236
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "knCAap-JNbefjuMP39nXoAk"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 20:58:42] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 750472
+MsgCtxt: STRINGS.CHARACTERS.WOODIE.DESCRIBE.WINONA_STORAGE_ROBOT.CHARGING
+MsgId: Catchin' some zeds, eh?
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Đang làm một giấc hả?\", \"rating\": 9.0}",
+            "thoughtSignature": "El4KXAERTTIP3l8drF7L4QSyGDEH8L1wS1Qujf3V8t69tEsVLafHXf6ADbVytFrGanj8GxwgbWexXzRlu7aGaCbswTjay45g2YLz4+zd1/6Ww4cxcit3ybu3nnCfM0tS"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 236,
+    "candidatesTokenCount": 21,
+    "totalTokenCount": 257,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 236
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "k3CAat28IpjCg8UPuKb64A4"
+}
+
+================================================================================--------------------
+

@@ -1,0 +1,53 @@
+======================================== [2026-08-15 21:22:18] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 761353
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.TICOON.NEARBY
+MsgId: Think he smell something nearby.
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Hình như nó ngửi thấy cái gì đó ở gần đây.\",\"rating\":9.5}",
+            "thoughtSignature": "EnEKbwERTTIPtk2a3Gapf6p05552EbhdVbZAOUvdBv+ILPoUFd/SJjVEudwHaIwPc8iXLOuI/Abexz84eOxqubk2Lg5Qqo2SMgUejPVU1YERIqY/EnLf0pKO/GWU7NEcq++7c2g/Q7fRs9i6r/DIw1UmHg=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 230,
+    "candidatesTokenCount": 25,
+    "totalTokenCount": 255,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 230
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "HHaAaqG1BbGVg8UP98GfkQ4"
+}
+
+================================================================================--------------------
+

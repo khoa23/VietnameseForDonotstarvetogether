@@ -1,0 +1,189 @@
+@page
+@model IndexModel
+@using System.Globalization
+@{
+    ViewData["Title"] = "PoTranslations Studio";
+    var searchLabel = string.IsNullOrWhiteSpace(Model.Search)
+        ? "Toàn bộ dữ liệu"
+        : $"Kết quả cho “{Model.Search}”";
+}
+
+@if (!string.IsNullOrWhiteSpace(Model.FlashMessage))
+{
+    <div class="alert alert-@((Model.FlashVariant ?? "success")) mt-3 mb-0" role="alert">
+        @Model.FlashMessage
+    </div>
+}
+
+@if (!string.IsNullOrWhiteSpace(Model.SetupHint))
+{
+    <div class="alert alert-warning mt-3 mb-0" role="alert">
+        <strong>Chưa có kết nối SQL Server.</strong>
+        <span class="d-block mt-1">@Model.SetupHint</span>
+    </div>
+}
+
+<div id="liveStatus" class="live-status d-none" role="status" aria-live="polite" aria-atomic="true"></div>
+
+<section id="searchPanel" class="search-panel" hidden>
+    <form method="get" class="row g-3 align-items-end">
+        <input type="hidden" name="pageNumber" value="1" />
+
+        <div class="col-12 col-xl-6">
+            <label class="form-label" for="search">Tìm kiếm mọi cột</label>
+            <div class="input-group input-group-lg">
+                <span class="input-group-text">⌕</span>
+                <input id="search" name="search" type="search" class="form-control" value="@Model.Search" placeholder="Nhập từ khóa bất kỳ..." />
+                <button class="btn btn-accent" type="submit">Tìm</button>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-xl-2">
+            <label class="form-label" for="pageSize">Dòng / trang</label>
+            <select id="pageSize" name="pageSize" class="form-select form-select-lg" onchange="this.form.pageNumber.value = 1; this.form.submit();">
+                @foreach (var size in Model.PageSizes)
+                {
+                    <option value="@size" selected="@(size == Model.PageSize ? "selected" : null)">@size</option>
+                }
+            </select>
+        </div>
+
+        <div class="col-12 col-md-8 col-xl-4 d-flex flex-wrap gap-2 justify-content-xl-end">
+            <button class="btn btn-primary btn-lg btn-accent" type="submit">Áp dụng</button>
+            <a class="btn btn-outline-light btn-lg" asp-page="/Index" asp-route-pageSize="@Model.PageSize" asp-route-pageNumber="1">Xóa lọc</a>
+        </div>
+    </form>
+</section>
+
+<section class="table-card table-card--wide"
+         data-search="@Model.Search"
+         data-page-number="@Model.PageNumber"
+         data-page-size="@Model.PageSize">
+    <div class="table-card__header">
+        <div>
+            <span class="section-label">@searchLabel</span>
+            <h2>PoTranslations</h2>
+        </div>
+        <div class="table-card__summary">
+            <span>Trang @Model.PageNumber / @Model.TotalPages</span>
+            <span>Hiển thị @Model.ShowingFrom - @Model.ShowingTo trên @Model.TotalCount bản ghi</span>
+        </div>
+    </div>
+
+    <div class="data-grid table-responsive">
+        <table class="table table-hover align-middle">
+            <thead>
+                <tr>
+                    <th>AllText</th>
+                    <th>MsgStr</th>
+                    <th>SuggestedTranslation</th>
+                    <th>Rating</th>
+                    <th>Locked</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Rows.Count == 0)
+                {
+                    <tr>
+                        <td colspan="5">
+                            <div class="empty-state">
+                                <h3>Không có dữ liệu khớp.</h3>
+                                <p>Hãy thử một từ khóa khác hoặc xóa bộ lọc hiện tại.</p>
+                            </div>
+                        </td>
+                    </tr>
+                }
+                else
+                {
+                    foreach (var row in Model.Rows)
+                    {
+                        <tr data-row-id="@row.Id"
+                            data-suggested-translation="@(row.SuggestedTranslation ?? string.Empty)"
+                            data-rating="@(row.Rating.HasValue ? row.Rating.Value.ToString(CultureInfo.InvariantCulture) : string.Empty)">
+                            <td class="table-cell-alltext">
+                                <div class="cell-snippet cell-snippet--full" title="@row.AllText">@row.AllText</div>
+                            </td>
+                            <td>
+                                <div class="cell-snippet" title="@row.MsgStr">@row.MsgStr</div>
+                            </td>
+                            <td class="editable-cell editable-cell--text"
+                                data-inline-field="suggestedTranslation"
+                                title="Nhấp đúp để chỉnh sửa">
+                                @if (string.IsNullOrWhiteSpace(row.SuggestedTranslation))
+                                {
+                                    <span class="text-muted editable-placeholder">Nhấp đúp để nhập</span>
+                                }
+                                else
+                                {
+                                    <div class="cell-snippet cell-snippet--full editable-display" title="@row.SuggestedTranslation">@row.SuggestedTranslation</div>
+                                }
+                            </td>
+                            <td class="editable-cell editable-cell--number"
+                                data-inline-field="rating"
+                                title="Nhấp đúp để chỉnh sửa">
+                                @if (row.Rating.HasValue)
+                                {
+                                    <span class="rating-pill editable-display">@row.Rating.Value.ToString("0.###", CultureInfo.InvariantCulture)</span>
+                                }
+                                else
+                                {
+                                    <span class="text-muted editable-placeholder">Nhấp đúp để chấm</span>
+                                }
+                            </td>
+                            <td>
+                                <form method="post" asp-page-handler="ToggleLock" class="d-inline lock-toggle-form">
+                                    <input type="hidden" name="id" value="@row.Id" />
+                                    <input type="hidden" name="search" value="@Model.Search" />
+                                    <input type="hidden" name="pageNumber" value="@Model.PageNumber" />
+                                    <input type="hidden" name="pageSize" value="@Model.PageSize" />
+                                    <button
+                                        type="submit"
+                                        class="state-pill state-pill--clickable lock-toggle-button @(row.TranslationLocked ? "state-pill--locked" : "")"
+                                        title="Bấm để đổi trạng thái">
+                                        @(row.TranslationLocked ? "Khóa" : "Mở")
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</section>
+
+@if (Model.TotalPages > 1)
+{
+    <nav aria-label="Điều hướng trang" class="pagination-shell">
+        <ul class="pagination pagination--single-line justify-content-center">
+            <li class="page-item @(Model.PageNumber <= 1 ? "disabled" : "")">
+                <a class="page-link" asp-page="/Index" asp-route-search="@Model.Search" asp-route-pageNumber="@(Model.PageNumber - 1)" asp-route-pageSize="@Model.PageSize">Trước</a>
+            </li>
+
+            @if (Model.ShowLeadingPaginationEllipsis)
+            {
+                <li class="page-item disabled">
+                    <span class="page-link page-link--ellipsis">...</span>
+                </li>
+            }
+
+            @foreach (var pageIndex in Model.VisiblePageNumbers)
+            {
+                <li class="page-item @(pageIndex == Model.PageNumber ? "active" : "")">
+                    <a class="page-link" asp-page="/Index" asp-route-search="@Model.Search" asp-route-pageNumber="@pageIndex" asp-route-pageSize="@Model.PageSize">@pageIndex</a>
+                </li>
+            }
+
+            @if (Model.ShowTrailingPaginationEllipsis)
+            {
+                <li class="page-item disabled">
+                    <span class="page-link page-link--ellipsis">...</span>
+                </li>
+            }
+
+            <li class="page-item @(Model.PageNumber >= Model.TotalPages ? "disabled" : "")">
+                <a class="page-link" asp-page="/Index" asp-route-search="@Model.Search" asp-route-pageNumber="@(Model.PageNumber + 1)" asp-route-pageSize="@Model.PageSize">Sau</a>
+            </li>
+        </ul>
+    </nav>
+}

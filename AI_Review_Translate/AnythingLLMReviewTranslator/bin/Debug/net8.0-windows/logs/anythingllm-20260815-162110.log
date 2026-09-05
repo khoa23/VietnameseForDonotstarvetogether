@@ -1,0 +1,106 @@
+======================================== [2026-08-15 16:22:12] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 737981
+MsgCtxt: STRINGS.CHARACTERS.WILLOW.DESCRIBE.OCEAN_TRAWLER.LOWERED
+MsgId: I bet it's catching lots of fish right now.
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Chắc giờ nó đang bắt được khối cá.\", \"rating\": 9.0}",
+            "thoughtSignature": "El4KXAERTTIPSbh9Wtp+cxSBZ31CbAWh6JYoSf5mBOHps8AXewJ0t9jJ7SjuC6958H1nwXg6+Xjj2eSFRRsWgV2lfORtzYBucSsJC6reG6Mo2L336kOTJTZNTu0zfCCF"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 239,
+    "candidatesTokenCount": 24,
+    "totalTokenCount": 263,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 239
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "xC-AaoKXEt66juMPzYOdyAc"
+}
+
+================================================================================--------------------
+
+======================================== [2026-08-15 16:24:01] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 738906
+MsgCtxt: STRINGS.CHARACTERS.WILLOW.DESCRIBE.TURNIP_COOKED
+MsgId: Take that, turnip.
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Nhận lấy này, củ cải.\", \"rating\": 9.5}",
+            "thoughtSignature": "El4KXAERTTIPpG6wC2dpzANJRlGQto0alebeCQE1mL/SQRSqx8WiA5gATQ1ErAL2ZhYzau5kUYTzhCOKe8s3jvThZKQNMdWkt93P1xvncW/yT0QFv8A+tXnwM+QUkoMx"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 228,
+    "candidatesTokenCount": 23,
+    "totalTokenCount": 251,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 228
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "MTCAauDlGqbB4-EP4pPY4QE"
+}
+
+================================================================================--------------------
+

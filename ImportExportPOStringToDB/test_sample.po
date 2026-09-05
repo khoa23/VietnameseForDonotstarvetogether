@@ -1,0 +1,21 @@
+msgid ""
+msgstr ""
+"Application: Dont' Starve\n"
+"POT Version: 2.0\n"
+"Language-Team: Khoa.ga\n"
+"Language: vi\n"
+
+#. STRINGS.ACTIONS.ABANDON
+msgctxt "STRINGS.ACTIONS.ABANDON"
+msgid "Abandon"
+msgstr "Bỏ rơi"
+
+#. STRINGS.ACTIONS.ABANDON_QUEST
+msgctxt "STRINGS.ACTIONS.ABANDON_QUEST"
+msgid "Abandon"
+msgstr "Bỏ rơi"
+
+#. STRINGS.ACTIONS.ACTIVATE
+msgctxt "STRINGS.ACTIONS.ACTIVATE"
+msgid "Activate"
+msgstr "Kích hoạt"

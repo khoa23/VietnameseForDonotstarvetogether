@@ -1,0 +1,15 @@
+{
+    "database": {
+        "connection_string": "DRIVER={ODBC Driver 17 for SQL Server};Server=.\\SQLEXPRESS;Database=ImportPOStringToDB;Trusted_Connection=yes;TrustServerCertificate=yes;",
+        "table_name": "PoTranslations"
+    },
+    "settings": {
+        "rating_good": 1.1,
+        "rating_bad": 0.5,
+        "confidence_threshold": 0.7,
+        "batch_size": 100,
+        "use_dictionary": true,
+        "use_ml": true,
+        "skip_locked": true
+    }
+}

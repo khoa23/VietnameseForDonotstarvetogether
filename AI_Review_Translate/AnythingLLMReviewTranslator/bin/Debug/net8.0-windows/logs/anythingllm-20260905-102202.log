@@ -1,0 +1,40 @@
+======================================== [2026-09-05 10:22:31] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+{"contents":[{"parts":[{"text":"Reply with only valid JSON: {\u0022status\u0022:\u0022ok\u0022}"}]}],"generationConfig":{"responseMimeType":"application/json"}}
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"status\": \"ok\"\n}",
+            "thoughtSignature": "El4KXAERTTIP9xtkYRRWODpK8WJZQx+DlqVPakIH9rpv/NOTebUSP7ugZUyj1bs1SM3sgFUyR86CpZFbJ1pVqEyg77a4GhzV76KKmoZSLigoe2zlq8X9Kyd5YxFuepKa"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 11,
+    "candidatesTokenCount": 11,
+    "totalTokenCount": 22,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "_IqbaovbGbS8mNMPqZvB6Ak"
+}
+
+================================================================================--------------------
+

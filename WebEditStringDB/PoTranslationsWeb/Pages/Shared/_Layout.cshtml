@@ -1,0 +1,78 @@
+@{
+    var topbarTotalCount = ViewData["TopbarTotalCount"]?.ToString();
+    var topbarShowing = ViewData["TopbarShowing"]?.ToString();
+    var topbarPage = ViewData["TopbarPage"]?.ToString();
+    var topbarStatus = ViewData["TopbarStatus"]?.ToString();
+    var topbarStatusClass = ViewData["TopbarStatusClass"]?.ToString();
+    var showTopbarMetrics = !string.IsNullOrWhiteSpace(topbarTotalCount)
+        || !string.IsNullOrWhiteSpace(topbarShowing)
+        || !string.IsNullOrWhiteSpace(topbarPage)
+        || !string.IsNullOrWhiteSpace(topbarStatus);
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PoTranslations Studio</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="app-shell">
+        <header class="app-topbar">
+            <a class="brand-block" asp-area="" asp-page="/Index" aria-label="PoTranslations Studio">
+                <span class="brand-mark">PT</span>
+                <span class="brand-copy">
+                    <span class="brand-name">PoTranslations Studio</span>
+                    <span class="brand-tagline">SQL Server editor cho dbo.PoTranslations</span>
+                </span>
+            </a>
+
+            @if (showTopbarMetrics)
+            {
+                <div class="topbar-metrics" aria-label="Thông số bảng">
+                    <div class="topbar-stat">
+                        <span>Tổng</span>
+                        <strong>@(topbarTotalCount ?? "0")</strong>
+                    </div>
+                    <div class="topbar-stat">
+                        <span>Xem</span>
+                        <strong>@(topbarShowing ?? "0")</strong>
+                    </div>
+                    <div class="topbar-stat">
+                        <span>Trang</span>
+                        <strong>@(topbarPage ?? "1 / 1")</strong>
+                    </div>
+                    <div class="topbar-stat @topbarStatusClass">
+                        <span>DB</span>
+                        <strong>@(topbarStatus ?? "Chưa kết nối")</strong>
+                    </div>
+                </div>
+            }
+
+            <div class="topbar-actions">
+                <button
+                    type="button"
+                    class="topbar-search-toggle"
+                    data-search-toggle
+                    aria-controls="searchPanel"
+                    aria-expanded="false">
+                    Tìm kiếm
+                </button>
+                <div class="topbar-chip">.NET 9</div>
+            </div>
+        </header>
+
+        <main role="main" class="app-main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

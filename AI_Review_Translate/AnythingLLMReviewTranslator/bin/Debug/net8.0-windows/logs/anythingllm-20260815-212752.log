@@ -1,0 +1,53 @@
+======================================== [2026-08-15 21:34:05] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính bản dịch tiếng Việt cho game Don't Starve Together.
+
+Hãy đọc ngữ cảnh ở MsgCtxt, bản tiếng Anh ở MsgId để tạo bản dịch tiếng Việt tự nhiên, chính xác, ngắn gọn và nhất quán với ngữ cảnh.
+Giữ nguyên placeholder, biến, thẻ, mã định dạng, ký tự xuống dòng, tên riêng và thuật ngữ game.
+
+Trả về CHỈ JSON hợp lệ, không markdown, không giải thích, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 767081
+MsgCtxt: STRINGS.LAVALUCY.other_owner.4
+MsgId: Just throw me already!
+
+Preserve all non-translatable characters exactly: placeholders, tags, backslashes, escaped quotes (\"), escape sequences (\n, \t), and leading/trailing punctuation. If MsgId is wrapped in \"...\", suggestedTranslation must use the identical \"...\" wrapper.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Ném tôi đi cho rồi!\",\"rating\":9.5}",
+            "thoughtSignature": "EnEKbwERTTIP14+D5XmpFRC3fscAPExvhWviWom3ys8dhclnuuXPazGWJ+ax4vr+5QZLP16/prpI1lD2vurlH+ViDdGbO6ZCVtdSQVw3f+RtgBi5Rws03ffkQAzUYWAAzOVEN4NFwGyiu0+PSO9ImaenZw=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 223,
+    "candidatesTokenCount": 19,
+    "totalTokenCount": 242,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 223
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "3niAaozfI8uDg8UPo_OKkAI"
+}
+
+================================================================================--------------------
+

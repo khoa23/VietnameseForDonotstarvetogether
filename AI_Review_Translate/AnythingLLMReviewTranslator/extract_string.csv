@@ -1,4 +1,4 @@
-English,Vietnamese
+Tiếng Anh,Tiếng Việt
 Abigail,Abigail
 Abigail's Flower,Hoa của Abigail
 Sequitor,Kẻ Kế Tục
@@ -12,7 +12,7 @@ Maxwell's Door,Cổng Maxwell
 Enlightened Crown,Vương Miện Khai Sáng
 Enlightened Shard,Mảnh khai sáng
 Minor Gestalt,Tiểu Sinh Vô Định
-Lunar Essence Extractor,Máy Chiết Xuất Tinh Chất Mặt Trăng
+Lunar Essence ExtractorLunar Essence Extractor,Máy Chiết Xuất Tinh Chất Mặt Trăng
 Celestial Champion,Chiến Binh Thiên Hà
 Celestial Revenant,Oán Linh Thiên Thể
 Pure Gestalt,Vô định tinh khiết
@@ -40,7 +40,6 @@ Broken Ancient Pseudoscience Station,Đài Giả Khoa Đổ Nát
 Ancient Remains,Di tích cổ xưa
 Ancient Statue,Tượng cổ
 Animal Track,Dấu động vật
-Ant-Chovy,Ant-Choky
 Antlion,Kiến Sư Tử
 Turf-Raiser Helm,Nón Xới Đất
 Beach Toy,Đồ chơi bãi biển
@@ -76,7 +75,6 @@ Void Robe,Áo Choàng Hư Không
 Gilded Knight's Chest Plate,Tấm giáp ngực của Đồng Hồ Mã Mạ Vàng
 Directional Sign,Bảng Chỉ Hướng
 Ashes,Tro
-Ashes of %s,Tro của %s
 Asparagus,Măng Tây
 Asparagus Soup,Súp Măng Tây
 Roasted Asparagus,Măng Tây Nướng
@@ -200,7 +198,6 @@ Blue Moonlens,Thấu kính mặt trăng xanh
 Blueprint,Bản thiết kế
 Imitation Ruins Turf Blueprints,Bản thiết kế nền Gạch Giả Cổ
 Ruins Turf Blueprints,Bản thiết kế Gạch Cổ
-{item} Blueprint,Bản Thảo {item}
 Blue Cap,Nấm Lam
 Cooked Blue Cap,Nấm Lam chín
 Blue Mushroom,Cây nấm Lam
@@ -243,7 +240,6 @@ Leak,Rò rỉ
 Nautopilot,Tự Lái Hàng Hải
 Nautopilot Beacon,Dẫn Đường Tự Lái
 Nautopilot Kit,Bộ Tự Lái Hàng Hải
-Marotter Raft,bè Marotter
 Pirate Sloop,Bè Hải Tặc
 Rudder,Cần Điều Hướng
 Rudder Kit,Bộ Cần Điều Hướng
@@ -409,8 +405,8 @@ Chirpy Capelet,Áo Choàng Vui Nhộn Vàng
 Moon Glass Saw Blade,Lưỡi Cưa Thủy Tinh Trăng
 Sawhorse,Bàn Cưa
 Carrat,Cà Ruột
-Carrat Shrine,Miếu Thờ Chuột
-Charlie's Carrat,Chuột Bóng Đêm
+Carrat Shrine,Miếu Thờ Cà Ruột
+Charlie's Carrat,Cà Ruột Bóng Đêm
 Carrot,Cà rốt
 Roasted Carrot,Cà rốt nướng
 Giant Carrots,Cà Rốt Khổng Lồ
@@ -441,14 +437,14 @@ Dark Vestige,Di tích đen tối
 Fragile Rose,Hoa hồng dễ vỡ
 Beckoning Hand,Bàn Tay Vẫy Gọi
 Mockingbird,Chim Nhại
-Playbill,Playbill
+Playbill,Áp Phích Kịch
 Shadow Queen,Nữ hoàng bóng tối
 Stage,Sân khấu
 Broken Clockworks,Máy Đồng Hồ Hỏng
 Anchor Figure,Tượng Mỏ Neo
 Anchor Figure Sketch,Bản Phác Tượng Mỏ Neo
 Antlion Figure,Tượng Kiến Sư Tử
-Bearger Figure,Tượng Bearger
+Bearger Figure,Tượng Gấu Lửng
 Armored Bearger Figure,Tượng Gấu Lửng Bọc Giáp
 Armored Bearger Figure Sketch,Bản phác thảo tượng Gấu Lửng Bọc Giáp
 Beefalo Figure,Tượng Bò Lai
@@ -467,15 +463,14 @@ Varg Figure,Tượng Chó Sói
 Clay Varg Figure Sketch,Phác thảo Tượng Chó Sói
 Crab King Figure,Tượng Cua Hoàng Đế
 Crab King Figure Sketch,Bản thảo Tượng Cua Hoàng Đế
-Nightmare Werepig Figure,Tượng Nightmare Waspig
+Nightmare Werepig Figure,Tượng Lợn Sói Bóng Đêm
 Scrappy Werepig Figure,Tượng Lợn Sói Sắt Vụn
 Scrappy Werepig Figure Sketch,Phác thảo tượng Lợn Sói Sắt Vụn
-Nightmare Werepig Figure,Nightmare Waspig hình
 Nightmare Werepig Figure Sketch,Bản phác thảo Hình tượng Lợn sói ác mộng
 Deerclops Figure,Tượng Deerclops
 Crystal Deerclops Figure,Tượng Deerclops Pha Lê
 Crystal Deerclops Figure Sketch,Bản phác thảo tượng Deerclops pha lê
-Dragonfly Figure,Tượng Dragonfly
+Dragonfly Figure,Tượng Chuồn Chuồn
 Eye Of Terror Figure,Tượng Nhãn Cầu Khiếp Đảm
 Kingly Figure,Quân Cờ Vua
 Celestial Champion Figure,Tượng Chiến Binh Thiên Hà
@@ -494,7 +489,7 @@ Ancient Guardian Figure,Tượng Quản Thần Cổ Đại
 "\""Moon\"" Figure Sketch","Bản Thảo Tượng \""Mặt Trăng\"""
 Moose Figure,Tượng Trăng Vỡ
 Goose Figure,Tượng Ngỗng
-Moose/Goose Figure,Tượng Moose/Goose
+Moose/Goose Figure,Tượng Ngỗng/Hươu Sừng Tấm
 Queenly Figure,Quân Cờ Hậu
 Pawn Figure,Quân Cờ Tốt
 Bubble Pipe Carving,Tẩu Bong Bóng
@@ -528,8 +523,8 @@ Ornate Chest,Rương Văn Hoa
 Ornery Chest,Rương lớn đáng ngờ
 Fish Food,Mồi Dụ Cá
 Fish Food Blueprint,Bản thiết kế Thức ăn cá
-Clay Hound,Clay Hound
-Clay Varg,Chó Săn Đất Sét
+Clay Hound,Chó Săn Đất Sét
+Clay Varg,Chó Sói Đất Sét
 Freezing,Rét
 Endothermic Fire,Lửa Thu Nhiệt
 Endothermic Fire Pit,Lò Thu Nhiệt
@@ -581,14 +576,14 @@ Rock Den,Hang đá
 Bulbin,Bulbin
 Broodling,Broodling
 Eets,Eets
-Friendly Peeper,Cầu Mắt Thân Thiện
+Friendly Peeper,Friendly Peeper
 Glomglom,Glomglom
 Kittykit,Kittykit
 Ewelet,Ewelet
 Mothling,Mothling
 Giblet,Giblet
 Vargling,Vargling
-Crop,Vụ mùa
+Crop,Cây Trồng
 Crow,Quạ
 Cookie Crumbles,Vụn Bánh Quy
 Accursed Trinket,Lắc Nguyền Rủa
@@ -627,20 +622,19 @@ Grass,Cỏ
 Desert Goggles,Kính Chắn Bụi
 Desiccant Pouch,Túi hút ẩm
 Desiccant Sack,Bao hút ẩm
-Dev Tool,Dev Tool
 Suspicious Dirt Pile,Đống đất khả nghi
 Divining Rod,Que bói
 Divining Rod Holder,Phần giữ que bói
 Dock Kit,Bộ Lắp Bến Nổi
 Dock Piling,Cọc Bến Cảng
 Dolled-Up Costume Pattern,Bản Vẽ Bộ Búp Bê
-Dragonfly Boat,Thuyển Ruồi Rồng
-Dragonfly Boat Kit,Bộ thuyền Ruồi Rồng
-Decked-Out Dragonfly Boat Kit,Bộ đóng thuyền Ruồi Rồng
+Dragonfly Boat,Thuyển Chuồn Chuồn
+Dragonfly Boat Kit,Bộ thuyền Chuồn Chuồn
+Decked-Out Dragonfly Boat Kit,Bộ đóng thuyền Chuồn Chuồn
 Lucky Beast Body,Thân Kỳ Lân
 Hot Dragon Chili Salad,Sa-lát Thanh Long Nóng
-Dragonfly,Dragonfly
-Scaled Chest,Hòm đóng vẩy
+Dragonfly,Chuồn Chuồn
+Scaled Chest,Rương Đóng Vảy
 Scaled Furnace,Lò Nhiệt
 Dragon Fruit,Thanh long
 Prepared Dragon Fruit,Thanh long chín
@@ -743,7 +737,7 @@ Figatoni,Mì Ống Trộn Quả Vả
 Figkabab,Thịt Xiên Nướng Quả Vả
 Cooked Fig,Quả Vả Rang
 Fire,Lửa
-Infernal Staff,Gậy Âm Phủ
+Infernal Staff,Trượng Hỏa Ngục
 Red Firecrackers,Pháo Hoa Đỏ
 Fireflies,Đom đóm
 Fire Hound,Chó săn lửa
@@ -780,7 +774,7 @@ Foliage,Lá Dương Xỉ
 Dried Foliage,Lá Dương Xỉ khô
 Football Helmet,Nón Bầu Dục
 Forget-Me-Lots,Hoa Lưu Ly
-Dried Forget-Me-Lots,Khô-Quên Tôi-Rất Nhiều
+Dried Forget-Me-Lots,Hoa Lưu Ly Khô
 Formal Costume Pattern,Bản Vẽ Bộ Lễ Phục
 Fossil Cage,Lồng hóa thạch
 Fossil Spike,Hóa thạch tăng đột biến
@@ -837,7 +831,6 @@ Unyielding Draught,Thần Dược Bất Khuất
 Revenant Restorative,Thần Dược Hoàn Hồn
 Vigor Mortis,Thần Dược Nghị Lực
 Gift,Gói Quà
-???,???
 Gift Wrap,Giấy Gói Quà
 Gingerbread Pig House,Nhà Lợn Bánh Gừng
 Gingerbread Pig,Lợn Bánh Gừng
@@ -887,24 +880,23 @@ Candy Apple,Kẹo Táo
 Tentacle Lolli,Kẹo Mút Xúc Tua
 Choco Pigs,Sô-cô-la Heo
 Candy Lice,Kẹo Chấy
-Otherworldly Jawbreaker,Otherworldly Jawbreaker
+Otherworldly Jawbreaker,Kẹo Cứng Kỳ Bí
 Lava Pepper,Ớt Dung Nham
 Candy Corn,Kẹo ngô
 Not-So-Candy Corn,Kẹo Bắp Ngô
 Gummy Spider,Nhện Dẻo
 Catcoon Candy,Kẹo Mèo Trúc
-"\""Raisins\""","\""Nho Khô\"""
 Raisins,Nho Khô
 Ghost Pop,Kẹo Mút Ma
 Jelly Worm,Sâu Nấu Đông
-Brew of Phobic Abrogation,Brew of Ebrogation
-Brew of Phobic Abatement,Brew of Phobic giảm
+Brew of Phobic Abrogation,Thuốc Pha Chế Xóa Ám Ảnh
+Brew of Phobic Abatement,Thuốc Pha Chế Giảm Ám Ảnh
 Sulfuric Crystals of Lime,Tinh Thể Lưu Huỳnh Vôi
-Canteen of Sanguine Mixture,Canteen of Tanguine hỗn hợp
-Flask of Sanguine Mixture,Bình hỗn hợp sanguine
-Steeped Lunar Essence,Tinh chất mặt trăng dốc
-Tumblerful of Psychic Fortitude,Tumbleful of Tâm lý học
-Dram of Psychic Fortitude,DRAM CỦA TUYỆT VỜI
+Canteen of Sanguine Mixture,Bi Đông Hỗn Hợp Đẫm Máu
+Flask of Sanguine Mixture,Bình Hỗn Hợp Đẫm Máu
+Steeped Lunar Essence,Tinh Chất Mặt Trăng
+Tumblerful of Psychic Fortitude,Ly Đầy Nghị Lực Tinh Thần
+Dram of Psychic Fortitude,Ngụm Nghị Lực Tinh Thần
 Sulfuric Crystals of Saltpeter,Tinh Thể Lưu Huỳnh Diêm Tiêu
 Phobic Experiment,Thí Nghiệm Ám Ảnh
 Sanguine Experiment,Thí Nghiệm Đẫm Máu
@@ -943,9 +935,9 @@ Petal Tea,Trà Cánh Hoa
 Dark Petal Tea,Trà cánh hoa đen
 Succulent Tea,Trà Lá Mọng Nước
 Tillweed Tea,Trà Cỏ Thìa Lìa
-Pearl's Light Post,Trụ đèn của Pearl
+Pearl's Light Post,Trụ đèn của Ngọc Trai
 Seaside Spoils,Chiến lợi phẩm ven biển
-Pearl's Light Post Kit,Bộ đèn đăng của Pearl
+Pearl's Light Post Kit,Bộ đèn đăng của Ngọc Trai
 Pearl,Ngọc trai
 Hermit Rehomer,Bộ Tái Định Cư Ẩn Sĩ
 Portage Conch,Ốc Vận Chuyển
@@ -989,8 +981,6 @@ Starvation,Đói
 Hutch,Hutch
 Star-sky,Sao Trời
 Ice,Băng đá
-Mini Iceberg,Iceberg nhỏ
-Melted Iceberg,Iceberg tan chảy
 Ice Box,Tủ lạnh
 Ice Cream,Kem
 Ice Cube,Khối Băng
@@ -1005,7 +995,6 @@ Cachebox,Hộp Tiếp Tế
 Advanced Cachebox,Hộp Tiếp Tế Nâng Cao
 Inspectacles,Kính Kiểm Tra
 Syrup of Ipecaca,Xi Rô Nhuận Tràng
-Ipecaca Poisoning,Ngộ độc Ipecaca
 Mimicreep,Kẻ bắt chước
 Binding Roots,Rễ Ràng Buộc
 Fist Full of Jam,Mứt hoa quả
@@ -1019,24 +1008,20 @@ Seawreath,Vòng Hoa Tảo
 Cooked Kelp Fronds,Tảo Bẹ chín
 Dried Kelp Fronds,Tảo Bẹ Khô
 Killer Bee,Ong sát thủ
-Gobbler Wobbler,Gobbler wobbler
-Gobbler Wobbler Kit,Bộ Wobbler Gobbler
-Kit Teaser,Gợi ý
-Kit Teaser Kit,Gói Gợi Ý
+Gobbler Wobbler,Gà Tây Lắc Lư
+Gobbler Wobbler Kit,Bộ Gà Tây Lắc Lư
+Kit Teaser,Cần Câu Ghẹo Mèo
+Kit Teaser Kit,Bộ Cần Câu Ghẹo Mèo
 Kitcoon Nursery,Nhà Trông Mèo
 Kitcoon Nursery Kit,Bộ Nhà Trông Mèo
 Kitcoon,Mèo Trúc Con
-Kit Collar,Bộ Vòng Cổ
+Kit Collar,Vòng Cổ Mèo
 Klaus,Klaus
 Stag Antler,Gạc Hươu
 Loot Stash,Túi Chiến Lợi Phẩm
 Clockwork Knight,Quân Mã
 Damaged Knight,Quân Mã hỏng
 Gilded Knight,Đồng Hồ Mã Mạ Vàng
-Pascal,Pascal
-Desdemona,Desdemona
-Fermin,Fermin
-Warren,Warren
 Asparagus Seeds,Hạt Măng Tây
 Carrot Seeds,Hạt cà rốt
 Corn Seeds,Hạt ngô
@@ -1052,49 +1037,49 @@ Pumpkin Seeds,Hạt bí ngô
 Toma Root Seeds,Hạt Cà Chua
 Turnip Seeds,Hạt Củ Cải Tím
 Watermelon Seeds,Hạt dưu hấu
-Koalefant Carcass,Xác Koalefant
+Koalefant Carcass,Xác Voi Túi
 Koalefant,Voi
 Fig-Stuffed Trunk,Vòi Voi Nhồi Quả Vả
 Krampus,Krampus
 Krampus Sack,Balô Krampus
 Lantern,Đèn lồng
 Latkes,Bánh Kếp
-Steadfast Stone Armor,Giáp Đá Chống Động
-Stone Splint Mail,Giáp Nẹp Đá
+Steadfast Stone Armor,Áo Giáp Đá Vững Chãi
+Stone Splint Mail,Áo Giáp Nẹp Đá
 Reed Tunic,Áo Cỏ
 Feathered Reed Tunic,Áo Cỏ Đính Lông Vũ
 Wood Armor,Giáp Gỗ
 Jagged Wood Armor,Giáp Gỗ Lởm Chởm
-Silken Wood Armor,Giáp Gỗ Tơ Tằm
+Silken Wood Armor,Áo Giáp Gỗ Tơ Lụa
 Jagged Grand Armor,Siêu Giáp Lởm Chởm
-Steadfast Grand Armor,Siêu Giáp Chống Động
+Steadfast Grand Armor,Siêu Giáp Vững Chãi
 Whispering Grand Armor,Siêu Giáp Thầm Thì
 Silken Grand Armor,Siêu Giáp Tơ Tằm
-Battle Standard,Tiêu chuẩn chiến đấu
-Battlemaster Pugna,Battlemaster Pugna
-Resplendent Nox Helm,Mũ Trụ Rực Rỡ
+Battle Standard,Cờ Hiệu Chiến Đấu
+Battlemaster Pugna,Chỉ Huy Pugna
+Resplendent Nox Helm,Mũ Nox Rực Rỡ
 Magma Golem,Người Đá Dung Nham
 Clairvoyant Crown,Vương Miện Thấu Thị
-Feathered Wreath,Feathered Wreath
+Feathered Wreath,Vòng Lông Vũ
 Hearthsfire Crystals,Tinh Thể Nung Nóng
 Flower Headband,Băng Đô Hoa
 Blossomed Wreath,Vòng Hoa Nở Rộ
-Blacksmith's Edge,Kiếm Nặng
-Ancient Anchor,Neo cổ đại
-Barbed Helm,Mũ Trụ Nhẹ
-Riled Lucy,Rìu Lucy
+Blacksmith's Edge,Lưỡi Đao Thợ Rèn
+Ancient Anchor,Mỏ Neo Cổ Đại
+Barbed Helm,Mũ Thép Gai
+Riled Lucy,Lucy Trêu Chọc
 Meteor,Thiên thạch
 Ancient Gateway,Cổng cổ xưa
 Crystal Tiara,Vương Miện Pha Lê
-Forge Portal,Cổng Forge
-Nox Helm,Mũ Trụ Nặng
+Forge Portal,Cổng Lò Rèn
+Nox Helm,Mũ Nox
 Woven Garland,Vòng Hoa Đan Kết
 Lavae,Trùng Nham
 Chilled Lavae,Trùng nham
 Lavae Egg,Trứng Trùng Nham
 Extra-Adorable Lavae,Trùng Nham Cực Đáng Yêu
 Lavae Tooth,Răng Trùng Nham
-Dragonfly Saliva,Nước dãi Dragonfly
+Dragonfly Saliva,Nước dãi Chuồn Chuồn
 Magma,Dung Nham
 Rock,Đá tảng
 Leafy Meatloaf,Bánh Mì Thịt Lá
@@ -1114,9 +1099,9 @@ Volt Goat Horn,Sừng Vôn Dương
 Lightning Rod,Cột thu lôi
 Wee MacTusk,Hải Mã Con
 Living Log,Gỗ sống
-Totally Normal Tree,Cây toàn thường
-Totally Normal Root,Hoàn toàn là một chiếc gốc bình thường
-Totally Normal Sapling,Chỉ là một chồi non bình thường
+Totally Normal Tree,Cây Toàn Thường
+Totally Normal Root,Rễ Cây Toàn Thường
+Totally Normal Sapling,Cây Toàn Thường Con
 Lobster Bisque,Súp Tôm Hùm
 Lobster Dinner,Tiệc Tôm Hùm
 Log,Gỗ
@@ -1133,7 +1118,7 @@ Beloved Crocodile Toy,Đồ Chơi Cá Sấu Yêu Quý
 Prized Ball and Cup,Bóng và Cúp Thưởng
 Lucky Gold Nugget,Thỏi Vàng May Mắn
 Lucy the Axe,Chiếc rìu Lucy
-Lumpy Sapling,Chồi cây sần
+Lumpy Sapling,Cây Thường Xanh Sần
 Bright-Eyed Frog,Ếch Mắt Sáng
 Brightshade Helm,Nón Ánh Sáng
 Brightshade Husk,Vỏ Gai Sáng Bóng
@@ -1186,17 +1171,17 @@ Princess Mask,Mặt nạ công chúa
 Queen Mask,Mặt Nạ Nữ Hoàng
 Sage's Masque,Mặt nạ Nhà hiền triết
 Toady's Masque,Mặt nạ Toady
-Tree Mask,Mặt Nạ Cái Cây
+Tree Mask,Mặt Nạ Cây
 Mast,Buồm
 Deck Illuminator,Đèn Soi Sàn Tàu
-Dragonfly Light Kit,Bộ đèn Ruồi Rồng
-Dragonfly Light,Đèn Ruồi Rồng
+Dragonfly Light Kit,Bộ đèn Chuồn Chuồn
+Dragonfly Light,Đèn Chuồn Chuồn
 Lightning Conductor,Dây Dẫn Sét
 Mast Kit,Cột Buồm
 Winged Sail,Buồm Cánh
 Winged Sail Kit,Bộ Buồm Cánh
-Dragonfly Wing Mast,Cột cánh Ruồi Rồng
-Dragonfly Wing Mast Kit,Bộ cột cánh Ruồi Rồng
+Dragonfly Wing Mast,Cột cánh Chuồn Chuồn
+Dragonfly Wing Mast Kit,Bộ cột cánh Chuồn Chuồn
 Maxwell,Maxwell
 Maxwell's Head,Đầu Maxwell
 Shadow Key,Chìa bóng đêm
@@ -1212,7 +1197,7 @@ Large Drying Rack,Giá phơi lớn
 Beefy Greens,Bít Tết Rau Tươi
 Jerky,Thịt Khô
 Hostile Flare,Pháo Gây Hấn
-Merm,Người cá
+Merm,Người Cá
 Swamp Brawler Helmet,Mũ bảo hiểm Đấu sĩ Đầm lầy
 Swamp Warrior Helmet,Mũ bảo hiểm Chiến binh Đầm lầy
 Loyal Merm Guard,Vệ Binh Người Cá
@@ -1246,7 +1231,6 @@ Floating Lantern,Đèn Lồng Nổi
 Whirly Fan,Quạt Xoay
 Flare,Pháo Sáng
 Mini Sign,Bảng Mini
-{item} Sign,Bảng {item}
 Ancient Guardian,Quản Thần Cổ Đại
 Large Ornate Chest,Rương Văn Hoa lớn
 Guardian's Horn,Sừng Quản Thần Cổ Đại
@@ -1255,8 +1239,8 @@ Cooked Heat Gland,Hạch nhiệt nướng
 Moleworm,Chũi Trùng
 Naked Mole Bat,Chuột Trụi
 Naked Mole Bat Burrow,Hang Chuột Trụi
-Moggles,Mũ chuột chũi
-Burrow,Hang chuột chũi
+Moggles,Kính Chuột Chũi
+Burrow,Hang Chuột
 Raised Dirt,Đất nổi
 Splumonkey,Khỉ Hang
 Splumonkey Pod,Kén Khỉ Hang
@@ -1322,13 +1306,13 @@ Plugged Fissure,Vết Nứt Bị Lấp
 Lunar Funcap,Mũ Nấm Lam Nguyệt
 Lune Tree,Cây Nguyệt Phong
 Lune Tree Blossom,Hoa Nguyệt Phong
-Dried Lune Tree Blossom,Hoa Lune khô
-Moose,Hươu
+Dried Lune Tree Blossom,Hoa Nguyệt Phong Khô
+Moose,Hươu Sừng Tấm
 Goose,Ngỗng
-Moose Egg,Trứng hươu
-Goose Egg,Trứng ngỗng
-Moose Nest,Tổ hươu
-Goose Nest,Tổ ngỗng
+Moose Egg,Trứng Hươu Sừng Tấm
+Goose Egg,Trứng Ngỗng
+Moose Nest,Tổ Hươu Sừng Tấm
+Goose Nest,Tổ Ngỗng
 Moqueca,Canh Cá Hầm
 Mosquito,Muỗi
 Skeeter Bomb,Bom Muỗi
@@ -1384,7 +1368,6 @@ Morning Star,Gậy Sao Mai
 Dark Sword,Gươm bóng đêm
 Nitre,Ni tơ
 Nitre Formation,Ni Tơ Kết Tinh
-Nothing,Không có gì
 Grit Duster,Máy Thổi Bụi
 Grit Grinder,Máy Nghiền Muối
 Premier Gardeneer Hat,Mũ Thực Vật Học
@@ -1414,7 +1397,6 @@ Nightflyer Spoon,Thìa Trượt Lam
 Dusky Spoon,Thìa Trượt Lục
 Sunrise Spoon,Thìa Trượt Đỏ
 Sea Fishing Rod,Cần câu biển
-Antchovy,Antchovy
 Mudfish,Cá Bùn
 Deep Bass,Cá Vược
 Dandy Lionfish,Cá Sư Tử
@@ -1510,7 +1492,6 @@ Golden Belt,Đai Lưng Vàng
 Pine Cone,Quả thông
 Evergreen Sapling,Cây thông con
 Moon Quay Pirate Banner,Cờ Khỉ
-X,X
 Pitchfork,Chĩa
 Leafy Meat,Thịt Lá
 Cooked Leafy Meat,Thịt Lá Chín
@@ -1614,69 +1595,69 @@ Flour,Bột Mì
 Cooked Foliage,Lá nấu chín
 Loaf of Bread,Ổ bánh mì
 Potato Chips,Khoai tây chiên
-Vegetable Soup,Súp rau
-Jelly Sandwich,Thạch Sandwich
-Fish Stew,Cá hầm
-Turnip Cake,Bánh củ cải
-Potato Pancakes,Bánh khoai tây
+Vegetable Soup,Súp Rau Củ
+Jelly Sandwich,Sandwich Thạch
+Fish Stew,Cá Kho
+Turnip Cake,Bánh Cải Tím
+Potato Pancakes,Bánh Kếp Khoai Tây
 Potato Soup,Súp khoai tây
-Fishball Skewers,Xiên bóng cá
-Meat Skewers,Xiên thịt
-Stone Soup,Mầm đá
-Croquette,Croquette
-Roast Vegetables,Roast Vegetables
-Meatloaf,Bánh mì thịt lá
+Fishball Skewers,Cá Viên Xiên
+Meat Skewers,Thịt Xiên
+Stone Soup,Súp Mầm Đá
+Croquette,Bánh Quế
+Roast Vegetables,Rau Củ Nướng
+Meatloaf,Bánh Thịt Xay
 Carrot Soup,Súp cà rốt
-Fish Pie,Fish Pie
-Fish and Chips,Cá và khoai tây chiên
-Meat Pie,Meat Pie
-Sliders,Burger mini
-Jelly Roll,Jelly Roll
-Carrot Cake,Carrot Cake
+Fish Pie,Bánh Cá
+Fish and Chips,Cá Và Khoai Chiên
+Meat Pie,Bánh Nhân Thịt
+Sliders,Burger Nhỏ
+Jelly Roll,Thạch Cuộn
+Carrot Cake,Bánh Kem Cà Rốt
 Garlic Mashed Potatoes,Khoai tây nghiền tỏi
-Garlic Bread,Bánh mì bơ tỏi
-Tomato Soup,Súp cà chua
-Sausage,Lạp xưởng
-Candied Fish,Cá Candied
-Stuffed Mushroom,Stuffed Mushroom
+Garlic Bread,Bánh Mì Tỏi
+Tomato Soup,Súp Cà Chua
+Sausage,Xúc Xích
+Candied Fish,Kẹo Cá
+Stuffed Mushroom,Nấm Nhồi
 Ratatouille,Nộm rau
 Bruschetta,Bruschetta
-Meat Stew,Thịt hầm thịt
-Hamburger,bánh hamburger
-Fish Burger,Cá burger
+Meat Stew,Thịt hầm
+Hamburger,Hamburger
+Fish Burger,Burger Cá
 Mushroom Burger,Bánh burger nấm
 Curry,Cà ri
-Spaghetti and Meatball,Spaghetti and Meatball
-Lasagna,Mì nướng kiểu Ý
+Spaghetti and Meatball,Thịt Viên Mỳ Ý
+Lasagna,Lasagna
 Poached Fish,Cá luộc
 Shepherd's Pie,Bánh của người chăn cừu
 Candy,Cục kẹo
-Bread Pudding,Bánh mì bánh mì
+Bread Pudding,Bánh Mì Pudding
 Waffles,Bánh quế
-Berry Tart,Berry Tart
-Macaroni and Cheese,Macaroni và phô mai
-Bagel and Fish,Bagel và cá
-Grilled Cheese,Grilled Cheese
-Cream of Mushroom Soup,Kem Súp nấm
-Manicotti,Manicotti
-Cheeseburger,Cheeseburger
+Berry Tart,Bánh Nhân Mứt Dâu
+Macaroni and Cheese,Nui Phô Mai
+Bagel and Fish,Bánh Mì Cá Tròn
+Grilled Cheese,Phô Mai Nướng
+Cream of Mushroom Soup,Súp Kem Nấm
+Manicotti,Mì Ống
+Cheeseburger,Burger Phô Mai
 Creamy Fettuccine,Fettuccine kem
-Onion Soup,Súp hành
-Breaded Cutlet,Cắt tẩm bột
-Creamy Fish,Cá kem
+Onion Soup,Súp Hành Tây
+Breaded Cutlet,Bánh Mì Cắt Nhỏ
+Creamy Fish,Cá Sốt Kem
 Pizza,Pizza
-Pot Roast,Pot Roast
-Crab Cake,Crab Cake
-Steak Frites,Steak Frites
-Shooter Sandwich,Bánh sandwich bắn súng
-Bacon Wrapped Meat,Thịt xông khói bọc thịt
-Crab Roll,Crab Roll
-Meat Wellington,Thịt Wellington
-Crab Ravioli,Cua ravioli
-Caramel Cube,Caramel khối lập phương
+Pot Roast,Đùi Nướng
+Crab Cake,Bánh Cua
+Steak Frites,Bí Tết
+Shooter Sandwich,Sandwich Nhồi Thịt
+Bacon Wrapped Meat,Thị Xông Khói Bọc
+Crab Roll,Bánh Cuộn Cua
+Meat Wellington,Bò Wellington
+Crab Ravioli,Bánh Bao Cua
+Caramel Cube,Bánh Caramel Khối
 Scone,Bánh nướng
-Trifle,Trifle
-Cheesecake,Cheesecake
+Trifle,Bánh Xốp Phủ Kem Và Trái Cây
+Cheesecake,Bánh Kem Phô Mai
 Bowl,Cái bát
 Burnt Food,Thức ăn cháy
 Plate,Đĩa
@@ -1691,19 +1672,16 @@ Key,Chìa khóa
 Iron Key,Chìa khóa sắt
 Streetlight,Đèn đường
 Small Streetlight,Đèn đường nhỏ
-Mealing Stone,Xử lý đá
+Mealing Stone,Đá Nghiền
 Bog Merm,Ngư dân Bãi lầy
 Rundown House,Nhà người cá
-Sammy's Wagon,Sammy's Wagon
-Pipton's Cart,Giỏ hàng của Pipton
 Mushroom,Nấm
 Cooked Mushroom,Nấm chín
 Roast Onion,Hành tây nướng
 Oven,Lò nướng
 Iron Fence,Hàng rào sắt
-Gnaw Worshipper,Gnaw Worshipper
 Fountain,Đài phun nước
-Iron Gate,Cổng săt
+Iron Gate,Cổng sắt
 Locked Iron Gate,Cổng sắt bị khóa
 Stone Pillar,Cột Đá
 Urn,Bình Di Cốt
@@ -1755,7 +1733,7 @@ Spot Spice,Gia Vị
 Spotty Shrub,Bụi Đốm
 Spotty Sprig,Nhành Lá Đốm
 Sugarwood Tree,Cây Gỗ Ngọt
-Swamp Pig Elder,Swamp Pig Elder
+Swamp Pig Elder,Lợn Già Làng
 Worn Pig House,Nhà lợn xuống cấp
 House Rubble,Nhà đổ nát
 Syrup,Xi -rô
@@ -1808,8 +1786,6 @@ Meat Effigy,Bù Nhìn Thịt
 Touch Stone,Đá thần
 Resurrection Sickness,Ốm hồi sinh
 Telltale Heart,Tim Mách Lẻo
-Rhinocebro Snapback,Rhinocebro Snapback
-Rhinocebro Flatbrim,Rhinocebro Flatbrim
 Roasted Turkey,Gà Tây Quay
 Redbird,Chim Đỏ
 Snowbird,Chim Tuyết
@@ -1831,7 +1807,6 @@ Spelunker's Bridge Kit,Bộ Dụng Cụ Cầu Thám Hiểm
 Rose-Colored Glasses,Kính Màu Hồng
 Rotten Egg,Trứng thối
 Royal Jelly,Sữa Ong Chúa
-Rubble,Rubble
 Thulecite Crown,Vương miện Thulecite
 Lurking Nightmare,Ác Mộng Rình Rập
 Replica Relic Bowl,Máng Thánh Tích
@@ -1899,7 +1874,7 @@ Ink Blight,Quái mực tai ương
 Jitters,Jitters
 Rasp,Rasp
 Rictus,Rictus
-Void Masque,Mặt nạ Hư vô
+Void Masque,Mặt Nạ Hư Không
 Herald of Tenebrau,Sứ giả của Tenebrau
 Shriek,Tiếng thét
 Shadow,Bóng
@@ -2110,7 +2085,7 @@ Tentacle Spots,Xúc tu đốm
 Big Tentacle,Đại xúc tu
 Baby Tentacle,Tiểu xúc tua
 Big Slimy Pit,Hố nhầy
-Terrarium,Terrariumdq
+Terrarium,Terrarium
 Conspicuous Chest,Rương Rõ Ràng
 Terrorbeak,Mỏ Khiếp Sợ
 Thulecite,Thulecite
@@ -2271,7 +2246,7 @@ Lever,đòn bẩy
 Lustrous Socket,Ổ Cắm Sáng Bóng
 Inner Sanctum Barrier,Rào Chắn Thánh Điện
 Sanctum Purifier,Máy Thanh Tẩy Thánh Điện
-Keystone,Đá đỉnh vòm
+Keystone,Đá Chốt
 Pulse Cradle,Nôi Xung Lực
 Chasm,Hang sâu
 Reliquary,Tráp Thánh Tích
@@ -2294,7 +2269,7 @@ Broken Sanctum Waymark,Mốc Dẫn Lối Thánh Điện bị hỏng
 Flummoxing Flame,Ngọn Lửa Rối Trí
 Breakfast Skillet,Bánh Mì Chảo
 Vegetable Stinger,Nước Ép Rau Củ
-Victorian Costume Pattern,Bản Vẽ Bộ Victorian
+Victorian Costume Pattern,Bản Thiết Kế Trang Phục Victoria
 Dark Tatters,Vụn Vải Bóng Đêm
 Void Cowl,Mũ Trùm Hư Không
 Gloomerang,Gloomerang
@@ -2326,19 +2301,12 @@ Glove,Găng tay
 Clipboard,Bảng kẹp giấy
 Abandoned Junk,Phế Liệu Bỏ Hoang
 Research Notes,Ghi Chú Nghiên Cứu
-Grainy Transmission,Hạt Năng Lượng Truyền Tải
-Grainy Transmission,Wagstaff - Hạt Năng Lượng Truyền Tải
-Grainy Transmission,Truyền hạt
-Reticulating Buffer,Reticulating Buffer
+Grainy Transmission,Wagstaff
 Odd Tool,Odd Tool
-Widget Deflubber,Widget Deflubber
-Weird Tool,Công cụ kỳ lạ
-Grommet Scriber,Grommet Scriber
-Strange Tool,Công cụ lạ hoắc
-Conceptual Scrubber,Conceptual Scrubber
-Funky Tool,Công cụ kì quặc
-Calibrated Perceiver,Calibrated Perceiver
-Bizarre Tool,Công cụ kỳ lạ
+Weird Tool,Weird Tool
+Strange Tool,Strange Tool
+Funky Tool,Funky Tool
+Bizarre Tool,Bizarre Tool
 Plank,Tấm ván
 Archaic Plank,Tấm ván cổ
 Scaled Plank,Tấm ván Vảy
@@ -2352,7 +2320,7 @@ Scrap Wall,Tường Phế Liệu
 Stone Wall,Tường đá
 Archival Stone Wall,Tường Đá Tàng Thư
 Wood Wall,Tường gỗ
-MacTusk,MacTusk
+MacTusk,Hải Mã
 Tam o' Shanter,Mũ nồi
 Walrus Camp,Trại Hải Mã
 Walrus Tusk,Ngà Hải Mã
@@ -2390,7 +2358,7 @@ Wigfrid,Wigfrid
 Battle Helm,Mũ chiến
 Commander's Helm,Nón Chỉ Huy
 Battle Rönd,Khiên Chiến
-Wavey Jones,Wavey Jones
+Wavey Jones,Tay Ma Sóng Biển
 Wax Paper,Giấy Sáp
 Codex Umbra,Sách bóng đêm
 Webber,Webber
@@ -2423,7 +2391,6 @@ Winona's Catapult,Máy Ném Đá của Winona
 Unstable Transmission,Truyền dẫn không ổn định
 Doohickey,Đồ linh tinh
 Gizmo,Gizmo
-Calibrated Perceiver,Bộ thu nhận hiệu chỉnh
 Handy Remote,Điều Khiển Cầm Tay
 Winona's Spotlight,Đèn Pha của Winona
 W.I.N.bot,W.I.N.bot
@@ -2478,10 +2445,8 @@ Great Depths Worm,Sâu Đất Khổng Lồ
 Dirt Mound,Ổ đất
 Wortox,Wortox
 Wortox?,Túi Hút Linh Hồn
-{name}?,{name}
 Knabsack,Túi Hút Linh Hồn
 Twintailed Heart,Trái Tim Hai Đuôi
-{name}'s Twintailed Heart,Trái Tim Hai Đuôi của {name}
 Soul,Linh Hồn
 Soul Jar,Bình Linh Hồn
 Wurt,Wurt
@@ -2512,7 +2477,6 @@ Spin-Cycle Circuit,Mạch Xoay Vòng
 Spatializer Circuit,Mạch không gian
 Electrification Circuit,Mạch Điện Từ
 Backup Chassis,Thân Máy Dự Phòng
-{name}'s Backup Chassis,Thân Máy Dự Phòng của {name}
 Portable Storage Unit,Bộ lưu trữ di động
 Roto-Mapper,Máy Dò Bản Đồ
 Zaptrocuter,Máy Giật Điện
@@ -2522,6 +2486,7 @@ Spectral Transfer Module,Mô-đun truyền quang phổ
 Collapsed Storage Unit,Đơn vị lưu trữ thu gọn
 Expansive Storage Unit,Đơn vị lưu trữ mở rộng
 Circuit Extractor,Kìm Ngắt Mạch
+Extractor,Kìm Ngắt
 Possessed Chassis,Thân Máy Bị Chiếm Hữu
 {name}'s Possessed Chassis,Thân Máy Bị Chiếm Hữu của {name}
 Bio Scanalyzer,Máy Quét Sinh Học
@@ -2565,15 +2530,14 @@ Starting Point,Điểm Xuất Phát
 Starting Point Kit,Bộ Xuất Phát
 Carrat Scale,Cân Cà Ruột
 Carrat Scale Kit,Bộ Cân Cà Ruột
-{trainer}'s Carrat,Cà Ruột của {trainer}
 Packet of Seeds,Túi Hạt Giống
 Premium Seed Packet,Túi Hạt Giống Cao Cấp
 Claw Anchor,Neo Móng Vuốt
 Claw Anchor Kit,Bộ Neo Móng Vuốt
 Dragonfly Shrine,Đền Thờ Chuồn Chuồn
 Claw Oar,Mái chèo vuốt nhọn
-Dragonfly Boat Wheel,Bánh lái Ruồi Rồng
-Dragonfly Boat Wheel Kit,Bộ Bánh lái Ruồi Rồng
+Dragonfly Boat Wheel,Bánh lái Chuồn Chuồn
+Dragonfly Boat Wheel Kit,Bộ Bánh lái Chuồn Chuồn
 Rocking Mare,Ngựa Bập Bênh
 Rocking Mare Kit,Bộ ngựa bập bênh
 Gilded Knight's Helmet,Mũ của Đồng Hồ Mã Mạ Vàng
@@ -2600,3 +2564,36 @@ Jubilantern Post Kit,Bộ Lắp Ráp Cột Đèn Lễ Hội
 Depths Worm Shrine,Đền Sâu Đất
 Gilded Depths Worm,Sâu Đất Mạ Vàng
 Catcoon Shrine,Đền Mèo
+Equinor,Xuân Bính Ngọ
+Equinor Survivors Chest,Rương Sinh Tồn Xuân Bính Ngọ
+Maxwell Equinor Chest,Rương Xuân Bính Ngọ Maxwell
+Webber Equinor Chest,Rương Xuân Bính Ngọ Webber
+Willow Equinor Chest,Rương Xuân Bính Ngọ Willow
+Wilson Equinor Chest,Rương Xuân Bính Ngọ Wilson
+Winona Equinor Chest,Rương Xuân Bính Ngọ Winona
+The Equinor,Xuân Bính Ngọ
+Silky Equinor Beard,Bộ râu Xuân Bính Ngọ mượt mà
+Equinor Beard,Râu Xuân Bính Ngọ
+Chest,Rương
+Keeps Floaty safe,Giữ an toàn cho phao
+Midsummer Cawnival,Lễ Hội Hạ Chí
+Cawnival,Lễ Hội Quạ
+Gustree,Cuồng Phong
+Victoria,Chiến thắng
+The Victorian,Quý Tộc Cổ Điển
+Guest of Honor,Thượng Khách
+The Creature,Sinh Vật Lạ
+Wormhole,Hố Giun
+Leviathan,Thủy Quái
+Merrymaker,Sứ Giả Niềm Vui
+Gothic,Gô Tích
+Embers,Than Hồng
+Planar Defense,Phòng Thủ Xuyên Giáp
+Planar Damage,Sát Thương Xuyên Giáp
+Planar,Xuyên Giáp
+Reticulating Buffer,Ống Nghe Lúc Lắc
+Widget Deflubber,Phụ Tùng Không Tiện Dụng
+Grommet Scriber,Sổ Ghi Chép
+Conceptual Scrubber,Bộ Dụng Cụ Cọ Chà
+Calibrated Perceiver,Bộ Thu đã Hiệu Chỉnh
+Battle Stingers,Chiến Khúc

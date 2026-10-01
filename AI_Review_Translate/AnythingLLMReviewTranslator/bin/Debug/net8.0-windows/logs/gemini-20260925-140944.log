@@ -1,0 +1,274 @@
+=== Translation Log Started at 2026-09-25 14:09:44 | Provider: Gemini ===
+
+======================================== [2026-09-25 14:09:51] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang rating (0.0 - 10.0):
+   - MsgStr rỗng, chưa dịch hoặc còn là tiếng Anh: Chấm rating thấp (0.0 - 1.0).
+   - MsgStr dịch chuẩn xác, tự nhiên: Chấm rating cao (8.0 - 10.0).
+2. Đề xuất bản dịch TIẾNG VIỆT tối ưu nhất cho trường "suggestedTranslation":
+   - BẮT BUỘC 100% PHẢI LÀ TIẾNG VIỆT tự nhiên, ngắn gọn, chuẩn văn phong game.
+   - TUYỆT ĐỐI KHÔNG ĐƯỢC để suggestedTranslation là tiếng Anh trong bất kỳ trường hợp nào!
+3. Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+4. Nếu mục nào có 'Thuật ngữ tham khảo', BẮT BUỘC ưu tiên dịch thuật ngữ đó sang nghĩa tiếng Việt tương ứng.
+Ví dụ:
+Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+Output: {"id":101,"suggestedTranslation":"\"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!","rating":8.5}
+
+Hãy xử lý tất cả các mục dưới đây và trả về duy nhất một JSON array.
+Mỗi phần tử phải có đúng 3 trường: id, suggestedTranslation, rating.
+Trả về CHỈ JSON hợp lệ, không bọc markdown, không giải thích thừa.
+Ví dụ mẫu: [{"id":101,"suggestedTranslation":"\"Chưa đến giữa hè\", bạn nói?...","rating":8.5}]
+
+Item:
+Id: 701373
+MsgCtxt: STRINGS.ANTIADDICTION.HOUR_2
+MsgId: You've played for two hours.
+MsgStr: Bạn đã chơi trong hai tiếng.
+
+Item:
+Id: 701389
+MsgCtxt: STRINGS.BALATRO.BUTTON_CLOSE
+MsgId: BACK
+MsgStr: QUAY LẠI
+
+Item:
+Id: 701399
+MsgCtxt: STRINGS.BALATRO.HANDS.FULLHOUSE
+MsgId: Full House
+MsgStr: Cù lũ
+
+Item:
+Id: 701554
+MsgCtxt: STRINGS.BOARLORD_ROUND7_START.3
+MsgId: Behold: The Infernal Swineclops!
+MsgStr: Hãy chiêm ngưỡng: Sinh vật Lợn Quỷ Địa Ngục!
+Thuật ngữ tham khảo: "Infernal Swineclops" => "Độc Nhãn Âm Ty"
+
+Item:
+Id: 701629
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_ACCEPTGIFT.2
+MsgId: Wow, I didn't even have to steal it- I mean, thanks!
+MsgStr: Wow, tôi còn chẳng cần phải trộm nó—Ý tôi là, cảm ơn!
+
+Item:
+Id: 701630
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_ACCEPTGIFT.3
+MsgId: They just give you stuff around here? Neat!
+MsgStr: Ở đây cứ tặng đồ hoài à? Hay quá!
+
+Item:
+Id: 701632
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_CAMPFIRE.2
+MsgId: This sure is cozy.
+MsgStr: Thật là ấm cúng nhỉ.
+
+Item:
+Id: 701633
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_CAMPFIRE.3
+MsgId: It's nice to warm your talons by the fire.
+MsgStr: Thật dễ chịu khi sưởi ấm móng vuốt bên đống lửa.
+Thuật ngữ tham khảo: "Fire" => "Lửa"
+
+Item:
+Id: 701635
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_CAMPFIRE.5
+MsgId: I wonder why the featherfree creatures are so scared of the dark?
+MsgStr: Không hiểu sao mấy sinh vật không có lông lại sợ bóng tối vậy nhỉ?
+
+Item:
+Id: 701636
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_CAMPFIRE.6
+MsgId: Does anyone have some corn?
+MsgStr: Ai có chút bắp nào không?
+Thuật ngữ tham khảo: "Corn" => "Ngô"
+
+Item:
+Id: 701637
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_DECOR_AMBIENT_LOTS.1
+MsgId: Wow! It's so festive!
+MsgStr: Ồ! Không khí lễ hội quá!
+
+Item:
+Id: 701638
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_DECOR_AMBIENT_LOTS.2
+MsgId: Best Cawnival ever!
+MsgStr: Lễ hội hoành tráng nhất từ trước đến nay!
+
+Item:
+Id: 701639
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_DECOR_AMBIENT_LOTS.3
+MsgId: Last year's Cawnival was not this fancy.
+MsgStr: Lễ hội năm ngoái không sang trọng thế này đâu.
+
+Item:
+Id: 701640
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_DECOR_AMBIENT_LOTS.4
+MsgId: I wanna watch the games!
+MsgStr: Mình muốn xem mấy trò chơi quá!
+
+Item:
+Id: 701641
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_DECOR_AMBIENT_LOTS.5
+MsgId: Have you checked out the Prize Booth yet?
+MsgStr: Bạn đã xem gian giải thưởng chưa?
+Thuật ngữ tham khảo: "Prize Booth" => "Gian hàng giải thưởng"
+
+Item:
+Id: 701644
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_DECOR_AMBIENT_LOTS_SNACK.3
+MsgId: We're lucky that Corvus found this place.
+MsgStr: May mắn thay Corvus đã tìm thấy nơi này.
+
+Item:
+Id: 701645
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_DECOR_AMBIENT_NONE.1
+MsgId: They must still be setting up.
+MsgStr: Họ vẫn phải đang dọn dẹp thôi.
+
+Item:
+Id: 701653
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_DECOR_AMBIENT_NONE_SNACK.3
+MsgId: I'm starving after that long trip.
+MsgStr: Tôi đói quá sau chuyến đi dài này.
+
+Item:
+Id: 701654
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_DECOR_AMBIENT_SOME.1
+MsgId: Nicely set up.
+MsgStr: Sắp xếp đẹp mắt.
+
+Item:
+Id: 701655
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_DECOR_AMBIENT_SOME.2
+MsgId: It's alright... but it could use some flair.
+MsgStr: Cũng ổn thôi... nhưng cần chút điểm nhấn hơn.
+
+Item:
+Id: 701656
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_DECOR_AMBIENT_SOME.3
+MsgId: I've seen better Cawnivals.
+MsgStr: Tôi từng thấy Lễ hội tốt hơn.
+
+Item:
+Id: 701657
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_DECOR_AMBIENT_SOME.4
+MsgId: The party is just getting started!
+MsgStr: Bữa tiệc mới chỉ bắt đầu thôi!
+
+Item:
+Id: 701659
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_DECOR_AMBIENT_SOME_SNACK.2
+MsgId: Who was that, with the red fur? He seemed kinda familiar.
+MsgStr: Ai vậy nhỉ, bộ lông đỏ? Trông quen quen.
+
+Item:
+Id: 701660
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_DECOR_AMBIENT_SOME_SNACK.3
+MsgId: I hope we can have the Cawnival here again next year.
+MsgStr: Hy vọng năm sau chúng ta lại có Lễ hội ở đây.
+
+Item:
+Id: 701661
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_DECOR_PLAYER_LOTS.1
+MsgId: Wow! It's so festive!
+MsgStr: Wow! Thật là lễ hội quá!
+
+Item:
+Id: 701662
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_DECOR_PLAYER_LOTS.2
+MsgId: Nicely done.
+MsgStr: Làm tốt lắm.
+
+Item:
+Id: 701663
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_DECOR_PLAYER_LOTS.3
+MsgId: You must be good at these games.
+MsgStr: Bạn phải giỏi những trò chơi này mới được.
+
+Item:
+Id: 701669
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_DECOR_PLAYER_LOTS_SNACK.3
+MsgId: Are you having fun? I sure am!
+MsgStr: Bạn có vui không? Tôi thì vô cùng vui nè!
+
+Item:
+Id: 701670
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_DECOR_PLAYER_NONE.1
+MsgId: You should decorate more.
+MsgStr: Bạn nên trang trí thêm đấy.
+
+Item:
+Id: 701671
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_DECOR_PLAYER_NONE.2
+MsgId: Where are the decorations?
+MsgStr: Trang trí ở đâu vậy?
+
+Item:
+Id: 701672
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_DECOR_PLAYER_NONE.3
+MsgId: It's not a Cawnival without decorations around the Tree!
+MsgStr: Không thể nào là một Lễ hội nếu thiếu đồ trang trí quanh Cây được!
+
+Item:
+Id: 701673
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_DECOR_PLAYER_NONE.4
+MsgId: This must be your first Cawnival.
+MsgStr: Đây phải là lễ hội đầu tiên của bạn.
+
+Item:
+Id: 701674
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_DECOR_PLAYER_NONE_SNACK.1
+MsgId: Hey, mind sharing your snacks?
+MsgStr: Này, chia chút đồ ăn vặt cho mình với được không?
+
+Item:
+Id: 701675
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_DECOR_PLAYER_NONE_SNACK.2
+MsgId: Where are we from? Oh you know, here and there...
+MsgStr: Chúng ta từ đâu tới nhỉ? Ôi, bạn cũng biết rồi đấy, khắp nơi…
+
+Item:
+Id: 701677
+MsgCtxt: STRINGS.CARNIVAL_CROWKID_DECOR_PLAYER_SOME.1
+MsgId: You're doing a pretty good job.
+MsgStr: Bạn làm tốt lắm.
+
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "[\n  {\n    \"id\": 701373,\n    \"suggestedTranslation\": \"Bạn đã chơi trong hai tiếng.\",\n    \"rating\": 9.5\n  },\n  {\n    \"id\": 701389,\n    \"suggestedTranslation\": \"QUAY LẠI\",\n    \"rating\": 10.0\n  },\n  {\n    \"id\": 701399,\n    \"suggestedTranslation\": \"Cù lũ\",\n    \"rating\": 10.0\n  },\n  {\n    \"id\": 701554,\n    \"suggestedTranslation\": \"Hãy chiêm ngưỡng: Độc Nhãn Âm Ty!\",\n    \"rating\": 9.5\n  },\n  {\n    \"id\": 701629,\n    \"suggestedTranslation\": \"Wow, tôi còn chẳng cần phải trộm nó—Ý tôi là, cảm ơn!\",\n    \"rating\": 9.5\n  },\n  {\n    \"id\": 701630,\n    \"suggestedTranslation\": \"Ở đây cứ tặng đồ hoài à? Hay quá!\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 701632,\n    \"suggestedTranslation\": \"Thật là ấm cúng nhỉ.\",\n    \"rating\": 9.5\n  },\n  {\n    \"id\": 701633,\n    \"suggestedTranslation\": \"Thật dễ chịu khi sưởi ấm móng vuốt bên đống lửa.\",\n    \"rating\": 9.5\n  },\n  {\n    \"id\": 701635,\n    \"suggestedTranslation\": \"Không hiểu sao mấy sinh vật không có lông lại sợ bóng tối vậy nhỉ?\",\n    \"rating\": 9.5\n  },\n  {\n    \"id\": 701636,\n    \"suggestedTranslation\": \"Ai có chút ngô nào không?\",\n    \"rating\": 9.5\n  },\n  {\n    \"id\": 701637,\n    \"suggestedTranslation\": \"Ồ! Không khí lễ hội quá!\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 701638,\n    \"suggestedTranslation\": \"Lễ hội hoành tráng nhất từ trước đến nay!\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 701639,\n    \"suggestedTranslation\": \"Lễ hội năm ngoái không sang trọng thế này đâu.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 701640,\n    \"suggestedTranslation\": \"Mình muốn xem mấy trò chơi quá!\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 701641,\n    \"suggestedTranslation\": \"Bạn đã xem gian hàng giải thưởng chưa?\",\n    \"rating\": 9.5\n  },\n  {\n    \"id\": 701644,\n    \"suggestedTranslation\": \"May mắn là Corvus đã tìm ra nơi này.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 701645,\n    \"suggestedTranslation\": \"Chắc họ vẫn đang chuẩn bị.\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 701653,\n    \"suggestedTranslation\": \"Tôi đói lả sau chuyến đi dài này.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 701654,\n    \"suggestedTranslation\": \"Bố trí đẹp phết.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 701655,\n    \"suggestedTranslation\": \"Cũng ổn... nhưng cần thêm chút điểm nhấn.\",\n    \"rating\": 9.5\n  },\n  {\n    \"id\": 701656,\n    \"suggestedTranslation\": \"Tôi từng thấy nhiều lễ hội hay hơn.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 701657,\n    \"suggestedTranslation\": \"Bữa tiệc chỉ mới bắt đầu thôi!\",\n    \"rating\": 9.5\n  },\n  {\n    \"id\": 701659,\n    \"suggestedTranslation\": \"Ai có bộ lông đỏ ấy nhỉ? Trông quen quen.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 701660,\n    \"suggestedTranslation\": \"Mong là năm sau chúng ta lại được tổ chức lễ hội ở đây.\",\n    \"rating\": 9.5\n  },\n  {\n    \"id\": 701661,\n    \"suggestedTranslation\": \"Wow! Thật là rộn ràng không khí lễ hội!\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 701662,\n    \"suggestedTranslation\": \"Làm tốt lắm.\",\n    \"rating\": 9.5\n  },\n  {\n    \"id\": 701663,\n    \"suggestedTranslation\": \"Chắc bạn giỏi mấy trò này lắm nhỉ.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 701669,\n    \"suggestedTranslation\": \"Bạn chơi có vui không? Tôi thì siêu vui luôn!\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 701670,\n    \"suggestedTranslation\": \"Bạn nên trang trí thêm đi chứ.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 701671,\n    \"suggestedTranslation\": \"Đồ trang trí đâu mất tiêu rồi?\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 701672,\n    \"suggestedTranslation\": \"Không thể gọi là lễ hội nếu quanh Cây không có đồ trang trí!\",\n    \"rating\": 9.5\n  },\n  {\n    \"id\": 701673,\n    \"suggestedTranslation\": \"Chắc đây là lễ hội đầu tiên của bạn rồi.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 701674,\n    \"suggestedTranslation\": \"Này, chia chút đồ ăn vặt cho mình với được không?\",\n    \"rating\": 9.5\n  },\n  {\n    \"id\": 701675,\n    \"suggestedTranslation\": \"Chúng ta từ đâu đến nhỉ? Ôi thì bạn biết rồi đấy, đây đó thôi...\",\n    \"rating\": 9.5\n  },\n  {\n    \"id\": 701677,\n    \"suggestedTranslation\": \"Bạn đang làm khá tốt đấy.\",\n    \"rating\": 9.5\n  }\n]",
+            "thoughtSignature": "El0KWwFpFH0TiTU3L6eQ3QF6dtlb15ter05EM+x9ArO4FHLM0M7y4as7yZZbR7igBxJRkCQfa82RLh++uIGFFj9Nx1Mc0c5QVCBvLwNe9lCKFeDZHitbARneQdglqL4="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 3085,
+    "candidatesTokenCount": 1647,
+    "totalTokenCount": 4732,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 3085
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "PB62arX0F7azg8UP6I-Y6Q8"
+}
+
+================================================================================--------------------
+

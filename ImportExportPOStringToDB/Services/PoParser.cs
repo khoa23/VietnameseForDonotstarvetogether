@@ -186,7 +186,7 @@ public static class PoParser
     {
         if (value.Length > 0)
         {
-            builder.Append(value);
+            builder.Append(UnescapePoText(value));
         }
     }
 

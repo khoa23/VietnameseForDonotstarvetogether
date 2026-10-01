@@ -1,0 +1,1112 @@
+=== Translation Log Started at 2026-09-21 10:22:10 | Provider: Gemini ===
+
+======================================== [2026-09-21 10:22:30] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang rating (0.0 - 10.0):
+   - MsgStr rỗng, chưa dịch hoặc còn là tiếng Anh: Chấm rating thấp (0.0 - 1.0).
+   - MsgStr dịch chuẩn xác, tự nhiên: Chấm rating cao (8.0 - 10.0).
+2. Đề xuất bản dịch TIẾNG VIỆT tối ưu nhất cho trường "suggestedTranslation":
+   - BẮT BUỘC 100% PHẢI LÀ TIẾNG VIỆT tự nhiên, ngắn gọn, chuẩn văn phong game.
+   - TUYỆT ĐỐI KHÔNG ĐƯỢC để suggestedTranslation là tiếng Anh trong bất kỳ trường hợp nào!
+3. Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+4. Nếu mục nào có 'Thuật ngữ tham khảo', BẮT BUỘC ưu tiên dịch thuật ngữ đó sang nghĩa tiếng Việt tương ứng.
+Ví dụ:
+Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+Output: {"id":101,"suggestedTranslation":"\"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!","rating":8.5}
+
+Hãy xử lý tất cả các mục dưới đây và trả về duy nhất một JSON array.
+Mỗi phần tử phải có đúng 3 trường: id, suggestedTranslation, rating.
+Trả về CHỈ JSON hợp lệ, không bọc markdown, không giải thích thừa.
+Ví dụ mẫu: [{"id":101,"suggestedTranslation":"\"Chưa đến giữa hè\", bạn nói?...","rating":8.5}]
+
+Item:
+Id: 713497
+MsgCtxt: STRINGS.CHARACTERS.WARLY.ACTIONFAIL.STORE.NOTMASTERCHEF
+MsgId: unused_by_warly
+MsgStr: chưa sử dụng_by_warly
+
+Item:
+Id: 716030
+MsgCtxt: STRINGS.CHARACTERS.WARLY.DESCRIBE.SPIDERCORPSE.GENERIC
+MsgId: It is dead, yes?
+MsgStr: Nó chết rồi phải không?
+
+Item:
+Id: 720822
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ACTIONFAIL.OPEN_CRAFTING.SHADOWMAGIC
+MsgId: unused_by_waxwell
+MsgStr: không sử dụng_by_waxwell
+
+Item:
+Id: 726737
+MsgCtxt: STRINGS.CHARACTERS.WEBBER.DESCRIBE.PENGUINCORPSE.GENERIC
+MsgId: It's dead, we think?
+MsgStr: Chúng tôi nghĩ nó đã chết rồi?
+
+Item:
+Id: 736732
+MsgCtxt: STRINGS.CHARACTERS.WILLOW.DESCRIBE.CARNIVALGAME_SHOOTING_BUTTON.GENERIC
+MsgId: I've uh... never actually been to a carnival before. Do I give it something?
+MsgStr: Tôi chưa bao giờ thực sự đến lễ hội trước đây. Tôi có cho nó cái gì không?
+
+Item:
+Id: 763656
+MsgCtxt: STRINGS.CHARACTERS.WX78.DESCRIBE.GHOSTFLOWERHAT
+MsgId: POST-LIVING APPLICATION
+MsgStr: ĐƠN SỐNG SỐNG
+Thuật ngữ tham khảo: "Post" => "Cột"
+
+Item:
+Id: 763718
+MsgCtxt: STRINGS.CHARACTERS.WX78.DESCRIBE.GROTTO_POOL_BIG
+MsgId: NOWHERE IS SAFE FROM THE WRETCHED WATER
+MsgStr: KHÔNG NƠI NÀO AN TOÀN KHỎI NƯỚC TUYỆT VỜI
+Thuật ngữ tham khảo: "Safe" => "Két Sắt"
+
+Item:
+Id: 763719
+MsgCtxt: STRINGS.CHARACTERS.WX78.DESCRIBE.GROTTO_POOL_SMALL
+MsgId: NOWHERE IS SAFE FROM THE WRETCHED WATER
+MsgStr: KHÔNG NƠI NÀO AN TOÀN KHỎI NƯỚC TUYỆT VỜI
+Thuật ngữ tham khảo: "Safe" => "Két Sắt"
+
+Item:
+Id: 764832
+MsgCtxt: STRINGS.CHARACTERS.WX78.DESCRIBE.SCULPTURE_BISHOPBODY.FINISHED
+MsgId: STILL NOT ONLINE
+MsgStr: VẪN KHÔNG TRỰC TUYẾN
+
+Item:
+Id: 765339
+MsgCtxt: STRINGS.CHARACTERS.WX78.DESCRIBE.VAULT_RUNE
+MsgId: SYNTAX ERROR
+MsgStr: LỖI CỔ PHIẾU
+
+Item:
+Id: 765343
+MsgCtxt: STRINGS.CHARACTERS.WX78.DESCRIBE.VAULT_TELEPORTER.BROKEN
+MsgId: NONFUNCTIONAL
+MsgStr: KHÔNG CHỨC NĂNG
+
+Item:
+Id: 765348
+MsgCtxt: STRINGS.CHARACTERS.WX78.DESCRIBE.VEGGIEOMLET
+MsgId: THE SKILLET IS NOT ACTUALLY PART OF THE BREAKFAST
+MsgStr: KỸ NĂNG KHÔNG THỰC SỰ PHẢI LÀ MỘT PHẦN CỦA BỮA SÁNG
+
+Item:
+Id: 765349
+MsgCtxt: STRINGS.CHARACTERS.WX78.DESCRIBE.VEGGIE_OVERSIZED_ROTTEN
+MsgId: THIS ORGANIC HAS OUTLIVED ITS USEFULNESS
+MsgStr: HỮU CƠ NÀY CÓ HỮU ÍCH CỦA NÓ
+
+Item:
+Id: 765404
+MsgCtxt: STRINGS.CHARACTERS.WX78.DESCRIBE.WALL_HAY_ITEM
+MsgId: NOT VERY GOOD DEFENSES
+MsgStr: Phòng thủ KHÔNG RẤT TỐT
+
+Item:
+Id: 765454
+MsgCtxt: STRINGS.CHARACTERS.WX78.DESCRIBE.WARLY.REVIVER
+MsgId: SENTIMENTALITY IS THE ORGANIC'S WEAKNESS
+MsgStr: TÌNH CẢM LÀ ĐIỂM YẾU CỦA HỮU CƠ
+
+Item:
+Id: 765456
+MsgCtxt: STRINGS.CHARACTERS.WX78.DESCRIBE.WASPHIVE
+MsgId: A BEAUTIFUL EXAMPLE OF EFFICIENCY
+MsgStr: Một DỤ ĐẸP CỦA HIỆU QUẢ
+
+Item:
+Id: 765609
+MsgCtxt: STRINGS.CHARACTERS.WX78.DESCRIBE.WINTER_ORNAMENTBOSS
+MsgId: I DO NOT UNDERSTAND THIS RITUAL
+MsgStr: TÔI KHÔNG HIỂU NGHI THỨC NÀY
+
+Item:
+Id: 765678
+MsgCtxt: STRINGS.CHARACTERS.WX78.DESCRIBE.WORMWOOD_MUTANTPROXY_CARRAT.GENERIC
+MsgId: THIS CARROT IS MORE IRRITATING THAN MOST
+MsgStr: CÀ RỐT NÀY THẬT KHÓ CHỊU SO VỚI TẤT CẢ
+Thuật ngữ tham khảo: "Carrot" => "Cà rốt"
+
+Item:
+Id: 765927
+MsgCtxt: STRINGS.CHARACTER_BIOS.wathgrithr.1.desc
+MsgId: July 23
+MsgStr: 23 Tháng 6
+
+Item:
+Id: 765933
+MsgCtxt: STRINGS.CHARACTER_BIOS.waxwell.1.desc
+MsgId: October 22
+MsgStr: 22 Tháng 8
+
+Item:
+Id: 765981
+MsgCtxt: STRINGS.CHARACTER_BIOS.wolfgang.1.desc
+MsgId: October 2
+MsgStr: Ngày 2 Tháng 8
+
+Item:
+Id: 766003
+MsgCtxt: STRINGS.CHARACTER_BIOS.wortox.1.desc
+MsgId: March 28
+MsgStr: Ngày 28 Tháng 7
+
+Item:
+Id: 766009
+MsgCtxt: STRINGS.CHARACTER_BIOS.wurt.1.desc
+MsgId: October 17
+MsgStr: Ngày 17 Tháng 8
+
+Item:
+Id: 766185
+MsgCtxt: STRINGS.CROWNAMES.16
+MsgId: Francis
+MsgStr: Đức Phanxicô
+
+Item:
+Id: 766192
+MsgCtxt: STRINGS.CROWNAMES.3
+MsgId: Jet
+MsgStr: Máy bay phản lực
+
+Item:
+Id: 766198
+MsgCtxt: STRINGS.CROWNAMES.9
+MsgId: Swift
+MsgStr: Nhanh
+
+Item:
+Id: 771254
+MsgCtxt: STRINGS.RECIPE_DESC.FUMAROLEPICKAXE
+MsgId: It's the hottest thing in mining.
+MsgStr: Đó là điều nóng nhất trong khai thác mỏ.
+
+Item:
+Id: 771633
+MsgCtxt: STRINGS.RECIPE_DESC.SUPERTACKLECONTAINER
+MsgId: More space for tackle? I'm hooked!
+MsgStr: Thêm không gian để giải quyết? Tôi mê mẩn!
+
+Item:
+Id: 771762
+MsgCtxt: STRINGS.RECIPE_DESC.WANDERINGTRADERSHOP_LIVINGLOG
+MsgId: Life wood be a scream...
+MsgStr: Cuộc sống gỗ là một tiếng hét...
+
+Item:
+Id: 772673
+MsgCtxt: STRINGS.SHADOW_BATTLEAXE_TALK.chopping_l3.1
+MsgId: No tree is safe from us.
+MsgStr: Không có cây nào an toàn khỏi tay chúng ta.
+Thuật ngữ tham khảo: "Safe" => "Két Sắt"
+
+Item:
+Id: 775063
+MsgCtxt: STRINGS.SKIN_DESCRIPTIONS.firestaff_bee
+MsgId: firestaff_bee
+MsgStr: Firestaff_bee
+
+Item:
+Id: 775380
+MsgCtxt: STRINGS.SKIN_DESCRIPTIONS.icestaff_bee
+MsgId: icestaff_bee
+MsgStr: icestaff_bee
+
+Item:
+Id: 775381
+MsgCtxt: STRINGS.SKIN_DESCRIPTIONS.icestaff_gungnir
+MsgId: icestaff_gungnir
+MsgStr: ICESTAFF_GUNGGNIR
+
+Item:
+Id: 775385
+MsgCtxt: STRINGS.SKIN_DESCRIPTIONS.icestaff_northern
+MsgId: icestaff_northern
+MsgStr: icestaff_northern
+
+Item:
+Id: 775386
+MsgCtxt: STRINGS.SKIN_DESCRIPTIONS.icestaff_rose
+MsgId: icestaff_rose
+MsgStr: icestaff_rose
+
+Item:
+Id: 778866
+MsgCtxt: STRINGS.SKIN_NAMES.feet_formal_highheel_white_pure
+MsgId: Pumps
+MsgStr: Máy bơm
+
+Item:
+Id: 778872
+MsgCtxt: STRINGS.SKIN_NAMES.feet_formal_winklepicker_white_ivory
+MsgId: Winklepickers
+MsgStr: Winklepickers
+
+Item:
+Id: 778874
+MsgCtxt: STRINGS.SKIN_NAMES.feet_fuzzyslippers_blue_ice
+MsgId: Fuzzy Slippers
+MsgStr: Dép mờ
+
+Item:
+Id: 778880
+MsgCtxt: STRINGS.SKIN_NAMES.feet_maryjanes_white_pure
+MsgId: Mary Janes
+MsgStr: Mary Janes
+
+Item:
+Id: 778881
+MsgCtxt: STRINGS.SKIN_NAMES.feet_maryjanesp_white_pure
+MsgId: Mary Janes
+MsgStr: Mary Janes
+
+Item:
+Id: 778884
+MsgCtxt: STRINGS.SKIN_NAMES.feet_ridingbootp_white_pure
+MsgId: Riding Boots
+MsgStr: Giày cưỡi ngựa
+
+Item:
+Id: 778886
+MsgCtxt: STRINGS.SKIN_NAMES.feet_slippers_rooster_white_pure
+MsgId: Clucky Slippers
+MsgStr: Dép lê may mắn
+
+Item:
+Id: 778897
+MsgCtxt: STRINGS.SKIN_NAMES.feet_twotone_shoe_green_laurel
+MsgId: Spectator Shoes
+MsgStr: Giày khán giả
+
+Item:
+Id: 778898
+MsgCtxt: STRINGS.SKIN_NAMES.feet_twotone_shoe_navy_midnight
+MsgId: Spectator Shoes
+MsgStr: Giày khán giả
+
+Item:
+Id: 779110
+MsgCtxt: STRINGS.SKIN_NAMES.glasscutter_mystical
+MsgId: Piercing Glass Cutter
+MsgStr: Máy cắt kính xuyên thấu
+Thuật ngữ tham khảo: "Glass Cutter" => "Cưa Bóng Bẩy"
+
+Item:
+Id: 779120
+MsgCtxt: STRINGS.SKIN_NAMES.goggleshat_fedora
+MsgId: Gumshoe Goggles
+MsgStr: Kính Goggles Gumshoe
+
+Item:
+Id: 779122
+MsgCtxt: STRINGS.SKIN_NAMES.golden_farmhoe_invisible
+MsgId: Pantomimed Splendid Garden Hoe
+MsgStr: Cuốc vườn lộng lẫy kịch câm
+Thuật ngữ tham khảo: "Splendid Garden Hoe" => "Cuốc Làm Vườn Xịn", "Garden Hoe" => "Cuốc Làm Vườn", "Hoe" => "Cuốc"
+
+Item:
+Id: 779123
+MsgCtxt: STRINGS.SKIN_NAMES.goldenaxe_invisible
+MsgId: Pantomimed Luxury Axe
+MsgStr: Rìu sang trọng kịch câm
+Thuật ngữ tham khảo: "Luxury Axe" => "Rìu Xa Xỉ", "Axe" => "Rìu"
+
+Item:
+Id: 779127
+MsgCtxt: STRINGS.SKIN_NAMES.goldenpitchfork_invisible
+MsgId: Pantomimed Snazzy Pitchfork
+MsgStr: Cây chĩa Snazzy kịch câm
+Thuật ngữ tham khảo: "Snazzy Pitchfork" => "Chĩa xịn", "Pitchfork" => "Chĩa"
+
+Item:
+Id: 779139
+MsgCtxt: STRINGS.SKIN_NAMES.greenstaff_clockwork
+MsgId: Clockwork Deconstruction Staff
+MsgStr: Nhân Viên Giải Cấu Trúc Đồng Hồ
+Thuật ngữ tham khảo: "Deconstruction Staff" => "Gậy Giải Cấu Trúc"
+
+Item:
+Id: 779326
+MsgCtxt: STRINGS.SKIN_NAMES.hand_wurt_victorian
+MsgId: Fuzzy Kid Claws
+MsgStr: Móng vuốt trẻ mờ
+
+Item:
+Id: 780915
+MsgCtxt: STRINGS.SKIN_NAMES.researchlab4_catcoon_costume
+MsgId: Presticatator
+MsgStr: Bộ dự đoán
+
+Item:
+Id: 780916
+MsgCtxt: STRINGS.SKIN_NAMES.researchlab4_catcoon_costumep
+MsgId: Presticatator
+MsgStr: Bộ dự đoán
+
+Item:
+Id: 780917
+MsgCtxt: STRINGS.SKIN_NAMES.researchlab4_chef
+MsgId: Chefihatator
+MsgStr: đầu bếp
+
+Item:
+Id: 780918
+MsgCtxt: STRINGS.SKIN_NAMES.researchlab4_chester_costume
+MsgId: Chestihatator
+MsgStr: người làm ngực
+
+Item:
+Id: 780919
+MsgCtxt: STRINGS.SKIN_NAMES.researchlab4_chester_costumep
+MsgId: Chestihatator
+MsgStr: người làm ngực
+
+Item:
+Id: 780920
+MsgCtxt: STRINGS.SKIN_NAMES.researchlab4_derby
+MsgId: Prestibowlerhatator
+MsgStr: người làm mũ bảo hiểm
+
+Item:
+Id: 780921
+MsgCtxt: STRINGS.SKIN_NAMES.researchlab4_festive_bell_red_firehound
+MsgId: Jingly Prestihatator
+MsgStr: Jingly Prestihatator
+
+Item:
+Id: 780922
+MsgCtxt: STRINGS.SKIN_NAMES.researchlab4_fish
+MsgId: Prestifishator
+MsgStr: Máy làm cá tiền
+
+Item:
+Id: 780925
+MsgCtxt: STRINGS.SKIN_NAMES.researchlab4_hutch_costume
+MsgId: Prestihutchatator
+MsgStr: người nói chuyện
+
+Item:
+Id: 780926
+MsgCtxt: STRINGS.SKIN_NAMES.researchlab4_hutch_costumep
+MsgId: Prestihutchatator
+MsgStr: người nói chuyện
+
+Item:
+Id: 780927
+MsgCtxt: STRINGS.SKIN_NAMES.researchlab4_merchant
+MsgId: Merchantator
+MsgStr: Người buôn bán
+
+Item:
+Id: 780929
+MsgCtxt: STRINGS.SKIN_NAMES.researchlab4_minigolf_purple
+MsgId: Bow Caddycapatator
+MsgStr: Cung Caddycapatator
+
+Item:
+Id: 780930
+MsgCtxt: STRINGS.SKIN_NAMES.researchlab4_minigolf_red
+MsgId: Flag Caddycapatator
+MsgStr: Cờ caddiecapatator
+
+Item:
+Id: 780932
+MsgCtxt: STRINGS.SKIN_NAMES.researchlab4_tophat_harlequin
+MsgId: Prestifoolinator
+MsgStr: chất tạo tiền tố
+
+Item:
+Id: 780934
+MsgCtxt: STRINGS.SKIN_NAMES.researchlab4_tophat_wizard
+MsgId: Prestiwizhatator
+MsgStr: người có uy tín
+
+Item:
+Id: 780936
+MsgCtxt: STRINGS.SKIN_NAMES.researchlab4_witch_pyre
+MsgId: Prestiwitchatator
+MsgStr: người phù thủy
+
+Item:
+Id: 781558
+MsgCtxt: STRINGS.SKIN_NAMES.wilson_hazard
+MsgId: The Hermetic
+MsgStr: sự kín đáo
+
+Item:
+Id: 781559
+MsgCtxt: STRINGS.SKIN_NAMES.wilson_ice
+MsgId: The Snowfallen
+MsgStr: Tuyết rơi
+
+Item:
+Id: 781560
+MsgCtxt: STRINGS.SKIN_NAMES.wilson_lunar
+MsgId: The Moonbound
+MsgStr: Mặt trăng
+
+Item:
+Id: 781562
+MsgCtxt: STRINGS.SKIN_NAMES.wilson_magma
+MsgId: The Magmatic
+MsgStr: ma thuật
+
+Item:
+Id: 781563
+MsgCtxt: STRINGS.SKIN_NAMES.wilson_masquerade
+MsgId: The Masquerader
+MsgStr: Các giả nhân dạng
+
+Item:
+Id: 781564
+MsgCtxt: STRINGS.SKIN_NAMES.wilson_nature
+MsgId: The Verdant
+MsgStr: The Verdant
+
+Item:
+Id: 781570
+MsgCtxt: STRINGS.SKIN_NAMES.wilson_rose
+MsgId: The Roseate
+MsgStr: hoa hồng
+
+Item:
+Id: 781571
+MsgCtxt: STRINGS.SKIN_NAMES.wilson_rosep
+MsgId: The Roseate
+MsgStr: hoa hồng
+
+Item:
+Id: 781574
+MsgCtxt: STRINGS.SKIN_NAMES.wilson_spring
+MsgId: The Equinor
+MsgStr: Xuân Bính Ngọ
+
+Item:
+Id: 781596
+MsgCtxt: STRINGS.SKIN_NAMES.winona_hazard
+MsgId: The Hermetic
+MsgStr: sự kín đáo
+
+Item:
+Id: 781597
+MsgCtxt: STRINGS.SKIN_NAMES.winona_ice
+MsgId: The Snowfallen
+MsgStr: Tuyết rơi
+
+Item:
+Id: 781598
+MsgCtxt: STRINGS.SKIN_NAMES.winona_lunar
+MsgId: The Moonbound
+MsgStr: Mặt trăng
+
+Item:
+Id: 781599
+MsgCtxt: STRINGS.SKIN_NAMES.winona_magma
+MsgId: The Magmatic
+MsgStr: ma thuật
+
+Item:
+Id: 781601
+MsgCtxt: STRINGS.SKIN_NAMES.winona_nature
+MsgId: The Verdant
+MsgStr: The Verdant
+
+Item:
+Id: 781604
+MsgCtxt: STRINGS.SKIN_NAMES.winona_rose
+MsgId: The Roseate
+MsgStr: hoa hồng
+
+Item:
+Id: 781605
+MsgCtxt: STRINGS.SKIN_NAMES.winona_rosep
+MsgId: The Roseate
+MsgStr: hoa hồng
+
+Item:
+Id: 781612
+MsgCtxt: STRINGS.SKIN_NAMES.winona_spring
+MsgId: The Equinor
+MsgStr: Xuân Bính Ngọ
+
+Item:
+Id: 781649
+MsgCtxt: STRINGS.SKIN_NAMES.wolfgang_hazard
+MsgId: The Hermetic
+MsgStr: sự kín đáo
+
+Item:
+Id: 781650
+MsgCtxt: STRINGS.SKIN_NAMES.wolfgang_ice
+MsgId: The Snowfallen
+MsgStr: Tuyết rơi
+
+Item:
+Id: 781651
+MsgCtxt: STRINGS.SKIN_NAMES.wolfgang_lunar
+MsgId: The Moonbound
+MsgStr: Mặt trăng
+
+Item:
+Id: 781652
+MsgCtxt: STRINGS.SKIN_NAMES.wolfgang_magma
+MsgId: The Magmatic
+MsgStr: ma thuật
+
+Item:
+Id: 781653
+MsgCtxt: STRINGS.SKIN_NAMES.wolfgang_nature
+MsgId: The Verdant
+MsgStr: The Verdant
+
+Item:
+Id: 781656
+MsgCtxt: STRINGS.SKIN_NAMES.wolfgang_rose
+MsgId: The Roseate
+MsgStr: hoa hồng
+
+Item:
+Id: 781657
+MsgCtxt: STRINGS.SKIN_NAMES.wolfgang_rosep
+MsgId: The Roseate
+MsgStr: hoa hồng
+
+Item:
+Id: 781690
+MsgCtxt: STRINGS.SKIN_NAMES.woodie_hazard
+MsgId: The Hermetic
+MsgStr: sự kín đáo
+
+Item:
+Id: 781693
+MsgCtxt: STRINGS.SKIN_NAMES.woodie_ice
+MsgId: The Snowfallen
+MsgStr: Tuyết rơi
+
+Item:
+Id: 781694
+MsgCtxt: STRINGS.SKIN_NAMES.woodie_lunar
+MsgId: The Moonbound
+MsgStr: The Moonbound
+
+Item:
+Id: 781695
+MsgCtxt: STRINGS.SKIN_NAMES.woodie_magma
+MsgId: The Magmatic
+MsgStr: ma thuật
+
+Item:
+Id: 781696
+MsgCtxt: STRINGS.SKIN_NAMES.woodie_masquerade
+MsgId: The Masquerader
+MsgStr: Các masquerader
+
+Item:
+Id: 781697
+MsgCtxt: STRINGS.SKIN_NAMES.woodie_nature
+MsgId: The Verdant
+MsgStr: The Verdant
+
+Item:
+Id: 781700
+MsgCtxt: STRINGS.SKIN_NAMES.woodie_rose
+MsgId: The Roseate
+MsgStr: hoa hồng
+
+Item:
+Id: 781701
+MsgCtxt: STRINGS.SKIN_NAMES.woodie_rosep
+MsgId: The Roseate
+MsgStr: hoa hồng
+
+Item:
+Id: 781720
+MsgCtxt: STRINGS.SKIN_NAMES.wormwood_hazard
+MsgId: The Hermetic
+MsgStr: sự kín đáo
+
+Item:
+Id: 781721
+MsgCtxt: STRINGS.SKIN_NAMES.wormwood_ice
+MsgId: The Snowfallen
+MsgStr: Tuyết rơi
+
+Item:
+Id: 781722
+MsgCtxt: STRINGS.SKIN_NAMES.wormwood_lunar
+MsgId: The Moonbound
+MsgStr: Mặt trăng
+
+Item:
+Id: 781724
+MsgCtxt: STRINGS.SKIN_NAMES.wormwood_nature
+MsgId: The Verdant
+MsgStr: The Verdant
+
+Item:
+Id: 781727
+MsgCtxt: STRINGS.SKIN_NAMES.wormwood_rose
+MsgId: The Roseate
+MsgStr: hoa hồng
+
+Item:
+Id: 781738
+MsgCtxt: STRINGS.SKIN_NAMES.wortox_hazard
+MsgId: The Hermetic
+MsgStr: sự kín đáo
+
+Item:
+Id: 781739
+MsgCtxt: STRINGS.SKIN_NAMES.wortox_ice
+MsgId: The Snowfallen
+MsgStr: Tuyết rơi
+
+Item:
+Id: 781740
+MsgCtxt: STRINGS.SKIN_NAMES.wortox_lunar
+MsgId: The Moonbound
+MsgStr: The Moonbound
+
+Item:
+Id: 781741
+MsgCtxt: STRINGS.SKIN_NAMES.wortox_masquerade
+MsgId: The Masquerader
+MsgStr: Các masquerader
+
+Item:
+Id: 781743
+MsgCtxt: STRINGS.SKIN_NAMES.wortox_nature
+MsgId: The Verdant
+MsgStr: The Verdant
+
+Item:
+Id: 781758
+MsgCtxt: STRINGS.SKIN_NAMES.wurt_hazard
+MsgId: The Hermetic
+MsgStr: sự kín đáo
+
+Item:
+Id: 781759
+MsgCtxt: STRINGS.SKIN_NAMES.wurt_ice
+MsgId: The Snowfallen
+MsgStr: Tuyết rơi
+
+Item:
+Id: 781760
+MsgCtxt: STRINGS.SKIN_NAMES.wurt_lunar
+MsgId: The Moonbound
+MsgStr: The Moonbound
+
+Item:
+Id: 781761
+MsgCtxt: STRINGS.SKIN_NAMES.wurt_masquerade
+MsgId: The Masquerader
+MsgStr: Các giả nhân dạng
+
+Item:
+Id: 781762
+MsgCtxt: STRINGS.SKIN_NAMES.wurt_nature
+MsgId: The Verdant
+MsgStr: The Verdant
+
+Item:
+Id: 781765
+MsgCtxt: STRINGS.SKIN_NAMES.wurt_rose
+MsgId: The Roseate
+MsgStr: hoa hồng
+
+Item:
+Id: 781797
+MsgCtxt: STRINGS.SKIN_NAMES.wx78_hazard
+MsgId: The Hermetic
+MsgStr: sự kín đáo
+
+Item:
+Id: 781798
+MsgCtxt: STRINGS.SKIN_NAMES.wx78_ice
+MsgId: The Snowfallen
+MsgStr: Tuyết rơi
+
+Item:
+Id: 781799
+MsgCtxt: STRINGS.SKIN_NAMES.wx78_lunar
+MsgId: The Moonbound
+MsgStr: Mặt trăng
+
+Item:
+Id: 781800
+MsgCtxt: STRINGS.SKIN_NAMES.wx78_magma
+MsgId: The Magmatic
+MsgStr: ma thuật
+
+Item:
+Id: 781811
+MsgCtxt: STRINGS.SKIN_NAMES.wx78_rose
+MsgId: The Roseate
+MsgStr: hoa hồng
+
+Item:
+Id: 781812
+MsgCtxt: STRINGS.SKIN_NAMES.wx78_rosep
+MsgId: The Roseate
+MsgStr: hoa hồng
+
+Item:
+Id: 781906
+MsgCtxt: STRINGS.SKIN_QUOTES.wathgrithr_rosep
+MsgId: \"Applause röars as red, red röses flööd my stage!\"
+MsgStr: \"Vỗ tay vang dội khi màu đỏ, hoa hồng đỏ tràn ngập sân khấu của tôi!\"
+Thuật ngữ tham khảo: "Stage" => "Sân khấu"
+
+Item:
+Id: 781907
+MsgCtxt: STRINGS.SKIN_QUOTES.wathgrithr_scarecrow
+MsgId: \"I shall scare öff all the black winged beasties!\"
+MsgStr: \"Tôi sẽ sợ tất cả các con thú có cánh đen!\"
+
+Item:
+Id: 781908
+MsgCtxt: STRINGS.SKIN_QUOTES.wathgrithr_shadow
+MsgId: \"I will deströy my enemies!\"
+MsgStr: \"Tôi sẽ phá hủy kẻ thù của tôi!\"
+
+Item:
+Id: 781909
+MsgCtxt: STRINGS.SKIN_QUOTES.wathgrithr_shadowp
+MsgId: \"I will deströy my enemies!\"
+MsgStr: \"Tôi sẽ phá hủy kẻ thù của tôi!\"
+
+Item:
+Id: 781910
+MsgCtxt: STRINGS.SKIN_QUOTES.wathgrithr_survivor
+MsgId: \"Yöu have tö try harder than this tö defeat me!\"
+MsgStr: \"Y  U có t   cố gắng hơn thế này đánh bại tôi!\"
+
+Item:
+Id: 781911
+MsgCtxt: STRINGS.SKIN_QUOTES.wathgrithr_survivorp
+MsgId: \"Yöu have tö try harder than this tö defeat me!\"
+MsgStr: \"Y  U có t   cố gắng hơn thế này đánh bại tôi!\"
+
+Item:
+Id: 781913
+MsgCtxt: STRINGS.SKIN_QUOTES.wathgrithr_victorian
+MsgId: \"Wörds, wörds, wörds.\"
+MsgStr: \"W  rds, w  rds, w  rds.\"
+
+Item:
+Id: 781916
+MsgCtxt: STRINGS.SKIN_QUOTES.wathgrithr_yule
+MsgId: \"Gööd tidings to all!\"
+MsgStr: \"G    d cho tất cả mọi người!\"
+
+Item:
+Id: 782121
+MsgCtxt: STRINGS.SKIN_QUOTES.wolfgang_survivor
+MsgId: \"Wolfgang is tough. Lots of muscle.\"
+MsgStr: \"Wolfgang là khó khăn. Rất nhiều cơ bắp.\"
+
+Item:
+Id: 782122
+MsgCtxt: STRINGS.SKIN_QUOTES.wolfgang_survivorp
+MsgId: \"Wolfgang is tough. Lots of muscle.\"
+MsgStr: \"Wolfgang là khó khăn. Rất nhiều cơ bắp.\"
+
+Item:
+Id: 782124
+MsgCtxt: STRINGS.SKIN_QUOTES.wolfgang_walrus
+MsgId: \"Wolfgang is large moustache man! Ha ha!\"
+MsgStr: \"Wolfgang là người đàn ông ria mép lớn! Ha ha!\"
+
+Item:
+Id: 782125
+MsgCtxt: STRINGS.SKIN_QUOTES.wolfgang_walrus_d
+MsgId: \"Wolfgang is large moustache man! Ha ha!\"
+MsgStr: \"Wolfgang là người đàn ông ria mép lớn! Ha ha!\"
+
+Item:
+Id: 782128
+MsgCtxt: STRINGS.SKIN_QUOTES.wolfgang_wolfman
+MsgId: \"Something is different... Wolfgang's head feels fuzzy...\"
+MsgStr: \"Một cái gì đó khác biệt ... đầu của Wolfgang cảm thấy mờ nhạt ...\"
+
+Item:
+Id: 782129
+MsgCtxt: STRINGS.SKIN_QUOTES.wolfgang_wrestler
+MsgId: \"Mightiest Wolfgang is no heel!\"
+MsgStr: \"Wolfgang mạnh nhất là không có gót!\"
+
+Item:
+Id: 782131
+MsgCtxt: STRINGS.SKIN_QUOTES.woodie_ancient
+MsgId: \"These old threads I dug up aren't half bad, eh?\"
+MsgStr: \"Những chủ đề cũ mà tôi đào lên không một nửa xấu, hả?\"
+
+Item:
+Id: 782132
+MsgCtxt: STRINGS.SKIN_QUOTES.woodie_combatant
+MsgId: \"I've been in scraps before, eh?\"
+MsgStr: \"Tôi đã ở trong phế liệu trước đây, hả?\"
+
+Item:
+Id: 782133
+MsgCtxt: STRINGS.SKIN_QUOTES.woodie_cook
+MsgId: \"Lucy is my sous chef.\"
+MsgStr: \"Lucy là đầu bếp sous của tôi.\"
+
+Item:
+Id: 782611
+MsgCtxt: STRINGS.SKIN_TAG_CATEGORIES.TYPE.PET
+MsgId: Critter
+MsgStr: Máy nghiền
+
+Item:
+Id: 782659
+MsgCtxt: STRINGS.STAGEACTOR.ACT1_SCENE2.LINE15
+MsgId: Wear it, and you will have nothing to fear.
+MsgStr: Mặc nó, và bạn sẽ không có gì phải sợ hãi.
+Thuật ngữ tham khảo: "Nothing" => "Không có gì"
+
+Item:
+Id: 782784
+MsgCtxt: STRINGS.STAGEACTOR.ACT2_SCENE6.LINE12
+MsgId: You wouldn't hit a guy with glasses, would you?
+MsgStr: Bạn sẽ không đánh một anh chàng bằng kính, phải không?
+
+Item:
+Id: 782786
+MsgCtxt: STRINGS.STAGEACTOR.ACT2_SCENE6.LINE14
+MsgId: Little doll? It can't be! I... that is, you...
+MsgStr: Con búp bê nhỏ? Nó không thể! Tôi ... đó là, bạn ...
+
+Item:
+Id: 782789
+MsgCtxt: STRINGS.STAGEACTOR.ACT2_SCENE6.LINE17
+MsgId: We are going to help each other become whole again.
+MsgStr: Chúng tôi sẽ giúp nhau trở thành toàn bộ.
+
+Item:
+Id: 782800
+MsgCtxt: STRINGS.STAGEACTOR.ACT2_SCENE6.LINE5
+MsgId: Leave me be, monster!
+MsgStr: Để lại cho tôi, quái vật!
+
+Item:
+Id: 782804
+MsgCtxt: STRINGS.STAGEACTOR.ACT2_SCENE6.LINE9
+MsgId: And... oh I know! I was just now planning
+MsgStr: Và ... oh tôi biết! Tôi vừa mới lên kế hoạch
+
+Item:
+Id: 782805
+MsgCtxt: STRINGS.STAGEACTOR.ACT3_SCENE7.LINE1
+MsgId: It's the Final Act!
+MsgStr: Đó là hành động cuối cùng!
+
+Item:
+Id: 782806
+MsgCtxt: STRINGS.STAGEACTOR.ACT3_SCENE7.LINE10
+MsgId: the King's so glum upon his throne!
+MsgStr: Nhà vua rất glum trên ngai vàng của mình!
+
+Item:
+Id: 782808
+MsgCtxt: STRINGS.STAGEACTOR.ACT3_SCENE7.LINE12
+MsgId: he's sent for fools, to watch us play!
+MsgStr: Anh ấy được gửi cho những kẻ ngốc, để xem chúng tôi chơi!
+
+Item:
+Id: 782809
+MsgCtxt: STRINGS.STAGEACTOR.ACT3_SCENE7.LINE13
+MsgId: From far and wide he's called us there,
+MsgStr: Từ xa và rộng, anh ấy gọi chúng tôi ở đó,
+
+Item:
+Id: 782815
+MsgCtxt: STRINGS.STAGEACTOR.ACT3_SCENE7.LINE19
+MsgId: How strange, I suddenly feel like I'm being shadowed.
+MsgStr: Thật kỳ lạ, tôi đột nhiên cảm thấy như mình đang bị che khuất.
+
+Item:
+Id: 783032
+MsgCtxt: STRINGS.STAGEACTOR.THEVAULT.LINE29_VISIONIST
+MsgId: save the privilege of the task completed,
+MsgStr: lưu đặc quyền của nhiệm vụ đã hoàn thành,
+
+Item:
+Id: 783034
+MsgCtxt: STRINGS.STAGEACTOR.THEVAULT.LINE30_VISIONIST
+MsgId: and a swift return home to my brood.
+MsgStr: và nhanh chóng trở về nhà với bố mẹ tôi.
+
+Item:
+Id: 783040
+MsgCtxt: STRINGS.STAGEACTOR.THEVAULT.LINE36_VISIONIST
+MsgId: You honor us too greatly, Elytra.
+MsgStr: Bạn tôn vinh chúng tôi quá nhiều, Elytra.
+
+Item:
+Id: 783870
+MsgCtxt: STRINGS.UI.ACHIEVEMENTS.QUAGMIRE.ACHIEVEMENT.cook_noburnt.DESC
+MsgId: Cook at least 6 meals from start to finish in a single match, without burning any of them
+MsgStr: Nấu ít nhất 6 bữa ăn từ đầu đến cuối trong một trận đấu mà không cần đốt bất kỳ ai trong số họ
+
+Item:
+Id: 784406
+MsgCtxt: STRINGS.UI.CONTROLSSCREEN.INPUTS.3.16
+MsgId: (-Z Rotation)
+MsgStr: (-Z Rotation)
+
+Item:
+Id: 784407
+MsgCtxt: STRINGS.UI.CONTROLSSCREEN.INPUTS.3.17
+MsgId: (+Z Rotation)
+MsgStr: (+Z Rotation)
+
+Item:
+Id: 786221
+MsgCtxt: STRINGS.UI.MVP_LOADING_WIDGET.QUAGMIRE.TITLES.herbs_picked2
+MsgId: Master Gatherer
+MsgStr: Master Gatherer
+
+Item:
+Id: 787197
+MsgCtxt: STRINGS.UI.SERVERADMINSCREEN.PLAYER
+MsgId: Player
+MsgStr: Ngày chơi
+
+Item:
+Id: 788175
+MsgCtxt: STRINGS.WAGSTAFF_NPC_ALL_MUTATIONS_DEFEATED.2
+MsgId: You dallied so long I nearly forgot!
+MsgStr: Bạn đã quá lâu tôi gần như quên mất!
+
+Item:
+Id: 788506
+MsgCtxt: STRINGS.UI.EULADIALOG.DECLINE_CONFIRMATION_BODY
+MsgId: You will not be able to log into a Klei account or play online. Are you sure?
+MsgStr: Bạn sẽ không thể đăng nhập tài khoản Klei hoặc chơi trực tuyến. Bạn có chắc không?
+Thuật ngữ tham khảo: "Log" => "Gỗ"
+
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "[\n  {\n    \"id\": 713497,\n    \"suggestedTranslation\": \"chưa sử dụng_by_warly\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 716030,\n    \"suggestedTranslation\": \"Nó chết rồi phải không?\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 720822,\n    \"suggestedTranslation\": \"không sử dụng_by_waxwell\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 726737,\n    \"suggestedTranslation\": \"Chúng tôi nghĩ nó đã chết rồi?\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 736732,\n    \"suggestedTranslation\": \"Tôi... ừm... chưa từng đến hội chợ bao giờ. Tôi phải đưa nó cái gì à?\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 763656,\n    \"suggestedTranslation\": \"ĐƠN CỘT SỐNG\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 763718,\n    \"suggestedTranslation\": \"KHÔNG CÓ KÉT SẮT NÀO AN TOÀN KHỎI NƯỚC BẨN\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 763719,\n    \"suggestedTranslation\": \"KHÔNG CÓ KÉT SẮT NÀO AN TOÀN KHỎI NƯỚC BẨN\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 764832,\n    \"suggestedTranslation\": \"VẪN KHÔNG TRỰC TUYẾN\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 765339,\n    \"suggestedTranslation\": \"LỖI CÚ PHÁP\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 765343,\n    \"suggestedTranslation\": \"KHÔNG HOẠT ĐỘNG\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 765348,\n    \"suggestedTranslation\": \"CÁI CHẢO THỰC RA KHÔNG PHẢI MỘT PHẦN CỦA BỮA SÁNG\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 765349,\n    \"suggestedTranslation\": \"THỨ HỮU CƠ NÀY ĐÃ HẾT HẠN SỬ DỤNG\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 765404,\n    \"suggestedTranslation\": \"PHÒNG THỦ KHÔNG ĐƯỢC TỐT CHO LẮM\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 765454,\n    \"suggestedTranslation\": \"TÌNH CẢM LÀ ĐIỂM YẾU CỦA ĐỒ HỮU CƠ\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 765456,\n    \"suggestedTranslation\": \"MỘT VÍ DỤ TUYỆT VỜI VỀ TÍNH HIỆU QUẢ\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 765609,\n    \"suggestedTranslation\": \"TÔI KHÔNG HIỂU NGHI THỨC NÀY\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 765678,\n    \"suggestedTranslation\": \"CÀ RỐT NÀY KHÓ CHỊU HƠN HẦU HẾT CÁC LOẠI KHÁC\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 765927,\n    \"suggestedTranslation\": \"23 Tháng 7\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 765933,\n    \"suggestedTranslation\": \"22 Tháng 10\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 765981,\n    \"suggestedTranslation\": \"Ngày 2 Tháng 10\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 766003,\n    \"suggestedTranslation\": \"Ngày 28 Tháng 3\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 766009,\n    \"suggestedTranslation\": \"Ngày 17 Tháng 10\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 766185,\n    \"suggestedTranslation\": \"Francis\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 766192,\n    \"suggestedTranslation\": \"Jet\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 766198,\n    \"suggestedTranslation\": \"Swift\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 771254,\n    \"suggestedTranslation\": \"Món đồ “hot” nhất trong ngành khai mỏ.\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 771633,\n    \"suggestedTranslation\": \"Thêm không gian đựng đồ câu ư? Tôi mê tơi rồi!\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 771762,\n    \"suggestedTranslation\": \"Cuộc sống bằng gỗ này thật là hú hồn...\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 772673,\n    \"suggestedTranslation\": \"Không có cái cây nào an toàn khỏi két sắt của chúng ta cả.\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 775063,\n    \"suggestedTranslation\": \"Trượng Lửa Ong\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 775380,\n    \"suggestedTranslation\": \"Trượng Băng Ong\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 775381,\n    \"suggestedTranslation\": \"Trượng Băng Gungnir\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 775385,\n    \"suggestedTranslation\": \"Trượng Băng Phương Bắc\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 775386,\n    \"suggestedTranslation\": \"Trượng Băng Hoa Hồng\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 778866,\n    \"suggestedTranslation\": \"Giày Cao Gót\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 778872,\n    \"suggestedTranslation\": \"Giày Winklepickers\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 778874,\n    \"suggestedTranslation\": \"Dép Lông Bông Xanh Băng\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 778880,\n    \"suggestedTranslation\": \"Giày Mary Jane\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 778881,\n    \"suggestedTranslation\": \"Giày Mary Jane\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 778884,\n    \"suggestedTranslation\": \"Giày Cưỡi Ngựa\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 778886,\n    \"suggestedTranslation\": \"Dép Gà May Mắn\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 778897,\n    \"suggestedTranslation\": \"Giày Khán Giả\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 778898,\n    \"suggestedTranslation\": \"Giày Khán Giả\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 779110,\n    \"suggestedTranslation\": \"Cưa Bóng Bẩy Xuyên Thấu\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 779120,\n    \"suggestedTranslation\": \"Kính Thám Tư Gumshoe\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 779121,\n    \"suggestedTranslation\": \"Cuốc Làm Vườn Xịn Kịch Câm\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 779123,\n    \"suggestedTranslation\": \"Rìu Xa Xỉ Kịch Câm\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 779127,\n    \"suggestedTranslation\": \"Chĩa Xịn Kịch Câm\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 779139,\n    \"suggestedTranslation\": \"Gậy Giải Cấu Trúc Máy Móc\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 779326,\n    \"suggestedTranslation\": \"Vuốt Trẻ Em Lông Xù\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 780915,\n    \"suggestedTranslation\": \"Mèo Phù Thủy\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 780916,\n    \"suggestedTranslation\": \"Mèo Phù Thủy\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 780917,\n    \"suggestedTranslation\": \"Mũ Bếp Trưởng Phù Thủy\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 780918,\n    \"suggestedTranslation\": \"Mũ Hòm Phù Thủy\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 780919,\n    \"suggestedTranslation\": \"Mũ Hòm Phù Thủy\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 780920,\n    \"suggestedTranslation\": \"Mũ Quả Dưa Phù Thủy\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 780921,\n    \"suggestedTranslation\": \"Mũ Phù Thủy Lục Lạc\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 780922,\n    \"suggestedTranslation\": \"Mũ Phù Thủy Cá\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 780925,\n    \"suggestedTranslation\": \"Mũ Rương Phù Thủy\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 780926,\n    \"suggestedTranslation\": \"Mũ Rương Phù Thủy\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 780927,\n    \"suggestedTranslation\": \"Mũ Thương Gia\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 780929,\n    \"suggestedTranslation\": \"Mũ Caddy Nơ\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 780930,\n    \"suggestedTranslation\": \"Mũ Caddy Cờ\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 780932,\n    \"suggestedTranslation\": \"Mũ Hề Phù Thủy\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 780934,\n    \"suggestedTranslation\": \"Mũ Pháp Sư Phù Thủy\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 780936,\n    \"suggestedTranslation\": \"Mũ Phù Thủy Lửa\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 781558,\n    \"suggestedTranslation\": \"Người Bí Ẩn\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781559,\n    \"suggestedTranslation\": \"Kẻ Trầm Tuyết\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781560,\n    \"suggestedTranslation\": \"Kẻ Về Từ Mặt Trăng\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781562,\n    \"suggestedTranslation\": \"Kẻ Mang Dung Nham\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781563,\n    \"suggestedTranslation\": \"Kẻ Dự Tiệc Hóa Trang\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781564,\n    \"suggestedTranslation\": \"Kẻ Xanh Tươi\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781570,\n    \"suggestedTranslation\": \"Kẻ Sắc Hồng\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781571,\n    \"suggestedTranslation\": \"Kẻ Sắc Hồng\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781574,\n    \"suggestedTranslation\": \"Kẻ Xuân Thì\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781596,\n    \"suggestedTranslation\": \"Người Bí Ẩn\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781597,\n    \"suggestedTranslation\": \"Kẻ Trầm Tuyết\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781598,\n    \"suggestedTranslation\": \"Kẻ Về Từ Mặt Trăng\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781599,\n    \"suggestedTranslation\": \"Kẻ Mang Dung Nham\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781601,\n    \"suggestedTranslation\": \"Kẻ Xanh Tươi\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781604,\n    \"suggestedTranslation\": \"Kẻ Sắc Hồng\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781605,\n    \"suggestedTranslation\": \"Kẻ Sắc Hồng\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781612,\n    \"suggestedTranslation\": \"Kẻ Xuân Thì\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781649,\n    \"suggestedTranslation\": \"Người Bí Ẩn\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781650,\n    \"suggestedTranslation\": \"Kẻ Trầm Tuyết\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781651,\n    \"suggestedTranslation\": \"Kẻ Về Từ Mặt Trăng\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781652,\n    \"suggestedTranslation\": \"Kẻ Mang Dung Nham\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781653,\n    \"suggestedTranslation\": \"Kẻ Xanh Tươi\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781656,\n    \"suggestedTranslation\": \"Kẻ Sắc Hồng\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781657,\n    \"suggestedTranslation\": \"Kẻ Sắc Hồng\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781690,\n    \"suggestedTranslation\": \"Người Bí Ẩn\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781693,\n    \"suggestedTranslation\": \"Kẻ Trầm Tuyết\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781694,\n    \"suggestedTranslation\": \"Kẻ Về Từ Mặt Trăng\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781695,\n    \"suggestedTranslation\": \"Kẻ Mang Dung Nham\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781696,\n    \"suggestedTranslation\": \"Kẻ Dự Tiệc Hóa Trang\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781697,\n    \"suggestedTranslation\": \"Kẻ Xanh Tươi\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781700,\n    \"suggestedTranslation\": \"Kẻ Sắc Hồng\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781701,\n    \"suggestedTranslation\": \"Kẻ Sắc Hồng\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781720,\n    \"suggestedTranslation\": \"Người Bí Ẩn\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781721,\n    \"suggestedTranslation\": \"Kẻ Trầm Tuyết\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781722,\n    \"suggestedTranslation\": \"Kẻ Về Từ Mặt Trăng\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781724,\n    \"suggestedTranslation\": \"Kẻ Xanh Tươi\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781727,\n    \"suggestedTranslation\": \"Kẻ Sắc Hồng\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781738,\n    \"suggestedTranslation\": \"Người Bí Ẩn\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781739,\n    \"suggestedTranslation\": \"Kẻ Trầm Tuyết\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781740,\n    \"suggestedTranslation\": \"Kẻ Về Từ Mặt Trăng\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781741,\n    \"suggestedTranslation\": \"Kẻ Dự Tiệc Hóa Trang\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781743,\n    \"suggestedTranslation\": \"Kẻ Xanh Tươi\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781758,\n    \"suggestedTranslation\": \"Người Bí Ẩn\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781759,\n    \"suggestedTranslation\": \"Kẻ Trầm Tuyết\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781760,\n    \"suggestedTranslation\": \"Kẻ Về Từ Mặt Trăng\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781761,\n    \"suggestedTranslation\": \"Kẻ Dự Tiệc Hóa Trang\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781762,\n    \"suggestedTranslation\": \"Kẻ Xanh Tươi\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781765,\n    \"suggestedTranslation\": \"Kẻ Sắc Hồng\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781797,\n    \"suggestedTranslation\": \"Người Bí Ẩn\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781798,\n    \"suggestedTranslation\": \"Kẻ Trầm Tuyết\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781799,\n    \"suggestedTranslation\": \"Kẻ Về Từ Mặt Trăng\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781800,\n    \"suggestedTranslation\": \"Kẻ Mang Dung Nham\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781811,\n    \"suggestedTranslation\": \"Kẻ Sắc Hồng\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781812,\n    \"suggestedTranslation\": \"Kẻ Sắc Hồng\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781906,\n    \"suggestedTranslation\": \"\\\"Tiếng vỗ tay vang dội khi sắc hồng thắm tràn ngập sân khấu của tôi!\\\"\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 781907,\n    \"suggestedTranslation\": \"\\\"Ta sẽ dọa chạy hết lũ quái vật cánh đen!\\\"\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781908,\n    \"suggestedTranslation\": \"\\\"Ta sẽ tiêu diệt kẻ thù!\\\"\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781909,\n    \"suggestedTranslation\": \"\\\"Ta sẽ tiêu diệt kẻ thù!\\\"\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781910,\n    \"suggestedTranslation\": \"\\\"Ngươi phải cố gắng nhiều hơn thế mới hòng đánh bại được ta!\\\"\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 781911,\n    \"suggestedTranslation\": \"\\\"Ngươi phải cố gắng nhiều hơn thế mới hòng đánh bại được ta!\\\"\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 781913,\n    \"suggestedTranslation\": \"\\\"Lời nói, lời nói và lời nói.\\\"\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 781916,\n    \"suggestedTranslation\": \"\\\"Chúc mọi người an lành!\\\"\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 782121,\n    \"suggestedTranslation\": \"\\\"Wolfgang rất cứng cỏi. Lắm cơ bắp lắm.\\\"\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 782122,\n    \"suggestedTranslation\": \"\\\"Wolfgang rất cứng cỏi. Lắm cơ bắp lắm.\\\"\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 782124,\n    \"suggestedTranslation\": \"\\\"Wolfgang là người đàn ông để ria mép to! Ha ha!\\\"\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 782125,\n    \"suggestedTranslation\": \"\\\"Wolfgang là người đàn ông để ria mép to! Ha ha!\\\"\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 782128,\n    \"suggestedTranslation\": \"\\\"Có cái gì đó lạ lắm... Đầu Wolfgang cứ thấy mụ mị...\\\"\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 782129,\n    \"suggestedTranslation\": \"\\\"Wolfgang hùng mạnh không phải kẻ hèn!\\\"\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 782131,\n    \"suggestedTranslation\": \"\\\"Mấy bộ cánh cổ tôi bới được cũng tạm được đấy chứ, nhỉ?\\\"\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 782132,\n    \"suggestedTranslation\": \"\\\"Tôi từng dính vào dăm ba vụ ẩu đả rồi, nhỉ?\\\"\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 782133,\n    \"suggestedTranslation\": \"\\\"Lucy là phụ bếp của tôi đấy.\\\"\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 782611,\n    \"suggestedTranslation\": \"Sinh vật nhỏ\",\n    \"rating\": 8.0\n  },\n  {\n    \"id\": 782659,\n    \"suggestedTranslation\": \"Mặc nó vào, và bạn sẽ chẳng có gì phải sợ hãi cả.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 782784,\n    \"suggestedTranslation\": \"Chắc cậu không nỡ đánh một người đeo kính đâu nhỉ?\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 782786,\n    \"suggestedTranslation\": \"Búp bê nhỏ ư? Không thể nào! Tôi... ý tôi là, cậu...\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 782789,\n    \"suggestedTranslation\": \"Chúng ta sẽ giúp nhau trở lại vẹn toàn.\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 782800,\n    \"suggestedTranslation\": \"Tránh ra cho tôi, đồ quái vật!\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 782804,\n    \"suggestedTranslation\": \"Và... ồ tôi biết chứ! Tôi vừa mới lên kế hoạch...\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 782805,\n    \"suggestedTranslation\": \"Đó là Màn Kết Thúc!\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 782806,\n    \"suggestedTranslation\": \"nhà vua thật ủ rũ trên ngai vàng!\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 782808,\n    \"suggestedTranslation\": \"ngài đã vời những kẻ hề đến để xem chúng ta diễn!\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 782809,\n    \"suggestedTranslation\": \"Từ muôn phương ngài đã gọi chúng ta tới đó,\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 782815,\n    \"suggestedTranslation\": \"Thật kỳ lạ, tôi bỗng thấy như mình đang bị bám theo.\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 783032,\n    \"suggestedTranslation\": \"giữ lại đặc quyền của nhiệm vụ đã hoàn thành,\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 783034,\n    \"suggestedTranslation\": \"và nhanh chóng trở về nhà với bầy đàn của mình.\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 783040,\n    \"suggestedTranslation\": \"Bạn quá đề cao chúng tôi rồi, Elytra.\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 783870,\n    \"suggestedTranslation\": \"Nấu ít nhất 6 món ăn từ đầu đến cuối trong một trận đấu mà không làm cháy món nào\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 784406,\n    \"suggestedTranslation\": \"(-Z Rotation)\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 784407,\n    \"suggestedTranslation\": \"(+Z Rotation)\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 786221,\n    \"suggestedTranslation\": \"Bậc Thầy Thu Thập\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 787197,\n    \"suggestedTranslation\": \"Người chơi\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 788175,\n    \"suggestedTranslation\": \"Cậu chần chừ lâu quá khiến tôi gần quên béng mất!\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 788506,\n    \"suggestedTranslation\": \"Bạn sẽ không thể đăng nhập tài khoản Klei hoặc chơi trực tuyến bằng gỗ. Bạn có chắc không?\",\n    \"rating\": 8.0\n  }\n]",
+            "thoughtSignature": "El4KXAFpFH0T5IIwiJUdeCG6zcD2rOSwYfuBwDH8EkRKLf8LrpTuwvGg/emJcAaORojy/Qzr2YcjIKnX9Z89LdpckL2ZpKMwlPcI9jFOPe4Jh08ZCZ1284UUmBnp01+w"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 10691,
+    "candidatesTokenCount": 7390,
+    "totalTokenCount": 18081,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10691
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "7aKwarrpOoLCg8UPv9muqAU"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-21 10:22:31] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 779122
+MsgCtxt: STRINGS.SKIN_NAMES.golden_farmhoe_invisible
+MsgId: Pantomimed Splendid Garden Hoe
+MsgStr: Cuốc vườn lộng lẫy kịch câm
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+
+DANH MỤC THUẬT NGỮ THAM KHẢO (Khi dịch MsgId sang tiếng Việt, BẮT BUỘC ưu tiên sử dụng các nghĩa tiếng Việt này):
+- Từ tiếng Anh "Splendid Garden Hoe" => dịch sang tiếng Việt là "Cuốc Làm Vườn Xịn"
+- Từ tiếng Anh "Garden Hoe" => dịch sang tiếng Việt là "Cuốc Làm Vườn"
+- Từ tiếng Anh "Hoe" => dịch sang tiếng Việt là "Cuốc"
+LƯU Ý BẮT BUỘC: Bản dịch suggestedTranslation phải hoàn toàn bằng tiếng Việt.
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Cuốc Làm Vườn Xịn Kịch Câm\",\"rating\":6.5}",
+            "thoughtSignature": "El4KXAFpFH0TGtwaUhPsYGmvCFnhNM3jOadnlSa4JZ3Q1jn5E0b26AJsU3kK+WzpouLrzetPs3k92013KxMAaLIXfKJOL8U5GtnrrCOjH1LDFqsE2nydBUCAZU1EWMWo"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 888,
+    "candidatesTokenCount": 23,
+    "totalTokenCount": 911,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 888
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "AKOwauWIA9zfg8UPvLOFoAY"
+}
+
+================================================================================--------------------
+

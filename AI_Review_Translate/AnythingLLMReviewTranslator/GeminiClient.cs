@@ -19,6 +19,7 @@ public sealed class GeminiClient : ITranslationClient
 
     private readonly GeminiSettings _geminiSettings;
     private readonly string _promptTemplate;
+    private readonly GlossaryDictionary? _glossary;
     private readonly HttpClient _httpClient;
     private readonly bool _isGoogleGemini;
     private readonly List<string> _apiKeys;
@@ -32,10 +33,11 @@ public sealed class GeminiClient : ITranslationClient
 
     public event Action<AnythingLlmApiResponse>? ResponseReceived;
 
-    public GeminiClient(GeminiSettings geminiSettings, string promptTemplate)
+    public GeminiClient(GeminiSettings geminiSettings, string promptTemplate, GlossaryDictionary? glossary = null)
     {
         _geminiSettings = geminiSettings;
         _promptTemplate = promptTemplate;
+        _glossary = glossary;
         _apiKeys = geminiSettings.ApiKeys.Count > 0
             ? geminiSettings.ApiKeys.ToList()
             : (string.IsNullOrWhiteSpace(geminiSettings.ApiKey) ? new List<string>() : new List<string> { geminiSettings.ApiKey });
@@ -106,7 +108,7 @@ public sealed class GeminiClient : ITranslationClient
         }
 
         var model = GetModel();
-        var promptMessage = PromptFormatter.Apply(_promptTemplate, row);
+        var promptMessage = PromptFormatter.Apply(_promptTemplate, row, _glossary);
 
         string body;
         Uri? requestUri;
@@ -154,7 +156,8 @@ public sealed class GeminiClient : ITranslationClient
 
         var model = GetModel();
         var batchPrompt = BuildBatchPrompt(rows);
-        var (body, _) = await SendGeminiRequestAsync(model, batchPrompt, cancellationToken).ConfigureAwait(false);
+        var (body, requestUri) = await SendGeminiRequestAsync(model, batchPrompt, cancellationToken).ConfigureAwait(false);
+        NotifyResponseReceived(requestUri, body, batchPrompt);
         var extractedText = ExtractGeminiText(body);
         return ParseBatchGeminiResponse(extractedText);
     }
@@ -296,18 +299,23 @@ public sealed class GeminiClient : ITranslationClient
         return textEl.GetString() ?? string.Empty;
     }
 
-    private static string BuildBatchPrompt(IReadOnlyList<ReviewRowViewModel> rows)
+    private string BuildBatchPrompt(IReadOnlyList<ReviewRowViewModel> rows)
     {
         var lines = new List<string>
         {
             "Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.",
             "Nhiệm vụ:",
-            "1. Chấm điểm bản dịch hiện tại (MsgStr) so với MsgId theo thang rating (0.0 - 10.0).",
-            "2. Đề xuất bản dịch tiếng Việt tối ưu nhất cho suggestedTranslation.",
+            "1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang rating (0.0 - 10.0):",
+            "   - MsgStr rỗng, chưa dịch hoặc còn là tiếng Anh: Chấm rating thấp (0.0 - 1.0).",
+            "   - MsgStr dịch chuẩn xác, tự nhiên: Chấm rating cao (8.0 - 10.0).",
+            "2. Đề xuất bản dịch TIẾNG VIỆT tối ưu nhất cho trường \"suggestedTranslation\":",
+            "   - BẮT BUỘC 100% PHẢI LÀ TIẾNG VIỆT tự nhiên, ngắn gọn, chuẩn văn phong game.",
+            "   - TUYỆT ĐỐI KHÔNG ĐƯỢC để suggestedTranslation là tiếng Anh trong bất kỳ trường hợp nào!",
             "3. Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\\), dấu ngoặc kép (\"), escaped quotes (\\\"), ký tự xuống dòng (\\n, \\r), tab (\\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.",
+            "4. Nếu mục nào có 'Thuật ngữ tham khảo', BẮT BUỘC ưu tiên dịch thuật ngữ đó sang nghĩa tiếng Việt tương ứng.",
             "Ví dụ:",
             "Input: \\\"Not yet mid-summer\\\", you say? Well my friend, the early bird gets the worm!",
-            "Output suggestedTranslation: \\\"Chưa đến giữa hè\\\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!",
+            "Output: {\"id\":101,\"suggestedTranslation\":\"\\\"Chưa đến giữa hè\\\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!\",\"rating\":8.5}",
             string.Empty,
             "Hãy xử lý tất cả các mục dưới đây và trả về duy nhất một JSON array.",
             "Mỗi phần tử phải có đúng 3 trường: id, suggestedTranslation, rating.",
@@ -318,8 +326,16 @@ public sealed class GeminiClient : ITranslationClient
 
         foreach (var row in rows)
         {
-            var promptText = PromptFormatter.Apply("Id: {{Id}}\nMsgCtxt: {{MsgCtxt}}\nMsgId: {{MsgId}}\nMsgStr: {{MsgStr}}", row);
-            lines.Add($"Item:\n{promptText}");
+            var matched = _glossary?.FindMatches(row.MsgId) ?? Array.Empty<GlossaryEntry>();
+            lines.Add("Item:");
+            lines.Add($"Id: {row.Id}");
+            lines.Add($"MsgCtxt: {row.MsgCtxt}");
+            lines.Add($"MsgId: {row.MsgId}");
+            lines.Add($"MsgStr: {row.MsgStr}");
+            if (matched.Count > 0)
+            {
+                lines.Add($"Thuật ngữ tham khảo: {string.Join(", ", matched.Select(m => $"\"{m.English}\" => \"{m.Vietnamese}\""))}");
+            }
             lines.Add(string.Empty);
         }
 
@@ -338,7 +354,7 @@ public sealed class GeminiClient : ITranslationClient
         var extracted = ExtractJsonObjects(trimmed);
         if (extracted.Count == 0)
         {
-            throw new InvalidOperationException($"Không thể đọc batch response từ Gemini. Raw: {ReviewResponseParser.TrimForLog(responseText, 3000)}");
+            return result;
         }
 
         foreach (var obj in extracted)
@@ -387,7 +403,7 @@ public sealed class GeminiClient : ITranslationClient
 
         if (result.Count == 0)
         {
-            throw new InvalidOperationException($"Không thể đọc batch response từ Gemini. Raw: {ReviewResponseParser.TrimForLog(responseText, 3000)}");
+            return result;
         }
 
         return result;

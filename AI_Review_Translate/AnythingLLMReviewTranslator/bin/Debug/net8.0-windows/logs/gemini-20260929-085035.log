@@ -1,0 +1,3775 @@
+=== Translation Log Started at 2026-09-29 08:50:35 | Provider: Gemini ===
+
+======================================== [2026-09-29 08:51:07] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang rating (0.0 - 10.0):
+   - MsgStr rỗng, chưa dịch hoặc còn là tiếng Anh: Chấm rating thấp (0.0 - 1.0).
+   - MsgStr dịch chuẩn xác, tự nhiên: Chấm rating cao (8.0 - 10.0).
+2. Đề xuất bản dịch TIẾNG VIỆT tối ưu nhất cho trường "suggestedTranslation":
+   - BẮT BUỘC 100% PHẢI LÀ TIẾNG VIỆT tự nhiên, ngắn gọn, chuẩn văn phong game.
+   - TUYỆT ĐỐI KHÔNG ĐƯỢC để suggestedTranslation là tiếng Anh trong bất kỳ trường hợp nào!
+3. Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+4. Nếu mục nào có 'Thuật ngữ tham khảo', BẮT BUỘC ưu tiên dịch thuật ngữ đó sang nghĩa tiếng Việt tương ứng.
+Ví dụ:
+Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+Output: {"id":101,"suggestedTranslation":"\"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!","rating":8.5}
+
+Hãy xử lý tất cả các mục dưới đây và trả về duy nhất một JSON array.
+Mỗi phần tử phải có đúng 3 trường: id, suggestedTranslation, rating.
+Trả về CHỈ JSON hợp lệ, không bọc markdown, không giải thích thừa.
+Ví dụ mẫu: [{"id":101,"suggestedTranslation":"\"Chưa đến giữa hè\", bạn nói?...","rating":8.5}]
+
+Item:
+Id: 760608
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.OTTER
+MsgId: Fishrat!
+MsgStr: 
+
+Item:
+Id: 760609
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.OTTERDEN.GENERIC
+MsgId: Glorp! No fishrat stuff!
+MsgStr: 
+
+Item:
+Id: 760610
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.OTTERDEN.HAS_LOOT
+MsgId: Play stealing game with fishrat, flort!
+MsgStr: 
+
+Item:
+Id: 760611
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.OTTERDEN_DEAD
+MsgId: Uh oh... that a lot of water.
+MsgStr: 
+
+Item:
+Id: 760612
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PALMCONETREE
+MsgId: It a really weird tree.
+MsgStr: 
+
+Item:
+Id: 760613
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PALMCONE_SAPLING
+MsgId: It not ready yet, still growing.
+MsgStr: 
+
+Item:
+Id: 760614
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PALMCONE_SCALE
+MsgId: That no scale, me know scales!!
+MsgStr: 
+Thuật ngữ tham khảo: "Scales" => "Vẩy"
+
+Item:
+Id: 760615
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PALMCONE_SEED
+MsgId: Aww, it just a baby.
+MsgStr: 
+
+Item:
+Id: 760616
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PANDORASCHEST
+MsgId: What in the box?
+MsgStr: 
+
+Item:
+Id: 760617
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PANETTONE
+MsgId: Tasty tasty bread!
+MsgStr: 
+
+Item:
+Id: 760618
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PANFLUTE
+MsgId: Plays sleepy music, florp.
+MsgStr: 
+
+Item:
+Id: 760619
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PAPYRUS
+MsgId: Make more stories, Wicker-lady!
+MsgStr: 
+
+Item:
+Id: 760620
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PAVLOVA
+MsgId: Fancy cook man call it a mer... mer-ingy... mer-angy...
+MsgStr: 
+
+Item:
+Id: 760621
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PEGHOOK
+MsgId: Glurp, bad bug!
+MsgStr: 
+
+Item:
+Id: 760622
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PENGUIN
+MsgId: They smart birds, would rather swim than fly.
+MsgStr: 
+
+Item:
+Id: 760623
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PENGUINCORPSE.BURNING
+MsgId: Florp! Burn bird!
+MsgStr: 
+
+Item:
+Id: 760624
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PENGUINCORPSE.GENERIC
+MsgId: Dead bird. Glurgh.
+MsgStr: 
+
+Item:
+Id: 760625
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PENGUINCORPSE.REVIVING
+MsgId: Dead bird waking up! Florp!
+MsgStr: 
+
+Item:
+Id: 760626
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PEPPER
+MsgId: Glaaagh! Mouth on fire!
+MsgStr: 
+Thuật ngữ tham khảo: "Fire" => "Lửa"
+
+Item:
+Id: 760627
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PEPPERPOPPER
+MsgId: Where the \"pop\", flort? It just spicy!
+MsgStr: 
+
+Item:
+Id: 760628
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PEPPER_COOKED
+MsgId: Why make pepper even hotter?
+MsgStr: 
+Thuật ngữ tham khảo: "Pepper" => "Ớt"
+
+Item:
+Id: 760629
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PEPPER_OVERSIZED
+MsgId: That gonna be real hot, florp.
+MsgStr: 
+
+Item:
+Id: 760630
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PEPPER_SEEDS
+MsgId: Make more tasty snacks!
+MsgStr: 
+
+Item:
+Id: 760631
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PERD
+MsgId: Grrr, go away gobble-bird!
+MsgStr: 
+
+Item:
+Id: 760632
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PERDFAN
+MsgId: Feather stick!
+MsgStr: 
+
+Item:
+Id: 760633
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PERDSHRINE.BURNT
+MsgId: It all burnt up, flurt.
+MsgStr: 
+
+Item:
+Id: 760634
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PERDSHRINE.EMPTY
+MsgId: Something go here?
+MsgStr: 
+
+Item:
+Id: 760635
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PERDSHRINE.GENERIC
+MsgId: Huh? What you want, gobble-bird?
+MsgStr: 
+
+Item:
+Id: 760636
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PEROGIES
+MsgId: Glurgh, hid meat inside??
+MsgStr: 
+Thuật ngữ tham khảo: "Meat" => "Thịt"
+
+Item:
+Id: 760637
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PETALS
+MsgId: Hee-hee, take that flowers!
+MsgStr: 
+
+Item:
+Id: 760638
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PETALS_DRIED
+MsgId: Dried bits not yummy.
+MsgStr: 
+
+Item:
+Id: 760639
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PETALS_EVIL
+MsgId: Glurgh, don't wanna carry these.
+MsgStr: 
+
+Item:
+Id: 760640
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PETALS_EVIL_DRIED
+MsgId: Dried bits not yummy.
+MsgStr: 
+
+Item:
+Id: 760641
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PETRIFIED_TREE
+MsgId: It rock shaped like tree?
+MsgStr: 
+Thuật ngữ tham khảo: "Rock" => "Đá tảng"
+
+Item:
+Id: 760642
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PHLEGM
+MsgId: Eaten worse, florp.
+MsgStr: 
+
+Item:
+Id: 760643
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PHONOGRAPH
+MsgId: Music come out of it, florp!
+MsgStr: 
+
+Item:
+Id: 760644
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PICKAXE
+MsgId: Rock cracker.
+MsgStr: 
+Thuật ngữ tham khảo: "Rock" => "Đá tảng"
+
+Item:
+Id: 760645
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PICKAXE_LUNARPLANT
+MsgId: It real good at breaking stuff.
+MsgStr: 
+
+Item:
+Id: 760646
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PICKLEDHERRING
+MsgId: Someone playing tricks, it just veggies shaped like fish!
+MsgStr: 
+Thuật ngữ tham khảo: "Fish" => "Câu Cá"
+
+Item:
+Id: 760647
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGELITE1
+MsgId: Stay away!
+MsgStr: 
+
+Item:
+Id: 760648
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGELITE2
+MsgId: Grrr, bad Pig!
+MsgStr: 
+
+Item:
+Id: 760649
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGELITE3
+MsgId: Nasty Pigman!
+MsgStr: 
+
+Item:
+Id: 760650
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGELITE4
+MsgId: Enemy of Mermfolk!
+MsgStr: 
+
+Item:
+Id: 760651
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGELITEFIGHTER1
+MsgId: Stay away!
+MsgStr: 
+
+Item:
+Id: 760652
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGELITEFIGHTER2
+MsgId: Grrr, bad Pig!
+MsgStr: 
+
+Item:
+Id: 760653
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGELITEFIGHTER3
+MsgId: Nasty Pigman!
+MsgStr: 
+
+Item:
+Id: 760654
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGELITEFIGHTER4
+MsgId: Enemy of Mermfolk!
+MsgStr: 
+
+Item:
+Id: 760655
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGGUARD
+MsgId: Glurp, he even scarier than others.
+MsgStr: 
+
+Item:
+Id: 760656
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGGYBACK
+MsgId: Made bag from nasty pigskin.
+MsgStr: 
+
+Item:
+Id: 760657
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGHEAD.BURNT
+MsgId: Crispy Pig!
+MsgStr: 
+
+Item:
+Id: 760658
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGHEAD.GENERIC
+MsgId: Ha ha!
+MsgStr: 
+
+Item:
+Id: 760659
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGHOUSE.BURNT
+MsgId: Hee-hee, Pig house all burnt up!
+MsgStr: 
+Thuật ngữ tham khảo: "Pig House" => "Nhà Lợn"
+
+Item:
+Id: 760660
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGHOUSE.FULL
+MsgId: That house full of nasty Pigfolk!
+MsgStr: 
+
+Item:
+Id: 760661
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGHOUSE.GENERIC
+MsgId: Sniff... smell like... Pigfolk!
+MsgStr: 
+
+Item:
+Id: 760662
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGHOUSE.LIGHTSOUT
+MsgId: Coast clear, florp.
+MsgStr: 
+
+Item:
+Id: 760663
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGKING
+MsgId: He no King, flort!!
+MsgStr: 
+
+Item:
+Id: 760664
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGMAN.DEAD
+MsgId: Serve you right, flurp.
+MsgStr: 
+
+Item:
+Id: 760665
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGMAN.FOLLOWER
+MsgId: Stay away!
+MsgStr: 
+
+Item:
+Id: 760666
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGMAN.GENERIC
+MsgId: Glurp! Pigfolk...
+MsgStr: 
+
+Item:
+Id: 760667
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGMAN.GUARD
+MsgId: He look even scarier than others.
+MsgStr: 
+
+Item:
+Id: 760668
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGMAN.WEREPIG
+MsgId: Glaaargh!!
+MsgStr: 
+
+Item:
+Id: 760669
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGSHRINE.BURNT
+MsgId: Good, it gone now.
+MsgStr: 
+
+Item:
+Id: 760670
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGSHRINE.EMPTY
+MsgId: Not giving you anything, flurt.
+MsgStr: 
+
+Item:
+Id: 760671
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGSHRINE.GENERIC
+MsgId: Who make this??
+MsgStr: 
+
+Item:
+Id: 760672
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGSKIN
+MsgId: Took it from nasty Pig!!
+MsgStr: 
+
+Item:
+Id: 760673
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGTENT
+MsgId: Glurp... there Pigman inside?
+MsgStr: 
+
+Item:
+Id: 760674
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIGTORCH
+MsgId: Grrrr!
+MsgStr: 
+
+Item:
+Id: 760675
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIG_COIN
+MsgId: Shiny Pig nose, florp!
+MsgStr: 
+
+Item:
+Id: 760676
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIG_TOKEN
+MsgId: Stole Pigman's belt!
+MsgStr: 
+
+Item:
+Id: 760677
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PINECONE
+MsgId: Not very good for eating, florp.
+MsgStr: 
+
+Item:
+Id: 760678
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PINECONE_SAPLING
+MsgId: Baby tree.
+MsgStr: 
+
+Item:
+Id: 760679
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIRATE_FLAG_POLE
+MsgId: Ooooh... want flag too!
+MsgStr: 
+
+Item:
+Id: 760680
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PIRATE_STASH
+MsgId: Found it! Mine!!
+MsgStr: 
+
+Item:
+Id: 760681
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PITCHFORK
+MsgId: Pokey tool.
+MsgStr: 
+
+Item:
+Id: 760682
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PLANTMEAT
+MsgId: Feel... confused...
+MsgStr: 
+
+Item:
+Id: 760683
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PLANTMEAT_COOKED
+MsgId: Still not gonna eat it, florp.
+MsgStr: 
+
+Item:
+Id: 760684
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PLANTREGISTRYHAT
+MsgId: Wear plant on head to learn about plant? Make sense, florp!
+MsgStr: 
+Thuật ngữ tham khảo: "Plant" => "Thực vật"
+
+Item:
+Id: 760685
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PLANT_NORMAL.GENERIC
+MsgId: Leafy greens!
+MsgStr: 
+
+Item:
+Id: 760686
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PLANT_NORMAL.GROWING
+MsgId: Ready soon, flort?
+MsgStr: 
+
+Item:
+Id: 760687
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PLANT_NORMAL.READY
+MsgId: Veggies for meee!
+MsgStr: 
+
+Item:
+Id: 760688
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PLANT_NORMAL.WITHERED
+MsgId: Plant need drink of water?
+MsgStr: 
+Thuật ngữ tham khảo: "Plant" => "Thực vật"
+
+Item:
+Id: 760689
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PLAYBILL_THE_DOLL
+MsgId: Too many words to remember, florp.
+MsgStr: 
+
+Item:
+Id: 760690
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PLAYBILL_THE_PRINCESS_YOTH
+MsgId: What show about? Princess?
+MsgStr: 
+
+Item:
+Id: 760691
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PLAYBILL_THE_VAULT
+MsgId: Pages so hard, florp.
+MsgStr: 
+
+Item:
+Id: 760692
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PLAYBILL_THE_VEIL
+MsgId: Dunno. Ask Wicker-lady.
+MsgStr: 
+
+Item:
+Id: 760693
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PLAYER.ATTACKER
+MsgId: Grrr... don't trust %s.
+MsgStr: 
+
+Item:
+Id: 760694
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PLAYER.FIRESTARTER
+MsgId: You gonna burn everything up, %s!!
+MsgStr: 
+
+Item:
+Id: 760695
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PLAYER.GENERIC
+MsgId: Hello, %s!
+MsgStr: 
+
+Item:
+Id: 760696
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PLAYER.GHOST
+MsgId: You look spooky, %s.
+MsgStr: 
+
+Item:
+Id: 760697
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PLAYER.MURDERER
+MsgId: G...glorp... %s a killer!!
+MsgStr: 
+
+Item:
+Id: 760698
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PLAYER.REVIVER
+MsgId: Didn't need help! ...But thanks, florp.
+MsgStr: 
+
+Item:
+Id: 760699
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PLAYER_HOSTED.GENERIC
+MsgId: Weird game.
+MsgStr: 
+
+Item:
+Id: 760700
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PLAYER_HOSTED.ME
+MsgId: Look familiar.
+MsgStr: 
+
+Item:
+Id: 760701
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PLAYING_CARD
+MsgId: Glurgh, who cheated?
+MsgStr: 
+
+Item:
+Id: 760702
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POCKETWATCH_DISMANTLER
+MsgId: Won't break them, florp! Promise!
+MsgStr: 
+
+Item:
+Id: 760703
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POCKETWATCH_HEAL.GENERIC
+MsgId: Only chewed on it little bit! But Wandy-lady got mad...
+MsgStr: 
+
+Item:
+Id: 760704
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POCKETWATCH_HEAL.RECHARGING
+MsgId: Wandy-lady say it \"ree-plin-ishing tem-pooral\"... glurgh. Forget rest.
+MsgStr: 
+
+Item:
+Id: 760705
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POCKETWATCH_PARTS
+MsgId: Too small for Ironfolk guts...
+MsgStr: 
+
+Item:
+Id: 760706
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POCKETWATCH_PORTAL.GENERIC
+MsgId: Only chewed on it little bit! But Wandy-lady got mad...
+MsgStr: 
+
+Item:
+Id: 760707
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POCKETWATCH_PORTAL.RECHARGING
+MsgId: Wandy-lady say it \"ree-plin-ishing tem-pooral\"... glurgh. Forget rest.
+MsgStr: 
+
+Item:
+Id: 760708
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POCKETWATCH_PORTAL_ENTRANCE.DIFFERENTSHARD
+MsgId: Weird tunnel.
+MsgStr: 
+
+Item:
+Id: 760709
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POCKETWATCH_PORTAL_ENTRANCE.GENERIC
+MsgId: Weird tunnel.
+MsgStr: 
+
+Item:
+Id: 760710
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POCKETWATCH_PORTAL_EXIT
+MsgId: Glurgh, it too high to reach!
+MsgStr: 
+
+Item:
+Id: 760711
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POCKETWATCH_RECALL.GENERIC
+MsgId: Only chewed on it little bit! But Wandy-lady got mad...
+MsgStr: 
+
+Item:
+Id: 760712
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POCKETWATCH_RECALL.RECHARGING
+MsgId: Wandy-lady say it \"ree-plin-ishing tem-pooral\"... glurgh. Forget rest.
+MsgStr: 
+
+Item:
+Id: 760713
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POCKETWATCH_REVIVE.GENERIC
+MsgId: Only chewed on it little bit! But Wandy-lady got mad...
+MsgStr: 
+
+Item:
+Id: 760714
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POCKETWATCH_REVIVE.RECHARGING
+MsgId: Wandy-lady say it \"ree-plin-ishing tem-pooral\"... glurgh. Forget rest.
+MsgStr: 
+
+Item:
+Id: 760715
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POCKETWATCH_WARP.GENERIC
+MsgId: Only chewed on it little bit! But Wandy-lady got mad...
+MsgStr: 
+
+Item:
+Id: 760716
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POCKETWATCH_WARP.RECHARGING
+MsgId: Wandy-lady say it \"ree-plin-ishing tem-pooral\"... glurgh. Forget rest.
+MsgStr: 
+
+Item:
+Id: 760717
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POCKETWATCH_WEAPON.GENERIC
+MsgId: Would like to see nasty Pigfolk hit with it!
+MsgStr: 
+
+Item:
+Id: 760718
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POCKET_SCALE
+MsgId: Is funny measure thing.
+MsgStr: 
+
+Item:
+Id: 760719
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POLISHCOOKIE
+MsgId: Yummy fruit pockets!
+MsgStr: 
+
+Item:
+Id: 760720
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POLLY_ROGERS
+MsgId: Bring me stuff, birdy!
+MsgStr: 
+
+Item:
+Id: 760721
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POLLY_ROGERSHAT
+MsgId: Birdy feathers make it more fancy.
+MsgStr: 
+
+Item:
+Id: 760722
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POMEGRANATE
+MsgId: Ohhh, you not supposed to just bite into it?
+MsgStr: 
+
+Item:
+Id: 760723
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POMEGRANATE_COOKED
+MsgId: Hmm... okay...
+MsgStr: 
+
+Item:
+Id: 760724
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POMEGRANATE_OVERSIZED
+MsgId: Big juicy snack!
+MsgStr: 
+
+Item:
+Id: 760725
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POMEGRANATE_SEEDS
+MsgId: Make more tasty snacks!
+MsgStr: 
+
+Item:
+Id: 760726
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POND
+MsgId: Splishy splashy!
+MsgStr: 
+
+Item:
+Id: 760727
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PONDEEL
+MsgId: Hello long fishy!
+MsgStr: 
+
+Item:
+Id: 760728
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PONDFISH
+MsgId: Awwww, it so cute!
+MsgStr: 
+
+Item:
+Id: 760729
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POND_ALGAE
+MsgId: Ooooh, slimy!
+MsgStr: 
+
+Item:
+Id: 760730
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POOP
+MsgId: Ha ha, stinky!
+MsgStr: 
+
+Item:
+Id: 760731
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PORTABLEBLENDER_ITEM
+MsgId: Shaky shaky!
+MsgStr: 
+
+Item:
+Id: 760732
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PORTABLECOOKPOT_ITEM.COOKING_LONG
+MsgId: This take too long!
+MsgStr: 
+
+Item:
+Id: 760733
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PORTABLECOOKPOT_ITEM.COOKING_SHORT
+MsgId: Food! Food! Food!
+MsgStr: 
+
+Item:
+Id: 760734
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PORTABLECOOKPOT_ITEM.DONE
+MsgId: Wow!
+MsgStr: 
+
+Item:
+Id: 760735
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PORTABLECOOKPOT_ITEM.EMPTY
+MsgId: Huh? Nothing in here!
+MsgStr: 
+
+Item:
+Id: 760736
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PORTABLECOOKPOT_ITEM.GENERIC
+MsgId: Put food inside and different food come out, florp?
+MsgStr: 
+
+Item:
+Id: 760737
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PORTABLEFIREPIT_ITEM
+MsgId: Florp! Can take cozy time anywhere!
+MsgStr: 
+
+Item:
+Id: 760738
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PORTABLESPICER_ITEM.DONE
+MsgId: All done!
+MsgStr: 
+
+Item:
+Id: 760739
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PORTABLESPICER_ITEM.GENERIC
+MsgId: Put flavor bits on foodthings!
+MsgStr: 
+
+Item:
+Id: 760740
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PORTABLETENT
+MsgId: Is sleeping place.
+MsgStr: 
+
+Item:
+Id: 760741
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PORTABLETENT_ITEM
+MsgId: Building something, florp?
+MsgStr: 
+
+Item:
+Id: 760742
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POTATO
+MsgId: Good dirt veggie.
+MsgStr: 
+
+Item:
+Id: 760743
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POTATOSACK
+MsgId: Snacks! Mine!!
+MsgStr: 
+
+Item:
+Id: 760744
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POTATOSOUFFLE
+MsgId: Wha-? This potato!!
+MsgStr: 
+Thuật ngữ tham khảo: "Potato" => "Khoai tây"
+
+Item:
+Id: 760745
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POTATOTORNADO
+MsgId: Hee-hee, spinny potato!
+MsgStr: 
+Thuật ngữ tham khảo: "Potato" => "Khoai tây"
+
+Item:
+Id: 760746
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POTATO_COOKED
+MsgId: Mmm, hot potato!
+MsgStr: 
+Thuật ngữ tham khảo: "Potato" => "Khoai tây"
+
+Item:
+Id: 760747
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POTATO_OVERSIZED
+MsgId: Big 'tato!
+MsgStr: 
+
+Item:
+Id: 760748
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POTATO_SEEDS
+MsgId: Put in ground!
+MsgStr: 
+
+Item:
+Id: 760749
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POTTEDFERN
+MsgId: This plant have little house.
+MsgStr: 
+Thuật ngữ tham khảo: "Plant" => "Thực vật"
+
+Item:
+Id: 760750
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POWCAKE
+MsgId: Gives tummy-ache, but... smell so good...
+MsgStr: 
+
+Item:
+Id: 760751
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.POWDER_MONKEY
+MsgId: HEY!! That stuff MINE!
+MsgStr: 
+
+Item:
+Id: 760752
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PREMIUMWATERINGCAN.EMPTY
+MsgId: Hey, where water go?
+MsgStr: 
+
+Item:
+Id: 760753
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PREMIUMWATERINGCAN.GENERIC
+MsgId: Splishy birdy can.
+MsgStr: 
+
+Item:
+Id: 760754
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PRIME_MATE
+MsgId: You not look like regular monkey, florp...
+MsgStr: 
+
+Item:
+Id: 760755
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PUFFIN.GENERIC
+MsgId: Fat little bird.
+MsgStr: 
+
+Item:
+Id: 760756
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PUFFIN.HELD
+MsgId: Got it, flurt!!
+MsgStr: 
+
+Item:
+Id: 760757
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PUFFIN.SLEEPING
+MsgId: Sleepy bird.
+MsgStr: 
+
+Item:
+Id: 760758
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PUMPKIN
+MsgId: Lumpy and good, florp!
+MsgStr: 
+
+Item:
+Id: 760759
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PUMPKINCARVER
+MsgId: Florp! Pumpkin poker.
+MsgStr: 
+Thuật ngữ tham khảo: "Pumpkin" => "Bí ngô"
+
+Item:
+Id: 760760
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PUMPKINCOOKIE
+MsgId: THIS THE BEST KIND OF PUM-KIN.
+MsgStr: 
+
+Item:
+Id: 760761
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PUMPKINHAT.GENERIC
+MsgId: Me carve best face.
+MsgStr: 
+
+Item:
+Id: 760762
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PUMPKINHAT.UNCARVED
+MsgId: No face holes yet.
+MsgStr: 
+
+Item:
+Id: 760763
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PUMPKINPIE
+MsgId: Mmmmmmmmmm!
+MsgStr: 
+
+Item:
+Id: 760764
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PUMPKIN_COOKED
+MsgId: Squishy!
+MsgStr: 
+
+Item:
+Id: 760765
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PUMPKIN_LANTERN
+MsgId: Has a friendly face, flort.
+MsgStr: 
+
+Item:
+Id: 760766
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PUMPKIN_OVERSIZED
+MsgId: Grew so big!
+MsgStr: 
+
+Item:
+Id: 760767
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PUMPKIN_SEEDS
+MsgId: Make more tasty snacks!
+MsgStr: 
+
+Item:
+Id: 760768
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PUNCHINGBAG
+MsgId: Allowed to hit it? Yay!!
+MsgStr: 
+
+Item:
+Id: 760769
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PUREBRILLIANCE
+MsgId: Glurgh, too bright!
+MsgStr: 
+
+Item:
+Id: 760770
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PURPLEAMULET
+MsgId: Glurp... don't wanna play with this anymore.
+MsgStr: 
+
+Item:
+Id: 760771
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PURPLEGEM
+MsgId: It pretty...
+MsgStr: 
+
+Item:
+Id: 760772
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.PURPLEMOONEYE
+MsgId: Stop staring, glort!
+MsgStr: 
+
+Item:
+Id: 760773
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_ALTAR.FULL
+MsgId: It just ate!
+MsgStr: 
+
+Item:
+Id: 760774
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_ALTAR.GENERIC
+MsgId: That where food goes.
+MsgStr: 
+
+Item:
+Id: 760775
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_ALTAR_BOLLARD
+MsgId: Not that interesting, florp.
+MsgStr: 
+
+Item:
+Id: 760776
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_ALTAR_IVY
+MsgId: Creepy crawly.
+MsgStr: 
+
+Item:
+Id: 760777
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_ALTAR_QUEEN
+MsgId: She look nice.
+MsgStr: 
+
+Item:
+Id: 760778
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_ALTAR_STATUE1
+MsgId: Look creepy...
+MsgStr: 
+
+Item:
+Id: 760779
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_ALTAR_STATUE2
+MsgId: What red eyes it have...
+MsgStr: 
+
+Item:
+Id: 760780
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_BEEFALO
+MsgId: Where all its fluff?
+MsgStr: 
+
+Item:
+Id: 760781
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_BERRYBUSH
+MsgId: Aww, where the berries?!
+MsgStr: 
+Thuật ngữ tham khảo: "Berries" => "Dâu Rừng"
+
+Item:
+Id: 760782
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_BOWL_SILVER
+MsgId: Can see own cute reflection!
+MsgStr: 
+
+Item:
+Id: 760783
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_CARROT_SEEDS
+MsgId: Wonder what gonna grow?
+MsgStr: 
+
+Item:
+Id: 760784
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_CASSEROLEDISH
+MsgId: Not good with breakable things...
+MsgStr: 
+
+Item:
+Id: 760785
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_CASSEROLEDISH_SMALL
+MsgId: Is so teeny tiny!
+MsgStr: 
+
+Item:
+Id: 760786
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_COIN1
+MsgId: Can't eat this, florp!
+MsgStr: 
+
+Item:
+Id: 760787
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_COIN2
+MsgId: Ooooh, shiny!
+MsgStr: 
+
+Item:
+Id: 760788
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_COIN3
+MsgId: Look extra fancy.
+MsgStr: 
+
+Item:
+Id: 760789
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_COIN4
+MsgId: This help me get home!
+MsgStr: 
+
+Item:
+Id: 760790
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_CRABMEAT
+MsgId: (Sniff) poor crab...
+MsgStr: 
+
+Item:
+Id: 760791
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_CRABMEAT_COOKED
+MsgId: Glurph... can't look.
+MsgStr: 
+
+Item:
+Id: 760792
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_CRABTRAP
+MsgId: Look like little house!
+MsgStr: 
+
+Item:
+Id: 760793
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_CRATE
+MsgId: Ooooooh, present for me?
+MsgStr: 
+
+Item:
+Id: 760794
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_FERN
+MsgId: Is dee-lishuss and newt-rishuss.
+MsgStr: 
+
+Item:
+Id: 760795
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_FLOUR
+MsgId: This dusty stuff go in food?
+MsgStr: 
+
+Item:
+Id: 760796
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_FOLIAGE_COOKED
+MsgId: Yummy yum!
+MsgStr: 
+
+Item:
+Id: 760797
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_FOOD.GENERIC
+MsgId: Should give to big mouth in sky!
+MsgStr: 
+
+Item:
+Id: 760798
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_FOOD.MATCH
+MsgId: Is good food for sky mouth!
+MsgStr: 
+
+Item:
+Id: 760799
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_FOOD.MATCH_BUT_SNACK
+MsgId: Food seem small for such big mouth.
+MsgStr: 
+
+Item:
+Id: 760800
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_FOOD.MISMATCH
+MsgId: Don't think it'll like that, florp.
+MsgStr: 
+
+Item:
+Id: 760801
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_FOOD_BURNT
+MsgId: Glurp, didn't mean to burn it!
+MsgStr: 
+
+Item:
+Id: 760802
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_GARLIC
+MsgId: Make good snack.
+MsgStr: 
+
+Item:
+Id: 760803
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_GARLIC_COOKED
+MsgId: It smell even better now!
+MsgStr: 
+
+Item:
+Id: 760804
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_GARLIC_SEEDS
+MsgId: Wonder what gonna grow?
+MsgStr: 
+
+Item:
+Id: 760805
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_GOATKID
+MsgId: Hello weird kid! Wanna play?
+MsgStr: 
+
+Item:
+Id: 760806
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_GOATMILK
+MsgId: Glurgh...
+MsgStr: 
+
+Item:
+Id: 760807
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_GOATMUM
+MsgId: She seem nice enough.
+MsgStr: 
+
+Item:
+Id: 760808
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_GRILL
+MsgId: Make food hot and tasty.
+MsgStr: 
+
+Item:
+Id: 760809
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_GRILL_ITEM
+MsgId: Is for making food hot and tasty!
+MsgStr: 
+
+Item:
+Id: 760810
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_GRILL_SMALL
+MsgId: Teeny food cooker.
+MsgStr: 
+
+Item:
+Id: 760811
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_GRILL_SMALL_ITEM
+MsgId: Teeny food cooker.
+MsgStr: 
+
+Item:
+Id: 760812
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_HOE
+MsgId: Farming... thing!
+MsgStr: 
+
+Item:
+Id: 760813
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_KEY
+MsgId: Maybe this open those hidey boxes!
+MsgStr: 
+
+Item:
+Id: 760814
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_KEY_PARK
+MsgId: Not for hidey boxes... what it open?
+MsgStr: 
+
+Item:
+Id: 760815
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_LAMP_POST
+MsgId: Ooooooh, glowy!
+MsgStr: 
+
+Item:
+Id: 760816
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_LAMP_SHORT
+MsgId: Is fancy light.
+MsgStr: 
+
+Item:
+Id: 760817
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_MEALINGSTONE
+MsgId: Crush into tiny bits!
+MsgStr: 
+
+Item:
+Id: 760818
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_MERMHOUSE
+MsgId: Just bit of a fixer upper!
+MsgStr: 
+
+Item:
+Id: 760819
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_MERM_CART1
+MsgId: Ooooh, what you have?
+MsgStr: 
+
+Item:
+Id: 760820
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_MERM_CART2
+MsgId: You gimme stuff?
+MsgStr: 
+
+Item:
+Id: 760821
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_MUSHROOMS
+MsgId: Mushrooms very chewy and good.
+MsgStr: 
+
+Item:
+Id: 760822
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_MUSHROOMSTUMP.GENERIC
+MsgId: Ooooh, this where mushrooms grow!
+MsgStr: 
+
+Item:
+Id: 760823
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_MUSHROOMSTUMP.PICKED
+MsgId: No more mushroom...?
+MsgStr: 
+Thuật ngữ tham khảo: "Mushroom" => "Nấm"
+
+Item:
+Id: 760824
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_ONION
+MsgId: Can have some? Pleeaaase?
+MsgStr: 
+
+Item:
+Id: 760825
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_ONION_COOKED
+MsgId: (Sniff) Mmmm...
+MsgStr: 
+
+Item:
+Id: 760826
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_ONION_SEEDS
+MsgId: Wonder what gonna grow?
+MsgStr: 
+
+Item:
+Id: 760827
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_OVEN
+MsgId: Wonder what to cook...
+MsgStr: 
+
+Item:
+Id: 760828
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_OVEN_ITEM
+MsgId: Food cooker.
+MsgStr: 
+
+Item:
+Id: 760829
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_PARKSPIKE
+MsgId: Look real pointy.
+MsgStr: 
+
+Item:
+Id: 760830
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_PARK_ANGEL
+MsgId: Don't like it.
+MsgStr: 
+
+Item:
+Id: 760831
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_PARK_ANGEL2
+MsgId: Is creepy...
+MsgStr: 
+
+Item:
+Id: 760832
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_PARK_FOUNTAIN
+MsgId: Aww... no water to splash in.
+MsgStr: 
+
+Item:
+Id: 760833
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_PARK_GATE.GENERIC
+MsgId: Better be good stuff in here.
+MsgStr: 
+
+Item:
+Id: 760834
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_PARK_GATE.LOCKED
+MsgId: Lemme iiiin!!
+MsgStr: 
+
+Item:
+Id: 760835
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_PARK_OBELISK
+MsgId: Big stone thing.
+MsgStr: 
+
+Item:
+Id: 760836
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_PARK_URN
+MsgId: Cookies inside?
+MsgStr: 
+
+Item:
+Id: 760837
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_PEBBLECRAB
+MsgId: Aww, it so cute!
+MsgStr: 
+
+Item:
+Id: 760838
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_PIGEON.DEAD
+MsgId: Ewww, it dead.
+MsgStr: 
+
+Item:
+Id: 760839
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_PIGEON.GENERIC
+MsgId: Hello birdy!
+MsgStr: 
+
+Item:
+Id: 760840
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_PIGEON.SLEEPING
+MsgId: Sleepy bird.
+MsgStr: 
+
+Item:
+Id: 760841
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_PLATE_SILVER
+MsgId: Shiny!
+MsgStr: 
+
+Item:
+Id: 760842
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_POND_SALT
+MsgId: Blegh, it full of salty water!
+MsgStr: 
+
+Item:
+Id: 760843
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_PORTAL
+MsgId: Another dead end.
+MsgStr: 
+
+Item:
+Id: 760844
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_PORTAL_KEY
+MsgId: Ooooh, look important!
+MsgStr: 
+
+Item:
+Id: 760845
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_POT
+MsgId: Is just normal pot.
+MsgStr: 
+
+Item:
+Id: 760846
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_POTATO
+MsgId: It a 'tato!
+MsgStr: 
+
+Item:
+Id: 760847
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_POTATO_COOKED
+MsgId: Tasty 'tatoes.
+MsgStr: 
+
+Item:
+Id: 760848
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_POTATO_SEEDS
+MsgId: Wonder what gonna grow?
+MsgStr: 
+
+Item:
+Id: 760849
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_POT_HANGER
+MsgId: Put food over fire!
+MsgStr: 
+Thuật ngữ tham khảo: "Fire" => "Lửa"
+
+Item:
+Id: 760850
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_POT_HANGER_ITEM
+MsgId: It help for cooking.
+MsgStr: 
+
+Item:
+Id: 760851
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_POT_SMALL
+MsgId: Bitty pot.
+MsgStr: 
+
+Item:
+Id: 760852
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_POT_SYRUP
+MsgId: Is for sweet stuff.
+MsgStr: 
+
+Item:
+Id: 760853
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_ROTTEN_CROP
+MsgId: Don't think big sky mouth would like that, florp.
+MsgStr: 
+
+Item:
+Id: 760854
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_RUBBLE_BIKE
+MsgId: Weird looking thing...
+MsgStr: 
+
+Item:
+Id: 760855
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_RUBBLE_CARRIAGE
+MsgId: What this thing?
+MsgStr: 
+
+Item:
+Id: 760856
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_RUBBLE_CATHEDRAL
+MsgId: Mermfolk have story passed down... about mouth in the sky...
+MsgStr: 
+
+Item:
+Id: 760857
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_RUBBLE_CHIMNEY
+MsgId: Nobody live here anymore?
+MsgStr: 
+
+Item:
+Id: 760858
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_RUBBLE_CHIMNEY2
+MsgId: Nobody live here anymore?
+MsgStr: 
+
+Item:
+Id: 760859
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_RUBBLE_CLOCK
+MsgId: What happen to it?
+MsgStr: 
+
+Item:
+Id: 760860
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_RUBBLE_CLOCKTOWER
+MsgId: All broken up.
+MsgStr: 
+
+Item:
+Id: 760861
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_RUBBLE_HOUSE.1
+MsgId: Hellooooo?
+MsgStr: 
+
+Item:
+Id: 760862
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_RUBBLE_HOUSE.2
+MsgId: Glurph... it feel spooky here.
+MsgStr: 
+
+Item:
+Id: 760863
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_RUBBLE_HOUSE.3
+MsgId: Nobody home, flort.
+MsgStr: 
+
+Item:
+Id: 760864
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_RUBBLE_PUBDOOR
+MsgId: It all broken.
+MsgStr: 
+
+Item:
+Id: 760865
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_RUBBLE_ROOF
+MsgId: Was there fight? Look like Goatfolk lose.
+MsgStr: 
+
+Item:
+Id: 760866
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SAFE.GENERIC
+MsgId: Wonder what inside this hidey box...
+MsgStr: 
+
+Item:
+Id: 760867
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SAFE.LOCKED
+MsgId: Aww, let me in!!
+MsgStr: 
+
+Item:
+Id: 760868
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SALMON
+MsgId: Hello fishy!
+MsgStr: 
+
+Item:
+Id: 760869
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SALMON_COOKED
+MsgId: Nooooooo!!
+MsgStr: 
+
+Item:
+Id: 760870
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SALT
+MsgId: Shaky shaky!
+MsgStr: 
+
+Item:
+Id: 760871
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SALTROCK
+MsgId: Tasty rock!
+MsgStr: 
+Thuật ngữ tham khảo: "Rock" => "Đá tảng"
+
+Item:
+Id: 760872
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SALT_RACK.GENERIC
+MsgId: How this supposed to work, florp?
+MsgStr: 
+
+Item:
+Id: 760873
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SALT_RACK.READY
+MsgId: There stuff growing on it!
+MsgStr: 
+
+Item:
+Id: 760874
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SALT_RACK_ITEM
+MsgId: This go over salty pond?
+MsgStr: 
+Thuật ngữ tham khảo: "Pond" => "Ao"
+
+Item:
+Id: 760875
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SAP
+MsgId: Mmmm, so sweet!!
+MsgStr: 
+
+Item:
+Id: 760876
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SAPBUCKET
+MsgId: Holds sweet tree stuff!
+MsgStr: 
+
+Item:
+Id: 760877
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SAPLING
+MsgId: Baby tree!
+MsgStr: 
+
+Item:
+Id: 760878
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SAP_SPOILED
+MsgId: Glurgh... not so good anymore.
+MsgStr: 
+
+Item:
+Id: 760879
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SEEDPACKET
+MsgId: Seeeeeeds!!
+MsgStr: 
+
+Item:
+Id: 760880
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SLAUGHTERTOOL
+MsgId: Huh? What this for?
+MsgStr: 
+
+Item:
+Id: 760881
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SPOTSPICE_GROUND
+MsgId: Oooh, it taste good!
+MsgStr: 
+
+Item:
+Id: 760882
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SPOTSPICE_SHRUB.GENERIC
+MsgId: Something about it feel like home.
+MsgStr: 
+
+Item:
+Id: 760883
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SPOTSPICE_SHRUB.PICKED
+MsgId: Nothing left for picking.
+MsgStr: 
+
+Item:
+Id: 760884
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SPOTSPICE_SPRIG
+MsgId: Smell kinda spicy.
+MsgStr: 
+
+Item:
+Id: 760885
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SUGARWOODTREE.GENERIC
+MsgId: There sweet stuff inside!
+MsgStr: 
+
+Item:
+Id: 760886
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SUGARWOODTREE.STUMP
+MsgId: Someone took tree! Not me!
+MsgStr: 
+
+Item:
+Id: 760887
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SUGARWOODTREE.TAPPED_BUGS
+MsgId: Blegh, there bugs stuck in the sweet stuff.
+MsgStr: 
+
+Item:
+Id: 760888
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SUGARWOODTREE.TAPPED_EMPTY
+MsgId: Aww... nothing left.
+MsgStr: 
+
+Item:
+Id: 760889
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SUGARWOODTREE.TAPPED_READY
+MsgId: Mmm, it full of sweet stuff!
+MsgStr: 
+
+Item:
+Id: 760890
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SUGARWOODTREE.WOUNDED
+MsgId: Tree okay?
+MsgStr: 
+
+Item:
+Id: 760891
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SWAMPIG
+MsgId: You a weird looking Pigfolk.
+MsgStr: 
+
+Item:
+Id: 760892
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SWAMPIGELDER.GENERIC
+MsgId: Something weird about that Pigfolk.
+MsgStr: 
+
+Item:
+Id: 760893
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SWAMPIGELDER.SLEEPING
+MsgId: Is asleep?
+MsgStr: 
+
+Item:
+Id: 760894
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SWAMPIG_HOUSE
+MsgId: Glurgh, it smell like Pigfolk!
+MsgStr: 
+
+Item:
+Id: 760895
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SWAMPIG_HOUSE_RUBBLE
+MsgId: Ha ha! Pig house all broken.
+MsgStr: 
+Thuật ngữ tham khảo: "Pig House" => "Nhà Lợn"
+
+Item:
+Id: 760896
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_SYRUP
+MsgId: Sticky sweet!
+MsgStr: 
+
+Item:
+Id: 760897
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_TOMATO
+MsgId: It nice and ripe.
+MsgStr: 
+
+Item:
+Id: 760898
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_TOMATO_COOKED
+MsgId: Cooked it real good!
+MsgStr: 
+
+Item:
+Id: 760899
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_TOMATO_SEEDS
+MsgId: Wonder what gonna grow?
+MsgStr: 
+
+Item:
+Id: 760900
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_TRADER_MERM
+MsgId: Finally find someone normal!
+MsgStr: 
+
+Item:
+Id: 760901
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_TRADER_MERM2
+MsgId: Hello! How you do, florp?
+MsgStr: 
+
+Item:
+Id: 760902
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_TURNIP
+MsgId: Mmm, turnip!
+MsgStr: 
+Thuật ngữ tham khảo: "Turnip" => "Củ Cải Tím"
+
+Item:
+Id: 760903
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_TURNIP_COOKED
+MsgId: Hot turnip!
+MsgStr: 
+Thuật ngữ tham khảo: "Turnip" => "Củ Cải Tím"
+
+Item:
+Id: 760904
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_TURNIP_SEEDS
+MsgId: Wonder what gonna grow?
+MsgStr: 
+
+Item:
+Id: 760905
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_WHEAT
+MsgId: It like grass, with hidden snacks!
+MsgStr: 
+Thuật ngữ tham khảo: "Grass" => "Cỏ"
+
+Item:
+Id: 760906
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.QUAGMIRE_WHEAT_SEEDS
+MsgId: Wonder what gonna grow?
+MsgStr: 
+
+Item:
+Id: 760907
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RABBIT.GENERIC
+MsgId: Be vewy vewy quiet.
+MsgStr: 
+
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "[\n  {\"id\": 760608, \"suggestedTranslation\": \"Chuột cá!\", \"rating\": 9.0},\n  {\"id\": 760609, \"suggestedTranslation\": \"Glọrp! Không có đồ của chuột cá đâu!\", \"rating\": 9.0},\n  {\"id\": 760610, \"suggestedTranslation\": \"Chơi trò ăn cắp với chuột cá nhé, flôrt!\", \"rating\": 9.0},\n  {\"id\": 760611, \"suggestedTranslation\": \"Ối trời... nhiều nước thế.\", \"rating\": 9.0},\n  {\"id\": 760612, \"suggestedTranslation\": \"Cái cây kỳ quặc thật.\", \"rating\": 9.0},\n  {\"id\": 760613, \"suggestedTranslation\": \"Chưa sẵn sàng đâu, vẫn đang lớn mà.\", \"rating\": 9.0},\n  {\"id\": 760614, \"suggestedTranslation\": \"Đấy không phải vẩy, tao biết vẩy trông thế nào mà!!\", \"rating\": 9.0},\n  {\"id\": 760615, \"suggestedTranslation\": \"Á chà, mới chỉ là một bé con thôi.\", \"rating\": 9.0},\n  {\"id\": 760616, \"suggestedTranslation\": \"Trong hộp có gì thế?\", \"rating\": 9.0},\n  {\"id\": 760617, \"suggestedTranslation\": \"Bánh mì ngon ngon!\", \"rating\": 9.0},\n  {\"id\": 760618, \"suggestedTranslation\": \"Phát ra âm thanh buồn ngủ, flôrp.\", \"rating\": 9.0},\n  {\"id\": 760619, \"suggestedTranslation\": \"Viết thêm nhiều truyện vào nhé, chị Wicker!\", \"rating\": 9.0},\n  {\"id\": 760620, \"suggestedTranslation\": \"Ông đầu bếp lịch thiệp gọi nó là me... mer-ingy... mer-angy...\", \"rating\": 9.0},\n  {\"id\": 760621, \"suggestedTranslation\": \"Glurp, con bọ tệ hại!\", \"rating\": 9.0},\n  {\"id\": 760622, \"suggestedTranslation\": \"Mấy con chim thông minh, thà bơi còn hơn bay.\", \"rating\": 9.0},\n  {\"id\": 760623, \"suggestedTranslation\": \"Florp! Nướng chín con chim đi!\", \"rating\": 9.0},\n  {\"id\": 760624, \"suggestedTranslation\": \"Chim chết à. Glurgh.\", \"rating\": 9.0},\n  {\"id\": 760625, \"suggestedTranslation\": \"Chim chết đang tỉnh lại kìa! Florp!\", \"rating\": 9.0},\n  {\"id\": 760626, \"suggestedTranslation\": \"Glaaagh! Miệng bốc lửa rồi!\", \"rating\": 9.0},\n  {\"id\": 760627, \"suggestedTranslation\": \"\\\"Bụp\\\" ở đâu hả flôrt? Toàn vị cay thôi!\", \"rating\": 9.0},\n  {\"id\": 760628, \"suggestedTranslation\": \"Sao lại làm ớt cay hơn nữa thế?\", \"rating\": 9.0},\n  {\"id\": 760629, \"suggestedTranslation\": \"Cái đó chắc cay xé họng luôn, florp.\", \"rating\": 9.0},\n  {\"id\": 760630, \"suggestedTranslation\": \"Làm thêm mấy món ăn vặt ngon lành nào!\", \"rating\": 9.0},\n  {\"id\": 760631, \"suggestedTranslation\": \"Grrr, cút đi con chim nhồi sọ!\", \"rating\": 9.0},\n  {\"id\": 760632, \"suggestedTranslation\": \"Gậy lông vũ!\", \"rating\": 9.0},\n  {\"id\": 760633, \"suggestedTranslation\": \"Cháy trụi rồi còn đâu, flûrt.\", \"rating\": 9.0},\n  {\"id\": 760634, \"suggestedTranslation\": \"Có cái gì đặt ở đây à?\", \"rating\": 9.0},\n  {\"id\": 760635, \"suggestedTranslation\": \"Hả? Mày muốn gì hả con chim tham ăn?\", \"rating\": 9.0},\n  {\"id\": 760636, \"suggestedTranslation\": \"Glurgh, giấu thịt bên trong á??\", \"rating\": 9.0},\n  {\"id\": 760637, \"suggestedTranslation\": \"Hì hì, ăn đòn đi mấy bông hoa!\", \"rating\": 9.0},\n  {\"id\": 760638, \"suggestedTranslation\": \"Mấy mảnh khô khốc chẳng ngon chút nào.\", \"rating\": 9.0},\n  {\"id\": 760639, \"suggestedTranslation\": \"Glurgh, chẳng muốn mang theo mấy thứ này tẹo nào.\", \"rating\": 9.0},\n  {\"id\": 760640, \"suggestedTranslation\": \"Mấy mảnh khô khốc chẳng ngon chút nào.\", \"rating\": 9.0},\n  {\"id\": 760641, \"suggestedTranslation\": \"Đá tảng hình cái cây á?\", \"rating\": 9.0},\n  {\"id\": 760642, \"suggestedTranslation\": \"Còn ăn thứ tệ hơn rồi, florp.\", \"rating\": 9.0},\n  {\"id\": 760643, \"suggestedTranslation\": \"Có tiếng nhạc phát ra từ nó kìa, florp!\", \"rating\": 9.0},\n  {\"id\": 760644, \"suggestedTranslation\": \"Đồ đập đá tảng.\", \"rating\": 9.0},\n  {\"id\": 760645, \"suggestedTranslation\": \"Nó phá đồ đỉnh cực luôn.\", \"rating\": 9.0},\n  {\"id\": 760646, \"suggestedTranslation\": \"Ai đang chơi khăm đấy, toàn rau củ tạo hình câu cá mà!\", \"rating\": 9.0},\n  {\"id\": 760647, \"suggestedTranslation\": \"Tránh ra mau!\", \"rating\": 9.0},\n  {\"id\": 760648, \"suggestedTranslation\": \"Grrr, Lợn hư!\", \"rating\": 9.0},\n  {\"id\": 760649, \"suggestedTranslation\": \"Người Lợn đáng ghét!\", \"rating\": 9.0},\n  {\"id\": 760650, \"suggestedTranslation\": \"Kẻ thù của người Merm!\", \"rating\": 9.0},\n  {\"id\": 760651, \"suggestedTranslation\": \"Tránh ra mau!\", \"rating\": 9.0},\n  {\"id\": 760652, \"suggestedTranslation\": \"Grrr, Lợn hư!\", \"rating\": 9.0},\n  {\"id\": 760653, \"suggestedTranslation\": \"Người Lợn đáng ghét!\", \"rating\": 9.0},\n  {\"id\": 760654, \"suggestedTranslation\": \"Kẻ thù của người Merm!\", \"rating\": 9.0},\n  {\"id\": 760655, \"suggestedTranslation\": \"Glurp, hắn còn đáng sợ hơn mấy đứa khác.\", \"rating\": 9.0},\n  {\"id\": 760656, \"suggestedTranslation\": \"Làm cái ba lô từ da lợn ghê tởm.\", \"rating\": 9.0},\n  {\"id\": 760657, \"suggestedTranslation\": \"Lợn giòn rụm!\", \"rating\": 9.0},\n  {\"id\": 760658, \"suggestedTranslation\": \"Hà hà!\", \"rating\": 9.0},\n  {\"id\": 760659, \"suggestedTranslation\": \"Hì hì, Nhà Lợn cháy trụi rồi!\", \"rating\": 9.0},\n  {\"id\": 760660, \"suggestedTranslation\": \"Cái nhà đó đầy rẫy Người Lợn đáng ghét!\", \"rating\": 9.0},\n  {\"id\": 760661, \"suggestedTranslation\": \"Hít hà... mùi giống... Người Lợn!\", \"rating\": 9.0},\n  {\"id\": 760662, \"suggestedTranslation\": \"An toàn rồi, florp.\", \"rating\": 9.0},\n  {\"id\": 760663, \"suggestedTranslation\": \"Hắn chẳng phải Vua chúa gì sất, flôrt!!\", \"rating\": 9.0},\n  {\"id\": 760664, \"suggestedTranslation\": \"Đáng đời lắm, flurp.\", \"rating\": 9.0},\n  {\"id\": 760665, \"suggestedTranslation\": \"Tránh ra mau!\", \"rating\": 9.0},\n  {\"id\": 760666, \"suggestedTranslation\": \"Glurp! Người Lợn...\", \"rating\": 9.0},\n  {\"id\": 760667, \"suggestedTranslation\": \"Trông hắn còn đáng sợ hơn mấy đứa khác.\", \"rating\": 9.0},\n  {\"id\": 760668, \"suggestedTranslation\": \"Glaaargh!!\", \"rating\": 9.0},\n  {\"id\": 760669, \"suggestedTranslation\": \"Tốt lắm, nó biến mất rồi.\", \"rating\": 9.0},\n  {\"id\": 760670, \"suggestedTranslation\": \"Đừng hòng tao cho mày thứ gì, flûrt.\", \"rating\": 9.0},\n  {\"id\": 760671, \"suggestedTranslation\": \"Đứa nào làm cái này thế??\", \"rating\": 9.0},\n  {\"id\": 760672, \"suggestedTranslation\": \"Lột từ con Lợn đáng ghét ra đấy!\", \"rating\": 9.0},\n  {\"id\": 760673, \"suggestedTranslation\": \"Glurp... có Người Lợn ở trong đó không?\", \"rating\": 9.0},\n  {\"id\": 760674, \"suggestedTranslation\": \"Grrrr!\", \"rating\": 9.0},\n  {\"id\": 760675, \"suggestedTranslation\": \"Cái mũi lợn sáng bóng, florp!\", \"rating\": 9.0},\n  {\"id\": 760676, \"suggestedTranslation\": \"Đã thốt được thắt lưng của Người Lợn!\", \"rating\": 9.0},\n  {\"id\": 760677, \"suggestedTranslation\": \"Ăn không ngon lắm đâu, florp.\", \"rating\": 9.0},\n  {\"id\": 760678, \"suggestedTranslation\": \"Cây con.\", \"rating\": 9.0},\n  {\"id\": 760679, \"suggestedTranslation\": \"Ước gì... cũng muốn có một lá cờ!\", \"rating\": 9.0},\n  {\"id\": 760680, \"suggestedTranslation\": \"Tìm thấy rồi! Của tao!!\", \"rating\": 9.0},\n  {\"id\": 760681, \"suggestedTranslation\": \"Dụng cụ chọc ngoáy.\", \"rating\": 9.0},\n  {\"id\": 760682, \"suggestedTranslation\": \"Cảm thấy... bối rối quá...\", \"rating\": 9.0},\n  {\"id\": 760683, \"suggestedTranslation\": \"Vẫn quyết không ăn nó đâu, florp.\", \"rating\": 9.0},\n  {\"id\": 760684, \"suggestedTranslation\": \"Đội thực vật lên đầu để học về thực vật á? Hợp lý phết, florp!\", \"rating\": 9.0},\n  {\"id\": 760685, \"suggestedTranslation\": \"Rau lá xanh!\", \"rating\": 9.0},\n  {\"id\": 760686, \"suggestedTranslation\": \"Sắp được thu hoạch chưa, flôrt?\", \"rating\": 9.0},\n  {\"id\": 760687, \"suggestedTranslation\": \"Rau củ cho tao đâyyy!\", \"rating\": 9.0},\n  {\"id\": 760688, \"suggestedTranslation\": \"Thực vật cần uống nước à?\", \"rating\": 9.0},\n  {\"id\": 760689, \"suggestedTranslation\": \"Nhiều chữ quá nhớ không nổi đâu, florp.\", \"rating\": 9.0},\n  {\"id\": 760690, \"suggestedTranslation\": \"Vở kịch nói về cái gì thế? Công chúa à?\", \"rating\": 9.0},\n  {\"id\": 760691, \"suggestedTranslation\": \"Lắm trang khó đọc quá, florp.\", \"rating\": 9.0},\n  {\"id\": 760692, \"suggestedTranslation\": \"Chịu. Đi mà hỏi chị Wicker.\", \"rating\": 9.0},\n  {\"id\": 760693, \"suggestedTranslation\": \"Grrr... không tin tưởng %s đâu.\", \"rating\": 9.0},\n  {\"id\": 760694, \"suggestedTranslation\": \"Mày sắp đốt rụi mọi thứ lên rồi đấy, %s!!\", \"rating\": 9.0},\n  {\"id\": 760695, \"suggestedTranslation\": \"Chào %s nhé!\", \"rating\": 9.0},\n  {\"id\": 760696, \"suggestedTranslation\": \"Trông cậu đáng sợ quá đấy, %s.\", \"rating\": 9.0},\n  {\"id\": 760697, \"suggestedTranslation\": \"G...glorp... %s là kẻ sát nhân rồi!!\", \"rating\": 9.0},\n  {\"id\": 760698, \"suggestedTranslation\": \"Đâu cần giúp! ...Nhưng mà cảm ơn nhé, florp.\", \"rating\": 9.0},\n  {\"id\": 760699, \"suggestedTranslation\": \"Trò chơi kỳ lạ.\", \"rating\": 9.0},\n  {\"id\": 760700, \"suggestedTranslation\": \"Trông quen quen.\", \"rating\": 9.0},\n  {\"id\": 760701, \"suggestedTranslation\": \"Glurgh, đứa nào ăn gian thế?\", \"rating\": 9.0},\n  {\"id\": 760702, \"suggestedTranslation\": \"Sẽ không làm hỏng chúng nó đâu, florp! Hứa đấy!\", \"rating\": 9.0},\n  {\"id\": 760703, \"suggestedTranslation\": \"Chỉ gặm một tí tẹo thôi mà! Thế mà chị Wandy nổi giận...\", \"rating\": 9.0},\n  {\"id\": 760704, \"suggestedTranslation\": \"Chị Wandy bảo là \\\"tái-tạo không-thời-gian\\\"... glurgh. Quên mất phần sau rồi.\", \"rating\": 9.0},\n  {\"id\": 760705, \"suggestedTranslation\": \"Quá nhỏ so với ruột gan người sắt...\", \"rating\": 9.0},\n  {\"id\": 760706, \"suggestedTranslation\": \"Chỉ gặm một tí tẹo thôi mà! Thế mà chị Wandy nổi giận...\", \"rating\": 9.0},\n  {\"id\": 760707, \"suggestedTranslation\": \"Chị Wandy bảo là \\\"tái-tạo không-thời-gian\\\"... glurgh. Quên mất phần sau rồi.\", \"rating\": 9.0},\n  {\"id\": 760708, \"suggestedTranslation\": \"Đường hầm kỳ quặc.\", \"rating\": 9.0},\n  {\"id\": 760709, \"suggestedTranslation\": \"Đường hầm kỳ quặc.\", \"rating\": 9.0},\n  {\"id\": 760710, \"suggestedTranslation\": \"Glurgh, cao quá với không tới!\", \"rating\": 9.0},\n  {\"id\": 760711, \"suggestedTranslation\": \"Chỉ gặm một tí tẹo thôi mà! Thế mà chị Wandy nổi giận...\", \"rating\": 9.0},\n  {\"id\": 760712, \"suggestedTranslation\": \"Chị Wandy bảo là \\\"tái-tạo không-thời-gian\\\"... glurgh. Quên mất phần sau rồi.\", \"rating\": 9.0},\n  {\"id\": 760713, \"suggestedTranslation\": \"Chỉ gặm một tí tẹo thôi mà! Thế mà chị Wandy nổi giận...\", \"rating\": 9.0},\n  {\"id\": 760714, \"suggestedTranslation\": \"Chị Wandy bảo là \\\"tái-tạo không-thời-gian\\\"... glurgh. Quên mất phần sau rồi.\", \"rating\": 9.0},\n  {\"id\": 760715, \"suggestedTranslation\": \"Chỉ gặm một tí tẹo thôi mà! Thế mà chị Wandy nổi giận...\", \"rating\": 9.0},\n  {\"id\": 760716, \"suggestedTranslation\": \"Chị Wandy bảo là \\\"tái-tạo không-thời-gian\\\"... glurgh. Quên mất phần sau rồi.\", \"rating\": 9.0},\n  {\"id\": 760717, \"suggestedTranslation\": \"Rất muốn xem cảnh Người Lợn đáng ghét bị nó nện cho một trận!\", \"rating\": 9.0},\n  {\"id\": 760718, \"suggestedTranslation\": \"Đúng là một món đồ đo đạc buồn cười.\", \"rating\": 9.0},\n  {\"id\": 760719, \"suggestedTranslation\": \"Túi trái cây ngon lành!\", \"rating\": 9.0},\n  {\"id\": 760720, \"suggestedTranslation\": \"Mang đồ lại đây cho ta nào, chim nhỏ!\", \"rating\": 9.0},\n  {\"id\": 760721, \"suggestedTranslation\": \"Lông của chim nhỏ làm nó trông sang chảnh hơn.\", \"rating\": 9.0},\n  {\"id\": 760722, \"suggestedTranslation\": \"Ốà, hóa ra không phải cứ thế mà cắn vào được à?\", \"rating\": 9.0},\n  {\"id\": 760723, \"suggestedTranslation\": \"Hừm... tạm ổn...\", \"rating\": 9.0},\n  {\"id\": 760724, \"suggestedTranslation\": \"Món ăn vặt mọng nước to bự!\", \"rating\": 9.0},\n  {\"id\": 760725, \"suggestedTranslation\": \"Làm thêm mấy món ăn vặt ngon lành nào!\", \"rating\": 9.0},\n  {\"id\": 760726, \"suggestedTranslation\": \"Bỏm bẻm tõm!\", \"rating\": 9.0},\n  {\"id\": 760727, \"suggestedTranslation\": \"Chào cậu cá dài nhé!\", \"rating\": 9.0},\n  {\"id\": 760728, \"suggestedTranslation\": \"Á chà chà, dễ thương quá đi!\", \"rating\": 9.0},\n  {\"id\": 760729, \"suggestedTranslation\": \"Uiiii, nhớp nháp quá!\", \"rating\": 9.0},\n  {\"id\": 760730, \"suggestedTranslation\": \"Hà hà, thối hoắc!\", \"rating\": 9.0},\n  {\"id\": 760731, \"suggestedTranslation\": \"Lắc la lắc lư!\", \"rating\": 9.0},\n  {\"id\": 760732, \"suggestedTranslation\": \"Lâu quá đi mất!\", \"rating\": 9.0},\n  {\"id\": 760733, \"suggestedTranslation\": \"Đồ ăn! Đồ ăn! Đồ ăn!\", \"rating\": 9.0},\n  {\"id\": 760734, \"suggestedTranslation\": \"Chao ôi!\", \"rating\": 9.0},\n  {\"id\": 760735, \"suggestedTranslation\": \"Hả? Chẳng có gì trong này cả!\", \"rating\": 9.0},\n  {\"id\": 760736, \"suggestedTranslation\": \"Cho đồ ăn vào rồi món khác chui ra hả, florp?\", \"rating\": 9.0},\n  {\"id\": 760737, \"suggestedTranslation\": \"Florp! Có thể mang không gian ấm cúng đi khắp mọi nơi!\", \"rating\": 9.0},\n  {\"id\": 760738, \"suggestedTranslation\": \"Xong xuôi hết rồi!\", \"rating\": 9.0},\n  {\"id\": 760739, \"suggestedTranslation\": \"Thêm gia vị vào đồ ăn thôi nào!\", \"rating\": 9.0},\n  {\"id\": 760740, \"suggestedTranslation\": \"Là chỗ để ngủ.\", \"rating\": 9.0},\n  {\"id\": 760741, \"suggestedTranslation\": \"Đang xây dựng cái gì thế, florp?\", \"rating\": 9.0},\n  {\"id\": 760742, \"suggestedTranslation\": \"Củ quả đất bùn ngon lành.\", \"rating\": 9.0},\n  {\"id\": 760743, \"suggestedTranslation\": \"Đồ ăn vặt! Của tao!!\", \"rating\": 9.0},\n  {\"id\": 760744, \"suggestedTranslation\": \"Hả? Đây là khoai tây mà!!\", \"rating\": 9.0},\n  {\"id\": 760745, \"suggestedTranslation\": \"Hì hì, khoai tây lốc xoáy!\", \"rating\": 9.0},\n  {\"id\": 760746, \"suggestedTranslation\": \"Mmm, khoai tây nóng hổi!\", \"rating\": 9.0},\n  {\"id\": 760747, \"suggestedTranslation\": \"Củ khoai to bự!\", \"rating\": 9.0},\n  {\"id\": 760748, \"suggestedTranslation\": \"Vùi xuống đất nào!\", \"rating\": 9.0},\n  {\"id\": 760749, \"suggestedTranslation\": \"Thực vật này có cái nhà nhỏ xinh.\", \"rating\": 9.0},\n  {\"id\": 760750, \"suggestedTranslation\": \"Ăn vào đau bụng lắm đấy, nhưng mà... thơm quá...\", \"rating\": 9.0},\n  {\"id\": 760751, \"suggestedTranslation\": \"NÀY!! Mấy thứ đó là của TAO!\", \"rating\": 9.0},\n  {\"id\": 760752, \"suggestedTranslation\": \"Này, nước đi đâu mất tiêu rồi?\", \"rating\": 9.0},\n  {\"id\": 760753, \"suggestedTranslation\": \"Cái bình hình chim phun nước.\", \"rating\": 9.0},\n  {\"id\": 760754, \"suggestedTranslation\": \"Trông ngươi chẳng giống khỉ bình thường tẹo nào, florp...\", \"rating\": 9.0},\n  {\"id\": 760755, \"suggestedTranslation\": \"Con chim béo trục béo tròn.\", \"rating\": 9.0},\n  {\"id\": 760756, \"suggestedTranslation\": \"Tóm được rồi, flûrt!!\", \"rating\": 9.0},\n  {\"id\": 760757, \"suggestedTranslation\": \"Con chim buồn ngủ.\", \"rating\": 9.0},\n  {\"id\": 760758, \"suggestedTranslation\": \"Sần sùi mà ngon phết, florp!\", \"rating\": 9.0},\n  {\"id\": 760759, \"suggestedTranslation\": \"Florp! Dụng cụ khắc bí ngô.\", \"rating\": 9.0},\n  {\"id\": 760760, \"suggestedTranslation\": \"ĐÂY LÀ LOẠI BÍ NGÔ NGON NHẤT TRÊN ĐỜI.\", \"rating\": 9.0},\n  {\"id\": 760761, \"suggestedTranslation\": \"Ta tự tay khắc cái mặt đẹp nhất luôn.\", \"rating\": 9.0},\n  {\"id\": 760762, \"suggestedTranslation\": \"Chưa có lỗ khoét mặt.\", \"rating\": 9.0},\n  {\"id\": 760763, \"suggestedTranslation\": \"Mmmmmmmmmm!\", \"rating\": 9.0},\n  {\"id\": 760764, \"suggestedTranslation\": \"Mềm nhũn!\", \"rating\": 9.0},\n  {\"id\": 760765, \"suggestedTranslation\": \"Có một khuôn mặt thân thiện, flôrt.\", \"rating\": 9.0},\n  {\"id\": 760766, \"suggestedTranslation\": \"Lớn nhanh thế cơ chứ!\", \"rating\": 9.0},\n  {\"id\": 760767, \"suggestedTranslation\": \"Làm thêm mấy món ăn vặt ngon lành nào!\", \"rating\": 9.0},\n  {\"id\": 760768, \"suggestedTranslation\": \"Được phép đấm vào nó á? Yay!!\", \"rating\": 9.0},\n  {\"id\": 760769, \"suggestedTranslation\": \"Glurgh, chói mắt quá!\", \"rating\": 9.0},\n  {\"id\": 760770, \"suggestedTranslation\": \"Glurp... không muốn chơi đùa với cái này nữa đâu.\", \"rating\": 9.0},\n  {\"id\": 760771, \"suggestedTranslation\": \"Nó đẹp phết...\", \"rating\": 9.0},\n  {\"id\": 760772, \"suggestedTranslation\": \"Đừng có nhìn chằm chằm nữa, glort!\", \"rating\": 9.0},\n  {\"id\": 760773, \"suggestedTranslation\": \"Nó vừa ăn xong đấy!\", \"rating\": 9.0},\n  {\"id\": 760774, \"suggestedTranslation\": \"Đó là nơi đồ ăn chui vào.\", \"rating\": 9.0},\n  {\"id\": 760775, \"suggestedTranslation\": \"Chẳng có gì thú vị cho lắm, florp.\", \"rating\": 9.0},\n  {\"id\": 760776, \"suggestedTranslation\": \"Lúc nhúc bò sát.\", \"rating\": 9.0},\n  {\"id\": 760777, \"suggestedTranslation\": \"Trông cô ấy có vẻ hiền.\", \"rating\": 9.0},\n  {\"id\": 760778, \"suggestedTranslation\": \"Trông nổi da gà...\", \"rating\": 9.0},\n  {\"id\": 760779, \"suggestedTranslation\": \"Đôi mắt đỏ của nó mới kỳ lạ làm sao...\", \"rating\": 9.0},\n  {\"id\": 760780, \"suggestedTranslation\": \"Đám lông xù đâu hết rồi?\", \"rating\": 9.0},\n  {\"id\": 760781, \"suggestedTranslation\": \"Á chà, dâu rừng đâu hết rồi hả trời?!\", \"rating\": 9.0},\n  {\"id\": 760782, \"suggestedTranslation\": \"Nhìn thấy bóng mình dễ thương ghê!\", \"rating\": 9.0},\n  {\"id\": 760783, \"suggestedTranslation\": \"Tự hỏi cái gì sẽ mọc lên đây?\", \"rating\": 9.0},\n  {\"id\": 760784, \"suggestedTranslation\": \"Không khéo dùng mấy thứ dễ vỡ cho lắm...\", \"rating\": 9.0},\n  {\"id\": 760785, \"suggestedTranslation\": \"Nhỏ xíu xiu luôn!\", \"rating\": 9.0},\n  {\"id\": 760786, \"suggestedTranslation\": \"Cái này có ăn được đâu, florp!\", \"rating\": 9.0},\n  {\"id\": 760787, \"suggestedTranslation\": \"Uiiii, sáng lấp lánh!\", \"rating\": 9.0},\n  {\"id\": 760788, \"suggestedTranslation\": \"Trông có vẻ xịn sò hơn hẳn.\", \"rating\": 9.0},\n  {\"id\": 760789, \"suggestedTranslation\": \"Cái này giúp tao về nhà!\", \"rating\": 9.0},\n  {\"id\": 760790, \"suggestedTranslation\": \"(Hít ngửi) tội nghiệp con cua...\", \"rating\": 9.0},\n  {\"id\": 760791, \"suggestedTranslation\": \"Glurph... không dám nhìn nữa.\", \"rating\": 9.0},\n  {\"id\": 760792, \"suggestedTranslation\": \"Trông giống cái nhà nhỏ quá!\", \"rating\": 9.0},\n  {\"id\": 760793, \"suggestedTranslation\": \"Ôoooooh, quà cho tao à?\", \"rating\": 9.0},\n  {\"id\": 760794, \"suggestedTranslation\": \"Vừa ngon lém lại còn bổ dưỡng nữa.\", \"rating\": 9.0},\n  {\"id\": 760795, \"suggestedTranslation\": \"Thứ bột bụi bặm này cho vào đồ ăn á?\", \"rating\": 9.0},\n  {\"id\": 760796, \"suggestedTranslation\": \"Ngon lành cành đào!\", \"rating\": 9.0},\n  {\"id\": 760797, \"suggestedTranslation\": \"Nên đem cúng cái miệng to trên trời thôi!\", \"rating\": 9.0},\n  {\"id\": 760798, \"suggestedTranslation\": \"Đồ ăn tuyệt cú mèo cho cái miệng trên trời!\", \"rating\": 9.0},\n  {\"id\": 760799, \"suggestedTranslation\": \"Đồ ăn có vẻ hơi bé so với cái miệng to thế này.\", \"rating\": 9.0},\n  {\"id\": 760800, \"suggestedTranslation\": \"Chắc nó không thích món đó đâu, florp.\", \"rating\": 9.0},\n  {\"id\": 760801, \"suggestedTranslation\": \"Glurp, có cố ý làm cháy đâu cơ chứ!\", \"rating\": 9.0},\n  {\"id\": 760802, \"suggestedTranslation\": \"Làm món ăn vặt ngon phết.\", \"rating\": 9.0},\n  {\"id\": 760803, \"suggestedTranslation\": \"Bây giờ ngửi còn thơm hơn nữa!\", \"rating\": 9.0},\n  {\"id\": 760804, \"suggestedTranslation\": \"Tự hỏi cái gì sẽ mọc lên đây?\", \"rating\": 9.0},\n  {\"id\": 760805, \"suggestedTranslation\": \"Chào nhóc kỳ lạ! Muốn chơi cùng không?\", \"rating\": 9.0},\n  {\"id\": 760806, \"suggestedTranslation\": \"Glurgh...\", \"rating\": 9.0},\n  {\"id\": 760807, \"suggestedTranslation\": \"Cô ta trông có vẻ tử tế.\", \"rating\": 9.0},\n  {\"id\": 760808, \"suggestedTranslation\": \"Làm thức ăn nóng hổi và ngon miệng.\", \"rating\": 9.0},\n  {\"id\": 760809, \"suggestedTranslation\": \"Dùng để nấu đồ ăn nóng hổi và ngon miệng!\", \"rating\": 9.0},\n  {\"id\": 760810, \"suggestedTranslation\": \"Lò nấu đồ ăn bé xíu.\", \"rating\": 9.0},\n  {\"id\": 760811, \"suggestedTranslation\": \"Lò nấu đồ ăn bé xíu.\", \"rating\": 9.0},\n  {\"id\": 760812, \"suggestedTranslation\": \"Dụng cụ... làm ruộng!\", \"rating\": 9.0},\n  {\"id\": 760813, \"suggestedTranslation\": \"Biết đâu cái này mở được mấy cái hộp giấu đồ!\", \"rating\": 9.0},\n  {\"id\": 760814, \"suggestedTranslation\": \"Không dùng cho hộp giấu đồ... vậy nó mở cái gì?\", \"rating\": 9.0},\n  {\"id\": 760815, \"suggestedTranslation\": \"Ôoooooh, phát sáng kìa!\", \"rating\": 9.0},\n  {\"id\": 760816, \"suggestedTranslation\": \"Cái đèn trông xịn ghê.\", \"rating\": 9.0},\n  {\"id\": 760817, \"suggestedTranslation\": \"Nghiền nát thành mảnh nhỏ!\", \"rating\": 9.0},\n  {\"id\": 760818, \"suggestedTranslation\": \"Chỉ cần sửa sang lại một chút thôi!\", \"rating\": 9.0},\n  {\"id\": 760819, \"suggestedTranslation\": \"Ôi chao, ngươi có gì thế?\", \"rating\": 9.0},\n  {\"id\": 760820, \"suggestedTranslation\": \"Ngươi cho tao đồ à?\", \"rating\": 9.0},\n  {\"id\": 760821, \"suggestedTranslation\": \"Nấm dai dai ăn ngon phết.\", \"rating\": 9.0},\n  {\"id\": 760822, \"suggestedTranslation\": \"Ôi chao, đây là nơi nấm mọc lên này!\", \"rating\": 9.0},\n  {\"id\": 760823, \"suggestedTranslation\": \"Hết nấm rồi à...?\", \"rating\": 9.0},\n  {\"id\": 760824, \"suggestedTranslation\": \"Cho xin chút được không? Xin lượm nha?\", \"rating\": 9.0},\n  {\"id\": 760825, \"suggestedTranslation\": \"(Hít ngửi) Mmmm...\", \"rating\": 9.0},\n  {\"id\": 760826, \"suggestedTranslation\": \"Tự hỏi cái gì sẽ mọc lên đây?\", \"rating\": 9.0},\n  {\"id\": 760827, \"suggestedTranslation\": \"Tự hỏi nên nấu món gì đây...\", \"rating\": 9.0},\n  {\"id\": 760828, \"suggestedTranslation\": \"Lò nấu đồ ăn.\", \"rating\": 9.0},\n  {\"id\": 760829, \"suggestedTranslation\": \"Trông nhọn hoắt luôn.\", \"rating\": 9.0},\n  {\"id\": 760830, \"suggestedTranslation\": \"Không thích nó tẹo nào.\", \"rating\": 9.0},\n  {\"id\": 760831, \"suggestedTranslation\": \"Trông đáng sợ quá...\", \"rating\": 9.0},\n  {\"id\": 760832, \"suggestedTranslation\": \"Tiếc ghê... chẳng có nước để mà té tát.\", \"rating\": 9.0},\n  {\"id\": 760833, \"suggestedTranslation\": \"Mong là có đồ ngon trong này.\", \"rating\": 9.0},\n  {\"id\": 760834, \"suggestedTranslation\": \"Cho tao vôt iiiin đi mà!!\", \"rating\": 9.0},\n  {\"id\": 760835, \"suggestedTranslation\": \"Cái cột đá to đùng.\", \"rating\": 9.0},\n  {\"id\": 760836, \"suggestedTranslation\": \"Có bánh quy ở trong không nhỉ?\", \"rating\": 9.0},\n  {\"id\": 760837, \"suggestedTranslation\": \"Á chà chà, dễ thương quá đi!\", \"rating\": 9.0},\n  {\"id\": 760838, \"suggestedTranslation\": \"Ewww, nó chết ngắc rồi.\", \"rating\": 9.0},\n  {\"id\": 760839, \"suggestedTranslation\": \"Chào chim nhỏ nhé!\", \"rating\": 9.0},\n  {\"id\": 760840, \"suggestedTranslation\": \"Con chim buồn ngủ.\", \"rating\": 9.0},\n  {\"id\": 760841, \"suggestedTranslation\": \"Sáng bóng!\", \"rating\": 9.0},\n  {\"id\": 760842, \"suggestedTranslation\": \"Ghê quá, toàn nước mặn chát!\", \"rating\": 9.0},\n  {\"id\": 760843, \"suggestedTranslation\": \"Lại một ngõ cụt nữa.\", \"rating\": 9.0},\n  {\"id\": 760844, \"suggestedTranslation\": \"Ôi chao, trông có vẻ quan trọng đấy!\", \"rating\": 9.0},\n  {\"id\": 760845, \"suggestedTranslation\": \"Chỉ là cái nồi bình thường thôi.\", \"rating\": 9.0},\n  {\"id\": 760846, \"suggestedTranslation\": \"Củ khoai tây kìa!\", \"rating\": 9.0},\n  {\"id\": 760847, \"suggestedTranslation\": \"Khoai tây ngon lành.\", \"rating\": 9.0},\n  {\"id\": 760848, \"suggestedTranslation\": \"Tự hỏi cái gì sẽ mọc lên đây?\", \"rating\": 9.0},\n  {\"id\": 760849, \"suggestedTranslation\": \"Đặt đồ ăn lên trên lửa thôi!\", \"rating\": 9.0},\n  {\"id\": 760850, \"suggestedTranslation\": \"Nó giúp ích cho việc nấu nướng.\", \"rating\": 9.0},\n  {\"id\": 760851, \"suggestedTranslation\": \"Cái nồi tí hon.\", \"rating\": 9.0},\n  {\"id\": 760852, \"suggestedTranslation\": \"Dùng cho mấy món ngọt.\", \"rating\": 9.0},\n  {\"id\": 760853, \"suggestedTranslation\": \"Chắc cái miệng to trên trời không thích món này đâu, florp.\", \"rating\": 9.0},\n  {\"id\": 760854, \"suggestedTranslation\": \"Trông kỳ cục ghê...\", \"rating\": 9.0},\n  {\"id\": 760855, \"suggestedTranslation\": \"Cái quái gì thế này?\", \"rating\": 9.0},\n  {\"id\": 760856, \"suggestedTranslation\": \"Người Merm có câu chuyện được truyền tụng... về cái miệng trên trời...\", \"rating\": 9.0},\n  {\"id\": 760857, \"suggestedTranslation\": \"Không ai sống ở đây nữa à?\", \"rating\": 9.0},\n  {\"id\": 760858, \"suggestedTranslation\": \"Không ai sống ở đây nữa à?\", \"rating\": 9.0},\n  {\"id\": 760859, \"suggestedTranslation\": \"Chuyện gì đã xảy ra với nó thế?\", \"rating\": 9.0},\n  {\"id\": 760860, \"suggestedTranslation\": \"Hỏng bét hết cả rồi.\", \"rating\": 9.0},\n  {\"id\": 760861, \"suggestedTranslation\": \"Xin chàooooo?\", \"rating\": 9.0},\n  {\"id\": 760862, \"suggestedTranslation\": \"Glurph... ở đây cứ thấy rợn tóc gáy thế nào ấy.\", \"rating\": 9.0},\n  {\"id\": 760863, \"suggestedTranslation\": \"Không có ai ở nhà cả, flôrt.\", \"rating\": 9.0},\n  {\"id\": 760864, \"suggestedTranslation\": \"Hỏng sạch rồi.\", \"rating\": 9.0},\n  {\"id\": 760865, \"suggestedTranslation\": \"Có đánh nhau à? Trông có vẻ đám Người Dê thua cuộc rồi.\", \"rating\": 9.0},\n  {\"id\": 760866, \"suggestedTranslation\": \"Tự hỏi có gì trong cái hộp giấu đồ này...\", \"rating\": 9.0},\n  {\"id\": 760867, \"suggestedTranslation\": \"Ôi chao, cho tao vào với đi!!\", \"rating\": 9.0},\n  {\"id\": 760868, \"suggestedTranslation\": \"Chào cậu cá nhé!\", \"rating\": 9.0},\n  {\"id\": 760869, \"suggestedTranslation\": \"Khônggggggg!!\", \"rating\": 9.0},\n  {\"id\": 760870, \"suggestedTranslation\": \"Lắc la lắc lư!\", \"rating\": 9.0},\n  {\"id\": 760871, \"suggestedTranslation\": \"Đá tảng ngon miệng!\", \"rating\": 9.0},\n  {\"id\": 760872, \"suggestedTranslation\": \"Cái này hoạt động thế nào thế hả, florp?\", \"rating\": 9.0},\n  {\"id\": 760873, \"suggestedTranslation\": \"Có thứ gì đang mọc lên kìa!\", \"rating\": 9.0},\n  {\"id\": 760874, \"suggestedTranslation\": \"Cái này đặt lên ao muối á?\", \"rating\": 9.0},\n  {\"id\": 760875, \"suggestedTranslation\": \"Mmm, ngọt lịm luôn!!\", \"rating\": 9.0},\n  {\"id\": 760876, \"suggestedTranslation\": \"Chứa nhựa cây ngọt ngào!\", \"rating\": 9.0},\n  {\"id\": 760877, \"suggestedTranslation\": \"Cây con!\", \"rating\": 9.0},\n  {\"id\": 760878, \"suggestedTranslation\": \"Glurgh... không còn ngon nữa rồi.\", \"rating\": 9.0},\n  {\"id\": 760879, \"suggestedTranslation\": \"Hạt giốnnnnng kìaaaa!!\", \"rating\": 9.0},\n  {\"id\": 760880, \"suggestedTranslation\": \"Hả? Cái này dùng để làm gì thế?\", \"rating\": 9.0},\n  {\"id\": 760881, \"suggestedTranslation\": \"Úi chà, ăn ngon phết!\", \"rating\": 9.0},\n  {\"id\": 760882, \"suggestedTranslation\": \"Có cảm giác gì đó quen thuộc như ở nhà.\", \"rating\": 9.0},\n  {\"id\": 760883, \"suggestedTranslation\": \"Chẳng còn gì để hái nữa.\", \"rating\": 9.0},\n  {\"id\": 760884, \"suggestedTranslation\": \"Ngửi có vẻ hơi cay cay.\", \"rating\": 9.0},\n  {\"id\": 760885, \"suggestedTranslation\": \"Có thứ ngọt lịm ở bên trong kìa!\", \"rating\": 9.0},\n  {\"id\": 760886, \"suggestedTranslation\": \"Ai đó lấy mất cây rồi! Không phải tao đâu nhé!\", \"rating\": 9.0},\n  {\"id\": 760887, \"suggestedTranslation\": \"Ghê quá, có lũ bọ kẹt trong chỗ ngọt ngọt kìa.\", \"rating\": 9.0},\n  {\"id\": 760888, \"suggestedTranslation\": \"Tiếc ghê... chẳng còn gì sất.\", \"rating\": 9.0},\n  {\"id\": 760889, \"suggestedTranslation\": \"Mmm, đầy ắp thứ ngọt ngào bên trong!\", \"rating\": 9.0},\n  {\"id\": 760890, \"suggestedTranslation\": \"Cây ổn không đấy?\", \"rating\": 9.0},\n  {\"id\": 760891, \"suggestedTranslation\": \"Ngươi là một tên Người Lợn trông kỳ cục quá.\", \"rating\": 9.0},\n  {\"id\": 760892, \"suggestedTranslation\": \"Tên Người Lợn đó có gì đó rất kỳ lạ.\", \"rating\": 9.0},\n  {\"id\": 760893, \"suggestedTranslation\": \"Đang ngủ à?\", \"rating\": 9.0},\n  {\"id\": 760894, \"suggestedTranslation\": \"Glurgh, nồng nặc mùi Người Lợn!\", \"rating\": 9.0},\n  {\"id\": 760895, \"suggestedTranslation\": \"Hà hà! Nhà Lợn hỏng bét rồi.\", \"rating\": 9.0},\n  {\"id\": 760896, \"suggestedTranslation\": \"Ngọt dính cả tay!\", \"rating\": 9.0},\n  {\"id\": 760897, \"suggestedTranslation\": \"Nó chín mọng và ngon ghê.\", \"rating\": 9.0},\n  {\"id\": 760898, \"suggestedTranslation\": \"Nấu chín hoàn hảo luôn!\", \"rating\": 9.0},\n  {\"id\": 760899, \"suggestedTranslation\": \"Tự hỏi cái gì sẽ mọc lên đây?\", \"rating\": 9.0},\n  {\"id\": 760900, \"suggestedTranslation\": \"Cuối cùng cũng tìm được một đứa bình thường!\", \"rating\": 9.0},\n  {\"id\": 760901, \"suggestedTranslation\": \"Chào nhé! Dạo này thế nào rồi, florp?\", \"rating\": 9.0},\n  {\"id\": 760902, \"suggestedTranslation\": \"Mmm, củ cải tím!\", \"rating\": 9.0},\n  {\"id\": 760903, \"suggestedTranslation\": \"Củ cải tím nóng hổi!\", \"rating\": 9.0},\n  {\"id\": 760904, \"suggestedTranslation\": \"Tự hỏi cái gì sẽ mọc lên đây?\", \"rating\": 9.0},\n  {\"id\": 760905, \"suggestedTranslation\": \"Nó giống cỏ lắm, nhưng có đồ ăn ẩn giấu bên trong!\", \"rating\": 9.0},\n  {\"id\": 760906, \"suggestedTranslation\": \"Tự hỏi cái gì sẽ mọc lên đây?\", \"rating\": 9.0},\n  {\"id\": 760907, \"suggestedTranslation\": \"Giữ mồm giữ miệng thật im lặng.\", \"rating\": 9.0}\n]",
+            "thoughtSignature": "EmAKXgFpFH0TWk8wJl/b89hir8L1TFG+YrSeGJdmYLcikWW0jqEcqAUGJCWDomRE3ghocLjZGUzgT5KTax7wmjo1Xi6xfMtgjb95R+rGXvDAEPNE+jSqjzRxWkL3Ep98VHA="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 19678,
+    "candidatesTokenCount": 11319,
+    "totalTokenCount": 30997,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 19678
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "cRm7apn-JJ6kg8UP46i5-AM"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-29 08:52:02] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang rating (0.0 - 10.0):
+   - MsgStr rỗng, chưa dịch hoặc còn là tiếng Anh: Chấm rating thấp (0.0 - 1.0).
+   - MsgStr dịch chuẩn xác, tự nhiên: Chấm rating cao (8.0 - 10.0).
+2. Đề xuất bản dịch TIẾNG VIỆT tối ưu nhất cho trường "suggestedTranslation":
+   - BẮT BUỘC 100% PHẢI LÀ TIẾNG VIỆT tự nhiên, ngắn gọn, chuẩn văn phong game.
+   - TUYỆT ĐỐI KHÔNG ĐƯỢC để suggestedTranslation là tiếng Anh trong bất kỳ trường hợp nào!
+3. Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+4. Nếu mục nào có 'Thuật ngữ tham khảo', BẮT BUỘC ưu tiên dịch thuật ngữ đó sang nghĩa tiếng Việt tương ứng.
+Ví dụ:
+Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+Output: {"id":101,"suggestedTranslation":"\"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!","rating":8.5}
+
+Hãy xử lý tất cả các mục dưới đây và trả về duy nhất một JSON array.
+Mỗi phần tử phải có đúng 3 trường: id, suggestedTranslation, rating.
+Trả về CHỈ JSON hợp lệ, không bọc markdown, không giải thích thừa.
+Ví dụ mẫu: [{"id":101,"suggestedTranslation":"\"Chưa đến giữa hè\", bạn nói?...","rating":8.5}]
+
+Item:
+Id: 760908
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RABBIT.HELD
+MsgId: Hello, rabbit!
+MsgStr: 
+Thuật ngữ tham khảo: "Rabbit" => "Thỏ"
+
+Item:
+Id: 760909
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RABBITHAT
+MsgId: Me love it much.
+MsgStr: 
+
+Item:
+Id: 760910
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RABBITHOLE.GENERIC
+MsgId: Rabbit house.
+MsgStr: 
+Thuật ngữ tham khảo: "Rabbit" => "Thỏ"
+
+Item:
+Id: 760911
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RABBITHOLE.SPRING
+MsgId: Anybody home, florp?
+MsgStr: 
+
+Item:
+Id: 760912
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RABBITHOUSE.BURNT
+MsgId: Aww, wanted to eat that!
+MsgStr: 
+
+Item:
+Id: 760913
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RABBITHOUSE.GENERIC
+MsgId: Sniff... there someone inside...
+MsgStr: 
+
+Item:
+Id: 760914
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RABBITKINGHORN
+MsgId: Me blow rabbit horn horn.
+MsgStr: 
+Thuật ngữ tham khảo: "Rabbit" => "Thỏ"
+
+Item:
+Id: 760915
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RABBITKINGHORN_CHEST
+MsgId: Thanks rabbit!
+MsgStr: 
+Thuật ngữ tham khảo: "Rabbit" => "Thỏ"
+
+Item:
+Id: 760916
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RABBITKINGMINION_BUNNYMAN
+MsgId: Flort, Bunnyman! Me thought we friends!
+MsgStr: 
+Thuật ngữ tham khảo: "Bunnyman" => "Thỏ Người"
+
+Item:
+Id: 760917
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RABBITKINGSPEAR
+MsgId: Angry old rabbit horn!
+MsgStr: 
+Thuật ngữ tham khảo: "Rabbit" => "Thỏ"
+
+Item:
+Id: 760918
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RABBITKING_AGGRESSIVE
+MsgId: Angry old rabbit likes kicking. Glurgh.
+MsgStr: 
+Thuật ngữ tham khảo: "Rabbit" => "Thỏ"
+
+Item:
+Id: 760919
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RABBITKING_LUCKY
+MsgId: Me gonna get you!
+MsgStr: 
+
+Item:
+Id: 760920
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RABBITKING_PASSIVE
+MsgId: Hi, friendly mustache rabbit!
+MsgStr: 
+Thuật ngữ tham khảo: "Rabbit" => "Thỏ"
+
+Item:
+Id: 760921
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RAINCOAT
+MsgId: Why scale-less so scared of rain?
+MsgStr: 
+
+Item:
+Id: 760922
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RAINHAT
+MsgId: Rain not scary!
+MsgStr: 
+
+Item:
+Id: 760923
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RAINOMETER.BURNT
+MsgId: Aw well, florp.
+MsgStr: 
+
+Item:
+Id: 760924
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RAINOMETER.GENERIC
+MsgId: Hope rain's coming!
+MsgStr: 
+
+Item:
+Id: 760925
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RATATOUILLE
+MsgId: This the best!!
+MsgStr: 
+
+Item:
+Id: 760926
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RAZOR
+MsgId: Cutty thing?
+MsgStr: 
+
+Item:
+Id: 760927
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RECORD
+MsgId: Again.
+MsgStr: 
+
+Item:
+Id: 760928
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RECORD_BALATRO
+MsgId: Again!
+MsgStr: 
+
+Item:
+Id: 760929
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RECORD_CREEPYFOREST
+MsgId: Boring. Next one.
+MsgStr: 
+
+Item:
+Id: 760930
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RECORD_DANGER
+MsgId: Next.
+MsgStr: 
+
+Item:
+Id: 760931
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RECORD_DAWN
+MsgId: What else?
+MsgStr: 
+
+Item:
+Id: 760932
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RECORD_DRSTYLE
+MsgId: Too long.
+MsgStr: 
+
+Item:
+Id: 760933
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RECORD_DUSK
+MsgId: Next.
+MsgStr: 
+
+Item:
+Id: 760934
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RECORD_EFS
+MsgId: Don't like. Next.
+MsgStr: 
+
+Item:
+Id: 760935
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RECORD_END
+MsgId: Next.
+MsgStr: 
+
+Item:
+Id: 760936
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RECORD_HALLOWEDNIGHTS
+MsgId: Like this one.
+MsgStr: 
+
+Item:
+Id: 760937
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RECORD_MAIN
+MsgId: Boring. Next one.
+MsgStr: 
+
+Item:
+Id: 760938
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RECORD_WORKTOBEDONE
+MsgId: Don't like. Next.
+MsgStr: 
+
+Item:
+Id: 760939
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.REDGEM
+MsgId: It pretty and warm.
+MsgStr: 
+
+Item:
+Id: 760940
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.REDLANTERN
+MsgId: Hm, it look kinda nice.
+MsgStr: 
+
+Item:
+Id: 760941
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.REDMOONEYE
+MsgId: Got something in its eye, florp.
+MsgStr: 
+
+Item:
+Id: 760942
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.REDPOUCH
+MsgId: Something clinking inside.
+MsgStr: 
+
+Item:
+Id: 760943
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RED_CAP
+MsgId: These ones bad for you, florp.
+MsgStr: 
+
+Item:
+Id: 760944
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RED_CAP_COOKED
+MsgId: Bit better...
+MsgStr: 
+
+Item:
+Id: 760945
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RED_MUSHROOM.GENERIC
+MsgId: Hello mushroom!
+MsgStr: 
+Thuật ngữ tham khảo: "Mushroom" => "Nấm"
+
+Item:
+Id: 760946
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RED_MUSHROOM.INGROUND
+MsgId: Come out!
+MsgStr: 
+
+Item:
+Id: 760947
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RED_MUSHROOM.PICKED
+MsgId: None left.
+MsgStr: 
+
+Item:
+Id: 760948
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.REEDS.BURNING
+MsgId: Glurgh!! Swamp burning!
+MsgStr: 
+
+Item:
+Id: 760949
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.REEDS.GENERIC
+MsgId: There lots of these in the swamp!
+MsgStr: 
+
+Item:
+Id: 760950
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.REEDS.PICKED
+MsgId: Gotta find more, flurp.
+MsgStr: 
+
+Item:
+Id: 760951
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.REFINED_DUST
+MsgId: Made dusty block, florpt.
+MsgStr: 
+
+Item:
+Id: 760952
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.REFLECTIVEVEST
+MsgId: Hm... orange.
+MsgStr: 
+
+Item:
+Id: 760953
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RELIC
+MsgId: Old thing.
+MsgStr: 
+
+Item:
+Id: 760954
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RESEARCHLAB.BURNT
+MsgId: Aw well.
+MsgStr: 
+
+Item:
+Id: 760955
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RESEARCHLAB.GENERIC
+MsgId: Funny-hair man say \"Science\" come out of it?
+MsgStr: 
+
+Item:
+Id: 760956
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RESEARCHLAB2.BURNT
+MsgId: Well it gone now.
+MsgStr: 
+
+Item:
+Id: 760957
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RESEARCHLAB2.GENERIC
+MsgId: All-kemmy... en...jun...
+MsgStr: 
+
+Item:
+Id: 760958
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RESEARCHLAB3.BURNT
+MsgId: Glad it gone.
+MsgStr: 
+
+Item:
+Id: 760959
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RESEARCHLAB3.GENERIC
+MsgId: Glurp... shouldn't play with that.
+MsgStr: 
+
+Item:
+Id: 760960
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RESEARCHLAB4.BURNT
+MsgId: Weird hat machine burned up.
+MsgStr: 
+
+Item:
+Id: 760961
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RESEARCHLAB4.GENERIC
+MsgId: Think you just made that up, florp.
+MsgStr: 
+
+Item:
+Id: 760962
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RESKIN_TOOL
+MsgId: Change things to... different things!
+MsgStr: 
+
+Item:
+Id: 760963
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RESURRECTIONSTATUE.BURNT
+MsgId: Glurgh... it smell real bad.
+MsgStr: 
+
+Item:
+Id: 760964
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RESURRECTIONSTATUE.GENERIC
+MsgId: Is Funny-hair man... okay?
+MsgStr: 
+
+Item:
+Id: 760965
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RESURRECTIONSTONE
+MsgId: This strong magic!
+MsgStr: 
+
+Item:
+Id: 760966
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.REVIVER
+MsgId: Glurp! It still moving!
+MsgStr: 
+
+Item:
+Id: 760967
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RHINODRILL
+MsgId: They not so tough, flort!
+MsgStr: 
+
+Item:
+Id: 760968
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROASTTURKEY
+MsgId: It look like yucky turkey, but smell like veggies?
+MsgStr: 
+
+Item:
+Id: 760969
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROBIN.GENERIC
+MsgId: Red bird.
+MsgStr: 
+
+Item:
+Id: 760970
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROBIN.HELD
+MsgId: My birdy!
+MsgStr: 
+
+Item:
+Id: 760971
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROBIN_WINTER.GENERIC
+MsgId: Snowy bird.
+MsgStr: 
+
+Item:
+Id: 760972
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROBIN_WINTER.HELD
+MsgId: It like to be pet.
+MsgStr: 
+
+Item:
+Id: 760973
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROBOT_BLUEPRINT
+MsgId: Make big fuzzy look like Ironfolk?
+MsgStr: 
+
+Item:
+Id: 760974
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROBOT_PUPPET
+MsgId: You stuck?
+MsgStr: 
+
+Item:
+Id: 760975
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROCK
+MsgId: Just a rock, florpt.
+MsgStr: 
+Thuật ngữ tham khảo: "Rock" => "Đá tảng"
+
+Item:
+Id: 760976
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROCKS
+MsgId: Buncha rocks, florp.
+MsgStr: 
+Thuật ngữ tham khảo: "Rocks" => "Cục đá"
+
+Item:
+Id: 760977
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROCKY
+MsgId: Hi!
+MsgStr: 
+
+Item:
+Id: 760978
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROCK_AVOCADO_BUSH.BARREN
+MsgId: No fruits here, flort.
+MsgStr: 
+
+Item:
+Id: 760979
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROCK_AVOCADO_BUSH.BURNING
+MsgId: Fire! Fire!
+MsgStr: 
+Thuật ngữ tham khảo: "Fire" => "Lửa"
+
+Item:
+Id: 760980
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROCK_AVOCADO_BUSH.DISEASED
+MsgId: It look sick, flurt.
+MsgStr: 
+
+Item:
+Id: 760981
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROCK_AVOCADO_BUSH.DISEASING
+MsgId: Something wrong with it...
+MsgStr: 
+
+Item:
+Id: 760982
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROCK_AVOCADO_BUSH.GENERIC
+MsgId: Huh? Those fruits look like rocks, flort.
+MsgStr: 
+Thuật ngữ tham khảo: "Rocks" => "Cục đá"
+
+Item:
+Id: 760983
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROCK_AVOCADO_BUSH.PICKED
+MsgId: Grow back now!
+MsgStr: 
+
+Item:
+Id: 760984
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROCK_AVOCADO_BUSH.WITHERED
+MsgId: It look thirsty.
+MsgStr: 
+
+Item:
+Id: 760985
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROCK_AVOCADO_FRUIT
+MsgId: Ow! Too hard!
+MsgStr: 
+
+Item:
+Id: 760986
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROCK_AVOCADO_FRUIT_RIPE
+MsgId: It ready!
+MsgStr: 
+
+Item:
+Id: 760987
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROCK_AVOCADO_FRUIT_RIPE_COOKED
+MsgId: Made it yummier!
+MsgStr: 
+
+Item:
+Id: 760988
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROCK_AVOCADO_FRUIT_SPROUT
+MsgId: Too little to make fruit yet.
+MsgStr: 
+
+Item:
+Id: 760989
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROCK_ICE.GENERIC
+MsgId: Brrr, that cold on scales!
+MsgStr: 
+Thuật ngữ tham khảo: "Scales" => "Vẩy"
+
+Item:
+Id: 760990
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROCK_ICE.MELTED
+MsgId: Slushy puddle.
+MsgStr: 
+
+Item:
+Id: 760991
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROCK_ICE_MELTED
+MsgId: Slushy puddle.
+MsgStr: 
+
+Item:
+Id: 760992
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROCK_LIGHT.GENERIC
+MsgId: Don't like it, florp.
+MsgStr: 
+
+Item:
+Id: 760993
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROCK_LIGHT.LOW
+MsgId: It getting all rocky.
+MsgStr: 
+
+Item:
+Id: 760994
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROCK_LIGHT.NORMAL
+MsgId: Glowy!
+MsgStr: 
+
+Item:
+Id: 760995
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROCK_LIGHT.OUT
+MsgId: Hmm.
+MsgStr: 
+
+Item:
+Id: 760996
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROCK_MOON
+MsgId: Moonrock!
+MsgStr: 
+
+Item:
+Id: 760997
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROCK_PETRIFIED_TREE
+MsgId: Rock shaped like tree?
+MsgStr: 
+Thuật ngữ tham khảo: "Rock" => "Đá tảng"
+
+Item:
+Id: 760998
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROCK_PETRIFIED_TREE_OLD
+MsgId: Rock shaped like tree?
+MsgStr: 
+Thuật ngữ tham khảo: "Rock" => "Đá tảng"
+
+Item:
+Id: 760999
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROOK
+MsgId: Look mean...
+MsgStr: 
+
+Item:
+Id: 761000
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROOK_NIGHTMARE
+MsgId: Glorp! What wrong with it?!
+MsgStr: 
+
+Item:
+Id: 761001
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROPE
+MsgId: For tying, florpt.
+MsgStr: 
+
+Item:
+Id: 761002
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROPE_BRIDGE_KIT
+MsgId: Don't scared! Me build SOOO safe bridge.
+MsgStr: 
+Thuật ngữ tham khảo: "Safe" => "Két Sắt"
+
+Item:
+Id: 761003
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROSEGLASSESHAT.GENERIC
+MsgId: It Weenonwna-lady's plant eyes!
+MsgStr: 
+Thuật ngữ tham khảo: "Plant" => "Thực vật"
+
+Item:
+Id: 761005
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROTTENEGG.GENERIC
+MsgId: Has good stink to it.
+MsgStr: 
+
+Item:
+Id: 761006
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.ROYAL_JELLY
+MsgId: Mmmmmmmm!
+MsgStr: 
+
+Item:
+Id: 761007
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RUBBLE
+MsgId: Rocks and things.
+MsgStr: 
+Thuật ngữ tham khảo: "Rocks" => "Cục đá"
+
+Item:
+Id: 761008
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RUINSHAT
+MsgId: Queen Wurt!!
+MsgStr: 
+
+Item:
+Id: 761009
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RUINS_BAT
+MsgId: Clobbery!
+MsgStr: 
+
+Item:
+Id: 761010
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.RUINS_RUBBLE
+MsgId: Rocks and things.
+MsgStr: 
+Thuật ngữ tham khảo: "Rocks" => "Cục đá"
+
+Item:
+Id: 761011
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SACRED_CHEST.GENERIC
+MsgId: Wonder what inside?
+MsgStr: 
+
+Item:
+Id: 761012
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SACRED_CHEST.LOCKED
+MsgId: Hey!
+MsgStr: 
+
+Item:
+Id: 761013
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SADDLEHORN
+MsgId: Get saddle off the big fuzzy.
+MsgStr: 
+Thuật ngữ tham khảo: "Saddle" => "Yên cưỡi"
+
+Item:
+Id: 761014
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SADDLE_BASIC
+MsgId: Hee-hee, has little horns on it!
+MsgStr: 
+
+Item:
+Id: 761015
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SADDLE_RACE
+MsgId: Butterflies good for something, flort!
+MsgStr: 
+
+Item:
+Id: 761016
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SADDLE_SHADOW
+MsgId: Pretty friend riding chair.
+MsgStr: 
+
+Item:
+Id: 761017
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SADDLE_WAR
+MsgId: Will fight for glory of Mermfolk!
+MsgStr: 
+
+Item:
+Id: 761018
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SADDLE_WATHGRITHR
+MsgId: Me next, ride big fuzzy!
+MsgStr: 
+
+Item:
+Id: 761019
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SALSA
+MsgId: Spicy veggie mush!
+MsgStr: 
+
+Item:
+Id: 761020
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SALTBOX
+MsgId: Good place for hiding tasty things.
+MsgStr: 
+
+Item:
+Id: 761021
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SALTLICK
+MsgId: What you mean, \"only for beefalo\"?
+MsgStr: 
+Thuật ngữ tham khảo: "Beefalo" => "Bò Lai"
+
+Item:
+Id: 761022
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SALTLICK_IMPROVED
+MsgId: Mmm, salty!
+MsgStr: 
+
+Item:
+Id: 761023
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SALTROCK
+MsgId: Weird rock.
+MsgStr: 
+Thuật ngữ tham khảo: "Rock" => "Đá tảng"
+
+Item:
+Id: 761024
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SALTSTACK.GENERIC
+MsgId: Weird rocks, florp.
+MsgStr: 
+Thuật ngữ tham khảo: "Rocks" => "Cục đá"
+
+Item:
+Id: 761025
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SALTSTACK.GROWING
+MsgId: It growing!
+MsgStr: 
+
+Item:
+Id: 761026
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SALTSTACK.MINED_OUT
+MsgId: Nothing left for taking.
+MsgStr: 
+
+Item:
+Id: 761027
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SALTY_DOG
+MsgId: Get salt, sea doggie!
+MsgStr: 
+Thuật ngữ tham khảo: "Salt" => "Muối"
+
+Item:
+Id: 761028
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SALTY_DOGHAT
+MsgId: Soft fur like sea doggie!
+MsgStr: 
+
+Item:
+Id: 761029
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SANDBLOCK
+MsgId: Gloorph!
+MsgStr: 
+
+Item:
+Id: 761030
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SANDSPIKE
+MsgId: Aaah! Spiky!
+MsgStr: 
+
+Item:
+Id: 761031
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SANITYROCK.ACTIVE
+MsgId: Move, florp!
+MsgStr: 
+
+Item:
+Id: 761032
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SANITYROCK.INACTIVE
+MsgId: Maybe imagined it...
+MsgStr: 
+
+Item:
+Id: 761033
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SAPLING.BURNING
+MsgId: Fire!
+MsgStr: 
+Thuật ngữ tham khảo: "Fire" => "Lửa"
+
+Item:
+Id: 761034
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SAPLING.DISEASED
+MsgId: Hmm... look bad.
+MsgStr: 
+
+Item:
+Id: 761035
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SAPLING.DISEASING
+MsgId: Something wrong with it, florp.
+MsgStr: 
+
+Item:
+Id: 761036
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SAPLING.GENERIC
+MsgId: Little tree!
+MsgStr: 
+
+Item:
+Id: 761037
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SAPLING.PICKED
+MsgId: Took it!
+MsgStr: 
+
+Item:
+Id: 761038
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SAPLING.WITHERED
+MsgId: Too dry, florp.
+MsgStr: 
+
+Item:
+Id: 761039
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCANDATA
+MsgId: Glurgh... can Wicker-lady read it?
+MsgStr: 
+
+Item:
+Id: 761040
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCARECROW.BURNING
+MsgId: Nooooo! Save him!!
+MsgStr: 
+
+Item:
+Id: 761041
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCARECROW.BURNT
+MsgId: Glort...
+MsgStr: 
+
+Item:
+Id: 761042
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCARECROW.GENERIC
+MsgId: Like him very much!
+MsgStr: 
+
+Item:
+Id: 761043
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCORCHED_SKELETON
+MsgId: Got too close to campfire, florp.
+MsgStr: 
+Thuật ngữ tham khảo: "Campfire" => "Lửa trại"
+
+Item:
+Id: 761044
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCRAPBOOK_PAGE
+MsgId: Found page for scrappy book!
+MsgStr: 
+
+Item:
+Id: 761045
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCRAPHAT
+MsgId: Blegh, still smell like nasty Pigman!
+MsgStr: 
+
+Item:
+Id: 761046
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCRAP_MONOCLEHAT
+MsgId: Can see everything!
+MsgStr: 
+
+Item:
+Id: 761047
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCULPTINGTABLE.BLOCK
+MsgId: Gonna make something good, flort!
+MsgStr: 
+
+Item:
+Id: 761048
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCULPTINGTABLE.BURNT
+MsgId: Can't use now.
+MsgStr: 
+
+Item:
+Id: 761049
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCULPTINGTABLE.EMPTY
+MsgId: Make things outta rocks!
+MsgStr: 
+Thuật ngữ tham khảo: "Rocks" => "Cục đá"
+
+Item:
+Id: 761050
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCULPTINGTABLE.SCULPTURE
+MsgId: Look! Made it with own claws!
+MsgStr: 
+
+Item:
+Id: 761051
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCULPTURE_BISHOPBODY.COVERED
+MsgId: Something weird about it.
+MsgStr: 
+
+Item:
+Id: 761052
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCULPTURE_BISHOPBODY.FINISHED
+MsgId: All done!
+MsgStr: 
+
+Item:
+Id: 761053
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCULPTURE_BISHOPBODY.READY
+MsgId: Huh?
+MsgStr: 
+
+Item:
+Id: 761054
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCULPTURE_BISHOPBODY.UNCOVERED
+MsgId: It lost its head, flurp!
+MsgStr: 
+
+Item:
+Id: 761055
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCULPTURE_BISHOPHEAD
+MsgId: Look lost, flort.
+MsgStr: 
+
+Item:
+Id: 761056
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCULPTURE_KNIGHTBODY.COVERED
+MsgId: What that supposed to be?
+MsgStr: 
+
+Item:
+Id: 761057
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCULPTURE_KNIGHTBODY.FINISHED
+MsgId: All together!
+MsgStr: 
+
+Item:
+Id: 761058
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCULPTURE_KNIGHTBODY.READY
+MsgId: Something happening...
+MsgStr: 
+
+Item:
+Id: 761059
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCULPTURE_KNIGHTBODY.UNCOVERED
+MsgId: It broken!
+MsgStr: 
+
+Item:
+Id: 761060
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCULPTURE_KNIGHTHEAD
+MsgId: Look like Ironfolk head.
+MsgStr: 
+
+Item:
+Id: 761061
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCULPTURE_ROOKBODY.COVERED
+MsgId: That a strange lump of rock...
+MsgStr: 
+Thuật ngữ tham khảo: "Rock" => "Đá tảng"
+
+Item:
+Id: 761062
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCULPTURE_ROOKBODY.FINISHED
+MsgId: Look a bit better, flurt.
+MsgStr: 
+
+Item:
+Id: 761063
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCULPTURE_ROOKBODY.READY
+MsgId: Something happening...
+MsgStr: 
+
+Item:
+Id: 761064
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCULPTURE_ROOKBODY.UNCOVERED
+MsgId: Missing something...
+MsgStr: 
+
+Item:
+Id: 761065
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SCULPTURE_ROOKNOSE
+MsgId: Hm, think this belong somewhere.
+MsgStr: 
+
+Item:
+Id: 761066
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SEAFARING_PROTOTYPER.BURNT
+MsgId: That seem to happen a lot...
+MsgStr: 
+
+Item:
+Id: 761067
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SEAFARING_PROTOTYPER.GENERIC
+MsgId: Make things for water, florp!
+MsgStr: 
+
+Item:
+Id: 761068
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SEAFOODGUMBO
+MsgId: Fish looks so sad in there...
+MsgStr: 
+Thuật ngữ tham khảo: "Fish" => "Câu Cá"
+
+Item:
+Id: 761069
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SEASTACK
+MsgId: Ooooh, big rock!
+MsgStr: 
+Thuật ngữ tham khảo: "Rock" => "Đá tảng"
+
+Item:
+Id: 761070
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SECURITY_PULSE_CAGE
+MsgId: Glorp! Empty!
+MsgStr: 
+
+Item:
+Id: 761071
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SECURITY_PULSE_CAGE_FULL
+MsgId: Oooh, like glowy ball.
+MsgStr: 
+
+Item:
+Id: 761072
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SEEDPOUCH
+MsgId: Stuff seeds inside.
+MsgStr: 
+Thuật ngữ tham khảo: "Seeds" => "Hạt"
+
+Item:
+Id: 761073
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SEEDS
+MsgId: Put in dirt, florp!
+MsgStr: 
+
+Item:
+Id: 761074
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SEEDS_COOKED
+MsgId: Teeny snacks!
+MsgStr: 
+
+Item:
+Id: 761075
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SENTRYWARD
+MsgId: How it float like that?
+MsgStr: 
+
+Item:
+Id: 761076
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SEWING_KIT
+MsgId: Glurgh... needle hard to hold with claws...
+MsgStr: 
+
+Item:
+Id: 761077
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SEWING_MANNEQUIN.BURNT
+MsgId: Good. Won't stare anymore, florp.
+MsgStr: 
+
+Item:
+Id: 761078
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SEWING_MANNEQUIN.GENERIC
+MsgId: Quit staring, flort!
+MsgStr: 
+
+Item:
+Id: 761079
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SEWING_TAPE
+MsgId: Weenowna-lady good at fixing.
+MsgStr: 
+
+Item:
+Id: 761080
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHADOWDANCER
+MsgId: Grrr! What it doing? Why it move like that?!
+MsgStr: 
+
+Item:
+Id: 761081
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHADOWDIGGER
+MsgId: He use the bad magic!!
+MsgStr: 
+
+Item:
+Id: 761082
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHADOWHEART
+MsgId: Feel... sad...
+MsgStr: 
+
+Item:
+Id: 761083
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHADOWRIFT_PORTAL
+MsgId: Glorp! Ground broken!
+MsgStr: 
+
+Item:
+Id: 761084
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHADOWTHRALL_CENTIPEDE.BODY
+MsgId: Big and strong and pretty!
+MsgStr: 
+
+Item:
+Id: 761085
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHADOWTHRALL_CENTIPEDE.FLIPPED
+MsgId: Haha! Florpt!
+MsgStr: 
+
+Item:
+Id: 761086
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHADOWTHRALL_CENTIPEDE.HEAD
+MsgId: Where you going?
+MsgStr: 
+
+Item:
+Id: 761087
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHADOWTHRALL_HANDS
+MsgId: G-go away!!
+MsgStr: 
+
+Item:
+Id: 761088
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHADOWTHRALL_HORNS
+MsgId: Hey! No eating!!
+MsgStr: 
+
+Item:
+Id: 761089
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHADOWTHRALL_MOUTH
+MsgId: Glorp! Much teeth!
+MsgStr: 
+
+Item:
+Id: 761090
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHADOWTHRALL_PARASITE
+MsgId: Aww. Just wants a hug. Florp!
+MsgStr: 
+
+Item:
+Id: 761091
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHADOWTHRALL_WINGS
+MsgId: N-not scared of you, florp!
+MsgStr: 
+
+Item:
+Id: 761092
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHADOW_BATTLEAXE
+MsgId: Choppy time!
+MsgStr: 
+
+Item:
+Id: 761093
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHADOW_BEEF_BELL
+MsgId: Wake up sleeping friend.
+MsgStr: 
+
+Item:
+Id: 761094
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHADOW_FORGE
+MsgId: Make me things! Now!
+MsgStr: 
+
+Item:
+Id: 761095
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHADOW_FORGE_KIT
+MsgId: It not ready yet.
+MsgStr: 
+
+Item:
+Id: 761096
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHADOW_HEART_VEIN
+MsgId: Thanks, sad heart.
+MsgStr: 
+
+Item:
+Id: 761097
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHALLOW_GRAVE
+MsgId: Who that?
+MsgStr: 
+
+Item:
+Id: 761098
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHARK
+MsgId: Glurp... they not look very nice.
+MsgStr: 
+
+Item:
+Id: 761099
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHARKBOI
+MsgId: Grrr, bad fishie!
+MsgStr: 
+
+Item:
+Id: 761100
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHELLWEAVER
+MsgId: Why everything so salty?
+MsgStr: 
+
+Item:
+Id: 761101
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHELL_CLUSTER
+MsgId: Tried biting, isn't food.
+MsgStr: 
+
+Item:
+Id: 761102
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHIELDOFTERROR
+MsgId: How come it allowed to bite, but me get in trouble?!
+MsgStr: 
+
+Item:
+Id: 761103
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHOVEL
+MsgId: Scooper.
+MsgStr: 
+
+Item:
+Id: 761104
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHOVEL_LUNARPLANT
+MsgId: Good scooper-upper, florp.
+MsgStr: 
+
+Item:
+Id: 761105
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHROOMBAIT
+MsgId: Nope.
+MsgStr: 
+
+Item:
+Id: 761106
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHROOMCAKE
+MsgId: It best cake ever!
+MsgStr: 
+
+Item:
+Id: 761107
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SHROOM_SKIN
+MsgId: Oooh, had such nice skin!
+MsgStr: 
+
+Item:
+Id: 761108
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SIESTAHUT.BURNT
+MsgId: Gotta find new napping spot...
+MsgStr: 
+
+Item:
+Id: 761109
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SIESTAHUT.GENERIC
+MsgId: Wanna take a nap! Nap right here...
+MsgStr: 
+
+Item:
+Id: 761110
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SILK
+MsgId: Spiderfolk loogies!
+MsgStr: 
+
+Item:
+Id: 761111
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SINGINGSHELL_OCTAVE3.GENERIC
+MsgId: Is big shell!
+MsgStr: 
+
+Item:
+Id: 761112
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SINGINGSHELL_OCTAVE4.GENERIC
+MsgId: Pretty!
+MsgStr: 
+
+Item:
+Id: 761113
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SINGINGSHELL_OCTAVE5.GENERIC
+MsgId: Think there some kind of bug inside?
+MsgStr: 
+
+Item:
+Id: 761114
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SISTURN.GENERIC
+MsgId: What in jar? Snacks?
+MsgStr: 
+
+Item:
+Id: 761115
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SISTURN.LOTS_OF_FLOWERS
+MsgId: So is... not snack jar?
+MsgStr: 
+
+Item:
+Id: 761116
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SISTURN.LOTS_OF_FLOWERS_BLOSSOM
+MsgId: Huh? Who that?
+MsgStr: 
+
+Item:
+Id: 761117
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SISTURN.LOTS_OF_FLOWERS_EVIL
+MsgId: Glurgh... my brain breaking.
+MsgStr: 
+
+Item:
+Id: 761118
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SISTURN.SOME_FLOWERS
+MsgId: Scale-less like putting flowers here.
+MsgStr: 
+
+Item:
+Id: 761119
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SKELETON
+MsgId: It dead.
+MsgStr: 
+
+Item:
+Id: 761120
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SKELETONHAT
+MsgId: Glurph... head feel funny...
+MsgStr: 
+
+Item:
+Id: 761121
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SKELETON_NOTPLAYER
+MsgId: Glorpt. Can't tell if Mermfolk or Pigfolk...
+MsgStr: 
+
+Item:
+Id: 761122
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SKELETON_PLAYER.DEFAULT
+MsgId: Bye-bye...
+MsgStr: 
+
+Item:
+Id: 761123
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SKELETON_PLAYER.FEMALE
+MsgId: Something happen to them...
+MsgStr: 
+
+Item:
+Id: 761124
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SKELETON_PLAYER.MALE
+MsgId: Something happen to them...
+MsgStr: 
+
+Item:
+Id: 761125
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SKELETON_PLAYER.ROBOT
+MsgId: Something happen to them...
+MsgStr: 
+
+Item:
+Id: 761126
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SKETCH
+MsgId: Oooh, picture!
+MsgStr: 
+
+Item:
+Id: 761127
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SKULLCHEST
+MsgId: Maybe something good inside!
+MsgStr: 
+
+Item:
+Id: 761128
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLEEPBOMB
+MsgId: Hee-hee, nighty night!
+MsgStr: 
+
+Item:
+Id: 761129
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOT.GENERIC
+MsgId: Hee-hee, look fun!
+MsgStr: 
+
+Item:
+Id: 761130
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOTAMMO_CONTAINER
+MsgId: Pine boy pockets.
+MsgStr: 
+
+Item:
+Id: 761131
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOTAMMO_DREADSTONE
+MsgId: Bits of stuff.
+MsgStr: 
+
+Item:
+Id: 761132
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOTAMMO_FREEZE
+MsgId: Bits of stuff.
+MsgStr: 
+
+Item:
+Id: 761133
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOTAMMO_GELBLOB
+MsgId: Bits of stuff.
+MsgStr: 
+
+Item:
+Id: 761134
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOTAMMO_GOLD
+MsgId: Bits of stuff.
+MsgStr: 
+
+Item:
+Id: 761135
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOTAMMO_GUNPOWDER
+MsgId: Bits of stuff.
+MsgStr: 
+
+Item:
+Id: 761136
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOTAMMO_HONEY
+MsgId: Bits of stuff.
+MsgStr: 
+
+Item:
+Id: 761137
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOTAMMO_HORRORFUEL
+MsgId: Bits of stuff.
+MsgStr: 
+
+Item:
+Id: 761138
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOTAMMO_LUNARPLANTHUSK
+MsgId: Bits of stuff.
+MsgStr: 
+
+Item:
+Id: 761139
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOTAMMO_MARBLE
+MsgId: Bits of stuff.
+MsgStr: 
+
+Item:
+Id: 761140
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOTAMMO_MOONGLASS
+MsgId: Bits of stuff
+MsgStr: 
+
+Item:
+Id: 761141
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOTAMMO_POOP
+MsgId: Tiny poops.
+MsgStr: 
+
+Item:
+Id: 761142
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOTAMMO_PUREBRILLIANCE
+MsgId: Bits of stuff.
+MsgStr: 
+
+Item:
+Id: 761143
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOTAMMO_ROCK
+MsgId: Bits of stuff.
+MsgStr: 
+
+Item:
+Id: 761144
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOTAMMO_SCRAPFEATHER
+MsgId: Bits of stuff.
+MsgStr: 
+
+Item:
+Id: 761145
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOTAMMO_SLOW
+MsgId: Bits of stuff.
+MsgStr: 
+
+Item:
+Id: 761146
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOTAMMO_STINGER
+MsgId: Bits of stuff.
+MsgStr: 
+
+Item:
+Id: 761147
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOTAMMO_THULECITE
+MsgId: Bits of stuff.
+MsgStr: 
+
+Item:
+Id: 761148
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOTMODKIT
+MsgId: Pine boy shooty toy. Florp!
+MsgStr: 
+
+Item:
+Id: 761149
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOT_BAND_MIMIC
+MsgId: Pine boy shooty toy. Florp!
+MsgStr: 
+
+Item:
+Id: 761150
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOT_BAND_PIGSKIN
+MsgId: Pine boy shooty toy. Florp!
+MsgStr: 
+
+Item:
+Id: 761151
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOT_BAND_TENTACLE
+MsgId: Pine boy shooty toy. Florp!
+MsgStr: 
+
+Item:
+Id: 761152
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOT_FRAME_BONE
+MsgId: Pine boy shooty toy. Florp!
+MsgStr: 
+
+Item:
+Id: 761153
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOT_FRAME_GEMS
+MsgId: Pine boy toys. Florp!
+MsgStr: 
+
+Item:
+Id: 761154
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOT_FRAME_WAGPUNK
+MsgId: Pine boy shooty toy. Florp!
+MsgStr: 
+
+Item:
+Id: 761155
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOT_FRAME_WAGPUNK_0
+MsgId: Pine boy toys. Florp!
+MsgStr: 
+
+Item:
+Id: 761156
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOT_HANDLE_JELLY
+MsgId: Pine boy toys. Florp!
+MsgStr: 
+
+Item:
+Id: 761157
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOT_HANDLE_SILK
+MsgId: Pine boy shooty toy. Florp!
+MsgStr: 
+
+Item:
+Id: 761158
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOT_HANDLE_STICKY
+MsgId: Pine boy shooty toy. Florp!
+MsgStr: 
+
+Item:
+Id: 761159
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLINGSHOT_HANDLE_VOIDCLOTH
+MsgId: Pine boy shooty toy. Florp!
+MsgStr: 
+
+Item:
+Id: 761160
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLURPER
+MsgId: Ha ha, tickly!
+MsgStr: 
+
+Item:
+Id: 761161
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLURPERPELT
+MsgId: Took its fur, florp.
+MsgStr: 
+
+Item:
+Id: 761162
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLURPER_PELT
+MsgId: Took its fur, florp.
+MsgStr: 
+
+Item:
+Id: 761163
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLURTLE
+MsgId: Look like a friend, flort.
+MsgStr: 
+
+Item:
+Id: 761164
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLURTLEHAT
+MsgId: My shell now!
+MsgStr: 
+
+Item:
+Id: 761165
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLURTLEHOLE
+MsgId: Ooooh, slimy!
+MsgStr: 
+
+Item:
+Id: 761166
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLURTLESLIME
+MsgId: Splodey loogies!
+MsgStr: 
+
+Item:
+Id: 761167
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SLURTLE_SHELLPIECES
+MsgId: Aw, it broke!
+MsgStr: 
+
+Item:
+Id: 761168
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SMALLBIRD.GENERIC
+MsgId: It so teeny!
+MsgStr: 
+
+Item:
+Id: 761169
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SMALLBIRD.HUNGRY
+MsgId: Wants snack, florp.
+MsgStr: 
+
+Item:
+Id: 761170
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SMALLBIRD.SLEEPING
+MsgId: Sleep tight!
+MsgStr: 
+
+Item:
+Id: 761171
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SMALLBIRD.STARVING
+MsgId: Look really hungry.
+MsgStr: 
+
+Item:
+Id: 761172
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SMALLGHOST
+MsgId: Glurp! Y-you not scare me!
+MsgStr: 
+
+Item:
+Id: 761173
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SMALLMEAT
+MsgId: Glurgh...
+MsgStr: 
+
+Item:
+Id: 761174
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SMALLMEAT_DRIED
+MsgId: Glargh, it even worse now.
+MsgStr: 
+
+Item:
+Id: 761175
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SNAPPER
+MsgId: Toothy.
+MsgStr: 
+
+Item:
+Id: 761176
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SNOWBALL_ITEM
+MsgId: Oh, Webby boy...
+MsgStr: 
+
+Item:
+Id: 761177
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SNOWMAN.GENERIC
+MsgId: Hey, Snowfolk.
+MsgStr: 
+
+Item:
+Id: 761178
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SNOWMAN.SNOWBALL
+MsgId: Snowfolk missing part.
+MsgStr: 
+
+Item:
+Id: 761179
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SNURTLE
+MsgId: Has trustworthy face, florp.
+MsgStr: 
+
+Item:
+Id: 761180
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SOIL_AMENDER.GENERIC
+MsgId: Look kinda tasty, florp.
+MsgStr: 
+
+Item:
+Id: 761181
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SOIL_AMENDER.SPOILED
+MsgId: Ready for plants now?
+MsgStr: 
+
+Item:
+Id: 761182
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SOIL_AMENDER.STALE
+MsgId: Good and stinky!
+MsgStr: 
+
+Item:
+Id: 761183
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SOIL_AMENDER_FERMENTED
+MsgId: It ready!
+MsgStr: 
+
+Item:
+Id: 761184
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SPAT
+MsgId: He not look comfortable, florp.
+MsgStr: 
+
+Item:
+Id: 761185
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SPEAR
+MsgId: Stabby stick!
+MsgStr: 
+
+Item:
+Id: 761186
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SPEAR_GUNGNIR
+MsgId: Stabby!
+MsgStr: 
+
+Item:
+Id: 761187
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SPEAR_LANCE
+MsgId: Swirly!
+MsgStr: 
+
+Item:
+Id: 761188
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SPEAR_WATHGRITHR
+MsgId: Took Viking lady's stab stick!!
+MsgStr: 
+
+Item:
+Id: 761189
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SPEAR_WATHGRITHR_LIGHTNING
+MsgId: Ooh, stabby AND sparky.
+MsgStr: 
+
+Item:
+Id: 761190
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SPICEPACK
+MsgId: Keep foods inside!
+MsgStr: 
+
+Item:
+Id: 761191
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SPICE_CHILI
+MsgId: Hot bits!
+MsgStr: 
+
+Item:
+Id: 761192
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SPICE_GARLIC
+MsgId: Mmmm make breath smell nice.
+MsgStr: 
+
+Item:
+Id: 761193
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SPICE_SALT
+MsgId: This sand taste good!
+MsgStr: 
+
+Item:
+Id: 761194
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SPICE_SUGAR
+MsgId: YUM!!
+MsgStr: 
+
+Item:
+Id: 761195
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SPIDER.DEAD
+MsgId: Not so strong, flort.
+MsgStr: 
+
+Item:
+Id: 761196
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SPIDER.GENERIC
+MsgId: Spiderfolk...
+MsgStr: 
+
+Item:
+Id: 761197
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SPIDER.SLEEPING
+MsgId: Shhhh...
+MsgStr: 
+
+Item:
+Id: 761198
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SPIDERCORPSE.BURNING
+MsgId: Better to burn dead Spiderfolk.
+MsgStr: 
+
+Item:
+Id: 761199
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SPIDERCORPSE.GENERIC
+MsgId: That Spiderfolk dead.
+MsgStr: 
+
+Item:
+Id: 761200
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SPIDERCORPSE.REVIVING
+MsgId: I know should have burned dead Spiderfolk!
+MsgStr: 
+
+Item:
+Id: 761201
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SPIDERDEN
+MsgId: Glurgh, stepped in sticky stuff!
+MsgStr: 
+
+Item:
+Id: 761202
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SPIDERDEN_BEDAZZLER
+MsgId: What you making Webby boy?
+MsgStr: 
+
+Item:
+Id: 761203
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SPIDEREGGSACK
+MsgId: Blegh, this where baby Spiderfolk come from?
+MsgStr: 
+
+Item:
+Id: 761204
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SPIDERGLAND
+MsgId: Medicine!
+MsgStr: 
+
+Item:
+Id: 761205
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SPIDERHAT
+MsgId: Ha ha, look like Webby boy.
+MsgStr: 
+
+Item:
+Id: 761206
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SPIDERHOLE
+MsgId: Spiderfolk hole!
+MsgStr: 
+Thuật ngữ tham khảo: "Hole" => "Hố"
+
+Item:
+Id: 761207
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SPIDERHOLE_ROCK
+MsgId: All webby...
+MsgStr: 
+
+Item:
+Id: 761208
+MsgCtxt: STRINGS.CHARACTERS.WURT.DESCRIBE.SPIDERQUEEN
+MsgId: She a mighty Queen!
+MsgStr: 
+
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "[\n  {\"id\": 760908, \"suggestedTranslation\": \"Xin chào, thỏ!\", \"rating\": 9.0},\n  {\"id\": 760909, \"suggestedTranslation\": \"Tớ thích nó lắm.\", \"rating\": 9.0},\n  {\"id\": 760910, \"suggestedTranslation\": \"Nhà thỏ.\", \"rating\": 9.0},\n  {\"id\": 760911, \"suggestedTranslation\": \"Có ai ở nhà không, florp?\", \"rating\": 9.0},\n  {\"id\": 760912, \"suggestedTranslation\": \"Ái chà, muốn ăn cái đó cơ!\", \"rating\": 9.0},\n  {\"id\": 760913, \"suggestedTranslation\": \"Hít hà... có ai ở bên trong...\", \"rating\": 9.0},\n  {\"id\": 760914, \"suggestedTranslation\": \"Tớ thổi sừng thỏ nè.\", \"rating\": 9.0},\n  {\"id\": 760915, \"suggestedTranslation\": \"Cảm ơn thỏ nhé!\", \"rating\": 9.0},\n  {\"id\": 760916, \"suggestedTranslation\": \"Flort, Thỏ Người! Tớ tưởng chúng mình là bạn!\", \"rating\": 9.0},\n  {\"id\": 760917, \"suggestedTranslation\": \"Sừng thỏ già cáu kỉnh!\", \"rating\": 9.0},\n  {\"id\": 760918, \"suggestedTranslation\": \"Con thỏ già cáu kỉnh thích đá đấm. Glurgh.\", \"rating\": 9.0},\n  {\"id\": 760919, \"suggestedTranslation\": \"Tớ bắt được cậu bây giờ!\", \"rating\": 9.0},\n  {\"id\": 760920, \"suggestedTranslation\": \"Chào con thỏ có râu thân thiện!\", \"rating\": 9.0},\n  {\"id\": 760921, \"suggestedTranslation\": \"Sao kẻ không vảy lại sợ mưa thế?\", \"rating\": 9.0},\n  {\"id\": 760922, \"suggestedTranslation\": \"Mưa có gì mà đáng sợ!\", \"rating\": 9.0},\n  {\"id\": 760923, \"suggestedTranslation\": \"Thôi vậy, florp.\", \"rating\": 9.0},\n  {\"id\": 760924, \"suggestedTranslation\": \"Mong là trời sắp mưa!\", \"rating\": 9.0},\n  {\"id\": 760925, \"suggestedTranslation\": \"Cái này ngon nhất!!\", \"rating\": 9.0},\n  {\"id\": 760926, \"suggestedTranslation\": \"Thứ dùng để cắt hả?\", \"rating\": 9.0},\n  {\"id\": 760927, \"suggestedTranslation\": \"Lại nữa.\", \"rating\": 9.0},\n  {\"id\": 760928, \"suggestedTranslation\": \"Lại nữa!\", \"rating\": 9.0},\n  {\"id\": 760929, \"suggestedTranslation\": \"Chán ngắt. Bài tiếp theo.\", \"rating\": 9.0},\n  {\"id\": 760930, \"suggestedTranslation\": \"Tiếp theo.\", \"rating\": 9.0},\n  {\"id\": 760931, \"suggestedTranslation\": \"Còn gì nữa không?\", \"rating\": 9.0},\n  {\"id\": 760932, \"suggestedTranslation\": \"Dài quá.\", \"rating\": 9.0},\n  {\"id\": 760933, \"suggestedTranslation\": \"Tiếp theo.\", \"rating\": 9.0},\n  {\"id\": 760934, \"suggestedTranslation\": \"Không thích. Tiếp theo.\", \"rating\": 9.0},\n  {\"id\": 760935, \"suggestedTranslation\": \"Tiếp theo.\", \"rating\": 9.0},\n  {\"id\": 760936, \"suggestedTranslation\": \"Thích cái này.\", \"rating\": 9.0},\n  {\"id\": 760937, \"suggestedTranslation\": \"Chán ngắt. Bài tiếp theo.\", \"rating\": 9.0},\n  {\"id\": 760938, \"suggestedTranslation\": \"Không thích. Tiếp theo.\", \"rating\": 9.0},\n  {\"id\": 760939, \"suggestedTranslation\": \"Nó đẹp và ấm áp.\", \"rating\": 9.0},\n  {\"id\": 760940, \"suggestedTranslation\": \"Hừm, trông cũng hay phết.\", \"rating\": 9.0},\n  {\"id\": 760941, \"suggestedTranslation\": \"Có cái gì đó trong mắt nó kìa, florp.\", \"rating\": 9.0},\n  {\"id\": 760942, \"suggestedTranslation\": \"Có cái gì đang kêu lanh canh bên trong.\", \"rating\": 9.0},\n  {\"id\": 760943, \"suggestedTranslation\": \"Mấy thứ này không tốt cho cậu đâu, florp.\", \"rating\": 9.0},\n  {\"id\": 760944, \"suggestedTranslation\": \"Khá hơn một chút...\", \"rating\": 9.0},\n  {\"id\": 760945, \"suggestedTranslation\": \"Chào nấm!\", \"rating\": 9.0},\n  {\"id\": 760946, \"suggestedTranslation\": \"Đi ra đây!\", \"rating\": 9.0},\n  {\"id\": 760947, \"suggestedTranslation\": \"Không còn cái nào.\", \"rating\": 9.0},\n  {\"id\": 760948, \"suggestedTranslation\": \"Glurgh!! Đầm lầy đang cháy!\", \"rating\": 9.0},\n  {\"id\": 760949, \"suggestedTranslation\": \"Có rất nhiều thứ này trong đầm lầy!\", \"rating\": 9.0},\n  {\"id\": 760950, \"suggestedTranslation\": \"Phải tìm thêm thôi, flurp.\", \"rating\": 9.0},\n  {\"id\": 760951, \"suggestedTranslation\": \"Đã làm ra khối bụi rồi, florpt.\", \"rating\": 9.0},\n  {\"id\": 760952, \"suggestedTranslation\": \"Hừm... màu cam.\", \"rating\": 9.0},\n  {\"id\": 760953, \"suggestedTranslation\": \"Đồ cổ.\", \"rating\": 9.0},\n  {\"id\": 760954, \"suggestedTranslation\": \"Thôi được rồi.\", \"rating\": 9.0},\n  {\"id\": 760955, \"suggestedTranslation\": \"Ông chú tóc buồn cười bảo \\\"Khoa học\\\" xuất phát từ đây á?\", \"rating\": 9.0},\n  {\"id\": 760956, \"suggestedTranslation\": \"Chà, nó tiêu đời rồi.\", \"rating\": 9.0},\n  {\"id\": 760957, \"suggestedTranslation\": \"An-ki-mi... en...jun...\", \"rating\": 9.0},\n  {\"id\": 760958, \"suggestedTranslation\": \"Mừng là nó biến mất rồi.\", \"rating\": 9.0},\n  {\"id\": 760959, \"suggestedTranslation\": \"Glurp... không nên nghịch cái đó.\", \"rating\": 9.0},\n  {\"id\": 760960, \"suggestedTranslation\": \"Cái máy mũ kỳ dị bị cháy rồi.\", \"rating\": 9.0},\n  {\"id\": 760961, \"suggestedTranslation\": \"Chắc cậu tự bịa ra cái đó thôi, florp.\", \"rating\": 9.0},\n  {\"id\": 760962, \"suggestedTranslation\": \"Biến mọi thứ thành... những thứ khác!\", \"rating\": 9.0},\n  {\"id\": 760963, \"suggestedTranslation\": \"Glurgh... nó thối thật đấy.\", \"rating\": 9.0},\n  {\"id\": 760964, \"suggestedTranslation\": \"Ông chú tóc buồn cười... ổn chứ?\", \"rating\": 9.0},\n  {\"id\": 760965, \"suggestedTranslation\": \"Đây là phép thuật mạnh mẽ!\", \"rating\": 9.0},\n  {\"id\": 760966, \"suggestedTranslation\": \"Glurp! Nó vẫn đang cử động!\", \"rating\": 9.0},\n  {\"id\": 760967, \"suggestedTranslation\": \"Chúng không cứng rắn lắm đâu, flort!\", \"rating\": 9.0},\n  {\"id\": 760968, \"suggestedTranslation\": \"Trông giống gà tây dở tệ, nhưng ngửi lại giống rau củ?\", \"rating\": 9.0},\n  {\"id\": 760969, \"suggestedTranslation\": \"Chim đỏ.\", \"rating\": 9.0},\n  {\"id\": 760970, \"suggestedTranslation\": \"Chim nhỏ của tớ!\", \"rating\": 9.0},\n  {\"id\": 760971, \"suggestedTranslation\": \"Chim tuyết.\", \"rating\": 9.0},\n  {\"id\": 760972, \"suggestedTranslation\": \"Nó thích được vuốt ve.\", \"rating\": 9.0},\n  {\"id\": 760973, \"suggestedTranslation\": \"Làm cho cục bông to trông giống Người Sắt hả?\", \"rating\": 9.0},\n  {\"id\": 760974, \"suggestedTranslation\": \"Cậu bị kẹt à?\", \"rating\": 9.0},\n  {\"id\": 760975, \"suggestedTranslation\": \"Chỉ là một hòn đá tảng thôi, florpt.\", \"rating\": 9.0},\n  {\"id\": 760976, \"suggestedTranslation\": \"Đám cục đá, florp.\", \"rating\": 9.0},\n  {\"id\": 760977, \"suggestedTranslation\": \"Chào!\", \"rating\": 9.0},\n  {\"id\": 760978, \"suggestedTranslation\": \"Không có quả nào ở đây cả, flort.\", \"rating\": 9.0},\n  {\"id\": 760979, \"suggestedTranslation\": \"Lửa! Lửa!\", \"rating\": 9.0},\n  {\"id\": 760980, \"suggestedTranslation\": \"Trông nó ốm yếu quá, flurt.\", \"rating\": 9.0},\n  {\"id\": 760981, \"suggestedTranslation\": \"Có gì đó không ổn với nó...\", \"rating\": 9.0},\n  {\"id\": 760982, \"suggestedTranslation\": \"Hả? Mấy quả đó trông giống cục đá thế, flort.\", \"rating\": 9.0},\n  {\"id\": 760983, \"suggestedTranslation\": \"Mọc lại đi nào!\", \"rating\": 9.0},\n  {\"id\": 760984, \"suggestedTranslation\": \"Trông nó có vẻ khát nước.\", \"rating\": 9.0},\n  {\"id\": 760985, \"suggestedTranslation\": \"Ái! Cứng quá!\", \"rating\": 9.0},\n  {\"id\": 760986, \"suggestedTranslation\": \"Nó chín rồi!\", \"rating\": 9.0},\n  {\"id\": 760987, \"suggestedTranslation\": \"Làm cho nó ngon hơn rồi!\", \"rating\": 9.0},\n  {\"id\": 760988, \"suggestedTranslation\": \"Còn quá nhỏ để ra quả.\", \"rating\": 9.0},\n  {\"id\": 760989, \"suggestedTranslation\": \"Brrr, lạnh vẩy quá!\", \"rating\": 9.0},\n  {\"id\": 760990, \"suggestedTranslation\": \"Vũng nước bùn băng.\", \"rating\": 9.0},\n  {\"id\": 760991, \"suggestedTranslation\": \"Vũng nước bùn băng.\", \"rating\": 9.0},\n  {\"id\": 760992, \"suggestedTranslation\": \"Không thích nó lắm, florp.\", \"rating\": 9.0},\n  {\"id\": 760993, \"suggestedTranslation\": \"Nó đang hóa đá rồi.\", \"rating\": 9.0},\n  {\"id\": 760994, \"suggestedTranslation\": \"Phát sáng kìa!\", \"rating\": 9.0},\n  {\"id\": 760995, \"suggestedTranslation\": \"Hừm.\", \"rating\": 9.0},\n  {\"id\": 760996, \"suggestedTranslation\": \"Đá mặt trăng!\", \"rating\": 9.0},\n  {\"id\": 760997, \"suggestedTranslation\": \"Đá tảng hình cái cây hả?\", \"rating\": 9.0},\n  {\"id\": 760998, \"suggestedTranslation\": \"Đá tảng hình cái cây hả?\", \"rating\": 9.0},\n  {\"id\": 760999, \"suggestedTranslation\": \"Trông có vẻ dữ tợn...\", \"rating\": 9.0},\n  {\"id\": 761000, \"suggestedTranslation\": \"Glorp! Có chuyện gì với nó vậy?!\", \"rating\": 9.0},\n  {\"id\": 761001, \"suggestedTranslation\": \"Dùng để buộc, florpt.\", \"rating\": 9.0},\n  {\"id\": 761002, \"suggestedTranslation\": \"Đừng sợ! Tớ sẽ xây một cây cầu RẤT an toàn.\", \"rating\": 9.0},\n  {\"id\": 761003, \"suggestedTranslation\": \"Đó là mắt thực vật của chị Wunewna!\", \"rating\": 9.0},\n  {\"id\": 761005, \"suggestedTranslation\": \"Có mùi thối rất ra gì.\", \"rating\": 9.0},\n  {\"id\": 761006, \"suggestedTranslation\": \"Mmmmmmmm!\", \"rating\": 9.0},\n  {\"id\": 761007, \"suggestedTranslation\": \"Cục đá và những thứ khác.\", \"rating\": 9.0},\n  {\"id\": 761008, \"suggestedTranslation\": \"Nữ hoàng Wurt!!\", \"rating\": 9.0},\n  {\"id\": 761009, \"suggestedTranslation\": \"Dụng cụ đập phá!\", \"rating\": 9.0},\n  {\"id\": 761010, \"suggestedTranslation\": \"Cục đá và những thứ khác.\", \"rating\": 9.0},\n  {\"id\": 761011, \"suggestedTranslation\": \"Tự hỏi có gì bên trong nhỉ?\", \"rating\": 9.0},\n  {\"id\": 761012, \"suggestedTranslation\": \"Này!\", \"rating\": 9.0},\n  {\"id\": 761013, \"suggestedTranslation\": \"Tháo yên cưỡi khỏi cục bông to.\", \"rating\": 9.0},\n  {\"id\": 761014, \"suggestedTranslation\": \"Hì hì, có mấy cái sừng nhỏ trên đó kìa!\", \"rating\": 9.0},\n  {\"id\": 761015, \"suggestedTranslation\": \"Bướm hóa ra cũng hữu ích đấy chứ, flort!\", \"rating\": 9.0},\n  {\"id\": 761016, \"suggestedTranslation\": \"Ghế cưỡi của bạn hiền xinh đẹp.\", \"rating\": 9.0},\n  {\"id\": 761017, \"suggestedTranslation\": \"Sẽ chiến đấu vì vinh quang của Người Cá!\", \"rating\": 9.0},\n  {\"id\": 761018, \"suggestedTranslation\": \"Tới lượt tớ cưỡi cục bông to đây!\", \"rating\": 9.0},\n  {\"id\": 761019, \"suggestedTranslation\": \"Rau củ nhuyễn cay!\", \"rating\": 9.0},\n  {\"id\": 761020, \"suggestedTranslation\": \"Nơi hoàn hảo để giấu đồ ăn ngon.\", \"rating\": 9.0},\n  {\"id\": 761021, \"suggestedTranslation\": \"Ý cậu là sao, \\\"chỉ dành cho bò lai\\\"?\", \"rating\": 9.0},\n  {\"id\": 761022, \"suggestedTranslation\": \"Măm măm, mặn quá!\", \"rating\": 9.0},\n  {\"id\": 761023, \"suggestedTranslation\": \"Hòn đá tảng kỳ lạ.\", \"rating\": 9.0},\n  {\"id\": 761024, \"suggestedTranslation\": \"Mấy cục đá kỳ lạ, florp.\", \"rating\": 9.0},\n  {\"id\": 761025, \"suggestedTranslation\": \"Nó đang lớn kìa!\", \"rating\": 9.0},\n  {\"id\": 761026, \"suggestedTranslation\": \"Không còn gì để lấy nữa.\", \"rating\": 9.0},\n  {\"id\": 761027, \"suggestedTranslation\": \"Lấy muối đi, cún biển ơi!\", \"rating\": 9.0},\n  {\"id\": 761028, \"suggestedTranslation\": \"Bộ lông mềm mịn như cún biển!\", \"rating\": 9.0},\n  {\"id\": 761029, \"suggestedTranslation\": \"Gloorph!\", \"rating\": 9.0},\n  {\"id\": 761030, \"suggestedTranslation\": \"Áaa! Nhọn quá!\", \"rating\": 9.0},\n  {\"id\": 761031, \"suggestedTranslation\": \"Tránh ra nào, florp!\", \"rating\": 9.0},\n  {\"id\": 761032, \"suggestedTranslation\": \"Chắc là tưởng tượng ra thôi...\", \"rating\": 9.0},\n  {\"id\": 761033, \"suggestedTranslation\": \"Lửa!\", \"rating\": 9.0},\n  {\"id\": 761034, \"suggestedTranslation\": \"Hừm... trông tệ quá.\", \"rating\": 9.0},\n  {\"id\": 761035, \"suggestedTranslation\": \"Có cái gì đó không ổn với nó, florp.\", \"rating\": 9.0},\n  {\"id\": 761036, \"suggestedTranslation\": \"Cái cây nhỏ!\", \"rating\": 9.0},\n  {\"id\": 761037, \"suggestedTranslation\": \"Lấy được rồi!\", \"rating\": 9.0},\n  {\"id\": 761038, \"suggestedTranslation\": \"Khô quá rồi, florp.\", \"rating\": 9.0},\n  {\"id\": 761039, \"suggestedTranslation\": \"Glurgh... chị Wicker đọc được không nhỉ?\", \"rating\": 9.0},\n  {\"id\": 761040, \"suggestedTranslation\": \"Khônggggg! Cứu bác ấy với!!\", \"rating\": 9.0},\n  {\"id\": 761041, \"suggestedTranslation\": \"Glort...\", \"rating\": 9.0},\n  {\"id\": 761042, \"suggestedTranslation\": \"Thích bác ấy lắm!\", \"rating\": 9.0},\n  {\"id\": 761043, \"suggestedTranslation\": \"Đứng gần lửa trại quá đấy, florp.\", \"rating\": 9.0},\n  {\"id\": 761044, \"suggestedTranslation\": \"Tìm được trang cho cuốn sách nham nhở rồi!\", \"rating\": 9.0},\n  {\"id\": 761045, \"suggestedTranslation\": \"Blegh, vẫn còn mùi của tên Người Lợn đáng ghét!\", \"rating\": 9.0},\n  {\"id\": 761046, \"suggestedTranslation\": \"Nhìn thấy mọi thứ luôn!\", \"rating\": 9.0},\n  {\"id\": 761047, \"suggestedTranslation\": \"Sắp làm ra món gì ngon rồi đây, flort!\", \"rating\": 9.0},\n  {\"id\": 761048, \"suggestedTranslation\": \"Giờ không dùng được.\", \"rating\": 9.0},\n  {\"id\": 761049, \"suggestedTranslation\": \"Tạo ra mọi thứ từ cục đá!\", \"rating\": 9.0},\n  {\"id\": 761050, \"suggestedTranslation\": \"Nhìn kìa! Tự tay làm đấy!\", \"rating\": 9.0},\n  {\"id\": 761051, \"suggestedTranslation\": \"Có gì đó kỳ lạ về nó.\", \"rating\": 9.0},\n  {\"id\": 761052, \"suggestedTranslation\": \"Xong hết rồi!\", \"rating\": 9.0},\n  {\"id\": 761053, \"suggestedTranslation\": \"Hả?\", \"rating\": 9.0},\n  {\"id\": 761054, \"suggestedTranslation\": \"Nó bị mất đầu rồi, flurp!\", \"rating\": 9.0},\n  {\"id\": 761055, \"suggestedTranslation\": \"Trông có vẻ lạc đường, flort.\", \"rating\": 9.0},\n  {\"id\": 761056, \"suggestedTranslation\": \"Cái đó có ý nghĩa gì nhỉ?\", \"rating\": 9.0},\n  {\"id\": 761057, \"suggestedTranslation\": \"Đã lắp lại với nhau!\", \"rating\": 9.0},\n  {\"id\": 761058, \"suggestedTranslation\": \"Có chuyện gì đang xảy ra...\", \"rating\": 9.0},\n  {\"id\": 761059, \"suggestedTranslation\": \"Nó hỏng rồi!\", \"rating\": 9.0},\n  {\"id\": 761060, \"suggestedTranslation\": \"Trông giống đầu Người Sắt.\", \"rating\": 9.0},\n  {\"id\": 761061, \"suggestedTranslation\": \"Đó là một cục đá tảng kỳ lạ...\", \"rating\": 9.0},\n  {\"id\": 761062, \"suggestedTranslation\": \"Trông khá hơn một chút rồi, flurt.\", \"rating\": 9.0},\n  {\"id\": 761063, \"suggestedTranslation\": \"Có chuyện gì đang xảy ra...\", \"rating\": 9.0},\n  {\"id\": 761064, \"suggestedTranslation\": \"Thiếu mất thứ gì đó...\", \"rating\": 9.0},\n  {\"id\": 761065, \"suggestedTranslation\": \"Hừm, nghĩ cái này thuộc về chỗ nào đó.\", \"rating\": 9.0},\n  {\"id\": 761066, \"suggestedTranslation\": \"Chuyện đó hình như xảy ra suốt...\", \"rating\": 9.0},\n  {\"id\": 761067, \"suggestedTranslation\": \"Chế tạo đồ dùng dưới nước nào, florp!\", \"rating\": 9.0},\n  {\"id\": 761068, \"suggestedTranslation\": \"Con cá trông có vẻ buồn bã trong đó quá...\", \"rating\": 9.0},\n  {\"id\": 761069, \"suggestedTranslation\": \"Úi chà, hòn đá tảng to quá!\", \"rating\": 9.0},\n  {\"id\": 761070, \"suggestedTranslation\": \"Glorp! Trống không!\", \"rating\": 9.0},\n  {\"id\": 761071, \"suggestedTranslation\": \"Ôi, thích quả cầu phát sáng này ghê.\", \"rating\": 9.0},\n  {\"id\": 761072, \"suggestedTranslation\": \"Nhét hạt vào bên trong.\", \"rating\": 9.0},\n  {\"id\": 761073, \"suggestedTranslation\": \"Gieo xuống đất nào, florp!\", \"rating\": 9.0},\n  {\"id\": 761074, \"suggestedTranslation\": \"Món ăn vặt tí hon!\", \"rating\": 9.0},\n  {\"id\": 761075, \"suggestedTranslation\": \"Sao nó lại lơ lửng được thế nhỉ?\", \"rating\": 9.0},\n  {\"id\": 761076, \"suggestedTranslation\": \"Glurgh... kim khâu khó cầm bằng vuốt quá...\", \"rating\": 9.0},\n  {\"id\": 761077, \"suggestedTranslation\": \"Tốt. Đừng có trợn mắt nữa, florp.\", \"rating\": 9.0},\n  {\"id\": 761078, \"suggestedTranslation\": \"Thôi trợn mắt đi, flort!\", \"rating\": 9.0},\n  {\"id\": 761079, \"suggestedTranslation\": \"Chị Wunewna giỏi vá víu thật.\", \"rating\": 9.0},\n  {\"id\": 761080, \"suggestedTranslation\": \"Grừ! Nó đang làm gì thế? Sao nó lại cử động kiểu đó chứ?!\", \"rating\": 9.0},\n  {\"id\": 761081, \"suggestedTranslation\": \"Hắn dùng phép thuật hắc ám kìa!!\", \"rating\": 9.0},\n  {\"id\": 761082, \"suggestedTranslation\": \"Cảm thấy... buồn quá...\", \"rating\": 9.0},\n  {\"id\": 761083, \"suggestedTranslation\": \"Glorp! Mặt đất nứt rồi!\", \"rating\": 9.0},\n  {\"id\": 761084, \"suggestedTranslation\": \"To lớn, mạnh mẽ và xinh xắn!\", \"rating\": 9.0},\n  {\"id\": 761085, \"suggestedTranslation\": \"Haha! Florpt!\", \"rating\": 9.0},\n  {\"id\": 761086, \"suggestedTranslation\": \"Cậu đang đi đâu thế?\", \"rating\": 9.0},\n  {\"id\": 761087, \"suggestedTranslation\": \"C-cút đi!!\", \"rating\": 9.0},\n  {\"id\": 761088, \"suggestedTranslation\": \"Này! Không được ăn!!\", \"rating\": 9.0},\n  {\"id\": 761089, \"suggestedTranslation\": \"Glorp! Lắm răng thế!\", \"rating\": 9.0},\n  {\"id\": 761090, \"suggestedTranslation\": \"Aww. Chỉ muốn ôm cái thôi. Florp!\", \"rating\": 9.0},\n  {\"id\": 761091, \"suggestedTranslation\": \"T-tớ không sợ cậu đâu, florp!\", \"rating\": 9.0},\n  {\"id\": 761092, \"suggestedTranslation\": \"Đến giờ chặt chém rồi!\", \"rating\": 9.0},\n  {\"id\": 761093, \"suggestedTranslation\": \"Đánh thức người bạn đang ngủ nào.\", \"rating\": 9.0},\n  {\"id\": 761094, \"suggestedTranslation\": \"Chế đồ cho tớ mau! Ngay lập tức!\", \"rating\": 9.0},\n  {\"id\": 761095, \"suggestedTranslation\": \"Nó chưa sẵn sàng.\", \"rating\": 9.0},\n  {\"id\": 761096, \"suggestedTranslation\": \"Cảm ơn nhé, trái tim buồn bã.\", \"rating\": 9.0},\n  {\"id\": 761097, \"suggestedTranslation\": \"Ai thế nhỉ?\", \"rating\": 9.0},\n  {\"id\": 761098, \"suggestedTranslation\": \"Glurp... trông chúng không thiện cảm cho lắm.\", \"rating\": 9.0},\n  {\"id\": 761099, \"suggestedTranslation\": \"Grừ, con cá hư hỏng!\", \"rating\": 9.0},\n  {\"id\": 761100, \"suggestedTranslation\": \"Sao cái gì cũng mặn chát thế này?\", \"rating\": 9.0},\n  {\"id\": 761101, \"suggestedTranslation\": \"Đã thử cắn, không phải đồ ăn.\", \"rating\": 9.0},\n  {\"id\": 761102, \"suggestedTranslation\": \"Sao nó được phép cắn, mà tớ lại bị phạt chứ?!\", \"rating\": 9.0},\n  {\"id\": 761103, \"suggestedTranslation\": \"Cái xẻng.\", \"rating\": 9.0},\n  {\"id\": 761104, \"suggestedTranslation\": \"Dụng cụ xúc đất ngon lành đây, florp.\", \"rating\": 9.0},\n  {\"id\": 761105, \"suggestedTranslation\": \"Không đời nào.\", \"rating\": 9.0},\n  {\"id\": 761106, \"suggestedTranslation\": \"Đây là chiếc bánh ngon nhất quả đất!\", \"rating\": 9.0},\n  {\"id\": 761107, \"suggestedTranslation\": \"Úi chà, có làn da đẹp thật đấy!\", \"rating\": 9.0},\n  {\"id\": 761108, \"suggestedTranslation\": \"Phải tìm chỗ chợp mắt mới được...\", \"rating\": 9.0},\n  {\"id\": 761109, \"suggestedTranslation\": \"Muốn chợp mắt quá! Chợp mắt ngay đây...\", \"rating\": 9.0},\n  {\"id\": 761110, \"suggestedTranslation\": \"Bãi nước bọt của người nhện!\", \"rating\": 9.0},\n  {\"id\": 761111, \"suggestedTranslation\": \"Là chiếc vỏ ốc to!\", \"rating\": 9.0},\n  {\"id\": 761112, \"suggestedTranslation\": \"Xinh quá!\", \"rating\": 9.0},\n  {\"id\": 761113, \"suggestedTranslation\": \"Hình như có con bọ gì đó bên trong thì phải?\", \"rating\": 9.0},\n  {\"id\": 761114, \"suggestedTranslation\": \"Cái gì trong hũ thế? Đồ ăn vặt à?\", \"rating\": 9.0},\n  {\"id\": 761115, \"suggestedTranslation\": \"Vậy đây... không phải hũ đồ ăn vặt à?\", \"rating\": 9.0},\n  {\"id\": 761116, \"suggestedTranslation\": \"Hả? Ai thế kia?\", \"rating\": 9.0},\n  {\"id\": 761117, \"suggestedTranslation\": \"Glurgh... não tớ sắp nổ tung rồi.\", \"rating\": 9.0},\n  {\"id\": 761118, \"suggestedTranslation\": \"Kẻ không vảy thích cắm hoa ở đây ghê.\", \"rating\": 9.0},\n  {\"id\": 761119, \"suggestedTranslation\": \"Nó chết rồi.\", \"rating\": 9.0},\n  {\"id\": 761120, \"suggestedTranslation\": \"Glurph... đầu óc cứ thấy sao sao...\", \"rating\": 9.0},\n  {\"id\": 761121, \"suggestedTranslation\": \"Glorpt. Không phân biệt nổi là Người Cá hay Người Lợn...\", \"rating\": 9.0},\n  {\"id\": 761122, \"suggestedTranslation\": \"Tạm biệt nhé...\", \"rating\": 9.0},\n  {\"id\": 761123, \"suggestedTranslation\": \"Đã có chuyện xảy ra với họ...\", \"rating\": 9.0},\n  {\"id\": 761124, \"suggestedTranslation\": \"Đã có chuyện xảy ra với họ...\", \"rating\": 9.0},\n  {\"id\": 761125, \"suggestedTranslation\": \"Đã có chuyện xảy ra với họ...\", \"rating\": 9.0},\n  {\"id\": 761126, \"suggestedTranslation\": \"Ôi, bức tranh!\", \"rating\": 9.0},\n  {\"id\": 761127, \"suggestedTranslation\": \"Biết đâu có thứ hay ho bên trong!\", \"rating\": 9.0},\n  {\"id\": 761128, \"suggestedTranslation\": \"Hì hì, chúc ngủ ngon nhé!\", \"rating\": 9.0},\n  {\"id\": 761129, \"suggestedTranslation\": \"Hì hì, trông vui phết!\", \"rating\": 9.0},\n  {\"id\": 761130, \"suggestedTranslation\": \"Túi của cậu nhóc hạt thông.\", \"rating\": 9.0},\n  {\"id\": 761131, \"suggestedTranslation\": \"Mấy thứ vụn vặt.\", \"rating\": 9.0},\n  {\"id\": 761132, \"suggestedTranslation\": \"Mấy thứ vụn vặt.\", \"rating\": 9.0},\n  {\"id\": 761133, \"suggestedTranslation\": \"Mấy thứ vụn vặt.\", \"rating\": 9.0},\n  {\"id\": 761134, \"suggestedTranslation\": \"Mấy thứ vụn vặt.\", \"rating\": 9.0},\n  {\"id\": 761135, \"suggestedTranslation\": \"Mấy thứ vụn vặt.\", \"rating\": 9.0},\n  {\"id\": 761136, \"suggestedTranslation\": \"Mấy thứ vụn vặt.\", \"rating\": 9.0},\n  {\"id\": 761137, \"suggestedTranslation\": \"Mấy thứ vụn vặt.\", \"rating\": 9.0},\n  {\"id\": 761138, \"suggestedTranslation\": \"Mấy thứ vụn vặt.\", \"rating\": 9.0},\n  {\"id\": 761139, \"suggestedTranslation\": \"Mấy thứ vụn vặt.\", \"rating\": 9.0},\n  {\"id\": 761140, \"suggestedTranslation\": \"Mấy thứ vụn vặt.\", \"rating\": 9.0},\n  {\"id\": 761141, \"suggestedTranslation\": \"Bãi phân tí hon.\", \"rating\": 9.0},\n  {\"id\": 761142, \"suggestedTranslation\": \"Mấy thứ vụn vặt.\", \"rating\": 9.0},\n  {\"id\": 761143, \"suggestedTranslation\": \"Mấy thứ vụn vặt.\", \"rating\": 9.0},\n  {\"id\": 761144, \"suggestedTranslation\": \"Mấy thứ vụn vặt.\", \"rating\": 9.0},\n  {\"id\": 761145, \"suggestedTranslation\": \"Mấy thứ vụn vặt.\", \"rating\": 9.0},\n  {\"id\": 761146, \"suggestedTranslation\": \"Mấy thứ vụn vặt.\", \"rating\": 9.0},\n  {\"id\": 761147, \"suggestedTranslation\": \"Mấy thứ vụn vặt.\", \"rating\": 9.0},\n  {\"id\": 761148, \"suggestedTranslation\": \"Đồ chơi bắn đạn của cậu nhóc hạt thông. Florp!\", \"rating\": 9.0},\n  {\"id\": 761149, \"suggestedTranslation\": \"Đồ chơi bắn đạn của cậu nhóc hạt thông. Florp!\", \"rating\": 9.0},\n  {\"id\": 761150, \"suggestedTranslation\": \"Đồ chơi bắn đạn của cậu nhóc hạt thông. Florp!\", \"rating\": 9.0},\n  {\"id\": 761151, \"suggestedTranslation\": \"Đồ chơi bắn đạn của cậu nhóc hạt thông. Florp!\", \"rating\": 9.0},\n  {\"id\": 761152, \"suggestedTranslation\": \"Đồ chơi bắn đạn của cậu nhóc hạt thông. Florp!\", \"rating\": 9.0},\n  {\"id\": 761153, \"suggestedTranslation\": \"Đồ chơi của cậu nhóc hạt thông. Florp!\", \"rating\": 9.0},\n  {\"id\": 761154, \"suggestedTranslation\": \"Đồ chơi bắn đạn của cậu nhóc hạt thông. Florp!\", \"rating\": 9.0},\n  {\"id\": 761155, \"suggestedTranslation\": \"Đồ chơi của cậu nhóc hạt thông. Florp!\", \"rating\": 9.0},\n  {\"id\": 761156, \"suggestedTranslation\": \"Đồ chơi của cậu nhóc hạt thông. Florp!\", \"rating\": 9.0},\n  {\"id\": 761157, \"suggestedTranslation\": \"Đồ chơi bắn đạn của cậu nhóc hạt thông. Florp!\", \"rating\": 9.0},\n  {\"id\": 761158, \"suggestedTranslation\": \"Đồ chơi bắn đạn của cậu nhóc hạt thông. Florp!\", \"rating\": 9.0},\n  {\"id\": 761159, \"suggestedTranslation\": \"Đồ chơi bắn đạn của cậu nhóc hạt thông. Florp!\", \"rating\": 9.0},\n  {\"id\": 761160, \"suggestedTranslation\": \"Ha ha, nhột quá!\", \"rating\": 9.0},\n  {\"id\": 761161, \"suggestedTranslation\": \"Lột lông nó rồi, florp.\", \"rating\": 9.0},\n  {\"id\": 761162, \"suggestedTranslation\": \"Lột lông nó rồi, florp.\", \"rating\": 9.0},\n  {\"id\": 761163, \"suggestedTranslation\": \"Trông giống bạn bè phết, flort.\", \"rating\": 9.0},\n  {\"id\": 761164, \"suggestedTranslation\": \"Vỏ của tớ giờ là đây!\", \"rating\": 9.0},\n  {\"id\": 761165, \"suggestedTranslation\": \"Úi chà, nhờn rít quá!\", \"rating\": 9.0},\n  {\"id\": 761166, \"suggestedTranslation\": \"Bãi nước bọt phát nổ!\", \"rating\": 9.0},\n  {\"id\": 761167, \"suggestedTranslation\": \"Ái chà, nó vỡ mất tiêu rồi!\", \"rating\": 9.0},\n  {\"id\": 761168, \"suggestedTranslation\": \"Nó bé xíu luôn!\", \"rating\": 9.0},\n  {\"id\": 761169, \"suggestedTranslation\": \"Muốn ăn vặt kìa, florp.\", \"rating\": 9.0},\n  {\"id\": 761170, \"suggestedTranslation\": \"Ngủ ngon nhé!\", \"rating\": 9.0},\n  {\"id\": 761171, \"suggestedTranslation\": \"Trông có vẻ đói lắm rồi.\", \"rating\": 9.0},\n  {\"id\": 761172, \"suggestedTranslation\": \"Glurp! C-cậu không dọa được tớ đâu!\", \"rating\": 9.0},\n  {\"id\": 761173, \"suggestedTranslation\": \"Glurgh...\", \"rating\": 9.0},\n  {\"id\": 761174, \"suggestedTranslation\": \"Glargh, nhìn còn tởm hơn lúc nãy.\", \"rating\": 9.0},\n  {\"id\": 761175, \"suggestedTranslation\": \"Lắm răng quá.\", \"rating\": 9.0},\n  {\"id\": 761176, \"suggestedTranslation\": \"Ồ, cậu nhóc Webby...\", \"rating\": 9.0},\n  {\"id\": 761177, \"suggestedTranslation\": \"Chào người tuyết.\", \"rating\": 9.0},\n  {\"id\": 761178, \"suggestedTranslation\": \"Người tuyết thiếu mất một phần.\", \"rating\": 9.0},\n  {\"id\": 761179, \"suggestedTranslation\": \"Trông có vẻ đáng tin cậy đấy, florp.\", \"rating\": 9.0},\n  {\"id\": 761180, \"suggestedTranslation\": \"Trông có vẻ ngon miệng đấy, florp.\", \"rating\": 9.0},\n  {\"id\": 761181, \"suggestedTranslation\": \"Sẵn sàng cho cây cối chưa nhỉ?\", \"rating\": 9.0},\n  {\"id\": 761182, \"suggestedTranslation\": \"Thơm phức mùi thối luôn!\", \"rating\": 9.0},\n  {\"id\": 761183, \"suggestedTranslation\": \"Nó xong rồi!\", \"rating\": 9.0},\n  {\"id\": 761184, \"suggestedTranslation\": \"Trông nó có vẻ không thoải mái cho lắm, florp.\", \"rating\": 9.0},\n  {\"id\": 761185, \"suggestedTranslation\": \"Cái gậy đâm chọc!\", \"rating\": 9.0},\n  {\"id\": 761186, \"suggestedTranslation\": \"Đâm chọc!\", \"rating\": 9.0},\n  {\"id\": 761187, \"suggestedTranslation\": \"Xoắn tít!\", \"rating\": 9.0},\n  {\"id\": 761188, \"suggestedTranslation\": \"Đã lấy gậy đâm của chị đại Viking rồi!!\", \"rating\": 9.0},\n  {\"id\": 761189, \"suggestedTranslation\": \"Ồ, vừa đâm đau lại vừa giật điện.\", \"rating\": 9.0},\n  {\"id\": 761190, \"suggestedTranslation\": \"Giữ đồ ăn bên trong!\", \"rating\": 9.0},\n  {\"id\": 761191, \"suggestedTranslation\": \"Mấy miếng cay xè!\", \"rating\": 9.0},\n  {\"id\": 761192, \"suggestedTranslation\": \"Mmmm làm hơi thở thơm tho hẳn.\", \"rating\": 9.0},\n  {\"id\": 761193, \"suggestedTranslation\": \"Cát này ăn ngon phết!\", \"rating\": 9.0},\n  {\"id\": 761194, \"suggestedTranslation\": \"NGON QUÁ!!\", \"rating\": 9.0},\n  {\"id\": 761195, \"suggestedTranslation\": \"Không mạnh lắm đâu, flort.\", \"rating\": 9.0},\n  {\"id\": 761196, \"suggestedTranslation\": \"Người nhện...\", \"rating\": 9.0},\n  {\"id\": 761197, \"suggestedTranslation\": \"Suỵt...\", \"rating\": 9.0},\n  {\"id\": 761198, \"suggestedTranslation\": \"Tốt nhất là nên đốt xác Người nhện.\", \"rating\": 9.0},\n  {\"id\": 761199, \"suggestedTranslation\": \"Tên Người nhện đó ngỏm rồi.\", \"rating\": 9.0},\n  {\"id\": 761200, \"suggestedTranslation\": \"Biết thế nãy đốt xừ xác Người nhện luôn cho rồi!\", \"rating\": 9.0},\n  {\"id\": 761201, \"suggestedTranslation\": \"Glurgh, giẫm phải đống dính dấp rồi!\", \"rating\": 9.0},\n  {\"id\": 761202, \"suggestedTranslation\": \"Cậu đang làm gì thế cậu nhóc Webby?\", \"rating\": 9.0},\n  {\"id\": 761203, \"suggestedTranslation\": \"Blegh, hóa ra mấy đứa nhóc Người nhện chui ra từ đây à?\", \"rating\": 9.0},\n  {\"id\": 761204, \"suggestedTranslation\": \"Thuốc men!\", \"rating\": 9.0},\n  {\"id\": 761205, \"suggestedTranslation\": \"Ha ha, trông giống cậu nhóc Webby ghê.\", \"rating\": 9.0},\n  {\"id\": 761206, \"suggestedTranslation\": \"Hố người nhện!\", \"rating\": 9.0},\n  {\"id\": 761207, \"suggestedTranslation\": \"Toàn tơ là tơ...\", \"rating\": 9.0},\n  {\"id\": 761208, \"suggestedTranslation\": \"Bà ấy là Nữ hoàng hùng mạnh!\", \"rating\": 9.0}\n]",
+            "thoughtSignature": "EmAKXgFpFH0TGxrR62kZoyWzcwPEZYBcjjKT4XmXPGOqbNBIohW/RH6oClu09Bq01WhVE7eLx+u5EX/RggU1KDFk9nvUzWc6Ny7XCYP2jqwF+lWWymuLWDdEhS0vW4zdcLQ="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 19160,
+    "candidatesTokenCount": 10853,
+    "totalTokenCount": 30013,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 19160
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "qxm7ataZFJqkg8UP8uGzyQ4"
+}
+
+================================================================================--------------------
+

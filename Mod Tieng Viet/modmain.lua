@@ -11,7 +11,7 @@ end
 mods.VietnameseLang = {
     modinfo = modinfo,
     StorePath = MODROOT,
-    MainPoFile = "vietnamese.mo",
+    MainPoFile = "vietnamese.po",
     SelectedLanguage = "vi"
 }
 
@@ -106,24 +106,26 @@ if FONT_OPTION ~= "off" and FONT_OPTION ~= nil then
         _G.CHATFONT_OUTLINE = "normalfont"
     end
 
-    _G.getmetatable(_G.TheSim).__index.UnregisterAllPrefabs = (function()
-        local oldUnregisterAllPrefabs = _G.getmetatable(_G.TheSim).__index.UnregisterAllPrefabs
-        return function(self, ...)
-            oldUnregisterAllPrefabs(self, ...)
-            ApplyLocalizedFonts()
-        end
-    end)()
+    -- Cờ bảo vệ: ApplyLocalizedFonts chỉ được chạy ĐÚNG 1 LẦN
+    -- Tránh LoadFont đồng bộ lặp lại trên main thread gây khựng game
+    local _fontApplied = false
+    local function ApplyLocalizedFontsOnce()
+        if _fontApplied then return end
+        _fontApplied = true
+        ApplyLocalizedFonts()
+    end
 
+    -- Hook RegisterPrefabs: chạy sau khi tất cả prefab đã đăng ký xong
+    -- (KHÔNG hook UnregisterAllPrefabs vì nó bị gọi nhiều lần không kiểm soát)
     local OldRegisterPrefabs = _G.ModManager.RegisterPrefabs
     local function NewRegisterPrefabs(self)
         OldRegisterPrefabs(self)
-        ApplyLocalizedFonts()
+        ApplyLocalizedFontsOnce()
     end
     _G.ModManager.RegisterPrefabs = NewRegisterPrefabs
 
-    local OldStart = _G.Start
-    function _G.Start()
-        ApplyLocalizedFonts()
-        OldStart()
-    end
+    -- GHI CHÚ: KHÔNG hook _G.Start ở đây.
+    -- mainfunctions.lua cũng hook _G.Start bằng cách tương tự (local OldStart = _G.Start),
+    -- dẫn đến hai hook gọi lẫn nhau thành vòng lặp đệ quy vô tận gây crash.
+    -- Hook RegisterPrefabs ở trên (dòng 120-125) đã đủ để áp dụng font đúng thời điểm.
 end

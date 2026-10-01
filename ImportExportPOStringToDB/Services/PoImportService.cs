@@ -77,9 +77,14 @@ public static class PoImportService
                         continue;
                     }
 
-                    bool isMsgStrDifferent = NormalizeString(existing.MsgStr) != NormalizeString(item.MsgStr);
+                    var normalizedNewMsgStr = NormalizeString(item.MsgStr);
+                    var normalizedExistingMsgStr = NormalizeString(existing.MsgStr);
 
-                    if (isMsgStrDifferent)
+                    // Nếu file PO chưa có bản dịch (MsgStr rỗng) → bỏ qua, không ghi đè lên bản dịch đã có trong DB
+                    bool isNewMsgStrEmpty = string.IsNullOrWhiteSpace(normalizedNewMsgStr);
+                    bool isMsgStrDifferent = normalizedExistingMsgStr != normalizedNewMsgStr;
+
+                    if (isMsgStrDifferent && !isNewMsgStrEmpty)
                     {
                         item.Id = existing.Id;
                         result.ChangedItems.Add(new ChangedItemComparison
@@ -113,13 +118,23 @@ public static class PoImportService
     private static string NormalizeLineEndings(string text)
     {
         if (string.IsNullOrEmpty(text)) return string.Empty;
-        return text.Replace("\r\n", "\n").Replace("\r", "\n").Trim();
+        return NormalizeString(text).Trim();
     }
 
     private static string NormalizeString(string? text)
     {
         if (string.IsNullOrEmpty(text)) return string.Empty;
-        return text.Replace("\r\n", "\n").Replace("\r", "\n");
+
+        var normalized = text
+            .Replace("\r\n", "\n")
+            .Replace("\r", "\n");
+
+        return normalized
+            .Replace("\\n", "\n")
+            .Replace("\\r", "\n")
+            .Replace("\\t", "\t")
+            .Replace("\\\"", "\"")
+            .Replace("\\\\", "\\");
     }
 
     private static double NormalizeDouble(double? val)

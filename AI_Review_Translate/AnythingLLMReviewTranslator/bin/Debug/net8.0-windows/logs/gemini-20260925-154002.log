@@ -1,0 +1,137 @@
+=== Translation Log Started at 2026-09-25 15:40:02 | Provider: Gemini ===
+
+======================================== [2026-09-25 15:40:08] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang rating (0.0 - 10.0):
+   - MsgStr rỗng, chưa dịch hoặc còn là tiếng Anh: Chấm rating thấp (0.0 - 1.0).
+   - MsgStr dịch chuẩn xác, tự nhiên: Chấm rating cao (8.0 - 10.0).
+2. Đề xuất bản dịch TIẾNG VIỆT tối ưu nhất cho trường "suggestedTranslation":
+   - BẮT BUỘC 100% PHẢI LÀ TIẾNG VIỆT tự nhiên, ngắn gọn, chuẩn văn phong game.
+   - TUYỆT ĐỐI KHÔNG ĐƯỢC để suggestedTranslation là tiếng Anh trong bất kỳ trường hợp nào!
+3. Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+4. Nếu mục nào có 'Thuật ngữ tham khảo', BẮT BUỘC ưu tiên dịch thuật ngữ đó sang nghĩa tiếng Việt tương ứng.
+Ví dụ:
+Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+Output: {"id":101,"suggestedTranslation":"\"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!","rating":8.5}
+
+Hãy xử lý tất cả các mục dưới đây và trả về duy nhất một JSON array.
+Mỗi phần tử phải có đúng 3 trường: id, suggestedTranslation, rating.
+Trả về CHỈ JSON hợp lệ, không bọc markdown, không giải thích thừa.
+Ví dụ mẫu: [{"id":101,"suggestedTranslation":"\"Chưa đến giữa hè\", bạn nói?...","rating":8.5}]
+
+Item:
+Id: 751621
+MsgCtxt: STRINGS.CHARACTERS.WORMWOOD.DESCRIBE.BOAT_BUMPER_CRABKING
+MsgId: Keeps Floaty safe
+MsgStr: Giữ Floaty an toàn
+Thuật ngữ tham khảo: "Keeps Floaty safe" => "Giữ an toàn cho phao", "Safe" => "Két Sắt"
+
+Item:
+Id: 751623
+MsgCtxt: STRINGS.CHARACTERS.WORMWOOD.DESCRIBE.BOAT_BUMPER_KELP
+MsgId: Keeps Floaty safe
+MsgStr: Giữ Floaty an toàn
+Thuật ngữ tham khảo: "Keeps Floaty safe" => "Giữ an toàn cho phao", "Safe" => "Két Sắt"
+
+Item:
+Id: 751625
+MsgCtxt: STRINGS.CHARACTERS.WORMWOOD.DESCRIBE.BOAT_BUMPER_SHELL
+MsgId: Keeps Floaty safe
+MsgStr: Giữ Floaty an toàn
+Thuật ngữ tham khảo: "Keeps Floaty safe" => "Giữ an toàn cho phao", "Safe" => "Két Sắt"
+
+Item:
+Id: 772546
+MsgCtxt: STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_HEAT
+MsgId: Plugs into WX-78's Beta circuit board. Crafting recipe is scanned from a Fire Hound, Geothermite, or Dragonfly.\n\nRequires 3 sockets and raises body temperature 20 degrees, increases spoil rate of inventory by 25% and increases drying rate by 10%. Will also warm nearby survivors.\n\nBeta Circuits Tinkering I boosts this circuit to provide freezing resistance, and grants full immunity to freezing when two are plugged.
+MsgStr: Cắm vào bảng mạch Beta của WX-78. Công thức chế tạo được quét từ Chó săn lửa, Địa nhiệt hoặc Chuồn chuồn.\n\nYêu cầu 3 ổ cắm và tăng nhiệt độ cơ thể lên 20 độ, tăng tỷ lệ hư hỏng kho đồ lên 25% và tăng tốc độ sấy khô thêm 10%. Cũng sẽ sưởi ấm những người sống sót ở gần.\n\nBeta Circuits Tinkering Tôi tăng cường mạch này để cung cấp khả năng chống đóng băng và cấp toàn bộ khả năng miễn nhiễm với việc đóng băng khi cả hai được cắm vào.
+Thuật ngữ tham khảo: "Geothermite" => "Mối Địa Nhiệt", "Fire Hound" => "Chó săn lửa", "Dragonfly" => "Chuồn Chuồn", "Freezing" => "Rét", "Hound" => "Chó", "Fire" => "Lửa"
+
+Item:
+Id: 772561
+MsgCtxt: STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_SHIELDING
+MsgId: Plugs into WX-78's Gamma circuit board. Crafting recipe is scanned from a Rock Lobster, Slurtle, or Snurtle.\n\nRequires 4 sockets and allows WX-78 to perform a block, providing 80% armor, going off cooldown for 20 seconds.\n\nGamma Circuits Tinkering II provides WX-78 with knockback immunity in the block.
+MsgStr: Cắm vào bảng mạch Gamma của WX-78. Công thức chế tạo được quét từ Tôm Hùm Đá, Sên Rùa hoặc Snurtle.\n\nYêu cầu 4 ổ cắm và cho phép WX-78 thực hiện một khối, cung cấp 80% giáp, hết thời gian hồi chiêu trong 20 giây.\n\nGamma Circuits Tinkering II cung cấp cho WX-78 khả năng miễn nhiễm đẩy lùi trong khối.
+Thuật ngữ tham khảo: "Rock Lobster" => "Tôm hùm đá", "Slurtle" => "Sên Rùa", "Snurtle" => "Sên Rùa", "Rock" => "Đá tảng"
+
+Item:
+Id: 776132
+MsgCtxt: STRINGS.SKIN_DESCRIPTIONS.pack_relic
+MsgId: This Reliquary Chest contains the following skin items: Faint Gleam Amulet, Iterum Amulet, Qualming Amulet, Robustum Amulet, Reaping Amulet, Sepulchral Amulet, Ornate Bone Armor, Ornate Bone Helm, Twisted Star Caller's Staff, Twisted Moon Caller's Staff, Layered Dreadstone Wall, Recondite Deserter, and Ornate Night Light.
+MsgStr: Rương Thánh tích này chứa các vật phẩm da sau: Bùa Faint Gleam, Bùa Iterum, Bùa Qualming, Bùa Robustum, Bùa Reaping, Bùa Sepulchral, Giáp xương trang trí công phu, Mũ xương trang trí công phu, Quyền trượng của Người triệu hồi Ngôi sao xoắn, Quyền trượng Người triệu hồi Mặt trăng xoắn, Bức tường Đá Kinh Hoàng nhiều lớp, Kẻ đào ngũ Recondite và Đèn ngủ trang trí công phu.
+Thuật ngữ tham khảo: "Moon Caller's Staff" => "Gậy Gọi Trăng", "Star Caller's Staff" => "Gậy Gọi Sao", "Dreadstone Wall" => "Tường Đá Kinh Hoàng", "Night Light" => "Đèn Chong Đêm", "Bone Armor" => "Giáp xương", "Dreadstone" => "Đá Kinh Hoàng", "Bone Helm" => "Mũ Xương", "Reliquary" => "Tráp Thánh Tích", "Chest" => "Rương"
+
+Item:
+Id: 776162
+MsgCtxt: STRINGS.SKIN_DESCRIPTIONS.pack_swamp_items
+MsgId: This Swamp-Lover's Chest contains the following skin items: Hollow Gaze Hutch, Mossy Mermhouse, Mossy Merm Flort, Primal Panflute, Paddlefish Oar, Driftwood Paddlefish Oar, Primitive Rainometer, Primitive Potter's Wheel, Swampy Siesta Shade, Primal Star Caller's Staff, Mossberry Hat, Mangrove Helm, Dampwood Hat, and Primal Morning Star.
+MsgStr: Rương Người Yêu Đầm Lầy này chứa các vật phẩm da sau: Hollow Gaze Hutch, Nhà Người Cá Rêu, Hoa Người Cá Rêu, Sáo Nguyên Thủy, Mái chèo Cá mái chèo, Mái chèo Cá mái chèo Gỗ Mục, Máy đo mưa Nguyên thủy, Bánh xe Potter Nguyên thủy, Bóng ngủ trưa đầm lầy, Gậy gọi Ngôi sao Nguyên thủy, Mũ Mossberry, Mũ Mangrove, Mũ Dampwood và Sao Mai Nguyên Thủy.
+Thuật ngữ tham khảo: "Star Caller's Staff" => "Gậy Gọi Sao", "Potter's Wheel" => "Bàn thợ gốm", "Morning Star" => "Gậy Sao Mai", "Rainometer" => "Vũ Kế", "Driftwood" => "Cây Gỗ Mục", "Chest" => "Rương", "Merm" => "Người Cá", "Oar" => "Mái Chèo"
+
+Item:
+Id: 776329
+MsgCtxt: STRINGS.SKIN_DESCRIPTIONS.pack_woodworking_handmade
+MsgId: This Cozy Woodworking Chest contains the following belongings skin items: Cozy Round Table, Cozy Square Table, Cozy Wooden Chair, Cozy Wooden Stool, Tree's Company, Artisanal Vase, Warm and Fuzzy Lamp, Cozy Frame, Merm with a Pearl Earring, and Rustic Record Spinner.
+MsgStr: Chiếc rương gỗ ấm cúng này chứa các vật dụng da sau đây: bàn tròn ấm cúng, bàn vuông ấm cúng, ghế gỗ ấm cúng, phân gỗ ấm cúng, công ty cây Spinner.
+Thuật ngữ tham khảo: "Wooden Chair" => "Ghế Tựa Gỗ", "Wooden Stool" => "Ghế Đẩu Gỗ", "Record" => "Đĩa Hát", "Pearl" => "Ngọc trai", "Chest" => "Rương", "Merm" => "Người Cá"
+
+Item:
+Id: 780306
+MsgCtxt: STRINGS.SKIN_NAMES.pack_willow_spring
+MsgId: Willow Equinor Chest
+MsgStr: Rương Xuân Bính Ngọ Willow
+Thuật ngữ tham khảo: "Willow Equinor Chest" => "Rương Xuân Bính Ngọ Willow", "Equinor" => "Xuân Bính Ngọ", "Chest" => "Rương"
+
+Item:
+Id: 780324
+MsgCtxt: STRINGS.SKIN_NAMES.pack_winona_spring
+MsgId: Winona Equinor Chest
+MsgStr: Rương Xuân Bính Ngọ Winona
+Thuật ngữ tham khảo: "Winona Equinor Chest" => "Rương Xuân Bính Ngọ Winona", "Equinor" => "Xuân Bính Ngọ", "Chest" => "Rương"
+
+Item:
+Id: 784630
+MsgCtxt: STRINGS.UI.CRAFTING.NEEDSWARGSHRINE
+MsgId: Make an offering at the Varg Shrine!
+MsgStr: Thực hiện một đề nghị tại Đền thờ Varg!
+Thuật ngữ tham khảo: "Varg Shrine" => "Đền thờ Varg", "Varg" => "Chó Sói"
+
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "[\n  {\n    \"id\": 751621,\n    \"suggestedTranslation\": \"Giữ an toàn cho phao\",\n    \"rating\": 9.5\n  },\n  {\n    \"id\": 751623,\n    \"suggestedTranslation\": \"Giữ an toàn cho phao\",\n    \"rating\": 9.5\n  },\n  {\n    \"id\": 751625,\n    \"suggestedTranslation\": \"Giữ an toàn cho phao\",\n    \"rating\": 9.5\n  },\n  {\n    \"id\": 772546,\n    \"suggestedTranslation\": \"Cắm vào bảng mạch Beta của WX-78. Công thức chế tạo được quét từ Chó săn lửa, Mối Địa Nhiệt hoặc Chuồn Chuồn.\\n\\nYêu cầu 3 ổ cắm và tăng nhiệt độ cơ thể lên 20 độ, tăng tỷ lệ hư hỏng kho đồ lên 25% và tăng tốc độ sấy khô thêm 10%. Cũng sẽ sưởi ấm những người sống sót ở gần.\\n\\nBeta Circuits Tinkering I tăng cường mạch này để cung cấp khả năng chống rét, và cấp toàn bộ khả năng miễn nhiễm với rét khi cả hai được cắm.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 772561,\n    \"suggestedTranslation\": \"Cắm vào bảng mạch Gamma của WX-78. Công thức chế tạo được quét từ Tôm hùm đá, Sên Rùa hoặc Snurtle.\\n\\nYêu cầu 4 ổ cắm và cho phép WX-78 thực hiện một cú đỡ đòn, cung cấp 80% giáp, có thời gian hồi chiêu 20 giây.\\n\\nGamma Circuits Tinkering II cung cấp cho WX-78 khả năng miễn nhiễm đẩy lùi khi đỡ đòn.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 776132,\n    \"suggestedTranslation\": \"Tráp Thánh Tích này chứa các vật phẩm ngoại trang sau: Bùa Faint Gleam, Bùa Iterum, Bùa Qualming, Bùa Robustum, Bùa Reaping, Bùa Sepulchral, Giáp Xương trang trí, Mũ Xương trang trí, Gậy Gọi Sao Xoắn Ốc, Gậy Gọi Trăng Xoắn Ốc, Tường Đá Kinh Hoàng nhiều lớp, Kẻ Đào Ngũ Recondite, và Đèn Chong Đêm trang trí.\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 776162,\n    \"suggestedTranslation\": \"Rương Người Yêu Đầm Lầy này chứa các vật phẩm ngoại trang sau: Ổ Hutch Mắt Trống, Nhà Người Cá Phủ Rêu, Hoa Người Cá Phủ Rêu, Sáo Cổ Xưa, Mái Chèo Cá Mái Chèo, Mái Chèo Cây Gỗ Mục, Vũ Kế Thô Sơ, Bàn Thợ Gốm Thô Sơ, Ô Mát Nghỉ Trưa Đầm Lầy, Gậy Gọi Sao Cổ Xưa, Mũ Quả Rêu, Mũ Mangrove, Mũ Gỗ Ẩm, và Gậy Sao Mai Cổ Xưa.\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 776329,\n    \"suggestedTranslation\": \"Rương Đồ Gỗ Ấm Cúng này chứa các vật phẩm ngoại trang sau: Bàn Tròn Ấm Cúng, Bàn Vuông Ấm Cúng, Ghế Tựa Gỗ Ấm Cúng, Ghế Đẩu Gỗ Ấm Cúng, Hội Cây Xanh, Bình Hoa Nghệ Thuật, Đèn Ấm Áp, Khung Tranh Ấm Cúng, Người Cá Đeo Hoa Tai Ngọc Trai, và Máy Phát Đĩa Cổ Điển.\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 780306,\n    \"suggestedTranslation\": \"Rương Xuân Bính Ngọ Willow\",\n    \"rating\": 10.0\n  },\n  {\n    \"id\": 780324,\n    \"suggestedTranslation\": \"Rương Xuân Bính Ngọ Winona\",\n    \"rating\": 10.0\n  },\n  {\n    \"id\": 784630,\n    \"suggestedTranslation\": \"Dâng vật phẩm tại Đền thờ Varg!\",\n    \"rating\": 9.0\n  }\n]",
+            "thoughtSignature": "El0KWwFpFH0TsV1zKM11MjvxBx99MuNB/+6fjHdhHYSMdQsd9zfQlPafLbmx/dkUHKz9mR4Od34DFrknN+jzX6cnJMHMeRQXfUzsJ/Zv+CqSxKduWMGrMz2Gwyuc64s="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 2706,
+    "candidatesTokenCount": 1056,
+    "totalTokenCount": 3762,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2706
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "ZjO2atmGNsf-4-EP-cHVoQ0"
+}
+
+================================================================================--------------------
+

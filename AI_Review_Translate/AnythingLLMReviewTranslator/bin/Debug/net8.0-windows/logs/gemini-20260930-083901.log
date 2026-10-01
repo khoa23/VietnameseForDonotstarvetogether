@@ -1,0 +1,2634 @@
+=== Translation Log Started at 2026-09-30 08:39:01 | Provider: Gemini ===
+
+======================================== [2026-09-30 08:39:25] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang rating (0.0 - 10.0):
+   - MsgStr rỗng, chưa dịch hoặc còn là tiếng Anh: Chấm rating thấp (0.0 - 1.0).
+   - MsgStr dịch chuẩn xác, tự nhiên: Chấm rating cao (8.0 - 10.0).
+2. Đề xuất bản dịch TIẾNG VIỆT tối ưu nhất cho trường "suggestedTranslation":
+   - BẮT BUỘC 100% PHẢI LÀ TIẾNG VIỆT tự nhiên, ngắn gọn, chuẩn văn phong game.
+   - TUYỆT ĐỐI KHÔNG ĐƯỢC để suggestedTranslation là tiếng Anh trong bất kỳ trường hợp nào!
+3. Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+4. Nếu mục nào có 'Thuật ngữ tham khảo', BẮT BUỘC ưu tiên dịch thuật ngữ đó sang nghĩa tiếng Việt tương ứng.
+Ví dụ:
+Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+Output: {"id":101,"suggestedTranslation":"\"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!","rating":8.5}
+
+Hãy xử lý tất cả các mục dưới đây và trả về duy nhất một JSON array.
+Mỗi phần tử phải có đúng 3 trường: id, suggestedTranslation, rating.
+Trả về CHỈ JSON hợp lệ, không bọc markdown, không giải thích thừa.
+Ví dụ mẫu: [{"id":101,"suggestedTranslation":"\"Chưa đến giữa hè\", bạn nói?...","rating":8.5}]
+
+Item:
+Id: 777200
+MsgCtxt: STRINGS.SKIN_DESCRIPTIONS.wall_stone_anitem
+MsgId: n/a
+MsgStr: 
+
+Item:
+Id: 780154
+MsgCtxt: STRINGS.SKIN_NAMES.pack_rose_batch1
+MsgId: Roseate Trio Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780155
+MsgCtxt: STRINGS.SKIN_NAMES.pack_rose_furniture
+MsgId: Rosy Furniture Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780156
+MsgCtxt: STRINGS.SKIN_NAMES.pack_rose_furnitureitems
+MsgId: Rosy Furnishings Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780157
+MsgCtxt: STRINGS.SKIN_NAMES.pack_rose_items
+MsgId: Rosy Decor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780158
+MsgCtxt: STRINGS.SKIN_NAMES.pack_rosepirate
+MsgId: Rosy Rogues Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780159
+MsgCtxt: STRINGS.SKIN_NAMES.pack_rosewestern20s_total
+MsgId: Rosy Roaring Stampeder Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780160
+MsgCtxt: STRINGS.SKIN_NAMES.pack_seaside_items
+MsgId: Seaside Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780161
+MsgCtxt: STRINGS.SKIN_NAMES.pack_shadow_all
+MsgId: Complete Triumphant Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780162
+MsgCtxt: STRINGS.SKIN_NAMES.pack_spring_1
+MsgId: Equinor Survivors Chest, Part I
+MsgStr: 
+Thuật ngữ tham khảo: "Equinor Survivors Chest" => "Rương Sinh Tồn Xuân Bính Ngọ", "Equinor" => "Xuân Bính Ngọ", "Chest" => "Rương"
+
+Item:
+Id: 780163
+MsgCtxt: STRINGS.SKIN_NAMES.pack_spring_bundle
+MsgId: Spring Cleaning Bundle
+MsgStr: 
+
+Item:
+Id: 780164
+MsgCtxt: STRINGS.SKIN_NAMES.pack_springadventure_items
+MsgId: Adventurer's Belongings Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780165
+MsgCtxt: STRINGS.SKIN_NAMES.pack_springoutdoors_items
+MsgId: Outdoorsy Belongings Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780166
+MsgCtxt: STRINGS.SKIN_NAMES.pack_starter_2019
+MsgId: Starter Pack 2019
+MsgStr: 
+
+Item:
+Id: 780167
+MsgCtxt: STRINGS.SKIN_NAMES.pack_starter_2020
+MsgId: Starter Pack 2020
+MsgStr: 
+
+Item:
+Id: 780168
+MsgCtxt: STRINGS.SKIN_NAMES.pack_starter_2021
+MsgId: Starter Pack 2021
+MsgStr: 
+
+Item:
+Id: 780169
+MsgCtxt: STRINGS.SKIN_NAMES.pack_starter_2023
+MsgId: Starter Pack 2023
+MsgStr: 
+
+Item:
+Id: 780170
+MsgCtxt: STRINGS.SKIN_NAMES.pack_starter_2024
+MsgId: Starter Pack 2024
+MsgStr: 
+
+Item:
+Id: 780171
+MsgCtxt: STRINGS.SKIN_NAMES.pack_starter_2025
+MsgId: Starter Pack 2025
+MsgStr: 
+
+Item:
+Id: 780172
+MsgCtxt: STRINGS.SKIN_NAMES.pack_starter_2026
+MsgId: Starter Pack 2026
+MsgStr: 
+
+Item:
+Id: 780173
+MsgCtxt: STRINGS.SKIN_NAMES.pack_survivor
+MsgId: Survivor Trio Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780174
+MsgCtxt: STRINGS.SKIN_NAMES.pack_survivor_complete
+MsgId: Complete Survivor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780175
+MsgCtxt: STRINGS.SKIN_NAMES.pack_survivorpirate
+MsgId: Surviving the Seas Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780176
+MsgCtxt: STRINGS.SKIN_NAMES.pack_sw_gift
+MsgId: Don't Starve: Shipwrecked Gift
+MsgStr: 
+Thuật ngữ tham khảo: "Gift" => "Gói Quà"
+
+Item:
+Id: 780177
+MsgCtxt: STRINGS.SKIN_NAMES.pack_swamp_bundle
+MsgId: Swampy Swashbuckler Survivor Vacation Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780178
+MsgCtxt: STRINGS.SKIN_NAMES.pack_swamp_items
+MsgId: Swamp-Lover's Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780179
+MsgCtxt: STRINGS.SKIN_NAMES.pack_swamphawaiian_items
+MsgId: Swampy Vacation Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780180
+MsgCtxt: STRINGS.SKIN_NAMES.pack_torso_hawaiian
+MsgId: Vacation Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780181
+MsgCtxt: STRINGS.SKIN_NAMES.pack_valkyrie_items
+MsgId: Winged Victory Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780182
+MsgCtxt: STRINGS.SKIN_NAMES.pack_victorian_all
+MsgId: Original Survivors Victorian Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780183
+MsgCtxt: STRINGS.SKIN_NAMES.pack_victorian_all2
+MsgId: Latecomers' Victorian Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780184
+MsgCtxt: STRINGS.SKIN_NAMES.pack_victorian_bundle
+MsgId: Complete Victorian Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780185
+MsgCtxt: STRINGS.SKIN_NAMES.pack_victorian_bundle2
+MsgId: Complete Victorian Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780186
+MsgCtxt: STRINGS.SKIN_NAMES.pack_victorian_bundle3
+MsgId: Complete Victorian Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780187
+MsgCtxt: STRINGS.SKIN_NAMES.pack_victorian_furniture
+MsgId: Victorian Furnishing Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780188
+MsgCtxt: STRINGS.SKIN_NAMES.pack_victorian_items
+MsgId: Victorian Belongings Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780189
+MsgCtxt: STRINGS.SKIN_NAMES.pack_victorian_items2
+MsgId: Victorian Antiques Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780190
+MsgCtxt: STRINGS.SKIN_NAMES.pack_victorian_walter
+MsgId: Walter Victorian Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780191
+MsgCtxt: STRINGS.SKIN_NAMES.pack_victorian_wathgrithr
+MsgId: Wigfrid Victorian Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780192
+MsgCtxt: STRINGS.SKIN_NAMES.pack_victorian_waxwell
+MsgId: Maxwell Victorian Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780193
+MsgCtxt: STRINGS.SKIN_NAMES.pack_victorian_webber
+MsgId: Webber Victorian Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780194
+MsgCtxt: STRINGS.SKIN_NAMES.pack_victorian_wendy
+MsgId: Wendy Victorian Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780195
+MsgCtxt: STRINGS.SKIN_NAMES.pack_victorian_wes
+MsgId: Wes Victorian Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780196
+MsgCtxt: STRINGS.SKIN_NAMES.pack_victorian_wickerbottom
+MsgId: Wickerbottom Victorian Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780197
+MsgCtxt: STRINGS.SKIN_NAMES.pack_victorian_willow
+MsgId: Willow Victorian Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780198
+MsgCtxt: STRINGS.SKIN_NAMES.pack_victorian_wilson
+MsgId: Wilson Victorian Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780199
+MsgCtxt: STRINGS.SKIN_NAMES.pack_victorian_winona
+MsgId: Winona Victorian Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780200
+MsgCtxt: STRINGS.SKIN_NAMES.pack_victorian_wolfgang
+MsgId: Wolfgang Victorian Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780201
+MsgCtxt: STRINGS.SKIN_NAMES.pack_victorian_woodie
+MsgId: Woodie Victorian Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780202
+MsgCtxt: STRINGS.SKIN_NAMES.pack_victorian_wormwood
+MsgId: Wormwood Victorian Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780203
+MsgCtxt: STRINGS.SKIN_NAMES.pack_victorian_wortox
+MsgId: Wortox Victorian Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780204
+MsgCtxt: STRINGS.SKIN_NAMES.pack_victorian_wurt
+MsgId: Wurt Victorian Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780205
+MsgCtxt: STRINGS.SKIN_NAMES.pack_victorian_wx78
+MsgId: WX-78 Victorian Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780206
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wagstaffboat_items
+MsgId: Inventor's Excursion Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780207
+MsgCtxt: STRINGS.SKIN_NAMES.pack_walter_ancient
+MsgId: Walter Archaic Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780208
+MsgCtxt: STRINGS.SKIN_NAMES.pack_walter_deluxe
+MsgId: Walter Deluxe Wardrobe
+MsgStr: 
+Thuật ngữ tham khảo: "Wardrobe" => "Tủ quần áo"
+
+Item:
+Id: 780209
+MsgCtxt: STRINGS.SKIN_NAMES.pack_walter_detective
+MsgId: Walter Boy Detective Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780210
+MsgCtxt: STRINGS.SKIN_NAMES.pack_walter_formal
+MsgId: Walter Guest of Honor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Guest of Honor" => "Thượng Khách", "Chest" => "Rương"
+
+Item:
+Id: 780211
+MsgCtxt: STRINGS.SKIN_NAMES.pack_walter_rose
+MsgId: Walter Roseate Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780212
+MsgCtxt: STRINGS.SKIN_NAMES.pack_walter_shadow
+MsgId: Walter Triumphant Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780213
+MsgCtxt: STRINGS.SKIN_NAMES.pack_walter_survivor
+MsgId: Walter Survivor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780214
+MsgCtxt: STRINGS.SKIN_NAMES.pack_walter_yule
+MsgId: Walter Merrymaker Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780215
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wanda_deluxe
+MsgId: Wanda Deluxe Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780216
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wanda_deluxealt
+MsgId: Wanda Deluxe Wardrobe
+MsgStr: 
+Thuật ngữ tham khảo: "Wardrobe" => "Tủ quần áo"
+
+Item:
+Id: 780217
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wanda_formal
+MsgId: Wanda Guest of Honor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Guest of Honor" => "Thượng Khách", "Chest" => "Rương"
+
+Item:
+Id: 780218
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wanda_rose
+MsgId: Wanda Roseate Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780219
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wanda_shadow
+MsgId: Wanda Triumphant Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780220
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wanda_steampunk
+MsgId: Wanda Tinkersmith Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780221
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wanda_western
+MsgId: Wanda Stampeder Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780222
+MsgCtxt: STRINGS.SKIN_NAMES.pack_warly_chef
+MsgId: Warly Head Chef Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780223
+MsgCtxt: STRINGS.SKIN_NAMES.pack_warly_deluxe
+MsgId: Warly Deluxe Wardrobe
+MsgStr: 
+Thuật ngữ tham khảo: "Wardrobe" => "Tủ quần áo"
+
+Item:
+Id: 780224
+MsgCtxt: STRINGS.SKIN_NAMES.pack_warly_fisherman
+MsgId: Warly Trawler Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780225
+MsgCtxt: STRINGS.SKIN_NAMES.pack_warly_formal
+MsgId: Warly Guest of Honor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Guest of Honor" => "Thượng Khách", "Chest" => "Rương"
+
+Item:
+Id: 780226
+MsgCtxt: STRINGS.SKIN_NAMES.pack_warly_lunar
+MsgId: Warly Moonbound Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780227
+MsgCtxt: STRINGS.SKIN_NAMES.pack_warly_rose
+MsgId: Warly Roseate Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780228
+MsgCtxt: STRINGS.SKIN_NAMES.pack_warly_shadow
+MsgId: Warly Triumphant Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780229
+MsgCtxt: STRINGS.SKIN_NAMES.pack_warly_survivor
+MsgId: Warly Survivor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780230
+MsgCtxt: STRINGS.SKIN_NAMES.pack_warly_victorian
+MsgId: Warly Victorian Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780231
+MsgCtxt: STRINGS.SKIN_NAMES.pack_warly_yule
+MsgId: Warly Merrymaker Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780232
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wathgrithr_ancient
+MsgId: Wigfrid Archaic Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780233
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wathgrithr_deluxe
+MsgId: Wigfrid Deluxe Wardrobe
+MsgStr: 
+Thuật ngữ tham khảo: "Wardrobe" => "Tủ quần áo"
+
+Item:
+Id: 780234
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wathgrithr_deluxe2
+MsgId: Wigfrid Deluxe Wardrobe
+MsgStr: 
+Thuật ngữ tham khảo: "Wardrobe" => "Tủ quần áo"
+
+Item:
+Id: 780235
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wathgrithr_formal
+MsgId: Wigfrid Guest of Honor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Guest of Honor" => "Thượng Khách", "Chest" => "Rương"
+
+Item:
+Id: 780236
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wathgrithr_rose
+MsgId: Wigfrid Roseate Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780237
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wathgrithr_shadow
+MsgId: Wigfrid Triumphant Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780238
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wathgrithr_survivor
+MsgId: Wigfrid Survivor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780239
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wathgrithr_valkyrie
+MsgId: Wigfrid Winged Victory Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780240
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wathgrithr_valkyrie2
+MsgId: Wigfrid Winged Victory Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780241
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wathgrithr_western
+MsgId: Wigfrid Stampeder Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780242
+MsgCtxt: STRINGS.SKIN_NAMES.pack_waxwell_deluxe
+MsgId: Maxwell Deluxe Wardrobe
+MsgStr: 
+Thuật ngữ tham khảo: "Wardrobe" => "Tủ quần áo"
+
+Item:
+Id: 780243
+MsgCtxt: STRINGS.SKIN_NAMES.pack_waxwell_formal
+MsgId: Maxwell Guest of Honor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Guest of Honor" => "Thượng Khách", "Chest" => "Rương"
+
+Item:
+Id: 780244
+MsgCtxt: STRINGS.SKIN_NAMES.pack_waxwell_pirate
+MsgId: Maxwell Swashbuckler Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780245
+MsgCtxt: STRINGS.SKIN_NAMES.pack_waxwell_rose
+MsgId: Maxwell Roseate Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780246
+MsgCtxt: STRINGS.SKIN_NAMES.pack_waxwell_spring
+MsgId: Maxwell Equinor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Maxwell Equinor Chest" => "Rương Xuân Bính Ngọ Maxwell", "Equinor" => "Xuân Bính Ngọ", "Chest" => "Rương"
+
+Item:
+Id: 780247
+MsgCtxt: STRINGS.SKIN_NAMES.pack_waxwell_survivor
+MsgId: Maxwell Survivor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780248
+MsgCtxt: STRINGS.SKIN_NAMES.pack_waxwell_unshadow
+MsgId: Maxwell Untriumphant Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780249
+MsgCtxt: STRINGS.SKIN_NAMES.pack_waxwell_wizard
+MsgId: Maxwell Dark Wizard Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780250
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wb_0
+MsgId: Tiny Bolt Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780251
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wb_1
+MsgId: Small Bolt Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780252
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wb_1000
+MsgId: Teensy Bolt Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780253
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wb_2
+MsgId: Large Bolt Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780254
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wb_3
+MsgId: Giant Bolt Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780255
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wb_4
+MsgId: Humongous Bolt Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780256
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wearables_item
+MsgId: Undaunted Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780257
+MsgCtxt: STRINGS.SKIN_NAMES.pack_webber_boy
+MsgId: Webber Farmspider Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780258
+MsgCtxt: STRINGS.SKIN_NAMES.pack_webber_deluxe
+MsgId: Webber Deluxe Wardrobe
+MsgStr: 
+Thuật ngữ tham khảo: "Wardrobe" => "Tủ quần áo"
+
+Item:
+Id: 780259
+MsgCtxt: STRINGS.SKIN_NAMES.pack_webber_formal
+MsgId: Webber Guest of Honor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Guest of Honor" => "Thượng Khách", "Chest" => "Rương"
+
+Item:
+Id: 780260
+MsgCtxt: STRINGS.SKIN_NAMES.pack_webber_masquerade
+MsgId: Webber Masquerader Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780261
+MsgCtxt: STRINGS.SKIN_NAMES.pack_webber_pirate
+MsgId: Webber Swashbuckler Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780262
+MsgCtxt: STRINGS.SKIN_NAMES.pack_webber_rose
+MsgId: Webber Roseate Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780263
+MsgCtxt: STRINGS.SKIN_NAMES.pack_webber_shadow
+MsgId: Webber Triumphant Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780264
+MsgCtxt: STRINGS.SKIN_NAMES.pack_webber_spring
+MsgId: Webber Equinor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Webber Equinor Chest" => "Rương Xuân Bính Ngọ Webber", "Equinor" => "Xuân Bính Ngọ", "Chest" => "Rương"
+
+Item:
+Id: 780265
+MsgCtxt: STRINGS.SKIN_NAMES.pack_webber_survivor
+MsgId: Webber Survivor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780266
+MsgCtxt: STRINGS.SKIN_NAMES.pack_webber_yule
+MsgId: Webber Merrymaker Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780267
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wendwaltwort_combo
+MsgId: Eclectic Collector's Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780268
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wendy_ancient
+MsgId: Wendy Archaic Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780269
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wendy_deluxe
+MsgId: Wendy Deluxe Wardrobe
+MsgStr: 
+Thuật ngữ tham khảo: "Wardrobe" => "Tủ quần áo"
+
+Item:
+Id: 780270
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wendy_formal
+MsgId: Wendy Guest of Honor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Guest of Honor" => "Thượng Khách", "Chest" => "Rương"
+
+Item:
+Id: 780271
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wendy_handmedown
+MsgId: Wendy Hand-Me-Downs Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780272
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wendy_masquerade
+MsgId: Wendy Masquerader Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780273
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wendy_pirate
+MsgId: Wendy Swashbuckler Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780274
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wendy_rose
+MsgId: Wendy Roseate Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780275
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wendy_shadow
+MsgId: Wendy Triumphant Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780276
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wendy_survivor
+MsgId: Wendy Survivor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780277
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wendy_yule
+MsgId: Wendy Merrymaker Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780278
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wes_deluxe
+MsgId: Wes Deluxe Wardrobe
+MsgStr: 
+Thuật ngữ tham khảo: "Wardrobe" => "Tủ quần áo"
+
+Item:
+Id: 780279
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wes_formal
+MsgId: Wes Guest of Honor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Guest of Honor" => "Thượng Khách", "Chest" => "Rương"
+
+Item:
+Id: 780280
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wes_harlequin
+MsgId: Wes Fool Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780281
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wes_lunar
+MsgId: Wes Moonbound Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780282
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wes_rose
+MsgId: Wes Roseate Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780283
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wes_shadow
+MsgId: Wes Triumphant Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780284
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wes_survivor
+MsgId: Wes Survivor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780285
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wes_western
+MsgId: Wes Stampeder Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780286
+MsgCtxt: STRINGS.SKIN_NAMES.pack_western2_20s1
+MsgId: The Roaring Stampeder Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780287
+MsgCtxt: STRINGS.SKIN_NAMES.pack_western_1
+MsgId: Stampeder Duds Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780288
+MsgCtxt: STRINGS.SKIN_NAMES.pack_western_1_items
+MsgId: Stampeder Gear Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780289
+MsgCtxt: STRINGS.SKIN_NAMES.pack_western_1_mystical_items
+MsgId: Mystic Moonbound Stampeder Gear Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780290
+MsgCtxt: STRINGS.SKIN_NAMES.pack_western_2
+MsgId: Stampeder Duds Chest Part II
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780291
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wickerbottom_deluxe
+MsgId: Wickerbottom Deluxe Wardrobe
+MsgStr: 
+Thuật ngữ tham khảo: "Wardrobe" => "Tủ quần áo"
+
+Item:
+Id: 780292
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wickerbottom_formal
+MsgId: Wickerbottom Guest of Honor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Guest of Honor" => "Thượng Khách", "Chest" => "Rương"
+
+Item:
+Id: 780293
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wickerbottom_masquerade
+MsgId: Wickerbottom Masquerader Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780294
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wickerbottom_ornate
+MsgId: Wickerbottom Nom de Plume Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780295
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wickerbottom_pirate
+MsgId: Wickerbottom Swashbuckler Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780296
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wickerbottom_rose
+MsgId: Wickerbottom Roseate Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780297
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wickerbottom_shadow
+MsgId: Wickerbottom Triumphant Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780298
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wickerbottom_survivor
+MsgId: Wickerbottom Survivor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780299
+MsgCtxt: STRINGS.SKIN_NAMES.pack_willow_ancient
+MsgId: Willow Archaic Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780300
+MsgCtxt: STRINGS.SKIN_NAMES.pack_willow_deluxe
+MsgId: Willow Deluxe Wardrobe
+MsgStr: 
+Thuật ngữ tham khảo: "Wardrobe" => "Tủ quần áo"
+
+Item:
+Id: 780301
+MsgCtxt: STRINGS.SKIN_NAMES.pack_willow_formal
+MsgId: Willow Guest of Honor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Guest of Honor" => "Thượng Khách", "Chest" => "Rương"
+
+Item:
+Id: 780302
+MsgCtxt: STRINGS.SKIN_NAMES.pack_willow_haunteddoll
+MsgId: Willow Forlorn Doll Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780303
+MsgCtxt: STRINGS.SKIN_NAMES.pack_willow_lunar
+MsgId: Willow Moonbound Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780304
+MsgCtxt: STRINGS.SKIN_NAMES.pack_willow_rose
+MsgId: Willow Roseate Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780305
+MsgCtxt: STRINGS.SKIN_NAMES.pack_willow_shadow
+MsgId: Willow Triumphant Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780306
+MsgCtxt: STRINGS.SKIN_NAMES.pack_willow_spring
+MsgId: Willow Equinor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Willow Equinor Chest" => "Rương Xuân Bính Ngọ Willow", "Equinor" => "Xuân Bính Ngọ", "Chest" => "Rương"
+
+Item:
+Id: 780307
+MsgCtxt: STRINGS.SKIN_NAMES.pack_willow_survivor
+MsgId: Willow Survivor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780308
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wilson_barber
+MsgId: Wilson Barber Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780309
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wilson_deluxe
+MsgId: Wilson Deluxe Wardrobe
+MsgStr: 
+Thuật ngữ tham khảo: "Wardrobe" => "Tủ quần áo"
+
+Item:
+Id: 780310
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wilson_formal
+MsgId: Wilson Guest of Honor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Guest of Honor" => "Thượng Khách", "Chest" => "Rương"
+
+Item:
+Id: 780311
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wilson_nature
+MsgId: Wilson Verdant Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780312
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wilson_pirate
+MsgId: Wilson Swashbuckler Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780313
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wilson_rose
+MsgId: Wilson Roseate Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780314
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wilson_shadow
+MsgId: Wilson Triumphant Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780315
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wilson_spring
+MsgId: Wilson Equinor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Wilson Equinor Chest" => "Rương Xuân Bính Ngọ Wilson", "Equinor" => "Xuân Bính Ngọ", "Chest" => "Rương"
+
+Item:
+Id: 780316
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wilson_survivor
+MsgId: Wilson Survivor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780317
+MsgCtxt: STRINGS.SKIN_NAMES.pack_winona_ancient
+MsgId: Winona Archaic Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780318
+MsgCtxt: STRINGS.SKIN_NAMES.pack_winona_deluxe
+MsgId: Winona Deluxe Wardrobe
+MsgStr: 
+Thuật ngữ tham khảo: "Wardrobe" => "Tủ quần áo"
+
+Item:
+Id: 780319
+MsgCtxt: STRINGS.SKIN_NAMES.pack_winona_factory
+MsgId: Winona Industrious Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780320
+MsgCtxt: STRINGS.SKIN_NAMES.pack_winona_formal
+MsgId: Winona Guest of Honor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Guest of Honor" => "Thượng Khách", "Chest" => "Rương"
+
+Item:
+Id: 780321
+MsgCtxt: STRINGS.SKIN_NAMES.pack_winona_masquerade
+MsgId: Winona Masquerader Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780322
+MsgCtxt: STRINGS.SKIN_NAMES.pack_winona_rose
+MsgId: Winona Roseate Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780323
+MsgCtxt: STRINGS.SKIN_NAMES.pack_winona_shadow
+MsgId: Winona Triumphant Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780324
+MsgCtxt: STRINGS.SKIN_NAMES.pack_winona_spring
+MsgId: Winona Equinor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Winona Equinor Chest" => "Rương Xuân Bính Ngọ Winona", "Equinor" => "Xuân Bính Ngọ", "Chest" => "Rương"
+
+Item:
+Id: 780325
+MsgCtxt: STRINGS.SKIN_NAMES.pack_winona_survivor
+MsgId: Winona Survivor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780326
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wizard_items
+MsgId: Dark Wizard's Effects Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780327
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wolfgang_deluxe
+MsgId: Wolfgang Deluxe Wardrobe
+MsgStr: 
+Thuật ngữ tham khảo: "Wardrobe" => "Tủ quần áo"
+
+Item:
+Id: 780328
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wolfgang_formal
+MsgId: Wolfgang Guest of Honor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Guest of Honor" => "Thượng Khách", "Chest" => "Rương"
+
+Item:
+Id: 780329
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wolfgang_nature
+MsgId: Wolfgang Verdant Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780330
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wolfgang_rose
+MsgId: Wolfgang Roseate Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780331
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wolfgang_shadow
+MsgId: Wolfgang Triumphant Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780332
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wolfgang_strongman
+MsgId: Wolfgang Strongman Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780333
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wolfgang_survivor
+MsgId: Wolfgang Survivor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780334
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wolfgang_yule
+MsgId: Wolfgang Merrymaker Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780335
+MsgCtxt: STRINGS.SKIN_NAMES.pack_woodie_deluxe
+MsgId: Woodie Deluxe Wardrobe
+MsgStr: 
+Thuật ngữ tham khảo: "Wardrobe" => "Tủ quần áo"
+
+Item:
+Id: 780336
+MsgCtxt: STRINGS.SKIN_NAMES.pack_woodie_formal
+MsgId: Woodie Guest of Honor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Guest of Honor" => "Thượng Khách", "Chest" => "Rương"
+
+Item:
+Id: 780337
+MsgCtxt: STRINGS.SKIN_NAMES.pack_woodie_hockey
+MsgId: Woodie Team Player Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780338
+MsgCtxt: STRINGS.SKIN_NAMES.pack_woodie_lunar
+MsgId: Woodie Moonbound Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780339
+MsgCtxt: STRINGS.SKIN_NAMES.pack_woodie_rose
+MsgId: Woodie Roseate Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780340
+MsgCtxt: STRINGS.SKIN_NAMES.pack_woodie_shadow
+MsgId: Woodie Triumphant Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780341
+MsgCtxt: STRINGS.SKIN_NAMES.pack_woodie_survivor
+MsgId: Woodie Survivor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780342
+MsgCtxt: STRINGS.SKIN_NAMES.pack_woodworking_cawnival
+MsgId: Cawnival Woodworking Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Cawnival" => "Lễ Hội Quạ", "Chest" => "Rương"
+
+Item:
+Id: 780343
+MsgCtxt: STRINGS.SKIN_NAMES.pack_woodworking_fantasy
+MsgId: Fantasmical Woodworking Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780344
+MsgCtxt: STRINGS.SKIN_NAMES.pack_woodworking_hallowed
+MsgId: Hallowed Woodworking Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780345
+MsgCtxt: STRINGS.SKIN_NAMES.pack_woodworking_handmade
+MsgId: Cozy Woodworking Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780346
+MsgCtxt: STRINGS.SKIN_NAMES.pack_woodworking_western
+MsgId: Parlor Woodworking Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780347
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wormwood_cactus
+MsgId: Wormwood Oasis Bound Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780348
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wormwood_deluxe
+MsgId: Wormwood Deluxe Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780349
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wormwood_deluxealt
+MsgId: Wormwood Deluxe Wardrobe
+MsgStr: 
+Thuật ngữ tham khảo: "Wardrobe" => "Tủ quần áo"
+
+Item:
+Id: 780350
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wormwood_formal
+MsgId: Wormwood Guest of Honor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Guest of Honor" => "Thượng Khách", "Chest" => "Rương"
+
+Item:
+Id: 780351
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wormwood_mushroom
+MsgId: Wormwood Hollow Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780352
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wormwood_rose
+MsgId: Wormwood Roseate Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780353
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wormwood_shadow
+MsgId: Wormwood Triumphant Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780354
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wormwood_survivor
+MsgId: Wormwood Survivor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780355
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wortox_ancient
+MsgId: Wortox Archaic Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780356
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wortox_deluxe
+MsgId: Wortox Deluxe Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780357
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wortox_formal
+MsgId: Wortox Guest of Honor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Guest of Honor" => "Thượng Khách", "Chest" => "Rương"
+
+Item:
+Id: 780358
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wortox_lunar
+MsgId: Wortox Moonbound Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780359
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wortox_minotaur
+MsgId: Wortox Minotaur Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780360
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wortox_original
+MsgId: Wortox Uncorrupted Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780361
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wortox_rose
+MsgId: Wortox Roseate Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780362
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wortox_shadow
+MsgId: Wortox Triumphant Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780363
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wortox_yule
+MsgId: Wortox Merrymaker Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780364
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wrestler_promo1
+MsgId: Contenders Promo Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780365
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wrestler_promo2
+MsgId: Contenders Promo Chest, Round 2
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780366
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wrestler_wathgrithr
+MsgId: Ultimate Performer's Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780367
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wrestler_webber
+MsgId: El Tigre Cub's Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780368
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wrestler_wes
+MsgId: The Lover's Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780369
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wrestler_winona
+MsgId: The Fixer's Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780370
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wrestler_wolfgang
+MsgId: The Giant's Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780371
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wrestler_wx78
+MsgId: Midori Roboto's Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780372
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wurt_ancient
+MsgId: Wurt Archaic Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780373
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wurt_cave
+MsgId: Wurt Abyssal Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780374
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wurt_deluxe
+MsgId: Wurt Deluxe Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780375
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wurt_deluxealt
+MsgId: Wurt Deluxe Wardrobe
+MsgStr: 
+Thuật ngữ tham khảo: "Wardrobe" => "Tủ quần áo"
+
+Item:
+Id: 780376
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wurt_formal
+MsgId: Wurt Guest of Honor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Guest of Honor" => "Thượng Khách", "Chest" => "Rương"
+
+Item:
+Id: 780377
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wurt_lunar
+MsgId: Wurt Moonbound Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780378
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wurt_rose
+MsgId: Wurt Roseate Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780379
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wurt_shadow
+MsgId: Wurt Triumphant Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780380
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wurt_survivor
+MsgId: Wurt Survivor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780381
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wx78_ancient
+MsgId: WX-78 Archaic Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780382
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wx78_deluxe
+MsgId: WX-78 Deluxe Wardrobe
+MsgStr: 
+Thuật ngữ tham khảo: "Wardrobe" => "Tủ quần áo"
+
+Item:
+Id: 780383
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wx78_formal
+MsgId: WX-78 Guest of Honor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Guest of Honor" => "Thượng Khách", "Chest" => "Rương"
+
+Item:
+Id: 780384
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wx78_gothicjewel
+MsgId: WX-78 Pretty Dark Things Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780385
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wx78_gothicjewel_all
+MsgId: WX-78 Pretty Dark Idolatry Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780386
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wx78_gothicjewel_shadowdrones
+MsgId: WX-78 Pretty Dark Presence Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780387
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wx78_masquerade
+MsgId: WX-78 Masquerader Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780388
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wx78_pirate
+MsgId: WX-78 Swashbuckler Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780389
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wx78_retro
+MsgId: WX-78 Experimental Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780390
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wx78_rose
+MsgId: WX-78 Roseate Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780391
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wx78_shadow
+MsgId: WX-78 Triumphant Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780392
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wx78_survivor
+MsgId: WX-78 Survivor Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780393
+MsgCtxt: STRINGS.SKIN_NAMES.pack_yotc_builders
+MsgId: Builder's Belongings Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780394
+MsgCtxt: STRINGS.SKIN_NAMES.pack_yotc_bundle
+MsgId: Bounteous Bundle
+MsgStr: 
+
+Item:
+Id: 780395
+MsgCtxt: STRINGS.SKIN_NAMES.pack_yotc_fledgling
+MsgId: Fledgling's Belongings Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780396
+MsgCtxt: STRINGS.SKIN_NAMES.pack_yotc_survivalist
+MsgId: Survivalist's Belongings Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 780397
+MsgCtxt: STRINGS.SKIN_NAMES.pack_yule_all
+MsgId: Merrymaker Survivors Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780398
+MsgCtxt: STRINGS.SKIN_NAMES.pack_yule_all2
+MsgId: Merrymaker Survivors Chest, Part II
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780399
+MsgCtxt: STRINGS.SKIN_NAMES.pack_yule_all3
+MsgId: Merrymaker Survivors Chest, Part III
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780400
+MsgCtxt: STRINGS.SKIN_NAMES.pack_yule_all4
+MsgId: Merrymaker Survivors Chest, Part IV
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780401
+MsgCtxt: STRINGS.SKIN_NAMES.pack_yule_bundle
+MsgId: Complete Merrymaker Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780402
+MsgCtxt: STRINGS.SKIN_NAMES.pack_yule_bundle2
+MsgId: Complete Merrymaker Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780403
+MsgCtxt: STRINGS.SKIN_NAMES.pack_yule_bundle3
+MsgId: Complete Merrymaker Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780404
+MsgCtxt: STRINGS.SKIN_NAMES.pack_yule_bundle4
+MsgId: Complete Merrymaker Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780405
+MsgCtxt: STRINGS.SKIN_NAMES.pack_yule_items
+MsgId: Merrymaker Belongings Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780406
+MsgCtxt: STRINGS.SKIN_NAMES.pack_yule_wanda
+MsgId: Wanda Merrymaker Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780407
+MsgCtxt: STRINGS.SKIN_NAMES.pack_yule_wathgrithr
+MsgId: Wigfrid Merrymaker Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780408
+MsgCtxt: STRINGS.SKIN_NAMES.pack_yule_waxwell
+MsgId: Maxwell Merrymaker Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780409
+MsgCtxt: STRINGS.SKIN_NAMES.pack_yule_wes
+MsgId: Wes Merrymaker Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780410
+MsgCtxt: STRINGS.SKIN_NAMES.pack_yule_wickerbottom
+MsgId: Wickerbottom Merrymaker Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780411
+MsgCtxt: STRINGS.SKIN_NAMES.pack_yule_willow
+MsgId: Willow Merrymaker Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780412
+MsgCtxt: STRINGS.SKIN_NAMES.pack_yule_wilson
+MsgId: Wilson Merrymaker Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780413
+MsgCtxt: STRINGS.SKIN_NAMES.pack_yule_winona
+MsgId: Winona Merrymaker Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780414
+MsgCtxt: STRINGS.SKIN_NAMES.pack_yule_woodie
+MsgId: Woodie Merrymaker Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780415
+MsgCtxt: STRINGS.SKIN_NAMES.pack_yule_wormwood
+MsgId: Wormwood Merrymaker Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780416
+MsgCtxt: STRINGS.SKIN_NAMES.pack_yule_wurt
+MsgId: Wurt Merrymaker Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780417
+MsgCtxt: STRINGS.SKIN_NAMES.pack_yule_wx78
+MsgId: WX-78 Merrymaker Chest
+MsgStr: 
+Thuật ngữ tham khảo: "Merrymaker" => "Sứ Giả Niềm Vui", "Chest" => "Rương"
+
+Item:
+Id: 780418
+MsgCtxt: STRINGS.SKIN_NAMES.panflute_an
+MsgId: Nouveau Panflute
+MsgStr: 
+
+Item:
+Id: 780419
+MsgCtxt: STRINGS.SKIN_NAMES.panflute_harlequin
+MsgId: Foolish Flute
+MsgStr: 
+
+Item:
+Id: 780420
+MsgCtxt: STRINGS.SKIN_NAMES.panflute_insect
+MsgId: Butterflute
+MsgStr: 
+
+Item:
+Id: 780421
+MsgCtxt: STRINGS.SKIN_NAMES.panflute_swamp
+MsgId: Primal Panflute
+MsgStr: 
+
+Item:
+Id: 780422
+MsgCtxt: STRINGS.SKIN_NAMES.parasol_spring
+MsgId: Rosy Posy Parasol
+MsgStr: 
+
+Item:
+Id: 780423
+MsgCtxt: STRINGS.SKIN_NAMES.perdling_crow
+MsgId: Crowlet
+MsgStr: 
+
+Item:
+Id: 780424
+MsgCtxt: STRINGS.SKIN_NAMES.perdling_crow_builder
+MsgId: n/a
+MsgStr: 
+
+Item:
+Id: 780425
+MsgCtxt: STRINGS.SKIN_NAMES.perdling_pelican
+MsgId: Peliclet
+MsgStr: 
+
+Item:
+Id: 780426
+MsgCtxt: STRINGS.SKIN_NAMES.perdling_pelican_builder
+MsgId: n/a
+MsgStr: 
+
+Item:
+Id: 780427
+MsgCtxt: STRINGS.SKIN_NAMES.perdling_pollyrogers
+MsgId: Parrotlet
+MsgStr: 
+
+Item:
+Id: 780428
+MsgCtxt: STRINGS.SKIN_NAMES.perdling_pollyrogers_builder
+MsgId: n/a
+MsgStr: 
+
+Item:
+Id: 780429
+MsgCtxt: STRINGS.SKIN_NAMES.perdling_puffin
+MsgId: Pufflet
+MsgStr: 
+
+Item:
+Id: 780430
+MsgCtxt: STRINGS.SKIN_NAMES.perdling_puffin_builder
+MsgId: n/a
+MsgStr: 
+
+Item:
+Id: 780431
+MsgCtxt: STRINGS.SKIN_NAMES.perdling_rooster
+MsgId: Rooslet
+MsgStr: 
+
+Item:
+Id: 780432
+MsgCtxt: STRINGS.SKIN_NAMES.perdling_rooster_builder
+MsgId: n/a
+MsgStr: 
+
+Item:
+Id: 780433
+MsgCtxt: STRINGS.SKIN_NAMES.perdling_winter
+MsgId: Penglet
+MsgStr: 
+
+Item:
+Id: 780434
+MsgCtxt: STRINGS.SKIN_NAMES.perdling_winter_builder
+MsgId: n/a
+MsgStr: 
+
+Item:
+Id: 780435
+MsgCtxt: STRINGS.SKIN_NAMES.pickaxe_feathered
+MsgId: Hunter's Pickaxe
+MsgStr: 
+Thuật ngữ tham khảo: "Pickaxe" => "Cuốc chim"
+
+Item:
+Id: 780436
+MsgCtxt: STRINGS.SKIN_NAMES.pickaxe_invisible
+MsgId: Pantomimed Pickaxe
+MsgStr: 
+Thuật ngữ tham khảo: "Pickaxe" => "Cuốc chim"
+
+Item:
+Id: 780437
+MsgCtxt: STRINGS.SKIN_NAMES.pickaxe_northern
+MsgId: Nordic Pickaxe
+MsgStr: 
+Thuật ngữ tham khảo: "Pickaxe" => "Cuốc chim"
+
+Item:
+Id: 780438
+MsgCtxt: STRINGS.SKIN_NAMES.pickaxe_reavershark
+MsgId: Reavershark
+MsgStr: 
+
+Item:
+Id: 780439
+MsgCtxt: STRINGS.SKIN_NAMES.pickaxe_scythe
+MsgId: Rusted Scythe
+MsgStr: 
+
+Item:
+Id: 780440
+MsgCtxt: STRINGS.SKIN_NAMES.pickaxe_scythe_alt
+MsgId: Rusted Scythe
+MsgStr: 
+
+Item:
+Id: 780441
+MsgCtxt: STRINGS.SKIN_NAMES.pickaxe_victorian
+MsgId: Fanciful Pickaxe
+MsgStr: 
+Thuật ngữ tham khảo: "Pickaxe" => "Cuốc chim"
+
+Item:
+Id: 780442
+MsgCtxt: STRINGS.SKIN_NAMES.piggyback_elephant
+MsgId: Elephant Pack
+MsgStr: 
+
+Item:
+Id: 780443
+MsgCtxt: STRINGS.SKIN_NAMES.piggyback_nose
+MsgId: Piggy Backpack
+MsgStr: 
+Thuật ngữ tham khảo: "Backpack" => "Ba Lô"
+
+Item:
+Id: 780444
+MsgCtxt: STRINGS.SKIN_NAMES.pighouse_cabin
+MsgId: Thatched Cottage
+MsgStr: 
+
+Item:
+Id: 780445
+MsgCtxt: STRINGS.SKIN_NAMES.pighouse_gothic
+MsgId: Derelict Manor
+MsgStr: 
+
+Item:
+Id: 780446
+MsgCtxt: STRINGS.SKIN_NAMES.pighouse_logcabin
+MsgId: Rustic Cabin
+MsgStr: 
+
+Item:
+Id: 780447
+MsgCtxt: STRINGS.SKIN_NAMES.pitchfork_invisible
+MsgId: Pantomimed Pitchfork
+MsgStr: 
+Thuật ngữ tham khảo: "Pitchfork" => "Chĩa"
+
+Item:
+Id: 780448
+MsgCtxt: STRINGS.SKIN_NAMES.pitchfork_rose
+MsgId: Blooming Pitchfork
+MsgStr: 
+Thuật ngữ tham khảo: "Pitchfork" => "Chĩa"
+
+Item:
+Id: 780449
+MsgCtxt: STRINGS.SKIN_NAMES.playerportrait_bg_altarstatue
+MsgId: Beast of Hunger Portrait
+MsgStr: 
+Thuật ngữ tham khảo: "Beast of Hunger" => "Quái Thú Háu Đói"
+
+Item:
+Id: 780450
+MsgCtxt: STRINGS.SKIN_NAMES.playerportrait_bg_amuletorangeplanet
+MsgId: Gathering Amulet Portrait
+MsgStr: 
+
+Item:
+Id: 780451
+MsgCtxt: STRINGS.SKIN_NAMES.playerportrait_bg_amuletredrose
+MsgId: Rosy Red Amulet Portrait
+MsgStr: 
+
+Item:
+Id: 780452
+MsgCtxt: STRINGS.SKIN_NAMES.playerportrait_bg_amuletyellowan
+MsgId: Nouveau Amulet Portrait
+MsgStr: 
+
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "[\n  {\"id\":777200,\"suggestedTranslation\":\"\",\"rating\":0.0},\n  {\"id\":780154,\"suggestedTranslation\":\"Rương Bộ Ba Hồng Thắm\",\"rating\":9.0},\n  {\"id\":780155,\"suggestedTranslation\":\"Rương Nội Thất Hồng Thắm\",\"rating\":9.0},\n  {\"id\":780156,\"suggestedTranslation\":\"Rương Đồ Nội Thất Hồng Thắm\",\"rating\":9.0},\n  {\"id\":780157,\"suggestedTranslation\":\"Rương Trang Trí Hồng Thắm\",\"rating\":9.0},\n  {\"id\":780158,\"suggestedTranslation\":\"Rương Kẻ Cướp Hồng Thắm\",\"rating\":9.0},\n  {\"id\":780159,\"suggestedTranslation\":\"Rương Kẻ Xung Phong Hồng Thắm\",\"rating\":9.0},\n  {\"id\":780160,\"suggestedTranslation\":\"Rương Ven Biển\",\"rating\":9.0},\n  {\"id\":780161,\"suggestedTranslation\":\"Rương Khải Hoàn Hoàn Chỉnh\",\"rating\":9.0},\n  {\"id\":780162,\"suggestedTranslation\":\"Rương Sinh Tồn Xuân Bính Ngọ, Phần I\",\"rating\":9.0},\n  {\"id\":780163,\"suggestedTranslation\":\"Gói Tổng Vệ Sinh Mùa Xuân\",\"rating\":9.0},\n  {\"id\":780164,\"suggestedTranslation\":\"Rương Đồ Đạc Của Nhà Thám Hiểm\",\"rating\":9.0},\n  {\"id\":780165,\"suggestedTranslation\":\"Rương Đồ Dã Ngoại\",\"rating\":9.0},\n  {\"id\":780166,\"suggestedTranslation\":\"Gói Khởi Đầu 2019\",\"rating\":9.0},\n  {\"id\":780167,\"suggestedTranslation\":\"Gói Khởi Đầu 2020\",\"rating\":9.0},\n  {\"id\":780168,\"suggestedTranslation\":\"Gói Khởi Đầu 2021\",\"rating\":9.0},\n  {\"id\":780169,\"suggestedTranslation\":\"Gói Khởi Đầu 2023\",\"rating\":9.0},\n  {\"id\":780170,\"suggestedTranslation\":\"Gói Khởi Đầu 2024\",\"rating\":9.0},\n  {\"id\":780171,\"suggestedTranslation\":\"Gói Khởi Đầu 2025\",\"rating\":9.0},\n  {\"id\":780172,\"suggestedTranslation\":\"Gói Khởi Đầu 2026\",\"rating\":9.0},\n  {\"id\":780173,\"suggestedTranslation\":\"Rương Bộ Ba Sống Sót\",\"rating\":9.0},\n  {\"id\":780174,\"suggestedTranslation\":\"Rương Sống Sót Hoàn Chỉnh\",\"rating\":9.0},\n  {\"id\":780175,\"suggestedTranslation\":\"Rương Chinh Phục Đại Dương\",\"rating\":9.0},\n  {\"id\":780176,\"suggestedTranslation\":\"Gói Quà Don't Starve: Shipwrecked\",\"rating\":9.0},\n  {\"id\":780177,\"suggestedTranslation\":\"Rương Kỳ Nghỉ Kẻ Cướp Đầm Lầy\",\"rating\":9.0},\n  {\"id\":780178,\"suggestedTranslation\":\"Rương Người Yêu Đầm Lầy\",\"rating\":9.0},\n  {\"id\":780179,\"suggestedTranslation\":\"Rương Kỳ Nghỉ Đầm Lầy\",\"rating\":9.0},\n  {\"id\":780180,\"suggestedTranslation\":\"Rương Kỳ Nghỉ\",\"rating\":9.0},\n  {\"id\":780181,\"suggestedTranslation\":\"Rương Chiến Thắng Đôi Cánh\",\"rating\":9.0},\n  {\"id\":780182,\"suggestedTranslation\":\"Rương Phong Cách Victoria Nhân Vật Gốc\",\"rating\":9.0},\n  {\"id\":780183,\"suggestedTranslation\":\"Rương Phong Cách Victoria Nhân Vật Mới\",\"rating\":9.0},\n  {\"id\":780184,\"suggestedTranslation\":\"Rương Phong Cách Victoria Hoàn Chỉnh\",\"rating\":9.0},\n  {\"id\":780185,\"suggestedTranslation\":\"Rương Phong Cách Victoria Hoàn Chỉnh\",\"rating\":9.0},\n  {\"id\":780186,\"suggestedTranslation\":\"Rương Phong Cách Victoria Hoàn Chỉnh\",\"rating\":9.0},\n  {\"id\":780187,\"suggestedTranslation\":\"Rương Nội Thất Phong Cách Victoria\",\"rating\":9.0},\n  {\"id\":780188,\"suggestedTranslation\":\"Rương Đồ Đạc Phong Cách Victoria\",\"rating\":9.0},\n  {\"id\":780189,\"suggestedTranslation\":\"Rương Đồ Cổ Phong Cách Victoria\",\"rating\":9.0},\n  {\"id\":780190,\"suggestedTranslation\":\"Rương Walter Phong Cách Victoria\",\"rating\":9.0},\n  {\"id\":780191,\"suggestedTranslation\":\"Rương Wigfrid Phong Cách Victoria\",\"rating\":9.0},\n  {\"id\":780192,\"suggestedTranslation\":\"Rương Maxwell Phong Cách Victoria\",\"rating\":9.0},\n  {\"id\":780193,\"suggestedTranslation\":\"Rương Webber Phong Cách Victoria\",\"rating\":9.0},\n  {\"id\":780194,\"suggestedTranslation\":\"Rương Wendy Phong Cách Victoria\",\"rating\":9.0},\n  {\"id\":780195,\"suggestedTranslation\":\"Rương Wes Phong Cách Victoria\",\"rating\":9.0},\n  {\"id\":780196,\"suggestedTranslation\":\"Rương Wickerbottom Phong Cách Victoria\",\"rating\":9.0},\n  {\"id\":780197,\"suggestedTranslation\":\"Rương Willow Phong Cách Victoria\",\"rating\":9.0},\n  {\"id\":780198,\"suggestedTranslation\":\"Rương Wilson Phong Cách Victoria\",\"rating\":9.0},\n  {\"id\":780199,\"suggestedTranslation\":\"Rương Winona Phong Cách Victoria\",\"rating\":9.0},\n  {\"id\":780200,\"suggestedTranslation\":\"Rương Wolfgang Phong Cách Victoria\",\"rating\":9.0},\n  {\"id\":780201,\"suggestedTranslation\":\"Rương Woodie Phong Cách Victoria\",\"rating\":9.0},\n  {\"id\":780202,\"suggestedTranslation\":\"Rương Wormwood Phong Cách Victoria\",\"rating\":9.0},\n  {\"id\":780203,\"suggestedTranslation\":\"Rương Wortox Phong Cách Victoria\",\"rating\":9.0},\n  {\"id\":780204,\"suggestedTranslation\":\"Rương Wurt Phong Cách Victoria\",\"rating\":9.0},\n  {\"id\":780205,\"suggestedTranslation\":\"Rương WX-78 Phong Cách Victoria\",\"rating\":9.0},\n  {\"id\":780206,\"suggestedTranslation\":\"Rương Chuyến Thám Hiểm Của Nhà Phát Minh\",\"rating\":9.0},\n  {\"id\":780207,\"suggestedTranslation\":\"Rương Walter Cổ Đại\",\"rating\":9.0},\n  {\"id\":780208,\"suggestedTranslation\":\"Tủ quần áo Cao Cấp Walter\",\"rating\":9.0},\n  {\"id\":780209,\"suggestedTranslation\":\"Rương Thám Tử Nhí Walter\",\"rating\":9.0},\n  {\"id\":780210,\"suggestedTranslation\":\"Rương Thượng Khách Walter\",\"rating\":9.0},\n  {\"id\":780211,\"suggestedTranslation\":\"Rương Walter Hồng Thắm\",\"rating\":9.0},\n  {\"id\":780212,\"suggestedTranslation\":\"Rương Khải Hoàn Walter\",\"rating\":9.0},\n  {\"id\":780213,\"suggestedTranslation\":\"Rương Sinh Tồn Walter\",\"rating\":9.0},\n  {\"id\":780214,\"suggestedTranslation\":\"Rương Sứ Giả Niềm Vui Walter\",\"rating\":9.0},\n  {\"id\":780215,\"suggestedTranslation\":\"Rương Cao Cấp Wanda\",\"rating\":9.0},\n  {\"id\":780216,\"suggestedTranslation\":\"Tủ quần áo Cao Cấp Wanda\",\"rating\":9.0},\n  {\"id\":780217,\"suggestedTranslation\":\"Rương Thượng Khách Wanda\",\"rating\":9.0},\n  {\"id\":780218,\"suggestedTranslation\":\"Rương Wanda Hồng Thắm\",\"rating\":9.0},\n  {\"id\":780219,\"suggestedTranslation\":\"Rương Khải Hoàn Wanda\",\"rating\":9.0},\n  {\"id\":780220,\"suggestedTranslation\":\"Rương Thợ Sửa Máy Wanda\",\"rating\":9.0},\n  {\"id\":780221,\"suggestedTranslation\":\"Rương Kẻ Xung Phong Wanda\",\"rating\":9.0},\n  {\"id\":780222,\"suggestedTranslation\":\"Rương Bếp Trưởng Warly\",\"rating\":9.0},\n  {\"id\":780223,\"suggestedTranslation\":\"Tủ quần áo Cao Cấp Warly\",\"rating\":9.0},\n  {\"id\":780224,\"suggestedTranslation\":\"Rương Tàu Đánh Cá Warly\",\"rating\":9.0},\n  {\"id\":780225,\"suggestedTranslation\":\"Rương Thượng Khách Warly\",\"rating\":9.0},\n  {\"id\":780226,\"suggestedTranslation\":\"Rương Gắn Kết Mặt Trăng Warly\",\"rating\":9.0},\n  {\"id\":780227,\"suggestedTranslation\":\"Rương Warly Hồng Thắm\",\"rating\":9.0},\n  {\"id\":780228,\"suggestedTranslation\":\"Rương Khải Hoàn Warly\",\"rating\":9.0},\n  {\"id\":780229,\"suggestedTranslation\":\"Rương Sinh Tồn Warly\",\"rating\":9.0},\n  {\"id\":780230,\"suggestedTranslation\":\"Rương Warly Phong Cách Victoria\",\"rating\":9.0},\n  {\"id\":780231,\"suggestedTranslation\":\"Rương Sứ Giả Niềm Vui Warly\",\"rating\":9.0},\n  {\"id\":780232,\"suggestedTranslation\":\"Rương Wigfrid Cổ Đại\",\"rating\":9.0},\n  {\"id\":780233,\"suggestedTranslation\":\"Tủ quần áo Cao Cấp Wigfrid\",\"rating\":9.0},\n  {\"id\":780234,\"suggestedTranslation\":\"Tủ quần áo Cao Cấp Wigfrid\",\"rating\":9.0},\n  {\"id\":780235,\"suggestedTranslation\":\"Rương Thượng Khách Wigfrid\",\"rating\":9.0},\n  {\"id\":780236,\"suggestedTranslation\":\"Rương Wigfrid Hồng Thắm\",\"rating\":9.0},\n  {\"id\":780237,\"suggestedTranslation\":\"Rương Khải Hoàn Wigfrid\",\"rating\":9.0},\n  {\"id\":780238,\"suggestedTranslation\":\"Rương Sinh Tồn Wigfrid\",\"rating\":9.0},\n  {\"id\":780239,\"suggestedTranslation\":\"Rương Chiến Thắng Đôi Cánh Wigfrid\",\"rating\":9.0},\n  {\"id\":780240,\"suggestedTranslation\":\"Rương Chiến Thắng Đôi Cánh Wigfrid\",\"rating\":9.0},\n  {\"id\":780241,\"suggestedTranslation\":\"Rương Kẻ Xung Phong Wigfrid\",\"rating\":9.0},\n  {\"id\":780242,\"suggestedTranslation\":\"Tủ quần áo Cao Cấp Maxwell\",\"rating\":9.0},\n  {\"id\":780243,\"suggestedTranslation\":\"Rương Thượng Khách Maxwell\",\"rating\":9.0},\n  {\"id\":780244,\"suggestedTranslation\":\"Rương Kẻ Cướp Biển Maxwell\",\"rating\":9.0},\n  {\"id\":780245,\"suggestedTranslation\":\"Rương Maxwell Hồng Thắm\",\"rating\":9.0},\n  {\"id\":780246,\"suggestedTranslation\":\"Rương Xuân Bính Ngọ Maxwell\",\"rating\":9.0},\n  {\"id\":780247,\"suggestedTranslation\":\"Rương Sinh Tồn Maxwell\",\"rating\":9.0},\n  {\"id\":780248,\"suggestedTranslation\":\"Rương Phản Khải Hoàn Maxwell\",\"rating\":9.0},\n  {\"id\":780249,\"suggestedTranslation\":\"Rương Pháp Sư Hắc 暗 Maxwell\",\"rating\":9.0},\n  {\"id\":780250,\"suggestedTranslation\":\"Rương Bu Lông Tí Hon\",\"rating\":9.0},\n  {\"id\":780251,\"suggestedTranslation\":\"Rương Bu Lông Nhỏ\",\"rating\":9.0},\n  {\"id\":780252,\"suggestedTranslation\":\"Rương Bu Lông Cực Nhỏ\",\"rating\":9.0},\n  {\"id\":780253,\"suggestedTranslation\":\"Rương Bu Lông Lớn\",\"rating\":9.0},\n  {\"id\":780254,\"suggestedTranslation\":\"Rương Bu Lông Khổng Lồ\",\"rating\":9.0},\n  {\"id\":780255,\"suggestedTranslation\":\"Rương Bu Lông Siêu To\",\"rating\":9.0},\n  {\"id\":780256,\"suggestedTranslation\":\"Rương Kiên Định\",\"rating\":9.0},\n  {\"id\":780257,\"suggestedTranslation\":\"Rương Nhện Trang Trại Webber\",\"rating\":9.0},\n  {\"id\":780258,\"suggestedTranslation\":\"Tủ quần áo Cao Cấp Webber\",\"rating\":9.0},\n  {\"id\":780259,\"suggestedTranslation\":\"Rương Thượng Khách Webber\",\"rating\":9.0},\n  {\"id\":780260,\"suggestedTranslation\":\"Rương Kẻ Giả Trang Webber\",\"rating\":9.0},\n  {\"id\":780261,\"suggestedTranslation\":\"Rương Kẻ Cướp Biển Webber\",\"rating\":9.0},\n  {\"id\":780262,\"suggestedTranslation\":\"Rương Webber Hồng Thắm\",\"rating\":9.0},\n  {\"id\":780263,\"suggestedTranslation\":\"Rương Khải Hoàn Webber\",\"rating\":9.0},\n  {\"id\":780264,\"suggestedTranslation\":\"Rương Xuân Bính Ngọ Webber\",\"rating\":9.0},\n  {\"id\":780265,\"suggestedTranslation\":\"Rương Sinh Tồn Webber\",\"rating\":9.0},\n  {\"id\":780266,\"suggestedTranslation\":\"Rương Sứ Giả Niềm Vui Webber\",\"rating\":9.0},\n  {\"id\":780267,\"suggestedTranslation\":\"Rương Sưu Tầm Chiết Trung\",\"rating\":9.0},\n  {\"id\":780268,\"suggestedTranslation\":\"Rương Wendy Cổ Đại\",\"rating\":9.0},\n  {\"id\":780269,\"suggestedTranslation\":\"Tủ quần áo Cao Cấp Wendy\",\"rating\":9.0},\n  {\"id\":780270,\"suggestedTranslation\":\"Rương Thượng Khách Wendy\",\"rating\":9.0},\n  {\"id\":780271,\"suggestedTranslation\":\"Rương Đồ Cũ Của Wendy\",\"rating\":9.0},\n  {\"id\":780272,\"suggestedTranslation\":\"Rương Kẻ Giả Trang Wendy\",\"rating\":9.0},\n  {\"id\":780273,\"suggestedTranslation\":\"Rương Kẻ Cướp Biển Wendy\",\"rating\":9.0},\n  {\"id\":780274,\"suggestedTranslation\":\"Rương Wendy Hồng Thắm\",\"rating\":9.0},\n  {\"id\":780275,\"suggestedTranslation\":\"Rương Khải Hoàn Wendy\",\"rating\":9.0},\n  {\"id\":780276,\"suggestedTranslation\":\"Rương Sinh Tồn Wendy\",\"rating\":9.0},\n  {\"id\":780277,\"suggestedTranslation\":\"Rương Sứ Giả Niềm Vui Wendy\",\"rating\":9.0},\n  {\"id\":780278,\"suggestedTranslation\":\"Tủ quần áo Cao Cấp Wes\",\"rating\":9.0},\n  {\"id\":780279,\"suggestedTranslation\":\"Rương Thượng Khách Wes\",\"rating\":9.0},\n  {\"id\":780280,\"suggestedTranslation\":\"Rương Kềnh Khang Wes\",\"rating\":9.0},\n  {\"id\":780281,\"suggestedTranslation\":\"Rương Gắn Kết Mặt Trăng Wes\",\"rating\":9.0},\n  {\"id\":780282,\"suggestedTranslation\":\"Rương Wes Hồng Thắm\",\"rating\":9.0},\n  {\"id\":780283,\"suggestedTranslation\":\"Rương Khải Hoàn Wes\",\"rating\":9.0},\n  {\"id\":780284,\"suggestedTranslation\":\"Rương Sinh Tồn Wes\",\"rating\":9.0},\n  {\"id\":780285,\"suggestedTranslation\":\"Rương Kẻ Xung Phong Wes\",\"rating\":9.0},\n  {\"id\":780286,\"suggestedTranslation\":\"Rương Kẻ Xung Phong Hùng Hục\",\"rating\":9.0},\n  {\"id\":780287,\"suggestedTranslation\":\"Rương Trang Phục Kẻ Xung Phong\",\"rating\":9.0},\n  {\"id\":780288,\"suggestedTranslation\":\"Rương Dụng Cụ Kẻ Xung Phong\",\"rating\":9.0},\n  {\"id\":780289,\"suggestedTranslation\":\"Rương Dụng Cụ Kẻ Xung Phong Gắn Kết Mặt Trăng Bí Ẩn\",\"rating\":9.0},\n  {\"id\":780290,\"suggestedTranslation\":\"Rương Trang Phục Kẻ Xung Phong Phần II\",\"rating\":9.0},\n  {\"id\":780291,\"suggestedTranslation\":\"Tủ quần áo Cao Cấp Wickerbottom\",\"rating\":9.0},\n  {\"id\":780292,\"suggestedTranslation\":\"Rương Thượng Khách Wickerbottom\",\"rating\":9.0},\n  {\"id\":780293,\"suggestedTranslation\":\"Rương Kẻ Giả Trang Wickerbottom\",\"rating\":9.0},\n  {\"id\":780294,\"suggestedTranslation\":\"Rương Bút Danh Wickerbottom\",\"rating\":9.0},\n  {\"id\":780295,\"suggestedTranslation\":\"Rương Kẻ Cướp Biển Wickerbottom\",\"rating\":9.0},\n  {\"id\":780296,\"suggestedTranslation\":\"Rương Wickerbottom Hồng Thắm\",\"rating\":9.0},\n  {\"id\":780297,\"suggestedTranslation\":\"Rương Khải Hoàn Wickerbottom\",\"rating\":9.0},\n  {\"id\":780298,\"suggestedTranslation\":\"Rương Sinh Tồn Wickerbottom\",\"rating\":9.0},\n  {\"id\":780299,\"suggestedTranslation\":\"Rương Willow Cổ Đại\",\"rating\":9.0},\n  {\"id\":780300,\"suggestedTranslation\":\"Tủ quần áo Cao Cấp Willow\",\"rating\":9.0},\n  {\"id\":780301,\"suggestedTranslation\":\"Rương Thượng Khách Willow\",\"rating\":9.0},\n  {\"id\":780302,\"suggestedTranslation\":\"Rương Búp Bê Bị Bỏ Rơi Willow\",\"rating\":9.0},\n  {\"id\":780303,\"suggestedTranslation\":\"Rương Gắn Kết Mặt Trăng Willow\",\"rating\":9.0},\n  {\"id\":780304,\"suggestedTranslation\":\"Rương Willow Hồng Thắm\",\"rating\":9.0},\n  {\"id\":780305,\"suggestedTranslation\":\"Rương Khải Hoàn Willow\",\"rating\":9.0},\n  {\"id\":780306,\"suggestedTranslation\":\"Rương Xuân Bính Ngọ Willow\",\"rating\":9.0},\n  {\"id\":780307,\"suggestedTranslation\":\"Rương Sinh Tồn Willow\",\"rating\":9.0},\n  {\"id\":780308,\"suggestedTranslation\":\"Rương Thợ Cắt Tóc Wilson\",\"rating\":9.0},\n  {\"id\":780309,\"suggestedTranslation\":\"Tủ quần áo Cao Cấp Wilson\",\"rating\":9.0},\n  {\"id\":780310,\"suggestedTranslation\":\"Rương Thượng Khách Wilson\",\"rating\":9.0},\n  {\"id\":780311,\"suggestedTranslation\":\"Rương Xanh Tươi Wilson\",\"rating\":9.0},\n  {\"id\":780312,\"suggestedTranslation\":\"Rương Kẻ Cướp Biển Wilson\",\"rating\":9.0},\n  {\"id\":780313,\"suggestedTranslation\":\"Rương Wilson Hồng Thắm\",\"rating\":9.0},\n  {\"id\":780314,\"suggestedTranslation\":\"Rương Khải Hoàn Wilson\",\"rating\":9.0},\n  {\"id\":780315,\"suggestedTranslation\":\"Rương Xuân Bính Ngọ Wilson\",\"rating\":9.0},\n  {\"id\":780316,\"suggestedTranslation\":\"Rương Sinh Tồn Wilson\",\"rating\":9.0},\n  {\"id\":780317,\"suggestedTranslation\":\"Rương Winona Cổ Đại\",\"rating\":9.0},\n  {\"id\":780318,\"suggestedTranslation\":\"Tủ quần áo Cao Cấp Winona\",\"rating\":9.0},\n  {\"id\":780319,\"suggestedTranslation\":\"Rương Thợ Chăm Chỉ Winona\",\"rating\":9.0},\n  {\"id\":780320,\"suggestedTranslation\":\"Rương Thượng Khách Winona\",\"rating\":9.0},\n  {\"id\":780321,\"suggestedTranslation\":\"Rương Kẻ Giả Trang Winona\",\"rating\":9.0},\n  {\"id\":780322,\"suggestedTranslation\":\"Rương Winona Hồng Thắm\",\"rating\":9.0},\n  {\"id\":780323,\"suggestedTranslation\":\"Rương Khải Hoàn Winona\",\"rating\":9.0},\n  {\"id\":780324,\"suggestedTranslation\":\"Rương Xuân Bính Ngọ Winona\",\"rating\":9.0},\n  {\"id\":780325,\"suggestedTranslation\":\"Rương Sinh Tồn Winona\",\"rating\":9.0},\n  {\"id\":780326,\"suggestedTranslation\":\"Rương Dụng Cụ Pháp Sư Hắc 暗\",\"rating\":9.0},\n  {\"id\":780327,\"suggestedTranslation\":\"Tủ quần áo Cao Cấp Wolfgang\",\"rating\":9.0},\n  {\"id\":780328,\"suggestedTranslation\":\"Rương Thượng Khách Wolfgang\",\"rating\":9.0},\n  {\"id\":780329,\"suggestedTranslation\":\"Rương Xanh Tươi Wolfgang\",\"rating\":9.0},\n  {\"id\":780330,\"suggestedTranslation\":\"Rương Wolfgang Hồng Thắm\",\"rating\":9.0},\n  {\"id\":780331,\"suggestedTranslation\":\"Rương Khải Hoàn Wolfgang\",\"rating\":9.0},\n  {\"id\":780332,\"suggestedTranslation\":\"Rương Lực Sĩ Wolfgang\",\"rating\":9.0},\n  {\"id\":780333,\"suggestedTranslation\":\"Rương Sinh Tồn Wolfgang\",\"rating\":9.0},\n  {\"id\":780334,\"suggestedTranslation\":\"Rương Sứ Giả Niềm Vui Wolfgang\",\"rating\":9.0},\n  {\"id\":780335,\"suggestedTranslation\":\"Tủ quần áo Cao Cấp Woodie\",\"rating\":9.0},\n  {\"id\":780336,\"suggestedTranslation\":\"Rương Thượng Khách Woodie\",\"rating\":9.0},\n  {\"id\":780337,\"suggestedTranslation\":\"Rương Đồng Đội Woodie\",\"rating\":9.0},\n  {\"id\":780338,\"suggestedTranslation\":\"Rương Gắn Kết Mặt Trăng Woodie\",\"rating\":9.0},\n  {\"id\":780339,\"suggestedTranslation\":\"Rương Woodie Hồng Thắm\",\"rating\":9.0},\n  {\"id\":780340,\"suggestedTranslation\":\"Rương Khải Hoàn Woodie\",\"rating\":9.0},\n  {\"id\":780341,\"suggestedTranslation\":\"Rương Sinh Tồn Woodie\",\"rating\":9.0},\n  {\"id\":780342,\"suggestedTranslation\":\"Rương Mộc Mỹ Nghệ Lễ Hội Quạ\",\"rating\":9.0},\n  {\"id\":780343,\"suggestedTranslation\":\"Rương Mộc Mỹ Nghệ Kỳ Ảo\",\"rating\":9.0},\n  {\"id\":780344,\"suggestedTranslation\":\"Rương Mộc Mỹ Nghệ Thần Thánh\",\"rating\":9.0},\n  {\"id\":780345,\"suggestedTranslation\":\"Rương Mộc Mỹ Nghệ Ấm Cúng\",\"rating\":9.0},\n  {\"id\":780346,\"suggestedTranslation\":\"Rương Mộc Mỹ Nghệ Phòng Khách\",\"rating\":9.0},\n  {\"id\":780347,\"suggestedTranslation\":\"Rương Biên Giới Ốc Đảo Wormwood\",\"rating\":9.0},\n  {\"id\":780348,\"suggestedTranslation\":\"Rương Cao Cấp Wormwood\",\"rating\":9.0},\n  {\"id\":780349,\"suggestedTranslation\":\"Tủ quần áo Cao Cấp Wormwood\",\"rating\":9.0},\n  {\"id\":780350,\"suggestedTranslation\":\"Rương Thượng Khách Wormwood\",\"rating\":9.0},\n  {\"id\":780351,\"suggestedTranslation\":\"Rương Hốc Cây Wormwood\",\"rating\":9.0},\n  {\"id\":780352,\"suggestedTranslation\":\"Rương Wormwood Hồng Thắm\",\"rating\":9.0},\n  {\"id\":780353,\"suggestedTranslation\":\"Rương Khải Hoàn Wormwood\",\"rating\":9.0},\n  {\"id\":780354,\"suggestedTranslation\":\"Rương Sinh Tồn Wormwood\",\"rating\":9.0},\n  {\"id\":780355,\"suggestedTranslation\":\"Rương Wortox Cổ Đại\",\"rating\":9.0},\n  {\"id\":780356,\"suggestedTranslation\":\"Rương Cao Cấp Wortox\",\"rating\":9.0},\n  {\"id\":780357,\"suggestedTranslation\":\"Rương Thượng Khách Wortox\",\"rating\":9.0},\n  {\"id\":780358,\"suggestedTranslation\":\"Rương Gắn Kết Mặt Trăng Wortox\",\"rating\":9.0},\n  {\"id\":780359,\"suggestedTranslation\":\"Rương Nhân Ngưu Wortox\",\"rating\":9.0},\n  {\"id\":780360,\"suggestedTranslation\":\"Rương Nguyên Bản Wortox\",\"rating\":9.0},\n  {\"id\":780361,\"suggestedTranslation\":\"Rương Wortox Hồng Thắm\",\"rating\":9.0},\n  {\"id\":780362,\"suggestedTranslation\":\"Rương Khải Hoàn Wortox\",\"rating\":9.0},\n  {\"id\":780363,\"suggestedTranslation\":\"Rương Sứ Giả Niềm Vui Wortox\",\"rating\":9.0},\n  {\"id\":780364,\"suggestedTranslation\":\"Rương Khuyến Mãi Đấu Sĩ\",\"rating\":9.0},\n  {\"id\":780365,\"suggestedTranslation\":\"Rương Khuyến Mãi Đấu Sĩ, Hiệp 2\",\"rating\":9.0},\n  {\"id\":780366,\"suggestedTranslation\":\"Rương Biểu Diễn Tối Thượng\",\"rating\":9.0},\n  {\"id\":780367,\"suggestedTranslation\":\"Rương Chú Hổ Con El Tigre\",\"rating\":9.0},\n  {\"id\":780368,\"suggestedTranslation\":\"Rương Tình Nhân\",\"rating\":9.0},\n  {\"id\":780369,\"suggestedTranslation\":\"Rương Thợ Sửa Chữa\",\"rating\":9.0},\n  {\"id\":780370,\"suggestedTranslation\":\"Rương Người Khổng Lồ\",\"rating\":9.0},\n  {\"id\":780371,\"suggestedTranslation\":\"Rương Midori Roboto\",\"rating\":9.0},\n  {\"id\":780372,\"suggestedTranslation\":\"Rương Wurt Cổ Đại\",\"rating\":9.0},\n  {\"id\":780373,\"suggestedTranslation\":\"Rương Thẳm Sâu Wurt\",\"rating\":9.0},\n  {\"id\":780374,\"suggestedTranslation\":\"Rương Cao Cấp Wurt\",\"rating\":9.0},\n  {\"id\":780375,\"suggestedTranslation\":\"Tủ quần áo Cao Cấp Wurt\",\"rating\":9.0},\n  {\"id\":780376,\"suggestedTranslation\":\"Rương Thượng Khách Wurt\",\"rating\":9.0},\n  {\"id\":780377,\"suggestedTranslation\":\"Rương Gắn Kết Mặt Trăng Wurt\",\"rating\":9.0},\n  {\"id\":780378,\"suggestedTranslation\":\"Rương Wurt Hồng Thắm\",\"rating\":9.0},\n  {\"id\":780379,\"suggestedTranslation\":\"Rương Khải Hoàn Wurt\",\"rating\":9.0},\n  {\"id\":780380,\"suggestedTranslation\":\"Rương Sinh Tồn Wurt\",\"rating\":9.0},\n  {\"id\":780381,\"suggestedTranslation\":\"Rương WX-78 Cổ Đại\",\"rating\":9.0},\n  {\"id\":780382,\"suggestedTranslation\":\"Tủ quần áo Cao Cấp WX-78\",\"rating\":9.0},\n  {\"id\":780383,\"suggestedTranslation\":\"Rương Thượng Khách WX-78\",\"rating\":9.0},\n  {\"id\":780384,\"suggestedTranslation\":\"Rương WX-78 Những Thứ Tăm Tối Xinh Đẹp\",\"rating\":9.0},\n  {\"id\":780385,\"suggestedTranslation\":\"Rương WX-78 Tôn Sùng Bóng Tối Xinh Đẹp\",\"rating\":9.0},\n  {\"id\":780386,\"suggestedTranslation\":\"Rương WX-78 Hiện Diện Bóng Tối Xinh Đẹp\",\"rating\":9.0},\n  {\"id\":780387,\"suggestedTranslation\":\"Rương Kẻ Giả Trang WX-78\",\"rating\":9.0},\n  {\"id\":780388,\"suggestedTranslation\":\"Rương Kẻ Cướp Biển WX-78\",\"rating\":9.0},\n  {\"id\":780389,\"suggestedTranslation\":\"Rương Thí Nghiệm WX-78\",\"rating\":9.0},\n  {\"id\":780390,\"suggestedTranslation\":\"Rương WX-78 Hồng Thắm\",\"rating\":9.0},\n  {\"id\":780391,\"suggestedTranslation\":\"Rương Khải Hoàn WX-78\",\"rating\":9.0},\n  {\"id\":780392,\"suggestedTranslation\":\"Rương Sinh Tồn WX-78\",\"rating\":9.0},\n  {\"id\":780393,\"suggestedTranslation\":\"Rương Đồ Đạc Của Thợ Xây\",\"rating\":9.0},\n  {\"id\":780394,\"suggestedTranslation\":\"Gói Đồ Phong Phú\",\"rating\":9.0},\n  {\"id\":780395,\"suggestedTranslation\":\"Rương Đồ Đạc Của Chú Chim Non\",\"rating\":9.0},\n  {\"id\":780396,\"suggestedTranslation\":\"Rương Đồ Đạc Của Người Sinh Tồn\",\"rating\":9.0},\n  {\"id\":780397,\"suggestedTranslation\":\"Rương Sứ Giả Niềm Vui Sống Sót\",\"rating\":9.0},\n  {\"id\":780398,\"suggestedTranslation\":\"Rương Sứ Giả Niềm Vui Sống Sót, Phần II\",\"rating\":9.0},\n  {\"id\":780399,\"suggestedTranslation\":\"Rương Sứ Giả Niềm Vui Sống Sót, Phần III\",\"rating\":9.0},\n  {\"id\":780400,\"suggestedTranslation\":\"Rương Sứ Giả Niềm Vui Sống Sót, Phần IV\",\"rating\":9.0},\n  {\"id\":780401,\"suggestedTranslation\":\"Rương Sứ Giả Niềm Vui Hoàn Chỉnh\",\"rating\":9.0},\n  {\"id\":780402,\"suggestedTranslation\":\"Rương Sứ Giả Niềm Vui Hoàn Chỉnh\",\"rating\":9.0},\n  {\"id\":780403,\"suggestedTranslation\":\"Rương Sứ Giả Niềm Vui Hoàn Chỉnh\",\"rating\":9.0},\n  {\"id\":780404,\"suggestedTranslation\":\"Rương Sứ Giả Niềm Vui Hoàn Chỉnh\",\"rating\":9.0},\n  {\"id\":780405,\"suggestedTranslation\":\"Rương Đồ Đạc Sứ Giả Niềm Vui\",\"rating\":9.0},\n  {\"id\":780406,\"suggestedTranslation\":\"Rương Sứ Giả Niềm Vui Wanda\",\"rating\":9.0},\n  {\"id\":780407,\"suggestedTranslation\":\"Rương Sứ Giả Niềm Vui Wigfrid\",\"rating\":9.0},\n  {\"id\":780408,\"suggestedTranslation\":\"Rương Sứ Giả Niềm Vui Maxwell\",\"rating\":9.0},\n  {\"id\":780409,\"suggestedTranslation\":\"Rương Sứ Giả Niềm Vui Wes\",\"rating\":9.0},\n  {\"id\":780410,\"suggestedTranslation\":\"Rương Sứ Giả Niềm Vui Wickerbottom\",\"rating\":9.0},\n  {\"id\":780411,\"suggestedTranslation\":\"Rương Sứ Giả Niềm Vui Willow\",\"rating\":9.0},\n  {\"id\":780412,\"suggestedTranslation\":\"Rương Sứ Giả Niềm Vui Wilson\",\"rating\":9.0},\n  {\"id\":780413,\"suggestedTranslation\":\"Rương Sứ Giả Niềm Vui Winona\",\"rating\":9.0},\n  {\"id\":780414,\"suggestedTranslation\":\"Rương Sứ Giả Niềm Vui Woodie\",\"rating\":9.0},\n  {\"id\":780415,\"suggestedTranslation\":\"Rương Sứ Giả Niềm Vui Wormwood\",\"rating\":9.0},\n  {\"id\":780416,\"suggestedTranslation\":\"Rương Sứ Giả Niềm Vui Wurt\",\"rating\":9.0},\n  {\"id\":780417,\"suggestedTranslation\":\"Rương Sứ Giả Niềm Vui WX-78\",\"rating\":9.0},\n  {\"id\":780418,\"suggestedTranslation\":\"Sáo Pan Tân Nghệ Thuật\",\"rating\":9.0},\n  {\"id\":780419,\"suggestedTranslation\":\"Sáo Khờ Khạo\",\"rating\":9.0},\n  {\"id\":780420,\"suggestedTranslation\":\"Sáo Bướm\",\"rating\":9.0},\n  {\"id\":780421,\"suggestedTranslation\":\"Sáo Pan Nguyên Sơ\",\"rating\":9.0},\n  {\"id\":780422,\"suggestedTranslation\":\"Ô Đóa Hồng Thắm\",\"rating\":9.0},\n  {\"id\":780423,\"suggestedTranslation\":\"Quạ Con\",\"rating\":9.0},\n  {\"id\":780424,\"suggestedTranslation\":\"\",\"rating\":0.0},\n  {\"id\":780425,\"suggestedTranslation\":\"Bồ Nông Con\",\"rating\":9.0},\n  {\"id\":780426,\"suggestedTranslation\":\"\",\"rating\":0.0},\n  {\"id\":780427,\"suggestedTranslation\":\"Vẹt Con\",\"rating\":9.0},\n  {\"id\":780428,\"suggestedTranslation\":\"\",\"rating\":0.0},\n  {\"id\":780429,\"suggestedTranslation\":\"Chim Cụt Biển Con\",\"rating\":9.0},\n  {\"id\":780430,\"suggestedTranslation\":\"\",\"rating\":0.0},\n  {\"id\":780431,\"suggestedTranslation\":\"Gà Trống Con\",\"rating\":9.0},\n  {\"id\":780432,\"suggestedTranslation\":\"\",\"rating\":0.0},\n  {\"id\":780433,\"suggestedTranslation\":\"Chim Cánh Cụt Con\",\"rating\":9.0},\n  {\"id\":780434,\"suggestedTranslation\":\"\",\"rating\":0.0},\n  {\"id\":780435,\"suggestedTranslation\":\"Cuốc chim Thợ Săn\",\"rating\":9.0},\n  {\"id\":780436,\"suggestedTranslation\":\"Cuốc chim Kịch Câm\",\"rating\":9.0},\n  {\"id\":780437,\"suggestedTranslation\":\"Cuốc chim Bắc Âu\",\"rating\":9.0},\n  {\"id\":780438,\"suggestedTranslation\":\"Cuốc Cá Mập\",\"rating\":9.0},\n  {\"id\":780439,\"suggestedTranslation\":\"Liềm Sét Rỉ\",\"rating\":9.0},\n  {\"id\":780440,\"suggestedTranslation\":\"Liềm Sét Rỉ\",\"rating\":9.0},\n  {\"id\":780441,\"suggestedTranslation\":\"Cuốc chim Hoa Mỹ\",\"rating\":9.0},\n  {\"id\":780442,\"suggestedTranslation\":\"Ba lô Voi\",\"rating\":9.0},\n  {\"id\":780443,\"suggestedTranslation\":\"Ba Lô Heo\",\"rating\":9.0},\n  {\"id\":780444,\"suggestedTranslation\":\"Nhà Tranh Mái Lá\",\"rating\":9.0},\n  {\"id\":780445,\"suggestedTranslation\":\"Biệt Thự Hoang Phế\",\"rating\":9.0},\n  {\"id\":780446,\"suggestedTranslation\":\"Nhà Gỗ Mộc Mạc\",\"rating\":9.0},\n  {\"id\":780447,\"suggestedTranslation\":\"Chĩa Kịch Câm\",\"rating\":9.0},\n  {\"id\":780448,\"suggestedTranslation\":\"Chĩa Nở Rộ\",\"rating\":9.0},\n  {\"id\":780449,\"suggestedTranslation\":\"Chân Dung Quái Thú Háu Đói\",\"rating\":9.0},\n  {\"id\":780450,\"suggestedTranslation\":\"Chân Dung Bùa Hộ Mệnh Tụ Tập\",\"rating\":9.0},\n  {\"id\":780451,\"suggestedTranslation\":\"Chân Dung Bùa Hộ Mệnh Đỏ Thắm\",\"rating\":9.0},\n  {\"id\":780452,\"suggestedTranslation\":\"Chân Dung Bùa Hộ Mệnh Tân Nghệ Thuật\",\"rating\":9.0}\n]",
+            "thoughtSignature": "EmAKXgFpFH0TrBrcCuK0D//pRq/hiyf6wG2ia8d2Y2MfWC6zBkuYI5+kADm0VRtWwDuCoukoGu6qv4OBzyBXaBpxNMloE0MV7u2lYwUgyCJ3nhMVc0jhc+/ZmO7AhorSaec="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 21706,
+    "candidatesTokenCount": 9453,
+    "totalTokenCount": 31159,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 21706
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "OGi8avyAC6-GjuMP67qU2QM"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-30 08:40:03] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, không cần chú thích từ tiếng Anh trong ngoặc đơn, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 777200
+MsgCtxt: STRINGS.SKIN_DESCRIPTIONS.wall_stone_anitem
+MsgId: n/a
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"n/a\",\"rating\":0.0}",
+            "thoughtSignature": "EmAKXgFpFH0TiQpFmP0QWRFU0606Hq6fVccFqkrvoRqZR3Al+VUb3mK6j9WTjhFAaf5pKjTH55uCoDE1bEo1PSXbYqo3eD3ISUfAka9RiJ2Oa4xOSBWcsJ5POvqCcVXkcAQ="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 748,
+    "candidatesTokenCount": 15,
+    "totalTokenCount": 763,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 748
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "cmi8ap-LJf2c2roPyILfgQw"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-30 08:41:03] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, không cần chú thích từ tiếng Anh trong ngoặc đơn, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 780424
+MsgCtxt: STRINGS.SKIN_NAMES.perdling_crow_builder
+MsgId: n/a
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"n/a\",\"rating\":0.0}",
+            "thoughtSignature": "EmAKXgFpFH0TI1wqr+Qg/VEDEq2RJldSeqhOU99vCznE72NjqbbdYlrkn5El7FY8IKGZAnppABYa9+A5nx085ginwG64lkVZnS/CnI1rWAldfnnSaEWC93NITR1/BJQpXkU="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 746,
+    "candidatesTokenCount": 15,
+    "totalTokenCount": 761,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 746
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "rmi8ao_9Db7Qg8UP-4rNmQQ"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-30 08:42:03] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, không cần chú thích từ tiếng Anh trong ngoặc đơn, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 780426
+MsgCtxt: STRINGS.SKIN_NAMES.perdling_pelican_builder
+MsgId: n/a
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Chim bồ nông non\",\"rating\":0.0}",
+            "thoughtSignature": "EmAKXgFpFH0TRmHlOr/BpFzH0nUVWI4ozYmXR6ZNFWMaBXCkQBoPU/pCyvB8A32fz18VMElHReeC0IZW+RRF2fcyRJl4YnZky6RS3jHpXiNhd7TiUfsM1bk64dqO4uxUW5I="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 747,
+    "candidatesTokenCount": 17,
+    "totalTokenCount": 764,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 747
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "6mi8au7rGpnzg8UPoYbluAQ"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-30 08:43:03] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, không cần chú thích từ tiếng Anh trong ngoặc đơn, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 780428
+MsgCtxt: STRINGS.SKIN_NAMES.perdling_pollyrogers_builder
+MsgId: n/a
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"n/a\",\"rating\":0.0}",
+            "thoughtSignature": "EmAKXgFpFH0T7+MlKAKTG/n90/RWaGyI692x3nty5HEgctEVB6VRHMe6h2G+ZTsoTxidMllNcZR98JFwnVTY5KGvH6U8FgqGBtI7y9bddKB+o+Zm+9Zn1z6cjkaUWJohKM8="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 749,
+    "candidatesTokenCount": 15,
+    "totalTokenCount": 764,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 749
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "Jmm8asSsI7O1g8UPiYOtoAg"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-30 08:44:03] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, không cần chú thích từ tiếng Anh trong ngoặc đơn, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 780430
+MsgCtxt: STRINGS.SKIN_NAMES.perdling_puffin_builder
+MsgId: n/a
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Chim Cụt Biển Xây Dựng\",\"rating\":0.0}",
+            "thoughtSignature": "EmAKXgFpFH0TMQTCu5lloPRijIUnwiUt1uMFQxUPsV+z9/TIDhbUk+L3zJPv+ZGM1XeEg8e0ln13A3hBQdZaPNB2/3KUm4FaL1nkNH06L4mHWZLnQ5oUoTHMFoLPhEPRFzo="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 747,
+    "candidatesTokenCount": 21,
+    "totalTokenCount": 768,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 747
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "Ymm8avLwGpjEg8UPl_TCyQQ"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-30 08:45:03] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, không cần chú thích từ tiếng Anh trong ngoặc đơn, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 780432
+MsgCtxt: STRINGS.SKIN_NAMES.perdling_rooster_builder
+MsgId: n/a
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Gà trống\",\"rating\":0.0}",
+            "thoughtSignature": "EmAKXgFpFH0TSJTKqLyP9p3rgIw2Xm9JkIm8lpLnEYKRwMazFNwOVFsmGpO/ccKS3HayHKZdR5MzcN6Iexi6rxTZKYJlGkP2wbdM/IlGaguOcvk7S9MCroU0EG7/ZMEsAeo="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 747,
+    "candidatesTokenCount": 15,
+    "totalTokenCount": 762,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 747
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "nmm8arzaG8Ojvr0Pr9KZuQw"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-30 08:46:03] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, không cần chú thích từ tiếng Anh trong ngoặc đơn, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 780434
+MsgCtxt: STRINGS.SKIN_NAMES.perdling_winter_builder
+MsgId: n/a
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"n/a\",\"rating\":0.0}",
+            "thoughtSignature": "EmAKXgFpFH0TKXt6+d6prZPDLaFb3/vBTYx4CTWgo8Jp7JSBQjZ74PrN1HS3T6WQ0/UvJ5DvfXrFecVD7cRTWR4PEbJ95w+zyLk/LYsiMYmGia6XIimyJJqaNa93oqD+raI="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 746,
+    "candidatesTokenCount": 15,
+    "totalTokenCount": 761,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 746
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "2mm8at7oDu-jqfkPy_eVmAs"
+}
+
+================================================================================--------------------
+

@@ -1,0 +1,1884 @@
+=== Translation Log Started at 2026-09-27 19:05:08 | Provider: Gemini ===
+
+======================================== [2026-09-27 19:05:39] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang rating (0.0 - 10.0):
+   - MsgStr rỗng, chưa dịch hoặc còn là tiếng Anh: Chấm rating thấp (0.0 - 1.0).
+   - MsgStr dịch chuẩn xác, tự nhiên: Chấm rating cao (8.0 - 10.0).
+2. Đề xuất bản dịch TIẾNG VIỆT tối ưu nhất cho trường "suggestedTranslation":
+   - BẮT BUỘC 100% PHẢI LÀ TIẾNG VIỆT tự nhiên, ngắn gọn, chuẩn văn phong game.
+   - TUYỆT ĐỐI KHÔNG ĐƯỢC để suggestedTranslation là tiếng Anh trong bất kỳ trường hợp nào!
+3. Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+4. Nếu mục nào có 'Thuật ngữ tham khảo', BẮT BUỘC ưu tiên dịch thuật ngữ đó sang nghĩa tiếng Việt tương ứng.
+Ví dụ:
+Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+Output: {"id":101,"suggestedTranslation":"\"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!","rating":8.5}
+
+Hãy xử lý tất cả các mục dưới đây và trả về duy nhất một JSON array.
+Mỗi phần tử phải có đúng 3 trường: id, suggestedTranslation, rating.
+Trả về CHỈ JSON hợp lệ, không bọc markdown, không giải thích thừa.
+Ví dụ mẫu: [{"id":101,"suggestedTranslation":"\"Chưa đến giữa hè\", bạn nói?...","rating":8.5}]
+
+Item:
+Id: 731933
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE.YOTR_DECOR_2.GENERAL
+MsgId: The soft glow is... comforting.
+MsgStr: 
+
+Item:
+Id: 731934
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE.YOTR_DECOR_2.OUT
+MsgId: What little comfort it gave is now gone.
+MsgStr: 
+
+Item:
+Id: 731935
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE.YOTR_DECOR_2_ITEM
+MsgId: I should find a place for it to belong.
+MsgStr: 
+
+Item:
+Id: 731936
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE.YOTR_FIGHTRING_BELL.GENERIC
+MsgId: The ring is silent and still, for now.
+MsgStr: 
+
+Item:
+Id: 731937
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE.YOTR_FIGHTRING_BELL.PLAYING
+MsgId: Can I... play next?
+MsgStr: 
+
+Item:
+Id: 731938
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE.YOTR_FIGHTRING_KIT
+MsgId: It might be... f-fun?
+MsgStr: 
+
+Item:
+Id: 731939
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE.YOTR_FOOD1
+MsgId: I think... I would like a bit of cake.
+MsgStr: 
+
+Item:
+Id: 731940
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE.YOTR_FOOD2
+MsgId: Now my lips have turned blue...
+MsgStr: 
+
+Item:
+Id: 731941
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE.YOTR_FOOD3
+MsgId: I'm sorry Abigail, I'd share if I could.
+MsgStr: 
+
+Item:
+Id: 731942
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE.YOTR_FOOD4
+MsgId: It's sticky.
+MsgStr: 
+
+Item:
+Id: 731943
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE.YOTR_RABBITSHRINE.BURNT
+MsgId: Poor Mr. Rabbit.
+MsgStr: 
+Thuật ngữ tham khảo: "Rabbit" => "Thỏ"
+
+Item:
+Id: 731944
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE.YOTR_RABBITSHRINE.EMPTY
+MsgId: Are you hungry, Mr. Rabbit?
+MsgStr: 
+Thuật ngữ tham khảo: "Rabbit" => "Thỏ"
+
+Item:
+Id: 731945
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE.YOTR_RABBITSHRINE.GENERIC
+MsgId: I should pay my respects.
+MsgStr: 
+
+Item:
+Id: 731946
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE.YOTR_TOKEN
+MsgId: A duel to the death might help pass the time.
+MsgStr: 
+
+Item:
+Id: 731947
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE.YOTS_LANTERN_POST.BURNT
+MsgId: Shame, it was pretty.
+MsgStr: 
+
+Item:
+Id: 731948
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE.YOTS_LANTERN_POST.GENERIC
+MsgId: It does seem to bring some cheer.
+MsgStr: 
+
+Item:
+Id: 731949
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE.YOTS_LANTERN_POST_ITEM
+MsgId: Shall I cast some light upon the darkness?
+MsgStr: 
+Thuật ngữ tham khảo: "Darkness" => "Bóng đêm"
+
+Item:
+Id: 731950
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE.YOTS_SNAKESHRINE.BURNT
+MsgId: Inevitable, really.
+MsgStr: 
+
+Item:
+Id: 731951
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE.YOTS_SNAKESHRINE.EMPTY
+MsgId: Perhaps like consumes like.
+MsgStr: 
+
+Item:
+Id: 731952
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE.YOTS_SNAKESHRINE.GENERIC
+MsgId: Abigail loved surprises.
+MsgStr: 
+
+Item:
+Id: 731953
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE.YOTS_WORM
+MsgId: It's actually quite beautiful.
+MsgStr: 
+
+Item:
+Id: 731954
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE.YOT_CATCOONSHRINE.BURNT
+MsgId: No more.
+MsgStr: 
+
+Item:
+Id: 731955
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE.YOT_CATCOONSHRINE.EMPTY
+MsgId: What shall I let go to please it?
+MsgStr: 
+
+Item:
+Id: 731956
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE.YOT_CATCOONSHRINE.GENERIC
+MsgId: How do you know I'm mad?
+MsgStr: 
+
+Item:
+Id: 731957
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE_GENERIC
+MsgId: Sigh... I don't know.
+MsgStr: 
+
+Item:
+Id: 731958
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE_PLANTHAPPY
+MsgId: The plant, at least, seems to be doing well.
+MsgStr: 
+Thuật ngữ tham khảo: "Plant" => "Thực vật"
+
+Item:
+Id: 731959
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE_PLANTSTRESSED
+MsgId: Something around is making its life quite difficult.
+MsgStr: 
+
+Item:
+Id: 731960
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE_PLANTSTRESSORFAMILY
+MsgId: It's lonely... it needs family...
+MsgStr: 
+
+Item:
+Id: 731961
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE_PLANTSTRESSORHAPPINESS
+MsgId: Perhaps it just needs some reassurance.
+MsgStr: 
+
+Item:
+Id: 731962
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE_PLANTSTRESSORKILLJOYS
+MsgId: The garden is a bit untidy...
+MsgStr: 
+
+Item:
+Id: 731963
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE_PLANTSTRESSORMOISTURE
+MsgId: Perhaps it might need some water?
+MsgStr: 
+
+Item:
+Id: 731964
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE_PLANTSTRESSORNUTRIENTS
+MsgId: It is starved for nutrients.
+MsgStr: 
+
+Item:
+Id: 731965
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE_PLANTSTRESSOROVERCROWDING
+MsgId: It's too close to the other plants... it's suffocating...
+MsgStr: 
+
+Item:
+Id: 731966
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE_PLANTSTRESSORSEASON
+MsgId: It was not made to withstand the harshness of this season.
+MsgStr: 
+
+Item:
+Id: 731967
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE_PLANTVERYSTRESSED
+MsgId: It is positively miserable. A kindred spirit.
+MsgStr: 
+
+Item:
+Id: 731968
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE_SMOLDERING
+MsgId: It's about to be swallowed by flames.
+MsgStr: 
+
+Item:
+Id: 731969
+MsgCtxt: STRINGS.CHARACTERS.WENDY.DESCRIBE_TOODARK
+MsgId: The darkness! It is too dark!
+MsgStr: 
+Thuật ngữ tham khảo: "Darkness" => "Bóng đêm"
+
+Item:
+Id: 731970
+MsgCtxt: STRINGS.CHARACTERS.WENDY.EAT_FOOD.TALLBIRDEGG_CRACKED
+MsgId: I spared it the torment of living.
+MsgStr: 
+
+Item:
+Id: 731971
+MsgCtxt: STRINGS.CHARACTERS.WENDY.EAT_FOOD.WINTERSFEASTFUEL
+MsgId: Abigail, it's like I can taste mother's cooking...
+MsgStr: 
+
+Item:
+Id: 731972
+MsgCtxt: STRINGS.CHARACTERS.WENDY.QUAGMIRE_ANNOUNCE_LOSE
+MsgId: What a horrible place to have a curse.
+MsgStr: 
+
+Item:
+Id: 731973
+MsgCtxt: STRINGS.CHARACTERS.WENDY.QUAGMIRE_ANNOUNCE_MEALBURNT
+MsgId: It's ruined.
+MsgStr: 
+
+Item:
+Id: 731974
+MsgCtxt: STRINGS.CHARACTERS.WENDY.QUAGMIRE_ANNOUNCE_NOTRECIPE
+MsgId: Those foods weren't meant to be together.
+MsgStr: 
+
+Item:
+Id: 731975
+MsgCtxt: STRINGS.CHARACTERS.WENDY.QUAGMIRE_ANNOUNCE_WIN
+MsgId: Let us depart this terrible place.
+MsgStr: 
+
+Item:
+Id: 731976
+MsgCtxt: STRINGS.CHARACTERS.WENDY.WENDY_SKILLTREE_EASTEREGG
+MsgId: Is that you, Abby?
+MsgStr: 
+
+Item:
+Id: 731977
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.ACTIVATE.CARNIVAL_HOST_HERE
+MsgId: I believe I saw our host somewhere in this direction.
+MsgStr: 
+
+Item:
+Id: 731978
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.ACTIVATE.EMPTY_CATCOONDEN
+MsgId: Unfortunately, it appears the kittens are not present.
+MsgStr: 
+
+Item:
+Id: 731979
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.ACTIVATE.HOSTBUSY
+MsgId: He seems to be attending to other matters at the moment.
+MsgStr: 
+
+Item:
+Id: 731980
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.ACTIVATE.KITCOON_HIDEANDSEEK_NOT_ENOUGH_HIDERS
+MsgId: It would seem the seekers outnumber the kittens.
+MsgStr: 
+
+Item:
+Id: 731981
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.ACTIVATE.KITCOON_HIDEANDSEEK_NOT_ENOUGH_HIDING_SPOTS
+MsgId: I believe there are not enough locations for the kittens to hide.
+MsgStr: 
+
+Item:
+Id: 731982
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.ACTIVATE.KITCOON_HIDEANDSEEK_ONE_GAME_PER_DAY
+MsgId: I believe I should take some time to rest.
+MsgStr: 
+
+Item:
+Id: 731983
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.ACTIVATE.LOCKED_GATE
+MsgId: It appears to be locked.
+MsgStr: 
+
+Item:
+Id: 731984
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.ACTIVATE.MANNEQUIN_EQUIPSWAPFAILED
+MsgId: That does not belong on a mannequin.
+MsgStr: 
+Thuật ngữ tham khảo: "Mannequin" => "Ma-nơ-canh"
+
+Item:
+Id: 731985
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.ACTIVATE.NOCARNIVAL
+MsgId: How disappointing, the corvids seem to have migrated elsewhere.
+MsgStr: 
+
+Item:
+Id: 731986
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.ACTIVATE.NOKELP
+MsgId: only_used_by_wurt
+MsgStr: 
+
+Item:
+Id: 731987
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.ACTIVATE.NOTAROBOT
+MsgId: It is the property of the automaton.
+MsgStr: 
+
+Item:
+Id: 731988
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.ACTIVATE.NOTMERM
+MsgId: It seems that piscean bipeds only heed the call of their own kind.
+MsgStr: 
+
+Item:
+Id: 731989
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.ACTIVATE.NOTMYBERNIE
+MsgId: This monstrous animated teddy bear is loyal only to our dear Willow.
+MsgStr: 
+
+Item:
+Id: 731990
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.ACTIVATE.PILLOWFIGHT_NO_HANDPILLOW
+MsgId: I will require a pillow to participate.
+MsgStr: 
+
+Item:
+Id: 731991
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.APPLYELIXIR.NO_ELIXIRABLE
+MsgId: only_used_by_wendy
+MsgStr: 
+
+Item:
+Id: 731992
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.APPLYELIXIR.TOO_SUPER
+MsgId: That is too strong.
+MsgStr: 
+
+Item:
+Id: 731993
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.APPLYMODULE.COOLDOWN
+MsgId: only_used_by_wx78
+MsgStr: 
+
+Item:
+Id: 731994
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.APPLYMODULE.NOTENOUGHSLOTS
+MsgId: only_used_by_wx78
+MsgStr: 
+
+Item:
+Id: 731995
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.APPRAISE.NOTNOW
+MsgId: Patience is a virtue.
+MsgStr: 
+
+Item:
+Id: 731996
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.ATTUNE.NOHEALTH
+MsgId: I'm feeling too ill for that.
+MsgStr: 
+
+Item:
+Id: 731997
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.BATHBOMB.ALREADY_BOMBED
+MsgId: No need to be excessive.
+MsgStr: 
+
+Item:
+Id: 731998
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.BATHBOMB.GLASSED
+MsgId: The surface of the spring has crystallized, unfortunately.
+MsgStr: 
+
+Item:
+Id: 731999
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.BEGIN_QUEST.ONEGHOST
+MsgId: only_used_by_wendy
+MsgStr: 
+
+Item:
+Id: 732000
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.BUILD.BUSY_STATION
+MsgId: Oh, botheration.
+MsgStr: 
+
+Item:
+Id: 732001
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.BUILD.HASPET
+MsgId: One domestic creature is enough for me.
+MsgStr: 
+
+Item:
+Id: 732002
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.BUILD.MOUNTED
+MsgId: In this elevated position, I can't reach the ground.
+MsgStr: 
+
+Item:
+Id: 732003
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.BUILD.TICOON
+MsgId: Having two trackers at once could possibly confuse them.
+MsgStr: 
+
+Item:
+Id: 732004
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.CARNIVALGAME_FEED.TOO_LATE
+MsgId: Oh dear, I wasn't quite fast enough.
+MsgStr: 
+
+Item:
+Id: 732005
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.CARVEPUMPKIN.BURNING
+MsgId: It's hot!
+MsgStr: 
+
+Item:
+Id: 732006
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.CARVEPUMPKIN.INUSE
+MsgId: It's obviously being carved by someone else.
+MsgStr: 
+
+Item:
+Id: 732007
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.CASTAOE.CANT_SPELL_MOUNTED
+MsgId: only_used_by_willow
+MsgStr: 
+
+Item:
+Id: 732008
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.CASTAOE.NOT_ENOUGH_EMBERS
+MsgId: only_used_by_willow
+MsgStr: 
+
+Item:
+Id: 732009
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.CASTAOE.NO_BATTERY
+MsgId: only_used_by_winona
+MsgStr: 
+
+Item:
+Id: 732010
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.CASTAOE.NO_CATAPULTS
+MsgId: only_used_by_winona
+MsgStr: 
+
+Item:
+Id: 732011
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.CASTAOE.NO_TARGETS
+MsgId: only_used_by_willow
+MsgStr: 
+
+Item:
+Id: 732012
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.CASTAOE.SPELL_ON_COOLDOWN
+MsgId: only_used_by_willow
+MsgStr: 
+
+Item:
+Id: 732013
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.CASTSPELL.TERRAFORM_TOO_SOON
+MsgId: only_used_by_wurt
+MsgStr: 
+
+Item:
+Id: 732014
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.CHANGEIN.BURNING
+MsgId: No more changes for me. It's gone up in flames.
+MsgStr: 
+
+Item:
+Id: 732015
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.CHANGEIN.GENERIC
+MsgId: I think I look pretty smart already.
+MsgStr: 
+
+Item:
+Id: 732016
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.CHANGEIN.INUSE
+MsgId: If I could use that after you, dear.
+MsgStr: 
+
+Item:
+Id: 732017
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.CHANGEIN.NOOCCUPANT
+MsgId: This station requires a beefalo to be securely hitched before I can proceed any further.
+MsgStr: 
+Thuật ngữ tham khảo: "Beefalo" => "Bò Lai"
+
+Item:
+Id: 732018
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.CHANGEIN.NOTENOUGHHAIR
+MsgId: Perhaps once the hair has regrown.
+MsgStr: 
+
+Item:
+Id: 732019
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.CHARGE_FROM.CHARGE_FULL
+MsgId: Energy is at full capacity.
+MsgStr: 
+
+Item:
+Id: 732020
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.CHARGE_FROM.NOT_ENOUGH_CHARGE
+MsgId: There is insufficient charge.
+MsgStr: 
+
+Item:
+Id: 732021
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.COMPARE_WEIGHABLE.FISH_TOO_SMALL
+MsgId: This specimen is far too insubstantial.
+MsgStr: 
+
+Item:
+Id: 732022
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.COMPARE_WEIGHABLE.OVERSIZEDVEGGIES_TOO_SMALL
+MsgId: I'm afraid this specimen simply doesn't have enough mass to compete.
+MsgStr: 
+
+Item:
+Id: 732023
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.CONSTRUCT.EMPTY
+MsgId: I need something to build with first.
+MsgStr: 
+
+Item:
+Id: 732024
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.CONSTRUCT.INUSE
+MsgId: Someone's already using this.
+MsgStr: 
+
+Item:
+Id: 732025
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.CONSTRUCT.MISMATCH
+MsgId: Those are the wrong plans.
+MsgStr: 
+
+Item:
+Id: 732026
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.CONSTRUCT.NOTALLOWED
+MsgId: That was erroneous.
+MsgStr: 
+
+Item:
+Id: 732027
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.CONSTRUCT.NOTREADY
+MsgId: Perhaps when the ground is more stable...
+MsgStr: 
+
+Item:
+Id: 732028
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.COOK.GENERIC
+MsgId: Perhaps later. Not all old ladies enjoy cooking, you know.
+MsgStr: 
+
+Item:
+Id: 732029
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.COOK.INUSE
+MsgId: Mmm, smells lovely, dear.
+MsgStr: 
+
+Item:
+Id: 732030
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.COOK.TOOFAR
+MsgId: It is not within my reach.
+MsgStr: 
+
+Item:
+Id: 732031
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.DECORATESNOWMAN.HASHAT
+MsgId: I can't put it on top of the hat.
+MsgStr: 
+
+Item:
+Id: 732032
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.DECORATESNOWMAN.INUSE
+MsgId: There's obviously someone decorating it now.
+MsgStr: 
+
+Item:
+Id: 732033
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.DECORATESNOWMAN.MELTING
+MsgId: There's no use decorating a snowman that's about to melt.
+MsgStr: 
+Thuật ngữ tham khảo: "Snowman" => "Người tuyết"
+
+Item:
+Id: 732034
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.DECORATESNOWMAN.STACKEDTOOHIGH
+MsgId: It's simply too tall for another.
+MsgStr: 
+
+Item:
+Id: 732035
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.DEPLOY.HERMITCRAB_RELOCATE
+MsgId: A convenient way for the hermit crab to relocate her home.
+MsgStr: 
+
+Item:
+Id: 732036
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.DISMANTLE.COOKING
+MsgId: I'm afraid I'll have to wait until it's finished cooking.
+MsgStr: 
+
+Item:
+Id: 732037
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.DISMANTLE.INUSE
+MsgId: It's already in use.
+MsgStr: 
+
+Item:
+Id: 732038
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.DISMANTLE.NOTEMPTY
+MsgId: I'll have to remove its contents first.
+MsgStr: 
+
+Item:
+Id: 732039
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.DIVEGRAB.MISSED
+MsgId: Oh dear, I've missed!
+MsgStr: 
+
+Item:
+Id: 732040
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.DRAW.NOIMAGE
+MsgId: An example of what I should diagram would be helpful.
+MsgStr: 
+
+Item:
+Id: 732041
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.FILL_OCEAN.UNSUITABLE_FOR_PLANTS
+MsgId: I'm afraid only freshwater will do.
+MsgStr: 
+
+Item:
+Id: 732042
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.FISH_OCEAN.TOODEEP
+MsgId: Those fish are far too deep.
+MsgStr: 
+Thuật ngữ tham khảo: "Fish" => "Câu Cá"
+
+Item:
+Id: 732043
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GENERIC.ITEMMIMIC
+MsgId: I knew it.
+MsgStr: 
+
+Item:
+Id: 732044
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.ABIGAILHEART
+MsgId: Her spirit is already bound to something in this world.
+MsgStr: 
+
+Item:
+Id: 732045
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.BUSY
+MsgId: I'll try again when it's done.
+MsgStr: 
+
+Item:
+Id: 732046
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.CANTSHADOWREVIVE
+MsgId: Conditions are not right.
+MsgStr: 
+
+Item:
+Id: 732047
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.CARNIVALGAME_ALREADY_PLAYING
+MsgId: I'm afraid I'll have to wait.
+MsgStr: 
+
+Item:
+Id: 732048
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.CARNIVALGAME_GOLFGAME_NOTREADY
+MsgId: The mini-golf course requires at least a flaghole to be playable.
+MsgStr: 
+
+Item:
+Id: 732049
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.CARNIVALGAME_INVALID_ITEM
+MsgId: That doesn't appear to be the correct form of payment.
+MsgStr: 
+
+Item:
+Id: 732050
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.DEAD
+MsgId: That would be a waste.
+MsgStr: 
+
+Item:
+Id: 732051
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.DUPLICATE
+MsgId: We've already taken note of this recipe.
+MsgStr: 
+
+Item:
+Id: 732052
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.FOODFULL
+MsgId: I'll be around when you're ready for seconds, dear.
+MsgStr: 
+
+Item:
+Id: 732053
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.GENERIC
+MsgId: I don't think so, dear.
+MsgStr: 
+
+Item:
+Id: 732054
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.GHOSTHEART
+MsgId: I'll not be meddling in that business.
+MsgStr: 
+
+Item:
+Id: 732055
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.MUSHROOMFARM_NEEDSLOG
+MsgId: It needs a log, imbued with magical properties.
+MsgStr: 
+Thuật ngữ tham khảo: "Log" => "Gỗ"
+
+Item:
+Id: 732056
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.MUSHROOMFARM_NEEDSSHROOM
+MsgId: Goodness no, it needs a fresh mushroom.
+MsgStr: 
+Thuật ngữ tham khảo: "Mushroom" => "Nấm"
+
+Item:
+Id: 732057
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.MUSHROOMFARM_NOMOONALLOWED
+MsgId: This species seems to only grow in the wild.
+MsgStr: 
+
+Item:
+Id: 732058
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.NOGENERATORSKILL
+MsgId: Don't be silly, dear.
+MsgStr: 
+
+Item:
+Id: 732059
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.NOMOON
+MsgId: It needs a lunar influence.
+MsgStr: 
+
+Item:
+Id: 732060
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.NOTAMONKEY
+MsgId: I believe they're trying to communicate.
+MsgStr: 
+
+Item:
+Id: 732061
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.NOTDISH
+MsgId: That food is simply not suitable.
+MsgStr: 
+
+Item:
+Id: 732062
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.NOTGEM
+MsgId: Don't be silly, dear.
+MsgStr: 
+
+Item:
+Id: 732063
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.NOTSCULPTABLE
+MsgId: No one ought to sculpt with that, dear.
+MsgStr: 
+
+Item:
+Id: 732064
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.NOTSTAFF
+MsgId: This is not the staff I seek.
+MsgStr: 
+
+Item:
+Id: 732065
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.PIGKINGGAME_DANGER
+MsgId: This is no time for fun and games!
+MsgStr: 
+
+Item:
+Id: 732066
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.PIGKINGGAME_MESSY
+MsgId: I'll need to do some tidying up first.
+MsgStr: 
+
+Item:
+Id: 732067
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.PIGKINGGAME_TOOLATE
+MsgId: No time for that now. It'll be dark soon.
+MsgStr: 
+
+Item:
+Id: 732068
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.QUEENBUSY
+MsgId: She is occupied with other matters at the moment.
+MsgStr: 
+
+Item:
+Id: 732069
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.SLEEPING
+MsgId: It appears to be sleeping.
+MsgStr: 
+
+Item:
+Id: 732070
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.SLOTFULL
+MsgId: Let's finish what's on our plate first, shall we?
+MsgStr: 
+Thuật ngữ tham khảo: "Plate" => "Đĩa"
+
+Item:
+Id: 732071
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.SPIDERNOHAT
+MsgId: There simply isn't enough room for that.
+MsgStr: 
+
+Item:
+Id: 732072
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.TERRARIUM_COOLDOWN
+MsgId: Oh that won't do, the intended arborous recipient appears to be missing.
+MsgStr: 
+
+Item:
+Id: 732073
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.TERRARIUM_REFUSE
+MsgId: Perhaps I should make another attempt with something else.
+MsgStr: 
+
+Item:
+Id: 732074
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.WRONGGEM
+MsgId: This gemstone's properties are incorrect for my purposes.
+MsgStr: 
+
+Item:
+Id: 732075
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE.WRONGSHADOWFORM
+MsgId: The skeletal anatomy is incorrect.
+MsgStr: 
+
+Item:
+Id: 732076
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVEALLTOPLAYER.BUSY
+MsgId: I'll try again when they're free.
+MsgStr: 
+
+Item:
+Id: 732077
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVEALLTOPLAYER.DEAD
+MsgId: That would be a waste.
+MsgStr: 
+
+Item:
+Id: 732078
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVEALLTOPLAYER.FULL
+MsgId: They're already heavily burdened.
+MsgStr: 
+
+Item:
+Id: 732079
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVEALLTOPLAYER.SLEEPING
+MsgId: They've entered REM sleep. No need to disturb them.
+MsgStr: 
+
+Item:
+Id: 732080
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVETOPLAYER.BUSY
+MsgId: I'll try again when they're free.
+MsgStr: 
+
+Item:
+Id: 732081
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVETOPLAYER.DEAD
+MsgId: That would be a waste.
+MsgStr: 
+
+Item:
+Id: 732082
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVETOPLAYER.FULL
+MsgId: They're already heavily burdened.
+MsgStr: 
+
+Item:
+Id: 732083
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVETOPLAYER.SLEEPING
+MsgId: They've entered REM sleep. No need to disturb them.
+MsgStr: 
+
+Item:
+Id: 732084
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.GIVE_TACKLESKETCH.DUPLICATE
+MsgId: We've already taken note of this recipe.
+MsgStr: 
+
+Item:
+Id: 732085
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.HARVEST.DOER_ISNT_MODULE_OWNER
+MsgId: As I thought, I'm unable to glean any information from it.
+MsgStr: 
+
+Item:
+Id: 732086
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.HEAL.NOT_MERM
+MsgId: This concoction is used by the merms for healing.
+MsgStr: 
+
+Item:
+Id: 732087
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.HERD_FOLLOWERS.WEBBERONLY
+MsgId: I'm afraid this isn't my area of expertise.
+MsgStr: 
+
+Item:
+Id: 732088
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.HITCHUP.BEEF_HITCHED
+MsgId: Already done, dear.
+MsgStr: 
+
+Item:
+Id: 732089
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.HITCHUP.INMOOD
+MsgId: Nothing will be accomplished in the state they're in.
+MsgStr: 
+
+Item:
+Id: 732090
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.HITCHUP.NEEDBEEF
+MsgId: I will require a beefalo first.
+MsgStr: 
+Thuật ngữ tham khảo: "Beefalo" => "Bò Lai"
+
+Item:
+Id: 732091
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.HITCHUP.NEEDBEEF_CLOSER
+MsgId: My beefalo needs to be in closer proximity to the post.
+MsgStr: 
+Thuật ngữ tham khảo: "Beefalo" => "Bò Lai", "Post" => "Cột"
+
+Item:
+Id: 732092
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.LOWER_SAIL_FAIL.1
+MsgId: There must be a trick to this.
+MsgStr: 
+
+Item:
+Id: 732093
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.LOWER_SAIL_FAIL.2
+MsgId: Oh, you finicky thing!
+MsgStr: 
+
+Item:
+Id: 732094
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.LOWER_SAIL_FAIL.3
+MsgId: Come along now, no need to be stubborn.
+MsgStr: 
+
+Item:
+Id: 732095
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.MARK.ALREADY_MARKED
+MsgId: I'm fairly confident in my selection.
+MsgStr: 
+
+Item:
+Id: 732096
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.MARK.NOT_PARTICIPANT
+MsgId: I'll have to observe for now.
+MsgStr: 
+
+Item:
+Id: 732097
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.MOUNT.INUSE
+MsgId: Patience is required. I can ride this beefalo later.
+MsgStr: 
+Thuật ngữ tham khảo: "Beefalo" => "Bò Lai"
+
+Item:
+Id: 732098
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.MOUNT.SLEEPING
+MsgId: Up now, I require your services.
+MsgStr: 
+
+Item:
+Id: 732099
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.MOUNT.TARGETINCOMBAT
+MsgId: It would be ill-advised to approach that scuffle.
+MsgStr: 
+
+Item:
+Id: 732100
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.MUTATE.CAVE
+MsgId: only_used_by_wendy
+MsgStr: 
+
+Item:
+Id: 732101
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.MUTATE.NOFULLMOON
+MsgId: only_used_by_wendy
+MsgStr: 
+
+Item:
+Id: 732102
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.MUTATE.NOGHOST
+MsgId: only_used_by_wendy
+MsgStr: 
+
+Item:
+Id: 732103
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.MUTATE.NONEWMOON
+MsgId: only_used_by_wendy
+MsgStr: 
+
+Item:
+Id: 732104
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.MUTATE.NOTNIGHT
+MsgId: only_used_by_wendy
+MsgStr: 
+
+Item:
+Id: 732105
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.OCEAN_FISHING_POND.WRONGGEAR
+MsgId: I don't require this for some simple pond fishing.
+MsgStr: 
+Thuật ngữ tham khảo: "Pond" => "Ao"
+
+Item:
+Id: 732106
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.OPEN_CRAFTING.PROFESSIONALCHEF
+MsgId: It would be rude of me to tamper with it.
+MsgStr: 
+
+Item:
+Id: 732107
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.OPEN_CRAFTING.SHADOWMAGIC
+MsgId: I'm not letting THAT in MY library!
+MsgStr: 
+
+Item:
+Id: 732108
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.PICK.NOTHING_INSIDE
+MsgId: Empty, as I suspected.
+MsgStr: 
+
+Item:
+Id: 732109
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.PICK.STUCK
+MsgId: It is stuck.
+MsgStr: 
+
+Item:
+Id: 732110
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.PICKUP.FULL_OF_CURSES
+MsgId: I think it would be best to leave it be.
+MsgStr: 
+
+Item:
+Id: 732111
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.PICKUP.INUSE
+MsgId: It's already in use.
+MsgStr: 
+
+Item:
+Id: 732112
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.PICKUP.NOTMINE_YOTC.1
+MsgId: Oh my, I seem to have gotten a bit mixed up.
+MsgStr: 
+
+Item:
+Id: 732113
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.PICKUP.NOTMINE_YOTC.2
+MsgId: My glasses need a good cleaning, that's clearly not my Daucus carota rattus!
+MsgStr: 
+
+Item:
+Id: 732114
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.PICKUP.RESTRICTION
+MsgId: That's not my area of expertise.
+MsgStr: 
+
+Item:
+Id: 732115
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.PLANTREGISTRY_RESEARCH_FAIL.FERTILIZER
+MsgId: I've gleaned as much information as I can.
+MsgStr: 
+
+Item:
+Id: 732116
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.PLANTREGISTRY_RESEARCH_FAIL.GENERIC
+MsgId: I'm already quite knowledgeable about this particular species.
+MsgStr: 
+
+Item:
+Id: 732117
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.POUNCECAPTURE.MISSED
+MsgId: Oh dear, I've missed!
+MsgStr: 
+
+Item:
+Id: 732118
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.POUR_WATER.OUT_OF_WATER
+MsgId: Oh dear, I'll have to replenish my water supply.
+MsgStr: 
+
+Item:
+Id: 732119
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.POUR_WATER_GROUNDTILE.OUT_OF_WATER
+MsgId: I'll have to replenish my water supply at the earliest opportunity.
+MsgStr: 
+
+Item:
+Id: 732120
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.READ.ALREADYFULLMOON
+MsgId: I'm afraid that would be quite redundant.
+MsgStr: 
+
+Item:
+Id: 732121
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.READ.BIRDSBLOCKED
+MsgId: Of course, the force field applies to the birds too.
+MsgStr: 
+
+Item:
+Id: 732122
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.READ.DEADBIRDS
+MsgId: Oh, dear. I'm afraid the sky is not safe for birds right now.
+MsgStr: 
+Thuật ngữ tham khảo: "Safe" => "Két Sắt"
+
+Item:
+Id: 732123
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.READ.GENERIC
+MsgId: Other matters await.
+MsgStr: 
+
+Item:
+Id: 732124
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.READ.NOBIRDS
+MsgId: The birds are not keen on this weather.
+MsgStr: 
+
+Item:
+Id: 732125
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.READ.NOFIRES
+MsgId: Thankfully, there are no fires to put out.
+MsgStr: 
+
+Item:
+Id: 732126
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.READ.NOHORTICULTURE
+MsgId: There are no crops to cultivate.
+MsgStr: 
+
+Item:
+Id: 732127
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.READ.NOMOONINCAVES
+MsgId: The moon can't be affected from this subterranean location.
+MsgStr: 
+
+Item:
+Id: 732128
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.READ.NOSILVICULTURE
+MsgId: There are no arboreal subjects to focus on.
+MsgStr: 
+
+Item:
+Id: 732129
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.READ.NOSLEEPTARGETS
+MsgId: I don't see anyone in need of a bedtime story.
+MsgStr: 
+
+Item:
+Id: 732130
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.READ.NOTENTACLEGROUND
+MsgId: The tentacles would be unable to break the surface here.
+MsgStr: 
+
+Item:
+Id: 732131
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.READ.NOWATERNEARBY
+MsgId: Fish may only be summoned in close proximity to a body of water.
+MsgStr: 
+Thuật ngữ tham khảo: "Fish" => "Câu Cá"
+
+Item:
+Id: 732132
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.READ.TOOMANYBEES
+MsgId: That would be a rather excessive amount of bees, dear.
+MsgStr: 
+
+Item:
+Id: 732133
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.READ.TOOMANYBIRDS
+MsgId: It doesn't work as well with this many birds around.
+MsgStr: 
+
+Item:
+Id: 732134
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.READ.WAYTOOMANYBIRDS
+MsgId: The sky is out of birds for now.
+MsgStr: 
+
+Item:
+Id: 732135
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.REMOTE_TELEPORT.NODEST
+MsgId: only_used_by_winona
+MsgStr: 
+
+Item:
+Id: 732136
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.REMOTE_TELEPORT.NOSKILL
+MsgId: only_used_by_winona
+MsgStr: 
+
+Item:
+Id: 732137
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.REMOVEMODULES.NO_MODULES
+MsgId: only_used_by_wx78
+MsgStr: 
+
+Item:
+Id: 732138
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.REPAIR.WRONGPIECE
+MsgId: That is clearly the incorrect piece.
+MsgStr: 
+
+Item:
+Id: 732139
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.REPLATE.MISMATCH
+MsgId: That's not the proper dinnerware for this food.
+MsgStr: 
+
+Item:
+Id: 732140
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.REPLATE.SAMEDISH
+MsgId: It's already on the proper dinnerware.
+MsgStr: 
+
+Item:
+Id: 732141
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.ROW_FAIL.BAD_TIMING0
+MsgId: I must time this perfectly.
+MsgStr: 
+
+Item:
+Id: 732142
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.ROW_FAIL.BAD_TIMING1
+MsgId: This might take some tenacity.
+MsgStr: 
+
+Item:
+Id: 732143
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.ROW_FAIL.BAD_TIMING2
+MsgId: Oh dear, I'll have to start over.
+MsgStr: 
+
+Item:
+Id: 732144
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.RUMMAGE.GENERIC
+MsgId: I've other things on my mind currently.
+MsgStr: 
+
+Item:
+Id: 732145
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.RUMMAGE.INUSE
+MsgId: Be sure to sort by color and weight, dear.
+MsgStr: 
+
+Item:
+Id: 732146
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.RUMMAGE.NOTAMERM
+MsgId: I don't believe the locals would take kindly to that.
+MsgStr: 
+
+Item:
+Id: 732147
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.RUMMAGE.NOTAROBOT
+MsgId: It is the property of the automaton.
+MsgStr: 
+
+Item:
+Id: 732148
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.RUMMAGE.NOTMASTERCHEF
+MsgId: It would be rude of me to tamper with it.
+MsgStr: 
+
+Item:
+Id: 732149
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.RUMMAGE.NOTSOULJARHANDLER
+MsgId: Best not interfere.
+MsgStr: 
+
+Item:
+Id: 732150
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.RUMMAGE.RESTRICTED
+MsgId: It's not for me, I'm afraid.
+MsgStr: 
+
+Item:
+Id: 732151
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.SADDLE.TARGETINCOMBAT
+MsgId: It would be ill-advised to approach that scuffle.
+MsgStr: 
+
+Item:
+Id: 732152
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.SHAVE.AWAKEBEEFALO
+MsgId: I think he might object to that.
+MsgStr: 
+
+Item:
+Id: 732153
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.SHAVE.GENERIC
+MsgId: I would really rather not.
+MsgStr: 
+
+Item:
+Id: 732154
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.SHAVE.NOBITS
+MsgId: It's already smooth, dear.
+MsgStr: 
+
+Item:
+Id: 732155
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.SHAVE.SOMEONEELSESBEEFALO
+MsgId: It's not my place to shave someone else's beefalo.
+MsgStr: 
+Thuật ngữ tham khảo: "Beefalo" => "Bò Lai"
+
+Item:
+Id: 732156
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.SLAUGHTER.TOOFAR
+MsgId: Oh dear, it got away.
+MsgStr: 
+
+Item:
+Id: 732157
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.SOAKIN.NOSPACE
+MsgId: There's clearly someone sitting there already.
+MsgStr: 
+
+Item:
+Id: 732158
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.START_CARRAT_RACE.NO_RACERS
+MsgId: I can't gather any data with no subjects.
+MsgStr: 
+
+Item:
+Id: 732159
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.STORE.GENERIC
+MsgId: It's full to the brim, I'm afraid.
+MsgStr: 
+
+Item:
+Id: 732160
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.STORE.INUSE
+MsgId: I do hope you're keeping organized, my dear.
+MsgStr: 
+
+Item:
+Id: 732161
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.STORE.NOTALLOWED
+MsgId: Nonsense.
+MsgStr: 
+
+Item:
+Id: 732162
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.STORE.NOTAROBOT
+MsgId: It is the property of the automaton.
+MsgStr: 
+
+Item:
+Id: 732163
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.STORE.NOTMASTERCHEF
+MsgId: It would be rude of me to tamper with it.
+MsgStr: 
+
+Item:
+Id: 732164
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.STORE.NOTSOULJARHANDLER
+MsgId: Best not interfere.
+MsgStr: 
+
+Item:
+Id: 732165
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.STORE.RESTRICTED
+MsgId: It's not for me, I'm afraid.
+MsgStr: 
+
+Item:
+Id: 732166
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.TEACH.CANTLEARN
+MsgId: A piece of knowledge I cannot grasp... Intriguing!
+MsgStr: 
+
+Item:
+Id: 732167
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.TEACH.KNOWN
+MsgId: Please. That knowledge is child's play.
+MsgStr: 
+
+Item:
+Id: 732168
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.TEACH.MESSAGEBOTTLEMANAGER_NOT_FOUND
+MsgId: It's much too dark to make any sense of this.
+MsgStr: 
+
+Item:
+Id: 732169
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.TEACH.STASH_MAP_NOT_FOUND
+MsgId: The apes seem to have neglected to mark any particular sites on this map.
+MsgStr: 
+
+Item:
+Id: 732170
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.TEACH.WRONGWORLD
+MsgId: This map is for some other location.
+MsgStr: 
+
+Item:
+Id: 732171
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.TELLSTORY.GENERIC
+MsgId: only_used_by_walter
+MsgStr: 
+
+Item:
+Id: 732172
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.USEITEMON.BEEF_BELL_ALREADY_USED
+MsgId: It's already formed a bond with someone else, dear.
+MsgStr: 
+
+Item:
+Id: 732173
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.USEITEMON.BEEF_BELL_HAS_BEEF_ALREADY
+MsgId: I don't require any more beefalo.
+MsgStr: 
+Thuật ngữ tham khảo: "Beefalo" => "Bò Lai"
+
+Item:
+Id: 732174
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.USEITEMON.BEEF_BELL_INVALID_TARGET
+MsgId: That won't do.
+MsgStr: 
+
+Item:
+Id: 732175
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.USEITEMON.CANNOT_FIX_DRONE
+MsgId: It is simply irreparable.
+MsgStr: 
+
+Item:
+Id: 732176
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.USEITEMON.NOT_MINE
+MsgId: It does not belong to me.
+MsgStr: 
+
+Item:
+Id: 732177
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.USEKLAUSSACKKEY.KLAUS
+MsgId: The beast must first be defeated.
+MsgStr: 
+
+Item:
+Id: 732178
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.USEKLAUSSACKKEY.QUAGMIRE_WRONGKEY
+MsgId: I'll have to find the right key.
+MsgStr: 
+Thuật ngữ tham khảo: "Key" => "Chìa khóa"
+
+Item:
+Id: 732179
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.USEKLAUSSACKKEY.WRONGKEY
+MsgId: That may have been the wrong implement.
+MsgStr: 
+
+Item:
+Id: 732180
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.WRAPBUNDLE.EMPTY
+MsgId: I have to know what to wrap, dear.
+MsgStr: 
+
+Item:
+Id: 732181
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.WRITE.GENERIC
+MsgId: I'd rather write in my own books.
+MsgStr: 
+
+Item:
+Id: 732182
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.WRITE.INUSE
+MsgId: When you're done, dear.
+MsgStr: 
+
+Item:
+Id: 732183
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.YOTB_STARTCONTEST.ALREADYACTIVE
+MsgId: I imagine there must be a competition going on elsewhere.
+MsgStr: 
+
+Item:
+Id: 732184
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.YOTB_STARTCONTEST.DOESNTWORK
+MsgId: The contest will have to wait for the time being.
+MsgStr: 
+
+Item:
+Id: 732185
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.YOTB_STARTCONTEST.NORESPONSE
+MsgId: It appears he has gone for a constitutional.
+MsgStr: 
+
+Item:
+Id: 732186
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.YOTB_STARTCONTEST.RIGHTTHERE
+MsgId: He is currently engaged.
+MsgStr: 
+
+Item:
+Id: 732187
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL.YOTB_UNLOCKSKIN.ALREADYKNOWN
+MsgId: I've already familiarized myself with this particular pattern.
+MsgStr: 
+
+Item:
+Id: 732188
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ACTIONFAIL_GENERIC
+MsgId: It seems I can't do that.
+MsgStr: 
+
+Item:
+Id: 732189
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_ACCOMPLISHMENT
+MsgId: It's not there yet!
+MsgStr: 
+
+Item:
+Id: 732190
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_ACCOMPLISHMENT_DONE
+MsgId: File that under completed!
+MsgStr: 
+
+Item:
+Id: 732191
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_ACIDBATS
+MsgId: What a dreadful noise they make.
+MsgStr: 
+
+Item:
+Id: 732192
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_ADVENTUREFAIL
+MsgId: We must learn from our failures.
+MsgStr: 
+
+Item:
+Id: 732193
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_ANTLION_SINKHOLE.1
+MsgId: The ground will soon give way.
+MsgStr: 
+
+Item:
+Id: 732194
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_ANTLION_SINKHOLE.2
+MsgId: Not the work of tectonic plates.
+MsgStr: 
+
+Item:
+Id: 732195
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_ANTLION_SINKHOLE.3
+MsgId: A six on the Richter scale.
+MsgStr: 
+
+Item:
+Id: 732196
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_ANTLION_TRIBUTE.1
+MsgId: For you, great Panthera auropunctata.
+MsgStr: 
+
+Item:
+Id: 732197
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_ANTLION_TRIBUTE.2
+MsgId: It ought to be more docile now.
+MsgStr: 
+
+Item:
+Id: 732198
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_ANTLION_TRIBUTE.3
+MsgId: The great Panthera auropunctata is tamed.
+MsgStr: 
+
+Item:
+Id: 732199
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_ARCHIVE_NEW_KNOWLEDGE
+MsgId: What a peculiar sensation, it's transmitting a blueprint telepathically!
+MsgStr: 
+Thuật ngữ tham khảo: "Blueprint" => "Bản thiết kế"
+
+Item:
+Id: 732200
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_ARCHIVE_NO_POWER
+MsgId: How very disappointing, I was curious to see what it would do.
+MsgStr: 
+
+Item:
+Id: 732201
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_ARCHIVE_OLD_KNOWLEDGE
+MsgId: I'm already familiar with this particular piece of knowledge.
+MsgStr: 
+
+Item:
+Id: 732202
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_ATRIUM_DESTABILIZING.1
+MsgId: I do believe it's time to go.
+MsgStr: 
+
+Item:
+Id: 732203
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_ATRIUM_DESTABILIZING.2
+MsgId: It's dangerous to be here.
+MsgStr: 
+
+Item:
+Id: 732204
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_ATRIUM_DESTABILIZING.3
+MsgId: Goodness gracious!
+MsgStr: 
+
+Item:
+Id: 732205
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_ATTACH_BUFF_ATTACK
+MsgId: My, I feel full of vim and vigor!
+MsgStr: 
+
+Item:
+Id: 732206
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_ATTACH_BUFF_ELECTRICATTACK
+MsgId: I seem to have been rendered conductive!
+MsgStr: 
+
+Item:
+Id: 732207
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_ATTACH_BUFF_MOISTUREIMMUNITY
+MsgId: I feel so pleasantly dry!
+MsgStr: 
+
+Item:
+Id: 732208
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_ATTACH_BUFF_PLAYERABSORPTION
+MsgId: I daresay I'm tougher than I may appear!
+MsgStr: 
+
+Item:
+Id: 732209
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_ATTACH_BUFF_SLEEPRESISTANCE
+MsgId: I'm no stranger to sleeplessness.
+MsgStr: 
+
+Item:
+Id: 732210
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_ATTACH_BUFF_WORKEFFECTIVENESS
+MsgId: I'll have everything done in a snap!
+MsgStr: 
+
+Item:
+Id: 732211
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_BECOMEGHOST
+MsgId: oOoooOoO!!
+MsgStr: 
+
+Item:
+Id: 732212
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_BEES
+MsgId: Stinging nasties!
+MsgStr: 
+
+Item:
+Id: 732213
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_BOAT_LEAK
+MsgId: The boat has fallen into dangerous disrepair.
+MsgStr: 
+Thuật ngữ tham khảo: "Boat" => "Thuyền ván"
+
+Item:
+Id: 732214
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_BOAT_SINK
+MsgId: Goodness, we're sinking!
+MsgStr: 
+
+Item:
+Id: 732215
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_BOOK_MOON_DAYTIME
+MsgId: We won't be able to view the effects until this evening.
+MsgStr: 
+
+Item:
+Id: 732216
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_BOOMERANG
+MsgId: I misjudged the timing of its return.
+MsgStr: 
+
+Item:
+Id: 732217
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_BRAVERY_POTION
+MsgId: My intestinal fortitude has returned!
+MsgStr: 
+
+Item:
+Id: 732218
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_BURNT
+MsgId: First degree, at least!
+MsgStr: 
+
+Item:
+Id: 732219
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_CALL_BEEF
+MsgId: Come along now.
+MsgStr: 
+
+Item:
+Id: 732220
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_CANFIX
+MsgId: \nI do believe I can repair this.
+MsgStr: 
+
+Item:
+Id: 732221
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_CANNOT_BUILD.NO_INGREDIENTS
+MsgId: I should endeavor to collect the required ingredients.
+MsgStr: 
+
+Item:
+Id: 732222
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_CANNOT_BUILD.NO_STATION
+MsgId: I'm afraid this will require a specialized workspace.
+MsgStr: 
+
+Item:
+Id: 732223
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_CANNOT_BUILD.NO_TECH
+MsgId: This looks like an opportunity to conduct some research.
+MsgStr: 
+
+Item:
+Id: 732224
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_CANTBUILDHERE_YOTB_POST
+MsgId: It would be much more practical to build this closer to the competition.
+MsgStr: 
+
+Item:
+Id: 732225
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_CANT_ESCAPE_CURSE
+MsgId: I just can't seem to put it down...
+MsgStr: 
+
+Item:
+Id: 732226
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_CARRAT_ERROR_FELL_ASLEEP
+MsgId: The subject seems to be exhibiting low levels of stamina.
+MsgStr: 
+
+Item:
+Id: 732227
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_CARRAT_ERROR_STUNNED
+MsgId: You must pay attention!
+MsgStr: 
+
+Item:
+Id: 732228
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_CARRAT_ERROR_WALKING
+MsgId: Let's try to look a bit more lively, dear.
+MsgStr: 
+
+Item:
+Id: 732229
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_CARRAT_ERROR_WRONG_WAY.1
+MsgId: Wrong way, dear.
+MsgStr: 
+
+Item:
+Id: 732230
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_CARRAT_ERROR_WRONG_WAY.2
+MsgId: Oh my, I'll have to make a note of this.
+MsgStr: 
+
+Item:
+Id: 732231
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_CARRAT_START_RACE
+MsgId: Let the race commence!
+MsgStr: 
+
+Item:
+Id: 732232
+MsgCtxt: STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_CAVEIN
+MsgId: The rocks above will soon give way.
+MsgStr: 
+Thuật ngữ tham khảo: "Rocks" => "Cục đá"
+
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "[\n  {\"id\":731933,\"suggestedTranslation\":\"Ánh sáng dịu nhẹ này... thật dễ chịu.\",\"rating\":9.0},\n  {\"id\":731934,\"suggestedTranslation\":\"Chút an ủi ít ỏi đó giờ đã biến mất.\",\"rating\":9.0},\n  {\"id\":731935,\"suggestedTranslation\":\"Tôi nên tìm một chỗ phù hợp cho nó.\",\"rating\":9.0},\n  {\"id\":731936,\"suggestedTranslation\":\"Chiếc chuông tạm thời vẫn đang im lìm.\",\"rating\":9.0},\n  {\"id\":731937,\"suggestedTranslation\":\"Tôi có thể... chơi tiếp không?\",\"rating\":9.0},\n  {\"id\":731938,\"suggestedTranslation\":\"Có lẽ nó sẽ... v-vui nhỉ?\",\"rating\":9.0},\n  {\"id\":731939,\"suggestedTranslation\":\"Tôi nghĩ... tôi muốn ăn một chút bánh ngọt.\",\"rating\":9.0},\n  {\"id\":731940,\"suggestedTranslation\":\"Giờ môi tôi đã chuyển sang màu xanh rồi...\",\"rating\":9.0},\n  {\"id\":731941,\"suggestedTranslation\":\"Tôi xin lỗi Abigail, nếu được tôi đã chia sẻ rồi.\",\"rating\":9.0},\n  {\"id\":731942,\"suggestedTranslation\":\"Nó dính quá.\",\"rating\":9.0},\n  {\"id\":731943,\"suggestedTranslation\":\"Tội nghiệp ngài Thỏ.\",\"rating\":9.0},\n  {\"id\":731944,\"suggestedTranslation\":\"Ngài có đói không, ngài Thỏ?\",\"rating\":9.0},\n  {\"id\":731945,\"suggestedTranslation\":\"Tôi nên bày tỏ sự kính trọng.\",\"rating\":9.0},\n  {\"id\":731946,\"suggestedTranslation\":\"Một trận quyết đấu tử thần có lẽ sẽ giúp giết thời gian.\",\"rating\":9.0},\n  {\"id\":731947,\"suggestedTranslation\":\"Tiếc thật, nó đẹp mà.\",\"rating\":9.0},\n  {\"id\":731948,\"suggestedTranslation\":\"Nó thực sự mang lại chút phấn chấn.\",\"rating\":9.0},\n  {\"id\":731949,\"suggestedTranslation\":\"Ta có nên thắp sáng bóng đêm này không?\",\"rating\":9.5},\n  {\"id\":731950,\"suggestedTranslation\":\"Cũng dễ đoán trước thôi.\",\"rating\":9.0},\n  {\"id\":731951,\"suggestedTranslation\":\"Có lẽ vật gì thu hút vật nấy.\",\"rating\":9.0},\n  {\"id\":731952,\"suggestedTranslation\":\"Abigail rất thích những điều bất ngờ.\",\"rating\":9.0},\n  {\"id\":731953,\"suggestedTranslation\":\"Nó thực sự khá đẹp đấy chứ.\",\"rating\":9.0},\n  {\"id\":731954,\"suggestedTranslation\":\"Hết rồi.\",\"rating\":9.0},\n  {\"id\":731955,\"suggestedTranslation\":\"Tôi nên buông bỏ thứ gì để làm hài lòng nó đây?\",\"rating\":9.0},\n  {\"id\":731956,\"suggestedTranslation\":\"Sao cậu biết tôi điên?\",\"rating\":9.0},\n  {\"id\":731957,\"suggestedTranslation\":\"H F... Tôi không biết nữa.\",\"rating\":9.0},\n  {\"id\":731958,\"suggestedTranslation\":\"Ít ra thì thực vật trông có vẻ vẫn ổn.\",\"rating\":9.5},\n  {\"id\":731959,\"suggestedTranslation\":\"Thứ gì quanh đây đang làm nó thấy khó sống đây.\",\"rating\":9.0},\n  {\"id\":731960,\"suggestedTranslation\":\"Nó cô đơn quá... nó cần gia đình...\",\"rating\":9.0},\n  {\"id\":731961,\"suggestedTranslation\":\"Có lẽ nó chỉ cần được trấn an đôi chút.\",\"rating\":9.0},\n  {\"id\":731962,\"suggestedTranslation\":\"Khu vườn hơi bừa bộn một chút...\",\"rating\":9.0},\n  {\"id\":731963,\"suggestedTranslation\":\"Có lẽ nó cần chút nước chăng?\",\"rating\":9.0},\n  {\"id\":731964,\"suggestedTranslation\":\"Nó đang khát dưỡng chất trầm trọng.\",\"rating\":9.0},\n  {\"id\":731965,\"suggestedTranslation\":\"Nó ở quá gần mấy cây khác... sắp ngột ngạt đến nơi rồi...\",\"rating\":9.0},\n  {\"id\":731966,\"suggestedTranslation\":\"Nó vốn không được sinh ra để chịu đựng sự khắc nghiệt của mùa này.\",\"rating\":9.0},\n  {\"id\":731967,\"suggestedTranslation\":\"Nó đích thực là đang đau khổ. Đúng là đồng bệnh tương lân.\",\"rating\":9.0},\n  {\"id\":731968,\"suggestedTranslation\":\"Nó sắp bị ngọn lửa nuốt chửng rồi.\",\"rating\":9.0},\n  {\"id\":731969,\"suggestedTranslation\":\"Bóng đêm kìa! Tối quá rồi!\",\"rating\":9.5},\n  {\"id\":731970,\"suggestedTranslation\":\"Tôi đã tha cho nó khỏi sự dằn vặt của việc phải sống.\",\"rating\":9.0},\n  {\"id\":731971,\"suggestedTranslation\":\"Abigail, cảm giác như tớ vừa nếm được món ăn của mẹ vậy...\",\"rating\":9.0},\n  {\"id\":731972,\"suggestedTranslation\":\"Thật là một nơi tồi tệ để vướng phải lời nguyền.\",\"rating\":9.0},\n  {\"id\":731973,\"suggestedTranslation\":\"Nó hỏng mất rồi.\",\"rating\":9.0},\n  {\"id\":731974,\"suggestedTranslation\":\"Những món đó vốn không dành để kết hợp với nhau.\",\"rating\":9.0},\n  {\"id\":731975,\"suggestedTranslation\":\"Hãy rời khỏi chốn khủng khiếp này thôi.\",\"rating\":9.0},\n  {\"id\":731976,\"suggestedTranslation\":\"Có phải em đấy không, Abby?\",\"rating\":9.0},\n  {\"id\":731977,\"suggestedTranslation\":\"Ta tin rằng mình đã thấy vị chủ nhà ở hướng này.\",\"rating\":9.0},\n  {\"id\":731978,\"suggestedTranslation\":\"Thật tiếc, có vẻ như mấy chú mèo con không có ở đây.\",\"rating\":9.0},\n  {\"id\":731979,\"suggestedTranslation\":\"Có vẻ như cậu ta đang bận giải quyết việc khác lúc này.\",\"rating\":9.0},\n  {\"id\":731980,\"suggestedTranslation\":\"Xem ra số người đi tìm đông hơn số mèo con rồi.\",\"rating\":9.0},\n  {\"id\":731981,\"suggestedTranslation\":\"Ta cho rằng không có đủ chỗ trốn cho bầy mèo con.\",\"rating\":9.0},\n  {\"id\":731982,\"suggestedTranslation\":\"Ta nghĩ mình nên dành chút thời gian để nghỉ ngơi.\",\"rating\":9.0},\n  {\"id\":731983,\"suggestedTranslation\":\"Nó có vẻ đã bị khóa.\",\"rating\":9.0},\n  {\"id\":731984,\"suggestedTranslation\":\"Thứ đó không thuộc về ma-nơ-canh này.\",\"rating\":9.5},\n  {\"id\":731985,\"suggestedTranslation\":\"Thật thất vọng, lũ quạ có vẻ đã di cư đi nơi khác rồi.\",\"rating\":9.0},\n  {\"id\":731986,\"suggestedTranslation\":\"only_used_by_wurt\",\"rating\":1.0},\n  {\"id\":731987,\"suggestedTranslation\":\"Đây là tài sản của cỗ máy tự động.\",\"rating\":9.0},\n  {\"id\":731988,\"suggestedTranslation\":\"Có vẻ như loài lưỡng cư dạng người chỉ nghe theo tiếng gọi đồng loại của chúng.\",\"rating\":9.0},\n  {\"id\":731989,\"suggestedTranslation\":\"Con gấu bông nhồi bông hoạt hình quái dị này chỉ trung thành với cô Willow thân mến của chúng ta.\",\"rating\":9.0},\n  {\"id\":731990,\"suggestedTranslation\":\"Ta sẽ cần một cái gối để tham gia.\",\"rating\":9.0},\n  {\"id\":731991,\"suggestedTranslation\":\"only_used_by_wendy\",\"rating\":1.0},\n  {\"id\":731992,\"suggestedTranslation\":\"Thứ đó quá mạnh rồi.\",\"rating\":9.0},\n  {\"id\":731993,\"suggestedTranslation\":\"only_used_by_wx78\",\"rating\":1.0},\n  {\"id\":731994,\"suggestedTranslation\":\"only_used_by_wx78\",\"rating\":1.0},\n  {\"id\":731995,\"suggestedTranslation\":\"Kiên nhẫn là một đức tính tốt.\",\"rating\":9.0},\n  {\"id\":731996,\"suggestedTranslation\":\"Ta cảm thấy không khỏe để làm việc đó.\",\"rating\":9.0},\n  {\"id\":731997,\"suggestedTranslation\":\"Không cần phải làm quá lên thế đâu.\",\"rating\":9.0},\n  {\"id\":731998,\"suggestedTranslation\":\"Rất tiếc, bề mặt của suối nước đã đóng băng tinh thể rồi.\",\"rating\":9.0},\n  {\"id\":731999,\"suggestedTranslation\":\"only_used_by_wendy\",\"rating\":1.0},\n  {\"id\":732000,\"suggestedTranslation\":\"Ồ, thật phiền phức.\",\"rating\":9.0},\n  {\"id\":732001,\"suggestedTranslation\":\"Một sinh vật trong nhà là quá đủ cho ta rồi.\",\"rating\":9.0},\n  {\"id\":732002,\"suggestedTranslation\":\"Ở vị trí cao thế này, ta không thể chạm tới mặt đất.\",\"rating\":9.0},\n  {\"id\":732003,\"suggestedTranslation\":\"Có hai kẻ dò đường cùng lúc có thể khiến chúng bối rối đấy.\",\"rating\":9.0},\n  {\"id\":732004,\"suggestedTranslation\":\"Trời ạ, ta ra tay hơi chậm mất rồi.\",\"rating\":9.0},\n  {\"id\":732005,\"suggestedTranslation\":\"Nó nóng quá!\",\"rating\":9.0},\n  {\"id\":732006,\"suggestedTranslation\":\"Rõ ràng là đang có người khác chạm khắc nó.\",\"rating\":9.0},\n  {\"id\":732007,\"suggestedTranslation\":\"only_used_by_willow\",\"rating\":1.0},\n  {\"id\":732008,\"suggestedTranslation\":\"only_used_by_willow\",\"rating\":1.0},\n  {\"id\":732009,\"suggestedTranslation\":\"only_used_by_winona\",\"rating\":1.0},\n  {\"id\":732010,\"suggestedTranslation\":\"only_used_by_winona\",\"rating\":1.0},\n  {\"id\":732011,\"suggestedTranslation\":\"only_used_by_willow\",\"rating\":1.0},\n  {\"id\":732012,\"suggestedTranslation\":\"only_used_by_willow\",\"rating\":1.0},\n  {\"id\":732013,\"suggestedTranslation\":\"only_used_by_wurt\",\"rating\":1.0},\n  {\"id\":732014,\"suggestedTranslation\":\"Ta không thay đổi nữa đâu. Nó đã biến thành tro bụi rồi.\",\"rating\":9.0},\n  {\"id\":732015,\"suggestedTranslation\":\"Ta nghĩ trông mình đã khá tươm tất rồi.\",\"rating\":9.0},\n  {\"id\":732016,\"suggestedTranslation\":\"Ước gì em có thể dùng nó sau anh, cưng à.\",\"rating\":9.0},\n  {\"id\":732017,\"suggestedTranslation\":\"Trạm này yêu cầu phải buộc chặt một con Bò Lai trước khi ta có thể tiến hành thêm.\",\"rating\":9.5},\n  {\"id\":732018,\"suggestedTranslation\":\"Có lẽ đợi đến khi tóc mọc lại vậy.\",\"rating\":9.0},\n  {\"id\":732019,\"suggestedTranslation\":\"Năng lượng đã đạt mức tối đa.\",\"rating\":9.0},\n  {\"id\":732020,\"suggestedTranslation\":\"Năng lượng không đủ.\",\"rating\":9.0},\n  {\"id\":732021,\"suggestedTranslation\":\"Mẫu vật này quá nhỏ bé và nhẹ cân.\",\"rating\":9.0},\n  {\"id\":732022,\"suggestedTranslation\":\"E rằng mẫu vật này không đủ khối lượng để cạnh tranh.\",\"rating\":9.0},\n  {\"id\":732023,\"suggestedTranslation\":\"Tôi cần thứ gì đó để xây dựng trước đã.\",\"rating\":9.0},\n  {\"id\":732024,\"suggestedTranslation\":\"Có người đang dùng cái này rồi.\",\"rating\":9.0},\n  {\"id\":732025,\"suggestedTranslation\":\"Đó là những bản thiết kế sai.\",\"rating\":9.0},\n  {\"id\":732026,\"suggestedTranslation\":\"Thao tác đó không đúng.\",\"rating\":9.0},\n  {\"id\":732027,\"suggestedTranslation\":\"Có lẽ đợi khi mặt đất vững chắc hơn...\",\"rating\":9.0},\n  {\"id\":732028,\"suggestedTranslation\":\"Để sau đi. Đâu phải bà già nào cũng thích nấu nướng đâu, bạn biết đấy.\",\"rating\":9.0},\n  {\"id\":732029,\"suggestedTranslation\":\"Mmm, thơm quá cưng ơi.\",\"rating\":9.0},\n  {\"id\":732030,\"suggestedTranslation\":\"Nó nằm ngoài tầm với của ta.\",\"rating\":9.0},\n  {\"id\":732031,\"suggestedTranslation\":\"Ta không thể đội nó lên trên mũ được.\",\"rating\":9.0},\n  {\"id\":732032,\"suggestedTranslation\":\"Rõ ràng là đang có người trang trí nó rồi.\",\"rating\":9.0},\n  {\"id\":732033,\"suggestedTranslation\":\"Trang trí một con Người tuyết sắp tan chảy thì có ích gì chứ.\",\"rating\":9.5},\n  {\"id\":732034,\"suggestedTranslation\":\"Nó quá cao để có thể chồng thêm cái nữa.\",\"rating\":9.0},\n  {\"id\":732035,\"suggestedTranslation\":\"Một cách thuận tiện để cua ẩn sĩ dọn nhà.\",\"rating\":9.0},\n  {\"id\":732036,\"suggestedTranslation\":\"E rằng ta phải đợi cho đến khi nó nấu xong đã.\",\"rating\":9.0},\n  {\"id\":732037,\"suggestedTranslation\":\"Nó đang được sử dụng rồi.\",\"rating\":9.0},\n  {\"id\":732038,\"suggestedTranslation\":\"Ta phải dọn sạch đồ bên trong nó trước đã.\",\"rating\":9.0},\n  {\"id\":732039,\"suggestedTranslation\":\"Ôi trời, ta với hụt mất rồi!\",\"rating\":9.0},\n  {\"id\":732040,\"suggestedTranslation\":\"Có một ví dụ về thứ ta nên vẽ sơ đồ thì sẽ hữu ích hơn.\",\"rating\":9.0},\n  {\"id\":732041,\"suggestedTranslation\":\"E rằng chỉ có nước ngọt mới dùng được thôi.\",\"rating\":9.0},\n  {\"id\":732042,\"suggestedTranslation\":\"Mấy con Câu Cá đó ở sâu quá.\",\"rating\":9.5},\n  {\"id\":732043,\"suggestedTranslation\":\"Ta biết ngay mà.\",\"rating\":9.0},\n  {\"id\":732044,\"suggestedTranslation\":\"Linh hồn cô ấy đã gắn liền với thứ gì đó ở thế giới này rồi.\",\"rating\":9.0},\n  {\"id\":732045,\"suggestedTranslation\":\"Ta sẽ thử lại khi nó xong việc.\",\"rating\":9.0},\n  {\"id\":732046,\"suggestedTranslation\":\"Các điều kiện chưa phù hợp.\",\"rating\":9.0},\n  {\"id\":732047,\"suggestedTranslation\":\"E rằng ta phải đợi thôi.\",\"rating\":9.0},\n  {\"id\":732048,\"suggestedTranslation\":\"Sân gôn mini cần ít nhất một lỗ cờ thì mới chơi được.\",\"rating\":9.0},\n  {\"id\":732049,\"suggestedTranslation\":\"Đó có vẻ không phải hình thức thanh toán chính xác.\",\"rating\":9.0},\n  {\"id\":732050,\"suggestedTranslation\":\"Thế thì phí hoài lắm.\",\"rating\":9.0},\n  {\"id\":732051,\"suggestedTranslation\":\"Chúng ta đã ghi chú lại công thức này rồi.\",\"rating\":9.0},\n  {\"id\":732052,\"suggestedTranslation\":\"Ta sẽ quanh quẩn đây khi nào em muốn ăn phần thứ hai nhé, cưng.\",\"rating\":9.0},\n  {\"id\":732053,\"suggestedTranslation\":\"Ta không nghĩ vậy đâu, cưng à.\",\"rating\":9.0},\n  {\"id\":732054,\"suggestedTranslation\":\"Ta sẽ không nhúng tay vào chuyện đó đâu.\",\"rating\":9.0},\n  {\"id\":732055,\"suggestedTranslation\":\"Nó cần một khúc Gỗ được yểm bùa phép.\",\"rating\":9.5},\n  {\"id\":732056,\"suggestedTranslation\":\"Trời ạ không, nó cần một cây Nấm tươi cơ.\",\"rating\":9.5},\n  {\"id\":732057,\"suggestedTranslation\":\"Loài này có vẻ chỉ mọc ở ngoài tự nhiên.\",\"rating\":9.0},\n  {\"id\":732058,\"suggestedTranslation\":\"Đừng có ngốc thế chứ, cưng.\",\"rating\":9.0},\n  {\"id\":732059,\"suggestedTranslation\":\"Nó cần năng lượng từ mặt trăng.\",\"rating\":9.0},\n  {\"id\":732060,\"suggestedTranslation\":\"Ta tin là chúng đang cố giao tiếp đấy.\",\"rating\":9.0},\n  {\"id\":732061,\"suggestedTranslation\":\"Thức ăn đó hoàn toàn không phù hợp.\",\"rating\":9.0},\n  {\"id\":732062,\"suggestedTranslation\":\"Đừng có ngốc thế chứ, cưng.\",\"rating\":9.0},\n  {\"id\":732063,\"suggestedTranslation\":\"Không ai nên dùng thứ đó để điêu khắc cả, cưng ạ.\",\"rating\":9.0},\n  {\"id\":732064,\"suggestedTranslation\":\"Đây không phải là cây trượng ta đang tìm kiếm.\",\"rating\":9.0},\n  {\"id\":732065,\"suggestedTranslation\":\"Đây không phải lúc để đùa giỡn!\",\"rating\":9.0},\n  {\"id\":732066,\"suggestedTranslation\":\"Ta cần phải dọn dẹp lại một chút trước đã.\",\"rating\":9.0},\n  {\"id\":732067,\"suggestedTranslation\":\"Không còn thời gian cho việc đó nữa đâu. Trời sắp tối rồi.\",\"rating\":9.0},\n  {\"id\":732068,\"suggestedTranslation\":\"Cô ấy đang bận giải quyết việc khác lúc này.\",\"rating\":9.0},\n  {\"id\":732069,\"suggestedTranslation\":\"Nó có vẻ đang ngủ.\",\"rating\":9.0},\n  {\"id\":732070,\"suggestedTranslation\":\"Hãy ăn hết những gì trên Đĩa trước đã nhé?\",\"rating\":9.5},\n  {\"id\":732071,\"suggestedTranslation\":\"Đơn giản là không đủ chỗ cho việc đó.\",\"rating\":9.0},\n  {\"id\":732072,\"suggestedTranslation\":\"Ồ không được đâu, hình như đối tượng cái cây được chọn đang vắng mặt.\",\"rating\":9.0},\n  {\"id\":732073,\"suggestedTranslation\":\"Có lẽ ta nên thử lại với thứ khác xem sao.\",\"rating\":9.0},\n  {\"id\":732074,\"suggestedTranslation\":\"Đặc tính của viên đá quý này không phù hợp với mục đích của ta.\",\"rating\":9.0},\n  {\"id\":732075,\"suggestedTranslation\":\"Cấu trúc giải phẫu xương không chính xác.\",\"rating\":9.0},\n  {\"id\":732076,\"suggestedTranslation\":\"Ta sẽ thử lại khi họ rảnh.\",\"rating\":9.0},\n  {\"id\":732077,\"suggestedTranslation\":\"Thế thì phí hoài lắm.\",\"rating\":9.0},\n  {\"id\":732078,\"suggestedTranslation\":\"Họ đã mang vác quá nặng rồi.\",\"rating\":9.0},\n  {\"id\":732079,\"suggestedTranslation\":\"Họ đang ngủ sâu rồi. Không cần phải làm phiền đâu.\",\"rating\":9.0},\n  {\"id\":732080,\"suggestedTranslation\":\"Ta sẽ thử lại khi họ rảnh.\",\"rating\":9.0},\n  {\"id\":732081,\"suggestedTranslation\":\"Thế thì phí hoài lắm.\",\"rating\":9.0},\n  {\"id\":732082,\"suggestedTranslation\":\"Họ đã mang vác quá nặng rồi.\",\"rating\":9.0},\n  {\"id\":732083,\"suggestedTranslation\":\"Họ đang ngủ sâu rồi. Không cần phải làm phiền đâu.\",\"rating\":9.0},\n  {\"id\":732084,\"suggestedTranslation\":\"Chúng ta đã ghi chú lại công thức này rồi.\",\"rating\":9.0},\n  {\"id\":732085,\"suggestedTranslation\":\"Đúng như ta nghĩ, ta chẳng thể thu thập được thông tin gì từ nó cả.\",\"rating\":9.0},\n  {\"id\":732086,\"suggestedTranslation\":\"Hợp chất này được người cá dùng để chữa bệnh.\",\"rating\":9.0},\n  {\"id\":732087,\"suggestedTranslation\":\"E rằng đây không phải lĩnh vực chuyên môn của ta.\",\"rating\":9.0},\n  {\"id\":732088,\"suggestedTranslation\":\"Xong rồi đấy, cưng.\",\"rating\":9.0},\n  {\"id\":732089,\"suggestedTranslation\":\"Sẽ chẳng làm được gì với tâm trạng hiện tại của chúng đâu.\",\"rating\":9.0},\n  {\"id\":732090,\"suggestedTranslation\":\"Ta sẽ cần một con Bò Lai trước.\",\"rating\":9.5},\n  {\"id\":732091,\"suggestedTranslation\":\"Con Bò Lai của ta cần đứng gần cái Cột hơn.\",\"rating\":9.5},\n  {\"id\":732092,\"suggestedTranslation\":\"Chắc phải có mẹo gì đó cho việc này.\",\"rating\":9.0},\n  {\"id\":732093,\"suggestedTranslation\":\"Ồ, cái đồ rắc rối này!\",\"rating\":9.0},\n  {\"id\":732094,\"suggestedTranslation\":\"Nào nào, đừng có bướng bỉnh thế chứ.\",\"rating\":9.0},\n  {\"id\":732095,\"suggestedTranslation\":\"Ta khá tự tin với lựa chọn của mình.\",\"rating\":9.0},\n  {\"id\":732096,\"suggestedTranslation\":\"Ta đành phải đứng quan sát lúc này vậy.\",\"rating\":9.0},\n  {\"id\":732097,\"suggestedTranslation\":\"Cần phải kiên nhẫn. Ta có thể cưỡi con Bò Lai này sau.\",\"rating\":9.5},\n  {\"id\":732098,\"suggestedTranslation\":\"Dậy nào, ta cần sự phục vụ của ngươi đấy.\",\"rating\":9.0},\n  {\"id\":732099,\"suggestedTranslation\":\"Thật không khôn ngoan chút nào nếu bén mảng đến cuộc ẩu đả đó.\",\"rating\":9.0},\n  {\"id\":732100,\"suggestedTranslation\":\"only_used_by_wendy\",\"rating\":1.0},\n  {\"id\":732101,\"suggestedTranslation\":\"only_used_by_wendy\",\"rating\":1.0},\n  {\"id\":732102,\"suggestedTranslation\":\"only_used_by_wendy\",\"rating\":1.0},\n  {\"id\":732103,\"suggestedTranslation\":\"only_used_by_wendy\",\"rating\":1.0},\n  {\"id\":732104,\"suggestedTranslation\":\"only_used_by_wendy\",\"rating\":1.0},\n  {\"id\":732105,\"suggestedTranslation\":\"Ta không cần thứ này chỉ để câu cá ở ao bình thường.\",\"rating\":9.5},\n  {\"id\":732106,\"suggestedTranslation\":\"Thật bất lịch sự nếu ta táy máy vào đó.\",\"rating\":9.0},\n  {\"id\":732107,\"suggestedTranslation\":\"Ta không đời nào để THỨ ĐÓ vào thư viện của mình đâu!\",\"rating\":9.0},\n  {\"id\":732108,\"suggestedTranslation\":\"Trống rỗng, đúng như ta nghi ngờ.\",\"rating\":9.0},\n  {\"id\":732109,\"suggestedTranslation\":\"Nó bị kẹt rồi.\",\"rating\":9.0},\n  {\"id\":732110,\"suggestedTranslation\":\"Ta nghĩ tốt nhất là cứ để mặc nó thì hơn.\",\"rating\":9.0},\n  {\"id\":732111,\"suggestedTranslation\":\"Nó đang được dùng rồi.\",\"rating\":9.0},\n  {\"id\":732112,\"suggestedTranslation\":\"Ôi trời, hình như ta bị nhầm lẫn chút rồi.\",\"rating\":9.0},\n  {\"id\":732113,\"suggestedTranslation\":\"Cặp kính của ta cần được lau chùi kỹ lại rồi, đó rõ ràng không phải là củ cải thỏ của ta!\",\"rating\":9.0},\n  {\"id\":732114,\"suggestedTranslation\":\"Đó không phải lĩnh vực chuyên môn của ta.\",\"rating\":9.0},\n  {\"id\":732115,\"suggestedTranslation\":\"Ta đã thu thập được tất cả thông tin có thể rồi.\",\"rating\":9.0},\n  {\"id\":732116,\"suggestedTranslation\":\"Ta đã khá am hiểu về loài cụ thể này rồi.\",\"rating\":9.0},\n  {\"id\":732117,\"suggestedTranslation\":\"Ôi trời, ta với hụt mất rồi!\",\"rating\":9.0},\n  {\"id\":732118,\"suggestedTranslation\":\"Ôi trời, ta sẽ phải bổ sung lại lượng nước của mình thôi.\",\"rating\":9.0},\n  {\"id\":732119,\"suggestedTranslation\":\"Ta sẽ phải bổ sung lại lượng nước ngay khi có cơ hội.\",\"rating\":9.0},\n  {\"id\":732120,\"suggestedTranslation\":\"E rằng làm vậy thì thừa thãi quá.\",\"rating\":9.0},\n  {\"id\":732121,\"suggestedTranslation\":\"Dĩ nhiên rồi, trường lực cũng áp dụng với cả lũ chim luôn.\",\"rating\":9.0},\n  {\"id\":732122,\"suggestedTranslation\":\"Trời ạ. E rằng bầu trời lúc này không Két Sắt cho loài chim đâu.\",\"rating\":9.5},\n  {\"id\":732123,\"suggestedTranslation\":\"Những việc khác đang chờ kìa.\",\"rating\":9.0},\n  {\"id\":732124,\"suggestedTranslation\":\"Lũ chim không có hứng thú với thời tiết này lắm.\",\"rating\":9.0},\n  {\"id\":732125,\"suggestedTranslation\":\"Thật may là không có đám cháy nào cần dập tắt cả.\",\"rating\":9.0},\n  {\"id\":732126,\"suggestedTranslation\":\"Không có hoa màu nào để canh tác cả.\",\"rating\":9.0},\n  {\"id\":732127,\"suggestedTranslation\":\"Mặt trăng không thể bị tác động từ vị trí dưới lòng đất này được.\",\"rating\":9.0},\n  {\"id\":732128,\"suggestedTranslation\":\"Không có đối tượng thực vật thân gỗ nào ở đây để tập trung cả.\",\"rating\":9.0},\n  {\"id\":732129,\"suggestedTranslation\":\"Ta chẳng thấy ai cần nghe truyện ngủ cả.\",\"rating\":9.0},\n  {\"id\":732130,\"suggestedTranslation\":\"Mấy cái xúc tu sẽ không thể trồi lên mặt đất ở đây được đâu.\",\"rating\":9.0},\n  {\"id\":732131,\"suggestedTranslation\":\"Câu Cá chỉ có thể được triệu hồi khi ở gần nguồn nước.\",\"rating\":9.5},\n  {\"id\":732132,\"suggestedTranslation\":\"Số lượng ong thế thì nhiều quá mức rồi đấy, cưng ơi.\",\"rating\":9.0},\n  {\"id\":732133,\"suggestedTranslation\":\"Nó không hiệu quả lắm khi có quá nhiều chim quanh đây.\",\"rating\":9.0},\n  {\"id\":732134,\"suggestedTranslation\":\"Bầu trời hiện không còn con chim nào nữa rồi.\",\"rating\":9.0},\n  {\"id\":732135,\"suggestedTranslation\":\"only_used_by_winona\",\"rating\":1.0},\n  {\"id\":732136,\"suggestedTranslation\":\"only_used_by_winona\",\"rating\":1.0},\n  {\"id\":732137,\"suggestedTranslation\":\"only_used_by_wx78\",\"rating\":1.0},\n  {\"id\":732138,\"suggestedTranslation\":\"Rõ ràng đó không phải là mảnh ghép phù hợp.\",\"rating\":9.0},\n  {\"id\":732139,\"suggestedTranslation\":\"Đó không phải là bộ đồ ăn thích hợp cho món này.\",\"rating\":9.0},\n  {\"id\":732140,\"suggestedTranslation\":\"Nó đang nằm trên bộ đồ ăn phù hợp rồi.\",\"rating\":9.0},\n  {\"id\":732141,\"suggestedTranslation\":\"Ta phải căn nhịp sao cho thật chuẩn xác.\",\"rating\":9.0},\n  {\"id\":732142,\"suggestedTranslation\":\"Việc này có thể cần chút sự bền bỉ đấy.\",\"rating\":9.0},\n  {\"id\":732143,\"suggestedTranslation\":\"Ôi trời, ta lại phải bắt đầu lại từ đầu rồi.\",\"rating\":9.0},\n  {\"id\":732144,\"suggestedTranslation\":\"Hiện tại ta còn nhiều chuyện khác phải bận tâm.\",\"rating\":9.0},\n  {\"id\":732145,\"suggestedTranslation\":\"Hãy nhớ phân loại theo màu sắc và trọng lượng nhé, cưng.\",\"rating\":9.0},\n  {\"id\":732146,\"suggestedTranslation\":\"Ta không nghĩ dân làng ở đây sẽ thích thú với việc đó đâu.\",\"rating\":9.0},\n  {\"id\":732147,\"suggestedTranslation\":\"Đây là tài sản của cỗ máy tự động.\",\"rating\":9.0},\n  {\"id\":732148,\"suggestedTranslation\":\"Thật bất lịch sự nếu ta táy máy vào đó.\",\"rating\":9.0},\n  {\"id\":732149,\"suggestedTranslation\":\"Tốt nhất là không nên nhúng tay vào.\",\"rating\":9.0},\n  {\"id\":732150,\"suggestedTranslation\":\"E rằng nó không dành cho ta.\",\"rating\":9.0},\n  {\"id\":732151,\"suggestedTranslation\":\"Thật không khôn ngoan chút nào nếu bén mảng đến cuộc ẩu đả đó.\",\"rating\":9.0},\n  {\"id\":732152,\"suggestedTranslation\":\"Ta nghĩ anh ta sẽ phản đối chuyện đó đấy.\",\"rating\":9.0},\n  {\"id\":732153,\"suggestedTranslation\":\"Ta thực sự không muốn làm thế chút nào.\",\"rating\":9.0},\n  {\"id\":732154,\"suggestedTranslation\":\"Nó đã nhẵn trụi rồi, cưng.\",\"rating\":9.0},\n  {\"id\":732155,\"suggestedTranslation\":\"Cạo lông con Bò Lai của người khác không phải việc của ta.\",\"rating\":9.5},\n  {\"id\":732156,\"suggestedTranslation\":\"Ôi trời, nó chạy mất tiêu rồi.\",\"rating\":9.0},\n  {\"id\":732157,\"suggestedTranslation\":\"Rõ ràng là có người đang ngồi ở đó rồi.\",\"rating\":9.0},\n  {\"id\":732158,\"suggestedTranslation\":\"Ta chẳng thể thu thập dữ liệu nào khi không có đối tượng cả.\",\"rating\":9.0},\n  {\"id\":732159,\"suggestedTranslation\":\"E rằng nó đã đầy ắp đến tận miệng rồi.\",\"rating\":9.0},\n  {\"id\":732160,\"suggestedTranslation\":\"Ta rất hy vọng em vẫn đang giữ mọi thứ ngăn nắp đấy, cưng của ta.\",\"rating\":9.0},\n  {\"id\":732161,\"suggestedTranslation\":\"Thật vớ vẩn.\",\"rating\":9.0},\n  {\"id\":732162,\"suggestedTranslation\":\"Đây là tài sản của cỗ máy tự động.\",\"rating\":9.0},\n  {\"id\":732163,\"suggestedTranslation\":\"Thật bất lịch sự nếu ta táy máy vào đó.\",\"rating\":9.0},\n  {\"id\":732164,\"suggestedTranslation\":\"Tốt nhất là không nên nhúng tay vào.\",\"rating\":9.0},\n  {\"id\":732165,\"suggestedTranslation\":\"E rằng nó không dành cho ta.\",\"rating\":9.0},\n  {\"id\":732166,\"suggestedTranslation\":\"Một khối tri thức mà ta không thể lĩnh hội... Thật thú vị làm sao!\",\"rating\":9.0},\n  {\"id\":732167,\"suggestedTranslation\":\"Làm ơn đi. Kiến thức đó chỉ là trò trẻ con thôi.\",\"rating\":9.0},\n  {\"id\":732168,\"suggestedTranslation\":\"Tối quá rồi, chẳng thể hiểu nổi thứ này nói gì cả.\",\"rating\":9.0},\n  {\"id\":732169,\"suggestedTranslation\":\"Lũ khỉ hình như đã quên đánh dấu bất kỳ vị trí cụ thể nào trên bản đồ này.\",\"rating\":9.0},\n  {\"id\":732170,\"suggestedTranslation\":\"Bản đồ này dành cho một địa điểm khác nào đó.\",\"rating\":9.0},\n  {\"id\":732171,\"suggestedTranslation\":\"only_used_by_walter\",\"rating\":1.0},\n  {\"id\":732172,\"suggestedTranslation\":\"Nó đã gắn kết tình cảm với người khác mất rồi, cưng à.\",\"rating\":9.0},\n  {\"id\":732173,\"suggestedTranslation\":\"Ta không cần thêm con Bò Lai nào nữa.\",\"rating\":9.5},\n  {\"id\":732174,\"suggestedTranslation\":\"Thế thì không được đâu.\",\"rating\":9.0},\n  {\"id\":732175,\"suggestedTranslation\":\"Nó hoàn toàn không thể sửa chữa được nữa.\",\"rating\":9.0},\n  {\"id\":732176,\"suggestedTranslation\":\"Nó không thuộc về ta.\",\"rating\":9.0},\n  {\"id\":732177,\"suggestedTranslation\":\"Phải đánh bại con quái thú trước đã.\",\"rating\":9.0},\n  {\"id\":732178,\"suggestedTranslation\":\"Ta sẽ phải tìm Chìa khóa phù hợp.\",\"rating\":9.5},\n  {\"id\":732179,\"suggestedTranslation\":\"Đó có lẽ là dụng cụ không đúng.\",\"rating\":9.0},\n  {\"id\":732180,\"suggestedTranslation\":\"Ta phải biết mình đang gói thứ gì chứ, cưng.\",\"rating\":9.0},\n  {\"id\":732181,\"suggestedTranslation\":\"Ta thích viết vào sách của chính mình hơn.\",\"rating\":9.0},\n  {\"id\":732182,\"suggestedTranslation\":\"Khi nào bạn xong việc nhé, cưng.\",\"rating\":9.0},\n  {\"id\":732183,\"suggestedTranslation\":\"Ta đoán chắc phải có một cuộc thi đang diễn ra ở đâu đó rồi.\",\"rating\":9.0},\n  {\"id\":732184,\"suggestedTranslation\":\"Cuộc thi đành phải gác lại một thời gian vậy.\",\"rating\":9.0},\n  {\"id\":732185,\"suggestedTranslation\":\"Có vẻ như cậu ta đã đi dạo hít thở không khí rồi.\",\"rating\":9.0},\n  {\"id\":732186,\"suggestedTranslation\":\"Cậu ta hiện đang bận việc rồi.\",\"rating\":9.0},\n  {\"id\":732187,\"suggestedTranslation\":\"Ta đã quen thuộc với mẫu thiết kế này rồi.\",\"rating\":9.0},\n  {\"id\":732188,\"suggestedTranslation\":\"Dường như ta không thể làm vậy được.\",\"rating\":9.0},\n  {\"id\":732189,\"suggestedTranslation\":\"Vẫn chưa được đâu!\",\"rating\":9.0},\n  {\"id\":732190,\"suggestedTranslation\":\"Xếp vào mục đã hoàn thành!\",\"rating\":9.0},\n  {\"id\":732191,\"suggestedTranslation\":\"Chúng phát ra thứ âm thanh thật kinh khủng.\",\"rating\":9.0},\n  {\"id\":732192,\"suggestedTranslation\":\"Chúng ta phải học hỏi từ những thất bại của mình.\",\"rating\":9.0},\n  {\"id\":732193,\"suggestedTranslation\":\"Mặt đất sẽ sớm sụt xuống thôi.\",\"rating\":9.0},\n  {\"id\":732194,\"suggestedTranslation\":\"Không phải do các mảng kiến tạo đâu.\",\"rating\":9.0},\n  {\"id\":732195,\"suggestedTranslation\":\"Đạt sáu độ rích-te luôn.\",\"rating\":9.0},\n  {\"id\":732196,\"suggestedTranslation\":\"Dành cho ngươi đấy, ngài Panthera auropunctata vĩ đại.\",\"rating\":9.0},\n  {\"id\":732197,\"suggestedTranslation\":\"Nó có vẻ ngoan ngoãn hơn rồi đấy.\",\"rating\":9.0},\n  {\"id\":732198,\"suggestedTranslation\":\"Ngài Panthera auropunctata vĩ đại đã được thuần hóa.\",\"rating\":9.0},\n  {\"id\":732199,\"suggestedTranslation\":\"Thật là một cảm giác kỳ lạ, nó đang truyền một Bản thiết kế qua đường thần giao cách cảm!\",\"rating\":9.5},\n  {\"id\":732200,\"suggestedTranslation\":\"Thật là đáng thất vọng, ta đã rất tò mò muốn xem nó làm được gì cơ chứ.\",\"rating\":9.0},\n  {\"id\":732201,\"suggestedTranslation\":\"Ta đã quen thuộc với mảng kiến thức này rồi.\",\"rating\":9.0},\n  {\"id\":732202,\"suggestedTranslation\":\"Ta tin là đã đến lúc phải đi rồi.\",\"rating\":9.0},\n  {\"id\":732203,\"suggestedTranslation\":\"Ở đây nguy hiểm lắm.\",\"rating\":9.0},\n  {\"id\":732204,\"suggestedTranslation\":\"Ôi trời đất ơi!\",\"rating\":9.0},\n  {\"id\":732205,\"suggestedTranslation\":\"Chà, ta cảm thấy tràn đầy sức sống và năng lượng!\",\"rating\":9.0},\n  {\"id\":732206,\"suggestedTranslation\":\"Hình như ta đã trở thành vật dẫn điện rồi!\",\"rating\":9.0},\n  {\"id\":732207,\"suggestedTranslation\":\"Ta cảm thấy khô ráo dễ chịu làm sao!\",\"rating\":9.0},\n  {\"id\":732208,\"suggestedTranslation\":\"Ta dám cá là mình cứng rắn hơn vẻ bề ngoài đấy!\",\"rating\":9.0},\n  {\"id\":732209,\"suggestedTranslation\":\"Chuyện mất ngủ đối với ta chẳng có gì lạ cả.\",\"rating\":9.0},\n  {\"id\":732210,\"suggestedTranslation\":\"Ta sẽ hoàn thành mọi thứ trong nháy mắt!\",\"rating\":9.0},\n  {\"id\":732211,\"suggestedTranslation\":\"oOoooOoO!!\",\"rating\":9.0},\n  {\"id\":732212,\"suggestedTranslation\":\"Lũ quái vật chích đau điếng!\",\"rating\":9.0},\n  {\"id\":732213,\"suggestedTranslation\":\"Thuyền ván đã rơi vào tình trạng xuống cấp nguy hiểm.\",\"rating\":9.5},\n  {\"id\":732214,\"suggestedTranslation\":\"Trời ạ, chúng ta đang chìm kìa!\",\"rating\":9.0},\n  {\"id\":732215,\"suggestedTranslation\":\"Chúng ta sẽ không thể thấy hiệu ứng cho đến tận tối nay đâu.\",\"rating\":9.0},\n  {\"id\":732216,\"suggestedTranslation\":\"Ta đã phán đoán sai thời điểm nó quay lại.\",\"rating\":9.0},\n  {\"id\":732217,\"suggestedTranslation\":\"Sự can đảm trong ta đã trở lại!\",\"rating\":9.0},\n  {\"id\":732218,\"suggestedTranslation\":\"Ít nhất cũng bỏng độ một!\",\"rating\":9.0},\n  {\"id\":732219,\"suggestedTranslation\":\"Nào, đi theo ta.\",\"rating\":9.0},\n  {\"id\":732220,\"suggestedTranslation\":\"\\nTa tin là mình có thể sửa được cái này.\",\"rating\":9.0},\n  {\"id\":732221,\"suggestedTranslation\":\"Ta nên cố gắng thu thập đủ các nguyên liệu cần thiết.\",\"rating\":9.0},\n  {\"id\":732222,\"suggestedTranslation\":\"E rằng việc này sẽ cần một không gian làm việc chuyên dụng.\",\"rating\":9.0},\n  {\"id\":732223,\"suggestedTranslation\":\"Đây có vẻ là cơ hội để tiến hành một số nghiên cứu.\",\"rating\":9.0},\n  {\"id\":732224,\"suggestedTranslation\":\"Sẽ thiết thực hơn nhiều nếu xây dựng cái này gần khu vực thi đấu.\",\"rating\":9.0},\n  {\"id\":732225,\"suggestedTranslation\":\"Ta cứ có cảm giác không thể đặt nó xuống được...\",\"rating\":9.0},\n  {\"id\":732226,\"suggestedTranslation\":\"Đối tượng hình như đang có mức thể lực thấp.\",\"rating\":9.0},\n  {\"id\":732227,\"suggestedTranslation\":\"Bạn phải tập trung chứ!\",\"rating\":9.0},\n  {\"id\":732228,\"suggestedTranslation\":\"Cố gắng trông năng động hơn một chút nào, cưng.\",\"rating\":9.0},\n  {\"id\":732229,\"suggestedTranslation\":\"Nhầm đường rồi, cưng ơi.\",\"rating\":9.0},\n  {\"id\":732230,\"suggestedTranslation\":\"Ôi chao, ta phải ghi lại điều này mới được.\",\"rating\":9.0},\n  {\"id\":732231,\"suggestedTranslation\":\"Cuộc đua xin được phép bắt đầu!\",\"rating\":9.0},\n  {\"id\":732232,\"suggestedTranslation\":\"Mấy Cục đá ở trên đầu sẽ sớm sụt xuống thôi.\",\"rating\":9.5}\n]",
+            "thoughtSignature": "EmAKXgFpFH0TY0w1u5xD5vqmkNEaiv2PnOpYp7efMjBUEjGgfJ7jfeC6EsaKF3IFuTG7BRPPsY5LGCPZzNRZ8YKmKR0qwyKJ7ag/YRb9TsJ8a0qg4gSfl+0ARcQ22zVdYEw="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 20572,
+    "candidatesTokenCount": 10484,
+    "totalTokenCount": 31056,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 20572
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "dwa5apjJDeK7mNMPuZDH2AM"
+}
+
+================================================================================--------------------
+

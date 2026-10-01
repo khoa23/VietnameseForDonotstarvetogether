@@ -1,0 +1,4928 @@
+=== Translation Log Started at 2026-09-27 11:59:11 | Provider: Gemini ===
+
+======================================== [2026-09-27 11:59:46] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang rating (0.0 - 10.0):
+   - MsgStr rỗng, chưa dịch hoặc còn là tiếng Anh: Chấm rating thấp (0.0 - 1.0).
+   - MsgStr dịch chuẩn xác, tự nhiên: Chấm rating cao (8.0 - 10.0).
+2. Đề xuất bản dịch TIẾNG VIỆT tối ưu nhất cho trường "suggestedTranslation":
+   - BẮT BUỘC 100% PHẢI LÀ TIẾNG VIỆT tự nhiên, ngắn gọn, chuẩn văn phong game.
+   - TUYỆT ĐỐI KHÔNG ĐƯỢC để suggestedTranslation là tiếng Anh trong bất kỳ trường hợp nào!
+3. Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+4. Nếu mục nào có 'Thuật ngữ tham khảo', BẮT BUỘC ưu tiên dịch thuật ngữ đó sang nghĩa tiếng Việt tương ứng.
+Ví dụ:
+Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+Output: {"id":101,"suggestedTranslation":"\"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!","rating":8.5}
+
+Hãy xử lý tất cả các mục dưới đây và trả về duy nhất một JSON array.
+Mỗi phần tử phải có đúng 3 trường: id, suggestedTranslation, rating.
+Trả về CHỈ JSON hợp lệ, không bọc markdown, không giải thích thừa.
+Ví dụ mẫu: [{"id":101,"suggestedTranslation":"\"Chưa đến giữa hè\", bạn nói?...","rating":8.5}]
+
+Item:
+Id: 720925
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_ATTACH_BUFF_WORKEFFECTIVENESS
+MsgId: My focus feels heightened!
+MsgStr: 
+
+Item:
+Id: 720926
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_BECOMEGHOST
+MsgId: oOooooOO!!
+MsgStr: 
+
+Item:
+Id: 720927
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_BEES
+MsgId: Killing me won't bring back your honey!
+MsgStr: 
+Thuật ngữ tham khảo: "Honey" => "Mật ong"
+
+Item:
+Id: 720928
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_BOAT_LEAK
+MsgId: We've sprung a leak!
+MsgStr: 
+Thuật ngữ tham khảo: "Leak" => "Rò rỉ"
+
+Item:
+Id: 720929
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_BOAT_SINK
+MsgId: Oh dear.
+MsgStr: 
+
+Item:
+Id: 720930
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_BOOK_MOON_DAYTIME
+MsgId: We'll know if it worked once night falls.
+MsgStr: 
+
+Item:
+Id: 720931
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_BOOMERANG
+MsgId: Ow! Blasted... clumsy hands!
+MsgStr: 
+
+Item:
+Id: 720932
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_BRAVERY_POTION
+MsgId: I was never really scared of those trees anyhow.
+MsgStr: 
+
+Item:
+Id: 720933
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_BURNT
+MsgId: It burns!
+MsgStr: 
+
+Item:
+Id: 720934
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_CALL_BEEF
+MsgId: And here comes my... er, \"beautiful\" assistant.
+MsgStr: 
+
+Item:
+Id: 720935
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_CANFIX
+MsgId: \nI think I can fix this!
+MsgStr: 
+
+Item:
+Id: 720936
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_CANNOT_BUILD.NO_INGREDIENTS
+MsgId: I don't have everything I need.
+MsgStr: 
+
+Item:
+Id: 720937
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_CANNOT_BUILD.NO_STATION
+MsgId: I can't make that here, pal.
+MsgStr: 
+
+Item:
+Id: 720938
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_CANNOT_BUILD.NO_TECH
+MsgId: Don't look at me, I've never made one before in my life.
+MsgStr: 
+
+Item:
+Id: 720939
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_CANTBUILDHERE_YOTB_POST
+MsgId: This seems a bit far from the festivities, don't you think?
+MsgStr: 
+
+Item:
+Id: 720940
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_CANT_ESCAPE_CURSE
+MsgId: Odd... what kind of magic is this?
+MsgStr: 
+
+Item:
+Id: 720941
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_CARRAT_ERROR_FELL_ASLEEP
+MsgId: Wake up, you useless vermin!
+MsgStr: 
+
+Item:
+Id: 720942
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_CARRAT_ERROR_STUNNED
+MsgId: What's the matter? Get going!
+MsgStr: 
+
+Item:
+Id: 720943
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_CARRAT_ERROR_WALKING
+MsgId: Faster! Faster I say!
+MsgStr: 
+
+Item:
+Id: 720944
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_CARRAT_ERROR_WRONG_WAY.1
+MsgId: You fool! You're going the wrong way!
+MsgStr: 
+
+Item:
+Id: 720945
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_CARRAT_ERROR_WRONG_WAY.2
+MsgId: No! The other way!
+MsgStr: 
+
+Item:
+Id: 720946
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_CARRAT_START_RACE
+MsgId: Begin!
+MsgStr: 
+
+Item:
+Id: 720947
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_CAVEIN
+MsgId: The ceiling is going to collapse!
+MsgStr: 
+
+Item:
+Id: 720948
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_CHAIR_ON_FIRE
+MsgId: This is fine.
+MsgStr: 
+
+Item:
+Id: 720949
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_CHARLIE
+MsgId: I suppose it's best to keep up appearances...
+MsgStr: 
+
+Item:
+Id: 720950
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_CHARLIESAVE.1
+MsgId: only_used_by_winona
+MsgStr: 
+
+Item:
+Id: 720951
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_CHARLIE_ATTACK
+MsgId: Ow! Be gentle, Charlie!
+MsgStr: 
+
+Item:
+Id: 720952
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_COACH.1
+MsgId: only_used_by_wolfgang
+MsgStr: 
+
+Item:
+Id: 720953
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_COACH.2
+MsgId: only_used_by_wolfgang
+MsgStr: 
+
+Item:
+Id: 720954
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_COACH.3
+MsgId: only_used_by_wolfgang
+MsgStr: 
+
+Item:
+Id: 720955
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_COACH.4
+MsgId: only_used_by_wolfgang
+MsgStr: 
+
+Item:
+Id: 720956
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_COACH.5
+MsgId: only_used_by_wolfgang
+MsgStr: 
+
+Item:
+Id: 720957
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_COACH.6
+MsgId: only_used_by_wolfgang
+MsgStr: 
+
+Item:
+Id: 720958
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_COACH.7
+MsgId: only_used_by_wolfgang
+MsgStr: 
+
+Item:
+Id: 720959
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_COACH.8
+MsgId: only_used_by_wolfgang
+MsgStr: 
+
+Item:
+Id: 720960
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_COACH.9
+MsgId: only_used_by_wolfgang
+MsgStr: 
+
+Item:
+Id: 720961
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_COLD
+MsgId: My heart grows cold.
+MsgStr: 
+
+Item:
+Id: 720962
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_COMPASS_OUT
+MsgId: The compass has fallen to pieces.
+MsgStr: 
+Thuật ngữ tham khảo: "Compass" => "La bàn"
+
+Item:
+Id: 720963
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_COZY_SLEEP
+MsgId: That was a marginally more restful sleep than usual.
+MsgStr: 
+
+Item:
+Id: 720964
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_CRAFTING_FAIL
+MsgId: Er... I can't do that.
+MsgStr: 
+
+Item:
+Id: 720965
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_DAMP
+MsgId: Damp is not dapper.
+MsgStr: 
+
+Item:
+Id: 720966
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_DEERCLOPS
+MsgId: I hear one of them coming.
+MsgStr: 
+
+Item:
+Id: 720967
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_DESPAWN
+MsgId: Say, pal, I don't look so good...
+MsgStr: 
+
+Item:
+Id: 720968
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_DETACH_BUFF_ATTACK
+MsgId: My strength has left me.
+MsgStr: 
+
+Item:
+Id: 720969
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_DETACH_BUFF_ELECTRICATTACK
+MsgId: Shame. I was starting to enjoy that.
+MsgStr: 
+
+Item:
+Id: 720970
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_DETACH_BUFF_MOISTUREIMMUNITY
+MsgId: I'm exposed to the elements!
+MsgStr: 
+
+Item:
+Id: 720971
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_DETACH_BUFF_PLAYERABSORPTION
+MsgId: I've been left vulnerable!
+MsgStr: 
+
+Item:
+Id: 720972
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_DETACH_BUFF_SLEEPRESISTANCE
+MsgId: I'm growing tired.
+MsgStr: 
+
+Item:
+Id: 720973
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_DETACH_BUFF_WORKEFFECTIVENESS
+MsgId: My enthusiasm for this has run dry.
+MsgStr: 
+
+Item:
+Id: 720974
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_DIG_DISEASE_WARNING
+MsgId: That takes care of that.
+MsgStr: 
+
+Item:
+Id: 720975
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_DUSK
+MsgId: It'll be dark soon. Charlie will be waking up.
+MsgStr: 
+
+Item:
+Id: 720976
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_EAT.GENERIC
+MsgId: (Gulp!)
+MsgStr: 
+
+Item:
+Id: 720977
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_EAT.INVALID
+MsgId: I won't let that anywhere near my mouth.
+MsgStr: 
+
+Item:
+Id: 720978
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_EAT.PAINFUL
+MsgId: Ow! That hurt my mouth!
+MsgStr: 
+
+Item:
+Id: 720979
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_EAT.SPOILED
+MsgId: That was putrid.
+MsgStr: 
+
+Item:
+Id: 720980
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_EAT.STALE
+MsgId: That was past its expiration date.
+MsgStr: 
+
+Item:
+Id: 720981
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_EAT.YUCKY
+MsgId: A civilized man does not eat such things.
+MsgStr: 
+
+Item:
+Id: 720982
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_EATING_NOT_FEASTING
+MsgId: I suppose it's only right to share this with the others.
+MsgStr: 
+
+Item:
+Id: 720983
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_ELIXIR_BOOSTED
+MsgId: That hit the spot.
+MsgStr: 
+
+Item:
+Id: 720984
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_ELIXIR_GHOSTVISION
+MsgId: I'd rather sleep like the dead.
+MsgStr: 
+
+Item:
+Id: 720985
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_ELIXIR_PLAYER_SPEED
+MsgId: Respect my brawn!
+MsgStr: 
+
+Item:
+Id: 720986
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_ELIXIR_TOO_SUPER
+MsgId: That's too stiff a drink.
+MsgStr: 
+
+Item:
+Id: 720987
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_ENCUMBERED.1
+MsgId: Reduced... to this...
+MsgStr: 
+
+Item:
+Id: 720988
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_ENCUMBERED.2
+MsgId: Huff... huff...
+MsgStr: 
+
+Item:
+Id: 720989
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_ENCUMBERED.3
+MsgId: This is... peasant... work...
+MsgStr: 
+
+Item:
+Id: 720990
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_ENCUMBERED.4
+MsgId: Oh... my back...
+MsgStr: 
+
+Item:
+Id: 720991
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_ENCUMBERED.5
+MsgId: I wasn't... built for this...
+MsgStr: 
+
+Item:
+Id: 720992
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_ENCUMBERED.6
+MsgId: All my joints... are cracking!
+MsgStr: 
+
+Item:
+Id: 720993
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_ENCUMBERED.7
+MsgId: I... was a king, you know..!
+MsgStr: 
+
+Item:
+Id: 720994
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_ENCUMBERED.8
+MsgId: Oof... huff...
+MsgStr: 
+
+Item:
+Id: 720995
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_ENCUMBERED.9
+MsgId: This... better not ruin... my suit.
+MsgStr: 
+
+Item:
+Id: 720996
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_ENGINEERING_CAN_DOWNGRADE
+MsgId: only_used_by_winona
+MsgStr: 
+
+Item:
+Id: 720997
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_ENGINEERING_CAN_SIDEGRADE
+MsgId: only_used_by_winona
+MsgStr: 
+
+Item:
+Id: 720998
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_ENGINEERING_CAN_UPGRADE
+MsgId: only_used_by_winona
+MsgStr: 
+
+Item:
+Id: 720999
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_ENTER_DARK
+MsgId: That smell... both nostalgic and terrifying!
+MsgStr: 
+
+Item:
+Id: 721000
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_ENTER_LIGHT
+MsgId: Thank goodness for the light.
+MsgStr: 
+
+Item:
+Id: 721001
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_EQUIP_SHADOWLEVEL_T1
+MsgId: What's this? My shadow puppets feel just a bit stronger...
+MsgStr: 
+Thuật ngữ tham khảo: "Shadow" => "Bóng"
+
+Item:
+Id: 721002
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_EQUIP_SHADOWLEVEL_T2
+MsgId: I can feel the strength of my shadow puppets growing.
+MsgStr: 
+Thuật ngữ tham khảo: "Shadow" => "Bóng"
+
+Item:
+Id: 721003
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_EQUIP_SHADOWLEVEL_T3
+MsgId: Go, my shadow puppets! With this power, nothing will stand in our way.
+MsgStr: 
+Thuật ngữ tham khảo: "Shadow" => "Bóng"
+
+Item:
+Id: 721004
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_EQUIP_SHADOWLEVEL_T4
+MsgId: The shadow puppets I summon will be unstoppable!
+MsgStr: 
+Thuật ngữ tham khảo: "Shadow" => "Bóng"
+
+Item:
+Id: 721005
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_EXIT_GELBLOB
+MsgId: Gaah! The horror!
+MsgStr: 
+
+Item:
+Id: 721006
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_EYEOFTERROR_ARRIVE
+MsgId: Oh, what a magnificent horror.
+MsgStr: 
+
+Item:
+Id: 721007
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_EYEOFTERROR_FLYAWAY
+MsgId: It'll be back.
+MsgStr: 
+
+Item:
+Id: 721008
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_EYEOFTERROR_FLYBACK
+MsgId: I've been awaiting your return. Let's end this.
+MsgStr: 
+
+Item:
+Id: 721009
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_FAN_OUT
+MsgId: There goes my respite.
+MsgStr: 
+
+Item:
+Id: 721010
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_FERTILIZER_RESEARCHED
+MsgId: I'm growing more knowledgeable than I'd care to be about this stuff.
+MsgStr: 
+
+Item:
+Id: 721011
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_FIRENETTLE_TOXIN.1
+MsgId: Ack, those infernal nettles!
+MsgStr: 
+
+Item:
+Id: 721012
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_FIRENETTLE_TOXIN.2
+MsgId: The nettle's poison is burning in my veins!
+MsgStr: 
+
+Item:
+Id: 721013
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_FIRENETTLE_TOXIN_DONE
+MsgId: The worst has passed.
+MsgStr: 
+
+Item:
+Id: 721014
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_FLARE_SEEN
+MsgId: Am I supposed to come running every time I spot a flare?
+MsgStr: 
+Thuật ngữ tham khảo: "Flare" => "Pháo Sáng"
+
+Item:
+Id: 721015
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_FLOATER_HELD
+MsgId: There are unspeakable horrors below.
+MsgStr: 
+
+Item:
+Id: 721016
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_FLOATER_LETGO
+MsgId: Ah!
+MsgStr: 
+
+Item:
+Id: 721017
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_FLOAT_SWIM_TIRED
+MsgId: I can't!
+MsgStr: 
+
+Item:
+Id: 721018
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_FOODMEMORY
+MsgId: only_used_by_warly
+MsgStr: 
+
+Item:
+Id: 721019
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_FREEDOM
+MsgId: Freedom, at last!
+MsgStr: 
+
+Item:
+Id: 721020
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_GATHER_MERM
+MsgId: only_used_by_wurt
+MsgStr: 
+
+Item:
+Id: 721021
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_GHOSTDRAIN
+MsgId: They're whispering through the core of my mind...!
+MsgStr: 
+
+Item:
+Id: 721022
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_GHOST_QUEST
+MsgId: only_used_by_wendy
+MsgStr: 
+
+Item:
+Id: 721023
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_GOT_DECON_MISTED
+MsgId: Ugh! It burns!
+MsgStr: 
+
+Item:
+Id: 721024
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_HEALINGSALVE_ACIDBUFF_DONE
+MsgId: I'd better not take a stroll in the acid rain anytime soon.
+MsgStr: 
+Thuật ngữ tham khảo: "Acid Rain" => "Mưa axit"
+
+Item:
+Id: 721025
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_HEALINGSALVE_FUMAROLEBUFF_DONE
+MsgId: There goes my protection against the fire.
+MsgStr: 
+Thuật ngữ tham khảo: "Fire" => "Lửa"
+
+Item:
+Id: 721026
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_HERMITCRAB_SHELL_ARRIVE
+MsgId: I can't believe it worked.
+MsgStr: 
+
+Item:
+Id: 721027
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_HERMITCRAB_SHELL_BADTELEPORTPOINT
+MsgId: Surprise, surprise.
+MsgStr: 
+
+Item:
+Id: 721028
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_HIGHRESEARCH
+MsgId: My brain swells with power!
+MsgStr: 
+
+Item:
+Id: 721029
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_HOT
+MsgId: My heart can't stand the heat!
+MsgStr: 
+
+Item:
+Id: 721030
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_HOUNDS
+MsgId: The hounds are growing restless.
+MsgStr: 
+
+Item:
+Id: 721031
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_HUNGRY
+MsgId: I am empty inside.
+MsgStr: 
+
+Item:
+Id: 721032
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_HUNT_AVOID_FORK
+MsgId: I'll stick to hunting less dangerous game.
+MsgStr: 
+
+Item:
+Id: 721033
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_HUNT_BEAST_NEARBY
+MsgId: I smell dung and beast sweat.
+MsgStr: 
+
+Item:
+Id: 721034
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_HUNT_LOST_TRAIL
+MsgId: Drat! It got away.
+MsgStr: 
+
+Item:
+Id: 721035
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_HUNT_LOST_TRAIL_SPRING
+MsgId: I can't follow it in these conditions!
+MsgStr: 
+
+Item:
+Id: 721036
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_HUNT_START_FORK
+MsgId: Those vicious claw marks do not bode well...
+MsgStr: 
+
+Item:
+Id: 721037
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_HUNT_SUCCESSFUL_FORK
+MsgId: The creature is unaware it's being pursued. Now, to strike.
+MsgStr: 
+Thuật ngữ tham khảo: "The Creature" => "Sinh Vật Lạ"
+
+Item:
+Id: 721038
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_HUNT_WRONG_FORK
+MsgId: I fear I might have underestimated my prey...
+MsgStr: 
+
+Item:
+Id: 721039
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_INSUFFICIENTFERTILIZER
+MsgId: It perked up just a tiny bit.
+MsgStr: 
+
+Item:
+Id: 721040
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_INV_FULL
+MsgId: My pockets are full.
+MsgStr: 
+
+Item:
+Id: 721041
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_IS_FEASTING
+MsgId: At last, a decent meal.
+MsgStr: 
+
+Item:
+Id: 721042
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_KITCOON_FOUND_IN_THE_WILD
+MsgId: So you're the source of that pathetic mewling. I'll have to apologize to the strongman.
+MsgStr: 
+
+Item:
+Id: 721043
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_KITCOON_HIDANDSEEK_FOUND.1
+MsgId: A-ha! Not sneaky enough!
+MsgStr: 
+
+Item:
+Id: 721044
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_KITCOON_HIDANDSEEK_FOUND.2
+MsgId: Found you!
+MsgStr: 
+
+Item:
+Id: 721045
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_KITCOON_HIDANDSEEK_FOUND.3
+MsgId: You were not clever enough to best the great Maxwell!!
+MsgStr: 
+
+Item:
+Id: 721046
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_KITCOON_HIDANDSEEK_FOUND.4
+MsgId: Your attempt to escape me has been thwarted, child!
+MsgStr: 
+
+Item:
+Id: 721047
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_KITCOON_HIDANDSEEK_FOUND_LAST_ONE
+MsgId: A-ha! That was the last one! I win!!!
+MsgStr: 
+
+Item:
+Id: 721048
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_KITCOON_HIDANDSEEK_FOUND_LAST_ONE_TEAM
+MsgId: I had seen it already, but {name} got to it first, I suppose.
+MsgStr: 
+
+Item:
+Id: 721049
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_KITCOON_HIDANDSEEK_FOUND_ONE_MORE
+MsgId: Only one remains.
+MsgStr: 
+
+Item:
+Id: 721050
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_KITCOON_HIDANDSEEK_LOSEGAME
+MsgId: Blast it!
+MsgStr: 
+
+Item:
+Id: 721051
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_KITCOON_HIDANDSEEK_TIME_ALMOST_UP
+MsgId: Where are those blasted kittens!
+MsgStr: 
+
+Item:
+Id: 721052
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_KITCOON_HIDANDSEEK_TOOFAR
+MsgId: I doubt those tiny, pathetic legs would carry them this far.
+MsgStr: 
+
+Item:
+Id: 721053
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_KITCOON_HIDANDSEEK_TOOFAR_RETURN
+MsgId: This seems much more likely an area to find the kitcoons.
+MsgStr: 
+
+Item:
+Id: 721054
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_KITCOON_HIDEANDSEEK_JOIN
+MsgId: Of course you need my help.
+MsgStr: 
+
+Item:
+Id: 721055
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_KITCOON_HIDEANDSEEK_START
+MsgId: I suppose we shall begin this ridiculous game.
+MsgStr: 
+
+Item:
+Id: 721056
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_KLAUS_CALLFORHELP
+MsgId: The coward has summoned its minions.
+MsgStr: 
+
+Item:
+Id: 721057
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_KLAUS_ENRAGE
+MsgId: Time to beat a hasty retreat!
+MsgStr: 
+
+Item:
+Id: 721058
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_KLAUS_UNCHAINED
+MsgId: Its true power has been unlocked!
+MsgStr: 
+
+Item:
+Id: 721059
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_KNOCKEDOUT
+MsgId: Ugh. My head hurts.
+MsgStr: 
+
+Item:
+Id: 721060
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_LIGHTNING_DAMAGE_AVOIDED
+MsgId: Can't touch this!
+MsgStr: 
+
+Item:
+Id: 721061
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_LIGHTSOUT_SHADOWHAND
+MsgId: Hmm... could you be... trying to help?
+MsgStr: 
+
+Item:
+Id: 721062
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_LOWRESEARCH
+MsgId: That wasn't very informative.
+MsgStr: 
+
+Item:
+Id: 721063
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_LUNARGUARDIAN_INCOMING
+MsgId: Again? What now?
+MsgStr: 
+
+Item:
+Id: 721064
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_LUNARHAIL_BIRD_CORPSES
+MsgId: That's not a good sign.
+MsgStr: 
+Thuật ngữ tham khảo: "Sign" => "Bảng Hiệu"
+
+Item:
+Id: 721065
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_LUNARHAIL_BIRD_SOUNDS
+MsgId: What is that racket?
+MsgStr: 
+
+Item:
+Id: 721066
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_LUNAR_RIFT_MAX
+MsgId: Something has changed...
+MsgStr: 
+
+Item:
+Id: 721067
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_MAX_CLOCKWORKS
+MsgId: Too many of this piece on the board already, I suppose.
+MsgStr: 
+
+Item:
+Id: 721068
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_MEGA_FLARE_SEEN
+MsgId: That flare's going to send some poor fool into a world of trouble.
+MsgStr: 
+Thuật ngữ tham khảo: "Flare" => "Pháo Sáng"
+
+Item:
+Id: 721069
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_MITEGLAND_DEBUFF.1
+MsgId: Why did I eat that accursed thing?!
+MsgStr: 
+
+Item:
+Id: 721070
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_MITEGLAND_DEBUFF.2
+MsgId: When will this infernal burning cease?!
+MsgStr: 
+
+Item:
+Id: 721071
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_MITEGLAND_DEBUFF_DONE
+MsgId: That was a mistake I won't be repeating soon.
+MsgStr: 
+
+Item:
+Id: 721072
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_MONKEY_CURSE_1
+MsgId: I've just had the most unpleasant feeling...
+MsgStr: 
+
+Item:
+Id: 721073
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_MONKEY_CURSE_CHANGE
+MsgId: A monkey? Have I not suffered enough humiliation already?!
+MsgStr: 
+
+Item:
+Id: 721074
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_MONKEY_CURSE_CHANGEBACK
+MsgId: Nobody. Bring this up. Again.
+MsgStr: 
+
+Item:
+Id: 721075
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_MOONALTAR_MINE.GLASS_LOW
+MsgId: I must have your knowledge.
+MsgStr: 
+
+Item:
+Id: 721076
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_MOONALTAR_MINE.GLASS_MED
+MsgId: I hear you in there.
+MsgStr: 
+
+Item:
+Id: 721077
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_MOONALTAR_MINE.GLASS_REVEAL
+MsgId: A-ha!
+MsgStr: 
+
+Item:
+Id: 721078
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_MOONALTAR_MINE.IDOL_LOW
+MsgId: I must have your knowledge.
+MsgStr: 
+
+Item:
+Id: 721079
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_MOONALTAR_MINE.IDOL_MED
+MsgId: I hear you in there.
+MsgStr: 
+
+Item:
+Id: 721080
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_MOONALTAR_MINE.IDOL_REVEAL
+MsgId: A-ha!
+MsgStr: 
+
+Item:
+Id: 721081
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_MOONALTAR_MINE.SEED_LOW
+MsgId: I must have your knowledge.
+MsgStr: 
+
+Item:
+Id: 721082
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_MOONALTAR_MINE.SEED_MED
+MsgId: I hear you in there.
+MsgStr: 
+
+Item:
+Id: 721083
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_MOONALTAR_MINE.SEED_REVEAL
+MsgId: A-ha!
+MsgStr: 
+
+Item:
+Id: 721084
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_MOONPOTION_FAILED
+MsgId: How disappointing.
+MsgStr: 
+
+Item:
+Id: 721085
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_MOSQUITOS
+MsgId: What annoying little bugs.
+MsgStr: 
+
+Item:
+Id: 721086
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_MOUNT_LOWHEALTH
+MsgId: Say, pal, you don't look so good.
+MsgStr: 
+
+Item:
+Id: 721087
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_MUTATED_BUZZARD_ARRIVAL
+MsgId: I hate buzzards, but these are... wrong.
+MsgStr: 
+
+Item:
+Id: 721088
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_NODANGERGIFT
+MsgId: That's a terrible idea right now.
+MsgStr: 
+
+Item:
+Id: 721089
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_NODANGERSIESTA
+MsgId: They're hot on my heels!
+MsgStr: 
+
+Item:
+Id: 721090
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_NODANGERSLEEP
+MsgId: Not while there's danger afoot!
+MsgStr: 
+
+Item:
+Id: 721091
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_NODAYSLEEP
+MsgId: I can't sleep during daylight hours.
+MsgStr: 
+
+Item:
+Id: 721092
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_NODAYSLEEP_CAVE
+MsgId: Sleeping now would mess up my sleep schedule!
+MsgStr: 
+
+Item:
+Id: 721093
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_NOHUNGERSIESTA
+MsgId: Traditionally, a siesta comes after eating, not before.
+MsgStr: 
+
+Item:
+Id: 721094
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_NOHUNGERSLEEP
+MsgId: I'm too hungry. I can't sleep.
+MsgStr: 
+
+Item:
+Id: 721095
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_NOMOUNTEDGIFT
+MsgId: I'm not opening that on top of this thing.
+MsgStr: 
+
+Item:
+Id: 721096
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_NONIGHTSIESTA
+MsgId: It's sleep time, not siesta time.
+MsgStr: 
+
+Item:
+Id: 721097
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_NONIGHTSIESTA_CAVE
+MsgId: It's a bit creepy out for that.
+MsgStr: 
+
+Item:
+Id: 721098
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_NOPUMPKINCARVINGONFIRE
+MsgId: That's what I get for engaging in foolery.
+MsgStr: 
+
+Item:
+Id: 721099
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_NOSLEEPHASPERMANENTLIGHT
+MsgId: Oh for... would you turn that blasted light off?!
+MsgStr: 
+
+Item:
+Id: 721100
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_NOSLEEPONFIRE
+MsgId: That might not be the best idea.
+MsgStr: 
+
+Item:
+Id: 721101
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_NOWARDROBEONFIRE
+MsgId: You're kidding right?
+MsgStr: 
+
+Item:
+Id: 721102
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_NO_ABIGAIL_FLOWER
+MsgId: only_used_by_wendy
+MsgStr: 
+
+Item:
+Id: 721103
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_NO_TRAP
+MsgId: Odd. They forgot to set it.
+MsgStr: 
+
+Item:
+Id: 721104
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_OCEANFISHING_BADCAST
+MsgId: That was, of course, just a warm up...
+MsgStr: 
+
+Item:
+Id: 721105
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_OCEANFISHING_GOTAWAY
+MsgId: We will meet again, mark my words...
+MsgStr: 
+
+Item:
+Id: 721106
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_OCEANFISHING_IDLE_QUOTE.1
+MsgId: I must exercise patience.
+MsgStr: 
+
+Item:
+Id: 721107
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_OCEANFISHING_IDLE_QUOTE.2
+MsgId: I daresay, this is almost relaxing.
+MsgStr: 
+
+Item:
+Id: 721108
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_OCEANFISHING_IDLE_QUOTE.3
+MsgId: Why won't they take the bait? Perhaps I should offer secret knowledge...
+MsgStr: 
+
+Item:
+Id: 721109
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_OCEANFISHING_IDLE_QUOTE.4
+MsgId: I am beginning to tire of all this waiting.
+MsgStr: 
+
+Item:
+Id: 721110
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_OCEANFISHING_LINESNAP
+MsgId: Blast! That cad-fish got away with my tackle!
+MsgStr: 
+Thuật ngữ tham khảo: "Fish" => "Câu Cá"
+
+Item:
+Id: 721111
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_OCEANFISHING_LINETOOLOOSE
+MsgId: The line needs more tension.
+MsgStr: 
+
+Item:
+Id: 721112
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_OCEAN_SILHOUETTE_INCOMING
+MsgId: We're in for some trouble.
+MsgStr: 
+
+Item:
+Id: 721113
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_OFF_SCRIPT
+MsgId: She won't like that.
+MsgStr: 
+
+Item:
+Id: 721114
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_OTTERBOAT_DENBROKEN
+MsgId: Those accursed creatures! The den was all that held this platform together!
+MsgStr: 
+
+Item:
+Id: 721115
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_OTTERBOAT_OUTOFSHALLOWS
+MsgId: Ah. So it's not seaworthy after all.
+MsgStr: 
+
+Item:
+Id: 721116
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_PECKED
+MsgId: Have patience!
+MsgStr: 
+
+Item:
+Id: 721117
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_PETRIFED_TREES
+MsgId: Oh, this should be good.
+MsgStr: 
+
+Item:
+Id: 721118
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_PICK_DISEASE_WARNING
+MsgId: How putrid!
+MsgStr: 
+
+Item:
+Id: 721119
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_PIRATES_ARRIVE
+MsgId: I don't like the sound of that...
+MsgStr: 
+
+Item:
+Id: 721120
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_PLANT_RANDOMSEED
+MsgId: It had better grow into something worthwhile.
+MsgStr: 
+
+Item:
+Id: 721121
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_PLANT_RESEARCHED.1
+MsgId: This plant's secrets are revealing themselves to me.
+MsgStr: 
+Thuật ngữ tham khảo: "Plant" => "Thực vật"
+
+Item:
+Id: 721122
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_POCKETWATCH_PORTAL
+MsgId: Oh ha-ha, laugh it up. I wouldn't have landed on my rump if the witch knew how to navigate!
+MsgStr: 
+
+Item:
+Id: 721123
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_PREFALLINVOID
+MsgId: That's not good.
+MsgStr: 
+
+Item:
+Id: 721124
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_QUAKE
+MsgId: That rumbling can't be good.
+MsgStr: 
+
+Item:
+Id: 721125
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_RABBITKINGHORN_BADSPAWNPOINT
+MsgId: Typical rabbit. Never there when you need them.
+MsgStr: 
+Thuật ngữ tham khảo: "Rabbit" => "Thỏ"
+
+Item:
+Id: 721126
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_RABBITKING_AGGRESSIVE
+MsgId: A frenzy of activity underfoot.
+MsgStr: 
+
+Item:
+Id: 721127
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_RABBITKING_LUCKY
+MsgId: Simon, you rapscallion!
+MsgStr: 
+
+Item:
+Id: 721128
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_RABBITKING_LUCKYCAUGHT
+MsgId: I've got you now, Simon!
+MsgStr: 
+
+Item:
+Id: 721129
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_RABBITKING_PASSIVE
+MsgId: Some crawling creature beneath us, no doubt.
+MsgStr: 
+
+Item:
+Id: 721130
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_REPELLED
+MsgId: What trickery is this!
+MsgStr: 
+
+Item:
+Id: 721131
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_RESEARCH
+MsgId: Knowledge is power. And power is... well, power.
+MsgStr: 
+
+Item:
+Id: 721132
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_REVIVED_FROM_CORPSE
+MsgId: That was simply undignified.
+MsgStr: 
+
+Item:
+Id: 721133
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_REVIVED_OTHER_CORPSE
+MsgId: No need to thank me.
+MsgStr: 
+
+Item:
+Id: 721134
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_REVIVING_CORPSE
+MsgId: Allow me to assist.
+MsgStr: 
+
+Item:
+Id: 721135
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_ROYALTY.1
+MsgId: Someone thinks highly of themselves.
+MsgStr: 
+
+Item:
+Id: 721136
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_ROYALTY.2
+MsgId: Your \"Majesty\".
+MsgStr: 
+
+Item:
+Id: 721137
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_ROYALTY.3
+MsgId: Your \"Royal Highness\"
+MsgStr: 
+
+Item:
+Id: 721138
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_ROYALTY_JOKER.1
+MsgId: It's a perfect fit.
+MsgStr: 
+
+Item:
+Id: 721139
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_ROYALTY_JOKER.2
+MsgId: Your \"Majesty\".
+MsgStr: 
+
+Item:
+Id: 721140
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_ROYALTY_JOKER.3
+MsgId: Your \"Royal Highness\"
+MsgStr: 
+
+Item:
+Id: 721141
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_RUINS_RESET
+MsgId: The cycle begins again.
+MsgStr: 
+
+Item:
+Id: 721142
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_SACREDCHEST_NO
+MsgId: It's deemed me unworthy.
+MsgStr: 
+
+Item:
+Id: 721143
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_SACREDCHEST_YES
+MsgId: Was there ever a doubt?
+MsgStr: 
+
+Item:
+Id: 721144
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_SCRAPBOOK_FULL
+MsgId: I know all I need to already.
+MsgStr: 
+
+Item:
+Id: 721145
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_SECURITY_PULSE_FOLLOWING
+MsgId: Ugh, are you going to follow me everywhere?
+MsgStr: 
+
+Item:
+Id: 721146
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_SHADOWLEVEL_ITEM
+MsgId: \nMy shadow puppets should be able to draw from its power...
+MsgStr: 
+Thuật ngữ tham khảo: "Shadow" => "Bóng"
+
+Item:
+Id: 721147
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_SHADOWTHRALL_STEALTH
+MsgId: Who bit me? Show yourself, coward!
+MsgStr: 
+
+Item:
+Id: 721148
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_SHADOW_RIFT_MAX
+MsgId: Something's stirring...
+MsgStr: 
+
+Item:
+Id: 721149
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_SHELTER
+MsgId: Protect me, cursed tree!
+MsgStr: 
+
+Item:
+Id: 721150
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_SISTURN_FULL_BLOSSOM
+MsgId: only_used_by_wendy
+MsgStr: 
+
+Item:
+Id: 721151
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_SISTURN_FULL_EVIL
+MsgId: only_used_by_wendy
+MsgStr: 
+
+Item:
+Id: 721152
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_SNARED
+MsgId: How dare you!
+MsgStr: 
+
+Item:
+Id: 721153
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_SNARED_IVY
+MsgId: Wretched greenery! Release me at once!
+MsgStr: 
+
+Item:
+Id: 721154
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_SNOWBALL_NO_SNOW
+MsgId: There's no snow here.
+MsgStr: 
+
+Item:
+Id: 721155
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_SNOWBALL_TOO_BIG
+MsgId: Useless! It won't get any bigger.
+MsgStr: 
+
+Item:
+Id: 721156
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_SOAKED
+MsgId: Wetter than water itself.
+MsgStr: 
+
+Item:
+Id: 721157
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_SPOOKED
+MsgId: Disgusting!
+MsgStr: 
+
+Item:
+Id: 721158
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_TALK_TO_PLANTS.1
+MsgId: I feel ridiculous. Is this really supposed to help it grow?
+MsgStr: 
+
+Item:
+Id: 721159
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_TALK_TO_PLANTS.2
+MsgId: Grow faster, you blasted thing! There, did that help?
+MsgStr: 
+
+Item:
+Id: 721160
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_TALK_TO_PLANTS.3
+MsgId: You know, I ruled over this entire world once. Now I'm talking to a plant.
+MsgStr: 
+Thuật ngữ tham khảo: "Plant" => "Thực vật"
+
+Item:
+Id: 721161
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_TALK_TO_PLANTS.4
+MsgId: Say pal, do you like magic tricks? This is the one where I talk and you grow.
+MsgStr: 
+
+Item:
+Id: 721162
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_TALK_TO_PLANTS.5
+MsgId: Here I am, chatting it up with the vegetation.
+MsgStr: 
+
+Item:
+Id: 721163
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_THORNS
+MsgId: I scratched my arms up doing that.
+MsgStr: 
+
+Item:
+Id: 721164
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_THURIBLE_OUT
+MsgId: A shame.
+MsgStr: 
+
+Item:
+Id: 721165
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_TICOON_ABANDONED
+MsgId: Fine! Begone! The Great Maxwell doesn't need help for a simple child's game.
+MsgStr: 
+
+Item:
+Id: 721166
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_TICOON_DEAD
+MsgId: That foolish creature! This may prove to be a setback...
+MsgStr: 
+
+Item:
+Id: 721167
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_TICOON_GET_LEADER_ATTENTION
+MsgId: Can't you see I'm busy, rodent!? ...My apologies. Where were we?
+MsgStr: 
+
+Item:
+Id: 721168
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_TICOON_LOST_KITCOON
+MsgId: Drat, someone found this kitcoon before us.
+MsgStr: 
+Thuật ngữ tham khảo: "Kitcoon" => "Mèo Trúc Con"
+
+Item:
+Id: 721169
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_TICOON_NEAR_KITCOON
+MsgId: Ah, we must be near a kitcoon...
+MsgStr: 
+Thuật ngữ tham khảo: "Kitcoon" => "Mèo Trúc Con"
+
+Item:
+Id: 721170
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_TICOON_NOTHING_TO_TRACK
+MsgId: Nothing??? Useless animal!
+MsgStr: 
+
+Item:
+Id: 721171
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_TICOON_START_TRACKING
+MsgId: Yes, good... lead me to the kitcoons.
+MsgStr: 
+
+Item:
+Id: 721172
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_TICOON_WAITING_FOR_LEADER
+MsgId: Even a creature of your stature knows to wait for its superiors.
+MsgStr: 
+
+Item:
+Id: 721173
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_TOADESCAPED
+MsgId: It fled back into the earth.
+MsgStr: 
+
+Item:
+Id: 721174
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_TOADESCAPING
+MsgId: Now is the time to strike!
+MsgStr: 
+
+Item:
+Id: 721175
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_TOOL_SLIP
+MsgId: Drat.
+MsgStr: 
+
+Item:
+Id: 721176
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_TOOL_TOOWEAK
+MsgId: I'll need a more powerful tool.
+MsgStr: 
+
+Item:
+Id: 721177
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_TORCH_OUT
+MsgId: Curses. Another light down.
+MsgStr: 
+
+Item:
+Id: 721178
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_TOWNPORTALTELEPORT
+MsgId: It's about time.
+MsgStr: 
+
+Item:
+Id: 721179
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_TRAP_WENT_OFF
+MsgId: Ack!
+MsgStr: 
+
+Item:
+Id: 721180
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_UNIMPLEMENTED
+MsgId: Hmm, not quite done.
+MsgStr: 
+
+Item:
+Id: 721181
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_VAULT_SHADOW_ASSIST
+MsgId: They're here to help... I'm beginning to understand.
+MsgStr: 
+
+Item:
+Id: 721182
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_VAULT_TELEPORTER_DOES_NOTHING
+MsgId: It's always something with that moon magic.
+MsgStr: 
+
+Item:
+Id: 721183
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_WASHED_ASHORE
+MsgId: My suit is drenched in salt water.
+MsgStr: 
+Thuật ngữ tham khảo: "Salt" => "Muối"
+
+Item:
+Id: 721184
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_WEAK_RAT
+MsgId: The creature is past its prime.
+MsgStr: 
+Thuật ngữ tham khảo: "The Creature" => "Sinh Vật Lạ"
+
+Item:
+Id: 721185
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_WEAPON_TOOWEAK
+MsgId: Pathetic! I need something stronger!
+MsgStr: 
+
+Item:
+Id: 721186
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_WEIGHT
+MsgId: Weight: {weight}
+MsgStr: 
+
+Item:
+Id: 721187
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_WEIGHT_HEAVY
+MsgId: Weight: {weight}\nEr... I don't suppose anyone would help me carry this?
+MsgStr: 
+
+Item:
+Id: 721188
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_WENDY_BABYSITTER_SET
+MsgId: only_used_by_wendy
+MsgStr: 
+
+Item:
+Id: 721189
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_WENDY_BABYSITTER_STOP
+MsgId: only_used_by_wendy
+MsgStr: 
+
+Item:
+Id: 721190
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_WET
+MsgId: Water'll ruin a good suit, you know?
+MsgStr: 
+
+Item:
+Id: 721191
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_WETTER
+MsgId: I don't think I'll ever be dry again.
+MsgStr: 
+
+Item:
+Id: 721192
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_WINCH_CLAW_MISS
+MsgId: Foiled again!
+MsgStr: 
+
+Item:
+Id: 721193
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_WINCH_CLAW_NO_ITEM
+MsgId: I don't know what I expected.
+MsgStr: 
+
+Item:
+Id: 721194
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_WINTERS_FEAST_BUFF
+MsgId: That food seems to have had an odd affect on me...
+MsgStr: 
+
+Item:
+Id: 721195
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_WINTERS_FEAST_BUFF_OVER
+MsgId: Its power was short-lived.
+MsgStr: 
+
+Item:
+Id: 721196
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_WOLFGANG_BEGIN_COACHING
+MsgId: only_used_by_wolfgang
+MsgStr: 
+
+Item:
+Id: 721197
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_WOLFGANG_END_COACHING
+MsgId: only_used_by_wolfgang
+MsgStr: 
+
+Item:
+Id: 721198
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_WOLFGANG_MIGHTY_COACHING
+MsgId: only_used_by_wolfgang
+MsgStr: 
+
+Item:
+Id: 721199
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_WOLFGANG_NOTEAM.1
+MsgId: only_used_by_wolfgang
+MsgStr: 
+
+Item:
+Id: 721200
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_WOLFGANG_NOTEAM.2
+MsgId: only_used_by_wolfgang
+MsgStr: 
+
+Item:
+Id: 721201
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_WOLFGANG_NOTEAM.3
+MsgId: only_used_by_wolfgang
+MsgStr: 
+
+Item:
+Id: 721202
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_WOLFGANG_WIMPY_COACHING
+MsgId: only_used_by_wolfgang
+MsgStr: 
+
+Item:
+Id: 721203
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_WORMHOLE
+MsgId: Yech. It's horrible in there.
+MsgStr: 
+
+Item:
+Id: 721204
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_WORMS
+MsgId: Oh dear. I know what's making that sound.
+MsgStr: 
+
+Item:
+Id: 721205
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_WORMS_BOSS
+MsgId: Curses. I know that sound.
+MsgStr: 
+
+Item:
+Id: 721206
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_WORTOX_REVIVER_FAILTELEPORT
+MsgId: Surprise, surprise.
+MsgStr: 
+
+Item:
+Id: 721207
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_WX_SCANNER_NEW_FOUND
+MsgId: only_used_by_wx78
+MsgStr: 
+
+Item:
+Id: 721208
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_YOTB_LEARN_NEW_PATTERN
+MsgId: At last, something new.
+MsgStr: 
+
+Item:
+Id: 721209
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_YOTD_NOBOATS
+MsgId: Oh, I'm not close enough to the starting point? Well maybe it should come to me!
+MsgStr: 
+Thuật ngữ tham khảo: "Starting Point" => "Điểm Xuất Phát"
+
+Item:
+Id: 721210
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_YOTD_NOCHECKPOINTS
+MsgId: I think you're forgetting something, pal.
+MsgStr: 
+
+Item:
+Id: 721211
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_YOTD_NOTENOUGHBOATS
+MsgId: Perhaps some space should be cleared around the Start Tower.
+MsgStr: 
+Thuật ngữ tham khảo: "Start Tower" => "Tháp xuất phát"
+
+Item:
+Id: 721212
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_YOTH_ONCOOLDOWN
+MsgId: What could possibly be so important that they would not come when I call?
+MsgStr: 
+
+Item:
+Id: 721213
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.ANOUNCE_MUTATED_BIRD_ATTACK
+MsgId: Blasted birds!
+MsgStr: 
+
+Item:
+Id: 721214
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.BATTLECRY.DEER
+MsgId: You do not belong in MY world!
+MsgStr: 
+
+Item:
+Id: 721215
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.BATTLECRY.GENERIC
+MsgId: To arms!
+MsgStr: 
+
+Item:
+Id: 721216
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.BATTLECRY.PIG
+MsgId: Brains over brawn!
+MsgStr: 
+
+Item:
+Id: 721217
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.BATTLECRY.PREY
+MsgId: Sacrifice yourself for my comfort!
+MsgStr: 
+
+Item:
+Id: 721218
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.BATTLECRY.SPIDER
+MsgId: I'll not be made a fool of!
+MsgStr: 
+
+Item:
+Id: 721219
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.BATTLECRY.SPIDER_WARRIOR
+MsgId: You've forced my hand!
+MsgStr: 
+
+Item:
+Id: 721220
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.COMBAT_QUIT.GENERIC
+MsgId: And stay away!
+MsgStr: 
+
+Item:
+Id: 721221
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.COMBAT_QUIT.PIG
+MsgId: Next time, pig!
+MsgStr: 
+
+Item:
+Id: 721222
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.COMBAT_QUIT.PREY
+MsgId: You're not worth my time!
+MsgStr: 
+
+Item:
+Id: 721223
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.COMBAT_QUIT.SPIDER
+MsgId: I won't be made a fool of... next time!
+MsgStr: 
+
+Item:
+Id: 721224
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.COMBAT_QUIT.SPIDER_WARRIOR
+MsgId: Next time the gloves come off!
+MsgStr: 
+
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "[\n  {\"id\":720925,\"suggestedTranslation\":\"Ta cảm thấy sự tập trung được nâng cao!\",\"rating\":0.0},\n  {\"id\":720926,\"suggestedTranslation\":\"oOooooOO!!\",\"rating\":0.0},\n  {\"id\":720927,\"suggestedTranslation\":\"Giết ta cũng không lấy lại được mật ong của ngươi đâu!\",\"rating\":0.0},\n  {\"id\":720928,\"suggestedTranslation\":\"Thuyền bị rò rỉ rồi!\",\"rating\":0.0},\n  {\"id\":720929,\"suggestedTranslation\":\"Ôi trời.\",\"rating\":0.0},\n  {\"id\":720930,\"suggestedTranslation\":\"Chúng ta sẽ biết nó có hiệu quả hay không khi đêm xuống.\",\"rating\":0.0},\n  {\"id\":720931,\"suggestedTranslation\":\"Ái! Đồ... vụng về!\",\"rating\":0.0},\n  {\"id\":720932,\"suggestedTranslation\":\"Từ trước tới nay ta chưa từng sợ mấy cái cây đó.\",\"rating\":0.0},\n  {\"id\":720933,\"suggestedTranslation\":\"Cháy quá!\",\"rating\":0.0},\n  {\"id\":720934,\"suggestedTranslation\":\"Và kìa trợ sự... à nhầm, \\\"xinh đẹp\\\" của ta đến rồi.\",\"rating\":0.0},\n  {\"id\":720935,\"suggestedTranslation\":\"\\nTa nghĩ mình có thể sửa được cái này!\",\"rating\":0.0},\n  {\"id\":720936,\"suggestedTranslation\":\"Ta không có đủ mọi thứ mình cần.\",\"rating\":0.0},\n  {\"id\":720937,\"suggestedTranslation\":\"Ta không làm cái đó ở đây được đâu, bạn tôi ơi.\",\"rating\":0.0},\n  {\"id\":720938,\"suggestedTranslation\":\"Đừng nhìn ta, đời này ta chưa từng làm cái đó bao giờ.\",\"rating\":0.0},\n  {\"id\":720939,\"suggestedTranslation\":\"Cái này có vẻ hơi xa khu lễ hội nhỉ?\",\"rating\":0.0},\n  {\"id\":720940,\"suggestedTranslation\":\"Lạ thật... đây là phép thuật gì thế này?\",\"rating\":0.0},\n  {\"id\":720941,\"suggestedTranslation\":\"Dậy đi, lũ sâu mọt vô dụng này!\",\"rating\":0.0},\n  {\"id\":720942,\"suggestedTranslation\":\"Sao thế? Đi đi chứ!\",\"rating\":0.0},\n  {\"id\":720943,\"suggestedTranslation\":\"Nhanh lên! Ta bảo nhanh lên cơ mà!\",\"rating\":0.0},\n  {\"id\":720944,\"suggestedTranslation\":\"Đồ ngốc! Ngươi đi ngược đường rồi kìa!\",\"rating\":0.0},\n  {\"id\":720945,\"suggestedTranslation\":\"Không! Lối kia cơ mà!\",\"rating\":0.0},\n  {\"id\":720946,\"suggestedTranslation\":\"Bắt đầu!\",\"rating\":0.0},\n  {\"id\":720947,\"suggestedTranslation\":\"Trần nhà sắp sập rồi!\",\"rating\":0.0},\n  {\"id\":720948,\"suggestedTranslation\":\"Ổn cả thôi.\",\"rating\":0.0},\n  {\"id\":720949,\"suggestedTranslation\":\"Ta đoán tốt nhất là nên giữ thể diện...\",\"rating\":0.0},\n  {\"id\":720950,\"suggestedTranslation\":\"only_used_by_winona\",\"rating\":0.0},\n  {\"id\":720951,\"suggestedTranslation\":\"Ái! Nhẹ tay thôi chứ, Charlie!\",\"rating\":0.0},\n  {\"id\":720952,\"suggestedTranslation\":\"only_used_by_wolfgang\",\"rating\":0.0},\n  {\"id\":720953,\"suggestedTranslation\":\"only_used_by_wolfgang\",\"rating\":0.0},\n  {\"id\":720954,\"suggestedTranslation\":\"only_used_by_wolfgang\",\"rating\":0.0},\n  {\"id\":720955,\"suggestedTranslation\":\"only_used_by_wolfgang\",\"rating\":0.0},\n  {\"id\":720956,\"suggestedTranslation\":\"only_used_by_wolfgang\",\"rating\":0.0},\n  {\"id\":720957,\"suggestedTranslation\":\"only_used_by_wolfgang\",\"rating\":0.0},\n  {\"id\":720958,\"suggestedTranslation\":\"only_used_by_wolfgang\",\"rating\":0.0},\n  {\"id\":720959,\"suggestedTranslation\":\"only_used_by_wolfgang\",\"rating\":0.0},\n  {\"id\":720960,\"suggestedTranslation\":\"only_used_by_wolfgang\",\"rating\":0.0},\n  {\"id\":720961,\"suggestedTranslation\":\"Trái tim ta đang nguội lạnh dần.\",\"rating\":0.0},\n  {\"id\":720962,\"suggestedTranslation\":\"La bàn đã vỡ thành từng mảnh rồi.\",\"rating\":0.0},\n  {\"id\":720963,\"suggestedTranslation\":\"Giấc ngủ đó có phần thư thái hơn bình thường một chút.\",\"rating\":0.0},\n  {\"id\":720964,\"suggestedTranslation\":\"Hừm... ta không làm được việc đó.\",\"rating\":0.0},\n  {\"id\":720965,\"suggestedTranslation\":\"Ẩm ướt thì chẳng lịch thiệp chút nào.\",\"rating\":0.0},\n  {\"id\":720966,\"suggestedTranslation\":\"Ta nghe thấy tiếng một kẻ đang đến gần.\",\"rating\":0.0},\n  {\"id\":720967,\"suggestedTranslation\":\"Này bạn ơi, trông ta có vẻ không ổn cho lắm...\",\"rating\":0.0},\n  {\"id\":720968,\"suggestedTranslation\":\"Sức mạnh của ta đã rời đi rồi.\",\"rating\":0.0},\n  {\"id\":720969,\"suggestedTranslation\":\"Tiếc thật. Ta bắt đầu thấy thích cảm giác đó rồi cơ mà.\",\"rating\":0.0},\n  {\"id\":720970,\"suggestedTranslation\":\"Ta đang phải đối mặt với thời tiết khắc nghiệt rồi!\",\"rating\":0.0},\n  {\"id\":720971,\"suggestedTranslation\":\"Ta đã trở nên dễ bị tổn thương rồi!\",\"rating\":0.0},\n  {\"id\":720972,\"suggestedTranslation\":\"Ta đang buồn ngủ dần đây.\",\"rating\":0.0},\n  {\"id\":720973,\"suggestedTranslation\":\"Sự nhiệt huyết của ta với việc này đã cạn kiệt rồi.\",\"rating\":0.0},\n  {\"id\":720974,\"suggestedTranslation\":\"Thế là xong việc đó.\",\"rating\":0.0},\n  {\"id\":720975,\"suggestedTranslation\":\"Trời sắp tối rồi. Charlie chuẩn bị thức dậy đấy.\",\"rating\":0.0},\n  {\"id\":720976,\"suggestedTranslation\":\"(Ực!)\",\"rating\":0.0},\n  {\"id\":720977,\"suggestedTranslation\":\"Ta không đời nào cho thứ đó bén mảng tới miệng mình đâu.\",\"rating\":0.0},\n  {\"id\":720978,\"suggestedTranslation\":\"Ái! Đau miệng quá!\",\"rating\":0.0},\n  {\"id\":720979,\"suggestedTranslation\":\"Thứ đó thối rữa thật rồi.\",\"rating\":0.0},\n  {\"id\":720980,\"suggestedTranslation\":\"Thứ đó đã quá hạn sử dụng rồi.\",\"rating\":0.0},\n  {\"id\":720981,\"suggestedTranslation\":\"Một người văn minh không bao giờ ăn những thứ như thế.\",\"rating\":0.0},\n  {\"id\":720982,\"suggestedTranslation\":\"Ta nghĩ chia sẻ món này với những người khác mới là điều phải phép.\",\"rating\":0.0},\n  {\"id\":720983,\"suggestedTranslation\":\"Đúng chỗ ngứa rồi đấy.\",\"rating\":0.0},\n  {\"id\":720984,\"suggestedTranslation\":\"Ta thà ngủ giấc ngàn thu còn hơn.\",\"rating\":0.0},\n  {\"id\":720985,\"suggestedTranslation\":\"Hãy tôn trọng cơ bắp của ta đi!\",\"rating\":0.0},\n  {\"id\":720986,\"suggestedTranslation\":\"Đó là một ngụm rượu quá nặng đô.\",\"rating\":0.0},\n  {\"id\":720987,\"suggestedTranslation\":\"Bị đày ải... đến mức này...\",\"rating\":0.0},\n  {\"id\":720988,\"suggestedTranslation\":\"Hộc... hộc...\",\"rating\":0.0},\n  {\"id\":720989,\"suggestedTranslation\":\"Đây là... công việc của... bọn bần nông...\",\"rating\":0.0},\n  {\"id\":720990,\"suggestedTranslation\":\"Ôi... cái lưng của ta...\",\"rating\":0.0},\n  {\"id\":720991,\"suggestedTranslation\":\"Ta vốn... không được sinh ra để làm việc này...\",\"rating\":0.0},\n  {\"id\":720992,\"suggestedTranslation\":\"Tất cả xương cốt của ta... đang kêu răng rắc!\",\"rating\":0.0},\n  {\"id\":720993,\"suggestedTranslation\":\"Ta... từng là một vị vua đấy, biết không hả..!\",\"rating\":0.0},\n  {\"id\":720994,\"suggestedTranslation\":\"Phù... hộc...\",\"rating\":0.0},\n  {\"id\":720995,\"suggestedTranslation\":\"Việc này... tốt nhất là đừng làm hỏng... bộ vest của ta.\",\"rating\":0.0},\n  {\"id\":720996,\"suggestedTranslation\":\"only_used_by_winona\",\"rating\":0.0},\n  {\"id\":720997,\"suggestedTranslation\":\"only_used_by_winona\",\"rating\":0.0},\n  {\"id\":720998,\"suggestedTranslation\":\"only_used_by_winona\",\"rating\":0.0},\n  {\"id\":720999,\"suggestedTranslation\":\"Mùi đó... vừa hoài niệm lại vừa đáng sợ!\",\"rating\":0.0},\n  {\"id\":721000,\"suggestedTranslation\":\"Tạ ơn ánh sáng.\",\"rating\":0.0},\n  {\"id\":721001,\"suggestedTranslation\":\"Gì thế này? Những con rối bóng của ta cảm thấy mạnh hơn một chút rồi...\",\"rating\":0.0},\n  {\"id\":721002,\"suggestedTranslation\":\"Ta có thể cảm thấy sức mạnh của những con rối bóng đang lớn dần lên.\",\"rating\":0.0},\n  {\"id\":721003,\"suggestedTranslation\":\"Đi đi, những con rối bóng của ta! Với sức mạnh này, không gì có thể cản đường chúng ta nữa.\",\"rating\":0.0},\n  {\"id\":721004,\"suggestedTranslation\":\"Những con rối bóng ta triệu hồi sẽ là bất khả chiến bại!\",\"rating\":0.0},\n  {\"id\":721005,\"suggestedTranslation\":\"Ái! Thật là kinh hoàng!\",\"rating\":0.0},\n  {\"id\":721006,\"suggestedTranslation\":\"Ồ, quả là một thứ kinh hoàng tuyệt mỹ.\",\"rating\":0.0},\n  {\"id\":721007,\"suggestedTranslation\":\"Nó sẽ quay lại thôi.\",\"rating\":0.0},\n  {\"id\":721008,\"suggestedTranslation\":\"Ta đã chờ ngày ngươi quay lại lâu lắm rồi. Kết thúc chuyện này thôi.\",\"rating\":0.0},\n  {\"id\":721009,\"suggestedTranslation\":\"Hết chỗ nghỉ ngơi rồi kìa.\",\"rating\":0.0},\n  {\"id\":721010,\"suggestedTranslation\":\"Ta đang biết nhiều hơn mức cần thiết về cái thứ này rồi đấy.\",\"rating\":0.0},\n  {\"id\":721011,\"suggestedTranslation\":\"Hừ, đám tầm ma quái gở đó!\",\"rating\":0.0},\n  {\"id\":721012,\"suggestedTranslation\":\"Độc của cây tầm ma đang thiêu đốt huyết quản của ta!\",\"rating\":0.0},\n  {\"id\":721013,\"suggestedTranslation\":\"Mọi chuyện tồi tệ nhất đã qua rồi.\",\"rating\":0.0},\n  {\"id\":721014,\"suggestedTranslation\":\"Ta có bắt buộc phải chạy đến mỗi lần nhìn thấy một quả pháo sáng không nhỉ?\",\"rating\":0.0},\n  {\"id\":721015,\"suggestedTranslation\":\"Có những thứ kinh hoàng không thể tả xiết ở bên dưới.\",\"rating\":0.0},\n  {\"id\":721016,\"suggestedTranslation\":\"A!\",\"rating\":0.0},\n  {\"id\":721017,\"suggestedTranslation\":\"Ta không làm nổi nữa!\",\"rating\":0.0},\n  {\"id\":721018,\"suggestedTranslation\":\"only_used_by_warly\",\"rating\":0.0},\n  {\"id\":721019,\"suggestedTranslation\":\"Cuối cùng cũng được tự do!\",\"rating\":0.0},\n  {\"id\":721020,\"suggestedTranslation\":\"only_used_by_wurt\",\"rating\":0.0},\n  {\"id\":721021,\"suggestedTranslation\":\"Chúng đang thì thầm xuyên qua tận sâu thẳm tâm trí ta...!\",\"rating\":0.0},\n  {\"id\":721022,\"suggestedTranslation\":\"only_used_by_wendy\",\"rating\":0.0},\n  {\"id\":721023,\"suggestedTranslation\":\"Ứ hự! Đau quá!\",\"rating\":0.0},\n  {\"id\":721024,\"suggestedTranslation\":\"Tốt nhất là ta đừng có đi dạo dưới mưa axit vào lúc này.\",\"rating\":0.0},\n  {\"id\":721025,\"suggestedTranslation\":\"Hết lớp bảo vệ khỏi lửa rồi.\",\"rating\":0.0},\n  {\"id\":721026,\"suggestedTranslation\":\"Ta không thể tin là nó thành công đấy.\",\"rating\":0.0},\n  {\"id\":721027,\"suggestedTranslation\":\"Đúng là bất ngờ chưa kìa.\",\"rating\":0.0},\n  {\"id\":721028,\"suggestedTranslation\":\"Bộ não ta đang tràn ngập sức mạnh!\",\"rating\":0.0},\n  {\"id\":721029,\"suggestedTranslation\":\"Trái tim ta không chịu nổi cái nóng này đâu!\",\"rating\":0.0},\n  {\"id\":721030,\"suggestedTranslation\":\"Đám chó săn đang bắt đầu bồn chồn rồi đấy.\",\"rating\":0.0},\n  {\"id\":721031,\"suggestedTranslation\":\"Bên trong ta trống rỗng.\",\"rating\":0.0},\n  {\"id\":721032,\"suggestedTranslation\":\"Ta sẽ đi săn mấy con mồi ít nguy hiểm hơn vậy.\",\"rating\":0.0},\n  {\"id\":721033,\"suggestedTranslation\":\"Ta ngửi thấy mùi phân và mồ hôi thú vật.\",\"rating\":0.0},\n  {\"id\":721034,\"suggestedTranslation\":\"Xém chút nữa! Nó chạy mất tiêu rồi.\",\"rating\":0.0},\n  {\"id\":721035,\"suggestedTranslation\":\"Ta không thể lần theo dấu vết trong điều kiện này được!\",\"rating\":0.0},\n  {\"id\":721036,\"suggestedTranslation\":\"Những vết cào độc ác đó không mang lại điềm lành đâu...\",\"rating\":0.0},\n  {\"id\":721037,\"suggestedTranslation\":\"Sinh Vật Lạ vẫn chưa hay biết mình đang bị truy đuổi. Giờ thì ra tay thôi.\",\"rating\":0.0},\n  {\"id\":721038,\"suggestedTranslation\":\"Ta e rằng mình đã đánh giá thấp con mồi rồi...\",\"rating\":0.0},\n  {\"id\":721039,\"suggestedTranslation\":\"Nó tỉnh táo lại được chút xíu thôi.\",\"rating\":0.0},\n  {\"id\":721040,\"suggestedTranslation\":\"Túi của ta đầy kín rồi.\",\"rating\":0.0},\n  {\"id\":721041,\"suggestedTranslation\":\"Cuối cùng cũng có một bữa ăn ra hồn.\",\"rating\":0.0},\n  {\"id\":721042,\"suggestedTranslation\":\"Thì ra ngươi là nguồn gốc của tiếng kêu thảm hại đó. Chắc ta phải xin lỗi gã đô con kia một tiếng thôi.\",\"rating\":0.0},\n  {\"id\":721043,\"suggestedTranslation\":\"A-ha! Trốn chưa đủ kỹ đâu nhé!\",\"rating\":0.0},\n  {\"id\":721044,\"suggestedTranslation\":\"Tìm thấy ngươi rồi!\",\"rating\":0.0},\n  {\"id\":721045,\"suggestedTranslation\":\"Ngươi không đủ khôn ngoan để qua mặt Đại Maxwell này đâu!!\",\"rating\":0.0},\n  {\"id\":721046,\"suggestedTranslation\":\"Mưu đồ trốn tránh của ngươi đã bị phá sản rồi nhóc con ạ!\",\"rating\":0.0},\n  {\"id\":721047,\"suggestedTranslation\":\"A-ha! Đó là con cuối cùng! Ta thắng rồi!!!\",\"rating\":0.0},\n  {\"id\":721048,\"suggestedTranslation\":\"Ta thấy nó từ trước rồi, nhưng {name} nhanh tay hơn thì phải.\",\"rating\":0.0},\n  {\"id\":721049,\"suggestedTranslation\":\"Chỉ còn lại một con nữa thôi.\",\"rating\":0.0},\n  {\"id\":721050,\"suggestedTranslation\":\"Chết tiệt!\",\"rating\":0.0},\n  {\"id\":721051,\"suggestedTranslation\":\"Mấy con mèo chết tiệt đó trốn ở đâu rồi nhỉ!\",\"rating\":0.0},\n  {\"id\":721052,\"suggestedTranslation\":\"Ta nghi ngờ cái đôi chân ngắn ngủn thảm hại đó có thể đưa chúng đi xa đến thế này.\",\"rating\":0.0},\n  {\"id\":721053,\"suggestedTranslation\":\"Khu vực này có vẻ hợp để tìm mấy con mèo trúc hơn đấy.\",\"rating\":0.0},\n  {\"id\":721054,\"suggestedTranslation\":\"Dĩ nhiên là ngươi cần sự giúp đỡ của ta rồi.\",\"rating\":0.0},\n  {\"id\":721055,\"suggestedTranslation\":\"Ta đoán chúng ta phải bắt đầu trò chơi nhảm nhí này thôi.\",\"rating\":0.0},\n  {\"id\":721056,\"suggestedTranslation\":\"Tên hèn nhát đó đã gọi đàn em ra cứu viện rồi.\",\"rating\":0.0},\n  {\"id\":721057,\"suggestedTranslation\":\"Đến lúc chuồn lẹ thôi!\",\"rating\":0.0},\n  {\"id\":721058,\"suggestedTranslation\":\"Sức mạnh thực sự của nó đã được giải phóng!\",\"rating\":0.0},\n  {\"id\":721059,\"suggestedTranslation\":\"Hừ. Đầu ta đau quá.\",\"rating\":0.0},\n  {\"id\":721060,\"suggestedTranslation\":\"Đừng hòng chạm vào ta!\",\"rating\":0.0},\n  {\"id\":721061,\"suggestedTranslation\":\"Hừm... ngươi đang... cố giúp ta à?\",\"rating\":0.0},\n  {\"id\":721062,\"suggestedTranslation\":\"Cái đó chẳng cung cấp thêm thông tin gì mấy.\",\"rating\":0.0},\n  {\"id\":721063,\"suggestedTranslation\":\"Lại nữa á? Gì nữa đây?\",\"rating\":0.0},\n  {\"id\":721064,\"suggestedTranslation\":\"Đó không phải là bảng hiệu tốt đâu.\",\"rating\":0.0},\n  {\"id\":721065,\"suggestedTranslation\":\"Cái tiếng ồn ào gì thế này?\",\"rating\":0.0},\n  {\"id\":721066,\"suggestedTranslation\":\"Có gì đó đã thay đổi...\",\"rating\":0.0},\n  {\"id\":721067,\"suggestedTranslation\":\"Ta đoán trên bàn cờ có quá nhiều quân cờ loại này rồi.\",\"rating\":0.0},\n  {\"id\":721068,\"suggestedTranslation\":\"Cái pháo sáng đó sẽ đẩy một kẻ khốn khổ nào đó vào rắc rối to đấy.\",\"rating\":0.0},\n  {\"id\":721069,\"suggestedTranslation\":\"Tại sao ta lại ăn cái thứ chết tiệt đó cơ chứ?!\",\"rating\":0.0},\n  {\"id\":721070,\"suggestedTranslation\":\"Đến bao giờ cái cảm giác thiêu đốt quái quỷ này mới dừng lại đây?!\",\"rating\":0.0},\n  {\"id\":721071,\"suggestedTranslation\":\"Đó là một sai lầm mà ta sẽ không lặp lại lần nữa đâu.\",\"rating\":0.0},\n  {\"id\":721072,\"suggestedTranslation\":\"Ta vừa có một cảm giác cực kỳ khó chịu...\",\"rating\":0.0},\n  {\"id\":721073,\"suggestedTranslation\":\"Biến thành khỉ ư? Ta còn chưa bị sỉ nhục đủ hay sao hả?!\",\"rating\":0.0},\n  {\"id\":721074,\"suggestedTranslation\":\"Không. Ai. Nhắc lại. Chuyện này. Nữa.\",\"rating\":0.0},\n  {\"id\":721075,\"suggestedTranslation\":\"Ta phải lấy cho bằng được tri thức của ngươi.\",\"rating\":0.0},\n  {\"id\":721076,\"suggestedTranslation\":\"Ta nghe thấy tiếng ngươi trong đó đấy.\",\"rating\":0.0},\n  {\"id\":721077,\"suggestedTranslation\":\"A-ha!\",\"rating\":0.0},\n  {\"id\":721078,\"suggestedTranslation\":\"Ta phải lấy cho bằng được tri thức của ngươi.\",\"rating\":0.0},\n  {\"id\":721079,\"suggestedTranslation\":\"Ta nghe thấy tiếng ngươi trong đó đấy.\",\"rating\":0.0},\n  {\"id\":721080,\"suggestedTranslation\":\"A-ha!\",\"rating\":0.0},\n  {\"id\":721081,\"suggestedTranslation\":\"Ta phải lấy cho bằng được tri thức của ngươi.\",\"rating\":0.0},\n  {\"id\":721082,\"suggestedTranslation\":\"Ta nghe thấy tiếng ngươi trong đó đấy.\",\"rating\":0.0},\n  {\"id\":721083,\"suggestedTranslation\":\"A-ha!\",\"rating\":0.0},\n  {\"id\":721084,\"suggestedTranslation\":\"Thật là thất vọng quá đi.\",\"rating\":0.0},\n  {\"id\":721085,\"suggestedTranslation\":\"Đám côn trùng phiền phức thật đấy.\",\"rating\":0.0},\n  {\"id\":721086,\"suggestedTranslation\":\"Này bạn ơi, trông bạn không ổn chút nào đâu.\",\"rating\":0.0},\n  {\"id\":721087,\"suggestedTranslation\":\"Ta ghét đám kên kên, nhưng bọn này thì... sai trái quá.\",\"rating\":0.0},\n  {\"id\":721088,\"suggestedTranslation\":\"Làm thế lúc này là một ý kiến tồi tệ đấy.\",\"rating\":0.0},\n  {\"id\":721089,\"suggestedTranslation\":\"Chúng đang bám sát gót ta kìa!\",\"rating\":0.0},\n  {\"id\":721090,\"suggestedTranslation\":\"Không thể ngủ khi nguy hiểm đang rình rập được!\",\"rating\":0.0},\n  {\"id\":721091,\"suggestedTranslation\":\"Ta không thể ngủ vào ban ngày được.\",\"rating\":0.0},\n  {\"id\":721092,\"suggestedTranslation\":\"Ngủ bây giờ sẽ làm đảo lộn giờ giấc sinh hoạt của ta mất!\",\"rating\":0.0},\n  {\"id\":721093,\"suggestedTranslation\":\"Thông thường thì phải ăn xong mới nghỉ trưa, chứ ai lại nghỉ trước khi ăn bao giờ.\",\"rating\":0.0},\n  {\"id\":721094,\"suggestedTranslation\":\"Ta đói quá rồi. Không ngủ được đâu.\",\"rating\":0.0},\n  {\"id\":721095,\"suggestedTranslation\":\"Ta không mở món quà đó khi đang cưỡi thứ này đâu.\",\"rating\":0.0},\n  {\"id\":721096,\"suggestedTranslation\":\"Bây giờ là giờ đi ngủ, chứ không phải giờ nghỉ trưa.\",\"rating\":0.0},\n  {\"id\":721097,\"suggestedTranslation\":\"Trời bên ngoài hơi rợn tóc gáy để làm việc đó đấy.\",\"rating\":0.0},\n  {\"id\":721098,\"suggestedTranslation\":\"Đó là cái giá phải trả cho việc đùa dai đấy.\",\"rating\":0.0},\n  {\"id\":721099,\"suggestedTranslation\":\"Lạy Chúa... ngài có thể tắt cái thứ ánh sáng chết tiệt đó đi được không?!\",\"rating\":0.0},\n  {\"id\":721100,\"suggestedTranslation\":\"Đó chắc không phải là ý kiến hay ho gì đâu.\",\"rating\":0.0},\n  {\"id\":721101,\"suggestedTranslation\":\"Ngươi đang đùa chắc?\",\"rating\":0.0},\n  {\"id\":721102,\"suggestedTranslation\":\"only_used_by_wendy\",\"rating\":0.0},\n  {\"id\":721103,\"suggestedTranslation\":\"Lạ thật. Chúng quên đặt bẫy cơ à.\",\"rating\":0.0},\n  {\"id\":721104,\"suggestedTranslation\":\"Dĩ nhiên là nãy giờ chỉ là khởi động thôi mà...\",\"rating\":0.0},\n  {\"id\":721105,\"suggestedTranslation\":\"Chúng ta sẽ gặp lại nhau, cứ nhớ lấy lời ta...\",\"rating\":0.0},\n  {\"id\":721106,\"suggestedTranslation\":\"Ta phải kiên nhẫn mới được.\",\"rating\":0.0},\n  {\"id\":721107,\"suggestedTranslation\":\"Phải công nhận là việc này gần như thư giãn phết.\",\"rating\":0.0},\n  {\"id\":721108,\"suggestedTranslation\":\"Sao chúng không cắn câu nhỉ? Hay là ta nên tung ra bí kíp gia truyền đây...\",\"rating\":0.0},\n  {\"id\":721109,\"suggestedTranslation\":\"Ta bắt đầu thấy chán ngấy cái cảnh chờ đợi này rồi đấy.\",\"rating\":0.0},\n  {\"id\":721110,\"suggestedTranslation\":\"Chết tiệt! Con cá khốn kiếp đó đã ngoạm mất cả cần câu của ta rồi!\",\"rating\":0.0},\n  {\"id\":721111,\"suggestedTranslation\":\"Cần câu cần phải căng hơn nữa.\",\"rating\":0.0},\n  {\"id\":721112,\"suggestedTranslation\":\"Chúng ta sắp gặp rắc rối to rồi đấy.\",\"rating\":0.0},\n  {\"id\":721113,\"suggestedTranslation\":\"Cô ta sẽ không thích điều đó đâu.\",\"rating\":0.0},\n  {\"id\":721114,\"suggestedTranslation\":\"Lũ sinh vật chết tiệt đó! Cái hang chính là thứ duy nhất giữ cho bệ nổi này kết dính với nhau đấy!\",\"rating\":0.0},\n  {\"id\":721115,\"suggestedTranslation\":\"À. Hóa ra nó không đủ tiêu chuẩn đi biển rốt cuộc.\",\"rating\":0.0},\n  {\"id\":721116,\"suggestedTranslation\":\"Kiên nhẫn nào!\",\"rating\":0.0},\n  {\"id\":721117,\"suggestedTranslation\":\"Ồ, vụ này hay đây.\",\"rating\":0.0},\n  {\"id\":721118,\"suggestedTranslation\":\"Gớm ghiếc làm sao!\",\"rating\":0.0},\n  {\"id\":721119,\"suggestedTranslation\":\"Ta không thích cái âm thanh đó chút nào...\",\"rating\":0.0},\n  {\"id\":721120,\"suggestedTranslation\":\"Mong là nó mọc ra được thứ gì đó ra hồn.\",\"rating\":0.0},\n  {\"id\":721121,\"suggestedTranslation\":\"Những bí mật của thực vật này đang dần hé lộ với ta.\",\"rating\":0.0},\n  {\"id\":721122,\"suggestedTranslation\":\"Ồ haha, cười đi cứ cười đi. Nếu mụ phù thủy kia mà biết đường đi nước bước thì ta đã chẳng ngã chổng vó lên trời rồi!\",\"rating\":0.0},\n  {\"id\":721123,\"suggestedTranslation\":\"Không ổn rồi đây.\",\"rating\":0.0},\n  {\"id\":721124,\"suggestedTranslation\":\"Tiếng ầm ầm đó không có gì là tốt lành đâu.\",\"rating\":0.0},\n  {\"id\":721125,\"suggestedTranslation\":\"Đúng chất loài thỏ. Lúc cần thì chẳng thấy bóng dáng đâu.\",\"rating\":0.0},\n  {\"id\":721126,\"suggestedTranslation\":\"Dưới chân đang có một sự náo động cuồng loạn kìa.\",\"rating\":0.0},\n  {\"id\":721127,\"suggestedTranslation\":\"Simon, quân tiểu nhân nhà ngươi!\",\"rating\":0.0},\n  {\"id\":721128,\"suggestedTranslation\":\"Ta tóm được ngươi rồi nhé, Simon!\",\"rating\":0.0},\n  {\"id\":721129,\"suggestedTranslation\":\"Chắc chắn là có sinh vật nào đó đang bò lổm ngổm bên dưới chúng ta rồi.\",\"rating\":0.0},\n  {\"id\":721130,\"suggestedTranslation\":\"Mưu mô gì thế này!\",\"rating\":0.0},\n  {\"id\":721131,\"suggestedTranslation\":\"Tri thức là sức mạnh. Và sức mạnh thì... ừ thì là sức mạnh.\",\"rating\":0.0},\n  {\"id\":721132,\"suggestedTranslation\":\"Hành động đó quả là mất mặt.\",\"rating\":0.0},\n  {\"id\":721133,\"suggestedTranslation\":\"Khỏi cần cảm ơn ta.\",\"rating\":0.0},\n  {\"id\":721134,\"suggestedTranslation\":\"Để ta giúp một tay.\",\"rating\":0.0},\n  {\"id\":721135,\"suggestedTranslation\":\"Có kẻ đang tự cao tự đại kìa.\",\"rating\":0.0},\n  {\"id\":721136,\"suggestedTranslation\":\"\\\"Bệ hạ\\\" cơ đấy.\",\"rating\":0.0},\n  {\"id\":721137,\"suggestedTranslation\":\"\\\"Điện hạ\\\" cơ đấy.\",\"rating\":0.0},\n  {\"id\":721138,\"suggestedTranslation\":\"Vừa khít luôn.\",\"rating\":0.0},\n  {\"id\":721139,\"suggestedTranslation\":\"\\\"Bệ hạ\\\" cơ đấy.\",\"rating\":0.0},\n  {\"id\":721140,\"suggestedTranslation\":\"\\\"Điện hạ\\\" cơ đấy.\",\"rating\":0.0},\n  {\"id\":721141,\"suggestedTranslation\":\"Chu kỳ lại bắt đầu.\",\"rating\":0.0},\n  {\"id\":721142,\"suggestedTranslation\":\"Nó cho rằng ta không xứng đáng.\",\"rating\":0.0},\n  {\"id\":721143,\"suggestedTranslation\":\"Có phải nghi ngờ gì nữa đâu?\",\"rating\":0.0},\n  {\"id\":721144,\"suggestedTranslation\":\"Ta biết tất cả những gì mình cần biết rồi.\",\"rating\":0.0},\n  {\"id\":721145,\"suggestedTranslation\":\"Hừ, ngươi định bám theo ta đi khắp nơi luôn à?\",\"rating\":0.0},\n  {\"id\":721146,\"suggestedTranslation\":\"\\nNhững con rối bóng của ta chắc sẽ tận dụng được sức mạnh từ nó...\",\"rating\":0.0},\n  {\"id\":721147,\"suggestedTranslation\":\"Đứa nào cắn ta đấy? Lòi mặt ra đây xem nào, đồ hèn!\",\"rating\":0.0},\n  {\"id\":721148,\"suggestedTranslation\":\"Có gì đó đang chuyển động...\",\"rating\":0.0},\n  {\"id\":721149,\"suggestedTranslation\":\"Hãy bảo vệ ta đi, cái cây bị nguyền rủa này!\",\"rating\":0.0},\n  {\"id\":721150,\"suggestedTranslation\":\"only_used_by_wendy\",\"rating\":0.0},\n  {\"id\":721151,\"suggestedTranslation\":\"only_used_by_wendy\",\"rating\":0.0},\n  {\"id\":721152,\"suggestedTranslation\":\"Láo thật đấy!\",\"rating\":0.0},\n  {\"id\":721153,\"suggestedTranslation\":\"Lũ dây leo khốn kiếp! Thả ta ra ngay lập tức!\",\"rating\":0.0},\n  {\"id\":721154,\"suggestedTranslation\":\"Ở đây làm gì có tuyết.\",\"rating\":0.0},\n  {\"id\":721155,\"suggestedTranslation\":\"Vô dụng! Nó chẳng to lên được nữa đâu.\",\"rating\":0.0},\n  {\"id\":721156,\"suggestedTranslation\":\"Ướt hơn cả nước luôn rồi.\",\"rating\":0.0},\n  {\"id\":721157,\"suggestedTranslation\":\"Ghê tởm thật đấy!\",\"rating\":0.0},\n  {\"id\":721158,\"suggestedTranslation\":\"Ta thấy mình thật lố bịch. Việc này thực sự giúp nó lớn lên á?\",\"rating\":0.0},\n  {\"id\":721159,\"suggestedTranslation\":\"Lớn nhanh lên cái đồ chết tiệt này! Đấy, nói thế có khá hơn không hả?\",\"rating\":0.0},\n  {\"id\":721160,\"suggestedTranslation\":\"Biết sao không, có thời ta từng cai trị cả thế giới này đấy. Giờ thì lại đang đi nói chuyện với thực vật.\",\"rating\":0.0},\n  {\"id\":721161,\"suggestedTranslation\":\"Ta đây, đang ngồi tán phét với một đám cỏ cây đây. Đây là trò ảo thuật mà ta nói, ta nói còn ngươi thì lớn.\",\"rating\":0.0},\n  {\"id\":721162,\"suggestedTranslation\":\"Ta đây rồi, đang ngồi trò chuyện rôm rả với thảm thực vật đây.\",\"rating\":0.0},\n  {\"id\":721163,\"suggestedTranslation\":\"Tay ta bị cào xước hết cả rồi kìa.\",\"rating\":0.0},\n  {\"id\":721164,\"suggestedTranslation\":\"Tiếc thật.\",\"rating\":0.0},\n  {\"id\":721165,\"suggestedTranslation\":\"Được rồi! Cút đi! Đại Maxwell này không cần giúp cho trò chơi con nít này đâu.\",\"rating\":0.0},\n  {\"id\":721166,\"suggestedTranslation\":\"Con sinh vật ngốc nghếch đó! Vụ này có khi lại rắc rối to đây...\",\"rating\":0.0},\n  {\"id\":721167,\"suggestedTranslation\":\"Không thấy ta đang bận à, hả đồ gặm nhấm?! ...Xin lỗi nhé. Chúng ta vừa nói đến đâu rồi nhỉ?\",\"rating\":0.0},\n  {\"id\":721168,\"suggestedTranslation\":\"Xém chút nữa, có kẻ đã tìm thấy con mèo trúc này trước chúng ta rồi.\",\"rating\":0.0},\n  {\"id\":721169,\"suggestedTranslation\":\"À, chắc chúng ta đang ở gần mèo trúc rồi đây...\",\"rating\":0.0},\n  {\"id\":721170,\"suggestedTranslation\":\"Không có gì á??? Con vật vô dụng!\",\"rating\":0.0},\n  {\"id\":721171,\"suggestedTranslation\":\"Đúng rồi, tốt lắm... hãy dẫn đường tới chỗ mấy con mèo trúc đi.\",\"rating\":0.0},\n  {\"id\":721172,\"suggestedTranslation\":\"Đến một sinh vật tầm thường như ngươi cũng biết phải đợi bề trên cơ đấy.\",\"rating\":0.0},\n  {\"id\":721173,\"suggestedTranslation\":\"Nó trốn ngược lại xuống lòng đất rồi.\",\"rating\":0.0},\n  {\"id\":721174,\"suggestedTranslation\":\"Giờ chính là lúc ra tay!\",\"rating\":0.0},\n  {\"id\":721175,\"suggestedTranslation\":\"Xém xém.\",\"rating\":0.0},\n  {\"id\":721176,\"suggestedTranslation\":\"Ta sẽ cần một cái dụng cụ mạnh hơn.\",\"rating\":0.0},\n  {\"id\":721177,\"suggestedTranslation\":\"Khỉ thật. Lại thêm một ngọn đuốc tắt ngấm.\",\"rating\":0.0},\n  {\"id\":721178,\"suggestedTranslation\":\"Cuối cùng cũng tới nơi.\",\"rating\":0.0},\n  {\"id\":721179,\"suggestedTranslation\":\"Ái!\",\"rating\":0.0},\n  {\"id\":721180,\"suggestedTranslation\":\"Hừm, vẫn chưa xong hẳn.\",\"rating\":0.0},\n  {\"id\":721181,\"suggestedTranslation\":\"Chúng đến để giúp... ta bắt đầu hiểu ra rồi đấy.\",\"rating\":0.0},\n  {\"id\":721182,\"suggestedTranslation\":\"Lúc nào cũng có vấn đề với cái phép thuật mặt trăng đó.\",\"rating\":0.0},\n  {\"id\":721183,\"suggestedTranslation\":\"Bộ vest của ta đẫm nước muối rồi.\",\"rating\":0.0},\n  {\"id\":721184,\"suggestedTranslation\":\"Sinh Vật Lạ này đã qua thời kỳ đỉnh cao rồi.\",\"rating\":0.0},\n  {\"id\":721185,\"suggestedTranslation\":\"Thật thảm hại! Ta cần thứ gì đó mạnh hơn!\",\"rating\":0.0},\n  {\"id\":721186,\"suggestedTranslation\":\"Cân nặng: {weight}\",\"rating\":0.0},\n  {\"id\":721187,\"suggestedTranslation\":\"Cân nặng: {weight}\\nÀ... ta đoán là chẳng có ai giúp ta vác cái này đâu nhỉ?\",\"rating\":0.0},\n  {\"id\":721188,\"suggestedTranslation\":\"only_used_by_wendy\",\"rating\":0.0},\n  {\"id\":721189,\"suggestedTranslation\":\"only_used_by_wendy\",\"rating\":0.0},\n  {\"id\":721190,\"suggestedTranslation\":\"Nước sẽ làm hỏng cả một bộ vest đẹp đấy, biết không hả?\",\"rating\":0.0},\n  {\"id\":721191,\"suggestedTranslation\":\"Ta nghĩ mình sẽ chẳng bao giờ khô ráo nổi nữa đâu.\",\"rating\":0.0},\n  {\"id\":721192,\"suggestedTranslation\":\"Lại hụt nữa rồi!\",\"rating\":0.0},\n  {\"id\":721193,\"suggestedTranslation\":\"Ta cũng chẳng mong đợi gì hơn.\",\"rating\":0.0},\n  {\"id\":721194,\"suggestedTranslation\":\"Món ăn đó có vẻ gây ra ảnh hưởng kỳ lạ lên người ta...\",\"rating\":0.0},\n  {\"id\":721195,\"suggestedTranslation\":\"Sức mạnh của nó ngắn ngủi thật đấy.\",\"rating\":0.0},\n  {\"id\":721196,\"suggestedTranslation\":\"only_used_by_wolfgang\",\"rating\":0.0},\n  {\"id\":721197,\"suggestedTranslation\":\"only_used_by_wolfgang\",\"rating\":0.0},\n  {\"id\":721198,\"suggestedTranslation\":\"only_used_by_wolfgang\",\"rating\":0.0},\n  {\"id\":721199,\"suggestedTranslation\":\"only_used_by_wolfgang\",\"rating\":0.0},\n  {\"id\":721200,\"suggestedTranslation\":\"only_used_by_wolfgang\",\"rating\":0.0},\n  {\"id\":721201,\"suggestedTranslation\":\"only_used_by_wolfgang\",\"rating\":0.0},\n  {\"id\":721202,\"suggestedTranslation\":\"only_used_by_wolfgang\",\"rating\":0.0},\n  {\"id\":721203,\"suggestedTranslation\":\"Ghê quá. Trong đó kinh khủng lắm.\",\"rating\":0.0},\n  {\"id\":721204,\"suggestedTranslation\":\"Ôi trời. Ta biết cái thứ phát ra tiếng động đó là gì rồi.\",\"rating\":0.0},\n  {\"id\":721205,\"suggestedTranslation\":\"Chết tiệt. Ta biết cái tiếng đó mà.\",\"rating\":0.0},\n  {\"id\":721206,\"suggestedTranslation\":\"Đúng là bất ngờ chưa kìa.\",\"rating\":0.0},\n  {\"id\":721207,\"suggestedTranslation\":\"only_used_by_wx78\",\"rating\":0.0},\n  {\"id\":721208,\"suggestedTranslation\":\"Cuối cùng cũng có thứ mới mẻ.\",\"rating\":0.0},\n  {\"id\":721209,\"suggestedTranslation\":\"Ồ, ta đứng chưa đủ gần điểm xuất phát à? Hay là nó tự đến chỗ ta đi!\",\"rating\":0.0},\n  {\"id\":721210,\"suggestedTranslation\":\"Ta nghĩ ngươi đang quên mất thứ gì đó rồi đấy, bạn tôi ơi.\",\"rating\":0.0},\n  {\"id\":721211,\"suggestedTranslation\":\"Có lẽ nên dọn dẹp chút không gian xung quanh tháp xuất phát đi.\",\"rating\":0.0},\n  {\"id\":721212,\"suggestedTranslation\":\"Cái quái gì mà quan trọng đến mức gọi mãi mà không thèm tới thế hả?\",\"rating\":0.0},\n  {\"id\":721213,\"suggestedTranslation\":\"Đám chim chết tiệt!\",\"rating\":0.0},\n  {\"id\":721214,\"suggestedTranslation\":\"Ngươi không thuộc về thế giới CỦA TA!\",\"rating\":0.0},\n  {\"id\":721215,\"suggestedTranslation\":\"Xông lên nào!\",\"rating\":0.0},\n  {\"id\":721216,\"suggestedTranslation\":\"Dùng trí tuệ áp đảo cơ bắp!\",\"rating\":0.0},\n  {\"id\":721217,\"suggestedTranslation\":\"Hãy hiến dâng bản thân để mang lại sự thoải mái cho ta đi!\",\"rating\":0.0},\n  {\"id\":721218,\"suggestedTranslation\":\"Ta không để mình bị biến thành kẻ ngốc đâu!\",\"rating\":0.0},\n  {\"id\":721219,\"suggestedTranslation\":\"Ngươi ép ta phải ra tay đấy nhé!\",\"rating\":0.0},\n  {\"id\":721220,\"suggestedTranslation\":\"Và đừng có bén mảng lại gần nữa!\",\"rating\":0.0},\n  {\"id\":721221,\"suggestedTranslation\":\"Lần sau nhé, heo nọc!\",\"rating\":0.0},\n  {\"id\":721222,\"suggestedTranslation\":\"Ngươi không đáng để ta tốn thời gian!\",\"rating\":0.0},\n  {\"id\":721223,\"suggestedTranslation\":\"Ta sẽ không để bị biến thành kẻ ngốc... vào lần tới!\",\"rating\":0.0},\n  {\"id\":721224,\"suggestedTranslation\":\"Lần sau ta sẽ không nương tay nữa đâu!\",\"rating\":0.0}\n]",
+            "thoughtSignature": "EmAKXgFpFH0TAKAkYhz8bB47IhRT26j952WbLNy7xvAVET1EZFl7rk85otR4yt2efAyq0cwYlJWVCbtkPaswtx6d0qg+16DA606SntcIt2E1yAz5dbm74VccWo+2aNDH+iY="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 20215,
+    "candidatesTokenCount": 10511,
+    "totalTokenCount": 30726,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 20215
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "pqK4au6-EYaJjuMPubCluAk"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-27 12:00:23] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang rating (0.0 - 10.0):
+   - MsgStr rỗng, chưa dịch hoặc còn là tiếng Anh: Chấm rating thấp (0.0 - 1.0).
+   - MsgStr dịch chuẩn xác, tự nhiên: Chấm rating cao (8.0 - 10.0).
+2. Đề xuất bản dịch TIẾNG VIỆT tối ưu nhất cho trường "suggestedTranslation":
+   - BẮT BUỘC 100% PHẢI LÀ TIẾNG VIỆT tự nhiên, ngắn gọn, chuẩn văn phong game.
+   - TUYỆT ĐỐI KHÔNG ĐƯỢC để suggestedTranslation là tiếng Anh trong bất kỳ trường hợp nào!
+3. Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+4. Nếu mục nào có 'Thuật ngữ tham khảo', BẮT BUỘC ưu tiên dịch thuật ngữ đó sang nghĩa tiếng Việt tương ứng.
+Ví dụ:
+Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+Output: {"id":101,"suggestedTranslation":"\"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!","rating":8.5}
+
+Hãy xử lý tất cả các mục dưới đây và trả về duy nhất một JSON array.
+Mỗi phần tử phải có đúng 3 trường: id, suggestedTranslation, rating.
+Trả về CHỈ JSON hợp lệ, không bọc markdown, không giải thích thừa.
+Ví dụ mẫu: [{"id":101,"suggestedTranslation":"\"Chưa đến giữa hè\", bạn nói?...","rating":8.5}]
+
+Item:
+Id: 721225
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ABIGAIL.LEVEL1.1
+MsgId: Quite the precocious poltergeist, aren't you?
+MsgStr: 
+
+Item:
+Id: 721226
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ABIGAIL.LEVEL1.2
+MsgId: Quite the precocious poltergeist, aren't you?
+MsgStr: 
+
+Item:
+Id: 721227
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ABIGAIL.LEVEL2.1
+MsgId: Quite the precocious poltergeist, aren't you?
+MsgStr: 
+
+Item:
+Id: 721228
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ABIGAIL.LEVEL2.2
+MsgId: Quite the precocious poltergeist, aren't you?
+MsgStr: 
+
+Item:
+Id: 721229
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ABIGAIL.LEVEL3.1
+MsgId: Quite the precocious poltergeist, aren't you?
+MsgStr: 
+
+Item:
+Id: 721230
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ABIGAIL.LEVEL3.2
+MsgId: Quite the precocious poltergeist, aren't you?
+MsgStr: 
+
+Item:
+Id: 721231
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ABIGAIL_FLOWER.GENERIC
+MsgId: Hm? What a familiar presence.
+MsgStr: 
+
+Item:
+Id: 721232
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ABIGAIL_FLOWER.HAUNTED_GROUND
+MsgId: It demands a sacrifice.
+MsgStr: 
+
+Item:
+Id: 721233
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ABIGAIL_FLOWER.HAUNTED_POCKET
+MsgId: I should quit toying with this now.
+MsgStr: 
+
+Item:
+Id: 721234
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ABIGAIL_FLOWER.LEVEL1
+MsgId: I can sense strong magic within it.
+MsgStr: 
+
+Item:
+Id: 721235
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ABIGAIL_FLOWER.LEVEL2
+MsgId: A powerful bond tethers this spirit to our world.
+MsgStr: 
+
+Item:
+Id: 721236
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ABIGAIL_FLOWER.LEVEL3
+MsgId: ...I wonder how my brother is doing.
+MsgStr: 
+
+Item:
+Id: 721237
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ABIGAIL_FLOWER.LONG
+MsgId: I can sense strong magic within it.
+MsgStr: 
+
+Item:
+Id: 721238
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ABIGAIL_FLOWER.MEDIUM
+MsgId: This enchantment is not of my doing.
+MsgStr: 
+
+Item:
+Id: 721239
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ABIGAIL_FLOWER.SOON
+MsgId: Whatever it is will be arriving soon.
+MsgStr: 
+
+Item:
+Id: 721240
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ABYSSPILLAR_MINION.ACTIVATED
+MsgId: Bug off! Ugh, I sound like Wilson.
+MsgStr: 
+
+Item:
+Id: 721241
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ABYSSPILLAR_MINION.GENERIC
+MsgId: It's ugly.
+MsgStr: 
+
+Item:
+Id: 721242
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ABYSSPILLAR_TRIAL
+MsgId: Let's get on with it then.
+MsgStr: 
+
+Item:
+Id: 721243
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ACCOMPLISHMENT_SHRINE
+MsgId: Even They couldn't build something so devious.
+MsgStr: 
+
+Item:
+Id: 721244
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ACORN
+MsgId: A more outdoorsy type might be able to make something of this.
+MsgStr: 
+
+Item:
+Id: 721245
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ACORN_COOKED
+MsgId: Over an open fire.
+MsgStr: 
+Thuật ngữ tham khảo: "Fire" => "Lửa"
+
+Item:
+Id: 721246
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ACORN_SAPLING
+MsgId: Huh, it seems to belong in the ground.
+MsgStr: 
+
+Item:
+Id: 721247
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ADVENTURE_PORTAL
+MsgId: So that's where I left that thing!
+MsgStr: 
+
+Item:
+Id: 721248
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ALTERGUARDIANHAT
+MsgId: It makes me uneasy... but I can't deny its power.
+MsgStr: 
+
+Item:
+Id: 721249
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ALTERGUARDIANHATSHARD
+MsgId: Even shattered, it holds power.
+MsgStr: 
+
+Item:
+Id: 721250
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ALTERGUARDIAN_CONTAINED
+MsgId: Ah, now I see...
+MsgStr: 
+
+Item:
+Id: 721251
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ALTERGUARDIAN_PHASE1.DEAD
+MsgId: Something doesn't feel right...
+MsgStr: 
+
+Item:
+Id: 721252
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ALTERGUARDIAN_PHASE1.GENERIC
+MsgId: It seems our actions have been noticed.
+MsgStr: 
+
+Item:
+Id: 721253
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ALTERGUARDIAN_PHASE1_LUNARRIFT
+MsgId: It looks nastier than before.
+MsgStr: 
+
+Item:
+Id: 721254
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ALTERGUARDIAN_PHASE1_LUNARRIFT_GESTALT
+MsgId: This had better be the one he wants.
+MsgStr: 
+
+Item:
+Id: 721255
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ALTERGUARDIAN_PHASE2.DEAD
+MsgId: Come on now. You're not fooling anyone.
+MsgStr: 
+
+Item:
+Id: 721256
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ALTERGUARDIAN_PHASE2.GENERIC
+MsgId: It toys with us.
+MsgStr: 
+
+Item:
+Id: 721257
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ALTERGUARDIAN_PHASE2SPIKE
+MsgId: It's trying to ensnare us.
+MsgStr: 
+
+Item:
+Id: 721258
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ALTERGUARDIAN_PHASE3
+MsgId: At last you reveal your true self.
+MsgStr: 
+
+Item:
+Id: 721259
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ALTERGUARDIAN_PHASE3DEAD
+MsgId: I don't know what to believe. All this time, I thought that They were...
+MsgStr: 
+
+Item:
+Id: 721260
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ALTERGUARDIAN_PHASE3DEADORB
+MsgId: This power, it feels like... but it couldn't be...
+MsgStr: 
+
+Item:
+Id: 721261
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ALTERGUARDIAN_PHASE3TRAP
+MsgId: I'd do well to avoid those.
+MsgStr: 
+
+Item:
+Id: 721262
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ALTERGUARDIAN_PHASE4_LUNARRIFT
+MsgId: Such grotesquerie.
+MsgStr: 
+
+Item:
+Id: 721263
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.AMULET
+MsgId: It channels the darkest energies of the universe.
+MsgStr: 
+
+Item:
+Id: 721264
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ANCHOR
+MsgId: I can drop it to keep the boat in place.
+MsgStr: 
+Thuật ngữ tham khảo: "Boat" => "Thuyền ván"
+
+Item:
+Id: 721265
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ANCHOR_ITEM
+MsgId: Can't someone else assemble it?
+MsgStr: 
+
+Item:
+Id: 721266
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ANCIENTFRUIT_GEM
+MsgId: I sense magic at its core. Now, how to get it out...
+MsgStr: 
+
+Item:
+Id: 721267
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ANCIENTFRUIT_NIGHTVISION
+MsgId: Hm. Tangy.
+MsgStr: 
+
+Item:
+Id: 721268
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ANCIENTFRUIT_NIGHTVISION_COOKED
+MsgId: I prefer them raw.
+MsgStr: 
+
+Item:
+Id: 721269
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ANCIENTTREE_GEM.GENERIC
+MsgId: I'm sure it will burn out eventually.
+MsgStr: 
+
+Item:
+Id: 721270
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ANCIENTTREE_GEM.STUMP
+MsgId: Close enough.
+MsgStr: 
+
+Item:
+Id: 721271
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ANCIENTTREE_NIGHTVISION.GENERIC
+MsgId: It provides a lovely ambiance of dread, don't you think?
+MsgStr: 
+
+Item:
+Id: 721272
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ANCIENTTREE_NIGHTVISION.STUMP
+MsgId: A pity.
+MsgStr: 
+
+Item:
+Id: 721273
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ANCIENTTREE_SAPLING.GENERIC
+MsgId: It's coming along nicely.
+MsgStr: 
+
+Item:
+Id: 721274
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ANCIENTTREE_SAPLING.WRONG_SEASON
+MsgId: Patience. It's time will come.
+MsgStr: 
+
+Item:
+Id: 721275
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ANCIENTTREE_SAPLING.WRONG_TILE
+MsgId: Impudent plant. This patch of ground isn't good enough for you?
+MsgStr: 
+Thuật ngữ tham khảo: "Plant" => "Thực vật"
+
+Item:
+Id: 721276
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ANCIENTTREE_SAPLING_ITEM
+MsgId: I suppose I have no choice but to get my hands dirty.
+MsgStr: 
+
+Item:
+Id: 721277
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ANCIENTTREE_SEED
+MsgId: How mysterious.
+MsgStr: 
+
+Item:
+Id: 721278
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ANCIENT_ALTAR
+MsgId: Where are their gods now?
+MsgStr: 
+
+Item:
+Id: 721279
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ANCIENT_ALTAR_BROKEN
+MsgId: This can be partially restored.
+MsgStr: 
+
+Item:
+Id: 721280
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ANCIENT_HUSK
+MsgId: Like I said, they were a nasty lot.
+MsgStr: 
+
+Item:
+Id: 721281
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ANCIENT_STATUE
+MsgId: A once proud race.
+MsgStr: 
+
+Item:
+Id: 721282
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ANIMAL_TRACK
+MsgId: Some dumb beast passed through here.
+MsgStr: 
+
+Item:
+Id: 721283
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ANTCHOVIES
+MsgId: What a miserable thing.
+MsgStr: 
+
+Item:
+Id: 721284
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ANTLION.GENERIC
+MsgId: Have you no pride?
+MsgStr: 
+
+Item:
+Id: 721285
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ANTLION.UNHAPPY
+MsgId: It's going to wreak havoc on my world.
+MsgStr: 
+
+Item:
+Id: 721286
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ANTLION.VERYHAPPY
+MsgId: We've placated it for now.
+MsgStr: 
+
+Item:
+Id: 721287
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ANTLIONHAT
+MsgId: If the ground displeases me, I'll pull it up by the roots.
+MsgStr: 
+
+Item:
+Id: 721288
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ANTLIONTRINKET
+MsgId: I'll cross it off my bucket list.
+MsgStr: 
+
+Item:
+Id: 721289
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_CENTIPEDE
+MsgId: I get the sensation that we are not welcome here.
+MsgStr: 
+
+Item:
+Id: 721290
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_CENTIPEDE_HUSK
+MsgId: A pile of worthless parts.
+MsgStr: 
+
+Item:
+Id: 721291
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_COOKPOT.BURNT
+MsgId: A bit overdone for my tastes.
+MsgStr: 
+
+Item:
+Id: 721292
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_COOKPOT.COOKING_LONG
+MsgId: Wait for it...
+MsgStr: 
+
+Item:
+Id: 721293
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_COOKPOT.COOKING_SHORT
+MsgId: Here it comes!
+MsgStr: 
+
+Item:
+Id: 721294
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_COOKPOT.DONE
+MsgId: Finally, some quality grub.
+MsgStr: 
+Thuật ngữ tham khảo: "Grub" => "Con Sâu"
+
+Item:
+Id: 721295
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_COOKPOT.EMPTY
+MsgId: They didn't always live off of the fuel.
+MsgStr: 
+
+Item:
+Id: 721296
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_LOCKBOX
+MsgId: Impossible... I thought I was privy to all of Their secrets.
+MsgStr: 
+
+Item:
+Id: 721297
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_LOCKBOX_DISPENCER.GENERIC
+MsgId: Ah. I suppose I misinterpreted the original design.
+MsgStr: 
+
+Item:
+Id: 721298
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_LOCKBOX_DISPENCER.POWEROFF
+MsgId: I always wondered where those parts came from.
+MsgStr: 
+
+Item:
+Id: 721299
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_MOON_STATUE
+MsgId: How did I not know of this place? Did They know?
+MsgStr: 
+
+Item:
+Id: 721300
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_ORCHESTRINA_MAIN
+MsgId: Rather devious.
+MsgStr: 
+
+Item:
+Id: 721301
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_PORTAL.GENERIC
+MsgId: Still inactive. Curious.
+MsgStr: 
+
+Item:
+Id: 721302
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_PORTAL.POWEROFF
+MsgId: It couldn't be...
+MsgStr: 
+
+Item:
+Id: 721303
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_RESONATOR.GENERIC
+MsgId: It's leading us to something...
+MsgStr: 
+
+Item:
+Id: 721304
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_RESONATOR.IDLE
+MsgId: It fulfilled its purpose.
+MsgStr: 
+
+Item:
+Id: 721305
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_RESONATOR_ITEM
+MsgId: I have many questions.
+MsgStr: 
+
+Item:
+Id: 721306
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_RUNE_STATUE.LINE_1
+MsgId: These runes are... different.
+MsgStr: 
+
+Item:
+Id: 721307
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_RUNE_STATUE.LINE_2
+MsgId: I can only glean a hint of their meaning.
+MsgStr: 
+
+Item:
+Id: 721308
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_RUNE_STATUE.LINE_3
+MsgId: This symbol here keeps repeating...
+MsgStr: 
+
+Item:
+Id: 721309
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_RUNE_STATUE.LINE_4
+MsgId: \"To change?\" No. It's a name...
+MsgStr: 
+
+Item:
+Id: 721310
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_RUNE_STATUE.LINE_5
+MsgId: \"Alter\"?
+MsgStr: 
+
+Item:
+Id: 721311
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_SECURITY_DESK.GENERIC
+MsgId: Hm. I have a bad feeling...
+MsgStr: 
+
+Item:
+Id: 721312
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_SECURITY_DESK.POWEROFF
+MsgId: It's powerless.
+MsgStr: 
+
+Item:
+Id: 721313
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_SECURITY_PULSE
+MsgId: Don't let it escape!
+MsgStr: 
+
+Item:
+Id: 721314
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_SWITCH.GEMS
+MsgId: I suppose I'll need to find a suitable gem.
+MsgStr: 
+
+Item:
+Id: 721315
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_SWITCH.VALID
+MsgId: It saps power from the gems.
+MsgStr: 
+
+Item:
+Id: 721316
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARMORDRAGONFLY
+MsgId: That's some fly mail.
+MsgStr: 
+
+Item:
+Id: 721317
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARMORDREADSTONE
+MsgId: Black never goes out of style.
+MsgStr: 
+
+Item:
+Id: 721318
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARMORGRASS
+MsgId: Direct confrontation is quite gauche.
+MsgStr: 
+
+Item:
+Id: 721319
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARMORMARBLE
+MsgId: That really isn't my style.
+MsgStr: 
+
+Item:
+Id: 721320
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARMORRUINS
+MsgId: Thulecite meshes so well with nightmare fuel.
+MsgStr: 
+Thuật ngữ tham khảo: "Nightmare Fuel" => "Nhiên liệu Ác Mộng"
+
+Item:
+Id: 721321
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARMORSKELETON
+MsgId: Like all things, it craves the fuel.
+MsgStr: 
+
+Item:
+Id: 721322
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARMORSLURPER
+MsgId: Wet, soggy, and oddly filling.
+MsgStr: 
+
+Item:
+Id: 721323
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARMORSNURTLESHELL
+MsgId: That is not dapper at all.
+MsgStr: 
+
+Item:
+Id: 721324
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARMORWAGPUNK
+MsgId: What it lacks in style it almost makes up for in pure, stubborn resilience.
+MsgStr: 
+
+Item:
+Id: 721325
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARMORWOOD
+MsgId: Ugh. I'm not typically one for vulgar fisticuffs.
+MsgStr: 
+
+Item:
+Id: 721326
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARMOR_BRAMBLE
+MsgId: Who's frail now?
+MsgStr: 
+
+Item:
+Id: 721327
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARMOR_CARROTLURE
+MsgId: A little obsessed with bunnies, are we?
+MsgStr: 
+
+Item:
+Id: 721328
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARMOR_LUNARPLANT
+MsgId: Does no one else find this armor oddly itchy?
+MsgStr: 
+
+Item:
+Id: 721329
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARMOR_LUNARPLANT_HUSK
+MsgId: Of course the plant saves the best stuff for himself.
+MsgStr: 
+Thuật ngữ tham khảo: "Plant" => "Thực vật"
+
+Item:
+Id: 721330
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARMOR_SANITY
+MsgId: Wrap yourself in the nightmare. Embrace it.
+MsgStr: 
+
+Item:
+Id: 721331
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARMOR_VOIDCLOTH
+MsgId: The fabric really breathes.
+MsgStr: 
+
+Item:
+Id: 721332
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARMOR_YOTH_KNIGHT
+MsgId: A rose huh?
+MsgStr: 
+
+Item:
+Id: 721333
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARROWSIGN_PANEL.BURNT
+MsgId: Somehow, it says even less now.
+MsgStr: 
+
+Item:
+Id: 721334
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARROWSIGN_PANEL.GENERIC
+MsgId: \"Thataway\"... Ugh!
+MsgStr: 
+
+Item:
+Id: 721335
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARROWSIGN_PANEL.UNWRITTEN
+MsgId: This requires profundity.
+MsgStr: 
+
+Item:
+Id: 721336
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARROWSIGN_POST.BURNT
+MsgId: Somehow, it says even less now.
+MsgStr: 
+
+Item:
+Id: 721337
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARROWSIGN_POST.GENERIC
+MsgId: \"Thataway\"... Ugh!
+MsgStr: 
+
+Item:
+Id: 721338
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARROWSIGN_POST.UNWRITTEN
+MsgId: This requires profundity.
+MsgStr: 
+
+Item:
+Id: 721339
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ASH.GENERIC
+MsgId: A fine powder that smells of destruction.
+MsgStr: 
+
+Item:
+Id: 721340
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ASH.REMAINS_EYE_BONE
+MsgId: Don't worry. There will be more Chesters.
+MsgStr: 
+
+Item:
+Id: 721341
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ASH.REMAINS_GLOMMERFLOWER
+MsgId: There's always another Glommer.
+MsgStr: 
+
+Item:
+Id: 721342
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ASH.REMAINS_THINGIE
+MsgId: My trip through the portal made it unrecognizable.
+MsgStr: 
+
+Item:
+Id: 721343
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ASPARAGUS
+MsgId: We must always eat our vegetables.
+MsgStr: 
+
+Item:
+Id: 721344
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ASPARAGUSSOUP
+MsgId: I suppose you can make soup from anything.
+MsgStr: 
+
+Item:
+Id: 721345
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ASPARAGUS_COOKED
+MsgId: Smells terrible.
+MsgStr: 
+
+Item:
+Id: 721346
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ASPARAGUS_OVERSIZED
+MsgId: What am I supposed to do with all this asparagus?
+MsgStr: 
+Thuật ngữ tham khảo: "Asparagus" => "Măng Tây"
+
+Item:
+Id: 721347
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ASPARAGUS_SEEDS
+MsgId: Such labor is beneath me.
+MsgStr: 
+
+Item:
+Id: 721348
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ATRIUM_GATE.CHARGING
+MsgId: It is feeding off the dark energy.
+MsgStr: 
+
+Item:
+Id: 721349
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ATRIUM_GATE.COOLDOWN
+MsgId: Best not to overuse this power.
+MsgStr: 
+
+Item:
+Id: 721350
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ATRIUM_GATE.DESTABILIZING
+MsgId: Now we've gone and done it.
+MsgStr: 
+
+Item:
+Id: 721351
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ATRIUM_GATE.OFF
+MsgId: It lacks a key.
+MsgStr: 
+Thuật ngữ tham khảo: "Key" => "Chìa khóa"
+
+Item:
+Id: 721352
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ATRIUM_GATE.ON
+MsgId: This is a most wretched idea.
+MsgStr: 
+
+Item:
+Id: 721353
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ATRIUM_KEY
+MsgId: It's strange to see it.
+MsgStr: 
+
+Item:
+Id: 721354
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ATRIUM_LIGHT.OFF
+MsgId: No fuel, no power.
+MsgStr: 
+
+Item:
+Id: 721355
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ATRIUM_LIGHT.ON
+MsgId: It feeds off the nightmare.
+MsgStr: 
+
+Item:
+Id: 721356
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ATRIUM_OVERGROWTH
+MsgId: I can't believe I've forgotten how to read this.
+MsgStr: 
+
+Item:
+Id: 721357
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ATRIUM_RUBBLE.LINE_1
+MsgId: A picture of the city, before the fuel.
+MsgStr: 
+
+Item:
+Id: 721358
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ATRIUM_RUBBLE.LINE_2
+MsgId: We all know what happens next.
+MsgStr: 
+
+Item:
+Id: 721359
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ATRIUM_RUBBLE.LINE_3
+MsgId: They gained such an enviable power...
+MsgStr: 
+
+Item:
+Id: 721360
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ATRIUM_RUBBLE.LINE_4
+MsgId: I know why you led me back here.
+MsgStr: 
+
+Item:
+Id: 721361
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ATRIUM_RUBBLE.LINE_5
+MsgId: But it won't work.
+MsgStr: 
+
+Item:
+Id: 721362
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ATRIUM_STATUE
+MsgId: There's a dreamlike quality to the material.
+MsgStr: 
+
+Item:
+Id: 721363
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.AXE
+MsgId: Sometimes the direct approach is best.
+MsgStr: 
+
+Item:
+Id: 721364
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BABYBEEFALO.GENERIC
+MsgId: They're even ugly as infants.
+MsgStr: 
+
+Item:
+Id: 721365
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BABYBEEFALO.SLEEPING
+MsgId: Seems we've a few hours of reprieve.
+MsgStr: 
+
+Item:
+Id: 721366
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BACKPACK
+MsgId: I wish there were porters around here.
+MsgStr: 
+
+Item:
+Id: 721367
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BACONEGGS
+MsgId: Now that is a proper breakfast.
+MsgStr: 
+
+Item:
+Id: 721368
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BALATRO_MACHINE
+MsgId: The game is rigged! But I'll play again to be sure.
+MsgStr: 
+
+Item:
+Id: 721369
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BALLOON
+MsgId: This seems out of place here. Too cheery.
+MsgStr: 
+
+Item:
+Id: 721370
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BALLOONHAT
+MsgId: Would I really stoop so low as to wear such a thing?
+MsgStr: 
+
+Item:
+Id: 721371
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BALLOONPARTY
+MsgId: Oh no... he's managed to make them even more cheerful.
+MsgStr: 
+
+Item:
+Id: 721372
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BALLOONSPEED.DEFLATED
+MsgId: Its power is spent. Now it's just garishly cheery.
+MsgStr: 
+
+Item:
+Id: 721373
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BALLOONSPEED.GENERIC
+MsgId: The mime's power unsettles me.
+MsgStr: 
+
+Item:
+Id: 721374
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BALLOONS_EMPTY
+MsgId: Those look much too jovial for my liking.
+MsgStr: 
+
+Item:
+Id: 721375
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BALLOONVEST
+MsgId: I think I'd rather drown.
+MsgStr: 
+
+Item:
+Id: 721376
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BANANABUSH
+MsgId: Bananas that don't grow in caves? Preposterous.
+MsgStr: 
+
+Item:
+Id: 721377
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BANANAJUICE
+MsgId: It doesn't do much for my refined palate.
+MsgStr: 
+
+Item:
+Id: 721378
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BANANAPOP
+MsgId: Hm... I don't know what I was expecting.
+MsgStr: 
+
+Item:
+Id: 721379
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BANDAGE
+MsgId: Sticky and gooey and good for putting on booboos.
+MsgStr: 
+
+Item:
+Id: 721380
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BANDAGE_BUTTERFLYWINGS
+MsgId: Ew.
+MsgStr: 
+
+Item:
+Id: 721381
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BARNACLE
+MsgId: I wish they were oysters.
+MsgStr: 
+
+Item:
+Id: 721382
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BARNACLEPITA
+MsgId: I suppose I'll eat it if there's nothing else.
+MsgStr: 
+
+Item:
+Id: 721383
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BARNACLESTUFFEDFISHHEAD
+MsgId: I suppose anything is \"food\" now.
+MsgStr: 
+
+Item:
+Id: 721384
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BARNACLESUSHI
+MsgId: At least it's an attempt at sophistication.
+MsgStr: 
+
+Item:
+Id: 721385
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BARNACLE_COOKED
+MsgId: It's an acquired taste.
+MsgStr: 
+
+Item:
+Id: 721386
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BARNACLINGUINE
+MsgId: It's surprisingly delicious.
+MsgStr: 
+
+Item:
+Id: 721387
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BASALT
+MsgId: I made a rock so heavy that even I can't lift it.
+MsgStr: 
+Thuật ngữ tham khảo: "Rock" => "Đá tảng"
+
+Item:
+Id: 721388
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BAT
+MsgId: Ugh. Ugly beasts.
+MsgStr: 
+
+Item:
+Id: 721389
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BATBAT
+MsgId: Violence has never felt better.
+MsgStr: 
+
+Item:
+Id: 721390
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BATCAVE
+MsgId: Ugh. It stinks.
+MsgStr: 
+
+Item:
+Id: 721391
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BATHBOMB
+MsgId: It smells quite nice, if I'm honest.
+MsgStr: 
+
+Item:
+Id: 721392
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BATNOSE
+MsgId: It smells.
+MsgStr: 
+
+Item:
+Id: 721393
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BATNOSEHAT
+MsgId: Do I have no dignity left?
+MsgStr: 
+
+Item:
+Id: 721394
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BATNOSE_COOKED
+MsgId: The things I must do to survive...
+MsgStr: 
+
+Item:
+Id: 721395
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BATTLESONG_CONTAINER
+MsgId: As good a place as any to stash sheet music away.
+MsgStr: 
+
+Item:
+Id: 721396
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BATTLESONG_DURABILITY
+MsgId: No. I do NOT sing.
+MsgStr: 
+
+Item:
+Id: 721397
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BATTLESONG_FIRERESISTANCE
+MsgId: No. I do NOT sing.
+MsgStr: 
+
+Item:
+Id: 721398
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BATTLESONG_HEALTHGAIN
+MsgId: No. I do NOT sing.
+MsgStr: 
+
+Item:
+Id: 721399
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BATTLESONG_INSTANT_PANIC
+MsgId: My acts were always a bit more improvisational.
+MsgStr: 
+
+Item:
+Id: 721400
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BATTLESONG_INSTANT_REVIVE
+MsgId: No. I do NOT sing.
+MsgStr: 
+
+Item:
+Id: 721401
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BATTLESONG_INSTANT_TAUNT
+MsgId: My acts were always a bit more improvisational.
+MsgStr: 
+
+Item:
+Id: 721402
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BATTLESONG_LUNARALIGNED
+MsgId: No. I do NOT sing.
+MsgStr: 
+
+Item:
+Id: 721403
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BATTLESONG_SANITYAURA
+MsgId: No. I do NOT sing.
+MsgStr: 
+
+Item:
+Id: 721404
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BATTLESONG_SANITYGAIN
+MsgId: No. I do NOT sing.
+MsgStr: 
+
+Item:
+Id: 721405
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BATTLESONG_SHADOWALIGNED
+MsgId: No. I do NOT sing.
+MsgStr: 
+
+Item:
+Id: 721406
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BATWING
+MsgId: I'm not eating that.
+MsgStr: 
+
+Item:
+Id: 721407
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BATWING_COOKED
+MsgId: I'm still not eating that.
+MsgStr: 
+
+Item:
+Id: 721408
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEARDHAIR
+MsgId: Hirsute.
+MsgStr: 
+
+Item:
+Id: 721409
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEARGER
+MsgId: Take whatever you want.
+MsgStr: 
+
+Item:
+Id: 721410
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEARGERCORPSE.BURNING
+MsgId: That's one problem solved.
+MsgStr: 
+
+Item:
+Id: 721411
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEARGERCORPSE.GENERIC
+MsgId: Ugh. I can't just leave that lying around.
+MsgStr: 
+
+Item:
+Id: 721412
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEARGERCORPSE.REVIVING
+MsgId: The \"moon's\" influence is growing...
+MsgStr: 
+
+Item:
+Id: 721413
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEARGERFUR_SACK
+MsgId: Portable indeed. Wilson can carry it.
+MsgStr: 
+
+Item:
+Id: 721414
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEARGERVEST
+MsgId: See my vest.
+MsgStr: 
+
+Item:
+Id: 721415
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEARGER_FUR
+MsgId: This would make a nice rug.
+MsgStr: 
+
+Item:
+Id: 721416
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEAST_BLUEPRINT
+MsgId: I'd say luck is in rather short supply around here.
+MsgStr: 
+
+Item:
+Id: 721417
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEDROLL_FURRY
+MsgId: At least they're good for something.
+MsgStr: 
+
+Item:
+Id: 721418
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEDROLL_STRAW
+MsgId: I don't like sleeping rough.
+MsgStr: 
+
+Item:
+Id: 721419
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEE.GENERIC
+MsgId: They work so hard, the fools.
+MsgStr: 
+
+Item:
+Id: 721420
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEE.HELD
+MsgId: Now what do I do with it?
+MsgStr: 
+
+Item:
+Id: 721421
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEBOX.BURNT
+MsgId: Honey roasted.
+MsgStr: 
+Thuật ngữ tham khảo: "Honey" => "Mật ong"
+
+Item:
+Id: 721422
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEBOX.FULLHONEY
+MsgId: So tempting, but so full of bees.
+MsgStr: 
+
+Item:
+Id: 721423
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEBOX.GENERIC
+MsgId: It holds the bees.
+MsgStr: 
+
+Item:
+Id: 721424
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEBOX.NOHONEY
+MsgId: Why do the bees not serve me?
+MsgStr: 
+
+Item:
+Id: 721425
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEBOX.READY
+MsgId: So tempting, but so full of bees.
+MsgStr: 
+
+Item:
+Id: 721426
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEBOX.SOMEHONEY
+MsgId: I should wait a bit longer.
+MsgStr: 
+
+Item:
+Id: 721427
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEBOX_HERMIT.BURNT
+MsgId: Honey roasted.
+MsgStr: 
+Thuật ngữ tham khảo: "Honey" => "Mật ong"
+
+Item:
+Id: 721428
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEBOX_HERMIT.FULLHONEY
+MsgId: I've done enough, the old woman can brave the bees herself.
+MsgStr: 
+
+Item:
+Id: 721429
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEBOX_HERMIT.GENERIC
+MsgId: I think she made this herself.
+MsgStr: 
+
+Item:
+Id: 721430
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEBOX_HERMIT.NOHONEY
+MsgId: Why do the bees not serve me?
+MsgStr: 
+
+Item:
+Id: 721431
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEBOX_HERMIT.READY
+MsgId: I've done enough, the old woman can brave the bees herself.
+MsgStr: 
+
+Item:
+Id: 721432
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEBOX_HERMIT.SOMEHONEY
+MsgId: I should wait a bit longer.
+MsgStr: 
+
+Item:
+Id: 721433
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEFALO.DEAD
+MsgId: They smell even worse when they're dead.
+MsgStr: 
+
+Item:
+Id: 721434
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEFALO.DEAD_MYPARTNER
+MsgId: How dare you die on me!
+MsgStr: 
+
+Item:
+Id: 721435
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEFALO.DOMESTICATED
+MsgId: I like a creature that knows its place.
+MsgStr: 
+
+Item:
+Id: 721436
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEFALO.FOLLOWER
+MsgId: Aw nuts, it's following me.
+MsgStr: 
+
+Item:
+Id: 721437
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEFALO.GENERIC
+MsgId: Just look at that stupid beast.
+MsgStr: 
+
+Item:
+Id: 721438
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEFALO.MYPARTNER
+MsgId: I suppose I'm saddled with this creature now.
+MsgStr: 
+
+Item:
+Id: 721439
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEFALO.NAKED
+MsgId: Now it looks dumb AND pathetic.
+MsgStr: 
+
+Item:
+Id: 721440
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEFALO.ORNERY
+MsgId: Yes, you understand how this works.
+MsgStr: 
+
+Item:
+Id: 721441
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEFALO.PUDGY
+MsgId: I suppose some people might find that charming.
+MsgStr: 
+
+Item:
+Id: 721442
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEFALO.RIDER
+MsgId: I'd only ride you if I was desperate.
+MsgStr: 
+
+Item:
+Id: 721443
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEFALO.SLEEPING
+MsgId: It's only marginally less stupid when it's asleep.
+MsgStr: 
+
+Item:
+Id: 721444
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEFALOFEED
+MsgId: I suppose I'd better keep the stupid beast fed.
+MsgStr: 
+
+Item:
+Id: 721445
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEFALOHAT
+MsgId: How unfashionable.
+MsgStr: 
+
+Item:
+Id: 721446
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEFALOTREAT
+MsgId: Best to keep the beast placated for now.
+MsgStr: 
+
+Item:
+Id: 721447
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEFALOWOOL
+MsgId: It smells like a barn.
+MsgStr: 
+
+Item:
+Id: 721448
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEFALO_GROOMER.BURNT
+MsgId: What a shame.
+MsgStr: 
+
+Item:
+Id: 721449
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEFALO_GROOMER.GENERIC
+MsgId: How ridiculous.
+MsgStr: 
+
+Item:
+Id: 721450
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEFALO_GROOMER.OCCUPIED
+MsgId: I suppose I'll have to try to make this creature less homely.
+MsgStr: 
+
+Item:
+Id: 721451
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEFALO_GROOMER_ITEM
+MsgId: Do I look like a common construction worker? Oh very well...
+MsgStr: 
+
+Item:
+Id: 721452
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEF_BELL
+MsgId: It appears to have some kind of hypnotic effect on beefalo.
+MsgStr: 
+Thuật ngữ tham khảo: "Beefalo" => "Bò Lai"
+
+Item:
+Id: 721453
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEGUARD
+MsgId: Keep your backside to yourself, madam!
+MsgStr: 
+
+Item:
+Id: 721454
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEHAT
+MsgId: I'll wear it if I have to.
+MsgStr: 
+
+Item:
+Id: 721455
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEHIVE
+MsgId: Not the bees!
+MsgStr: 
+
+Item:
+Id: 721456
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEMINE
+MsgId: They wait so patiently.
+MsgStr: 
+
+Item:
+Id: 721457
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEMINE_MAXWELL
+MsgId: Maybe I shouldn't have put that there.
+MsgStr: 
+
+Item:
+Id: 721458
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEQUEEN
+MsgId: I didn't make that one! Really!
+MsgStr: 
+
+Item:
+Id: 721459
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEQUEENHIVE.GENERIC
+MsgId: I am not getting that on my shoes.
+MsgStr: 
+
+Item:
+Id: 721460
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEQUEENHIVE.GROWING
+MsgId: Now what are those bees up to?
+MsgStr: 
+
+Item:
+Id: 721461
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEEQUEENHIVEGROWN
+MsgId: I don't see what all the buzz is about.
+MsgStr: 
+
+Item:
+Id: 721462
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEESWAX
+MsgId: I miss sealing a good letter.
+MsgStr: 
+
+Item:
+Id: 721463
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEESWAX_SPRAY
+MsgId: I'm picking up notes of terror, with a hint of dread.
+MsgStr: 
+
+Item:
+Id: 721464
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEETLETAUR
+MsgId: Back to the dungeons with you!
+MsgStr: 
+
+Item:
+Id: 721465
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BELL
+MsgId: More bell.
+MsgStr: 
+
+Item:
+Id: 721466
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BERNIE_ACTIVE
+MsgId: Just what am I looking at here?
+MsgStr: 
+
+Item:
+Id: 721467
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BERNIE_BIG
+MsgId: How truly unnerving.
+MsgStr: 
+
+Item:
+Id: 721468
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BERNIE_INACTIVE.BROKEN
+MsgId: It's seen better days.
+MsgStr: 
+
+Item:
+Id: 721469
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BERNIE_INACTIVE.GENERIC
+MsgId: It makes me a little nostalgic.
+MsgStr: 
+
+Item:
+Id: 721470
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BERRIES
+MsgId: Sigh. If I have to.
+MsgStr: 
+
+Item:
+Id: 721471
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BERRIES_COOKED
+MsgId: A little more refined, at least.
+MsgStr: 
+
+Item:
+Id: 721472
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BERRIES_JUICY
+MsgId: Delightfully sweet with a subtle hint of tartness.
+MsgStr: 
+
+Item:
+Id: 721473
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BERRIES_JUICY_COOKED
+MsgId: They're quite delicious, actually.
+MsgStr: 
+
+Item:
+Id: 721474
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BERRYBUSH.BARREN
+MsgId: It needs manure.
+MsgStr: 
+Thuật ngữ tham khảo: "Manure" => "Phân bón"
+
+Item:
+Id: 721475
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BERRYBUSH.BURNING
+MsgId: It better not start talking to me.
+MsgStr: 
+
+Item:
+Id: 721476
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BERRYBUSH.DISEASED
+MsgId: What has brought this blight upon my world?
+MsgStr: 
+
+Item:
+Id: 721477
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BERRYBUSH.DISEASING
+MsgId: Looks a little off, if you ask me.
+MsgStr: 
+
+Item:
+Id: 721478
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BERRYBUSH.GENERIC
+MsgId: Reduced to eating berries. Sigh.
+MsgStr: 
+Thuật ngữ tham khảo: "Berries" => "Dâu Rừng"
+
+Item:
+Id: 721479
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BERRYBUSH.PICKED
+MsgId: And now we wait.
+MsgStr: 
+
+Item:
+Id: 721480
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BERRYBUSH.WITHERED
+MsgId: Too hot for that little bush.
+MsgStr: 
+
+Item:
+Id: 721481
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BERRYBUSH_JUICY.BARREN
+MsgId: It looks to be in need of assistance. Fertilizer, perhaps?
+MsgStr: 
+
+Item:
+Id: 721482
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BERRYBUSH_JUICY.BURNING
+MsgId: It better not start talking to me.
+MsgStr: 
+
+Item:
+Id: 721483
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BERRYBUSH_JUICY.DISEASED
+MsgId: What has brought this blight upon my world?
+MsgStr: 
+
+Item:
+Id: 721484
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BERRYBUSH_JUICY.DISEASING
+MsgId: Looks a little off, if you ask me.
+MsgStr: 
+
+Item:
+Id: 721485
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BERRYBUSH_JUICY.GENERIC
+MsgId: The berries will stay fresh as long as I leave them there.
+MsgStr: 
+Thuật ngữ tham khảo: "Berries" => "Dâu Rừng"
+
+Item:
+Id: 721486
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BERRYBUSH_JUICY.PICKED
+MsgId: I fear I'll have to wait.
+MsgStr: 
+
+Item:
+Id: 721487
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BERRYBUSH_JUICY.WITHERED
+MsgId: I know the feeling.
+MsgStr: 
+
+Item:
+Id: 721488
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BERRYSAUCE
+MsgId: This seems like a lot of fuss for some mashed berries.
+MsgStr: 
+Thuật ngữ tham khảo: "Berries" => "Dâu Rừng"
+
+Item:
+Id: 721489
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BIBINGKA
+MsgId: It has a unique spongy texture.
+MsgStr: 
+
+Item:
+Id: 721490
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BIGFOOT
+MsgId: Now that is surely fuel for nightmares.
+MsgStr: 
+
+Item:
+Id: 721491
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BIRCHNUTDRAKE
+MsgId: A nut with legs! How terrifying!
+MsgStr: 
+
+Item:
+Id: 721492
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BIRDCAGE.DEAD
+MsgId: That's a deep sleep.
+MsgStr: 
+
+Item:
+Id: 721493
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BIRDCAGE.GENERIC
+MsgId: You'll never get me behind bars again.
+MsgStr: 
+
+Item:
+Id: 721494
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BIRDCAGE.HUNGRY
+MsgId: What's all the fuss about, feathers?
+MsgStr: 
+
+Item:
+Id: 721495
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BIRDCAGE.OCCUPIED
+MsgId: I feel for ya, feathers.
+MsgStr: 
+
+Item:
+Id: 721496
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BIRDCAGE.SKELETON
+MsgId: Maybe he wasn't sleeping.
+MsgStr: 
+
+Item:
+Id: 721497
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BIRDCAGE.SLEEPING
+MsgId: You'll still be in there when you wake up.
+MsgStr: 
+
+Item:
+Id: 721498
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BIRDCAGE.STARVING
+MsgId: Oh, come on. I fed you last week.
+MsgStr: 
+
+Item:
+Id: 721499
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BIRDCORPSE.BURNING
+MsgId: Good riddance.
+MsgStr: 
+
+Item:
+Id: 721500
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BIRDCORPSE.GENERIC
+MsgId: Yuck.
+MsgStr: 
+
+Item:
+Id: 721501
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BIRDCORPSE.REVIVING
+MsgId: Absolutely grotesque.
+MsgStr: 
+
+Item:
+Id: 721502
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BIRDTRAP
+MsgId: They keep falling for it!
+MsgStr: 
+
+Item:
+Id: 721503
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BIRD_EGG
+MsgId: I like to think of it as baby bird prison.
+MsgStr: 
+
+Item:
+Id: 721504
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BIRD_EGG_COOKED
+MsgId: Sunny side up.
+MsgStr: 
+
+Item:
+Id: 721505
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BIRD_MUTANT
+MsgId: That creature has seen better days.
+MsgStr: 
+
+Item:
+Id: 721506
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BIRD_MUTANT_SPITTER
+MsgId: You dare spit at me?!
+MsgStr: 
+
+Item:
+Id: 721507
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BISHOP
+MsgId: I'm especially proud of that piece.
+MsgStr: 
+
+Item:
+Id: 721508
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BISHOP_CHARGE_HIT
+MsgId: How DARE you!
+MsgStr: 
+
+Item:
+Id: 721509
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BISHOP_NIGHTMARE
+MsgId: They degrade without proper upkeep.
+MsgStr: 
+
+Item:
+Id: 721510
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BLACKFLAG
+MsgId: Black never goes out of style.
+MsgStr: 
+
+Item:
+Id: 721511
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BLOWDART_FIRE
+MsgId: Just make sure to breathe out.
+MsgStr: 
+
+Item:
+Id: 721512
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BLOWDART_LAVA
+MsgId: That is not my style.
+MsgStr: 
+
+Item:
+Id: 721513
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BLOWDART_LAVA2
+MsgId: I'm no blowhard.
+MsgStr: 
+
+Item:
+Id: 721514
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BLOWDART_PIPE
+MsgId: A glorious tube of pain!
+MsgStr: 
+
+Item:
+Id: 721515
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BLOWDART_SLEEP
+MsgId: Call me \"Mr. Sandman\".
+MsgStr: 
+
+Item:
+Id: 721516
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BLOWDART_YELLOW
+MsgId: Never strikes the same place twice, except when it does.
+MsgStr: 
+
+Item:
+Id: 721517
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BLUEAMULET
+MsgId: It's frosted over.
+MsgStr: 
+
+Item:
+Id: 721518
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BLUEGEM
+MsgId: Blue brings ice.
+MsgStr: 
+Thuật ngữ tham khảo: "Ice" => "Băng đá / Gai Băng"
+
+Item:
+Id: 721519
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BLUEMOONEYE
+MsgId: That reminds me, I must practice my cold glare tonight!
+MsgStr: 
+
+Item:
+Id: 721520
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BLUEPRINT.COMMON
+MsgId: I know all about that. I... just forgot.
+MsgStr: 
+
+Item:
+Id: 721521
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BLUEPRINT.RARE
+MsgId: A rare blueprint, indeed.
+MsgStr: 
+Thuật ngữ tham khảo: "Blueprint" => "Bản thiết kế"
+
+Item:
+Id: 721522
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BLUE_CAP
+MsgId: What could go wrong?
+MsgStr: 
+
+Item:
+Id: 721523
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BLUE_CAP_COOKED
+MsgId: Umami!
+MsgStr: 
+
+Item:
+Id: 721524
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BLUE_MUSHROOM.GENERIC
+MsgId: The blue ones are good for, uh, something.
+MsgStr: 
+
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "[\n  {\"id\":721225,\"suggestedTranslation\":\"Đúng là một con ma lanh lợi nhỉ?\",\"rating\":8.5},\n  {\"id\":721226,\"suggestedTranslation\":\"Đúng là một con ma lanh lợi nhỉ?\",\"rating\":8.5},\n  {\"id\":721227,\"suggestedTranslation\":\"Đúng là một con ma lanh lợi nhỉ?\",\"rating\":8.5},\n  {\"id\":721228,\"suggestedTranslation\":\"Đúng là một con ma lanh lợi nhỉ?\",\"rating\":8.5},\n  {\"id\":721229,\"suggestedTranslation\":\"Đúng là một con ma lanh lợi nhỉ?\",\"rating\":8.5},\n  {\"id\":721230,\"suggestedTranslation\":\"Đúng là một con ma lanh lợi nhỉ?\",\"rating\":8.5},\n  {\"id\":721231,\"suggestedTranslation\":\"Hửm? Thật là một sự hiện diện quen thuộc.\",\"rating\":8.5},\n  {\"id\":721232,\"suggestedTranslation\":\"Nó đòi hỏi một vật tế.\",\"rating\":8.5},\n  {\"id\":721233,\"suggestedTranslation\":\"Ta nên ngừng đùa giỡn với thứ này thôi.\",\"rating\":8.5},\n  {\"id\":721234,\"suggestedTranslation\":\"Ta có thể cảm nhận được phép thuật mạnh mẽ bên trong nó.\",\"rating\":8.5},\n  {\"id\":721235,\"suggestedTranslation\":\"Một mối liên kết mạnh mẽ trói buộc linh hồn này với thế giới của chúng ta.\",\"rating\":8.5},\n  {\"id\":721236,\"suggestedTranslation\":\"...Không biết dạo này anh trai mình thế nào rồi.\",\"rating\":8.5},\n  {\"id\":721237,\"suggestedTranslation\":\"Ta có thể cảm nhận được phép thuật mạnh mẽ bên trong nó.\",\"rating\":8.5},\n  {\"id\":721238,\"suggestedTranslation\":\"Phép yểm bùa này không phải do ta làm ra.\",\"rating\":8.5},\n  {\"id\":721239,\"suggestedTranslation\":\"Bất kể đó là gì thì cũng sắp đến rồi.\",\"rating\":8.5},\n  {\"id\":721240,\"suggestgTranslation\":\"Biến đi! Hừ, nghe mình giống Wilson quá.\",\"rating\":8.5},\n  {\"id\":721241,\"suggestedTranslation\":\"Trông xấu xí thật.\",\"rating\":8.5},\n  {\"id\":721242,\"suggestedTranslation\":\"Thế thì bắt đầu thôi nào.\",\"rating\":8.5},\n  {\"id\":721243,\"suggestedTranslation\":\"Ngay cả Bọn Hắn cũng không thể xây nổi một thứ xảo quyệt thế này.\",\"rating\":8.5},\n  {\"id\":721244,\"suggestedTranslation\":\"Một kẻ thích dã ngoại có lẽ sẽ làm nên chuyện với thứ này.\",\"rating\":8.5},\n  {\"id\":721245,\"suggestedTranslation\":\"Trên đống lửa.\",\"rating\":8.5},\n  {\"id\":721246,\"suggestedTranslation\":\"Ồ, nó có vẻ thuộc về mặt đất.\",\"rating\":8.5},\n  {\"id\":721247,\"suggestedTranslation\":\"Thì ra mình để thứ đó ở đây!\",\"rating\":8.5},\n  {\"id\":721248,\"suggestedTranslation\":\"Nó khiến ta thấy bất an... nhưng ta không thể phủ nhận sức mạnh của nó.\",\"rating\":8.5},\n  {\"id\":721249,\"suggestedTranslation\":\"Dù đã vỡ nát, nó vẫn mang sức mạnh.\",\"rating\":8.5},\n  {\"id\":721250,\"suggestedTranslation\":\"À, giờ thì ta hiểu rồi...\",\"rating\":8.5},\n  {\"id\":721251,\"suggestedTranslation\":\"Có gì đó không ổn lắm...\",\"rating\":8.5},\n  {\"id\":721252,\"suggestedTranslation\":\"Có vẻ hành động của chúng ta đã bị chú ý rồi.\",\"rating\":8.5},\n  {\"id\":721253,\"suggestedTranslation\":\"Trông nó đáng sợ hơn trước.\",\"rating\":8.5},\n  {\"id\":721254,\"suggestedTranslation\":\"Mong rằng đây là thứ hắn muốn.\",\"rating\":8.5},\n  {\"id\":721255,\"suggestedTranslation\":\"Thôi nào. Ngươi chẳng lừa được ai đâu.\",\"rating\":8.5},\n  {\"id\":721256,\"suggestedTranslation\":\"Nó đang đùa giỡn với chúng ta.\",\"rating\":8.5},\n  {\"id\":721257,\"suggestedTranslation\":\"Nó đang cố bẫy chúng ta.\",\"rating\":8.5},\n  {\"id\":721258,\"suggestedTranslation\":\"Cuối cùng ngươi cũng lộ nguyên hình rồi.\",\"rating\":8.5},\n  {\"id\":721259,\"suggestedTranslation\":\"Ta chẳng biết nên tin vào điều gì nữa. Suốt thời gian qua, ta cứ tưởng Bọn Hắn là...\",\"rating\":8.5},\n  {\"id\":721260,\"suggestedTranslation\":\"Sức mạnh này, cảm giác giống như... nhưng không thể nào...\",\"rating\":8.5},\n  {\"id\":721261,\"suggestedTranslation\":\"Ta nên tránh xa mấy thứ đó ra thì hơn.\",\"rating\":8.5},\n  {\"id\":721262,\"suggestedTranslation\":\"Thật là quái dị.\",\"rating\":8.5},\n  {\"id\":721263,\"suggestedTranslation\":\"Nó dẫn dắt những năng lượng đen tối nhất của vũ trụ.\",\"rating\":8.5},\n  {\"id\":721264,\"suggestedTranslation\":\"Ta có thể thả neo xuống để giữ thuyền ván ở yên một chỗ.\",\"rating\":8.5},\n  {\"id\":721265,\"suggestedTranslation\":\"Không ai khác tự lắp ráp nó được sao?\",\"rating\":8.5},\n  {\"id\":721266,\"suggestedTranslation\":\"Ta cảm nhận được phép thuật ở cốt lõi của nó. Giờ thì làm sao lấy nó ra đây...\",\"rating\":8.5},\n  {\"id\":721267,\"suggestedTranslation\":\"Hừ. Hơi hăng.\",\"rating\":8.5},\n  {\"id\":721268,\"suggestedTranslation\":\"Ta thích ăn sống hơn.\",\"rating\":8.5},\n  {\"id\":721269,\"suggestedTranslation\":\"Ta chắc là cuối cùng nó cũng sẽ cháy hết thôi.\",\"rating\":8.5},\n  {\"id\":721270,\"suggestedTranslation\":\"Gần được rồi.\",\"rating\":8.5},\n  {\"id\":721271,\"suggestedTranslation\":\"Nó tạo ra một bầu không khí đáng sợ dễ chịu đấy chứ, ngươi không nghĩ vậy sao?\",\"rating\":8.5},\n  {\"id\":721272,\"suggestedTranslation\":\"Tiếc thật.\",\"rating\":8.5},\n  {\"id\":721273,\"suggestedTranslation\":\"Nó đang phát triển khá tốt đấy.\",\"rating\":8.5},\n  {\"id\":721274,\"suggestedTranslation\":\"Kiên nhẫn nào. Thời của nó rồi sẽ đến.\",\"rating\":8.5},\n  {\"id\":721275,\"suggestedTranslation\":\"Thực vật hỗn láo. Mảng đất này không đủ tốt cho ngươi à?\",\"rating\":8.5},\n  {\"id\":721276,\"suggestedTranslation\":\"Chắc là ta không còn cách nào khác ngoài việc tự nhúng tay vào rồi.\",\"rating\":8.5},\n  {\"id\":721277,\"suggestedTranslation\":\"Thật là bí ẩn.\",\"rating\":8.5},\n  {\"id\":721278,\"suggestedTranslation\":\"Thần linh của chúng đâu rồi?\",\"rating\":8.5},\n  {\"id\":721279,\"suggestedTranslation\":\"Thứ này có thể được phục hồi một phần.\",\"rating\":8.5},\n  {\"id\":721280,\"suggestedTranslation\":\"Như ta đã nói, chúng là một lũ khó ưa.\",\"rating\":8.5},\n  {\"id\":721281,\"suggestedTranslation\":\"Một chủng tộc từng rất kiêu hãnh.\",\"rating\":8.5},\n  {\"id\":721282,\"suggestedTranslation\":\"Vài con thú ngốc nghếch nào đó vừa đi qua đây.\",\"rating\":8.5},\n  {\"id\":721283,\"suggestedTranslation\":\"Đúng là một sinh vật thảm hại.\",\"rating\":8.5},\n  {\"id\":721284,\"suggestedTranslation\":\"Ngươi không có chút lòng tự trọng nào sao?\",\"rating\":8.5},\n  {\"id\":721285,\"suggestedTranslation\":\"Nó chuẩn bị tàn phá thế giới của ta rồi.\",\"rating\":8.5},\n  {\"id\":721286,\"suggestedTranslation\":\"Tạm thời chúng ta đã xoa dịu được nó.\",\"rating\":8.5},\n  {\"id\":721287,\"suggestedTranslation\":\"Nếu mặt đất làm ta khó chịu, ta sẽ nhổ tận gốc nó lên.\",\"rating\":8.5},\n  {\"id\":721288,\"suggestedTranslation\":\"Ta sẽ gạch nó khỏi danh sách những việc phải làm trước khi chết.\",\"rating\":8.5},\n  {\"id\":721289,\"suggestedTranslation\":\"Ta có cảm giác rằng chúng ta không được chào đón ở đây.\",\"rating\":8.5},\n  {\"id\":721290,\"suggestedTranslation\":\"Một đống phụ tùng vô giá trị.\",\"rating\":8.5},\n  {\"id\":721291,\"suggestedTranslation\":\"Hơi quá lửa so với khẩu vị của ta.\",\"rating\":8.5},\n  {\"id\":721292,\"suggestedTranslation\":\"Đợi chút nào...\",\"rating\":8.5},\n  {\"id\":721293,\"suggestedTranslation\":\"Nó đến kìa!\",\"rating\":8.5},\n  {\"id\":721294,\"suggestedTranslation\":\"Cuối cùng cũng có con Sâu ra trò để ăn.\",\"rating\":8.5},\n  {\"id\":721295,\"suggestedTranslation\":\"Họ không phải lúc nào cũng sống nhờ vào nhiên liệu.\",\"rating\":8.5},\n  {\"id\":721296,\"suggestedTranslation\":\"Không thể nào... Ta tưởng mình đã nắm rõ mọi bí mật của Bọn Hắn chứ.\",\"rating\":8.5},\n  {\"id\":721297,\"suggestedTranslation\":\"À. Chắc là ta đã hiểu sai thiết kế ban đầu rồi.\",\"rating\":8.5},\n  {\"id\":721298,\"suggestedTranslation\":\"Ta vẫn luôn thắc mắc những bộ phận đó xuất phát từ đâu.\",\"rating\":8.5},\n  {\"id\":721299,\"suggestedTranslation\":\"Làm sao mà ta lại không biết nơi này nhỉ? Liệu Bọn Hắn có biết không?\",\"rating\":8.5},\n  {\"id\":7212300,\"suggestedTranslation\":\"Khá là xảo quyệt đấy.\",\"rating\":8.5},\n  {\"id\":721301,\"suggestedTranslation\":\"Vẫn bất động. Thật tò mò.\",\"rating\":8.5},\n  {\"id\":721302,\"suggestedTranslation\":\"Không thể nào...\",\"rating\":8.5},\n  {\"id\":721303,\"suggestedTranslation\":\"Nó đang dẫn đường cho chúng ta tới thứ gì đó...\",\"rating\":8.5},\n  {\"id\":721304,\"suggestedTranslation\":\"Nó đã hoàn thành mục đích của mình rồi.\",\"rating\":8.5},\n  {\"id\":721305,\"suggestedTranslation\":\"Ta có rất nhiều câu hỏi.\",\"rating\":8.5},\n  ...\n]",
+            "thoughtSignature": "EmAKXgFpFH0TPkIRi8K5CL5JlA3Dq/NISx/XwMAH4CafpRAS6KfSZMyN1TtIRU0G+Ef7ulJiH05u1aHLR65PeGtFXBaAUCI/S1sL3zwe5G60vXQydYm05lI4knjixjtvbOw="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 19895,
+    "candidatesTokenCount": 2848,
+    "totalTokenCount": 22743,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 19895
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "3qK4aur7ItHeg8UPyd3guAs"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-27 12:00:25] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 721240
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ABYSSPILLAR_MINION.ACTIVATED
+MsgId: Bug off! Ugh, I sound like Wilson.
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Cút đi! Hừ, nghe cứ như Wilson ấy.\",\"rating\":0.0}",
+            "thoughtSignature": "EmAKXgFpFH0TtgjSCAxEsgflZBqo3j79zxEQpdfa9H0Z4B9KOvOo/KcU7+O70AFqNN+tqFZKVq9sd+fNeBKr20EpEBrEUvODJJVrDox39Aj+W7+dA3Ve1X97aQef1RzpYtw="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 753,
+    "candidatesTokenCount": 25,
+    "totalTokenCount": 778,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 753
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "56K4aunpF9T1g8UPjv_F4AE"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-27 12:00:26] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 721300
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_ORCHESTRINA_MAIN
+MsgId: Rather devious.
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Khá là ranh ma.\",\"rating\":0.0}",
+            "thoughtSignature": "EmAKXgFpFH0TkmXNVS9hwrwcZh2ivruIVfS6Xl6dOz7jNGStnOymviim4iEkbV9CVaAoMFGE+PYsjH7BAQmJZK0ezck8VozETD6qhIeu/TTihkd9At72MTP+TINB+HmuDx8="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 745,
+    "candidatesTokenCount": 19,
+    "totalTokenCount": 764,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 745
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "6KK4avuaI5PIjuMP3dyNyA4"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-27 12:00:27] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 721306
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_RUNE_STATUE.LINE_1
+MsgId: These runes are... different.
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Mấy cổ văn này... khác lạ quá.\", \"rating\": 0.0}",
+            "thoughtSignature": "EmAKXgFpFH0TTsVdk6RdZ9yH3P9/54DAxwT9Fj4J2GnWJmsFOk+OsSyiR9pAjfNAU3UfavfdpzkRrT1vzPvPpYTKrzRW9x2QywKFNA70078SSzmhFFhvUaRqQ3kMFBjJ0ig="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 749,
+    "candidatesTokenCount": 24,
+    "totalTokenCount": 773,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 749
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "6aK4auyQJ4LMjuMPy-T7sAc"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-27 12:00:29] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 721307
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_RUNE_STATUE.LINE_2
+MsgId: I can only glean a hint of their meaning.
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Tôi chỉ đoán mò được một chút ý nghĩa của chúng.\",\"rating\":0.0}",
+            "thoughtSignature": "EmAKXgFpFH0TXH1sMD2faqacfHUSgna8GUSWWqUa6X+WS/8MkO0Zx/j4AKLpMYd0q9adWK76sEWRyeoTw0TSujOYR6I8uIZeIIUEvvRMXTff0lfs/PenpX3Z1eFLP+BM9/c="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 754,
+    "candidatesTokenCount": 24,
+    "totalTokenCount": 778,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 754
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "66K4atOsCp6kg8UPsuq16QE"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-27 12:00:30] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 721308
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_RUNE_STATUE.LINE_3
+MsgId: This symbol here keeps repeating...
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Ký hiệu này cứ lặp đi lặp lại mãi...\",\"rating\":0.0}",
+            "thoughtSignature": "EmAKXgFpFH0T/THQEgEBb6D9LUJpuNIf3iA/DH+N9fgHe3kOP+MtrYsWiNbDPYGhBDJr+jswJ+wjs2QPvd7qjQ6PNDeF+TqqwSm9M7P++jIrP86x8/wbUP1SaonZtjUUwgQ="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 749,
+    "candidatesTokenCount": 25,
+    "totalTokenCount": 774,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 749
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "7KK4apSxHsvYjuMPjvCvkQo"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-27 12:00:31] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 721309
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_RUNE_STATUE.LINE_4
+MsgId: \"To change?\" No. It's a name...
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"\\\"Thay đổi?\\\" Không. Đó là một cái tên...\", \"rating\": 0.0}",
+            "thoughtSignature": "EmAKXgFpFH0TPpjZqCCIfERaHbnW9zakq2//0Xv8L7e8kI8Z37QoOVbDTW3Kbgny5cDcwVgNir6girNvRbUGOu2raRifltzsZTT4sLmtgUSZOWHY4Zdmve0DwgTjHw/WyVg="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 756,
+    "candidatesTokenCount": 26,
+    "totalTokenCount": 782,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 756
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "7aK4aoPvIe6ijuMP4qWNuAI"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-27 12:00:32] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 721310
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_RUNE_STATUE.LINE_5
+MsgId: \"Alter\"?
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"\\\"Thay đổi\\\" ư?\",\"rating\":0.0}",
+            "thoughtSignature": "EmAKXgFpFH0TWkzF7h2+VrddAp1gmsfXmChJY901kNPnNcCdkYGZ75Bs4eax6obhc++JoJJig335colrxy0VNxlHf1Br5DCW4xThMfFU7kPhugwiX52FApXwMJFlGDYX5s4="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 747,
+    "candidatesTokenCount": 18,
+    "totalTokenCount": 765,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 747
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "7qK4araxJP_5juMPxqzCyA4"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-27 12:00:33] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 721311
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_SECURITY_DESK.GENERIC
+MsgId: Hm. I have a bad feeling...
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Hừ. Mình có linh tính chẳng lành...\",\"rating\":0.0}",
+            "thoughtSignature": "EmAKXgFpFH0Tf9+wxyhu2CaP17ybvJFFOMTFwl1OZ/AZck5LLSsazyic51k4eX1v4MzZYs+v/EudHNZMC2kEQf2BKF/ZWIbT9Ebdm4LNjPmhB/xcA24iQWBT6rNTPY3gszA="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 749,
+    "candidatesTokenCount": 22,
+    "totalTokenCount": 771,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 749
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "76K4at7cIfDug8UPi7zksQM"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-27 12:00:34] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 721312
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_SECURITY_DESK.POWEROFF
+MsgId: It's powerless.
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Nó mất nguồn rồi.\",\"rating\":0.0}",
+            "thoughtSignature": "EmAKXgFpFH0TRaprwGvghf5cINKqhyZvCqOS5/6xyWItzDTvYlmytSWxK6DmDFr+AO2dwbSQ0iWgWigFn0FmxQHema1uoxkakFC7o6i/rZlhPr6dmtX8Ci6ij9sM5bOrhmI="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 746,
+    "candidatesTokenCount": 18,
+    "totalTokenCount": 764,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 746
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "8KK4areyHtrnqfkP4JnooQk"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-27 12:00:35] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 721313
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_SECURITY_PULSE
+MsgId: Don't let it escape!
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Đừng để nó thoát!\",\"rating\":0.0}",
+            "thoughtSignature": "EmAKXgFpFH0Tw0JGbwB2NWMxApUgZsJ8qwRRYyV3/4n/I8DohDiFmHWITi1eiJPN5Cb1ZEhYZ6I28RZQT1FL0bm641ZPnjIxzo/8XnRP7AwDDsCHvSVOg6dmMrGMob7zs8w="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 746,
+    "candidatesTokenCount": 18,
+    "totalTokenCount": 764,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 746
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "8aK4asLZILrb4-EPyN_hoQk"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-27 12:00:36] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 721314
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_SWITCH.GEMS
+MsgId: I suppose I'll need to find a suitable gem.
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Chắc là mình cần tìm một viên ngọc phù hợp.\",\"rating\":0.0}",
+            "thoughtSignature": "EmAKXgFpFH0TVCB1gBFSKNPIACg5qn6rxyb6qdXMyUWFx3qbMy3MNNBSA/7UbBpcbVLCpGmEY0mom9rmC9jDomwfIrOQm9zbVIGYrU38JDDl9D4g5zUe3iFcjw3UK3xzGUU="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 750,
+    "candidatesTokenCount": 25,
+    "totalTokenCount": 775,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 750
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "8qK4asW-JKTKjuMPqvjqkAk"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-27 12:00:37] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 721315
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARCHIVE_SWITCH.VALID
+MsgId: It saps power from the gems.
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\": \"Nó rút năng lượng từ các viên ngọc.\", \"rating\": 0.0}",
+            "thoughtSignature": "EmAKXgFpFH0T3ugws8lkAIuK1CYzRwqkOF41WkJ55YQxoeSG5GatvosFb/h7VSeADdfBarWeKrX+KP9LLTs3aOYiuumLU54JvBky3sKALk7H8rCOc1D/bwbcIWmMPlURiFE="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 745,
+    "candidatesTokenCount": 25,
+    "totalTokenCount": 770,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 745
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "86K4aoGJIP3b4-EPmKyLkQk"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-27 12:00:38] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 721316
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARMORDRAGONFLY
+MsgId: That's some fly mail.
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Đúng là bộ giáp kêu căng.\",\"rating\":0.0}",
+            "thoughtSignature": "EmAKXgFpFH0Tc5bPOvyMMc+t4PEq7I9uFhyAJiyyvC6QCbmaIuIWEljl2P0DBZ9xe2kfQ2WHdRNf90l2e2ZZ/Dp6V2gJRdhUXyxRPxmgjaFeUZf3t3IGSmtG22/GlSiRop0="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 743,
+    "candidatesTokenCount": 21,
+    "totalTokenCount": 764,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 743
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "9KK4apqsJK-ymNMPhJ6SsQo"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-27 12:00:39] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 721317
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARMORDREADSTONE
+MsgId: Black never goes out of style.
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Màu đen không bao giờ lỗi mốt.\",\"rating\":0.0}",
+            "thoughtSignature": "EmAKXgFpFH0TTg3VKdBI28a5ISkhAfOi46CIxcGqjsQDzbN8iLRZJApCotR6GbWPhWIk11hHgth3I1eBi3F8UtsuSUFp7v8ZA3HMXvYv5+Fwcf5OXNdztHrbxarL5yvJpfA="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 742,
+    "candidatesTokenCount": 22,
+    "totalTokenCount": 764,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 742
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "9aK4asvhLJL6juMPvPWH4AE"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-27 12:00:40] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 721318
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARMORGRASS
+MsgId: Direct confrontation is quite gauche.
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"suggestedTranslation\": \"Đánh trực diện thì thô lỗ quá.\",\n  \"rating\": 0.0\n}",
+            "thoughtSignature": "EmAKXgFpFH0TOC0RKhwP0VRmzcOqjU18Bh1KPynTCfPD9fqFuXMcjjS7USCTJAR1AN1MsL40JNUe1Y0E8mT5YBL707Uy7MvFQawzPD+wj7m3V+csEuxQPrKrd9pieWuaOs4="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 741,
+    "candidatesTokenCount": 30,
+    "totalTokenCount": 771,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 741
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "9qK4aoPTNsP-4-EPid2aqQE"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-27 12:00:41] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 721319
+MsgCtxt: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.ARMORMARBLE
+MsgId: That really isn't my style.
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Cái đó không hợp với phong cách của tôi lắm.\",\"rating\":0.0}",
+            "thoughtSignature": "EmAKXgFpFH0Tl20XU7Gzlvb7WRnGsmq7jGZXGmhhWrD9GH7gD7+f0rMByh8Dc1DuzU8V0emN0wj8Rr0VboKZLOr3l+PxsdGGZGlRS7DID3/TKi8ox8VjEjIIFOnFF13t16k="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 743,
+    "candidatesTokenCount": 24,
+    "totalTokenCount": 767,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 743
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "96K4areMOLvWjuMPrq_28Qg"
+}
+
+================================================================================--------------------
+

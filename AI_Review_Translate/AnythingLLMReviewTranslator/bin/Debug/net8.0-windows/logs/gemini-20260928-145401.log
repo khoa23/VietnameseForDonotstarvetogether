@@ -1,0 +1,2190 @@
+=== Translation Log Started at 2026-09-28 14:54:01 | Provider: Gemini ===
+
+======================================== [2026-09-28 14:54:32] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang rating (0.0 - 10.0):
+   - MsgStr rỗng, chưa dịch hoặc còn là tiếng Anh: Chấm rating thấp (0.0 - 1.0).
+   - MsgStr dịch chuẩn xác, tự nhiên: Chấm rating cao (8.0 - 10.0).
+2. Đề xuất bản dịch TIẾNG VIỆT tối ưu nhất cho trường "suggestedTranslation":
+   - BẮT BUỘC 100% PHẢI LÀ TIẾNG VIỆT tự nhiên, ngắn gọn, chuẩn văn phong game.
+   - TUYỆT ĐỐI KHÔNG ĐƯỢC để suggestedTranslation là tiếng Anh trong bất kỳ trường hợp nào!
+3. Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+4. Nếu mục nào có 'Thuật ngữ tham khảo', BẮT BUỘC ưu tiên dịch thuật ngữ đó sang nghĩa tiếng Việt tương ứng.
+Ví dụ:
+Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+Output: {"id":101,"suggestedTranslation":"\"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!","rating":8.5}
+
+Hãy xử lý tất cả các mục dưới đây và trả về duy nhất một JSON array.
+Mỗi phần tử phải có đúng 3 trường: id, suggestedTranslation, rating.
+Trả về CHỈ JSON hợp lệ, không bọc markdown, không giải thích thừa.
+Ví dụ mẫu: [{"id":101,"suggestedTranslation":"\"Chưa đến giữa hè\", bạn nói?...","rating":8.5}]
+
+Item:
+Id: 755915
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.ENDTABLE.EMPTY
+MsgId: Now now, let's set the table.
+MsgStr: 
+
+Item:
+Id: 755916
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.ENDTABLE.FRESHLIGHT
+MsgId: A light so bright I might still see at night!
+MsgStr: 
+
+Item:
+Id: 755917
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.ENDTABLE.GENERIC
+MsgId: I never learned my table manners.
+MsgStr: 
+
+Item:
+Id: 755918
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.ENDTABLE.OLDLIGHT
+MsgId: I'll try not to pout when that light soon goes out.
+MsgStr: 
+
+Item:
+Id: 755919
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.ENDTABLE.WILTED
+MsgId: Tiny flower on the table... you aren't looking very stable.
+MsgStr: 
+Thuật ngữ tham khảo: "Flower" => "Hoa"
+
+Item:
+Id: 755920
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.EVERGREEN.BURNING
+MsgId: Twiddle dee dee, a burning tree!
+MsgStr: 
+
+Item:
+Id: 755921
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.EVERGREEN.BURNT
+MsgId: Well, that was fun.
+MsgStr: 
+
+Item:
+Id: 755922
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.EVERGREEN.CHOPPED
+MsgId: A funny tree prank.
+MsgStr: 
+
+Item:
+Id: 755923
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.EVERGREEN.GENERIC
+MsgId: A hearty tree of dark green leaves.
+MsgStr: 
+
+Item:
+Id: 755924
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.EVERGREEN_SPARSE.BURNING
+MsgId: Twiddle dee dee, a burning tree!
+MsgStr: 
+
+Item:
+Id: 755925
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.EVERGREEN_SPARSE.BURNT
+MsgId: Well, that was fun.
+MsgStr: 
+
+Item:
+Id: 755926
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.EVERGREEN_SPARSE.CHOPPED
+MsgId: A funny tree prank.
+MsgStr: 
+
+Item:
+Id: 755927
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.EVERGREEN_SPARSE.GENERIC
+MsgId: A mournful tree full of lumps and bumps.
+MsgStr: 
+
+Item:
+Id: 755928
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.EYEBRELLAHAT
+MsgId: A cyclops' sight stretched mighty thin.
+MsgStr: 
+
+Item:
+Id: 755929
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.EYEMASKHAT
+MsgId: Well, isn't this a sight for sore eyes. Hyuyuyu!
+MsgStr: 
+
+Item:
+Id: 755930
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.EYEOFTERROR
+MsgId: Whatever he says I did, it's a lie!
+MsgStr: 
+
+Item:
+Id: 755931
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.EYEOFTERROR_MINI
+MsgId: I feel positively terror eyes'd!
+MsgStr: 
+
+Item:
+Id: 755932
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.EYEOFTERROR_MINI_GROUNDED
+MsgId: Oh my, won't you open your eye?
+MsgStr: 
+
+Item:
+Id: 755933
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.EYEPLANT
+MsgId: My oh my, what a lovely eye.
+MsgStr: 
+
+Item:
+Id: 755934
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.EYETURRET
+MsgId: Oh me oh my, look at that eye!
+MsgStr: 
+
+Item:
+Id: 755935
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.EYETURRET_ITEM
+MsgId: To build it would be all it took to fell my foes by deadly look.
+MsgStr: 
+
+Item:
+Id: 755936
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FARMPLOT.BURNT
+MsgId: A silly prank to be sure.
+MsgStr: 
+
+Item:
+Id: 755937
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FARMPLOT.GENERIC
+MsgId: Mortal food maker.
+MsgStr: 
+
+Item:
+Id: 755938
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FARMPLOT.GROWING
+MsgId: The mortals are making mortal food.
+MsgStr: 
+
+Item:
+Id: 755939
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FARMPLOT.NEEDSFERTILIZER
+MsgId: The semi-formed food is hungry.
+MsgStr: 
+
+Item:
+Id: 755940
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FARM_HOE
+MsgId: I've about had my fill of tilling and toiling.
+MsgStr: 
+
+Item:
+Id: 755941
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FARM_PLANT.BURNING
+MsgId: Hyuyuyu, whoopsie!
+MsgStr: 
+
+Item:
+Id: 755942
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FARM_PLANT.FULL
+MsgId: Oh what a sight, the crops are ripe!
+MsgStr: 
+
+Item:
+Id: 755943
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FARM_PLANT.FULL_OVERSIZED
+MsgId: If only I cared to eat mortal food!
+MsgStr: 
+
+Item:
+Id: 755944
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FARM_PLANT.FULL_WEED
+MsgId: It's a weed indeed! Hyuyuyu!
+MsgStr: 
+
+Item:
+Id: 755945
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FARM_PLANT.GENERIC
+MsgId: A plant!
+MsgStr: 
+Thuật ngữ tham khảo: "Plant" => "Thực vật"
+
+Item:
+Id: 755946
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FARM_PLANT.GROWING
+MsgId: Grow big and tall, or not at all.
+MsgStr: 
+
+Item:
+Id: 755947
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FARM_PLANT.ROTTEN
+MsgId: Even the mortals won't eat this one.
+MsgStr: 
+
+Item:
+Id: 755948
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FARM_PLANT.ROTTEN_OVERSIZED
+MsgId: This one's spoiled rotten!
+MsgStr: 
+
+Item:
+Id: 755949
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FARM_PLANT.SEED
+MsgId: Come out and join us, little one!
+MsgStr: 
+
+Item:
+Id: 755950
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FARM_PLOW
+MsgId: Plowing a plot for picky plants.
+MsgStr: 
+
+Item:
+Id: 755951
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FARM_PLOW_ITEM
+MsgId: All work and no play makes for one unhappy imp.
+MsgStr: 
+
+Item:
+Id: 755952
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FARM_SOIL_DEBRIS
+MsgId: I'm afraid I'll have to banish it from the garden.
+MsgStr: 
+
+Item:
+Id: 755953
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FEATHERFAN
+MsgId: It makes a big gust. What's all the fuss?
+MsgStr: 
+
+Item:
+Id: 755954
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FEATHERHAT
+MsgId: Feathers and horns go well together.
+MsgStr: 
+
+Item:
+Id: 755955
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FEATHERPENCIL
+MsgId: Use this quill, I will, I will.
+MsgStr: 
+
+Item:
+Id: 755956
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FEATHER_CANARY
+MsgId: A token, to remember its sweet song by.
+MsgStr: 
+
+Item:
+Id: 755957
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FEATHER_CROW
+MsgId: A memento of my jet feathered friend.
+MsgStr: 
+
+Item:
+Id: 755958
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FEATHER_ROBIN
+MsgId: To remind myself of its sweet beaky face.
+MsgStr: 
+
+Item:
+Id: 755959
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FEATHER_ROBIN_WINTER
+MsgId: A keepsake of a gentle blue friend.
+MsgStr: 
+
+Item:
+Id: 755960
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FEM_PUPPET
+MsgId: Greetings and salutations, ma'am.
+MsgStr: 
+
+Item:
+Id: 755961
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FENCE
+MsgId: To keep you out, or keep me in?
+MsgStr: 
+
+Item:
+Id: 755962
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FENCE_ELECTRIC.GENERIC
+MsgId: Don't think it's linked.
+MsgStr: 
+
+Item:
+Id: 755963
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FENCE_ELECTRIC.LINKED
+MsgId: Think it's linked.
+MsgStr: 
+
+Item:
+Id: 755964
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FENCE_ELECTRIC_ITEM
+MsgId: Yet to set.
+MsgStr: 
+
+Item:
+Id: 755965
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FENCE_GATE
+MsgId: For temporary visiting.
+MsgStr: 
+
+Item:
+Id: 755966
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FENCE_GATE_ITEM
+MsgId: It's of no use there on the ground.
+MsgStr: 
+
+Item:
+Id: 755967
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FENCE_ITEM
+MsgId: It's of no use there on the ground.
+MsgStr: 
+
+Item:
+Id: 755968
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FENCE_JUNK
+MsgId: A metal fence for our defense.
+MsgStr: 
+
+Item:
+Id: 755969
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FENCE_ROTATOR
+MsgId: A sword against fences... we've all lost our senses!
+MsgStr: 
+
+Item:
+Id: 755970
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FERTILIZER
+MsgId: Hyuyu! That's some poo!
+MsgStr: 
+
+Item:
+Id: 755971
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FESTIVEFISH
+MsgId: Nothing fishy here at all, hyuyu!
+MsgStr: 
+
+Item:
+Id: 755972
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FESTIVE_BLUEPRINT
+MsgId: My friend can frolic in this festive frock!
+MsgStr: 
+
+Item:
+Id: 755973
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FIG
+MsgId: They say the low hanging fruit is the sweetest!
+MsgStr: 
+
+Item:
+Id: 755974
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FIGATONI
+MsgId: I'll pass.
+MsgStr: 
+
+Item:
+Id: 755975
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FIGKABAB
+MsgId: Food on a stick won't do the trick.
+MsgStr: 
+
+Item:
+Id: 755976
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FIG_COOKED
+MsgId: The mortals seem to prefer it this way.
+MsgStr: 
+
+Item:
+Id: 755977
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FIREBALLSTAFF
+MsgId: Ooohoo, how delightfully chaotic!
+MsgStr: 
+
+Item:
+Id: 755978
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FIRECRACKERS
+MsgId: Pop, pop!
+MsgStr: 
+
+Item:
+Id: 755979
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FIREFLIES.GENERIC
+MsgId: Some natural light to grant me sight.
+MsgStr: 
+
+Item:
+Id: 755980
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FIREFLIES.HELD
+MsgId: Little jittery, fluttery souls.
+MsgStr: 
+
+Item:
+Id: 755981
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FIREHOUND
+MsgId: Hyuyu, fiery!
+MsgStr: 
+
+Item:
+Id: 755982
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FIRENETTLES
+MsgId: Oh ho! Fiery indeed!
+MsgStr: 
+
+Item:
+Id: 755983
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FIRENETTLES_DRIED
+MsgId: I'd eyed it'd dried.
+MsgStr: 
+
+Item:
+Id: 755984
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FIREPEN
+MsgId: Hyuyuyu, the old flaming pen prank!
+MsgStr: 
+
+Item:
+Id: 755985
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FIREPIT.EMBERS
+MsgId: Soon to extinguish.
+MsgStr: 
+
+Item:
+Id: 755986
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FIREPIT.GENERIC
+MsgId: This fire will slake my thirst for warmth.
+MsgStr: 
+Thuật ngữ tham khảo: "Fire" => "Lửa"
+
+Item:
+Id: 755987
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FIREPIT.HIGH
+MsgId: Those are some spicy flames.
+MsgStr: 
+
+Item:
+Id: 755988
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FIREPIT.LOW
+MsgId: It burns so low, so low!
+MsgStr: 
+
+Item:
+Id: 755989
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FIREPIT.NORMAL
+MsgId: When I roam, camp feels like home.
+MsgStr: 
+
+Item:
+Id: 755990
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FIREPIT.OUT
+MsgId: And out it goes.
+MsgStr: 
+
+Item:
+Id: 755991
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FIRESTAFF
+MsgId: It makes fire by its own magic.
+MsgStr: 
+Thuật ngữ tham khảo: "Fire" => "Lửa"
+
+Item:
+Id: 755992
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FIRESUPPRESSOR.LOWFUEL
+MsgId: It hungers for souls! Or fuel.
+MsgStr: 
+
+Item:
+Id: 755993
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FIRESUPPRESSOR.OFF
+MsgId: Dead to the world.
+MsgStr: 
+Thuật ngữ tham khảo: "The World" => "Thế giới"
+
+Item:
+Id: 755994
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FIRESUPPRESSOR.ON
+MsgId: It is ready to fling at a moment's notice.
+MsgStr: 
+
+Item:
+Id: 755995
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FISH
+MsgId: You are quite fragrant.
+MsgStr: 
+
+Item:
+Id: 755996
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FISHINGNET
+MsgId: A riddle! What might one cast that's not a spell?
+MsgStr: 
+
+Item:
+Id: 755997
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FISHINGROD
+MsgId: A mortal pastime.
+MsgStr: 
+
+Item:
+Id: 755998
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FISHMEAT
+MsgId: Looks like the soul's already left this one.
+MsgStr: 
+Thuật ngữ tham khảo: "Soul" => "Linh Hồn"
+
+Item:
+Id: 755999
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FISHMEAT_COOKED
+MsgId: I do not wish to eat this fish.
+MsgStr: 
+Thuật ngữ tham khảo: "Fish" => "Câu Cá"
+
+Item:
+Id: 756000
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FISHMEAT_DRIED
+MsgId: So delish, this dried fish!
+MsgStr: 
+Thuật ngữ tham khảo: "Fish" => "Câu Cá"
+
+Item:
+Id: 756001
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FISHMEAT_SMALL
+MsgId: Looks like the soul's already left this one.
+MsgStr: 
+Thuật ngữ tham khảo: "Soul" => "Linh Hồn"
+
+Item:
+Id: 756002
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FISHMEAT_SMALL_COOKED
+MsgId: I do not wish to eat this fish.
+MsgStr: 
+Thuật ngữ tham khảo: "Fish" => "Câu Cá"
+
+Item:
+Id: 756003
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FISHMEAT_SMALL_DRIED
+MsgId: So delish, this dried fish!
+MsgStr: 
+Thuật ngữ tham khảo: "Fish" => "Câu Cá"
+
+Item:
+Id: 756004
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FISHSTICKS
+MsgId: No thank-you.
+MsgStr: 
+
+Item:
+Id: 756005
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FISHTACOS
+MsgId: More mortal food.
+MsgStr: 
+
+Item:
+Id: 756006
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FISH_BOX
+MsgId: Fill it to the brim with bream!
+MsgStr: 
+
+Item:
+Id: 756007
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FISH_COOKED
+MsgId: At least it isn't suffering anymore.
+MsgStr: 
+
+Item:
+Id: 756008
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FLINT
+MsgId: My eye was caught by its dull glint.
+MsgStr: 
+
+Item:
+Id: 756009
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FLOATINGLANTERN.DEFLATED
+MsgId: On the ground, no more floating around.
+MsgStr: 
+
+Item:
+Id: 756010
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FLOATINGLANTERN.GENERIC
+MsgId: I spy with my impish eye, something glowing high in the sky!
+MsgStr: 
+
+Item:
+Id: 756011
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FLOATINGLANTERN.HELD
+MsgId: Shall I say goodbye and let it fly?
+MsgStr: 
+
+Item:
+Id: 756012
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FLOTATIONCUSHION
+MsgId: Because there's no time to think, when you're plunged in the drink!
+MsgStr: 
+
+Item:
+Id: 756013
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FLOWER.GENERIC
+MsgId: Perfumed petals to pick and pluck.
+MsgStr: 
+Thuật ngữ tham khảo: "Petals" => "Cánh hoa"
+
+Item:
+Id: 756014
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FLOWER.ROSE
+MsgId: It's as red as I am.
+MsgStr: 
+
+Item:
+Id: 756015
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FLOWERHAT
+MsgId: I'll place a crown upon my head to ward away the growing dread.
+MsgStr: 
+
+Item:
+Id: 756016
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FLOWERSALAD
+MsgId: I don't really like eating.
+MsgStr: 
+
+Item:
+Id: 756017
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FLOWER_CAVE
+MsgId: How kind of you to light my way.
+MsgStr: 
+
+Item:
+Id: 756018
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FLOWER_CAVE_WITHERED
+MsgId: The light will not last.
+MsgStr: 
+
+Item:
+Id: 756019
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FLOWER_EVIL
+MsgId: It's not its fault it's evil.
+MsgStr: 
+
+Item:
+Id: 756020
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FLOWER_WITHERED
+MsgId: Farewell sweet petals.
+MsgStr: 
+Thuật ngữ tham khảo: "Petals" => "Cánh hoa"
+
+Item:
+Id: 756021
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FOLIAGE
+MsgId: Purpled leaves from down below.
+MsgStr: 
+
+Item:
+Id: 756022
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FOLIAGE_DRIED
+MsgId: I'd eyed it'd dried.
+MsgStr: 
+
+Item:
+Id: 756023
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FOOTBALLHAT
+MsgId: I hope I don't get helmet horns.
+MsgStr: 
+
+Item:
+Id: 756024
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FORGETMELOTS
+MsgId: They seems to have a tinge of magic about them.
+MsgStr: 
+
+Item:
+Id: 756025
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FORGETMELOTS_DRIED
+MsgId: I'd eyed it'd dried.
+MsgStr: 
+
+Item:
+Id: 756026
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FORMAL_BLUEPRINT
+MsgId: But will it really suit my beefalo? Hyuyu!
+MsgStr: 
+Thuật ngữ tham khảo: "Beefalo" => "Bò Lai"
+
+Item:
+Id: 756027
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FOSSIL_PIECE
+MsgId: A little piece of a great big beast.
+MsgStr: 
+
+Item:
+Id: 756028
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FOSSIL_STALKER.COMPLETE
+MsgId: That looks right as rain, it does it does!
+MsgStr: 
+
+Item:
+Id: 756029
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FOSSIL_STALKER.FUNNY
+MsgId: A silly look, that's to be sure!
+MsgStr: 
+
+Item:
+Id: 756030
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FOSSIL_STALKER.GENERIC
+MsgId: Still could use a piece or two.
+MsgStr: 
+
+Item:
+Id: 756031
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FRESHFRUITCREPES
+MsgId: Fruits and berries put to bed.
+MsgStr: 
+Thuật ngữ tham khảo: "Berries" => "Dâu Rừng"
+
+Item:
+Id: 756032
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FRIENDLYFRUITFLY
+MsgId: This fly has a much more tempered temper.
+MsgStr: 
+
+Item:
+Id: 756033
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FROG.DEAD
+MsgId: I am sorry! So sorry!
+MsgStr: 
+
+Item:
+Id: 756034
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FROG.GENERIC
+MsgId: I hop, you hop. Friends til the end!
+MsgStr: 
+
+Item:
+Id: 756035
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FROG.SLEEPING
+MsgId: Sleep fast little hopper.
+MsgStr: 
+
+Item:
+Id: 756036
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FROGFISHBOWL
+MsgId: I'd rather have a nice fresh soul.
+MsgStr: 
+Thuật ngữ tham khảo: "Soul" => "Linh Hồn"
+
+Item:
+Id: 756037
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FROGGLEBUNWICH
+MsgId: Mortals are weird.
+MsgStr: 
+
+Item:
+Id: 756038
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FROGLEGS
+MsgId: To hop no more.
+MsgStr: 
+
+Item:
+Id: 756039
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FROGLEGS_COOKED
+MsgId: Definitely no more hopping.
+MsgStr: 
+
+Item:
+Id: 756040
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FROGNEWTON
+MsgId: How do the mortals come up with these things?
+MsgStr: 
+
+Item:
+Id: 756041
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FROZENBANANADAIQUIRI
+MsgId: Don't the mortals like to innovate? Hyuyu.
+MsgStr: 
+
+Item:
+Id: 756042
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FRUITDRAGON.GENERIC
+MsgId: Little lizard, sharp and pointy!
+MsgStr: 
+
+Item:
+Id: 756043
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FRUITDRAGON.RIPE
+MsgId: That color looks great on you, hyuyu!
+MsgStr: 
+
+Item:
+Id: 756044
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FRUITDRAGON.SLEEPING
+MsgId: Hyuyu, catching some shuteye are we?
+MsgStr: 
+
+Item:
+Id: 756045
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FRUITFLY
+MsgId: Pulling pranks on the plants, I see!
+MsgStr: 
+
+Item:
+Id: 756046
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FRUITFLYFRUIT
+MsgId: I'll just put that in my pocket and see what happens!
+MsgStr: 
+
+Item:
+Id: 756047
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FRUITMEDLEY
+MsgId: The mortals threw a bunch of plants together.
+MsgStr: 
+
+Item:
+Id: 756048
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FUMAROLEAXE.GENERIC
+MsgId: The cracks are beginning to show, hyuyu!
+MsgStr: 
+
+Item:
+Id: 756049
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FUMAROLEAXE.HOT
+MsgId: Its heat can't be beat.
+MsgStr: 
+
+Item:
+Id: 756050
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FUMAROLEAXE.LUKEWARM
+MsgId: What's the harm? It's barely warm!
+MsgStr: 
+
+Item:
+Id: 756051
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FUMAROLEAXE.WARM
+MsgId: It keeps the cold from taking hold.
+MsgStr: 
+
+Item:
+Id: 756052
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FUMAROLEHAMMER.GENERIC
+MsgId: The cracks are beginning to show, hyuyu!
+MsgStr: 
+
+Item:
+Id: 756053
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FUMAROLEHAMMER.HOT
+MsgId: Its heat can't be beat.
+MsgStr: 
+
+Item:
+Id: 756054
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FUMAROLEHAMMER.LUKEWARM
+MsgId: What's the harm? It's barely warm!
+MsgStr: 
+
+Item:
+Id: 756055
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FUMAROLEHAMMER.WARM
+MsgId: It keeps the cold from taking hold.
+MsgStr: 
+
+Item:
+Id: 756056
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FUMAROLEPICKAXE.GENERIC
+MsgId: The cracks are beginning to show, hyuyu!
+MsgStr: 
+
+Item:
+Id: 756057
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FUMAROLEPICKAXE.HOT
+MsgId: Its heat can't be beat.
+MsgStr: 
+
+Item:
+Id: 756058
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FUMAROLEPICKAXE.LUKEWARM
+MsgId: What's the harm? It's barely warm!
+MsgStr: 
+
+Item:
+Id: 756059
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FUMAROLEPICKAXE.WARM
+MsgId: It keeps the cold from taking hold.
+MsgStr: 
+
+Item:
+Id: 756060
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FUMAROLESHOVEL.GENERIC
+MsgId: The cracks are beginning to show, hyuyu!
+MsgStr: 
+
+Item:
+Id: 756061
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FUMAROLESHOVEL.HOT
+MsgId: Its heat can't be beat.
+MsgStr: 
+
+Item:
+Id: 756062
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FUMAROLESHOVEL.LUKEWARM
+MsgId: What's the harm? It's barely warm!
+MsgStr: 
+
+Item:
+Id: 756063
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FUMAROLESHOVEL.WARM
+MsgId: It keeps the cold from taking hold.
+MsgStr: 
+
+Item:
+Id: 756064
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FUMAROLE_FARM_HOE.GENERIC
+MsgId: The cracks are beginning to show, hyuyu!
+MsgStr: 
+
+Item:
+Id: 756065
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FUMAROLE_FARM_HOE.HOT
+MsgId: Its heat can't be beat.
+MsgStr: 
+
+Item:
+Id: 756066
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FUMAROLE_FARM_HOE.LUKEWARM
+MsgId: What's the harm? It's barely warm!
+MsgStr: 
+
+Item:
+Id: 756067
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FUMAROLE_FARM_HOE.WARM
+MsgId: It keeps the cold from taking hold.
+MsgStr: 
+
+Item:
+Id: 756068
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FURTUFT
+MsgId: Not from my chest!
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 756069
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FUSED_SHADELING
+MsgId: The stuff of nightmares!
+MsgStr: 
+
+Item:
+Id: 756070
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FUSED_SHADELING_BOMB
+MsgId: Keep away, I don't want to play!
+MsgStr: 
+
+Item:
+Id: 756071
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GARGOYLE_HOUND
+MsgId: I hope that hellhound's in on the prank.
+MsgStr: 
+
+Item:
+Id: 756072
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GARGOYLE_WEREPIG
+MsgId: Let's not be here when that wakes up!
+MsgStr: 
+
+Item:
+Id: 756073
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GARLIC
+MsgId: Hissss!
+MsgStr: 
+
+Item:
+Id: 756074
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GARLIC_COOKED
+MsgId: Hissssss!
+MsgStr: 
+
+Item:
+Id: 756075
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GARLIC_OVERSIZED
+MsgId: Hissssss!
+MsgStr: 
+
+Item:
+Id: 756076
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GARLIC_SEEDS
+MsgId: Strange little seeds, indeed, indeed.
+MsgStr: 
+Thuật ngữ tham khảo: "Seeds" => "Hạt"
+
+Item:
+Id: 756077
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GAZPACHO
+MsgId: This human food stuff seems more watery than usual.
+MsgStr: 
+
+Item:
+Id: 756078
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GEARS
+MsgId: Grind them and grind them well.
+MsgStr: 
+
+Item:
+Id: 756079
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GELBLOB.GENERIC
+MsgId: Ick! It sticks!
+MsgStr: 
+
+Item:
+Id: 756080
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GELBLOB.HAS_CHARACTER
+MsgId: They're frowning because they're drowning! Hyuyu!
+MsgStr: 
+Thuật ngữ tham khảo: "Drowning" => "Chết đuối"
+
+Item:
+Id: 756081
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GELBLOB.HAS_ITEM
+MsgId: Enough with the guff! Let's get that stuff!
+MsgStr: 
+
+Item:
+Id: 756082
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GELBLOB_BOTTLE
+MsgId: Bottled abomination.
+MsgStr: 
+
+Item:
+Id: 756083
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GELBLOB_STORAGE.FULL
+MsgId: Congealed and sealed!
+MsgStr: 
+
+Item:
+Id: 756084
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GELBLOB_STORAGE.GENERIC
+MsgId: I do declare, there's nothing there.
+MsgStr: 
+
+Item:
+Id: 756085
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GELBLOB_STORAGE_KIT
+MsgId: Grrr... Not on the fur!
+MsgStr: 
+
+Item:
+Id: 756086
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GEMSOCKET.GEMS
+MsgId: It could use some shine, if you ask me.
+MsgStr: 
+
+Item:
+Id: 756087
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GEMSOCKET.VALID
+MsgId: Magic always does provide!
+MsgStr: 
+
+Item:
+Id: 756088
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GENERIC_CORPSE.BURNING
+MsgId: Cleansing fire, so the worst won't transpire.
+MsgStr: 
+Thuật ngữ tham khảo: "Fire" => "Lửa"
+
+Item:
+Id: 756089
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GENERIC_CORPSE.GENERIC
+MsgId: I'm not mistaken, its life's been taken.
+MsgStr: 
+
+Item:
+Id: 756090
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GENERIC_CORPSE.REVIVING
+MsgId: It's turning and returning.
+MsgStr: 
+
+Item:
+Id: 756091
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GESTALT
+MsgId: Good evening, children!
+MsgStr: 
+
+Item:
+Id: 756092
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GESTALT_CAGE.FILLED
+MsgId: It hides insides!
+MsgStr: 
+
+Item:
+Id: 756093
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GESTALT_CAGE.GENERIC
+MsgId: Nothing worth noting.
+MsgStr: 
+
+Item:
+Id: 756094
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GESTALT_GUARD
+MsgId: They grow up so fast!
+MsgStr: 
+
+Item:
+Id: 756095
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GESTALT_GUARD_EVOLVED
+MsgId: Well whad'ya know, we reap what we sow!
+MsgStr: 
+
+Item:
+Id: 756096
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GHOST
+MsgId: An unclaimed soul!
+MsgStr: 
+Thuật ngữ tham khảo: "Soul" => "Linh Hồn"
+
+Item:
+Id: 756097
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GHOSTFLOWER
+MsgId: What a fetching phantom flower.
+MsgStr: 
+Thuật ngữ tham khảo: "Flower" => "Hoa"
+
+Item:
+Id: 756098
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GHOSTFLOWERHAT
+MsgId: Ghostly flowers yield strange powers.
+MsgStr: 
+
+Item:
+Id: 756099
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GHOSTLYELIXIR_ATTACK
+MsgId: Hyuyu! Someone's getting crafty!
+MsgStr: 
+
+Item:
+Id: 756100
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GHOSTLYELIXIR_FASTREGEN
+MsgId: Hyuyu! Someone's getting crafty!
+MsgStr: 
+
+Item:
+Id: 756101
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GHOSTLYELIXIR_LUNAR
+MsgId: Hyuyu! Someone's getting crafty!
+MsgStr: 
+
+Item:
+Id: 756102
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GHOSTLYELIXIR_RETALIATION
+MsgId: Hyuyu! Someone's getting crafty!
+MsgStr: 
+
+Item:
+Id: 756103
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GHOSTLYELIXIR_REVIVE
+MsgId: Hyuyu! Someone's getting crafty!
+MsgStr: 
+
+Item:
+Id: 756104
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GHOSTLYELIXIR_SHADOW
+MsgId: Hyuyu! Someone's getting crafty!
+MsgStr: 
+
+Item:
+Id: 756105
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GHOSTLYELIXIR_SHIELD
+MsgId: Hyuyu! Someone's getting crafty!
+MsgStr: 
+
+Item:
+Id: 756106
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GHOSTLYELIXIR_SLOWREGEN
+MsgId: Hyuyu! Someone's getting crafty!
+MsgStr: 
+
+Item:
+Id: 756107
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GHOSTLYELIXIR_SPEED
+MsgId: Hyuyu! Someone's getting crafty!
+MsgStr: 
+
+Item:
+Id: 756108
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GIFT
+MsgId: Presents! How fun!
+MsgStr: 
+
+Item:
+Id: 756109
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GIFTWRAP
+MsgId: That's a wrap!
+MsgStr: 
+
+Item:
+Id: 756110
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GINGERBREADHOUSE
+MsgId: What a charming cookie cottage.
+MsgStr: 
+
+Item:
+Id: 756111
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GINGERBREADPIG
+MsgId: Here little piggy!
+MsgStr: 
+
+Item:
+Id: 756112
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GINGERBREADWARG
+MsgId: That cookie wants to sink its teeth into me!
+MsgStr: 
+
+Item:
+Id: 756113
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GLASSBLOCK
+MsgId: A pretty spire, made of glass.
+MsgStr: 
+
+Item:
+Id: 756114
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GLASSCUTTER
+MsgId: Oh, I'm sure I'll have fun with this. Hyuyu!
+MsgStr: 
+
+Item:
+Id: 756115
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GLASSSPIKE
+MsgId: Sharp and pointy as my tooth!
+MsgStr: 
+
+Item:
+Id: 756116
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GLOMMER.GENERIC
+MsgId: What thoughts lurk within that curious noggin?
+MsgStr: 
+
+Item:
+Id: 756117
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GLOMMER.SLEEPING
+MsgId: If only I were a sleep demon.
+MsgStr: 
+
+Item:
+Id: 756118
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GLOMMERFLOWER.DEAD
+MsgId: Oh no, oh dear!
+MsgStr: 
+
+Item:
+Id: 756119
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GLOMMERFLOWER.GENERIC
+MsgId: A flower that attracts a friend.
+MsgStr: 
+Thuật ngữ tham khảo: "Flower" => "Hoa"
+
+Item:
+Id: 756120
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GLOMMERFUEL
+MsgId: This stuff's so funny!
+MsgStr: 
+
+Item:
+Id: 756121
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GLOMMERWINGS
+MsgId: How dainty!
+MsgStr: 
+
+Item:
+Id: 756122
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GLOWBERRYMOUSSE
+MsgId: Seems like a lot of effort for something you eat.
+MsgStr: 
+
+Item:
+Id: 756123
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GNARWAIL.BROKENHORN
+MsgId: I don't see your point, hyuyu!
+MsgStr: 
+
+Item:
+Id: 756124
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GNARWAIL.BROKENHORN_FOLLOWER
+MsgId: I'm afraid I don't have any spare horns.
+MsgStr: 
+
+Item:
+Id: 756125
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GNARWAIL.FOLLOWER
+MsgId: Come along, there's a sea full of mischief to be had!
+MsgStr: 
+
+Item:
+Id: 756126
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GNARWAIL.GENERIC
+MsgId: Now now, no need to put a dent in my dinghy.
+MsgStr: 
+
+Item:
+Id: 756127
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GNARWAIL_HORN
+MsgId: It makes a compelling point, hyuyu!
+MsgStr: 
+
+Item:
+Id: 756128
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GOATMILK
+MsgId: Please, no thanks.
+MsgStr: 
+
+Item:
+Id: 756129
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GOGGLESHAT
+MsgId: I have to keep up appearances.
+MsgStr: 
+
+Item:
+Id: 756130
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GOLDENAXE
+MsgId: Now where's my golden fiddle?
+MsgStr: 
+
+Item:
+Id: 756131
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GOLDENPICKAXE
+MsgId: The mortals say you have to spend gold to make gold.
+MsgStr: 
+
+Item:
+Id: 756132
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GOLDENPITCHFORK
+MsgId: Fancy mob gear. Hyuyu!
+MsgStr: 
+
+Item:
+Id: 756133
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GOLDENSHOVEL
+MsgId: Luxuriously unnecessary! Hyuyu!
+MsgStr: 
+
+Item:
+Id: 756134
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GOLDEN_FARM_HOE
+MsgId: How splendidly excessive! Hyuyu!
+MsgStr: 
+
+Item:
+Id: 756135
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GOLDNUGGET
+MsgId: Money is soulless.
+MsgStr: 
+
+Item:
+Id: 756136
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GOOSE_FEATHER
+MsgId: This feather may help one brave hot weather.
+MsgStr: 
+
+Item:
+Id: 756137
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GRASS.BARREN
+MsgId: Salted earth, none will return.
+MsgStr: 
+
+Item:
+Id: 756138
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GRASS.BURNING
+MsgId: Whoops-a-doodle.
+MsgStr: 
+
+Item:
+Id: 756139
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GRASS.DISEASED
+MsgId: Now it stinks really good!
+MsgStr: 
+
+Item:
+Id: 756140
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GRASS.DISEASING
+MsgId: It's started to stink.
+MsgStr: 
+
+Item:
+Id: 756141
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GRASS.GENERIC
+MsgId: Grass that grows from richest earth.
+MsgStr: 
+Thuật ngữ tham khảo: "Grass" => "Cỏ"
+
+Item:
+Id: 756142
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GRASS.PICKED
+MsgId: Gone, all gone.
+MsgStr: 
+
+Item:
+Id: 756143
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GRASS.WITHERED
+MsgId: Feeling down, are you?
+MsgStr: 
+
+Item:
+Id: 756144
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GRASSGATOR
+MsgId: See you later, gator.
+MsgStr: 
+
+Item:
+Id: 756145
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GRASSGEKKO.DISEASED
+MsgId: I can see the disease creeping into your soul.
+MsgStr: 
+Thuật ngữ tham khảo: "Soul" => "Linh Hồn"
+
+Item:
+Id: 756146
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GRASSGEKKO.GENERIC
+MsgId: Hello dear friend! No need to drop your tail.
+MsgStr: 
+
+Item:
+Id: 756147
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GRASS_UMBRELLA
+MsgId: A tool to keep the rain away.
+MsgStr: 
+
+Item:
+Id: 756148
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GRAVEURN.GENERIC
+MsgId: The urn yearns, hyuyu!
+MsgStr: 
+Thuật ngữ tham khảo: "Urn" => "Bình Di Cốt"
+
+Item:
+Id: 756149
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GRAVEURN.HAS_SPIRIT
+MsgId: Just a spirit, no need to fear it.
+MsgStr: 
+
+Item:
+Id: 756150
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GRAVY
+MsgId: It sits in a boat that doesn't float.
+MsgStr: 
+Thuật ngữ tham khảo: "Boat" => "Thuyền ván"
+
+Item:
+Id: 756151
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GREENAMULET
+MsgId: So I'll be more skilled when I rebuild.
+MsgStr: 
+
+Item:
+Id: 756152
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GREENGEM
+MsgId: Gentlest green from lush vales gleaned.
+MsgStr: 
+
+Item:
+Id: 756153
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GREENMOONEYE
+MsgId: This eye of green wishes to be seen!
+MsgStr: 
+
+Item:
+Id: 756154
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GREENSTAFF
+MsgId: Do not treat it like a toy. Its purpose is to destroy.
+MsgStr: 
+
+Item:
+Id: 756155
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GREEN_CAP
+MsgId: These mushrooms play all sorts of tricks.
+MsgStr: 
+
+Item:
+Id: 756156
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GREEN_CAP_COOKED
+MsgId: That changed it somehow.
+MsgStr: 
+
+Item:
+Id: 756157
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GREEN_MUSHROOM.GENERIC
+MsgId: Found you!
+MsgStr: 
+
+Item:
+Id: 756158
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GREEN_MUSHROOM.INGROUND
+MsgId: It's playing hide and seek!
+MsgStr: 
+
+Item:
+Id: 756159
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GREEN_MUSHROOM.PICKED
+MsgId: Gone, all gone.
+MsgStr: 
+
+Item:
+Id: 756160
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GROTTO_POOL_BIG
+MsgId: Perhaps it is home to a nymph.
+MsgStr: 
+
+Item:
+Id: 756161
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GROTTO_POOL_SMALL
+MsgId: Perhaps it is home to a very tiny nymph.
+MsgStr: 
+
+Item:
+Id: 756162
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GUACAMOLE
+MsgId: I don't like to eat, unless I have to.
+MsgStr: 
+
+Item:
+Id: 756163
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GUANO
+MsgId: It came from a bat, and that is that.
+MsgStr: 
+
+Item:
+Id: 756164
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.GUNPOWDER
+MsgId: I'll spell your doom with a mighty BOOM!
+MsgStr: 
+
+Item:
+Id: 756165
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HALLOWEENCANDY_1
+MsgId: Something to sink my fangs into!
+MsgStr: 
+
+Item:
+Id: 756166
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HALLOWEENCANDY_10
+MsgId: First time for everything, they say, they say.
+MsgStr: 
+
+Item:
+Id: 756167
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HALLOWEENCANDY_11
+MsgId: Harumpf, it melts all over my claws.
+MsgStr: 
+
+Item:
+Id: 756168
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HALLOWEENCANDY_12
+MsgId: How delightfully disgusting!
+MsgStr: 
+
+Item:
+Id: 756169
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HALLOWEENCANDY_13
+MsgId: I'll try a nibble, I will, I will.
+MsgStr: 
+
+Item:
+Id: 756170
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HALLOWEENCANDY_14
+MsgId: Ooo hoo hoo, spicy!
+MsgStr: 
+
+Item:
+Id: 756171
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HALLOWEENCANDY_2
+MsgId: I suppose I could eat a delightful treat.
+MsgStr: 
+
+Item:
+Id: 756172
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HALLOWEENCANDY_3
+MsgId: It's just human corn.
+MsgStr: 
+Thuật ngữ tham khảo: "Corn" => "Ngô"
+
+Item:
+Id: 756173
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HALLOWEENCANDY_4
+MsgId: I could be persuaded to try a taste.
+MsgStr: 
+
+Item:
+Id: 756174
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HALLOWEENCANDY_5
+MsgId: Fweehee! Little kitties!
+MsgStr: 
+
+Item:
+Id: 756175
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HALLOWEENCANDY_6
+MsgId: This prank is ingenious!
+MsgStr: 
+
+Item:
+Id: 756176
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HALLOWEENCANDY_7
+MsgId: Hm... I don't think I'll like that.
+MsgStr: 
+
+Item:
+Id: 756177
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HALLOWEENCANDY_8
+MsgId: Hyuyu, a candied soul!
+MsgStr: 
+Thuật ngữ tham khảo: "Soul" => "Linh Hồn"
+
+Item:
+Id: 756178
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HALLOWEENCANDY_9
+MsgId: Hyuyu, it slithers all the way down!
+MsgStr: 
+
+Item:
+Id: 756179
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HALLOWEENPOTION_BRAVERY
+MsgId: Tonic of anti-battiness!
+MsgStr: 
+
+Item:
+Id: 756180
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HALLOWEENPOTION_DRINKS_POTENT
+MsgId: Hyuyu! This'll put tufts on your chest!
+MsgStr: 
+Thuật ngữ tham khảo: "Chest" => "Rương"
+
+Item:
+Id: 756181
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HALLOWEENPOTION_DRINKS_WEAK
+MsgId: How tame and timid!
+MsgStr: 
+
+Item:
+Id: 756182
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HALLOWEENPOTION_FIRE_FX
+MsgId: Firewater!
+MsgStr: 
+
+Item:
+Id: 756183
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HALLOWEENPOTION_MOON
+MsgId: A brew of switcheroo!
+MsgStr: 
+
+Item:
+Id: 756184
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HALLOWEEN_ORNAMENT_1
+MsgId: It makes me hungry, yes indeed!
+MsgStr: 
+
+Item:
+Id: 756185
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HALLOWEEN_ORNAMENT_2
+MsgId: Absolutely batty!
+MsgStr: 
+
+Item:
+Id: 756186
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HALLOWEEN_ORNAMENT_3
+MsgId: A creepy crawler for the tree.
+MsgStr: 
+
+Item:
+Id: 756187
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HALLOWEEN_ORNAMENT_4
+MsgId: A swirly whirly tentacle!
+MsgStr: 
+Thuật ngữ tham khảo: "Tentacle" => "Xúc tu"
+
+Item:
+Id: 756188
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HALLOWEEN_ORNAMENT_5
+MsgId: Made to dangle from the tree.
+MsgStr: 
+
+Item:
+Id: 756189
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HALLOWEEN_ORNAMENT_6
+MsgId: I do believe it is quite dead!
+MsgStr: 
+
+Item:
+Id: 756190
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HAMBAT
+MsgId: I'll bring it down with a mighty hamTHWACK!
+MsgStr: 
+
+Item:
+Id: 756191
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HAMMER
+MsgId: To drive my points home.
+MsgStr: 
+
+Item:
+Id: 756192
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HAMMER_MJOLNIR
+MsgId: Clamor for the hammer!
+MsgStr: 
+Thuật ngữ tham khảo: "Hammer" => "Búa"
+
+Item:
+Id: 756193
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HANDPILLOW_BEEFALOWOOL
+MsgId: The beefiest pillow I ever did see.
+MsgStr: 
+
+Item:
+Id: 756194
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HANDPILLOW_KELP
+MsgId: I'd never wish to sleep like a fish.
+MsgStr: 
+Thuật ngữ tham khảo: "Fish" => "Câu Cá"
+
+Item:
+Id: 756195
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HANDPILLOW_PETALS
+MsgId: For a sweet-smelling smack!
+MsgStr: 
+
+Item:
+Id: 756196
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HANDPILLOW_STEELWOOL
+MsgId: A nasty thing, it'll do well in the ring!
+MsgStr: 
+
+Item:
+Id: 756197
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HAREBALL
+MsgId: Hyuyu! I see they're seasoned pranksters.
+MsgStr: 
+
+Item:
+Id: 756198
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HAWAIIANSHIRT
+MsgId: Oh no, that's not really my style.
+MsgStr: 
+
+Item:
+Id: 756199
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HEALINGSALVE
+MsgId: To remove the pain of this weary world!
+MsgStr: 
+
+Item:
+Id: 756200
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HEALINGSALVE_ACID
+MsgId: It'll heal, seal, even congeal! Get Slimy Salve today! What a steal!
+MsgStr: 
+Thuật ngữ tham khảo: "Slimy Salve" => "Thuốc Nhầy Nhụa"
+
+Item:
+Id: 756201
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HEALINGSALVE_FUMAROLE
+MsgId: For when the temperature's higher, or even when there's fire!
+MsgStr: 
+Thuật ngữ tham khảo: "Fire" => "Lửa"
+
+Item:
+Id: 756202
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HEALINGSTAFF
+MsgId: A little heal will improve how you feel.
+MsgStr: 
+
+Item:
+Id: 756203
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HEATROCK.COLD
+MsgId: Slightly chilled, to be sure.
+MsgStr: 
+
+Item:
+Id: 756204
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HEATROCK.FROZEN
+MsgId: Frozen hard as a rock! Hyuyu.
+MsgStr: 
+Thuật ngữ tham khảo: "Rock" => "Đá tảng"
+
+Item:
+Id: 756205
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HEATROCK.GENERIC
+MsgId: My goodness! A rock!
+MsgStr: 
+Thuật ngữ tham khảo: "Rock" => "Đá tảng"
+
+Item:
+Id: 756206
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HEATROCK.HOT
+MsgId: So cozy it's almost unpleasant.
+MsgStr: 
+
+Item:
+Id: 756207
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HEATROCK.WARM
+MsgId: Quite cozy!
+MsgStr: 
+
+Item:
+Id: 756208
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HEDGEHOUND
+MsgId: You wouldn't eat a fellow trickster, would you?
+MsgStr: 
+
+Item:
+Id: 756209
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HEDGEHOUND_BUSH
+MsgId: Did those vines just whine? I'm sure it's fine.
+MsgStr: 
+
+Item:
+Id: 756210
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HERMITCRAB
+MsgId: Hyuyu, let's see if we can't coax this crab out of her shell!
+MsgStr: 
+
+Item:
+Id: 756211
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HERMITCRABTEA_FIRENETTLES
+MsgId: Feeling chilly? Drink up, silly!
+MsgStr: 
+
+Item:
+Id: 756212
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HERMITCRABTEA_FOLIAGE
+MsgId: The taste of fern is for what I yearn.
+MsgStr: 
+Thuật ngữ tham khảo: "Fern" => "Dương xỉ"
+
+Item:
+Id: 756213
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HERMITCRABTEA_FORGETMELOTS
+MsgId: It'll help to find my poor lost mind!
+MsgStr: 
+
+Item:
+Id: 756214
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.HERMITCRABTEA_MOON_TREE_BLOSSOM
+MsgId: The tea from this blossom is awesome!
+MsgStr: 
+
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "[\n  {\"id\":755915,\"suggestedTranslation\":\"Nào nào, chúng ta cùng dọn bàn nào.\",\"rating\":0.0},\n  {\"id\":755916,\"suggestedTranslation\":\"Ánh sáng rực rỡ khiến ta vẫn thấy đường vào ban đêm!\",\"rating\":0.0},\n  {\"id\":755917,\"suggestedTranslation\":\"Ta chưa bao giờ học phép lịch sự trên bàn ăn cả.\",\"rating\":0.0},\n  {\"id\":755918,\"suggestedTranslation\":\"Ta sẽ cố không bĩu môi khi ngọn đèn đó sớm tắt ngoóm.\",\"rating\":0.0},\n  {\"id\":755919,\"suggestedTranslation\":\"Bông hoa nhỏ trên bàn... trông ngươi có vẻ không vững vàng lắm nhỉ.\",\"rating\":0.0},\n  {\"id\":755920,\"suggestedTranslation\":\"Lô-lô-líp, một cái cây đang cháy!\",\"rating\":0.0},\n  {\"id\":755921,\"suggestedTranslation\":\"Chà, thế thì vui phết.\",\"rating\":0.0},\n  {\"id\":755922,\"suggestedTranslation\":\"Một trò đùa cây cối buồn cười thật.\",\"rating\":0.0},\n  {\"id\":755923,\"suggestedTranslation\":\"Một cái cây cường tráng với những chiếc lá xanh sẫm.\",\"rating\":0.0},\n  {\"id\":755924,\"suggestedTranslation\":\"Lô-lô-líp, một cái cây đang cháy!\",\"rating\":0.0},\n  {\"id\":755925,\"suggestedTranslation\":\"Chà, thế thì vui phết.\",\"rating\":0.0},\n  {\"id\":755926,\"suggestedTranslation\":\"Một trò đùa cây cối buồn cười thật.\",\"rating\":0.0},\n  {\"id\":755927,\"suggestedTranslation\":\"Một cái cây ủ rũ đầy những cục bướu sần sùi.\",\"rating\":0.0},\n  {\"id\":755928,\"suggestedTranslation\":\"Tầm nhìn của kẻ độc nhãn bị kéo mỏng manh.\",\"rating\":0.0},\n  {\"id\":755929,\"suggestedTranslation\":\"Chà, đúng là một khung cảnh mát mắt mà. Hyuyuyu!\",\"rating\":0.0},\n  {\"id\":755930,\"suggestedTranslation\":\"Dù hắn có nói gì thì ta làm, đó cũng là dối trá!\",\"rating\":0.0},\n  {\"id\":755931,\"suggestedTranslation\":\"Ta cảm thấy sợ hãi đến phát khiếp luôn rồi đây!\",\"rating\":0.0},\n  {\"id\":755932,\"suggestedTranslation\":\"Ối giời ơi, ngươi không chịu mở mắt ra à?\",\"rating\":0.0},\n  {\"id\":755933,\"suggestedTranslation\":\"Ôi chao ôi, một con mắt đáng yêu làm sao.\",\"rating\":0.0},\n  {\"id\":755934,\"suggestedTranslation\":\"Ôi giời ơi, nhìn con mắt kìa!\",\"rating\":0.0},\n  {\"id\":755935,\"suggestedTranslation\":\"Chỉ cần dựng nó lên là đủ hạ gục kẻ thù bằng cái nhìn tử thần rồi.\",\"rating\":0.0},\n  {\"id\":755936,\"suggestedTranslation\":\"Quả là một trò đùa ngớ ngẩn.\",\"rating\":0.0},\n  {\"id\":755937,\"suggestedTranslation\":\"Kẻ tạo ra thức ăn của phàm nhân.\",\"rating\":0.0},\n  {\"id\":755938,\"suggestedTranslation\":\"Lũ phàm nhân đang làm thức ăn phàm nhân kìa.\",\"rating\":0.0},\n  {\"id\":755939,\"suggestedTranslation\":\"Thứ thức ăn bán thành phẩm đang đói bụng rồi kìa.\",\"rating\":0.0},\n  {\"id\":755940,\"suggestedTranslation\":\"Ta đã chán ngấy việc cày xới và bận rộn rồi.\",\"rating\":0.0},\n  {\"id\":755941,\"suggestedTranslation\":\"Hyuyuyu, úi chà!\",\"rating\":0.0},\n  {\"id\":755942,\"suggestedTranslation\":\"Ôi thật là đẹp mắt, hoa mầu đã chín rồi!\",\"rating\":0.0},\n  {\"id\":755943,\"suggestedTranslation\":\"Phải chi ta thèm ăn thức ăn của phàm nhân!\",\"rating\":0.0},\n  {\"id\":755944,\"suggestedTranslation\":\"Đúng là một đám cỏ dại! Hyuyuyu!\",\"rating\":0.0},\n  {\"id\":755945,\"suggestedTranslation\":\"Một loại thực vật!\",\"rating\":0.0},\n  {\"id\":755946,\"suggestedTranslation\":\"Lớn nhanh và cao lớn, bằng không thì thôi.\",\"rating\":0.0},\n  {\"id\":755947,\"suggestedTranslation\":\"Đến lũ phàm nhân còn chẳng thèm ăn cái này nữa là.\",\"rating\":0.0},\n  {\"id\":755948,\"suggestedTranslation\":\"Cái này thối rữa cả rồi!\",\"rating\":0.0},\n  {\"id\":755949,\"suggestedTranslation\":\"Ra đây nhập bọn với chúng ta nào, bé con!\",\"rating\":0.0},\n  {\"id\":755950,\"suggestedTranslation\":\"Cày một mảnh đất cho những loại thực vật kén chọn.\",\"rating\":0.0},\n  {\"id\":755951,\"suggestedTranslation\":\"Làm việc suốt mà không chơi đùa sẽ biến một tiểu yêu thành kẻ bất hạnh.\",\"rating\":0.0},\n  {\"id\":755952,\"suggestedTranslation\":\"E rằng ta phải đày ải nó khỏi khu vườn này thôi.\",\"rating\":0.0},\n  {\"id\":755953,\"suggestedTranslation\":\"Nó tạo ra một cơn gió lớn. Có gì mà phải ầm ĩ nhỉ?\",\"rating\":0.0},\n  {\"id\":755954,\"suggestedTranslation\":\"Lông vũ và sừng trông rất hợp nhau.\",\"rating\":0.0},\n  {\"id\":755955,\"suggestedTranslation\":\"Dùng chiếc lông này, ta sẽ dùng, ta sẽ dùng.\",\"rating\":0.0},\n  {\"id\":755956,\"suggestedTranslation\":\"Một vật kỷ niệm để nhớ về tiếng hót ngọt ngào của nó.\",\"rating\":0.0},\n  {\"id\":755957,\"suggestedTranslation\":\"Một vật lưu niệm về người bạn lông đen tuyền của ta.\",\"rating\":0.0},\n  {\"id\":755958,\"suggestedTranslation\":\"Để tự nhắc nhở bản thân về cái khuôn mặt có chiếc mỏ ngọt ngào ấy.\",\"rating\":0.0},\n  {\"id\":755959,\"suggestedTranslation\":\"Một món quà lưu niệm về người bạn màu xanh dịu dàng.\",\"rating\":0.0},\n  {\"id\":755960,\"suggestedTranslation\":\"Xin kính chào và chúc sức khỏe, thưa quý bà.\",\"rating\":0.0},\n  {\"id\":755961,\"suggestedTranslation\":\"Để chặn ngươi ở ngoài, hay giữ ta ở trong?\",\"rating\":0.0},\n  {\"id\":755962,\"suggestedTranslation\":\"Tưởng là không được liên kết chứ.\",\"rating\":0.0},\n  {\"id\":755963,\"suggestedTranslation\":\"Nghĩ là nó được liên kết rồi đấy.\",\"rating\":0.0},\n  {\"id\":755964,\"suggestedTranslation\":\"Vẫn chưa được dựng lên.\",\"rating\":0.0},\n  {\"id\":755965,\"suggestedTranslation\":\"Dành cho những chuyến viếng thăm tạm thời.\",\"rating\":0.0},\n  {\"id\":755966,\"suggestedTranslation\":\"Nó chẳng có tác dụng gì khi nằm trên mặt đất cả.\",\"rating\":0.0},\n  {\"id\":755967,\"suggestedTranslation\":\"Nó chẳng có tác dụng gì khi nằm trên mặt đất cả.\",\"rating\":0.0},\n  {\"id\":755968,\"suggestedTranslation\":\"Một hàng rào kim loại để chúng ta phòng thủ.\",\"rating\":0.0},\n  {\"id\":755969,\"suggestedTranslation\":\"Một thanh kiếm chống lại hàng rào... tất cả chúng ta đều mất trí rồi!\",\"rating\":0.0},\n  {\"id\":755970,\"suggestedTranslation\":\"Hyuyu! Đúng là một đống phân!\",\"rating\":0.0},\n  {\"id\":755971,\"suggestedTranslation\":\"Chẳng có gì ám muội ở đây cả, hyuyu!\",\"rating\":0.0},\n  {\"id\":755972,\"suggestedTranslation\":\"Bạn tôi có thể nô đùa trong bộ cánh lễ hội này!\",\"rating\":0.0},\n  {\"id\":755973,\"suggestedTranslation\":\"Người ta nói trái cây treo thấp là ngọt ngào nhất!\",\"rating\":0.0},\n  {\"id\":755974,\"suggestedTranslation\":\"Thôi, ta xin nhường.\",\"rating\":0.0},\n  {\"id\":755975,\"suggestedTranslation\":\"Đồ ăn xiên que thì chẳng giải quyết được gì đâu.\",\"rating\":0.0},\n  {\"id\":755976,\"suggestedTranslation\":\"Lũ phàm nhân có vẻ thích ăn kiểu này hơn.\",\"rating\":0.0},\n  {\"id\":755977,\"suggestedTranslation\":\"Ô hô hô, thật là hỗn loạn đến thú vị!\",\"rating\":0.0},\n  {\"id\":755978,\"suggestedTranslation\":\"Lách tách, lách tách!\",\"rating\":0.0},\n  {\"id\":755979,\"suggestedTranslation\":\"Chút ánh sáng tự nhiên để ban cho ta thị lực.\",\"rating\":0.0},\n  {\"id\":755980,\"suggestedTranslation\":\"Những linh hồn nhỏ bé bồn chồn và rung rinh.\",\"rating\":0.0},\n  {\"id\":755981,\"suggestedTranslation\":\"Hyuyu, thật là rực lửa!\",\"rating\":0.0},\n  {\"id\":755982,\"suggestedTranslation\":\"Ô hô! Quả là cháy bỏng!\",\"rating\":0.0},\n  {\"id\":755983,\"suggestedTranslation\":\"Ta đã ngắm khi nó khô ngắm.\",\"rating\":0.0},\n  {\"id\":755984,\"suggestedTranslation\":\"Hyuyuyu, trò đùa cây bút bốc cháy kinh điển!\",\"rating\":0.0},\n  {\"id\":755985,\"suggestedTranslation\":\"Sắp tàn lụi rồi.\",\"rating\":0.0},\n  {\"id\":755986,\"suggestedTranslation\":\"Ngọn lửa này sẽ làm dịu cơn khát sự ấm áp của ta.\",\"rating\":0.0},\n  {\"id\":755987,\"suggestedTranslation\":\"Mấy ngọn lửa đó thật là cay nồng.\",\"rating\":0.0},\n  {\"id\":755988,\"suggestedTranslation\":\"Nó cháy nhỏ lắm, nhỏ lắm!\",\"rating\":0.0},\n  {\"id\":755989,\"suggestedTranslation\":\"Khi ta lang thang, cắm trại cho ta cảm giác như ở nhà.\",\"rating\":0.0},\n  {\"id\":755990,\"suggestedTranslation\":\"Và thế là nó tắt ngấm.\",\"rating\":0.0},\n  {\"id\":755991,\"suggestedTranslation\":\"Nó tạo ra lửa bằng chính phép thuật của mình.\",\"rating\":0.0},\n  {\"id\":755992,\"suggestedTranslation\":\"Nó thèm khát linh hồn! Hoặc là nhiên liệu.\",\"rating\":0.0},\n  {\"id\":755993,\"suggestedTranslation\":\"Chết lặng với thế giới.\",\"rating\":0.0},\n  {\"id\":755994,\"suggestedTranslation\":\"Nó đã sẵn sàng để văng ra bất cứ lúc nào.\",\"rating\":0.0},\n  {\"id\":755995,\"suggestedTranslation\":\"Ngươi thơm phức thật đấy.\",\"rating\":0.0},\n  {\"id\":755996,\"suggestedTranslation\":\"Một câu đố! Thứ gì người ta có thể thả xuống mà không phải phép thuật?\",\"rating\":0.0},\n  {\"id\":755997,\"suggestedTranslation\":\"Một trò tiêu khiển của phàm nhân.\",\"rating\":0.0},\n  {\"id\":755998,\"suggestedTranslation\":\"Trông có vẻ linh hồn đã rời khỏi cơ thể này rồi.\",\"rating\":0.0},\n  {\"id\":755999,\"suggestedTranslation\":\"Ta không muốn ăn con cá này đâu.\",\"rating\":0.0},\n  {\"id\":756000,\"suggestedTranslation\":\"Ngon tuyệt cú mèo, món cá khô này!\",\"rating\":0.0},\n  {\"id\":756001,\"suggestedTranslation\":\"Trông có vẻ linh hồn đã rời khỏi cơ thể này rồi.\",\"rating\":0.0},\n  {\"id\":756002,\"suggestedTranslation\":\"Ta không muốn ăn con cá này đâu.\",\"rating\":0.0},\n  {\"id\":756003,\"suggestedTranslation\":\"Ngon tuyệt cú mèo, món cá khô này!\",\"rating\":0.0},\n  {\"id\":756004,\"suggestedTranslation\":\"Không, cảm ơn nhé.\",\"rating\":0.0},\n  {\"id\":756005,\"suggestedTranslation\":\"Lại thêm thức ăn của phàm nhân.\",\"rating\":0.0},\n  {\"id\":756006,\"suggestedTranslation\":\"Lấp đầy nó bằng cá tráp đến tận miệng nào!\",\"rating\":0.0},\n  {\"id\":756007,\"suggestedTranslation\":\"Ít ra thì nó không còn phải chịu đau khổ nữa.\",\"rating\":0.0},\n  {\"id\":756008,\"suggestedTranslation\":\"Mắt ta bị thu hút bởi ánh lấp lánh mờ ảo của nó.\",\"rating\":0.0},\n  {\"id\":756009,\"suggestedTranslation\":\"Nằm trên mặt đất, chẳng thể bay lượn quanh đây nữa.\",\"rating\":0.0},\n  {\"id\":756010,\"suggestedTranslation\":\"Ta thám thính bằng con mắt tinh quái của mình, thấy thứ gì đó đang phát sáng trên cao tít trời mây!\",\"rating\":0.0},\n  {\"id\":756011,\"suggestedTranslation\":\"Ta có nên nói lời tạm biệt và để nó bay đi không?\",\"rating\":0.0},\n  {\"id\":756012,\"suggestedTranslation\":\"Bởi vì chẳng có thời gian để suy nghĩ, khi ngươi ngụp lặn trong dòng nước!\",\"rating\":0.0},\n  {\"id\":756013,\"suggestedTranslation\":\"Những cánh hoa thơm ngát để ngắt và hái.\",\"rating\":0.0},\n  {\"id\":756014,\"suggestedTranslation\":\"Nó đỏ y như ta vậy.\",\"rating\":0.0},\n  {\"id\":756015,\"suggestedTranslation\":\"Ta sẽ đội một chiếc vương miện lên đầu để xua đi nỗi sợ hãi đang dâng trào.\",\"rating\":0.0},\n  {\"id\":756016,\"suggestedTranslation\":\"Ta không thực sự thích ăn uống lắm.\",\"rating\":0.0},\n  {\"id\":756017,\"suggestedTranslation\":\"Thật tốt bụng làm sao khi ngươi soi đường cho ta.\",\"rating\":0.0},\n  {\"id\":756018,\"suggestedTranslation\":\"Ánh sáng sẽ không kéo dài lâu đâu.\",\"rating\":0.0},\n  {\"id\":756019,\"suggestedTranslation\":\"Đâu phải lỗi của nó khi nó xấu xa.\",\"rating\":0.0},\n  {\"id\":756020,\"suggestedTranslation\":\"Tạm biệt những cánh hoa ngọt ngào.\",\"rating\":0.0},\n  {\"id\":756021,\"suggestedTranslation\":\"Những chiếc lá màu tía từ tận dưới sâu.\",\"rating\":0.0},\n  {\"id\":756022,\"suggestedTranslation\":\"Ta đã ngắm khi nó khô ngắm.\",\"rating\":0.0},\n  {\"id\":756023,\"suggestedTranslation\":\"Ta hy vọng mình không mọc thêm sừng mũ bảo hiểm.\",\"rating\":0.0},\n  {\"id\":756024,\"suggestedTranslation\":\"Chúng có vẻ mang chút hơi hướng phép thuật đấy.\",\"rating\":0.0},\n  {\"id\":756025,\"suggestedTranslation\":\"Ta đã ngắm khi nó khô ngắm.\",\"rating\":0.0},\n  {\"id\":756026,\"suggestedTranslation\":\"Nhưng liệu nó có thực sự hợp với con bò lai của ta không nhỉ? Hyuyu!\",\"rating\":0.0},\n  {\"id\":756027,\"suggestedTranslation\":\"Một mảnh nhỏ của một con quái vật to lớn.\",\"rating\":0.0},\n  {\"id\":756028,\"suggestedTranslation\":\"Trông chuẩn không cần chỉnh luôn đấy, chuẩn luôn!\",\"rating\":0.0},\n  {\"id\":756029,\"suggestedTranslation\":\"Trông ngớ ngẩn thật đấy, chắc chắn luôn!\",\"rating\":0.0},\n  {\"id\":756030,\"suggestedTranslation\":\"Vẫn có thể dùng thêm một hoặc hai mảnh nữa.\",\"rating\":0.0},\n  {\"id\":756031,\"suggestedTranslation\":\"Trái cây và dâu rừng được cho đi ngủ.\",\"rating\":0.0},\n  {\"id\":756032,\"suggestedTranslation\":\"Con ruồi này có tính cách ôn hòa hơn nhiều.\",\"rating\":0.0},\n  {\"id\":756033,\"suggestedTranslation\":\"Ta xin lỗi! Rất xin lỗi!\",\"rating\":0.0},\n  {\"id\":756034,\"suggestedTranslation\":\"Ta nhảy, ngươi nhảy. Bạn bè đến cuối đời!\",\"rating\":0.0},\n  {\"id\":756035,\"suggestedTranslation\":\"Ngủ ngon nhé chú thằn lằn nhảy nhót.\",\"rating\":0.0},\n  {\"id\":756036,\"suggestedTranslation\":\"Ta thà có một linh hồn tươi mới còn hơn.\",\"rating\":0.0},\n  {\"id\":756037,\"suggestedTranslation\":\"Lũ phàm nhân thật là kỳ quặc.\",\"rating\":0.0},\n  {\"id\":756038,\"suggestedTranslation\":\"Chẳng thể nhảy nhót được nữa.\",\"rating\":0.0},\n  {\"id\":756039,\"suggestedTranslation\":\"Đảm bảo là hết nhảy nhót nổi luôn.\",\"rating\":0.0},\n  {\"id\":756040,\"suggestedTranslation50,\"suggestedTranslation\":\"Lũ phàm nhân nghĩ ra mấy thứ này kiểu gì vậy nhỉ?\",\"rating\":0.0},\n  {\"id\":756041,\"suggestedTranslation\":\"Lũ phàm nhân thích đổi mới ghê nhỉ? Hyuyu.\",\"rating\":0.0},\n  {\"id\":756042,\"suggestedTranslation\":\"Chú thằn lằn nhỏ, sắc bén và nhọn hoắt!\",\"rating\":0.0},\n  {\"id\":756043,\"suggestedTranslation\":\"Màu đó hợp với ngươi lắm đấy, hyuyu!\",\"rating\":0.0},\n  {\"id\":756044,\"suggestedTranslation\":\"Hyuyu, đang tranh thủ chợp mắt hả?\",\"rating\":0.0},\n  {\"id\":756045,\"suggestedTranslation\":\"Lại đang trêu chọc đám thực vật hả cưng!\",\"rating\":0.0},\n  {\"id\":756046,\"suggestedTranslation\":\"Ta cứ bỏ nó vào túi rồi xem chuyện gì xảy ra đã!\",\"rating\":0.0},\n  {\"id\":756047,\"suggestedTranslation\":\"Lũ phàm nhân đã ném một đám thực vật vào chung với nhau.\",\"rating\":0.0},\n  {\"id\":756048,\"suggestedTranslation\":\"Những vết nứt bắt đầu lộ ra rồi kìa, hyuyu!\",\"rating\":0.0},\n  {\"id\":756049,\"suggestedTranslation\":\"Độ nóng của nó thì đỉnh của chóp.\",\"rating\":0.0},\n  {\"id\":756050,\"suggestedTranslation\":\"Có hại gì đâu? Nó chỉ hơi ấm ấm thôi mà!\",\"rating\":0.0},\n  {\"id\":756051,\"suggestedTranslation\":\"Nó ngăn cái lạnh không thể xâm chiếm.\",\"rating\":0.0},\n  {\"id\":756052,\"suggestedTranslation\":\"Những vết nứt bắt đầu lộ ra rồi kìa, hyuyu!\",\"rating\":0.0},\n  {\"id\":756053,\"suggestedTranslation\":\"Độ nóng của nó thì đỉnh của chóp.\",\"rating\":0.0},\n  {\"id\":756054,\"suggestedTranslation\":\"Có hại gì đâu? Nó chỉ hơi ấm ấm thôi mà!\",\"rating\":0.0},\n  {\"id\":756055,\"suggestedTranslation\":\"Nó ngăn cái lạnh không thể xâm chiếm.\",\"rating\":0.0},\n  {\"id\":756056,\"suggestedTranslation\":\"Những vết nứt bắt đầu lộ ra rồi kìa, hyuyu!\",\"rating\":0.0},\n  {\"id\":756057,\"suggestedTranslation\":\"Độ nóng của nó thì đỉnh của chóp.\",\"rating\":0.0},\n  {\"id\":756058,\"suggestedTranslation\":\"Có hại gì đâu? Nó chỉ hơi ấm ấm thôi mà!\",\"rating\":0.0},\n  {\"id\":756059,\"suggestedTranslation\":\"Nó ngăn cái lạnh không thể xâm chiếm.\",\"rating\":0.0},\n  {\"id\":756060,\"suggestedTranslation\":\"Những vết nứt bắt đầu lộ ra rồi kìa, hyuyu!\",\"rating\":0.0},\n  {\"id\":756061,\"suggestedTranslation\":\"Độ nóng của nó thì đỉnh của chóp.\",\"rating\":0.0},\n  {\"id\":756062,\"suggestedTranslation\":\"Có hại gì đâu? Nó chỉ hơi ấm ấm thôi mà!\",\"rating\":0.0},\n  {\"id\":756063,\"suggestedTranslation\":\"Nó ngăn cái lạnh không thể xâm chiếm.\",\"rating\":0.0},\n  {\"id\":756064,\"suggestedTranslation\":\"Những vết nứt bắt đầu lộ ra rồi kìa, hyuyu!\",\"rating\":0.0},\n  {\"id\":756065,\"suggestedTranslation\":\"Độ nóng của nó thì đỉnh của chóp.\",\"rating\":0.0},\n  {\"id\":756066,\"suggestedTranslation\":\"Có hại gì đâu? Nó chỉ hơi ấm ấm thôi mà!\",\"rating\":0.0},\n  {\"id\":756067,\"suggestedTranslation\":\"Nó ngăn cái lạnh không thể xâm chiếm.\",\"rating\":0.0},\n  {\"id\":756068,\"suggestedTranslation\":\"Không phải lông từ rương của ta đâu nhé!\",\"rating\":0.0},\n  {\"id\":756069,\"suggestedTranslation\":\"Thứ vật liệu chỉ có trong ác mộng!\",\"rating\":0.0},\n  {\"id\":756070,\"suggestedTranslation\":\"Tránh xa ra, ta không muốn chơi đâu!\",\"rating\":0.0},\n  {\"id\":756071,\"suggestedTranslation\":\"Ta hy vọng con chó địa ngục đó cũng tham gia trò đùa này.\",\"rating\":0.0},\n  {\"id\":756072,\"suggestedTranslation\":\"Đừng có ở đây khi thứ đó thức dậy nhé!\",\"rating\":0.0},\n  {\"id\":756073,\"suggestedTranslation\":\"Hííí trơ!\",\"rating\":0.0},\n  {\"id\":756074,\"suggestedTranslation\":\"Hiiiií trơ!\",\"rating\":0.0},\n  {\"id\":756075,\"suggestedTranslation\":\"Hiiiií trơ!\",\"rating\":0.0},\n  {\"id\":756076,\"suggestedTranslation\":\"Những hạt kỳ lạ thật đấy, thật đấy.\",\"rating\":0.0},\n  {\"id\":756077,\"suggestedTranslation\":\"Món đồ ăn của loài người này trông loãng hơn bình thường.\",\"rating\":0.0},\n  {\"id\":756078,\"suggestedTranslation\":\"Nghiền nát chúng đi, nghiền cho thật nhuyễn vào.\",\"rating\":0.0},\n  {\"id\":756079,\"suggestedTranslation\":\"Eo ôi! Dính quá!\",\"rating\":0.0},\n  {\"id\":756080,\"suggestedTranslation\":\"Chúng đang cau mày vì sắp chết đuối đấy! Hyuyu!\",\"rating\":0.0},\n  {\"id\":756081,\"suggestedTranslation\":\"Bớt luyên thuyên đi! Đi lấy đống đồ đó thôi!\",\"rating\":0.0},\n  {\"id\":756082,\"suggestedTranslation\":\"Thứ gớm ghiếc đóng chai.\",\"rating\":0.0},\n  {\"id\":756083,\"suggestedTranslation\":\"Đông đặc và niêm phong!\",\"rating\":0.0},\n  {\"id\":756084,\"suggestedTranslation\":\"Ta xin tuyên bố, chẳng có gì ở đó cả.\",\"rating\":0.0},\n  {\"id\":756085,\"suggestedTranslation\":\"Gừ... Đừng có dính vào lông!\",\"rating\":0.0},\n  {\"id\":756086,\"suggestedTranslation\":\"Nếu hỏi ta thì nó cần thêm chút ánh sáng đấy.\",\"rating\":0.0},\n  {\"id\":756087,\"suggestedTranslation\":\"Phép thuật luôn luôn đáp ứng!\",\"rating\":0.0},\n  {\"id\":756088,\"suggestedTranslation\":\"Ngọn lửa thanh tẩy, để điều tồi tệ nhất không xảy ra.\",\"rating\":0.0},\n  {\"id\":756089,\"suggestedTranslation\":\"Ta không nhầm đâu, sinh mệnh của nó đã chấm dứt rồi.\",\"rating\":0.0},\n  {\"id\":756090,\"suggestedTranslation\":\"Nó đang xoay chuyển và quay trở lại.\",\"rating\":0.0},\n  {\"id\":756091,\"suggestedTranslation\":\"Chào buổi tối, mấy đứa trẻ!\",\"rating\":0.0},\n  {\"id\":756092,\"suggestedTranslation\":\"Nó che giấu những thứ bên trong!\",\"rating\":0.0},\n  {\"id\":756093,\"suggestedTranslation\":\"Chẳng có gì đáng chú ý cả.\",\"rating\":0.0},\n  {\"id\":756094,\"suggestedTranslation\":\"Chúng lớn nhanh thật đấy!\",\"rating\":0.0},\n  {\"id\":756095,\"suggestedTranslation\":\"Biết ngay mà, gieo nhân nào gặt quả nấy!\",\"rating\":0.0},\n  {\"id\":756096,\"suggestedTranslation\":\"Một linh hồn chưa có chủ!\",\"rating\":0.0},\n  {\"id\":756097,\"suggestedTranslation\":\"Đúng là một bông hoa ma quái cuốn hút làm sao.\",\"rating\":0.0},\n  {\"id\":756098,\"suggestedTranslation\":\"Những bông hoa ma quái mang lại sức mạnh kỳ lạ.\",\"rating\":0.0},\n  {\"id\":756099,\"suggestedTranslation\":\"Hyuyu! Lại có kẻ đang giở trò khéo léo kìa!\",\"rating\":0.0},\n  {\"id\":756100,\"suggestedTranslation\":\"Hyuyu! Lại có kẻ đang giở trò khéo léo kìa!\",\"rating\":0.0},\n  {\"id\":756101,\"suggestedTranslation\":\"Hyuyu! Lại có kẻ đang giở trò khéo léo kìa!\",\"rating\":0.0},\n  {\"id\":756102,\"suggestedTranslation\":\"Hyuyu! Lại có kẻ đang giở trò khéo léo kìa!\",\"rating\":0.0},\n  {\"id\":756103,\"suggestedTranslation\":\"Hyuyu! Lại có kẻ đang giở trò khéo léo kìa!\",\"rating\":0.0},\n  {\"id\":756104,\"suggestedTranslation\":\"Hyuyu! Lại có kẻ đang giở trò khéo léo kìa!\",\"rating\":0.0},\n  {\"id\":756105,\"suggestedTranslation\":\"Hyuyu! Lại có kẻ đang giở trò khéo léo kìa!\",\"rating\":0.0},\n  {\"id\":756106,\"suggestedTranslation\":\"Hyuyu! Lại có kẻ đang giở trò khéo léo kìa!\",\"rating\":0.0},\n  {\"id\":756107,\"suggestedTranslation\":\"Hyuyu! Lại có kẻ đang giở trò khéo léo kìa!\",\"rating\":0.0},\n  {\"id\":756108,\"suggestedTranslation\":\"Quà kìa! Vui quá đi!\",\"rating\":0.0},\n  {\"id\":756109,\"suggestedTranslation\":\"Thế là xong gói quà!\",\"rating\":0.0},\n  {\"id\":756110,\"suggestedTranslation\":\"Đúng là một ngôi nhà bánh quy dễ thương làm sao.\",\"rating\":0.0},\n  {\"id\":756111,\"suggestedTranslation\":\"Ra đây nào chú heo con!\",\"rating\":0.0},\n  {\"id\":756112,\"suggestedTranslation\":\"Cái bánh quy đó muốn cắm ngập răng vào người ta kìa!\",\"rating\":0.0},\n  {\"id\":756113,\"suggestedTranslation\":\"Một ngọn tháp xinh xắn làm bằng thủy tinh.\",\"rating\":0.0},\n  {\"id\":756114,\"suggestedTranslation\":\"Ồ, chắc chắn ta sẽ có khối niềm vui với cái này. Hyuyu!\",\"rating\":0.0},\n  {\"id\":756115,\"suggestedTranslation\":\"Sắc bén và nhọn hoắt như chiếc răng của ta!\",\"rating\":0.0},\n  {\"id\":756116,\"suggestedTranslation\":\"Những suy nghĩ gì đang ẩn giấu trong cái đầu tò mò đó nhỉ?\",\"rating\":0.0},\n  {\"id\":756117,\"suggestedTranslation\":\"Phải chi ta là một con quỷ ngủ.\",\"rating\":0.0},\n  {\"id\":756118,\"suggestedTranslation\":\"Ôi không, ôi trời ơi!\",\"rating\":0.0},\n  {\"id\":756119,\"suggestedTranslation\":\"Một bông hoa thu hút bạn bè.\",\"rating\":0.0},\n  {\"id\":756120,\"suggestedTranslation\":\"Thứ này buồn cười thật đấy!\",\"rating\":0.0},\n  {\"id\":756121,\"suggestedTranslation\":\"Mới mẻ làm sao!\",\"rating\":0.0},\n  {\"id\":756122,\"suggestedTranslation\":\"Có vẻ tốn quá nhiều công sức cho một thứ để ăn nhỉ.\",\"rating\":0.0},\n  {\"id\":756123,\"suggestedTranslation\":\"Ta chẳng thấy có điểm gì thú vị ở ngươi cả, hyuyu!\",\"rating\":0.0},\n  {\"id\":756124,\"suggestedTranslation\":\"E là ta không có chiếc sừng dự phòng nào đâu.\",\"rating\":0.0},\n  {\"id\":756125,\"suggestedTranslation\":\"Đi nào, ngoài biển có khối trò nghịch ngợm đang chờ đấy!\",\"rating\":0.0},\n  {\"id\":756126,\"suggestedTranslation\":\"Nào nào, cần gì phải làm móp chiếc xuồng của ta chứ.\",\"rating\":0.0},\n  {\"id\":756127,\"suggestedTranslation\":\"Nó nêu lên một quan điểm rất thuyết phục đấy chứ, hyuyu!\",\"rating\":0.0},\n  {\"id\":756128,\"suggestedTranslation\":\"Làm ơn, xin miễn cho.\",\"rating\":0.0},\n  {\"id\":756129,\"suggestedTranslation\":\"Ta phải giữ thể diện chứ.\",\"rating\":0.0},\n  {\"id\":756130,\"suggestedTranslation\":\"Giờ chiếc đàn vĩ cầm vàng của ta đâu rồi nhỉ?\",\"rating\":0.0},\n  {\"id\":756131,\"suggestedTranslation\":\"Lũ phàm nhân bảo rằng phải tiêu vàng thì mới kiếm lại được vàng.\",\"rating\":0.0},\n  {\"id\":756132,\"suggestedTranslation\":\"Đồ nghề hội nhóm sang chảnh đấy. Hyuyu!\",\"rating\":0.0},\n  {\"id\":756133,\"suggestedTranslation\":\"Xa hoa một cách vô tích sự! Hyuyu!\",\"rating\":0.0},\n  {\"id\":756134,\"suggestedTranslation\":\"Thật là phung phí một cách lộng lẫy! Hyuyu!\",\"rating\":0.0},\n  {\"id\":756135,\"suggestedTranslation\":\"Tiền bạc thật vô hồn.\",\"rating\":0.0},\n  {\"id\":756136,\"suggestedTranslation\":\"Chiếc lông này có thể giúp ai đó dũng cảm vượt qua thời tiết nóng nực.\",\"rating\":0.0},\n  {\"id\":756137,\"suggestedTranslation\":\"Đất nhiễm mặn, chẳng có gì mọc lại được đâu.\",\"rating\":0.0},\n  {\"id\":756138,\"suggestedTranslation\":\"Úi chà chà.\",\"rating\":0.0},\n  {\"id\":756139,\"suggestedTranslation\":\"Giờ thì nó thối kinh khủng luôn!\",\"rating\":0.0},\n  {\"id\":756140,\"suggestedTranslation\":\"Nó bắt đầu bốc mùi rồi đấy.\",\"rating\":0.0},\n  {\"id\":756141,\"suggestedTranslation\":\"Cỏ mọc từ vùng đất phì nhiêu nhất.\",\"rating\":0.0},\n  {\"id\":756142,\"suggestedTranslation\":\"Mất sạch, mất sạch rồi.\",\"rating\":0.0},\n  {\"id\":756143,\"suggestedTranslation\":\"Cảm thấy chán nản hả?\",\"rating\":0.0},\n  {\"id\":756144,\"suggestedTranslation\":\"Hẹn gặp lại sau nhé, cá sấu.\",\"rating\":0.0},\n  {\"id\":756145,\"suggestedTranslation\":\"Ta có thể thấy căn bệnh đang len lỏi vào linh hồn ngươi rồi đấy.\",\"rating\":0.0},\n  {\"id\":756146,\"suggestedTranslation\":\"Xin chào bạn hiền! Không cần phải rụng đuôi đâu nhé.\",\"rating\":0.0},\n  {\"id\":756147,\"suggestedTranslation\":\"Một công cụ để che mưa.\",\"rating\":0.0},\n  {\"id\":756148,\"suggestedTranslation\":\"Cái bình di cốt đang khao khát kìa, hyuyu!\",\"rating\":0.0},\n  {\"id\":756149,\"suggestedTranslation\":\"Chỉ là một bóng ma thôi, có gì mà phải sợ.\",\"rating\":0.0},\n  {\"id\":756150,\"suggestedTranslation\":\"Nó nằm trên một chiếc thuyền ván chẳng thể nổi được.\",\"rating\":0.0},\n  {\"id\":756151,\"suggestedTranslation\":\"Để ta có tay nghề hơn khi xây dựng lại.\",\"rating\":0.0},\n  {\"id\":756152,\"suggestedTranslation\":\"Sắc xanh dịu dàng nhặt nhạnh từ những thung lũng tươi tốt.\",\"rating\":0.0},\n  {\"id\":756153,\"suggestedTranslation\":\"Con mắt xanh này đang khao khát được ngắm nhìn!\",\"rating\":0.0},\n  {\"id\":756154,\"suggestedTranslation\":\"Đừng coi nó như đồ chơi. Mục đích của nó là hủy diệt.\",\"rating\":0.0},\n  {\"id\":756155,\"suggestedTranslation\":\"Mấy loại nấm này giở đủ mọi trò mánh khóe.\",\"rating\":0.0},\n  {\"id\":756156,\"suggestedTranslation\":\"Cái đó đã thay đổi phần nào rồi.\",\"rating\":0.0},\n  {\"id\":756157,\"suggestedTranslation\":\"Tìm thấy ngươi rồi!\",\"rating\":0.0},\n  {\"id\":756158,\"suggestedTranslation\":\"Nó đang chơi trốn tìm kìa!\",\"rating\":0.0},\n  {\"id\":756159,\"suggestedTranslation\":\"Mất sạch, mất sạch rồi.\",\"rating\":0.0},\n  {\"id\":756160,\"suggestedTranslation\":\"Có lẽ đây là nhà của một nàng tiên nước.\",\"rating\":0.0},\n  {\"id\":756161,\"suggestedTranslation\":\"Có lẽ đây là nhà của một nàng tiên nước tí xíu.\",\"rating\":0.0},\n  {\"id\":756162,\"suggestedTranslation\":\"Ta không thích ăn uống gì cho lắm, trừ khi bắt buộc.\",\"rating\":0.0},\n  {\"id\":756163,\"suggestedTranslation\":\"Nó thải ra từ một con dơi, và chỉ thế thôi.\",\"rating\":0.0},\n  {\"id\":756164,\"suggestedTranslation\":\"Ta sẽ viết nên số mệnh của ngươi bằng một tiếng NỔ lớn!\",\"rating\":0.0},\n  {\"id\":756165,\"suggestedTranslation\":\"Thứ để ta cắm phập nanh vào!\",\"rating\":0.0},\n  {\"id\":756166,\"suggestedTranslation\":\"Việc gì cũng có lần đầu tiên, người ta bảo vậy đấy.\",\"rating\":0.0},\n  {\"id\":756167,\"suggestedTranslation\":\"Hừm, nó chảy tè le đầy móng vuốt của ta rồi.\",\"rating\":0.0},\n  {\"id\":756168,\"suggestedTranslation\":\"Ghê tởm một cách thú vị!\",\"rating\":0.0},\n  {\"id\":756169,\"suggestedTranslation\":\"Ta sẽ thử gặm một miếng nhỏ, ta sẽ thử, ta sẽ thử.\",\"rating\":0.0},\n  {\"id\":756170,\"suggestedTranslation\":\"Úi hô hô, cay thế nhờ!\",\"rating\":0.0},\n  {\"id\":756171,\"suggestedTranslation\":\"Ta đoán mình có thể ăn một món quà ngon lành đấy.\",\"rating\":0.0},\n  {\"id\":756172,\"suggestedTranslation\":\"Chỉ là ngô của loài người thôi mà.\",\"rating\":0.0},\n  {\"id\":756173,\"suggestedTranslation\":\"Ta có thể bị thuyết phục để nếm thử một chút.\",\"rating\":0.0},\n  {\"id\":756174,\"suggestedTranslation\":\"Fweehee! Mấy chú mèo con kìa!\",\"rating\":0.0},\n  {\"id\":756175,\"suggestedTranslation\":\"Trò chơi khăm này thật là thông minh xuất chúng!\",\"rating\":0.0},\n  {\"id\":756176,\"suggestedTranslation\":\"Hừm... Ta không nghĩ mình sẽ thích món đó đâu.\",\"rating\":0.0},\n  {\"id\":756177,\"suggestedTranslation\":\"Hyuyu, một linh hồn kẹo ngọt!\",\"rating\":0.0},\n  {\"id\":756178,\"suggestedTranslation\":\"Hyuyu, nó trượt tuột tuột xuống tận dưới luôn!\",\"rating\":0.0},\n  {\"id\":756179,\"suggestedTranslation\":\"Thuốc bổ chống nhát gan!\",\"rating\":0.0},\n  {\"id\":756180,\"suggestedTranslation\":\"Hyuyu! Thứ này sẽ mọc lông đầy rương của ngươi cho xem!\",\"rating\":0.0},\n  {\"id\":756181,\"suggestedTranslation\":\"Hiền lành và rụt rè làm sao!\",\"rating\":0.0},\n  {\"id\":756182,\"suggestedTranslation\":\"Nước lửa!\",\"rating\":0.0},\n  {\"id\":756183,\"suggestedTranslation\":\"Một loại thuốc hoán đổi vị trí!\",\"rating\":0.0},\n  {\"id\":756184,\"suggestedTranslation\":\"Nó làm ta thấy thèm ăn đấy, quả thật vậy!\",\"rating\":0.0},\n  {\"id\":756185,\"suggestedTranslation\":\"Hoàn toàn điên rồ!\",\"rating\":0.0},\n  {\"id\":756186,\"suggestedTranslation\":\"Một con vật bò lúc nhúc rợn người cho cái cây.\",\"rating\":0.0},\n  {\"id\":756187,\"suggestedTranslation\":\"Một chiếc xúc tu xoắn tít mù!\",\"rating\":0.0},\n  {\"id\":756188,\"suggestedTranslation\":\"Được làm để treoòng tòng teng trên cây.\",\"rating\":0.0},\n  {\"id\":756189,\"suggestedTranslation\":\"Ta tin chắc là nó ngỏm củ tỏi rồi đấy!\",\"rating\":0.0},\n  {\"id\":756190,\"suggestedTranslation\":\"Ta sẽ hạ gục nó bằng một cú ĐẬP-thịt cực mạnh!\",\"rating\":0.0},\n  {\"id\":756191,\"suggestedTranslation\":\"Để đóng đinh cho những lý lẽ của ta.\",\"rating\":0.0},\n  {\"id\":756192,\"suggestedTranslation\":\"Hãy hoan hô chiếc búa!\",\"rating\":0.0},\n  {\"id\":756193,\"suggestedTranslation\":\"Chiếc gối bò lai êm ái nhất mà ta từng thấy.\",\"rating\":0.0},\n  {\"id\":756194,\"suggestedTranslation\":\"Ta chẳng bao giờ muốn ngủ như một con câu cá cả.\",\"rating\":0.0},\n  {\"id\":756195,\"suggestedTranslation\":\"Cho một cú tát thơm phức mùi hoa!\",\"rating\":0.0},\n  {\"id\":756196,\"suggestedTranslation\":\"Một thứ khó chịu, nhưng sẽ rất lợi hại trên võ đài đấy!\",\"rating\":0.0},\n  {\"id\":756197,\"suggestedTranslation\":\"Hyuyu! Ta thấy chúng đúng là mấy kẻ chơi khăm kỳ cựu.\",\"rating\":0.0},\n  {\"id\":756198,\"suggestedTranslation\":\"Ôi không, cái đó không hẳn là phong cách của ta đâu.\",\"rating\":0.0},\n  {\"id\":756199,\"suggestedTranslation\":\"Để xóa bỏ nỗi đau của thế giới mệt mỏi này!\",\"rating\":0.0},\n  {\"id\":756200,\"suggestedTranslation\":\"Nó sẽ chữa lành, niêm phong, thậm chí là đông đặc lại! Hãy mua ngay Thuốc Nhầy Nhụa hôm nay! Hời to đấy!\",\"rating\":0.0},\n  {\"id\":756201,\"suggestedTranslation\":\"Dùng cho lúc nhiệt độ tăng cao, hoặc thậm chí là khi có lửa!\",\"rating\":0.0},\n  {\"id\":756202,\"suggestedTranslation\":\"Chút phép chữa lành sẽ cải thiện cảm giác của ngươi đấy.\",\"rating\":0.0},\n  {\"id\":756203,\"suggestedTranslation\":\"Hơi lạnh một chút, chắc chắn là vậy.\",\"rating\":0.0},\n  {\"id\":756204,\"suggestedTranslation\":\"Đóng băng cứng ngắc như một hòn đá tảng! Hyuyu.\",\"rating\":0.0},\n  {\"id\":756205,\"suggestedTranslation\":\"Chúa ơi! Một hòn đá tảng!\",\"rating\":0.0},\n  {\"id\":756206,\"suggestedTranslation\":\"Ấm áp đến mức gần như khó chịu.\",\"rating\":0.0},\n  {\"id\":756207,\"suggestedTranslation\":\"Khá là ấm áp đấy!\",\"rating\":0.0},\n  {\"id\":756208,\"suggestedTranslation\":\"Ngươi sẽ không ăn thịt một đồng nghiệp thích chơi khăm chứ, phải không?\",\"rating\":0.0},\n  {\"id\":756209,\"suggestedTranslation\":\"Mấy cái dây leo đó vừa rên rỉ à? Ta chắc là không sao đâu.\",\"rating\":0.0},\n  {\"id\":756210,\"suggestedTranslation\":\"Hyuyu, để xem chúng ta có dụ được con cua này ra khỏi vỏ của nó không nào!\",\"rating\":0.0},\n  {\"id\":756211,\"suggestedTranslation\":\"Thấy lạnh à? Uống đi chứ, đồ ngốc!\",\"rating\":0.0},\n  {\"id\":756212,\"suggestedTranslation\":\"Hương vị của dương xỉ chính là thứ ta hằng mong mỏi.\",\"rating\":0.0},\n  {\"id\":756213,\"suggestedTranslation\":\"Nó sẽ giúp ta tìm lại tâm trí tội nghiệp đã mất!\",\"rating\":0.0},\n  {\"id\":756214,\"suggestedTranslation\":\"Trà pha từ bông hoa này tuyệt cú mèo luôn!\",\"rating\":0.0}\n]",
+            "thoughtSignature": "El8KXQFpFH0TFiDq6LO6dKGGPXZjVeH6y/iPa5g66ZSlGsXxiHDwpfaQATa/44nqpMU2iYClU82Rw10uklvhlxsPCL3OhbrFuvAEcer3ie2OrBM62ULbnHZCoSMNRreSPg=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 20116,
+    "candidatesTokenCount": 10789,
+    "totalTokenCount": 30905,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 20116
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "HB26aqWqFtuMqfkPpbzkgQQ"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-28 14:55:03] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, không cần chú thích từ tiếng Anh trong ngoặc đơn, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 756040
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FROGNEWTON
+MsgId: How do the mortals come up with these things?
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Làm sao mà lũ phàm trần nghĩ ra được mấy thứ này nhỉ?\",\"rating\":0.0}",
+            "thoughtSignature": "El8KXQFpFH0TECsN4HRO/3qF/drdAkqLvtcG5QW62ke5xI+euO+W7l8ga3NOrgEJsBu802zyoSQtx1DCkoizUVBfmTSVl9uzH3cuUtUxzLj+AIXcvSp0LpTG3qBKRilh4w=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 757,
+    "candidatesTokenCount": 29,
+    "totalTokenCount": 786,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 757
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "Vh26atbGEurL4-EP7YqD8As"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-28 14:56:03] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, không cần chú thích từ tiếng Anh trong ngoặc đơn, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 756041
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FROZENBANANADAIQUIRI
+MsgId: Don't the mortals like to innovate? Hyuyu.
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"suggestedTranslation\": \"Lũ phàm nhân thích sáng tạo gớm nhỉ? Hyuyu.\",\n  \"rating\": 0.0\n}",
+            "thoughtSignature": "El8KXQFpFH0TY9brBKcAw0fysizQ+avk2642HghCA/MH95T6on59/RMGUU/FYa76/0ExNeDYdPlqRHhNrJIsNZbgiASoHwK2XEU6ZHiF33lO2XPnFhZRSqD2Pf9erat3gg=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 764,
+    "candidatesTokenCount": 35,
+    "totalTokenCount": 799,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 764
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "kh26at-aIJfMjuMP2aShqAE"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-28 14:57:03] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, không cần chú thích từ tiếng Anh trong ngoặc đơn, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 756042
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FRUITDRAGON.GENERIC
+MsgId: Little lizard, sharp and pointy!
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Thằn lằn nhỏ, sắc và nhọn!\",\"rating\":0.0}",
+            "thoughtSignature": "El8KXQFpFH0T50NGyA4mjdyUw6rpfUS3oBYAfuSW06xLYuRcesV3G1y+6faVD2tDlVHevwiaHcoDco9unz+/RGdPDWk5r2Td3z7WyMmllmkiSllRfxLfUF4QInFxVdS6Jg=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 757,
+    "candidatesTokenCount": 25,
+    "totalTokenCount": 782,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 757
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "zh26arzWE8qqjuMPv5D_8As"
+}
+
+================================================================================--------------------
+
+======================================== [2026-09-28 14:58:03] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang điểm rating từ 0.0 đến 10.0:
+   - 8.0 - 10.0: MsgStr dịch chính xác, tự nhiên, chuẩn văn phong game.
+   - 5.0 - 7.9: MsgStr hiểu được nhưng còn gượng gạo hoặc có sai sót nhỏ.
+   - 0.0 - 4.9: MsgStr dịch sai, dịch máy thô, hoặc chưa dịch (đang trống / giống hệt MsgId tiếng Anh).
+2. Đề xuất bản dịch tiếng Việt tối ưu nhất ở trường "suggestedTranslation": tự nhiên, ngắn gọn, chính xác với ngữ cảnh game.
+
+Quy tắc bảo toàn ký tự đặc biệt & định dạng (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+Trả về CHỈ JSON hợp lệ, không bọc markdown (không dùng ```json), không giải thích thừa, không cần chú thích từ tiếng Anh trong ngoặc đơn, theo mẫu:
+{"suggestedTranslation":"Bản dịch tiếng Việt","rating":8.5}
+
+Dữ liệu:
+Id: 756043
+MsgCtxt: STRINGS.CHARACTERS.WORTOX.DESCRIBE.FRUITDRAGON.RIPE
+MsgId: That color looks great on you, hyuyu!
+MsgStr:
+
+QUY TẮC BẢO TOÀN ĐỊNH DẠNG (BẮT BUỘC):
+- Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã màu, thẻ định dạng.
+- Ví dụ minh họa:
+  + Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+  + Output suggestedTranslation: \"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!
+
+QUAN TRỌNG VỀ BẢN DỊCH & CHẤM ĐIỂM (BẮT BUỘC TUÂN THỦ 100%):
+- Trường "suggestedTranslation" PHẢI LUÔN LUÔN LÀ BẢN DỊCH TIẾNG VIỆT tự nhiên, chuẩn văn phong game Don't Starve Together.
+- TUYỆT ĐỐI KHÔNG ĐƯỢC trả về văn bản tiếng Anh trong suggestedTranslation dưới bất kỳ hình thức nào.
+- Nếu MsgStr hiện tại chưa được dịch, đang rỗng hoặc đang là tiếng Anh → Hãy chấm rating thấp (0.0 - 1.0).
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"suggestedTranslation\":\"Màu đó hợp với cậu lắm đấy, hyuyu!\",\"rating\":0.0}",
+            "thoughtSignature": "El8KXQFpFH0To/tLVsmxh27RN7ZVui+pad/LIb1n0vl3Kv/+pxTlaZD/aXjcjTzhl2b4Ebwca5cB0gv1W00odouVhhDcXvG7h+r6JopQJ0/qlMBhaD49kreyulB194xb4Q=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 760,
+    "candidatesTokenCount": 24,
+    "totalTokenCount": 784,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 760
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "Ch66asDkFJ7a4-EPrYHUoQw"
+}
+
+================================================================================--------------------
+

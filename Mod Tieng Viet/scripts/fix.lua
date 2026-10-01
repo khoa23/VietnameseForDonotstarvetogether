@@ -66189,7 +66189,7 @@ textfix["Thanks for playing the beta!\nThe room beyond this point is not yet ava
 textfix["Metheus has taken heed"] = "Metheus đã thực hiện"
 textfix["Pulvis et umbra sumus"] = "Pulvis et umbra sumus"
 textfix["Happy Valentine's Day\nfrom your friends at Klei"] = "Chúc mừng Ngày lễ tình nhân\ntừ bạn bè của bạn tại Klei"
-textfix["Welcome back!\nPlease enjoy this daily gift."] = "Mừng bạn trở lại!\nHãy nhận món quà hàng ngày này nhé."
+textfix["Welcome back!\nPlease enjoy this daily gift."] = "Chào mừng bạn quay trở lại!\nHãy tận hưởng món quà hàng ngày này."
 textfix["Thanks for playing"] = "Cảm ơn vì đã chơi"
 textfix["Thanks for playing during the\nGorge event"] = "Cảm ơn bạn đã chơi trong sự kiện\nGorge"
 textfix["Thanks for participating in the\nGorge Tournament"] = "Cảm ơn bạn đã tham gia\nGiải đấu Gorge"
@@ -67665,7 +67665,7 @@ textfix["You got a skin for %s!"] = "Bạn có một làn da cho %s!"
 textfix["Put it Away"] = "Đặt nó chỗ khác"
 textfix["received..."] = "đã nhận..."
 textfix["Opening"] = "Đang mở"
-textfix["Open Now!"] = "Mở ngay!"
+textfix["Open Now!"] = "Mở ngay bây giờ!"
 textfix["Proceed"] = "Tiếp tục"
 textfix["You Received"] = "Bạn đã nhận"
 textfix["Use Later"] = "Sử dụng sau"
@@ -69872,7 +69872,7 @@ textfix["I don't see any contestants to judge, do you?"] = "Tôi không thấy b
 textfix["Sorry, can't wait any longer. Bye now."] = "Xin lỗi, không thể đợi thêm nữa. Tạm biệt."
 -- Thay vì can thiệp trực tiếp vào TextWidget của lớp chung, ta nên bọc nó lại để AddClassPostConstruct xử lý ở main.lua.
 -- Ở đây ta chỉ định nghĩa thêm thông tin cho một biến cục bộ hoặc gán vào _G
-_G.VietnameseTextFixTable = textfix
+-- LƯU Ý: _G.VietnameseTextFixTable được gán ở CUỐI file để đảm bảo bảng đã đầy đủ 100%
 textfix["\"We remain faithful to Alter, as Alter remains faithful to us. Ever watching, knowing, waiting.\""] = "\"Chúng tôi vẫn trung thành với Alter, cũng như Alter vẫn trung thành với chúng tôi. Luôn theo dõi, biết, chờ đợi.\""
 textfix["\"Alter, Glorious Moon in the cold night sky. Cast your Life-giving Light on us forever.\""] = "\"Hãy thay đổi, Mặt trăng vinh quang trên bầu trời đêm lạnh giá. Hãy chiếu Ánh sáng ban sự sống của bạn mãi mãi cho chúng tôi.\""
 textfix["\"Mighty Alter, the source of our strength, our sole provider. We are loyal to none but You.\""] = "\"Mighty Alter, nguồn sức mạnh của chúng tôi, nhà cung cấp duy nhất của chúng tôi. Chúng tôi không trung thành với ai ngoài Bạn.\""
@@ -70700,3 +70700,6 @@ textfix["DENIED. CONTENTS OVERLOADED"] = "TỪ CHỐI. NỘI DUNG QUÁ TẢI"
 textfix["DENIED. MAXIMUM NUMBER OF EXPLOITERATORS REACHED"] = "TỪ CHỐI. ĐẠT ĐƯỢC SỐ LƯỢNG BỘ KHAI THÁC TỐI ĐA"
 textfix["DENIED. MAXIMUM NUMBER OF AUTO-GRABBERS REACHED"] = "TỪ CHỐI. ĐẠT ĐƯỢC SỐ LƯỢNG BỘ TỰ ĐỘNG THU NHẶT TỐI ĐA"
 textfix["DENIED. STRUCTURAL INTEGRITY DEGRADING"] = "TỪ CHỐI. SUY GIẢM TÍNH TOÀN VỀ CẤU TRÚC"
+
+-- Gan bang dich vao bien toan cuc sau khi tat ca entries da duoc dinh nghia day du
+_G.VietnameseTextFixTable = textfix

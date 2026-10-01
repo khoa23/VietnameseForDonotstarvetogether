@@ -5,12 +5,18 @@ public sealed class TranslationProcessor
     private readonly MssqlTranslationRepository _repository;
     private readonly ITranslationClient _client;
     private readonly ProcessingSettings _processingSettings;
+    private readonly GlossaryDictionary? _glossary;
 
-    public TranslationProcessor(MssqlTranslationRepository repository, ITranslationClient client, ProcessingSettings processingSettings)
+    public TranslationProcessor(
+        MssqlTranslationRepository repository,
+        ITranslationClient client,
+        ProcessingSettings processingSettings,
+        GlossaryDictionary? glossary = null)
     {
         _repository = repository;
         _client = client;
         _processingSettings = processingSettings;
+        _glossary = glossary;
     }
 
     public async Task ProcessAsync(
@@ -69,7 +75,35 @@ public sealed class TranslationProcessor
             ? new SemaphoreSlim(1, 1)
             : null;
         DateTime lastRequestTime = DateTime.MinValue;
-        object rateLock = new();
+
+        async Task WaitForRequestSlotAsync(CancellationToken token)
+        {
+            if (rateLimiter is null)
+            {
+                return;
+            }
+
+            await rateLimiter.WaitAsync(token).ConfigureAwait(false);
+            try
+            {
+                var minIntervalMs = (int)Math.Ceiling(60000.0 / _processingSettings.RequestsPerMinute);
+                if (lastRequestTime != DateTime.MinValue)
+                {
+                    var elapsedMs = (DateTime.UtcNow - lastRequestTime).TotalMilliseconds;
+                    var delayMs = (int)Math.Ceiling(minIntervalMs - elapsedMs);
+                    if (delayMs > 0)
+                    {
+                        await Task.Delay(delayMs, token).ConfigureAwait(false);
+                    }
+                }
+
+                lastRequestTime = DateTime.UtcNow;
+            }
+            finally
+            {
+                rateLimiter.Release();
+            }
+        }
 
         var maxDegreeOfParallelism = _processingSettings.MaxConcurrentRequests;
 
@@ -79,7 +113,25 @@ public sealed class TranslationProcessor
             for (var i = 0; i < rowsToProcess.Count; i += batchSize)
             {
                 var batch = rowsToProcess.Skip(i).Take(batchSize).ToList();
+                var fromIndex = i + 1;
+                var toIndex = Math.Min(i + batch.Count, rowsToProcess.Count);
+
+                progress.Report(new ProcessorProgress(
+                    null,
+                    completed,
+                    total,
+                    $"Đang gửi batch {batch.Count} dòng lên Gemini (từ dòng {fromIndex} đến {toIndex})...",
+                    Status: "SendingBatch"));
+
+                await WaitForRequestSlotAsync(cancellationToken).ConfigureAwait(false);
                 var results = await _client.ReviewTranslationsAsync(batch, cancellationToken).ConfigureAwait(false);
+
+                progress.Report(new ProcessorProgress(
+                    null,
+                    completed,
+                    total,
+                    $"Đã nhận kết quả batch từ Gemini: {results.Count}/{batch.Count} dòng thành công.",
+                    Status: "BatchReceived"));
 
                 var missingRows = new List<ReviewRowViewModel>();
                 foreach (var row in batch)
@@ -114,11 +166,18 @@ public sealed class TranslationProcessor
                     succeeded++;
                 }
 
-                foreach (var row in missingRows)
+                var fallbackOptions = new ParallelOptions
+                {
+                    CancellationToken = cancellationToken,
+                    MaxDegreeOfParallelism = maxDegreeOfParallelism
+                };
+
+                await Parallel.ForEachAsync(missingRows, fallbackOptions, async (row, token) =>
                 {
                     try
                     {
-                        var reviewResponse = await _client.ReviewTranslationAsync(row, cancellationToken).ConfigureAwait(false);
+                        await WaitForRequestSlotAsync(token).ConfigureAwait(false);
+                        var reviewResponse = await _client.ReviewTranslationAsync(row, token).ConfigureAwait(false);
                         row.SuggestedTranslation = reviewResponse.SuggestedTranslation;
                         row.Rating = reviewResponse.Rating;
                         row.Status = "Reviewed";
@@ -128,9 +187,9 @@ public sealed class TranslationProcessor
                             row.Id,
                             reviewResponse.SuggestedTranslation,
                             reviewResponse.Rating,
-                            cancellationToken).ConfigureAwait(false);
+                            token).ConfigureAwait(false);
 
-                        succeeded++;
+                        Interlocked.Increment(ref succeeded);
                         var currentDone = Interlocked.Increment(ref completed);
                         progress.Report(new ProcessorProgress(
                             row.Id,
@@ -142,9 +201,13 @@ public sealed class TranslationProcessor
                             Rating: reviewResponse.Rating,
                             RawResponse: reviewResponse.RawResponse));
                     }
+                    catch (OperationCanceledException) when (token.IsCancellationRequested)
+                    {
+                        throw;
+                    }
                     catch (Exception rowEx)
                     {
-                        failed++;
+                        Interlocked.Increment(ref failed);
                         var currentFailed = Interlocked.Increment(ref completed);
                         progress.Report(new ProcessorProgress(
                             row.Id,
@@ -154,7 +217,7 @@ public sealed class TranslationProcessor
                             Status: "Failed",
                             Error: rowEx.Message));
                     }
-                }
+                }).ConfigureAwait(false);
             }
 
             progress.Report(new ProcessorProgress(
@@ -179,48 +242,30 @@ public sealed class TranslationProcessor
 
             for (var attempt = 0; attempt <= _processingSettings.MaxRetries; attempt++)
             {
-                if (_processingSettings.RequestsPerMinute > 0 && rateLimiter is not null)
-                {
-                    await rateLimiter.WaitAsync(token).ConfigureAwait(false);
-                    try
-                    {
-                        var minIntervalMs = (int)Math.Ceiling(60000.0 / _processingSettings.RequestsPerMinute);
-                        int delayMs = 0;
-                        lock (rateLock)
-                        {
-                            if (lastRequestTime != DateTime.MinValue)
-                            {
-                                var elapsedMs = (DateTime.UtcNow - lastRequestTime).TotalMilliseconds;
-                                if (elapsedMs < minIntervalMs)
-                                {
-                                    delayMs = (int)Math.Ceiling(minIntervalMs - elapsedMs);
-                                }
-                            }
-                        }
-
-                        if (delayMs > 0)
-                        {
-                            await Task.Delay(delayMs, token).ConfigureAwait(false);
-                        }
-
-                        lock (rateLock)
-                        {
-                            lastRequestTime = DateTime.UtcNow;
-                        }
-                    }
-                    finally
-                    {
-                        rateLimiter.Release();
-                    }
-                }
+                await WaitForRequestSlotAsync(token).ConfigureAwait(false);
 
                 try
                 {
                     var attemptLabel = attempt > 0 ? $" (lần thử {attempt + 1})" : "";
+                    var matchedTerms = _glossary?.FindMatches(row.MsgId) ?? Array.Empty<GlossaryEntry>();
+                    var dictLabel = matchedTerms.Count > 0 ? $" (kèm {matchedTerms.Count} từ điển)" : "";
                     progress.Report(new ProcessorProgress(
                         row.Id, completed, total,
-                        $"[{row.Id}] Đang gửi câu hỏi lên AI{attemptLabel}...",
+                        $"[{row.Id}] Đang gửi câu hỏi lên AI{attemptLabel}{dictLabel}...",
                         Status: "Sending"));
+
+                    if (matchedTerms.Count > 0 && attempt == 0)
+                    {
+                        var termsPreview = string.Join(", ", matchedTerms.Take(5).Select(t => $"\"{t.English}\"->\"{t.Vietnamese}\""));
+                        if (matchedTerms.Count > 5)
+                        {
+                            termsPreview += $" (+{matchedTerms.Count - 5} từ khác)";
+                        }
+                        progress.Report(new ProcessorProgress(
+                            row.Id, completed, total,
+                            $"[{row.Id}] 📖 Từ điển áp dụng: {termsPreview}",
+                            Status: "Dictionary"));
+                    }
 
                     reviewResponse = await _client.ReviewTranslationAsync(row, token).ConfigureAwait(false);
 

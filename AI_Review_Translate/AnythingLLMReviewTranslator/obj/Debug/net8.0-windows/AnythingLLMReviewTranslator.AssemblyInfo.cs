@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AnythingLLMReviewTranslator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2119cc9ea6ff2f05a52e158e6f5950896c8b816d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64bdb0df591104d6cbd6e8b2c32e441d5ef348bf")]
 [assembly: System.Reflection.AssemblyProductAttribute("AnythingLLMReviewTranslator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AnythingLLMReviewTranslator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

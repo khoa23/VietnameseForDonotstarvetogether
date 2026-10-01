@@ -55,6 +55,57 @@ public sealed class MssqlTranslationRepository
         return rows;
     }
 
+    public async Task<List<GlossaryCheckRow>> LoadAllRowsForGlossaryCheckAsync(
+        bool excludeLocked = true,
+        IProgress<int>? progress = null,
+        CancellationToken cancellationToken = default)
+    {
+        var rows = new List<GlossaryCheckRow>();
+
+        using var connection = new SqlConnection(_settings.ConnectionString);
+        await connection.OpenAsync(cancellationToken).ConfigureAwait(false);
+
+        using var command = connection.CreateCommand();
+        command.CommandTimeout = Math.Max(_commandTimeoutSeconds, 300);
+
+        var selectColumns = new List<string>();
+        AddSelectColumn(selectColumns, _settings.KeyColumn);
+        AddSelectColumn(selectColumns, _settings.MsgIdColumn);
+        AddSelectColumn(selectColumns, _settings.MsgStrColumn);
+        AddSelectColumn(selectColumns, _settings.SuggestedTranslationColumn);
+
+        var whereClauses = new List<string>();
+        if (excludeLocked && !string.IsNullOrWhiteSpace(_settings.TranslationLockedColumn))
+        {
+            whereClauses.Add($"ISNULL({SqlIdentifier.QuotePath(_settings.TranslationLockedColumn)}, 0) <> 1");
+        }
+
+        var whereClause = whereClauses.Count > 0 ? " WHERE " + string.Join(" AND ", whereClauses) : string.Empty;
+        command.CommandText = $"SELECT {string.Join(", ", selectColumns)} FROM {SqlIdentifier.QuotePath(_settings.SourceTable)}{whereClause} ORDER BY {SqlIdentifier.QuotePath(_settings.KeyColumn)}";
+
+        using var reader = await command.ExecuteReaderAsync(cancellationToken).ConfigureAwait(false);
+        int count = 0;
+        while (await reader.ReadAsync(cancellationToken).ConfigureAwait(false))
+        {
+            rows.Add(new GlossaryCheckRow
+            {
+                Id = GetLong(reader, _settings.KeyColumn) ?? 0,
+                MsgId = GetString(reader, _settings.MsgIdColumn),
+                MsgStr = GetString(reader, _settings.MsgStrColumn),
+                SuggestedTranslation = GetString(reader, _settings.SuggestedTranslationColumn)
+            });
+
+            count++;
+            if (progress is not null && count % 5000 == 0)
+            {
+                progress.Report(count);
+            }
+        }
+
+        progress?.Report(count);
+        return rows;
+    }
+
     public async Task UpdateTranslationAsync(long id, string? suggestedTranslation, decimal? rating, CancellationToken cancellationToken)
     {
         if (string.IsNullOrWhiteSpace(_settings.TargetTable))
@@ -80,7 +131,8 @@ public sealed class MssqlTranslationRepository
         command.CommandText =
             $"UPDATE {SqlIdentifier.QuotePath(_settings.TargetTable)} " +
             $"SET {SqlIdentifier.QuotePath(_settings.SuggestedTranslationColumn)} = @SuggestedTranslation, " +
-            $"{SqlIdentifier.QuotePath(_settings.RatingColumn)} = @Rating " +
+            $"{SqlIdentifier.QuotePath(_settings.RatingColumn)} = @Rating, " +
+            "[LastUpdated] = SYSUTCDATETIME() " +
             $"WHERE {SqlIdentifier.QuotePath(_settings.KeyColumn)} = @Id";
 
         command.Parameters.Add("@SuggestedTranslation", System.Data.SqlDbType.NVarChar, -1).Value =
@@ -98,6 +150,89 @@ public sealed class MssqlTranslationRepository
         {
             throw new InvalidOperationException($"Không cập nhật được dòng có Id = {id}.");
         }
+    }
+
+    public async Task ClearTranslationsAsync(IEnumerable<long> ids, CancellationToken cancellationToken)
+    {
+        var distinctIds = ids.Distinct().ToList();
+        if (distinctIds.Count == 0)
+        {
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(_settings.TargetTable) ||
+            string.IsNullOrWhiteSpace(_settings.SuggestedTranslationColumn) ||
+            string.IsNullOrWhiteSpace(_settings.RatingColumn))
+        {
+            throw new InvalidOperationException("TargetTable, SuggestedTranslationColumn và RatingColumn phải được cấu hình.");
+        }
+
+        using var connection = new SqlConnection(_settings.ConnectionString);
+        await connection.OpenAsync(cancellationToken).ConfigureAwait(false);
+
+        foreach (var batch in distinctIds.Chunk(1000))
+        {
+            using var command = connection.CreateCommand();
+            command.CommandTimeout = _commandTimeoutSeconds;
+            var parameterNames = new List<string>();
+            for (var i = 0; i < batch.Length; i++)
+            {
+                var parameterName = $"@Id{i}";
+                parameterNames.Add(parameterName);
+                command.Parameters.Add(parameterName, System.Data.SqlDbType.BigInt).Value = batch[i];
+            }
+
+            command.CommandText =
+                $"UPDATE {SqlIdentifier.QuotePath(_settings.TargetTable)} " +
+                $"SET {SqlIdentifier.QuotePath(_settings.SuggestedTranslationColumn)} = NULL, " +
+                $"{SqlIdentifier.QuotePath(_settings.RatingColumn)} = NULL " +
+                $"WHERE {SqlIdentifier.QuotePath(_settings.KeyColumn)} IN ({string.Join(", ", parameterNames)})";
+
+            await command.ExecuteNonQueryAsync(cancellationToken).ConfigureAwait(false);
+        }
+    }
+
+    public async Task UpdateSuggestedTranslationsAsync(
+        IReadOnlyDictionary<long, string> translations,
+        CancellationToken cancellationToken)
+    {
+        if (translations.Count == 0)
+        {
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(_settings.TargetTable) ||
+            string.IsNullOrWhiteSpace(_settings.SuggestedTranslationColumn))
+        {
+            throw new InvalidOperationException("TargetTable và SuggestedTranslationColumn phải được cấu hình.");
+        }
+
+        using var connection = new SqlConnection(_settings.ConnectionString);
+        await connection.OpenAsync(cancellationToken).ConfigureAwait(false);
+        using var transaction = (SqlTransaction)await connection.BeginTransactionAsync(cancellationToken).ConfigureAwait(false);
+        using var command = connection.CreateCommand();
+        command.Transaction = transaction;
+        command.CommandTimeout = _commandTimeoutSeconds;
+        command.CommandText =
+            $"UPDATE {SqlIdentifier.QuotePath(_settings.TargetTable)} " +
+            $"SET {SqlIdentifier.QuotePath(_settings.SuggestedTranslationColumn)} = @SuggestedTranslation, " +
+            "[LastUpdated] = SYSUTCDATETIME() " +
+            $"WHERE {SqlIdentifier.QuotePath(_settings.KeyColumn)} = @Id";
+        command.Parameters.Add("@SuggestedTranslation", System.Data.SqlDbType.NVarChar, -1);
+        command.Parameters.Add("@Id", System.Data.SqlDbType.BigInt);
+
+        foreach (var (id, translation) in translations)
+        {
+            command.Parameters["@SuggestedTranslation"].Value = translation;
+            command.Parameters["@Id"].Value = id;
+            var affected = await command.ExecuteNonQueryAsync(cancellationToken).ConfigureAwait(false);
+            if (affected == 0)
+            {
+                throw new InvalidOperationException($"Không cập nhật được dòng có Id = {id}.");
+            }
+        }
+
+        await transaction.CommitAsync(cancellationToken).ConfigureAwait(false);
     }
 
     private string BuildSelectSql()

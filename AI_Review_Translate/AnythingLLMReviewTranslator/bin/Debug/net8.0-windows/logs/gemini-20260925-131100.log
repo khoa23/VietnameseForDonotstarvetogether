@@ -1,0 +1,676 @@
+=== Translation Log Started at 2026-09-25 13:11:00 | Provider: Gemini ===
+
+======================================== [2026-09-25 13:11:14] ========================================
+[URL]: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=***API_KEY***
+[INPUT / PROMPT]:
+Bạn là chuyên gia hiệu đính và dịch thuật tiếng Việt cho game Don't Starve Together.
+Nhiệm vụ:
+1. Chấm điểm bản dịch hiện tại (MsgStr) so với chuỗi gốc tiếng Anh (MsgId) theo thang rating (0.0 - 10.0):
+   - MsgStr rỗng, chưa dịch hoặc còn là tiếng Anh: Chấm rating thấp (0.0 - 1.0).
+   - MsgStr dịch chuẩn xác, tự nhiên: Chấm rating cao (8.0 - 10.0).
+2. Đề xuất bản dịch TIẾNG VIỆT tối ưu nhất cho trường "suggestedTranslation":
+   - BẮT BUỘC 100% PHẢI LÀ TIẾNG VIỆT tự nhiên, ngắn gọn, chuẩn văn phong game.
+   - TUYỆT ĐỐI KHÔNG ĐƯỢC để suggestedTranslation là tiếng Anh trong bất kỳ trường hợp nào!
+3. Giữ nguyên tuyệt đối tất cả các ký tự đặc biệt, dấu gạch chéo ngược (\), dấu ngoặc kép ("), escaped quotes (\"), ký tự xuống dòng (\n, \r), tab (\t), placeholder (%s, {0}, {name}), mã thẻ định dạng.
+4. Nếu mục nào có 'Thuật ngữ tham khảo', BẮT BUỘC ưu tiên dịch thuật ngữ đó sang nghĩa tiếng Việt tương ứng.
+Ví dụ:
+Input: \"Not yet mid-summer\", you say? Well my friend, the early bird gets the worm!
+Output: {"id":101,"suggestedTranslation":"\"Chưa đến giữa hè\", bạn nói? Bạn ơi, con chim sớm sẽ có sâu!","rating":8.5}
+
+Hãy xử lý tất cả các mục dưới đây và trả về duy nhất một JSON array.
+Mỗi phần tử phải có đúng 3 trường: id, suggestedTranslation, rating.
+Trả về CHỈ JSON hợp lệ, không bọc markdown, không giải thích thừa.
+Ví dụ mẫu: [{"id":101,"suggestedTranslation":"\"Chưa đến giữa hè\", bạn nói?...","rating":8.5}]
+
+Item:
+Id: 706336
+MsgCtxt: STRINGS.CHARACTERS.WALTER.DESCRIBE.ANCIENTTREE_GEM.STUMP
+MsgId: Is that a rock? No wait, it's a stump!
+MsgStr: Đó có phải là hòn đá không? Khoan đã, là gốc cây!
+Thuật ngữ tham khảo: "Rock" => "Đá tảng"
+
+Item:
+Id: 707486
+MsgCtxt: STRINGS.CHARACTERS.WALTER.DESCRIBE.ICESTAFF3
+MsgId: Have an ice day! Heh...
+MsgStr: Chúc một ngày tốt lành! Ơ...
+Thuật ngữ tham khảo: "Ice" => "Băng đá / Gai Băng"
+
+Item:
+Id: 707956
+MsgCtxt: STRINGS.CHARACTERS.WALTER.DESCRIBE.NITRE
+MsgId: Nitre here nor there. Heh...
+MsgStr: Nitre không có ở đây. Hở...
+Thuật ngữ tham khảo: "Nitre" => "Ni tơ"
+
+Item:
+Id: 711443
+MsgCtxt: STRINGS.CHARACTERS.WANDA.DESCRIBE.MANDRAKE_PLANTED
+MsgId: What is that, a turnip?
+MsgStr: Đó là củ cải phải không?
+Thuật ngữ tham khảo: "Turnip" => "Củ Cải Tím"
+
+Item:
+Id: 715200
+MsgCtxt: STRINGS.CHARACTERS.WARLY.DESCRIBE.MARBLESHRUB
+MsgId: If marble beans can grow, maybe they can be eaten.
+MsgStr: Nếu đậu cẩm thạch có thể phát triển thì có lẽ chúng có thể ăn được.
+Thuật ngữ tham khảo: "Marble" => "Đá cẩm thạch"
+
+Item:
+Id: 771122
+MsgCtxt: STRINGS.RECIPE_DESC.CHESSPIECE_CLAYWARG_BUILDER
+MsgId: Sculpt a fearsome Clay Varg.
+MsgStr: Tạo điêu khắc của một con chó sói đầy đáng sợ.
+Thuật ngữ tham khảo: "Clay Varg" => "Chó Sói Đất Sét", "Varg" => "Chó Sói"
+
+Item:
+Id: 771123
+MsgCtxt: STRINGS.RECIPE_DESC.CHESSPIECE_CLAYWARG_SKETCH
+MsgId: A sculpture sketch of the Clay Varg.
+MsgStr: Một bản phác thảo điêu khắc của con chó sói đầy đáng sợ.
+Thuật ngữ tham khảo: "Clay Varg" => "Chó Sói Đất Sét", "Sketch" => "Phác thảo", "Varg" => "Chó Sói"
+
+Item:
+Id: 771152
+MsgCtxt: STRINGS.RECIPE_DESC.CHESSPIECE_STALKER_BUILDER
+MsgId: A de-animated reanimated skeleton.
+MsgStr: Một bộ xương tái sinh không còn hoạt động.
+Thuật ngữ tham khảo: "Reanimated Skeleton" => "Hài Cốt Tái Sinh", "Skeleton" => "Bộ xương"
+
+Item:
+Id: 771161
+MsgCtxt: STRINGS.RECIPE_DESC.CHESSPIECE_YOTD_SKETCH
+MsgId: A sculpture sketch of a Dragonfly boat race Start Tower.
+MsgStr: Một bản phác thảo điêu khắc của Thuyền Ruồi Rồng tháp Xuất Phát.
+Thuật ngữ tham khảo: "Dragonfly Boat" => "Thuyển Chuồn Chuồn", "Start Tower" => "Tháp xuất phát", "Dragonfly" => "Chuồn Chuồn", "Sketch" => "Phác thảo", "Boat" => "Thuyền ván"
+
+Item:
+Id: 772072
+MsgCtxt: STRINGS.SCRAPBOOK.SPECIALINFO.BOOK_BEES
+MsgId: Summons 2 Grumble Bee followers. Maximum 16 at a time.
+MsgStr: Triệu tập 2 người theo dõi ong càu nhàu. Tối đa 16 tại một thời điểm.
+Thuật ngữ tham khảo: "Grumble Bee" => "Ong Chiến Binh", "Bee" => "Ong"
+
+Item:
+Id: 772114
+MsgCtxt: STRINGS.SCRAPBOOK.SPECIALINFO.COMPOSTINGBIN
+MsgId: Can receive up to 6 \"wet\" and \"dry\" items. When it has at least 2 items, it begins composting.\n\nThe more items it has the faster it will produce compost.\n\nIt works faster if it has a ballance of \"wet\" and \"dry\" items.
+MsgStr: Có thể nhận tối đa 6 vật phẩm \"ướt\" và \"khô\". Khi có ít nhất 2 vật phẩm, nó sẽ bắt đầu quá trình ủ phân.\n\nCàng có nhiều vật phẩm thì nó sẽ tạo ra phân trộn càng nhanh.\n\nNó hoạt động nhanh hơn nếu có một khối các vật phẩm \"ướt\" và \"khô\".
+Thuật ngữ tham khảo: "Compost" => "Phân Trộn"
+
+Item:
+Id: 772234
+MsgCtxt: STRINGS.SCRAPBOOK.SPECIALINFO.MAST
+MsgId: It can be quickly unfurled and furled with effort. When unfurled the sail increases the boats forward velocity by 2.5.\n\nEach mast placed is 30% less efficient than the last.\n\nThe Steering Wheel can be used to rotate the forward direction of the Mast.
+MsgStr: Nó có thể nhanh chóng được mở ra và cuộn lại bằng nỗ lực. Khi giương buồm, vận tốc về phía trước của thuyền sẽ tăng thêm 2,5.\n\nMỗi cột được đặt sẽ kém hiệu quả hơn 30% so với cột trước.\n\nCó thể sử dụng Vô lăng để xoay hướng về phía trước của Cột buồm.
+Thuật ngữ tham khảo: "Steering Wheel" => "Bánh Lái", "Mast" => "Buồm"
+
+Item:
+Id: 772235
+MsgCtxt: STRINGS.SCRAPBOOK.SPECIALINFO.MASTMALBATROSS
+MsgId: It can be quickly furled and unfurled with effort. When unfurled the sail increases the boats forward velocity by 4.\n\nEach mast placed is 30% less efficient than the last.\n\nThe Steering Wheel can be used to rotate the forward direction of the Mast.
+MsgStr: Nó có thể được cuộn lại và mở ra một cách nhanh chóng nếu bạn nỗ lực. Khi giương buồm, vận tốc về phía trước của thuyền sẽ tăng thêm 4.\n\nMỗi cột được đặt sẽ kém hiệu quả hơn 30% so với cột trước.\n\nCó thể sử dụng Vô lăng để xoay hướng về phía trước của Cột buồm.
+Thuật ngữ tham khảo: "Steering Wheel" => "Bánh Lái", "Mast" => "Buồm"
+
+Item:
+Id: 772243
+MsgCtxt: STRINGS.SCRAPBOOK.SPECIALINFO.MERM_ARMORY_UPGRADED
+MsgId: While stocked with Cut Grass and Logs, Merm Guards will grab a Swamp Warrior Helmet from it, reducing its stores.\n\nSwamp Warrior Helmets are a better design over their Brawler cousin, providing 70% resistance from damage for a longer period of time.
+MsgStr: Khi dự trữ Cỏ Cắt và Gỗ, Vệ binh Người cá sẽ lấy Mũ bảo hiểm Chiến binh Đầm lầy từ đó, giúp giảm lượng dự trữ.\n\nMũ bảo hiểm Chiến binh Đầm lầy là thiết kế tốt hơn so với người anh em Brawler của họ, cung cấp 70% khả năng kháng sát thương trong thời gian dài hơn.
+Thuật ngữ tham khảo: "Swamp Warrior Helmet" => "Mũ bảo hiểm Chiến binh Đầm lầy", "Cut Grass" => "Cỏ khô", "Grass" => "Cỏ", "Merm" => "Người Cá"
+
+Item:
+Id: 772245
+MsgCtxt: STRINGS.SCRAPBOOK.SPECIALINFO.MERM_TOOLSHED_UPGRADED
+MsgId: While stocked with twigs and rocks, regular Merms will grab a Slightly Less Shoddy Tool from it, reducing its stores.\n\nSlightly Less Shoddy tools increase the amount of work a Merm does a little more than their lesser sibling, the Shoddy Tool.\n\nWith a Slightly Less Shoddy Tool, follower Merms will help chop trees, mine rocks, dig in a garden and till soil.
+MsgStr: Trong khi chứa cành cây và đá, Người cá thông thường sẽ lấy một Công cụ kém chất lượng hơn một chút từ nó, làm giảm lượng dự trữ của nó.\n\nCác công cụ Người cá kém chất lượng hơn một chút sẽ tăng khối lượng công việc mà Người cá thực hiện nhiều hơn một chút so với người anh em kém chất lượng của chúng, Công cụ kém chất lượng.\n\nVới một Công cụ kém chất lượng hơn một chút, Người cá đi theo sẽ giúp chặt cây, khai thác đá, đào đất trong vườn và xới đất.
+Thuật ngữ tham khảo: "Slightly Less Shoddy Tool" => "Dụng cụ nhẹ và xịn", "Shoddy Tool" => "Công cụ kém chất lượng", "Rocks" => "Cục đá", "Twigs" => "Cành cây", "Merm" => "Người Cá"
+
+Item:
+Id: 772303
+MsgCtxt: STRINGS.SCRAPBOOK.SPECIALINFO.ONEMANBAND
+MsgId: Wearing the One-Man Band is a sanity-lowering experience, but converts nearby pigmen and bunnymen to followers.
+MsgStr: Mặc ban nhạc một người là một trải nghiệm giảm dần, nhưng chuyển đổi những người lợn gần đó và những người theo dõi thành những người theo dõi.
+Thuật ngữ tham khảo: "One-man Band" => "Người Hát Rong", "Sanity" => "Tinh thần"
+
+Item:
+Id: 772304
+MsgCtxt: STRINGS.SCRAPBOOK.SPECIALINFO.OPALSTAFF
+MsgId: Creates a Polar Light.
+MsgStr: Tạo ra một ánh sáng cực.
+Thuật ngữ tham khảo: "Polar Light" => "Sao Cực Quang"
+
+Item:
+Id: 772334
+MsgCtxt: STRINGS.SCRAPBOOK.SPECIALINFO.PONDCAVE
+MsgId: If filled with acid, this pond will crust over with Nitre.
+MsgStr: Nếu chứa đầy axit, ao này sẽ phủ lên với nitre.
+Thuật ngữ tham khảo: "Nitre" => "Ni tơ", "Pond" => "Ao"
+
+Item:
+Id: 773270
+MsgCtxt: STRINGS.SKILLTREE.WENDY.WENDY_LUNAR_LOCK_1_DESC
+MsgId: Defeat the Celestial Champion
+MsgStr: Đánh bại Chiến Binh Thiên Hà
+Thuật ngữ tham khảo: "Celestial Champion" => "Chiến Binh Thiên Hà"
+
+Item:
+Id: 776132
+MsgCtxt: STRINGS.SKIN_DESCRIPTIONS.pack_relic
+MsgId: This Reliquary Chest contains the following skin items: Faint Gleam Amulet, Iterum Amulet, Qualming Amulet, Robustum Amulet, Reaping Amulet, Sepulchral Amulet, Ornate Bone Armor, Ornate Bone Helm, Twisted Star Caller's Staff, Twisted Moon Caller's Staff, Layered Dreadstone Wall, Recondite Deserter, and Ornate Night Light.
+MsgStr: Rương Thánh tích này chứa các vật phẩm da sau: Bùa Faint Gleam, Bùa Iterum, Bùa Qualming, Bùa Robustum, Bùa Reaping, Bùa Sepulchral, Giáp xương trang trí công phu, Mũ xương trang trí công phu, Quyền trượng của Người triệu hồi Ngôi sao xoắn, Quyền trượng Người triệu hồi Mặt trăng xoắn, Bức tường Đá Kinh Hoàng nhiều lớp, Kẻ đào ngũ Recondite và Đèn ngủ trang trí công phu.
+Thuật ngữ tham khảo: "Moon Caller's Staff" => "Gậy Gọi Trăng", "Star Caller's Staff" => "Gậy Gọi Sao", "Dreadstone Wall" => "Tường Đá Kinh Hoàng", "Night Light" => "Đèn Chong Đêm", "Bone Armor" => "Giáp xương", "Dreadstone" => "Đá Kinh Hoàng", "Bone Helm" => "Mũ Xương", "Reliquary" => "Tráp Thánh Tích", "Chest" => "Rương"
+
+Item:
+Id: 776162
+MsgCtxt: STRINGS.SKIN_DESCRIPTIONS.pack_swamp_items
+MsgId: This Swamp-Lover's Chest contains the following skin items: Hollow Gaze Hutch, Mossy Mermhouse, Mossy Merm Flort, Primal Panflute, Paddlefish Oar, Driftwood Paddlefish Oar, Primitive Rainometer, Primitive Potter's Wheel, Swampy Siesta Shade, Primal Star Caller's Staff, Mossberry Hat, Mangrove Helm, Dampwood Hat, and Primal Morning Star.
+MsgStr: Rương Người Yêu Đầm Lầy này chứa các vật phẩm da sau: Hollow Gaze Hutch, Nhà Người Cá Rêu, Hoa Người Cá Rêu, Sáo Nguyên Thủy, Mái chèo Cá mái chèo, Mái chèo Cá mái chèo Gỗ Mục, Máy đo mưa Nguyên thủy, Bánh xe Potter Nguyên thủy, Bóng ngủ trưa đầm lầy, Gậy gọi Ngôi sao Nguyên thủy, Mũ Mossberry, Mũ Mangrove, Mũ Dampwood và Sao Mai Nguyên Thủy.
+Thuật ngữ tham khảo: "Star Caller's Staff" => "Gậy Gọi Sao", "Potter's Wheel" => "Bàn thợ gốm", "Morning Star" => "Gậy Sao Mai", "Rainometer" => "Vũ Kế", "Driftwood" => "Cây Gỗ Mục", "Chest" => "Rương", "Merm" => "Người Cá", "Oar" => "Mái Chèo"
+
+Item:
+Id: 776329
+MsgCtxt: STRINGS.SKIN_DESCRIPTIONS.pack_woodworking_handmade
+MsgId: This Cozy Woodworking Chest contains the following belongings skin items: Cozy Round Table, Cozy Square Table, Cozy Wooden Chair, Cozy Wooden Stool, Tree's Company, Artisanal Vase, Warm and Fuzzy Lamp, Cozy Frame, Merm with a Pearl Earring, and Rustic Record Spinner.
+MsgStr: Chiếc rương gỗ ấm cúng này chứa các vật dụng da sau đây: bàn tròn ấm cúng, bàn vuông ấm cúng, ghế gỗ ấm cúng, phân gỗ ấm cúng, công ty cây Spinner.
+Thuật ngữ tham khảo: "Wooden Chair" => "Ghế Tựa Gỗ", "Wooden Stool" => "Ghế Đẩu Gỗ", "Record" => "Đĩa Hát", "Pearl" => "Ngọc trai", "Chest" => "Rương", "Merm" => "Người Cá"
+
+Item:
+Id: 777890
+MsgCtxt: STRINGS.SKIN_NAMES.armor_marble_rockabs
+MsgId: Marble Plate Armor
+MsgStr: Áo giáp bằng đá cẩm thạch
+Thuật ngữ tham khảo: "Marble" => "Đá cẩm thạch", "Plate" => "Đĩa"
+
+Item:
+Id: 777906
+MsgCtxt: STRINGS.SKIN_NAMES.armor_wood_haramaki
+MsgId: Silken Wood Armor
+MsgStr: Giáp Gỗ Tơ Tằm
+Thuật ngữ tham khảo: "Silken Wood Armor" => "Áo Giáp Gỗ Tơ Lụa", "Wood Armor" => "Giáp Gỗ"
+
+Item:
+Id: 778488
+MsgCtxt: STRINGS.SKIN_NAMES.body_wolfgang_walrus
+MsgId: MacTusk Costume Top
+MsgStr: Trang phục MacTusk hàng đầu
+Thuật ngữ tham khảo: "MacTusk" => "Hải Mã"
+
+Item:
+Id: 778489
+MsgCtxt: STRINGS.SKIN_NAMES.body_wolfgang_walrusp
+MsgId: MacTusk Costume Top
+MsgStr: Trang phục MacTusk hàng đầu
+Thuật ngữ tham khảo: "MacTusk" => "Hải Mã"
+
+Item:
+Id: 779685
+MsgCtxt: STRINGS.SKIN_NAMES.loading_goosemoose_yule
+MsgId: Jolly Goose/Moose
+MsgStr: Ngỗng Vui Vẻ/Moose
+Thuật ngữ tham khảo: "Moose" => "Hươu Sừng Tấm", "Goose" => "Ngỗng"
+
+Item:
+Id: 779855
+MsgCtxt: STRINGS.SKIN_NAMES.molehat_goggles
+MsgId: Moggles 2.0
+MsgStr: Mũ chuột chũi 2.0
+Thuật ngữ tham khảo: "Moggles" => "Kính Chuột Chũi"
+
+Item:
+Id: 779856
+MsgCtxt: STRINGS.SKIN_NAMES.molehat_tail
+MsgId: Moggles 3.0
+MsgStr: Mũ chuột chũi 3.0
+Thuật ngữ tham khảo: "Moggles" => "Kính Chuột Chũi"
+
+Item:
+Id: 780082
+MsgCtxt: STRINGS.SKIN_NAMES.pack_magician_chest_shadow_resurrected
+MsgId: Nightmarish Magician's Chest Resurrected Chest
+MsgStr: Rương hồi sinh của pháp sư ác mộng
+Thuật ngữ tham khảo: "Magician's Chest" => "Rương Ảo Thuật Gia", "Chest" => "Rương"
+
+Item:
+Id: 780162
+MsgCtxt: STRINGS.SKIN_NAMES.pack_spring_1
+MsgId: Equinor Survivors Chest, Part I
+MsgStr: Rương Sinh Tồn Xuân Bính Ngọ, Phần I
+Thuật ngữ tham khảo: "Equinor Survivors Chest" => "Rương Sinh Tồn Xuân Bính Ngọ", "Equinor" => "Xuân Bính Ngọ", "Chest" => "Rương"
+
+Item:
+Id: 780246
+MsgCtxt: STRINGS.SKIN_NAMES.pack_waxwell_spring
+MsgId: Maxwell Equinor Chest
+MsgStr: Rương Xuân Bính Ngọ Maxwell
+Thuật ngữ tham khảo: "Maxwell Equinor Chest" => "Rương Xuân Bính Ngọ Maxwell", "Equinor" => "Xuân Bính Ngọ", "Chest" => "Rương"
+
+Item:
+Id: 780264
+MsgCtxt: STRINGS.SKIN_NAMES.pack_webber_spring
+MsgId: Webber Equinor Chest
+MsgStr: Rương Xuân Bính Ngọ Webber
+Thuật ngữ tham khảo: "Webber Equinor Chest" => "Rương Xuân Bính Ngọ Webber", "Equinor" => "Xuân Bính Ngọ", "Chest" => "Rương"
+
+Item:
+Id: 780315
+MsgCtxt: STRINGS.SKIN_NAMES.pack_wilson_spring
+MsgId: Wilson Equinor Chest
+MsgStr: Rương Xuân Bính Ngọ Wilson
+Thuật ngữ tham khảo: "Wilson Equinor Chest" => "Rương Xuân Bính Ngọ Wilson", "Equinor" => "Xuân Bính Ngọ", "Chest" => "Rương"
+
+Item:
+Id: 780477
+MsgCtxt: STRINGS.SKIN_NAMES.playerportrait_bg_deciduousforest
+MsgId: Autumn Birchnut Portrait
+MsgStr: Chân dung bạch dương mùa thu
+Thuật ngữ tham khảo: "Birchnut" => "Hạt Cây Dẻ Bulô"
+
+Item:
+Id: 780526
+MsgCtxt: STRINGS.SKIN_NAMES.playerportrait_bg_monsterspawn
+MsgId: Forge Portal Portrait
+MsgStr: Chân dung cổng thông tin rèn
+Thuật ngữ tham khảo: "Forge Portal" => "Cổng Lò Rèn"
+
+Item:
+Id: 780648
+MsgCtxt: STRINGS.SKIN_NAMES.profileflair_claywarg
+MsgId: Clay Varg
+MsgStr: Chó Săn Đất Sét
+Thuật ngữ tham khảo: "Clay Varg" => "Chó Sói Đất Sét", "Varg" => "Chó Sói"
+
+Item:
+Id: 780671
+MsgCtxt: STRINGS.SKIN_NAMES.profileflair_food_berrytart
+MsgId: Berry Tart
+MsgStr: bánh dâu
+Thuật ngữ tham khảo: "Berry Tart" => "Bánh Nhân Mứt Dâu"
+
+Item:
+Id: 780672
+MsgCtxt: STRINGS.SKIN_NAMES.profileflair_food_carrotcake
+MsgId: Carrot Cake
+MsgStr: Bánh cà rốt
+Thuật ngữ tham khảo: "Carrot Cake" => "Bánh Kem Cà Rốt", "Carrot" => "Cà rốt"
+
+Item:
+Id: 780673
+MsgCtxt: STRINGS.SKIN_NAMES.profileflair_food_cheeseburger
+MsgId: Cheeseburger
+MsgStr: bánh mì kẹp phô mai
+Thuật ngữ tham khảo: "Cheeseburger" => "Burger Phô Mai"
+
+Item:
+Id: 780676
+MsgCtxt: STRINGS.SKIN_NAMES.profileflair_food_crabroll
+MsgId: Crab Roll
+MsgStr: Cua cuộn
+Thuật ngữ tham khảo: "Crab Roll" => "Bánh Cuộn Cua"
+
+Item:
+Id: 780677
+MsgCtxt: STRINGS.SKIN_NAMES.profileflair_food_croquette
+MsgId: Croquette
+MsgStr: bánh khoai mì
+Thuật ngữ tham khảo: "Croquette" => "Bánh Quế"
+
+Item:
+Id: 780678
+MsgCtxt: STRINGS.SKIN_NAMES.profileflair_food_fishpie
+MsgId: Fish Pie
+MsgStr: chả cá
+Thuật ngữ tham khảo: "Fish Pie" => "Bánh Cá", "Fish" => "Câu Cá"
+
+Item:
+Id: 780680
+MsgCtxt: STRINGS.SKIN_NAMES.profileflair_food_jellyroll
+MsgId: Jelly Roll
+MsgStr: thạch cuộn
+Thuật ngữ tham khảo: "Jelly Roll" => "Thạch Cuộn"
+
+Item:
+Id: 780683
+MsgCtxt: STRINGS.SKIN_NAMES.profileflair_food_potroast
+MsgId: Pot Roast
+MsgStr: nồi nướng
+Thuật ngữ tham khảo: "Pot Roast" => "Đùi Nướng"
+
+Item:
+Id: 780686
+MsgCtxt: STRINGS.SKIN_NAMES.profileflair_food_spaghettiandmeatballs
+MsgId: Spaghetti and Meatball
+MsgStr: Spaghetti và thịt viên
+Thuật ngữ tham khảo: "Spaghetti and Meatball" => "Thịt Viên Mỳ Ý"
+
+Item:
+Id: 780687
+MsgCtxt: STRINGS.SKIN_NAMES.profileflair_food_steakfrites
+MsgId: Steak Frites
+MsgStr: Khoai tây chiên bít tết
+Thuật ngữ tham khảo: "Steak Frites" => "Bí Tết"
+
+Item:
+Id: 780689
+MsgCtxt: STRINGS.SKIN_NAMES.profileflair_food_trifle
+MsgId: Trifle
+MsgStr: Chuyện vặt
+Thuật ngữ tham khảo: "Trifle" => "Bánh Xốp Phủ Kem Và Trái Cây"
+
+Item:
+Id: 780703
+MsgCtxt: STRINGS.SKIN_NAMES.profileflair_icebox_crystal
+MsgId: Crystalline Ice Box
+MsgStr: Hộp đá tinh thể
+Thuật ngữ tham khảo: "Ice Box" => "Tủ lạnh", "Ice" => "Băng đá / Gai Băng"
+
+Item:
+Id: 780732
+MsgCtxt: STRINGS.SKIN_NAMES.profileflair_ornaments_15
+MsgId: Moose/Goose Ornament
+MsgStr: Trang trí nai sừng tấm\ngỗng
+Thuật ngữ tham khảo: "Moose" => "Hươu Sừng Tấm", "Goose" => "Ngỗng"
+
+Item:
+Id: 780797
+MsgCtxt: STRINGS.SKIN_NAMES.profileflair_theforge_boarlord
+MsgId: Battlemaster Pugna
+MsgStr: Chiến binh Pugna
+Thuật ngữ tham khảo: "Battlemaster Pugna" => "Chỉ Huy Pugna"
+
+Item:
+Id: 780804
+MsgCtxt: STRINGS.SKIN_NAMES.profileflair_theforge_fireballstaff
+MsgId: Infernal Staff
+MsgStr: Gậy Âm Phủ
+Thuật ngữ tham khảo: "Infernal Staff" => "Trượng Hỏa Ngục"
+
+Item:
+Id: 780825
+MsgCtxt: STRINGS.SKIN_NAMES.profileflair_victorian_boar
+MsgId: Swamp Pig Elder
+MsgStr: Lão già lợn đầm lầy
+Thuật ngữ tham khảo: "Swamp Pig Elder" => "Lợn Già Làng"
+
+Item:
+Id: 780855
+MsgCtxt: STRINGS.SKIN_NAMES.profileflair_yule_gingerpig
+MsgId: Gingerbread Pig
+MsgStr: Lợn Bánh Gừng
+Thuật ngữ tham khảo: "Gingerbread Pig" => "Lợn Bánh Gừng"
+
+Item:
+Id: 780858
+MsgCtxt: STRINGS.SKIN_NAMES.profileflair_yule_goosemoose
+MsgId: Jolly Moose/Goose
+MsgStr: Nai sừng tấm\ngỗng vui vẻ
+Thuật ngữ tham khảo: "Moose" => "Hươu Sừng Tấm", "Goose" => "Ngỗng"
+
+Item:
+Id: 781369
+MsgCtxt: STRINGS.SKIN_NAMES.waxwell_spring
+MsgId: The Equinor
+MsgStr: Xuân Bính Ngọ
+Thuật ngữ tham khảo: "The Equinor" => "Xuân Bính Ngọ", "Equinor" => "Xuân Bính Ngọ"
+
+Item:
+Id: 781395
+MsgCtxt: STRINGS.SKIN_NAMES.webber_beard_spring
+MsgId: Silky Equinor Beard
+MsgStr: Bộ râu Xuân Bính Ngọ mượt mà
+Thuật ngữ tham khảo: "Silky Equinor Beard" => "Bộ râu Xuân Bính Ngọ mượt mà", "Equinor Beard" => "Râu Xuân Bính Ngọ", "Equinor" => "Xuân Bính Ngọ"
+
+Item:
+Id: 781419
+MsgCtxt: STRINGS.SKIN_NAMES.webber_spring
+MsgId: The Equinor
+MsgStr: Xuân Bính Ngọ
+Thuật ngữ tham khảo: "The Equinor" => "Xuân Bính Ngọ", "Equinor" => "Xuân Bính Ngọ"
+
+Item:
+Id: 781530
+MsgCtxt: STRINGS.SKIN_NAMES.willow_spring
+MsgId: The Equinor
+MsgStr: Xuân Bính Ngọ
+Thuật ngữ tham khảo: "The Equinor" => "Xuân Bính Ngọ", "Equinor" => "Xuân Bính Ngọ"
+
+Item:
+Id: 781549
+MsgCtxt: STRINGS.SKIN_NAMES.wilson_beard_spring
+MsgId: Equinor Beard
+MsgStr: Râu Xuân Bính Ngọ
+Thuật ngữ tham khảo: "Equinor Beard" => "Râu Xuân Bính Ngọ", "Equinor" => "Xuân Bính Ngọ"
+
+Item:
+Id: 781574
+MsgCtxt: STRINGS.SKIN_NAMES.wilson_spring
+MsgId: The Equinor
+MsgStr: Xuân Bính Ngọ
+Thuật ngữ tham khảo: "The Equinor" => "Xuân Bính Ngọ", "Equinor" => "Xuân Bính Ngọ"
+
+Item:
+Id: 781612
+MsgCtxt: STRINGS.SKIN_NAMES.winona_spring
+MsgId: The Equinor
+MsgStr: Xuân Bính Ngọ
+Thuật ngữ tham khảo: "The Equinor" => "Xuân Bính Ngọ", "Equinor" => "Xuân Bính Ngọ"
+
+Item:
+Id: 782366
+MsgCtxt: STRINGS.SKIN_TAG_CATEGORIES.ITEM.ARMORDREADSTONE
+MsgId: Dreadstone Armor
+MsgStr: Giáp Đá Kinh Hoàng
+Thuật ngữ tham khảo: "Dreadstone Armor" => "Giáp Kinh Hoàng", "Dreadstone" => "Đá Kinh Hoàng"
+
+Item:
+Id: 782483
+MsgCtxt: STRINGS.SKIN_TAG_CATEGORIES.ITEM.MOLEHAT
+MsgId: Moggles
+MsgStr: Mũ chuột chũi
+Thuật ngữ tham khảo: "Moggles" => "Kính Chuột Chũi"
+
+Item:
+Id: 783570
+MsgCtxt: STRINGS.TABS.QUAGMIRE_MEALINGSTONE
+MsgId: Mealing Stone
+MsgStr: Xử lý đá
+Thuật ngữ tham khảo: "Mealing Stone" => "Đá Nghiền"
+
+Item:
+Id: 783571
+MsgCtxt: STRINGS.TABS.QUAGMIRE_TRADER_ELDER
+MsgId: Swamp Pig Elder
+MsgStr: Swamp Pig Elder
+Thuật ngữ tham khảo: "Swamp Pig Elder" => "Lợn Già Làng"
+
+Item:
+Id: 783703
+MsgCtxt: STRINGS.UI.ACHIEVEMENTS.LAVAARENA.ACHIEVEMENT.laq_heavyblade_special.DESC
+MsgId: Parry 15 special attacks in a single match using the Blacksmith's Edge
+MsgStr: Parry 15 tấn công đặc biệt trong một trận đấu bằng cách sử dụng cạnh của thợ rèn
+Thuật ngữ tham khảo: "Blacksmith's Edge" => "Lưỡi Đao Thợ Rèn"
+
+Item:
+Id: 783716
+MsgCtxt: STRINGS.UI.ACHIEVEMENTS.LAVAARENA.ACHIEVEMENT.laq_nodeath_r2.TITLE
+MsgId: Rigor Snortoise
+MsgStr: Khả năng khò khè
+Thuật ngữ tham khảo: "Snortoise" => "Rùa Thép"
+
+Item:
+Id: 783718
+MsgCtxt: STRINGS.UI.ACHIEVEMENTS.LAVAARENA.ACHIEVEMENT.laq_nodeath_r3.TITLE
+MsgId: Scorpeon Denizens
+MsgStr: Bọ Cạp từ chối
+Thuật ngữ tham khảo: "Scorpeon" => "Bọ Cạp Binh"
+
+Item:
+Id: 783733
+MsgCtxt: STRINGS.UI.ACHIEVEMENTS.LAVAARENA.ACHIEVEMENT.laq_petrify.DESC
+MsgId: Petrify 25 or more enemies before the Infernal Staff drops
+MsgStr: Tiêu diệt 25 kẻ thù trước khi có Infernal Staff
+Thuật ngữ tham khảo: "Infernal Staff" => "Trượng Hỏa Ngục"
+
+Item:
+Id: 783773
+MsgCtxt: STRINGS.UI.ACHIEVEMENTS.LAVAARENA.ACHIEVEMENT.wathgrithr_victory.DESC
+MsgId: Defeat Battlemaster Pugna's warriors as Wigfrid
+MsgStr: Đánh bại các chiến binh của Battlemaster Pugna bằng Wigfrid
+Thuật ngữ tham khảo: "Battlemaster Pugna" => "Chỉ Huy Pugna"
+
+Item:
+Id: 783777
+MsgCtxt: STRINGS.UI.ACHIEVEMENTS.LAVAARENA.ACHIEVEMENT.waxwell_petrify.DESC
+MsgId: Petrify 25 or more enemies before the Infernal Staff drops
+MsgStr: Tiêu diệt 25 kẻ thù trước khi có Infernal Staff
+Thuật ngữ tham khảo: "Infernal Staff" => "Trượng Hỏa Ngục"
+
+Item:
+Id: 783779
+MsgCtxt: STRINGS.UI.ACHIEVEMENTS.LAVAARENA.ACHIEVEMENT.waxwell_victory.DESC
+MsgId: Defeat Battlemaster Pugna's warriors as Maxwell
+MsgStr: Đánh bại các chiến binh của Battlemaster Pugna bằng Maxwell
+Thuật ngữ tham khảo: "Battlemaster Pugna" => "Chỉ Huy Pugna"
+
+Item:
+Id: 783785
+MsgCtxt: STRINGS.UI.ACHIEVEMENTS.LAVAARENA.ACHIEVEMENT.webber_victory.DESC
+MsgId: Defeat Battlemaster Pugna's warriors as Webber
+MsgStr: Đánh bại các chiến binh của Battlemaster Pugna bằng Webber
+Thuật ngữ tham khảo: "Battlemaster Pugna" => "Chỉ Huy Pugna"
+
+Item:
+Id: 783791
+MsgCtxt: STRINGS.UI.ACHIEVEMENTS.LAVAARENA.ACHIEVEMENT.wendy_victory.DESC
+MsgId: Defeat Battlemaster Pugna's warriors as Wendy
+MsgStr: Đánh bại các chiến binh của Battlemaster Pugna bằng Wendy
+Thuật ngữ tham khảo: "Battlemaster Pugna" => "Chỉ Huy Pugna"
+
+Item:
+Id: 783797
+MsgCtxt: STRINGS.UI.ACHIEVEMENTS.LAVAARENA.ACHIEVEMENT.wes_victory.DESC
+MsgId: Defeat Battlemaster Pugna's warriors as Wes
+MsgStr: Đánh bại các chiến binh của Battlemaster Pugna bằng Wes
+Thuật ngữ tham khảo: "Battlemaster Pugna" => "Chỉ Huy Pugna"
+
+Item:
+Id: 783803
+MsgCtxt: STRINGS.UI.ACHIEVEMENTS.LAVAARENA.ACHIEVEMENT.wickerbottom_victory.DESC
+MsgId: Defeat Battlemaster Pugna's warriors as Wickerbottom
+MsgStr: Đánh bại các chiến binh của Battlemaster Pugna là Wickerbottom
+Thuật ngữ tham khảo: "Battlemaster Pugna" => "Chỉ Huy Pugna"
+
+Item:
+Id: 783809
+MsgCtxt: STRINGS.UI.ACHIEVEMENTS.LAVAARENA.ACHIEVEMENT.willow_victory.DESC
+MsgId: Defeat Battlemaster Pugna's warriors as Willow
+MsgStr: Đánh bại các chiến binh của Battlemaster Pugna như Willow
+Thuật ngữ tham khảo: "Battlemaster Pugna" => "Chỉ Huy Pugna"
+
+Item:
+Id: 783815
+MsgCtxt: STRINGS.UI.ACHIEVEMENTS.LAVAARENA.ACHIEVEMENT.wilson_victory.DESC
+MsgId: Defeat Battlemaster Pugna's warriors as Wilson
+MsgStr: Đánh bại các chiến binh của Battlemaster Pugna trong vai Wilson
+Thuật ngữ tham khảo: "Battlemaster Pugna" => "Chỉ Huy Pugna"
+
+Item:
+Id: 783821
+MsgCtxt: STRINGS.UI.ACHIEVEMENTS.LAVAARENA.ACHIEVEMENT.winona_victory.DESC
+MsgId: Defeat Battlemaster Pugna's warriors as Winona
+MsgStr: Đánh bại các chiến binh của Battlemaster Pugna là Winona
+Thuật ngữ tham khảo: "Battlemaster Pugna" => "Chỉ Huy Pugna"
+
+Item:
+Id: 783833
+MsgCtxt: STRINGS.UI.ACHIEVEMENTS.LAVAARENA.ACHIEVEMENT.wolfgang_victory.DESC
+MsgId: Defeat Battlemaster Pugna's warriors as Wolfgang
+MsgStr: Đánh bại các chiến binh của Battlemaster Pugna trong vai Wolfgang
+Thuật ngữ tham khảo: "Battlemaster Pugna" => "Chỉ Huy Pugna"
+
+Item:
+Id: 783839
+MsgCtxt: STRINGS.UI.ACHIEVEMENTS.LAVAARENA.ACHIEVEMENT.woodie_victory.DESC
+MsgId: Defeat Battlemaster Pugna's warriors as Woodie
+MsgStr: Đánh bại các chiến binh của Battlemaster Pugna trong vai Woodie
+Thuật ngữ tham khảo: "Battlemaster Pugna" => "Chỉ Huy Pugna"
+
+Item:
+Id: 783845
+MsgCtxt: STRINGS.UI.ACHIEVEMENTS.LAVAARENA.ACHIEVEMENT.wx78_victory.DESC
+MsgId: Defeat Battlemaster Pugna's warriors as WX-78
+MsgStr: Đánh bại các chiến binh của Battlemaster Pugna là WX-78
+Thuật ngữ tham khảo: "Battlemaster Pugna" => "Chỉ Huy Pugna"
+
+Item:
+Id: 785565
+MsgCtxt: STRINGS.UI.HUD.LAVAARENA_LOSE_BODY
+MsgId: You have failed Battlemaster Pugna's challenge.
+MsgStr: Bạn đã thất bại trong thử thách Battlemaster Pugna.
+Thuật ngữ tham khảo: "Battlemaster Pugna" => "Chỉ Huy Pugna"
+
+Item:
+Id: 785567
+MsgCtxt: STRINGS.UI.HUD.LAVAARENA_WIN_BODY
+MsgId: You have bested Battlemaster Pugna's champions in battle.
+MsgStr: Bạn đã đánh bại các nhà vô địch Battlemaster Pugna trong trận chiến.
+Thuật ngữ tham khảo: "Battlemaster Pugna" => "Chỉ Huy Pugna"
+
+Item:
+Id: 785678
+MsgCtxt: STRINGS.UI.LAVAARENA_COMMUNITY_UNLOCKS.UNLOCKED_DESC.LAVAARENA_HEAVYBLADE
+MsgId: Hinder your opponents with the almighty Blacksmith's Edge
+MsgStr: Cản trở đối thủ của bạn với cạnh của thợ rèn toàn năng
+Thuật ngữ tham khảo: "Blacksmith's Edge" => "Lưỡi Đao Thợ Rèn"
+
+Item:
+Id: 788108
+MsgCtxt: STRINGS.VAULT_RUNE.LORE2
+MsgId: \"Through the Keystone, all kin and kind shall fall.\"
+MsgStr: \"Thông qua Viên Đá Khóa, mọi thân tộc và đồng loại sẽ sụp đổ.\"
+Thuật ngữ tham khảo: "Keystone" => "Đá Chốt"
+
+Item:
+Id: 788109
+MsgCtxt: STRINGS.VAULT_RUNE.LORE3
+MsgId: \"Let the cursed Keystone never cross this threshold.\"
+MsgStr: \"Hãy để Keystone bị nguyền rủa không bao giờ vượt qua ngưỡng này.\"
+Thuật ngữ tham khảo: "Keystone" => "Đá Chốt"
+
+----------------------------------------------------------------------------------------------------
+[OUTPUT / RESPONSE]:
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "[\n  {\n    \"id\": 706336,\n    \"suggestedTranslation\": \"Đó là hòn đá tảng à? Khoan đã, là gốc cây!\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 707486,\n    \"suggestedTranslation\": \"Chúc một ngày băng giá! Hì...\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 707956,\n    \"suggestedTranslation\": \"Ni tơ ở đây hay ở đâu ấy nhỉ. Hì...\",\n    \"rating\": 8.5\n  },\n  {\n    \"id\": 711443,\n    \"suggestedTranslation\": \"Cái gì thế, củ cải tím à?\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 715200,\n    \"suggestedTranslation\": \"Nếu hạt đậu đá cẩm thạch có thể lớn lên, có lẽ chúng ăn được đấy.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 771122,\n    \"suggestedTranslation\": \"Tạc tượng một con Chó Sói Đất Sét đáng sợ.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 771123,\n    \"suggestedTranslation\": \"Bản phác thảo điêu khắc của Chó Sói Đất Sét.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 771152,\n    \"suggestedTranslation\": \"Một bộ hài cốt tái sinh đã ngừng hoạt động.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 771161,\n    \"suggestedTranslation\": \"Bản phác thảo điêu khắc Tháp Xuất Phát Thuyền Chuồn Chuồn.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 772072,\n    \"suggestedTranslation\": \"Triệu tập 2 Ong Chiến Binh đi theo. Tối đa 16 con cùng lúc.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 772114,\n    \"suggestedTranslation\": \"Có thể chứa tối đa 6 vật phẩm \\\"ướt\\\" và \\\"khô\\\". Khi có ít nhất 2 vật phẩm, nó sẽ bắt đầu quá trình ủ phân trộn.\\n\\nCàng có nhiều vật phẩm thì thời gian tạo ra phân trộn càng nhanh.\\n\\nNó sẽ hoạt động hiệu quả hơn nếu cân bằng giữa vật phẩm \\\"ướt\\\" và \\\"khô\\\".\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 772234,\n    \"suggestedTranslation\": \"Có thể nhanh chóng giương lên và hạ xuống bằng sức lực. Khi giương buồm, tốc độ tiến về phía trước của thuyền sẽ tăng thêm 2,5.\\n\\nMỗi cột buồm được đặt thêm sẽ giảm 30% hiệu quả so với cái trước.\\n\\nCó thể dùng Bánh Lái để xoay hướng buồm về phía trước.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 772235,\n    \"suggestedTranslation\": \"Có thể nhanh chóng hạ xuống và giương lên bằng sức lực. Khi giương buồm, tốc độ tiến về phía trước của thuyền sẽ tăng thêm 4.\\n\\nMỗi cột buồm được đặt thêm sẽ giảm 30% hiệu quả so với cái trước.\\n\\nCó thể dùng Bánh Lái để xoay hướng buồm về phía trước.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 772243,\n    \"suggestedTranslation\": \"Khi có sẵn Cỏ khô và Gỗ, Vệ Binh Người Cá sẽ lấy Mũ bảo hiểm Chiến binh Đầm lầy từ đây, làm giảm lượng trữ.\\n\\nMũ bảo hiểm Chiến binh Đầm lầy có thiết kế vượt trội hơn dòng Brawler, cung cấp 70% kháng sát thương trong thời gian dài hơn.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 772245,\n    \"suggestedTranslation\": \"Khi có sẵn cành cây và cục đá, Người Cá thông thường sẽ lấy Dụng cụ nhẹ và xịn từ đây, làm giảm lượng trữ.\\n\\nDụng cụ nhẹ và xịn giúp Người Cá làm việc hiệu quả hơn một chút so với phiên bản kém hơn là Công cụ kém chất lượng.\\n\\nVới Dụng cụ nhẹ và xịn, Người Cá đi theo sẽ giúp chặt cây, khai thác đá, cuốc đất làm vườn và xới đất.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 772303,\n    \"suggestedTranslation\": \"Đeo Người Hát Rong là một trải nghiệm làm giảm tinh thần, nhưng sẽ biến những con lợn và thỏ ở gần thành người đi theo.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 772304,\n    \"suggestedTranslation\": \"Tạo ra một Sao Cực Quang.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 772334,\n    \"suggestedTranslation\": \"Nếu đầy axit, cái ao này sẽ đóng vảy với Ni tơ.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 773270,\n    \"suggestedTranslation\": \"Đánh bại Chiến Binh Thiên Hà\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 776132,\n    \"suggestedTranslation\": \"Tráp Thánh Tích này chứa các trang phục sau: Bùa Faint Gleam, Bùa Iterum, Bùa Qualming, Bùa Robustum, Bùa Reaping, Bùa Sepulchral, Giáp xương trang trí công phu, Mũ Xương trang trí công phu, Gậy Gọi Sao xoắn, Gậy Gọi Trăng xoắn, Tường Đá Kinh Hoàng nhiều lớp, Kẻ đào ngũ Recondite và Đèn Chong Đêm trang trí công phu.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 776162,\n    \"suggestedTranslation\": \"Rương Người Yêu Đầm Lầy này chứa các trang phục sau: Hollow Gaze Hutch, Nhà Người Cá Rêu, Hoa Người Cá Rêu, Sáo Nguyên Thủy, Mái Chèo Cá Mái Chèo, Mái Chèo Cá Mái Chèo Gỗ Mục, Vũ Kế Nguyên thủy, Bàn thợ gốm Nguyên thủy, Bóng ngủ trưa đầm lầy, Gậy Gọi Sao Nguyên Thủy, Mũ Mossberry, Mũ Mangrove, Mũ Dampwood và Gậy Sao Mai Nguyên Thủy.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 776329,\n    \"suggestedTranslation\": \"Chiếc Rương Gỗ Ấm Cúng này chứa các trang phục vật dụng sau: Bàn tròn ấm cúng, Bàn vuông ấm cúng, Ghế Tựa Gỗ ấm cúng, Ghế Đẩu Gỗ ấm cúng, Cây Hợp Sức, Bình hoa thủ công, Đèn ấm áp, Khung tranh ấm cúng, Người cá đeo hoa tai ngọc trai, và Máy phát đĩa than mộc mạc.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 777890,\n    \"suggestedTranslation\": \"Áo Giáp Bản Đá Cẩm Thạch\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 777906,\n    \"suggestedTranslation\": \"Áo Giáp Gỗ Tơ Lụa\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 778488,\n    \"suggestedTranslation\": \"Áo Trang Phục Hải Mã\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 778489,\n    \"suggestedTranslation\": \"Áo Trang Phục Hải Mã\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 779685,\n    \"suggestedTranslation\": \"Ngỗng/Hươu Sừng Tấm Vui Vẻ\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 779855,\n    \"suggestedTranslation\": \"Kính Chuột Chũi 2.0\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 779856,\n    \"suggestedTranslation\": \"Kính Chuột Chũi 3.0\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 780082,\n    \"suggestedTranslation\": \"Rương Hồi Sinh của Rương Ảo Thuật Gia Ác Mộng\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 780162,\n    \"suggestedTranslation\": \"Rương Sinh Tồn Xuân Bính Ngọ, Phần I\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 780246,\n    \"suggestedTranslation\": \"Rương Xuân Bính Ngọ Maxwell\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 780264,\n    \"suggestedTranslation\": \"Rương Xuân Bính Ngọ Webber\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 780315,\n    \"suggestedTranslation\": \"Rương Xuân Bính Ngọ Wilson\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 780477,\n    \"suggestedTranslation\": \"Chân Dung Hạt Cây Dẻ Bulô Mùa Thu\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 780526,\n    \"suggestedTranslation\": \"Chân Dung Cổng Lò Rèn\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 780648,\n    \"suggestedTranslation\": \"Chó Sói Đất Sét\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 780671,\n    \"suggestedTranslation\": \"Bánh Nhân Mứt Dâu\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 780672,\n    \"suggestedTranslation\": \"Bánh Kem Cà Rốt\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 780673,\n    \"suggestedTranslation\": \"Burger Phô Mai\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 780676,\n    \"suggestedTranslation\": \"Bánh Cuộn Cua\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 780677,\n    \"suggestedTranslation\": \"Bánh Quế\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 780678,\n    \"suggestedTranslation\": \"Bánh Cá\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 780680,\n    \"suggestedTranslation\": \"Thạch Cuộn\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 780683,\n    \"suggestedTranslation\": \"Đùi Nướng\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 780686,\n    \"suggestedTranslation\": \"Thịt Viên Mỳ Ý\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 780687,\n    \"suggestedTranslation\": \"Bít Tết Khoai Tây Chiên\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 780689,\n    \"suggestedTranslation\": \"Bánh Xốp Phủ Kem Và Trái Cây\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 780703,\n    \"suggestedTranslation\": \"Tủ Lạnh Pha Lê\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 780732,\n    \"suggestedTranslation\": \"Đồ Trang Trí Hươu Sừng Tấm/Ngỗng\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 780797,\n    \"suggestedTranslation\": \"Chỉ Huy Pugna\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 780804,\n    \"suggestedTranslation\": \"Trượng Hỏa Ngục\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 780825,\n    \"suggestedTranslation\": \"Lợn Già Làng\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 780855,\n    \"suggestedTranslation\": \"Lợn Bánh Gừng\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 780858,\n    \"suggestedTranslation\": \"Hươu Sừng Tấm/Ngỗng Vui Vẻ\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 781369,\n    \"suggestedTranslation\": \"Xuân Bính Ngọ\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 781395,\n    \"suggestedTranslation\": \"Bộ râu Xuân Bính Ngọ mượt mà\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 781419,\n    \"suggestedTranslation\": \"Xuân Bính Ngọ\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 781530,\n    \"suggestedTranslation\": \"Xuân Bính Ngọ\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 781549,\n    \"suggestedTranslation\": \"Râu Xuân Bính Ngọ\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 781574,\n    \"suggestedTranslation\": \"Xuân Bính Ngọ\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 781612,\n    \"suggestedTranslation\": \"Xuân Bính Ngọ\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 782366,\n    \"suggestedTranslation\": \"Giáp Kinh Hoàng\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 782483,\n    \"suggestedTranslation\": \"Kính Chuột Chũi\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 783570,\n    \"suggestedTranslation\": \"Đá Nghiền\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 783571,\n    \"suggestedTranslation\": \"Lợn Già Làng\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 783703,\n    \"suggestedTranslation\": \"Đỡ 15 đòn tấn công đặc biệt trong một trận đấu bằng Lưỡi Đao Thợ Rèn\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 783716,\n    \"suggestedTranslation\": \"Rùa Thép Kiên Cường\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 783718,\n    \"suggestedTranslation\": \"Sào Huyệt Bọ Cạp Binh\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 783733,\n    \"suggestedTranslation\": \"Hóa đá 25 kẻ thù trở lên trước khi Trượng Hỏa Ngục rơi xuống\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 783773,\n    \"suggestedTranslation\": \"Đánh bại các chiến binh của Chỉ Huy Pugna khi chơi Wigfrid\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 783777,\n    \"suggestedTranslation\": \"Hóa đá 25 kẻ thù trở lên trước khi Trượng Hỏa Ngục rơi xuống\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 783779,\n    \"suggestedTranslation\": \"Đánh bại các chiến binh của Chỉ Huy Pugna khi chơi Maxwell\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 783785,\n    \"suggestedTranslation\": \"Đánh bại các chiến binh của Chỉ Huy Pugna khi chơi Webber\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 783791,\n    \"suggestedTranslation\": \"Đánh bại các chiến binh của Chỉ Huy Pugna khi chơi Wendy\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 783797,\n    \"suggestedTranslation\": \"Đánh bại các chiến binh của Chỉ Huy Pugna khi chơi Wes\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 783803,\n    \"suggestedTranslation\": \"Đánh bại các chiến binh của Chỉ Huy Pugna khi chơi Wickerbottom\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 783809,\n    \"suggestedTranslation\": \"Đánh bại các chiến binh của Chỉ Huy Pugna khi chơi Willow\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 783815,\n    \"suggestedTranslation\": \"Đánh bại các chiến binh của Chỉ Huy Pugna khi chơi Wilson\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 783821,\n    \"suggestedTranslation\": \"Đánh bại các chiến binh của Chỉ Huy Pugna khi chơi Winona\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 783833,\n    \"suggestedTranslation\": \"Đánh bại các chiến binh của Chỉ Huy Pugna khi chơi Wolfgang\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 783839,\n    \"suggestedTranslation\": \"Đánh bại các chiến binh của Chỉ Huy Pugna khi chơi Woodie\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 783845,\n    \"suggestedTranslation\": \"Đánh bại các chiến binh của Chỉ Huy Pugna khi chơi WX-78\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 785565,\n    \"suggestedTranslation\": \"Bạn đã thất bại trong thử thách của Chỉ Huy Pugna.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 785567,\n    \"suggestedTranslation\": \"Bạn đã đánh bại các nhà vô địch của Chỉ Huy Pugna trong trận chiến.\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 785678,\n    \"suggestedTranslation\": \"Cản trở đối thủ bằng Lưỡi Đao Thợ Rèn toàn năng\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 788108,\n    \"suggestedTranslation\": \"\\\"Thông qua Đá Chốt, mọi thân tộc và đồng loại sẽ sụp đổ.\\\"\",\n    \"rating\": 9.0\n  },\n  {\n    \"id\": 788109,\n    \"suggestedTranslation\": \"\\\"Đừng bao giờ để Đá Chốt bị nguyền rủa vượt qua ngưỡng cửa này.\\\"\",\n    \"rating\": 9.0\n  }\n]",
+            "thoughtSignature": "El0KWwFpFH0Tk7QUnX9JEGndFwPltJIjldyRhUXOdUa9QLqUj30QSI9GznjRgy4UHVWxaWYmraEz7vzhDCmSb/BxDfZwR3Hm+euc9aw4JpPjCmA1WtjwXi3VWKSlqEQ="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 10355,
+    "candidatesTokenCount": 4892,
+    "totalTokenCount": 15247,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10355
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "eBC2ap6IN6qng8UPkpOe6A4"
+}
+
+================================================================================--------------------
+

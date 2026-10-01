@@ -10,8 +10,8 @@ public partial class Form1 : Form
     private AppSettings _settings = AppSettings.CreateDefault();
 
     private readonly BindingList<ReviewRowViewModel> _rows = new();
-    private readonly BindingSource _rowsBindingSource = new();
     private readonly Dictionary<long, ReviewRowViewModel> _rowIndex = new();
+    private readonly Dictionary<long, int> _rowGridIndex = new();
     private readonly object _anythingLlmLogLock = new();
     private string _anythingLlmRawLogPath = string.Empty;
 
@@ -52,6 +52,7 @@ public partial class Form1 : Form
 
     private TextBox _txtPromptTemplate = null!;
 
+    private TextBox _txtDictionaryCsvPath = null!;
     private CheckBox _chkRespectLockedRows = null!;
     private CheckBox _chkSkipExisting = null!;
     private NumericUpDown _nudMaxConcurrentRequests = null!;
@@ -74,6 +75,26 @@ public partial class Form1 : Form
     private DataGridView _grid = null!;
     private TextBox _logBox = null!;
     private ToolStripStatusLabel _statusLabel = null!;
+
+    // Glossary Check tab controls
+    private DataGridView _glossaryCheckGrid = null!;
+    private Button _btnRunGlossaryCheck = null!;
+    private Button _btnExportGlossaryCheck = null!;
+    private Button _btnClearGlossaryTranslations = null!;
+    private Label _lblGlossaryCheckStatus = null!;
+    private CheckBox _chkOnlyMismatch = null!;
+    private CheckBox _chkScanAllDatabase = null!;
+    private CheckBox _chkExcludeLocked = null!;
+    private CheckBox _chkSelectAllGlossaryResults = null!;
+    private TextBox _txtGlossaryCheckCsvPath = null!;
+    private List<GlossaryCheckResult> _allGlossaryCheckResults = new();
+    private DataGridView _escapeRepairGrid = null!;
+    private Button _btnScanEscapeIssues = null!;
+    private Button _btnApplyEscapeRepairs = null!;
+    private CheckBox _chkExcludeLockedEscapeRows = null!;
+    private CheckBox _chkSelectAllEscapeRows = null!;
+    private Label _lblEscapeRepairStatus = null!;
+    private List<EscapeRepairResult> _allEscapeRepairResults = new();
     private ToolStripStatusLabel _progressPercentLabel = null!;
     private ToolStripProgressBar _progressBar = null!;
 
@@ -102,14 +123,28 @@ public partial class Form1 : Form
             InitializeLoggingPath();
         }
 
-        _rowsBindingSource.DataSource = _rows;
-        _grid.DataSource = _rowsBindingSource;
+        _grid.DataSource = _rows;
     }
 
     private void InitializeLoggingPath()
     {
         var logDirectory = Path.Combine(AppContext.BaseDirectory, _settings.Logging.LogDirectory);
-        _anythingLlmRawLogPath = Path.Combine(logDirectory, $"anythingllm-{DateTime.Now:yyyyMMdd-HHmmss}.log");
+        try
+        {
+            Directory.CreateDirectory(logDirectory);
+            var providerSlug = string.IsNullOrWhiteSpace(_settings.Provider) ? "translator" : _settings.Provider.ToLowerInvariant();
+            _anythingLlmRawLogPath = Path.Combine(logDirectory, $"{providerSlug}-{DateTime.Now:yyyyMMdd-HHmmss}.log");
+            File.WriteAllText(
+                _anythingLlmRawLogPath,
+                $"=== Translation Log Started at {DateTime.Now:yyyy-MM-dd HH:mm:ss} | Provider: {_settings.Provider} ==={Environment.NewLine}{Environment.NewLine}",
+                new UTF8Encoding(false));
+            AppendLog($"Log chi tiết API được lưu tại: {_anythingLlmRawLogPath}");
+        }
+        catch (Exception ex)
+        {
+            _anythingLlmRawLogPath = Path.Combine(AppContext.BaseDirectory, $"translator-{DateTime.Now:yyyyMMdd-HHmmss}.log");
+            AppendLog($"Lưu ý khởi tạo log: {ex.Message}");
+        }
     }
 
     private void BuildUi()
@@ -121,7 +156,10 @@ public partial class Form1 : Form
         {
             Dock = DockStyle.Fill,
             Orientation = Orientation.Horizontal,
-            FixedPanel = FixedPanel.Panel1
+               FixedPanel = FixedPanel.None,
+               IsSplitterFixed = false,
+               SplitterWidth = 8,
+               BackColor = SystemColors.ControlDark
         };
         Controls.Add(_rootSplit);
 
@@ -147,6 +185,8 @@ public partial class Form1 : Form
         _settingsTabs.TabPages.Add(BuildGeminiTab());
         _settingsTabs.TabPages.Add(BuildPromptTab());
         _settingsTabs.TabPages.Add(BuildProcessingTab());
+        _settingsTabs.TabPages.Add(BuildGlossaryCheckTab());
+        _settingsTabs.TabPages.Add(BuildEscapeRepairTab());
 
         var buttonsPanel = new FlowLayoutPanel
         {
@@ -316,7 +356,7 @@ public partial class Form1 : Form
         AddPairRow(table, ref row, "AllText column", out _txtAllTextColumn, "MsgCtxt column", out _txtMsgCtxtColumn);
         AddPairRow(table, ref row, "MsgId column", out _txtMsgIdColumn, "MsgStr column", out _txtMsgStrColumn);
         AddPairRow(table, ref row, "SourceFilePath column", out _txtSourceFilePathColumn, "ImportedAtUtc column", out _txtImportedAtUtcColumn);
-        AddNoteRow(table, ref row, "Tip: náº¿u query cá»§a báº¡n Ä‘Ã£ alias Ä‘Ãºng tÃªn cá»™t, chá»‰ cáº§n Ä‘á»•i SourceQuery vÃ  TargetTable.");
+        AddNoteRow(table, ref row, "Tip: nếu query của bạn đã alias đúng tên cột, chỉ cần đổi SourceQuery và TargetTable.");
 
         return page;
     }
@@ -336,7 +376,7 @@ public partial class Form1 : Form
         AddFullWidthRow(table, ref row, "API key", out _txtApiKey, height: 30, password: true);
         AddPairRow(table, ref row, "Mode", out _cmbMode, "Timeout (seconds)", out _nudTimeoutSeconds);
         AddFullWidthRow(table, ref row, "Session prefix", out _txtSessionPrefix, height: 30);
-        AddNoteRow(table, ref row, "Khuyáº¿n nghá»‹ dÃ¹ng mode = query cho bÃ i toÃ¡n dá»‹ch thuáº§n. Chuyá»ƒn sang chat náº¿u workspace cáº§n RAG.");
+        AddNoteRow(table, ref row, "Khuyến nghị dùng mode = query cho bài toán dịch thuần. Chuyển sang chat nếu workspace cần RAG.");
 
         return page;
     }
@@ -412,7 +452,7 @@ public partial class Form1 : Form
         _cmbGeminiModel.Items.Clear();
         _cmbGeminiModel.Items.AddRange(new object[]
         {
-            // â”€â”€ OpenRouter: Free models â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+            // ── OpenRouter: Free models ──────────────────────────────────────────────────────
             "deepseek/deepseek-r1-0528:free",
             "deepseek/deepseek-chat-v3-0324:free",
             "google/gemini-2.5-flash:free",
@@ -420,21 +460,21 @@ public partial class Form1 : Form
             "microsoft/phi-4-reasoning:free",
             "qwen/qwen3-235b-a22b:free",
             "meta-llama/llama-4-maverick:free",
-            // â”€â”€ OpenRouter: Paid models â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+            // ── OpenRouter: Paid models ──────────────────────────────────────────────────────
             "deepseek/deepseek-r1",
             "deepseek/deepseek-chat",
             "google/gemini-2.5-flash",
             "anthropic/claude-sonnet-4-5",
             "openai/gpt-4o-mini",
-            // â”€â”€ Google Gemini trá»±c tiáº¿p (thay BaseURL) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+            // ── Google Gemini trực tiếp (thay BaseURL) ───────────────────────────────────────
             "gemini-2.5-flash",
             "gemini-2.0-flash",
             "gemini-1.5-flash"
         });
         AddFullWidthRow(table, ref row, "API Base URL", out _txtGeminiBaseUrl, height: 30);
         AddNoteRow(table, ref row,
-            "OpenRouter (https://openrouter.ai/api/v1): Há»— trá»£ DeepSeek, Gemini, Claude,... Model cÃ³ :free = miá»…n phÃ­. " +
-            "Google Gemini trá»±c tiáº¿p: Ä‘á»•i URL thÃ nh https://generativelanguage.googleapis.com vÃ  dÃ¹ng model khÃ´ng prefix.");
+            "OpenRouter (https://openrouter.ai/api/v1): Hỗ trợ DeepSeek, Gemini, Claude,... Model có :free = miễn phí. " +
+            "Google Gemini trực tiếp: đổi URL thành https://generativelanguage.googleapis.com và dùng model không prefix.");
 
         return page;
     }
@@ -455,6 +495,9 @@ public partial class Form1 : Form
         _cmbProvider.Items.Clear();
         _cmbProvider.Items.AddRange(new object[] { "Gemini", "AnythingLLM" });
 
+        AddFileBrowseRow(table, ref row, "Từ điển CSV (Anh - Việt)", out _txtDictionaryCsvPath, "CSV files (*.csv)|*.csv|All files (*.*)|*.*", "Chọn file CSV từ điển Anh - Việt");
+        AddNoteRow(table, ref row, "Lưu ý từ điển: File CSV gồm 2 cột (Cột 1 = Tiếng Anh, Cột 2 = Tiếng Việt). Khi gửi câu hỏi lên AI, hệ thống chỉ lọc và gửi các từ/cụm từ có trong MsgId của dòng cần dịch.");
+
         AddCheckBoxRow(table, ref row, "Respect TranslationLocked", out _chkRespectLockedRows, "Skip if SuggestedTranslation exists", out _chkSkipExisting);
         AddPairRow(table, ref row, "Max concurrent requests", out _nudMaxConcurrentRequests, "Requests Per Minute (RPM)", out _nudRequestsPerMinute);
         _nudMaxConcurrentRequests.Minimum = 1;
@@ -467,9 +510,742 @@ public partial class Form1 : Form
 
         AddPairRow(table, ref row, "Max rows (0 = all)", out _nudMaxRows, "Delay between requests (ms)", out _nudDelayMs);
         AddPairRow(table, ref row, "Max retries", out _nudMaxRetries, "Retry delay (ms)", out _nudRetryDelayMs);
-        AddNoteRow(table, ref row, "Máº¹o: Vá»›i Gemini Free Tier (limit 5 request/phÃºt), hÃ£y Ä‘áº·t RPM = 5 vÃ  Max concurrent = 1. Khi dÃ­nh 429, á»©ng dá»¥ng sáº½ tá»± Ä‘á»™ng chá» vÃ  thá»­ láº¡i.");
+        AddNoteRow(table, ref row, "Mẹo: Với Gemini Free Tier (limit 5 request/phút), hãy đặt RPM = 5 và Max concurrent = 1. Khi dính 429, ứng dụng sẽ tự động chờ và thử lại.");
 
         return page;
+    }
+
+    private TabPage BuildGlossaryCheckTab()
+    {
+        var page = new TabPage("Glossary Check")
+        {
+            Padding = new Padding(6)
+        };
+
+        // Hàng chọn file CSV
+        var csvPanel = new TableLayoutPanel
+        {
+            Dock = DockStyle.Top,
+            Height = 36,
+            ColumnCount = 3,
+            RowCount = 1,
+            Padding = new Padding(0, 4, 0, 0)
+        };
+        csvPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 130F));
+        csvPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+        csvPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 100F));
+
+        var csvLabel = new Label
+        {
+            Text = "Từ điển CSV:",
+            AutoSize = true,
+            Dock = DockStyle.Fill,
+            Padding = new Padding(0, 6, 0, 0)
+        };
+        _txtGlossaryCheckCsvPath = new TextBox
+        {
+            Dock = DockStyle.Fill
+        };
+        var btnBrowseGlossaryCsv = new Button
+        {
+            Text = "Chọn file...",
+            Dock = DockStyle.Fill,
+            Margin = new Padding(6, 0, 0, 0)
+        };
+        btnBrowseGlossaryCsv.Click += (_, _) =>
+        {
+            using var dialog = new OpenFileDialog
+            {
+                Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*",
+                Title = "Chọn file CSV từ điển Anh - Việt"
+            };
+            if (!string.IsNullOrWhiteSpace(_txtGlossaryCheckCsvPath.Text))
+            {
+                try
+                {
+                    var dir = Path.GetDirectoryName(_txtGlossaryCheckCsvPath.Text);
+                    if (!string.IsNullOrWhiteSpace(dir) && Directory.Exists(dir))
+                        dialog.InitialDirectory = dir;
+                }
+                catch { /* ignore invalid path */ }
+            }
+            if (dialog.ShowDialog(this) == DialogResult.OK)
+                _txtGlossaryCheckCsvPath.Text = dialog.FileName;
+        };
+        csvPanel.Controls.Add(csvLabel, 0, 0);
+        csvPanel.Controls.Add(_txtGlossaryCheckCsvPath, 1, 0);
+        csvPanel.Controls.Add(btnBrowseGlossaryCsv, 2, 0);
+
+        // Hàng nút kiểm tra + checkbox + trạng thái
+        var topPanel = new FlowLayoutPanel
+        {
+            Dock = DockStyle.Top,
+            FlowDirection = FlowDirection.LeftToRight,
+            WrapContents = true,
+            AutoSize = true,
+            Padding = new Padding(0, 4, 0, 4)
+        };
+
+        _btnRunGlossaryCheck = new Button
+        {
+            Text = "Kiểm tra từ điển",
+            AutoSize = true,
+            Padding = new Padding(12, 4, 12, 4),
+            Margin = new Padding(0, 0, 8, 0)
+        };
+        _btnRunGlossaryCheck.Click += RunGlossaryCheckClicked;
+
+        _chkScanAllDatabase = new CheckBox
+        {
+            Text = "Quét toàn bộ CSDL (SQL)",
+            AutoSize = true,
+            Checked = true,
+            Margin = new Padding(0, 6, 8, 0)
+        };
+
+        _chkExcludeLocked = new CheckBox
+        {
+            Text = "Locked khác 1",
+            AutoSize = true,
+            Checked = true,
+            Margin = new Padding(0, 6, 8, 0)
+        };
+
+        _chkOnlyMismatch = new CheckBox
+        {
+            Text = "Chỉ hiện từ chưa khớp",
+            AutoSize = true,
+            Checked = true,
+            Margin = new Padding(0, 6, 8, 0)
+        };
+        _chkOnlyMismatch.CheckedChanged += (_, _) => ApplyGlossaryCheckFilter();
+
+        _chkSelectAllGlossaryResults = new CheckBox
+        {
+            Text = "Chọn tất cả",
+            AutoSize = true,
+            Margin = new Padding(0, 6, 8, 0)
+        };
+        _chkSelectAllGlossaryResults.CheckedChanged += (_, _) =>
+        {
+            foreach (var result in _allGlossaryCheckResults)
+            {
+                result.Selected = _chkSelectAllGlossaryResults.Checked;
+            }
+            ApplyGlossaryCheckFilter();
+        };
+
+        _btnClearGlossaryTranslations = new Button
+        {
+            Text = "Xóa SuggestTranslation + Rating",
+            AutoSize = true,
+            Padding = new Padding(8, 4, 8, 4),
+            Margin = new Padding(0, 0, 8, 0),
+            Enabled = false
+        };
+        _btnClearGlossaryTranslations.Click += ClearSelectedGlossaryTranslationsClicked;
+
+        _btnExportGlossaryCheck = new Button
+        {
+            Text = "Xuất Excel...",
+            AutoSize = true,
+            Enabled = false,
+            Padding = new Padding(8, 4, 8, 4),
+            Margin = new Padding(0, 0, 8, 0)
+        };
+        _btnExportGlossaryCheck.Click += ExportGlossaryCheckClicked;
+
+        _lblGlossaryCheckStatus = new Label
+        {
+            Text = "Chưa kiểm tra.",
+            AutoSize = true,
+            Margin = new Padding(0, 7, 0, 0)
+        };
+
+        topPanel.Controls.Add(_btnRunGlossaryCheck);
+        topPanel.Controls.Add(_chkScanAllDatabase);
+        topPanel.Controls.Add(_chkExcludeLocked);
+        topPanel.Controls.Add(_chkOnlyMismatch);
+        topPanel.Controls.Add(_chkSelectAllGlossaryResults);
+        topPanel.Controls.Add(_btnClearGlossaryTranslations);
+        topPanel.Controls.Add(_btnExportGlossaryCheck);
+        topPanel.Controls.Add(_lblGlossaryCheckStatus);
+
+        _glossaryCheckGrid = new DataGridView
+        {
+            Dock = DockStyle.Fill,
+            AutoGenerateColumns = false,
+            ReadOnly = false,
+            AllowUserToAddRows = false,
+            AllowUserToDeleteRows = false,
+            AllowUserToResizeRows = false,
+            RowHeadersVisible = false,
+            SelectionMode = DataGridViewSelectionMode.FullRowSelect,
+            MultiSelect = false,
+            AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None,
+            BackgroundColor = SystemColors.Window,
+            BorderStyle = BorderStyle.FixedSingle
+        };
+
+        _glossaryCheckGrid.Columns.Add(new DataGridViewCheckBoxColumn
+        {
+            HeaderText = "Chọn",
+            DataPropertyName = nameof(GlossaryCheckResult.Selected),
+            Width = 55,
+            ReadOnly = false,
+            SortMode = DataGridViewColumnSortMode.Automatic
+        });
+
+        _glossaryCheckGrid.Columns.Add(new DataGridViewTextBoxColumn
+        {
+            HeaderText = "Id",
+            DataPropertyName = nameof(GlossaryCheckResult.RowId),
+            Width = 70,
+            SortMode = DataGridViewColumnSortMode.Automatic
+        });
+        _glossaryCheckGrid.Columns.Add(new DataGridViewTextBoxColumn
+        {
+            HeaderText = "MsgId",
+            DataPropertyName = nameof(GlossaryCheckResult.MsgId),
+            Width = 200,
+            SortMode = DataGridViewColumnSortMode.Automatic
+        });
+        _glossaryCheckGrid.Columns.Add(new DataGridViewTextBoxColumn
+        {
+            HeaderText = "MsgStr (Gốc)",
+            DataPropertyName = nameof(GlossaryCheckResult.MsgStr),
+            Width = 180,
+            SortMode = DataGridViewColumnSortMode.Automatic
+        });
+        _glossaryCheckGrid.Columns.Add(new DataGridViewTextBoxColumn
+        {
+            HeaderText = "SuggestedTranslation",
+            DataPropertyName = nameof(GlossaryCheckResult.SuggestedTranslation),
+            Width = 200,
+            SortMode = DataGridViewColumnSortMode.Automatic
+        });
+        _glossaryCheckGrid.Columns.Add(new DataGridViewTextBoxColumn
+        {
+            HeaderText = "English (Từ điển)",
+            DataPropertyName = nameof(GlossaryCheckResult.EnglishTerm),
+            Width = 140,
+            SortMode = DataGridViewColumnSortMode.Automatic
+        });
+        _glossaryCheckGrid.Columns.Add(new DataGridViewTextBoxColumn
+        {
+            HeaderText = "Vietnamese (Từ điển)",
+            DataPropertyName = nameof(GlossaryCheckResult.ExpectedVietnamese),
+            Width = 180,
+            SortMode = DataGridViewColumnSortMode.Automatic
+        });
+        _glossaryCheckGrid.Columns.Add(new DataGridViewTextBoxColumn
+        {
+            HeaderText = "Từ trùng MsgId/MsgStr",
+            DataPropertyName = nameof(GlossaryCheckResult.CommonWords),
+            Width = 160,
+            SortMode = DataGridViewColumnSortMode.Automatic
+        });
+        _glossaryCheckGrid.Columns.Add(new DataGridViewTextBoxColumn
+        {
+            HeaderText = "Trạng thái",
+            DataPropertyName = nameof(GlossaryCheckResult.MatchStatus),
+            Width = 110,
+            SortMode = DataGridViewColumnSortMode.Automatic
+        });
+
+        // Tô màu dòng dựa trên trạng thái khớp
+        _glossaryCheckGrid.CellFormatting += (_, e) =>
+        {
+            if (e.RowIndex < 0 || e.RowIndex >= _glossaryCheckGrid.Rows.Count)
+                return;
+
+            var row = _glossaryCheckGrid.Rows[e.RowIndex];
+            if (row.DataBoundItem is GlossaryCheckResult result)
+            {
+                if (!result.IsMatch)
+                {
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 235, 235);
+                    row.DefaultCellStyle.ForeColor = Color.DarkRed;
+                }
+                else
+                {
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(235, 255, 235);
+                    row.DefaultCellStyle.ForeColor = Color.DarkGreen;
+                }
+            }
+        };
+        foreach (DataGridViewColumn column in _glossaryCheckGrid.Columns)
+        {
+            if (column.DataPropertyName != nameof(GlossaryCheckResult.Selected))
+            {
+                column.ReadOnly = true;
+            }
+        }
+        _glossaryCheckGrid.CurrentCellDirtyStateChanged += (_, _) =>
+        {
+            if (_glossaryCheckGrid.IsCurrentCellDirty)
+            {
+                _glossaryCheckGrid.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            }
+        };
+        _glossaryCheckGrid.CellValueChanged += (_, e) =>
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0 &&
+                _glossaryCheckGrid.Columns[e.ColumnIndex].DataPropertyName == nameof(GlossaryCheckResult.Selected))
+            {
+                _btnClearGlossaryTranslations.Enabled = _allGlossaryCheckResults.Any(r => r.Selected);
+            }
+        };
+
+        // Thứ tự add ngược lại do Dock: Fill cần add trước, Top add sau
+        page.Controls.Add(_glossaryCheckGrid);
+        page.Controls.Add(topPanel);
+        page.Controls.Add(csvPanel);
+
+        return page;
+    }
+
+    private TabPage BuildEscapeRepairTab()
+    {
+        var page = new TabPage("Sửa escape")
+        {
+            Padding = new Padding(6)
+        };
+        var topPanel = new FlowLayoutPanel
+        {
+            Dock = DockStyle.Top,
+            FlowDirection = FlowDirection.LeftToRight,
+            WrapContents = true,
+            AutoSize = true,
+            Padding = new Padding(0, 4, 0, 4)
+        };
+
+        _btnScanEscapeIssues = new Button
+        {
+            Text = "Quét lỗi escape",
+            AutoSize = true,
+            Padding = new Padding(12, 4, 12, 4),
+            Margin = new Padding(0, 0, 8, 0)
+        };
+        _btnScanEscapeIssues.Click += ScanEscapeIssuesClicked;
+        _chkExcludeLockedEscapeRows = new CheckBox
+        {
+            Text = "Bỏ qua dòng đã khóa",
+            AutoSize = true,
+            Checked = true,
+            Margin = new Padding(0, 6, 8, 0)
+        };
+        _chkSelectAllEscapeRows = new CheckBox
+        {
+            Text = "Chọn tất cả",
+            AutoSize = true,
+            Margin = new Padding(0, 6, 8, 0)
+        };
+        _chkSelectAllEscapeRows.CheckedChanged += (_, _) =>
+        {
+            foreach (var result in _allEscapeRepairResults)
+            {
+                result.Selected = _chkSelectAllEscapeRows.Checked;
+            }
+            RefreshEscapeRepairGrid();
+        };
+        _btnApplyEscapeRepairs = new Button
+        {
+            Text = "Sửa các dòng đã chọn",
+            AutoSize = true,
+            Padding = new Padding(10, 4, 10, 4),
+            Margin = new Padding(0, 0, 8, 0),
+            Enabled = false
+        };
+        _btnApplyEscapeRepairs.Click += ApplyEscapeRepairsClicked;
+        _lblEscapeRepairStatus = new Label
+        {
+            Text = "Chưa quét.",
+            AutoSize = true,
+            Margin = new Padding(0, 7, 0, 0)
+        };
+        topPanel.Controls.AddRange(new Control[]
+        {
+            _btnScanEscapeIssues,
+            _chkExcludeLockedEscapeRows,
+            _chkSelectAllEscapeRows,
+            _btnApplyEscapeRepairs,
+            _lblEscapeRepairStatus
+        });
+
+        _escapeRepairGrid = new DataGridView
+        {
+            Dock = DockStyle.Fill,
+            AutoGenerateColumns = false,
+            ReadOnly = false,
+            AllowUserToAddRows = false,
+            AllowUserToDeleteRows = false,
+            AllowUserToResizeRows = false,
+            RowHeadersVisible = false,
+            SelectionMode = DataGridViewSelectionMode.FullRowSelect,
+            MultiSelect = false,
+            AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None,
+            BackgroundColor = SystemColors.Window,
+            BorderStyle = BorderStyle.FixedSingle
+        };
+        _escapeRepairGrid.Columns.Add(new DataGridViewCheckBoxColumn
+        {
+            HeaderText = "Chọn",
+            DataPropertyName = nameof(EscapeRepairResult.Selected),
+            Width = 55,
+            ReadOnly = false
+        });
+        AddEscapeRepairColumn("Id", nameof(EscapeRepairResult.RowId), 75);
+        AddEscapeRepairColumn("MsgId", nameof(EscapeRepairResult.MsgId), 230);
+        AddEscapeRepairColumn("SuggestedTranslation hiện tại", nameof(EscapeRepairResult.OriginalTranslation), 260);
+        AddEscapeRepairColumn("Bản sau khi sửa", nameof(EscapeRepairResult.RepairedTranslation), 260);
+        AddEscapeRepairColumn("Lỗi phát hiện", nameof(EscapeRepairResult.Issues), 150);
+        foreach (DataGridViewColumn column in _escapeRepairGrid.Columns)
+        {
+            if (column.DataPropertyName != nameof(EscapeRepairResult.Selected))
+            {
+                column.ReadOnly = true;
+            }
+        }
+        _escapeRepairGrid.CurrentCellDirtyStateChanged += (_, _) =>
+        {
+            if (_escapeRepairGrid.IsCurrentCellDirty)
+            {
+                _escapeRepairGrid.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            }
+        };
+        _escapeRepairGrid.CellValueChanged += (_, e) =>
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0 &&
+                _escapeRepairGrid.Columns[e.ColumnIndex].DataPropertyName == nameof(EscapeRepairResult.Selected))
+            {
+                _btnApplyEscapeRepairs.Enabled = _allEscapeRepairResults.Any(result => result.Selected);
+            }
+        };
+
+        page.Controls.Add(_escapeRepairGrid);
+        page.Controls.Add(topPanel);
+        return page;
+    }
+
+    private void AddEscapeRepairColumn(string headerText, string dataPropertyName, int width)
+    {
+        _escapeRepairGrid.Columns.Add(new DataGridViewTextBoxColumn
+        {
+            HeaderText = headerText,
+            DataPropertyName = dataPropertyName,
+            Width = width,
+            SortMode = DataGridViewColumnSortMode.Automatic
+        });
+    }
+
+    private async void ScanEscapeIssuesClicked(object? sender, EventArgs e)
+    {
+        try
+        {
+            var settings = ReadSettingsFromUi();
+            ValidateSqlSettings(settings);
+            _btnScanEscapeIssues.Enabled = false;
+            _btnApplyEscapeRepairs.Enabled = false;
+            _lblEscapeRepairStatus.Text = "Đang tải dữ liệu từ CSDL...";
+
+            var repository = new MssqlTranslationRepository(settings.SqlServer, settings.Processing, 300);
+            var rows = await repository.LoadAllRowsForGlossaryCheckAsync(_chkExcludeLockedEscapeRows.Checked);
+            _allEscapeRepairResults = rows
+                .Where(row => !string.IsNullOrWhiteSpace(row.MsgId) && !string.IsNullOrWhiteSpace(row.SuggestedTranslation))
+                .Select(row =>
+                {
+                    var original = row.SuggestedTranslation!;
+                    var repaired = TranslationEscapeRepair.Repair(row.MsgId!, original);
+                    return repaired == original
+                        ? null
+                        : new EscapeRepairResult
+                        {
+                            RowId = row.Id,
+                            MsgId = row.MsgId!,
+                            OriginalTranslation = original,
+                            RepairedTranslation = repaired,
+                            Issues = TranslationEscapeRepair.DescribeIssues(row.MsgId!, original)
+                        };
+                })
+                .Where(result => result is not null)
+                .Cast<EscapeRepairResult>()
+                .ToList();
+
+            _chkSelectAllEscapeRows.Checked = false;
+            RefreshEscapeRepairGrid();
+            _lblEscapeRepairStatus.Text = $"Đã quét {rows.Count:N0} dòng; tìm thấy {_allEscapeRepairResults.Count:N0} dòng cần sửa.";
+            AppendLog($"Sửa escape: Đã quét {rows.Count:N0} dòng, phát hiện {_allEscapeRepairResults.Count:N0} dòng cần sửa.");
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(this, ex.Message, "Lỗi quét escape", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            _lblEscapeRepairStatus.Text = "Lỗi khi quét.";
+        }
+        finally
+        {
+            _btnScanEscapeIssues.Enabled = true;
+            _btnApplyEscapeRepairs.Enabled = _allEscapeRepairResults.Any(result => result.Selected);
+        }
+    }
+
+    private async void ApplyEscapeRepairsClicked(object? sender, EventArgs e)
+    {
+        var selected = _allEscapeRepairResults.Where(result => result.Selected).ToList();
+        if (selected.Count == 0)
+        {
+            return;
+        }
+
+        var confirm = MessageBox.Show(this,
+            $"Cập nhật SuggestedTranslation của {selected.Count:N0} dòng đã chọn? Rating sẽ được giữ nguyên.",
+            "Xác nhận sửa escape",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question);
+        if (confirm != DialogResult.Yes)
+        {
+            return;
+        }
+
+        try
+        {
+            var settings = ReadSettingsFromUi();
+            ValidateSqlSettings(settings);
+            _btnApplyEscapeRepairs.Enabled = false;
+            var updates = selected.ToDictionary(result => result.RowId, result => result.RepairedTranslation);
+            var repository = new MssqlTranslationRepository(settings.SqlServer, settings.Processing, 300);
+            await repository.UpdateSuggestedTranslationsAsync(updates, CancellationToken.None);
+
+            _allEscapeRepairResults.RemoveAll(result => result.Selected);
+            _chkSelectAllEscapeRows.Checked = false;
+            RefreshEscapeRepairGrid();
+            _lblEscapeRepairStatus.Text = $"Đã sửa {selected.Count:N0} dòng.";
+            AppendLog($"Sửa escape: Đã cập nhật SuggestedTranslation của {selected.Count:N0} dòng.");
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(this, ex.Message, "Lỗi cập nhật escape", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            _lblEscapeRepairStatus.Text = "Lỗi khi cập nhật.";
+        }
+        finally
+        {
+            _btnApplyEscapeRepairs.Enabled = _allEscapeRepairResults.Any(result => result.Selected);
+        }
+    }
+
+    private void RefreshEscapeRepairGrid()
+    {
+        _escapeRepairGrid.DataSource = null;
+        _escapeRepairGrid.DataSource = _allEscapeRepairResults.ToList();
+        _btnApplyEscapeRepairs.Enabled = _allEscapeRepairResults.Any(result => result.Selected);
+    }
+
+    private async void RunGlossaryCheckClicked(object? sender, EventArgs e)
+    {
+        try
+        {
+            var csvPath = _txtGlossaryCheckCsvPath.Text.Trim();
+            if (string.IsNullOrWhiteSpace(csvPath))
+            {
+                MessageBox.Show(this, "Chưa chọn file từ điển CSV. Vui lòng chọn file ở trên.", "Glossary Check", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!File.Exists(csvPath))
+            {
+                MessageBox.Show(this, $"File từ điển không tồn tại: {csvPath}", "Glossary Check", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            var settings = ReadSettingsFromUi();
+
+            _btnRunGlossaryCheck.Enabled = false;
+            _btnExportGlossaryCheck.Enabled = false;
+            _lblGlossaryCheckStatus.Text = "Đang chuẩn bị...";
+
+            List<GlossaryCheckRow> rowsToCheck;
+            bool excludeLocked = _chkExcludeLocked.Checked;
+
+            if (_chkScanAllDatabase.Checked)
+            {
+                ValidateSqlSettings(settings);
+                _lblGlossaryCheckStatus.Text = "Đang kết nối CSDL và nạp dữ liệu...";
+                AppendLog($"Glossary Check: Bắt đầu tải dữ liệu từ CSDL ({(excludeLocked ? "Locked <> 1" : "Toàn bộ")})...");
+
+                var repository = new MssqlTranslationRepository(settings.SqlServer, settings.Processing, 300);
+                var loadProgress = new Progress<int>(count =>
+                {
+                    _lblGlossaryCheckStatus.Text = $"Đang tải từ CSDL: {count:N0} dòng...";
+                });
+
+                rowsToCheck = await repository.LoadAllRowsForGlossaryCheckAsync(excludeLocked, loadProgress);
+                AppendLog($"Glossary Check: Đã nạp thành công {rowsToCheck.Count:N0} dòng từ CSDL.");
+            }
+            else
+            {
+                if (_rows.Count == 0)
+                {
+                    MessageBox.Show(this, "Chưa có dữ liệu trong bảng. Hãy tích chọn 'Quét toàn bộ CSDL' hoặc nhấn 'Load Pending' ở tab Xử lý.", "Glossary Check", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                var sourceRows = excludeLocked
+                    ? _rows.Where(r => r.TranslationLocked != true)
+                    : _rows;
+
+                rowsToCheck = sourceRows.Select(r => new GlossaryCheckRow
+                {
+                    Id = r.Id,
+                    MsgId = r.MsgId,
+                    MsgStr = r.MsgStr,
+                    SuggestedTranslation = r.SuggestedTranslation
+                }).ToList();
+            }
+
+            _lblGlossaryCheckStatus.Text = $"Đang đọc từ điển và quét {rowsToCheck.Count:N0} dòng...";
+            var results = await Task.Run(() =>
+            {
+                var glossary = GlossaryDictionary.LoadFromCsv(csvPath);
+                var scanResults = new List<GlossaryCheckResult>();
+
+                foreach (var row in rowsToCheck)
+                {
+                    if (string.IsNullOrWhiteSpace(row.MsgId))
+                    {
+                        continue;
+                    }
+
+                    var matches = glossary.ScanRow(row.Id, row.MsgId, row.MsgStr, row.SuggestedTranslation);
+                    if (matches.Count > 0)
+                    {
+                        scanResults.AddRange(matches);
+                    }
+                }
+
+                return scanResults;
+            });
+
+            _allGlossaryCheckResults = results;
+            _chkSelectAllGlossaryResults.Checked = false;
+            ApplyGlossaryCheckFilter();
+
+            var totalMismatch = _allGlossaryCheckResults.Count(r => !r.IsMatch);
+            var totalMatch = _allGlossaryCheckResults.Count(r => r.IsMatch);
+            _lblGlossaryCheckStatus.Text = $"Tổng: {_allGlossaryCheckResults.Count:N0} | ✅ Khớp: {totalMatch:N0} | ❌ Chưa khớp: {totalMismatch:N0}";
+            AppendLog($"Glossary Check: Đã quét {rowsToCheck.Count:N0} dòng. Tìm thấy {_allGlossaryCheckResults.Count:N0} kết quả đối chiếu ({totalMismatch:N0} chưa khớp, {totalMatch:N0} khớp).");
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(this, ex.Message, "Glossary Check Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            AppendLog($"Glossary Check lỗi: {ex.Message}");
+            _lblGlossaryCheckStatus.Text = "Lỗi khi kiểm tra.";
+        }
+        finally
+        {
+            _btnRunGlossaryCheck.Enabled = true;
+            _btnExportGlossaryCheck.Enabled = _allGlossaryCheckResults.Count > 0;
+            _btnClearGlossaryTranslations.Enabled = _allGlossaryCheckResults.Any(r => r.Selected);
+        }
+    }
+
+    private async void ClearSelectedGlossaryTranslationsClicked(object? sender, EventArgs e)
+    {
+        var selectedIds = _allGlossaryCheckResults
+            .Where(r => r.Selected)
+            .Select(r => r.RowId)
+            .Distinct()
+            .ToList();
+
+        if (selectedIds.Count == 0)
+        {
+            return;
+        }
+
+        var confirm = MessageBox.Show(this,
+            $"Xóa SuggestedTranslation và Rating của {selectedIds.Count:N0} dòng đã chọn?",
+            "Xác nhận xóa",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Warning);
+        if (confirm != DialogResult.Yes)
+        {
+            return;
+        }
+
+        try
+        {
+            var settings = ReadSettingsFromUi();
+            ValidateSqlSettings(settings);
+            _btnClearGlossaryTranslations.Enabled = false;
+            var repository = new MssqlTranslationRepository(settings.SqlServer, settings.Processing, 300);
+            await repository.ClearTranslationsAsync(selectedIds, CancellationToken.None);
+
+            foreach (var result in _allGlossaryCheckResults.Where(r => selectedIds.Contains(r.RowId)))
+            {
+                result.Selected = false;
+                result.SuggestedTranslation = null;
+                result.IsMatch = false;
+            }
+
+            _chkSelectAllGlossaryResults.Checked = false;
+            ApplyGlossaryCheckFilter();
+            _lblGlossaryCheckStatus.Text = $"Đã xóa SuggestTranslation và Rating của {selectedIds.Count:N0} dòng.";
+            AppendLog($"Glossary Check: Đã xóa SuggestTranslation và Rating của {selectedIds.Count:N0} dòng.");
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(this, ex.Message, "Lỗi xóa dữ liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        finally
+        {
+            _btnClearGlossaryTranslations.Enabled = _allGlossaryCheckResults.Any(r => r.Selected);
+        }
+    }
+
+    private void ExportGlossaryCheckClicked(object? sender, EventArgs e)
+    {
+        try
+        {
+            var dataToExport = _chkOnlyMismatch.Checked
+                ? _allGlossaryCheckResults.Where(r => !r.IsMatch).ToList()
+                : _allGlossaryCheckResults;
+
+            if (dataToExport.Count == 0)
+            {
+                MessageBox.Show(this, "Không có dữ liệu kết quả để xuất.", "Xuất Excel", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            using var dialog = new SaveFileDialog
+            {
+                Title = "Xuất kết quả kiểm tra từ điển ra Excel",
+                Filter = "Excel Workbook (*.xlsx)|*.xlsx",
+                FileName = $"Glossary_Check_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx"
+            };
+
+            if (dialog.ShowDialog(this) != DialogResult.OK)
+            {
+                return;
+            }
+
+            ExcelExportService.ExportGlossaryCheckResults(dialog.FileName, dataToExport);
+            AppendLog($"Đã xuất file Excel kiểm tra từ điển: {dialog.FileName}");
+            MessageBox.Show(this, $"Đã xuất {dataToExport.Count:N0} dòng kết quả ra file:\n{dialog.FileName}", "Xuất Excel thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(this, ex.Message, "Lỗi xuất Excel", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+    }
+
+    private void ApplyGlossaryCheckFilter()
+    {
+        var filtered = _chkOnlyMismatch.Checked
+            ? _allGlossaryCheckResults.Where(r => !r.IsMatch).ToList()
+            : _allGlossaryCheckResults;
+
+        _glossaryCheckGrid.DataSource = null;
+        _glossaryCheckGrid.DataSource = filtered;
+        _btnClearGlossaryTranslations.Enabled = _allGlossaryCheckResults.Any(r => r.Selected);
     }
 
     private void BuildGrid(Control parent)
@@ -643,6 +1419,76 @@ public partial class Form1 : Form
         row++;
     }
 
+    private void AddFileBrowseRow(
+        TableLayoutPanel table,
+        ref int row,
+        string labelText,
+        out TextBox textBox,
+        string filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*",
+        string dialogTitle = "Chọn file CSV")
+    {
+        textBox = CreateTextBox();
+
+        var panel = new TableLayoutPanel
+        {
+            Dock = DockStyle.Fill,
+            ColumnCount = 2,
+            RowCount = 1,
+            AutoSize = true,
+            Margin = new Padding(0)
+        };
+        panel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+        panel.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
+
+        var browseButton = new Button
+        {
+            Text = "Chọn file...",
+            AutoSize = true,
+            Margin = new Padding(6, 0, 0, 0),
+            Padding = new Padding(8, 2, 8, 2),
+            Height = textBox.Height
+        };
+
+        var targetTextBox = textBox;
+        browseButton.Click += (_, _) =>
+        {
+            using var dialog = new OpenFileDialog
+            {
+                Filter = filter,
+                Title = dialogTitle
+            };
+            if (!string.IsNullOrWhiteSpace(targetTextBox.Text))
+            {
+                try
+                {
+                    var dir = Path.GetDirectoryName(targetTextBox.Text);
+                    if (!string.IsNullOrWhiteSpace(dir) && Directory.Exists(dir))
+                    {
+                        dialog.InitialDirectory = dir;
+                    }
+                }
+                catch
+                {
+                    // ignore invalid path syntax
+                }
+            }
+
+            if (dialog.ShowDialog(this) == DialogResult.OK)
+            {
+                targetTextBox.Text = dialog.FileName;
+            }
+        };
+
+        panel.Controls.Add(textBox, 0, 0);
+        panel.Controls.Add(browseButton, 1, 0);
+
+        table.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+        table.Controls.Add(CreateLabel(labelText), 0, row);
+        table.Controls.Add(panel, 1, row);
+        table.SetColumnSpan(panel, 3);
+        row++;
+    }
+
     private void AddPairRow(TableLayoutPanel table, ref int row, string label1, out TextBox control1, string label2, out TextBox control2)
     {
         control1 = CreateTextBox();
@@ -752,6 +1598,8 @@ public partial class Form1 : Form
 
         _txtPromptTemplate.Text = settings.AnythingLLM.PromptTemplate;
 
+        _txtDictionaryCsvPath.Text = settings.Processing.DictionaryCsvPath;
+        _txtGlossaryCheckCsvPath.Text = settings.Processing.DictionaryCsvPath;
         _chkRespectLockedRows.Checked = settings.Processing.RespectTranslationLocked;
         _chkSkipExisting.Checked = settings.Processing.SkipIfSuggestedExists;
         _nudMaxConcurrentRequests.Value = Math.Clamp(settings.Processing.MaxConcurrentRequests, (int)_nudMaxConcurrentRequests.Minimum, (int)_nudMaxConcurrentRequests.Maximum);
@@ -813,6 +1661,7 @@ public partial class Form1 : Form
             },
             Processing = new ProcessingSettings
             {
+                DictionaryCsvPath = _txtDictionaryCsvPath.Text.Trim(),
                 MaxConcurrentRequests = (int)_nudMaxConcurrentRequests.Value,
                 RequestsPerMinute = (int)_nudRequestsPerMinute.Value,
                 RespectTranslationLocked = _chkRespectLockedRows.Checked,
@@ -833,7 +1682,7 @@ public partial class Form1 : Form
         {
             _settings = _settingsStore.LoadOrCreate();
             ApplySettingsToUi(_settings);
-            AppendLog("ÄÃ£ náº¡p láº¡i cáº¥u hÃ¬nh tá»« appsettings.json.");
+            AppendLog("Đã nạp lại cấu hình từ appsettings.json.");
         }
         catch (Exception ex)
         {
@@ -847,7 +1696,7 @@ public partial class Form1 : Form
         {
             _settings = ReadSettingsFromUi();
             _settingsStore.Save(_settings);
-            AppendLog($"ÄÃ£ lÆ°u cáº¥u hÃ¬nh vÃ o {_settingsStore.FilePath}.");
+            AppendLog($"Đã lưu cấu hình vào {_settingsStore.FilePath}.");
         }
         catch (Exception ex)
         {
@@ -878,8 +1727,8 @@ public partial class Form1 : Form
             using var command = connection.CreateCommand();
             command.CommandText = "SELECT 1";
             _ = await command.ExecuteScalarAsync();
-            AppendLog("Káº¿t ná»‘i SQL OK.");
-            MessageBox.Show(this, "Káº¿t ná»‘i SQL OK.", "Test SQL", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            AppendLog("Kết nối SQL OK.");
+            MessageBox.Show(this, "Kết nối SQL OK.", "Test SQL", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         catch (Exception ex)
         {
@@ -897,7 +1746,7 @@ public partial class Form1 : Form
             client.ResponseReceived += AppendAnythingLlmRawResponse;
             var body = await client.TestWorkspaceAsync(settings.AnythingLLM.WorkspaceSlug, CancellationToken.None);
             AppendLog($"AnythingLLM OK. Response: {TrimForLog(body, 500)}");
-            MessageBox.Show(this, "Káº¿t ná»‘i AnythingLLM OK.", "Test AnythingLLM", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(this, "Kết nối AnythingLLM OK.", "Test AnythingLLM", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         catch (Exception ex)
         {
@@ -947,24 +1796,45 @@ public partial class Form1 : Form
                 return;
             }
 
-            using var client = CreateTranslationClient(_settings, out var timeoutSeconds);
+            GlossaryDictionary? glossary = null;
+            if (!string.IsNullOrWhiteSpace(_settings.Processing.DictionaryCsvPath))
+            {
+                if (File.Exists(_settings.Processing.DictionaryCsvPath))
+                {
+                    try
+                    {
+                        glossary = GlossaryDictionary.LoadFromCsv(_settings.Processing.DictionaryCsvPath);
+                        AppendLog($"Đã nạp {glossary.Count} mục từ điển từ: {_settings.Processing.DictionaryCsvPath}");
+                    }
+                    catch (Exception ex)
+                    {
+                        AppendLog($"Cảnh báo: Không thể nạp file từ điển CSV ({ex.Message}). Tiếp tục xử lý không kèm từ điển.");
+                    }
+                }
+                else
+                {
+                    AppendLog($"Cảnh báo: Đường dẫn từ điển CSV không tồn tại: {_settings.Processing.DictionaryCsvPath}");
+                }
+            }
+
+            using var client = CreateTranslationClient(_settings, glossary, out var timeoutSeconds);
             client.ResponseReceived += AppendAnythingLlmRawResponse;
 
             AppendLog($"Đã nạp {_rows.Count} dòng. Bắt đầu dịch bằng {_settings.Provider}...");
 
             var repository = new MssqlTranslationRepository(_settings.SqlServer, _settings.Processing, timeoutSeconds);
-            var processor = new TranslationProcessor(repository, client, _settings.Processing);
+            var processor = new TranslationProcessor(repository, client, _settings.Processing, glossary);
             var progress = new Progress<ProcessorProgress>(HandleProgressUpdate);
 
             await processor.ProcessAsync(_rows, progress, _processingCts.Token);
         }
         catch (OperationCanceledException)
         {
-            AppendLog("ÄÃ£ há»§y xá»­ lÃ½.");
+            AppendLog("Đã hủy xử lý.");
         }
         catch (Exception ex)
         {
-            AppendLog($"Lá»—i: {ex.Message}");
+            AppendLog($"Lỗi: {ex.Message}");
             MessageBox.Show(this, ex.ToString(), "Processing", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         finally
@@ -983,7 +1853,7 @@ public partial class Form1 : Form
     private void StopClicked(object? sender, EventArgs e)
     {
         _processingCts?.Cancel();
-        AppendLog("ÄÃ£ yÃªu cáº§u há»§y xá»­ lÃ½.");
+        AppendLog("Đã yêu cầu hủy xử lý.");
     }
 
     private async void ExportClicked(object? sender, EventArgs e)
@@ -992,7 +1862,7 @@ public partial class Form1 : Form
         {
             if (_rows.Count == 0)
             {
-                MessageBox.Show(this, "ChÆ°a cÃ³ dá»¯ liá»‡u Ä‘á»ƒ export.", "Export XLSX", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(this, "Chưa có dữ liệu để export.", "Export XLSX", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -1009,7 +1879,7 @@ public partial class Form1 : Form
             }
 
             await Task.Run(() => ExcelExportService.ExportReviewRows(dialog.FileName, _rows.ToList()));
-            AppendLog($"ÄÃ£ export Excel: {dialog.FileName}");
+            AppendLog($"Đã export Excel: {dialog.FileName}");
         }
         catch (Exception ex)
         {
@@ -1023,10 +1893,10 @@ public partial class Form1 : Form
         ValidateSqlSettings(settings);
 
         var repository = new MssqlTranslationRepository(settings.SqlServer, settings.Processing, settings.AnythingLLM.RequestTimeoutSeconds);
-        AppendLog("Äang náº¡p dá»¯ liá»‡u tá»« SQL...");
+        AppendLog("Đang nạp dữ liệu từ SQL...");
         var rows = await repository.LoadRowsAsync(cancellationToken);
         BindRows(rows);
-        AppendLog($"ÄÃ£ náº¡p {rows.Count} dÃ²ng.");
+        AppendLog($"Đã nạp {rows.Count} dòng.");
     }
 
     private void BindRows(IEnumerable<ReviewRowViewModel> rows)
@@ -1034,7 +1904,9 @@ public partial class Form1 : Form
         _rows.RaiseListChangedEvents = false;
         _rows.Clear();
         _rowIndex.Clear();
+        _rowGridIndex.Clear();
 
+        var gridIndex = 0;
         foreach (var row in rows)
         {
             if (string.IsNullOrWhiteSpace(row.Status))
@@ -1044,12 +1916,13 @@ public partial class Form1 : Form
 
             _rows.Add(row);
             _rowIndex[row.Id] = row;
+            _rowGridIndex[row.Id] = gridIndex++;
         }
 
         _rows.RaiseListChangedEvents = true;
         _rows.ResetBindings();
 
-        UpdateProgress(0, Math.Max(_rows.Count, 1), "ÄÃ£ náº¡p dá»¯ liá»‡u.");
+        UpdateProgress(0, Math.Max(_rows.Count, 1), "Đã nạp dữ liệu.");
     }
 
     private void HandleProgressUpdate(ProcessorProgress update)
@@ -1081,6 +1954,7 @@ public partial class Form1 : Form
             }
 
             row.Error = update.Error;
+            SelectGridRow(update.RowId.Value);
         }
 
         UpdateProgress(update.Completed, update.Total, update.Message);
@@ -1092,6 +1966,25 @@ public partial class Form1 : Form
         {
             AppendLog(update.Message);
         }
+    }
+
+    private void SelectGridRow(long rowId)
+    {
+        if (!_rowGridIndex.TryGetValue(rowId, out var gridIndex) || gridIndex >= _grid.Rows.Count)
+        {
+            return;
+        }
+
+        var gridRow = _grid.Rows[gridIndex];
+        if (!gridRow.Visible || gridRow.Cells.Count == 0)
+        {
+            return;
+        }
+
+        _grid.ClearSelection();
+        gridRow.Selected = true;
+        _grid.CurrentCell = gridRow.Cells[0];
+        _grid.FirstDisplayedScrollingRowIndex = gridIndex;
     }
 
     private void UpdateProgress(int completed, int total, string message)
@@ -1115,7 +2008,7 @@ public partial class Form1 : Form
         _btnExport.Enabled = !running;
         _btnStart.Enabled = !running;
         _btnStop.Enabled = running;
-        _statusLabel.Text = running ? "Äang xá»­ lÃ½..." : "Sáºµn sÃ ng";
+        _statusLabel.Text = running ? "Đang xử lý..." : "Sẵn sàng";
         _progressPercentLabel.Text = "0%";
         if (running)
         {
@@ -1131,33 +2024,33 @@ public partial class Form1 : Form
     {
         if (string.IsNullOrWhiteSpace(settings.SqlServer.ConnectionString))
         {
-            throw new InvalidOperationException("ConnectionString chÆ°a Ä‘Æ°á»£c Ä‘iá»n.");
+            throw new InvalidOperationException("ConnectionString chưa được điền.");
         }
 
         if (string.IsNullOrWhiteSpace(settings.SqlServer.TargetTable))
         {
-            throw new InvalidOperationException("TargetTable chÆ°a Ä‘Æ°á»£c Ä‘iá»n.");
+            throw new InvalidOperationException("TargetTable chưa được điền.");
         }
 
         if (string.IsNullOrWhiteSpace(settings.SqlServer.KeyColumn))
         {
-            throw new InvalidOperationException("KeyColumn chÆ°a Ä‘Æ°á»£c Ä‘iá»n.");
+            throw new InvalidOperationException("KeyColumn chưa được điền.");
         }
 
         if (string.IsNullOrWhiteSpace(settings.SqlServer.SourceQuery) &&
             string.IsNullOrWhiteSpace(settings.SqlServer.SourceTable))
         {
-            throw new InvalidOperationException("Báº¡n cáº§n Ä‘iá»n SourceTable hoáº·c SourceQuery.");
+            throw new InvalidOperationException("Bạn cần điền SourceTable hoặc SourceQuery.");
         }
 
         if (string.IsNullOrWhiteSpace(settings.SqlServer.SuggestedTranslationColumn))
         {
-            throw new InvalidOperationException("SuggestedTranslationColumn chÆ°a Ä‘Æ°á»£c Ä‘iá»n.");
+            throw new InvalidOperationException("SuggestedTranslationColumn chưa được điền.");
         }
 
         if (string.IsNullOrWhiteSpace(settings.SqlServer.RatingColumn))
         {
-            throw new InvalidOperationException("RatingColumn chÆ°a Ä‘Æ°á»£c Ä‘iá»n.");
+            throw new InvalidOperationException("RatingColumn chưa được điền.");
         }
     }
 
@@ -1165,17 +2058,17 @@ public partial class Form1 : Form
     {
         if (string.IsNullOrWhiteSpace(settings.AnythingLLM.BaseUrl))
         {
-            throw new InvalidOperationException("AnythingLLM BaseUrl chÆ°a Ä‘Æ°á»£c Ä‘iá»n.");
+            throw new InvalidOperationException("AnythingLLM BaseUrl chưa được điền.");
         }
 
         if (string.IsNullOrWhiteSpace(settings.AnythingLLM.ApiKey))
         {
-            throw new InvalidOperationException("AnythingLLM ApiKey chÆ°a Ä‘Æ°á»£c Ä‘iá»n.");
+            throw new InvalidOperationException("AnythingLLM ApiKey chưa được điền.");
         }
 
         if (string.IsNullOrWhiteSpace(settings.AnythingLLM.WorkspaceSlug))
         {
-            throw new InvalidOperationException("AnythingLLM WorkspaceSlug chÆ°a Ä‘Æ°á»£c Ä‘iá»n.");
+            throw new InvalidOperationException("AnythingLLM WorkspaceSlug chưa được điền.");
         }
     }
 
@@ -1191,16 +2084,16 @@ public partial class Form1 : Form
         ValidateAnythingSettings(settings);
     }
 
-    private static ITranslationClient CreateTranslationClient(AppSettings settings, out int timeoutSeconds)
+    private static ITranslationClient CreateTranslationClient(AppSettings settings, GlossaryDictionary? glossary, out int timeoutSeconds)
     {
         if (string.Equals(settings.Provider, "Gemini", StringComparison.OrdinalIgnoreCase))
         {
             timeoutSeconds = settings.Gemini.RequestTimeoutSeconds;
-            return new GeminiClient(settings.Gemini, settings.AnythingLLM.PromptTemplate);
+            return new GeminiClient(settings.Gemini, settings.AnythingLLM.PromptTemplate, glossary);
         }
 
         timeoutSeconds = settings.AnythingLLM.RequestTimeoutSeconds;
-        return new AnythingLlmClient(settings.AnythingLLM);
+        return new AnythingLlmClient(settings.AnythingLLM, glossary);
     }
 
     private static void ValidateGeminiSettings(AppSettings settings)

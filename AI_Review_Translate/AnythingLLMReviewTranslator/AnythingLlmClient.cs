@@ -14,14 +14,16 @@ public sealed class AnythingLlmClient : ITranslationClient
     };
 
     private readonly AnythingLlmSettings _settings;
+    private readonly GlossaryDictionary? _glossary;
     private readonly HttpClient _httpClient;
     private bool _disposed;
 
     public event Action<AnythingLlmApiResponse>? ResponseReceived;
 
-    public AnythingLlmClient(AnythingLlmSettings settings)
+    public AnythingLlmClient(AnythingLlmSettings settings, GlossaryDictionary? glossary = null)
     {
         _settings = settings;
+        _glossary = glossary;
         var baseUri = NormalizeBaseUri(settings.BaseUrl);
 
         _httpClient = new HttpClient
@@ -70,7 +72,7 @@ public sealed class AnythingLlmClient : ITranslationClient
             throw new InvalidOperationException("Workspace slug is empty.");
         }
 
-        var promptMessage = PromptFormatter.Apply(_settings.PromptTemplate, row);
+        var promptMessage = PromptFormatter.Apply(_settings.PromptTemplate, row, _glossary);
         var payload = new
         {
             message = promptMessage,

@@ -82,6 +82,11 @@ public static class UpdateTranslationService
 
                     foreach (var item in allDbItems)
                     {
+                        if (string.IsNullOrEmpty(item.MsgId))
+                        {
+                            continue;
+                        }
+
                         var key = BuildKey(item.MsgCtxt, item.MsgId);
                         if (!dbTranslations.ContainsKey(key))
                         {
@@ -116,35 +121,32 @@ public static class UpdateTranslationService
                             return;
                         }
 
-                        var key = BuildKey(item.entry.MsgCtxt, item.entry.MsgId);
-
-                        if (dbTranslations.TryGetValue(key, out var suggestedTranslation))
+                        var lookupKey = BuildKey(item.entry.MsgCtxt, item.entry.MsgId);
+                        if (dbTranslations.TryGetValue(lookupKey, out var suggestedTranslation) &&
+                            !string.IsNullOrEmpty(suggestedTranslation))
                         {
-                            if (!string.IsNullOrEmpty(suggestedTranslation))
+                            var updatedEntry = new PoEntry
                             {
-                                var updatedEntry = new PoEntry
-                                {
-                                    Comments = item.entry.Comments,
-                                    MsgCtxt = item.entry.MsgCtxt,
-                                    MsgId = item.entry.MsgId,
-                                    MsgStr = suggestedTranslation,
-                                    MsgCtxtRaw = item.entry.MsgCtxtRaw,
-                                    MsgIdRaw = item.entry.MsgIdRaw,
-                                    MsgStrRaw = string.Empty
-                                };
-                                updatedEntries.Add((item.index, updatedEntry));
-                                lock (lockObj)
-                                {
-                                    updatedCount++;
-                                }
+                                Comments = item.entry.Comments,
+                                MsgCtxt = item.entry.MsgCtxt,
+                                MsgId = item.entry.MsgId,
+                                MsgStr = suggestedTranslation,
+                                MsgCtxtRaw = item.entry.MsgCtxtRaw,
+                                MsgIdRaw = item.entry.MsgIdRaw,
+                                MsgStrRaw = string.Empty
+                            };
+                            updatedEntries.Add((item.index, updatedEntry));
+                            lock (lockObj)
+                            {
+                                updatedCount++;
                             }
-                            else
+                        }
+                        else if (dbTranslations.ContainsKey(lookupKey))
+                        {
+                            updatedEntries.Add((item.index, item.entry));
+                            lock (lockObj)
                             {
-                                updatedEntries.Add((item.index, item.entry));
-                                lock (lockObj)
-                                {
-                                    skippedCount++;
-                                }
+                                skippedCount++;
                             }
                         }
                         else
@@ -390,10 +392,10 @@ public static class UpdateTranslationService
             .Replace("\\\\", "\\");
     }
 
-    private static async Task WritePoFileAsync(
+    public static async Task WritePoFileAsync(
         string filePath,
         List<PoEntry> entries,
-        CancellationToken cancellationToken)
+        CancellationToken cancellationToken = default)
     {
         await Task.Run(() =>
         {
@@ -412,13 +414,17 @@ public static class UpdateTranslationService
                     content.AppendLine(entry.Comments);
                 }
 
-                // Only write msgctxt for non-header entries
+                // Only write msgctxt for non-header entries - preserve raw format
                 if (!isHeaderEntry && !string.IsNullOrEmpty(entry.MsgCtxtRaw))
                 {
                     content.AppendLine(entry.MsgCtxtRaw);
                 }
+                else if (!isHeaderEntry && !string.IsNullOrEmpty(entry.MsgCtxt))
+                {
+                    content.AppendLine($"msgctxt {EncodePoString(entry.MsgCtxt)}");
+                }
 
-                // Write msgid - use raw format to preserve original formatting
+                // Write msgid - preserve raw format to keep original formatting unchanged
                 if (!string.IsNullOrEmpty(entry.MsgIdRaw))
                 {
                     content.AppendLine(entry.MsgIdRaw);
@@ -428,14 +434,28 @@ public static class UpdateTranslationService
                     content.AppendLine($"msgid {EncodePoString(entry.MsgId)}");
                 }
 
-                // Write msgstr
-                if (isHeaderEntry && !string.IsNullOrEmpty(entry.MsgStrRaw))
+                // Write msgstr - ONLY update if this entry was updated (MsgStrRaw is empty)
+                if (isHeaderEntry)
                 {
-                    content.AppendLine(entry.MsgStrRaw);
+                    if (!string.IsNullOrEmpty(entry.MsgStrRaw))
+                    {
+                        content.AppendLine(entry.MsgStrRaw);
+                    }
+                    else
+                    {
+                        content.AppendLine("msgstr \"\"");
+                    }
                 }
                 else
                 {
-                    content.AppendLine($"msgstr {EncodePoString(entry.MsgStr)}");
+                    if (!string.IsNullOrEmpty(entry.MsgStrRaw))
+                    {
+                        content.AppendLine(entry.MsgStrRaw);
+                    }
+                    else
+                    {
+                        content.AppendLine($"msgstr {EncodePoString(entry.MsgStr)}");
+                    }
                 }
 
                 // Empty line between entries (except after last)
@@ -449,59 +469,40 @@ public static class UpdateTranslationService
         }, cancellationToken);
     }
 
-    private static string EncodePoString(string value)
+    public static string EncodePoString(string value)
     {
         if (string.IsNullOrEmpty(value))
         {
             return "\"\"";
         }
 
-        var escaped = value
-            .Replace("\\", "\\\\")
-            .Replace("\"", "\\\"")
-            .Replace("\n", "\\n")
-            .Replace("\r", "\\r")
-            .Replace("\t", "\\t");
+        var normalized = value
+            .Replace("\r\n", "\n")
+            .Replace("\r", "\n");
 
-        // If single line and short enough, return as is
-        if (!escaped.Contains("\\n") && escaped.Length < 80)
-        {
-            return $"\"{escaped}\"";
-        }
-
-        // For longer strings or multiline, use format: "..."
-        // PO format allows multiline strings
-        var lines = escaped.Split(new[] { "\\n" }, StringSplitOptions.None);
-        if (lines.Length == 1)
-        {
-            return $"\"{escaped}\"";
-        }
-
-        // Multiline format
-        var result = new StringBuilder("\"\"");
-        for (int i = 0; i < lines.Length; i++)
-        {
-            result.AppendLine();
-            result.Append("\"");
-            result.Append(lines[i]);
-            if (i < lines.Length - 1)
-            {
-                result.Append("\\n");
-            }
-            result.Append("\"");
-        }
-
-        return result.ToString();
+        return $"\"{normalized}\"";
     }
 
     private static string BuildKey(string? msgCtxt, string msgId)
     {
-        return $"{NormalizeString(msgCtxt)}\u001f{NormalizeString(msgId)}";
+        var normalizedCtxt = NormalizeString(msgCtxt);
+        var normalizedMsgId = NormalizeString(msgId);
+        return $"{normalizedCtxt}\u001f{normalizedMsgId}";
     }
 
     private static string NormalizeString(string? text)
     {
         if (string.IsNullOrEmpty(text)) return string.Empty;
-        return text.Replace("\r\n", "\n").Replace("\r", "\n");
+
+        var normalized = text
+            .Replace("\r\n", "\n")
+            .Replace("\r", "\n");
+
+        return normalized
+            .Replace("\\n", "\n")
+            .Replace("\\r", "\n")
+            .Replace("\\t", "\t")
+            .Replace("\\\"", "\"")
+            .Replace("\\\\", "\\");
     }
 }

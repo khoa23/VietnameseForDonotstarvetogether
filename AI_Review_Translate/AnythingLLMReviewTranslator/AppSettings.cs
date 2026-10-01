@@ -270,6 +270,8 @@ public sealed class AnythingLlmSettings
 
 public sealed class ProcessingSettings
 {
+    public string DictionaryCsvPath { get; set; } = string.Empty;
+
     public int MaxConcurrentRequests { get; set; } = 4;
 
     public int RequestsPerMinute { get; set; } = 5;
@@ -288,6 +290,7 @@ public sealed class ProcessingSettings
 
     public void Normalize()
     {
+        DictionaryCsvPath = DictionaryCsvPath?.Trim() ?? string.Empty;
         MaxConcurrentRequests = Math.Clamp(MaxConcurrentRequests, 1, 16);
         RequestsPerMinute = Math.Max(0, RequestsPerMinute);
         MaxRows = Math.Max(0, MaxRows);

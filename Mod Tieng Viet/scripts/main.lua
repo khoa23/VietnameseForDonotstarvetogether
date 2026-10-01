@@ -13,86 +13,12 @@ require("constants")
 
 modimport('scripts/fix.lua')
 
--- Hàm đọc file .mo (Gettext Binary MO Parser - Fast Memory Version)
-local function LoadMOFile(filepath, lang_id)
-    local f = io.open(filepath, "rb")
-    if not f then
-        return false
-    end
-
-    local data = f:read("*a")
-    f:close()
-
-    if not data or #data < 28 then
-        return false
-    end
-
-    local function get_uint32_le(str, pos)
-        local b1, b2, b3, b4 = string.byte(str, pos, pos + 3)
-        if not (b1 and b2 and b3 and b4) then return nil end
-        return b1 + b2 * 256 + b3 * 65536 + b4 * 16777216
-    end
-
-    local function get_uint32_be(str, pos)
-        local b1, b2, b3, b4 = string.byte(str, pos, pos + 3)
-        if not (b1 and b2 and b3 and b4) then return nil end
-        return b4 + b3 * 256 + b2 * 65536 + b1 * 16777216
-    end
-
-    local magic = get_uint32_le(data, 1)
-    local get_uint32 = get_uint32_le
-
-    if magic == 0x950412de then
-        get_uint32 = get_uint32_le
-    elseif magic == 0xde120495 then
-        get_uint32 = get_uint32_be
-    else
-        print("[DST-Viet] LỖI: File .mo không đúng định dạng magic number!")
-        return false
-    end
-
-    local num_strings = get_uint32(data, 9)
-    local orig_table_offset = get_uint32(data, 13)
-    local trans_table_offset = get_uint32(data, 17)
-
-    if not (num_strings and orig_table_offset and trans_table_offset) then
-        return false
-    end
-
-    if not LanguageTranslator.languages[lang_id] then
-        LanguageTranslator.languages[lang_id] = {}
-    end
-    local lang_tbl = LanguageTranslator.languages[lang_id]
-
-    local o_pos = orig_table_offset + 1
-    local t_pos = trans_table_offset + 1
-
-    for i = 1, num_strings do
-        local o_len = get_uint32(data, o_pos)
-        local o_off = get_uint32(data, o_pos + 4)
-        local t_len = get_uint32(data, t_pos)
-        local t_off = get_uint32(data, t_pos + 4)
-
-        if o_len and o_len > 0 and t_len and t_len > 0 then
-            local msgid = string.sub(data, o_off + 1, o_off + o_len)
-            local msgstr = string.sub(data, t_off + 1, t_off + t_len)
-            lang_tbl[msgid] = msgstr
-        end
-
-        o_pos = o_pos + 8
-        t_pos = t_pos + 8
-    end
-
-    return true
-end
-
 -- Tải tệp ngôn ngữ
-print("Đang tải tệp Việt hóa (.mo binary)...")
-local success = LoadMOFile(main.StorePath..main.MainPoFile, main.SelectedLanguage)
-
+print("Đang tải tệp Việt hóa...")
+env.LoadPOFile(main.StorePath..main.MainPoFile, main.SelectedLanguage)
 main.PO = LanguageTranslator.languages[main.SelectedLanguage]
 
-if not success or not main.PO then
+if not main.PO then
     print("[DST-Viet] LỖI: Không tải được " .. main.MainPoFile .. " — mod sẽ không dịch.")
     return
 end
@@ -125,10 +51,35 @@ if rawget(_G, "GAME_MODES") and STRINGS.UI.GAMEMODES then
 end
 
 -- Móc vào C++ TextWidget an toàn để dịch toàn bộ chữ động
+-- Tối ưu: Dùng LRU Cache 512 slot để tránh tra cứu bảng 70k phần tử mỗi lần gọi.
+-- TextWidget.SetString được gọi hàng nghìn lần/giây nên cần tránh tra cứu nặng lặp lại.
+local _CACHE_MAX = 512
+local _cache_lookup = {}   -- cache[str] = translated_str
+local _cache_keys = {}     -- danh sách key theo thứ tự FIFO để evict
+local _cache_count = 0
+
 local oldSetString = _G.TextWidget.SetString
 _G.TextWidget.SetString = function(guid, str)
     if type(str) == "string" and _G.VietnameseTextFixTable then
-        str = _G.VietnameseTextFixTable[str] or str
+        local cached = _cache_lookup[str]
+        if cached ~= nil then
+            -- Cache hit: dùng kết quả đã tính sẵn
+            str = cached
+        else
+            -- Cache miss: tra cứu bảng lớn, rồi lưu vào cache
+            local translated = _G.VietnameseTextFixTable[str] or str
+            if _cache_count >= _CACHE_MAX then
+                -- Evict entry cũ nhất (FIFO) khi cache đầy
+                local evict_key = _cache_keys[1]
+                table.remove(_cache_keys, 1)
+                _cache_lookup[evict_key] = nil
+                _cache_count = _cache_count - 1
+            end
+            _cache_lookup[str] = translated
+            _cache_keys[_cache_count + 1] = str
+            _cache_count = _cache_count + 1
+            str = translated
+        end
     end
     oldSetString(guid, str)
 end

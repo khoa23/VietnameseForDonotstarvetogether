@@ -230,6 +230,20 @@ BEGIN
         ALTER TABLE [dbo].[PoTranslations]
         ADD [LastUpdated] datetime2 NULL;
     END
+
+    UPDATE [dbo].[PoTranslations]
+    SET [AllText] = COALESCE([AllText], N''),
+        [MsgId] = COALESCE([MsgId], N''),
+        [MsgStr] = COALESCE([MsgStr], N''),
+        [SourceFilePath] = COALESCE([SourceFilePath], N''),
+        [ImportedAtUtc] = COALESCE([ImportedAtUtc], SYSUTCDATETIME()),
+        [TranslationLocked] = COALESCE([TranslationLocked], 0)
+    WHERE [AllText] IS NULL
+       OR [MsgId] IS NULL
+       OR [MsgStr] IS NULL
+       OR [SourceFilePath] IS NULL
+       OR [ImportedAtUtc] IS NULL
+       OR [TranslationLocked] IS NULL;
 END";
 
         db.Database.ExecuteSqlRaw(sql);

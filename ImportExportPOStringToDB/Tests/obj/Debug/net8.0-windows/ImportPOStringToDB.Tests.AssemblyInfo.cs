@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ImportPOStringToDB.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64bdb0df591104d6cbd6e8b2c32e441d5ef348bf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e29c1f60cc956dfd7480a497ed12516d21e5fb4")]
 [assembly: System.Reflection.AssemblyProductAttribute("ImportPOStringToDB.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ImportPOStringToDB.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

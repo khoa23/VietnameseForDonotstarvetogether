@@ -12,13 +12,12 @@ mods.VietnameseLang = {
     modinfo = modinfo,
     StorePath = MODROOT,
     MainPoFile = "vietnamese.po",
-    SelectedLanguage = "vi"
+    SelectedLanguage = "vi",
+    FallbackTranslate = GetModConfigData("FALLBACK_TRANSLATE") ~= false,
 }
 
--- Load the main scripts
+-- Load the main scripts (dịch STRINGS + dịch lại các bảng game đã copy sớm)
 modimport("scripts/main.lua")
-
--- The rest of the setup is handled in scripts/main.lua and scripts/fix.lua
 
 -- Cấu hình Phông chữ (Font Setup)
 local FONT_OPTION = GetModConfigData("FONT_OPTION")

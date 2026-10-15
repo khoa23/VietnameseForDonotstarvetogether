@@ -1,7 +1,7 @@
 -- This information tells other players more about the mod
 name = "DST Tiếng Việt"
-version = "2026.22"
-description = "Chuyển đổi ngôn ngữ của game từ tiếng Anh sang tiếng Việt.\n\nCập nhật lần cuối ngày 23/09/2026"
+version = "2026.23"
+description = "Chuyển đổi ngôn ngữ của game từ tiếng Anh sang tiếng Việt.\n\nCập nhật lần cuối ngày 13/10/2026"
 author = "Khoa.ga"
 
 forumthread = ""
@@ -29,5 +29,15 @@ configuration_options =
 						{description = "Tắt", data = "off", hover = "Không thay đổi phông chữ gốc của game"},
 					},
 		default = "nowar",
+	},
+  {
+		name = "FALLBACK_TRANSLATE",
+		label = "Dịch dự phòng",
+		hover = "Dịch nốt các chữ tiếng Anh còn sót khi hiển thị (ví dụ do mod khác). Tắt để tiết kiệm bộ nhớ.",
+		options =	{
+						{description = "Bật", data = true, hover = "Dịch nốt chữ còn sót (Mặc định)"},
+						{description = "Tắt", data = false, hover = "Chỉ dùng bản dịch từ file .po"},
+					},
+		default = true,
 	},
 }
